@@ -32,7 +32,6 @@
 @property (nonatomic) BOOL bln_ScreenSetting;
 
 + (MPTabBarViewController*) sharedInstance;
-- (void)setBadgeValue:(NSInteger)numberOfBadge;
 - (void)setUpTabBar;
 - (void)selectTab:(long)tabID;
 - (void)setDisableHomeButton:(BOOL)isEnable;
