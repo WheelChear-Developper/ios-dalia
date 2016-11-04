@@ -70,8 +70,6 @@
     [cornerView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     [scr_inView addSubview:cornerView];
 
-    // REPRASED BY M.ama 2016.10.19 START
-    // myshop有り無しでの表示切り替え
     //タイトル
     myShopTitle = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, cornerView.frame.size.width - 30, 26)];
     myShopTitle.numberOfLines = 0;
@@ -83,8 +81,6 @@
     [myShopTitle setText:[[[(MPUIConfigObject*)[MPUIConfigObject sharedInstance] objectAfterParsedPlistFile:[Utility getPatternType]] tab4] objectForKey:@"titleMyshop"]];
     [cornerView addSubview:myShopTitle];
 
-    // REPRASED BY M.ama 2016.10.25 START
-    // 未登録時のメッセージ表示
     //未登録時の説明文
     myShopNotSetInfo = [[UILabel alloc] initWithFrame:CGRectMake(15, myShopTitle.frame.origin.y + myShopTitle.frame.size.height, cornerView.frame.size.width - 30, 50)];
     myShopNotSetInfo.numberOfLines = 0;
@@ -95,7 +91,6 @@
 
     [myShopNotSetInfo setText:[[[(MPUIConfigObject*)[MPUIConfigObject sharedInstance] objectAfterParsedPlistFile:[Utility getPatternType]] tab4] objectForKey:@"messageMyShop"]];
     [cornerView addSubview:myShopNotSetInfo];
-    // REPRASED BY M.ama 2016.10.25 END
 
     //マイショップテーブル
     _myshop_tableView = [[UITableView alloc] initWithFrame:CGRectMake(15, myShopNotSetInfo.frame.origin.y + myShopNotSetInfo.frame.size.height, cornerView.frame.size.width - 30, 0) style:UITableViewStylePlain];
@@ -109,7 +104,6 @@
     UINib *nib_myshop = [UINib nibWithNibName:@"MPShopCell" bundle:nil];
     [_myshop_tableView registerNib:nib_myshop forCellReuseIdentifier:@"shopIdentifier"];
     [_myshop_tableView reloadData];
-    // REPRASED BY M.ama 2016.10.19 END
 
     //タイトル2
     title2 = [[UILabel alloc] initWithFrame:CGRectMake(15, _myshop_tableView.frame.origin.y + _myshop_tableView.frame.size.height + 5, cornerView.frame.size.width, 26)];
@@ -146,12 +140,9 @@
     
     //🔵設定ボタン表示設定
     [self setHiddenSettingButton:NO];
-    
-    // REPLACED BY ama 2016.10.05 START
-    // データ取得位置変更
+
     //データ取得
     [[ManagerDownload sharedInstance] getListCatShop:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
-    // REPLACED BY ama 2016.10.05 END
 }
 
 #pragma mark - ManagerDownloadDelegate
@@ -163,11 +154,8 @@
     NSMutableArray* ary_shops = [NSMutableArray array];
     NSMutableArray* ary_elias = [NSMutableArray array];
     NSMutableArray* subItems = [NSMutableArray array];
-    
-    // REPLACED BY ama 2016.10.05 START
-    // データカラム名変更
+
     ary_root_shops = [[[param.listData valueForKey:@"favorite_list"] objectAtIndex:0] objectAtIndex:0];
-    // REPLACED BY ama 2016.10.05 END
     ary_roor_elias = [[[param.listData valueForKey:@"shops"] objectAtIndex:0] objectAtIndex:0];
     
     NSLog(@"%@",ary_root_shops);
@@ -176,22 +164,18 @@
         
         ary_shops = ary_root_shops;
 
-        // INSERTED BY M.ama 2016.10.19 START
         // myshop有り無しでの表示切り替え
         if(ary_shops.count == 0){
 
-            // REPRASED BY M.ama 2016.10.25 START
             // 未登録時のメッセージ表示
             myShopNotSetInfo.hidden = NO;
             myShopNotSetInfo.frame = CGRectMake(myShopNotSetInfo.frame.origin.x, myShopNotSetInfo.frame.origin.y, myShopNotSetInfo.frame.size.width, 50);
             _myshop_tableView.frame = CGRectMake(10, myShopNotSetInfo.frame.origin.y + myShopNotSetInfo.frame.size.height, cornerView.frame.size.width - 20, 0);
             title2.frame = CGRectMake(0, _myshop_tableView.frame.origin.y + _myshop_tableView.frame.size.height, cornerView.frame.size.width, 32);
             _elia_tableView.frame = CGRectMake(10, title2.frame.origin.y + title2.frame.size.height, cornerView.frame.size.width - 20, 0);
-            //REPRASED BY M.ama 2016.10.25 END
 
         }else{
 
-            // REPRASED BY M.ama 2016.10.25 START
             // 未登録時のメッセージ表示
             myShopNotSetInfo.hidden = YES;
             myShopNotSetInfo.frame = CGRectMake(myShopNotSetInfo.frame.origin.x, myShopNotSetInfo.frame.origin.y, myShopNotSetInfo.frame.size.width, 0);
@@ -201,7 +185,6 @@
             _elia_tableView.frame = CGRectMake(10, title2.frame.origin.y + title2.frame.size.height, cornerView.frame.size.width - 20, 0);
 
         }
-        // INSERTED BY M.ama 2016.10.19 END
     }
     
     if(![ary_roor_elias isEqual:[NSNull null]]){
@@ -239,16 +222,12 @@
 }
 
 - (void)setListShop:(NSArray *)array {
-    
-    //    listShop = array;
-    //    [_tableView reloadData];
-    //listShop = nil;
+
 }
 
 // ロード時に呼び出される。セクション数を返すように実装する
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // REPLACED BY ama 2016.10.05 START
     // テーブルごとでのセクション数設定
     if(tableView == _myshop_tableView){
         
@@ -260,7 +239,6 @@
         return [arr_eliaShop count];
     }
     return 0;
-    // REPLACED BY ama 2016.10.05 END
 }
 
 #pragma mark - UITableViewDelegate & DataSource
@@ -312,8 +290,7 @@
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if(tableView == _myshop_tableView){
-        
-        // INSERTED BY ama 2016.10.05 START
+
         // お気に入り設定
         MPShopCell *shop_cell = [tableView dequeueReusableCellWithIdentifier:@"shopIdentifier"];
         
@@ -359,7 +336,6 @@
         }
         
         return shop_cell;
-        // INSERTED BY ama 2016.10.05 END
     }
     
     if(tableView == _elia_tableView){
@@ -410,13 +386,11 @@
             
             NSString* str_ShopName = [ary_elias_groupe objectAtIndex:indexPath.section];
 //            NSLog(@"%@",str_ShopName);
-            
-            // ▽ 2016年9月29日 ama 件数追加
+
             NSMutableArray* ary_groupeItems = [arr_eliaShop objectAtIndex:indexPath.section];
             NSMutableArray* ary_shopItems = [ary_groupeItems objectAtIndex:0];
             
             [elia_groupe_cell.titleShop setText:[NSString stringWithFormat:@"%@ （ %ld ）", str_ShopName, (long)ary_shopItems.count]];
-            // △ 2016年9月29日 ama 件数追加
             
             //セル上部のライン表示切り替え
             if(indexPath.section == 0){
@@ -429,18 +403,14 @@
             
             //オープン・クローズの状態画像変更
             if(subItems.extended == NO){
-                
-                // ▽ 2016年9月29日 リスト背景色変更
+
                 [elia_groupe_cell.view_back setBackgroundColor:[UIColor clearColor]];
-                // △ 2016年9月29日 リスト背景色変更
                 
                 UIImage *image = [UIImage imageNamed:@"idicator_close.png"];
                 [elia_groupe_cell.imgCursol setImage:image];
             }else{
-                
-                // ▽ 2016年9月29日 リスト背景色変更
+
                 [elia_groupe_cell.view_back setBackgroundColor:[UIColor lightGrayColor]];
-                // △ 2016年9月29日 リスト背景色変更
                 
                 UIImage *image = [UIImage imageNamed:@"idicator_open.png"];
                 [elia_groupe_cell.imgCursol setImage:image];
@@ -455,8 +425,7 @@
             NSString* strText = [[ary_shopItems valueForKey:@"shop_name"] objectAtIndex:indexPath.row-1];
             
             [shop_cell.titleShop setText:strText];
-            
-            // ▽ 2016年9月29日 ama リスト画像設定
+
             NSString* strListCGUrl = [[ary_shopItems valueForKey:@"thumbnail"] objectAtIndex:indexPath.row-1];
             if(![strListCGUrl isEqual:[NSNull null]] && [strListCGUrl length] > 0){
                 
@@ -479,7 +448,6 @@
                 [shop_cell.shopImage setBackgroundColor:[UIColor whiteColor]];
                 [shop_cell.shopImage setImage:image];
             }
-            // △ 2016年9月29日 ama リスト画像設定
             
             return shop_cell;
         }
@@ -494,13 +462,10 @@
         
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         MPShopDetailViewController *shopDetailVC = [[MPShopDetailViewController alloc] initWithNibName:@"MPShopDetailViewController" bundle:nil];
-        
-        // REPLACED BY ama 2016.10.05 START
-        // カラム名更新
+
         NSMutableArray* ary_groupeItems = [arr_myShop objectAtIndex:indexPath.row];
         NSString* strID = [ary_groupeItems valueForKey:@"shop_id"];
         shopDetailVC.shopId = strID;
-        // REPLACED BY ama 2016.10.05 END
         [self.navigationController pushViewController:shopDetailVC animated:YES];
     }
     
@@ -556,10 +521,8 @@
         [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:section]];
     }
     [_elia_tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
-    // REPLACED BY M.ama 2016.10.07 START
     // ヘッダー表示できるように更新
     [_elia_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:firstRow - 1 inSection:section] atScrollPosition:UITableViewScrollPositionTop animated:YES];
-    // REPLACED BY M.ama 2016.10.07 END
 }
 
 - (void)resizeTable {
@@ -588,13 +551,9 @@
                    _elia_tableView.bounds.size.height));
     
     _elia_tableView.frame = CGRectMake(10, title2.frame.origin.y + title2.frame.size.height, _elia_tableView.frame.size.width, _elia_tableView.frame.size.height);
-    
-    // INSERTED BY M.ama 2016.10.08 START
-    //スクロール内のVIEW幅調整
-    // REPRASED BY M.ama 2016.10.19 START
+
     // myshop有り無しでの表示切り替え
     [scr_inView setFrame:CGRectMake(0, 0, scr_inView.frame.size.width, _myshop_tableView.frame.size.height + title2.frame.size.height + _elia_tableView.frame.size.height + 30 + myShopTitle.frame.size.height + 10)];
-    // REPRASED BY M.ama 2016.10.19 END
     
     _scr_rootview.contentSize = scr_inView.bounds.size;
     
@@ -608,18 +567,14 @@
         
         _scr_rootview.contentSize = scr_inView.bounds.size;
     }
-    // INSERTED BY M.ama 2016.10.08 END
 
-    // INSERTED BY M.ama 2016.10.25 START
     // 未登録時のメッセージ表示
     if(myShopNotSetInfo.hidden == NO){
 
         [scr_inView setFrame:CGRectMake(0, 0, scr_inView.frame.size.width, scr_inView.frame.size.height + 50)];
-        // REPRASED BY M.ama 2016.10.19 END
 
         _scr_rootview.contentSize = scr_inView.bounds.size;
     }
-    // INSERTED BY M.ama 2016.10.25 END
 }
 
 - (void)dealloc {

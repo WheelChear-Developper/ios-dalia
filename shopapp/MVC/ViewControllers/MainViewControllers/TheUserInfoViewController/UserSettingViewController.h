@@ -10,30 +10,19 @@
 #import "MPBaseViewController.h"
 #import "Configuration.h"
 #import "MPMemberObject.h"
-// INSERT BY ama 2016.10.27 START
-// カスタムアラート
 #import "MPSettingAlertView.h"
-// INSERT BY ama 2016.10.27 END
-
 #import "ManagerDownload.h"
 
 @interface UserSettingViewController : MPBaseViewController <UITextFieldDelegate, ManagerDownloadDelegate, MPSettingAlertViewDelegate>
 {    
     long lng_sexflag;
-    // INSERT BY ama 2016.09.30 START
-    //IDパラメータ追加
     NSString* str_ID;
-    // INSERT BY ama 2016.09.30 END
     MPMemberObject* memberObj;
     UIDatePicker *datePicker_Birthday;
     UIDatePicker *datePicker_ChildeBirthday1;
     UIDatePicker *datePicker_ChildeBirthday2;
-    
-    // INSERT BY ama 2016.10.13 START
-    // キーボードアクション追加
     CGPoint cgpoint_tf;
     UIKeyboardType kb_type;
-    // INSERT BY ama 2016.10.13 END
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *scr_view;
 @property (weak, nonatomic) IBOutlet UIView *view_title;

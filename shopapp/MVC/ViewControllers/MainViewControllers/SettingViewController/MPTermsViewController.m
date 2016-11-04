@@ -48,10 +48,6 @@
     
     //XIB表示のため、contentViewを非表示
     [contentView setHidden:YES];
-    // REPLACED BY ama 2016.10.05 END
-    
-    //Get name of company
-//    [[ManagerDownload sharedInstance] getCompany:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -61,14 +57,11 @@
     //🔵設定ボタン表示設定
     [self setHiddenSettingButton:YES];
 
-    // REPRASED  M.ama 2016.10.28 START
-    // 利用規約更新
     NSString *company = @"Miコーポレーション株式会社";
     NSString *appName = [NSString stringWithFormat:@"%@アプリ",[(MPConfigObject*)[[MPConfigObject sharedInstance] objectAfterParsedPlistFile:CONFIG_FILE] appName]];
 
     termContent.text = [termContent.text stringByReplacingOccurrencesOfString:@"xxxx" withString:appName];
     termContent.text = [termContent.text stringByReplacingOccurrencesOfString:@"[companyName]" withString:company];
-    // REPRASED  M.ama 2016.10.28 END
 }
 
 - (void)downloadDataSuccess:(DownloadParam *)param {
@@ -89,15 +82,9 @@
     if (listCompany && listCompany.count) {
         company = [[listCompany objectAtIndex:0] objectForKey:@"company"];
     } else {
-        // REPRASED  M.ama 2016.10.27 START
-        // 利用規約更新
         company = @"Miコーポレーション株式会社";
-        // REPRASED  M.ama 2016.10.27 END
     }
-    // REPRASED  M.ama 2016.10.27 START
-    // 利用規約更新
     NSString *appName = [NSString stringWithFormat:@"%@アプリ",[(MPConfigObject*)[[MPConfigObject sharedInstance] objectAfterParsedPlistFile:CONFIG_FILE] appName]];
-    // REPRASED  M.ama 2016.10.27 END
 
     termContent.text = [termContent.text stringByReplacingOccurrencesOfString:@"xxxx" withString:appName];
     termContent.text = [termContent.text stringByReplacingOccurrencesOfString:@"[companyName]" withString:company];

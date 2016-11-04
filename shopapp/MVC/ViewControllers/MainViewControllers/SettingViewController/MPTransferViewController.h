@@ -8,12 +8,17 @@
 
 #import "MPBaseViewController.h"
 
-@interface MPTransferViewController : MPBaseViewController<ManagerDownloadDelegate>
+@interface MPTransferViewController : MPBaseViewController<ManagerDownloadDelegate, UITextFieldDelegate>
 {
-    // INSERT BY ama 2016.10.31 START
-    // キーボードアクション追加
     CGPoint cgpoint_tf;
     UIKeyboardType kb_type;
-    // INSERT BY ama 2016.10.31 END
+    NSString* transfer_code;
 }
+@property (strong, nonatomic) IBOutlet UIScrollView *baseView;
+@property (strong, nonatomic) IBOutlet UILabel *labelTransferCode;
+@property (strong, nonatomic) IBOutlet UITextField *activeTextFeild;
+@property (strong, nonatomic) IBOutlet UIView *inputView;
+@property (strong, nonatomic) IBOutlet UIButton *btnTransfer;
+@property (strong, nonatomic) IBOutlet UITextField *textTransferCode;
+
 @end

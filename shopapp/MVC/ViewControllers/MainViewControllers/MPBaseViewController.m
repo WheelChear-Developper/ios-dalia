@@ -45,7 +45,6 @@
 
 - (void)setUpView {
 
-    // REPLACED BY M.ama 2016.10.24 START
     //ステータスバー表示設定
     float statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
     self.view.backgroundColor = [UIColor blackColor];
@@ -64,7 +63,6 @@
     frameNavigationView.size.height = FRAME_HEIGHT;
     navigationView.frame = frameNavigationView;
     [self.view addSubview:navigationView];
-    
     
     UIImageView *navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((frameNavigationView.size.width - ICON_WIDTH)/2, (frameNavigationView.size.height - ICON_HEIGHT)/2, ICON_WIDTH, ICON_HEIGHT)];
     [navigationIcon setImage:[UIImage imageNamed:@"navigation_icon.png"]];
@@ -117,9 +115,7 @@
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frameContentView.size.width, frameContentView.size.height)];
     [imageView setImage:[UIImage imageNamed:@"background.png"]];
     [contentView addSubview:imageView];
-    
-    // REPLACED BY M.ama 2016.10.08 START
-    // 設定ボタン設置
+
     //サイド設定ボタン設置
     UIImage *img_config = [UIImage imageNamed:@"configuration.png.png"];
     iv_config = [[UIImageView alloc] initWithImage:img_config];
@@ -133,9 +129,6 @@
     [btn_setting addTarget:self action:@selector(push_setting:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:btn_setting];
     btn_setting.hidden = NO;
-    // REPLACED BY M.ama 2016.10.08 END
-
-    // REPLACED BY M.ama 2016.10.24 END
 }
 
 - (void)backButtonClicked:(UIButton*)sender {
@@ -149,8 +142,6 @@
     [backButton setHidden:isHidden];
 }
 
-// REPLACED BY M.ama 2016.10.08 START
-// 設定ボタン設置
 - (void)setHiddenSettingButton:(BOOL)isEnable  {
     
     iv_config.hidden = isEnable;
@@ -162,7 +153,6 @@
     SettingViewController *transVC = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
     [self.navigationController pushViewController:transVC animated:YES];
 }
-// REPLACED BY M.ama 2016.10.08 END
 
 - (void)didReceiveMemoryWarning {
     

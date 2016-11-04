@@ -11,20 +11,6 @@
 #import "MPUIConfigObject.h"
 
 @interface MPHomeWebViewViewController ()
-
-@property (strong, nonatomic) IBOutlet UILabel *titleBackground;
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
-@property (strong, nonatomic) IBOutlet UIView *footerBar;
-@property (strong, nonatomic) IBOutlet UIButton *btnBack;
-@property (strong, nonatomic) IBOutlet UIButton *btnForward;
-@property (strong, nonatomic) IBOutlet UIButton *btnReload;
-@property (strong, nonatomic) IBOutlet UIButton *btnOpenBrowser;
-
-- (IBAction)backButtonWebClicked:(id)sender;
-- (IBAction)forwardButtonClicked:(id)sender;
-- (IBAction)reloadButtonClicked:(id)sender;
-- (IBAction)openBrowserButtonClicked:(id)sender;
-
 @end
 
 @implementation MPHomeWebViewViewController
@@ -64,22 +50,6 @@
 - (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
-/*
-    if (_contents) {
-
-        if (_contents.is_read == 0) {
-
-            //reset badge app here
-            if ([MPAppDelegate sharedMPAppDelegate].totalBadge > 0) {
-                [MPAppDelegate sharedMPAppDelegate].totalBadge -=1;
-                [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[MPAppDelegate sharedMPAppDelegate].totalBadge];
-            }
-            
-            //did read message
-            [[ManagerDownload sharedInstance] readMessage:[Utility getDeviceID] withAppID:[Utility getAppID] withMessageID:_contents.id delegate:self];
-        }
-    }
-*/
 }
 
 - (void)didReceiveMemoryWarning {

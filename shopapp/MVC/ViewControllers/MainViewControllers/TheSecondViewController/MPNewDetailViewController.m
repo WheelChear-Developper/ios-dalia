@@ -58,15 +58,10 @@
                                }];
     }else{
 
-        // INSERTED BY ama 2016.10.26 START
-        // 画像がない場合表示させない
         image_title.translatesAutoresizingMaskIntoConstraints = YES;
         CGRect orig = image_title.frame;
         orig.size.height = 0;
         image_title.frame = orig;
-        // INSERTED BY ama 2016.10.26 END
-
-        //        [image_title setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
     }
     
     //時間設定
@@ -84,21 +79,15 @@
     //メッセージ設定
     [lbl_message setText:newHomeObject.content];
     [txt_message setText:newHomeObject.content];
-    
-    // INSERTED BY ama 2016.09.30 START
+
     // TEXTFIELDのマージンを０に設定
     txt_message.textContainerInset = UIEdgeInsetsZero;
     txt_message.textContainer.lineFragmentPadding = 0;
-    // INSERTED BY ama 2016.09.30 END
 
-    // INSERTED  M.ama 2016.10.29 START
-    // URL文字列でのサイト表示用
     txt_message.delegate=self;
     txt_message.dataDetectorTypes = UIDataDetectorTypeLink;
-    // INSERTED  M.ama 2016.10.29 END
 }
 
-// INSERTED  M.ama 2016.10.29 START
 // URL文字列でのサイト表示用
 - (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange{
 
@@ -108,7 +97,6 @@
 
     return NO;
 }
-// INSERTED  M.ama 2016.10.29 END
 
 //曜日取得
 - (NSString*)getWeekday:(NSString*)dateString {

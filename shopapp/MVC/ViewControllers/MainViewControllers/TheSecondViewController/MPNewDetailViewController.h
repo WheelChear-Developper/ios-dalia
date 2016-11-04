@@ -11,10 +11,7 @@
 #import "MPNewHomeObject.h"
 #import "MPBaseViewController.h"
 #import "ManagerDownload.h"
-// INSERTED  M.ama 2016.10.26 START
-// URL文字列でのサイト表示用
 #import "MPHomeWebViewViewController.h"
-// INSERTED  M.ama 2016.10.26 END
 
 @interface MPNewDetailViewController:MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate, UITextViewDelegate>
 {

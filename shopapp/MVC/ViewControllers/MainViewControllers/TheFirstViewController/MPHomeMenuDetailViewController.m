@@ -9,10 +9,7 @@
 #import "MPHomeMenuDetailViewController.h"
 #import "MPTabBarViewController.h"
 
-@interface MPHomeMenuDetailViewController () {
-    
-    UILabel *title;
-}
+@interface MPHomeMenuDetailViewController ()
 @end
 
 @implementation MPHomeMenuDetailViewController
@@ -54,8 +51,6 @@
     [cornerView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     [scr_inView addSubview:cornerView];
 
-    //INSERTED BY M.ama 2016.11.01 START
-    // レイアウト調整
     imageMenu = [[UIImageView alloc] init];
     imageMenu.contentMode = UIViewContentModeScaleAspectFit;
     imageMenu.frame = CGRectMake(15, 15, cornerView.frame.size.width - 30, 0);
@@ -88,7 +83,6 @@
     lbl_contentMenu.numberOfLines = 0;
     lbl_contentMenu.lineBreakMode = NSLineBreakByTruncatingTail;
     [cornerView addSubview:lbl_contentMenu];
-    // INSERTED BY M.ama 2016.11.01 END
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -146,8 +140,6 @@
                                                image = [UIImage imageNamed:UNAVAILABLE_IMAGE];
                                            }
 
-                                           //INSERTED BY M.ama 2016.11.01 START
-                                           // レイアウト調整
                                            UIImage *img_curpon = image;
                                            CGFloat cgrange_curpon = imageMenu.frame.size.width / img_curpon.size.width;
                                            imageMenu.frame = CGRectMake(imageMenu.frame.origin.x, imageMenu.frame.origin.y, imageMenu.frame.size.width, img_curpon.size.height * cgrange_curpon);
@@ -165,7 +157,6 @@
 
                                            [scr_inView setFrame:CGRectMake(scr_inView.frame.origin.x, scr_inView.frame.origin.y, scr_inView.frame.size.width, lbl_contentMenu.frame.origin.y + lbl_contentMenu.frame.size.height + 30)];
                                            _scr_rootview.contentSize = scr_inView.bounds.size;
-                                           //INSERTED BY M.ama 2016.11.01 END
                                        }];
             }else{
                 [imageMenu setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
@@ -178,10 +169,7 @@
                 [priceMenu setText:@""];
 
             }else{
-                // REPLACED BY M.ama 2016.10.26 START
-                // 税金込み表示
                 [priceMenu setText:[NSString stringWithFormat:@"¥%@（＋税）",itemObject.price]];
-                // REPLACED BY M.ama 2016.10.26 END
             }
 
             [lbl_contentMenu setText:itemObject.content];
@@ -194,11 +182,8 @@
 }
 
 - (void)backButtonClicked:(UIButton *)sender {
-    
-    // REPLACED BY AMA 2016.10.05 START
-    // 画面遷移アニメーション変更
+
     [self.navigationController popViewControllerAnimated:YES];
-    // REPLACED BY AMA 2016.10.05 END
 }
 
 - (void)didReceiveMemoryWarning {

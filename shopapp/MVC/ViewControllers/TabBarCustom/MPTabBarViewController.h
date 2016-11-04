@@ -17,17 +17,10 @@
     NSArray *listShop;
     UIImageView *iv_config;
     UIButton *btn_setting;
-    // INSERTED  M.ama 2016.10.26 START
-    // 新着情報取得設定
     UIImageView *iv_news_count;
     UILabel *lbl_news_count;
-    // INSERTED  M.ama 2016.10.26 END
-
-    // INSERTED  M.ama 2016.10.26 START
-    // 新着情報取得設定
     UIImageView *iv_coupon_count;
     UILabel *lbl_coupon_count;
-    // INSERTED  M.ama 2016.10.26 END
 }
 @property (nonatomic) BOOL bln_ScreenSetting;
 
@@ -35,10 +28,7 @@
 - (void)setUpTabBar;
 - (void)selectTab:(long)tabID;
 - (void)setDisableHomeButton:(BOOL)isEnable;
-// INSERTED  M.ama 2016.10.26 START
-// 新着情報取得設定
 - (void)setNewsCount:(long)count;
 - (void)setCouponCount:(long)count;
-// INSERTED  M.ama 2016.10.26 END
 
 @end

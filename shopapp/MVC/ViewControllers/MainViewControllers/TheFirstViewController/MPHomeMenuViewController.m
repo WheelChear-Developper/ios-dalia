@@ -62,12 +62,8 @@
     iv_toppics.contentMode = UIViewContentModeScaleAspectFit;
     iv_toppics.frame = CGRectMake(15, 15, cornerView.frame.size.width - 30, img_toppics.size.height * cgrange_toppics);
     [cornerView addSubview:iv_toppics];
-    
-    //テーブル
-    // REPLACED BY M.ama 2016.10.08 START
-    // テーブルサイズ調整
+
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, iv_toppics.frame.origin.y + iv_toppics.frame.size.height + 15, cornerView.frame.size.width, 0) style:UITableViewStylePlain];
-    // REPLACED BY M.ama 2016.10.08 END
     [_tableView setBackgroundColor:[UIColor clearColor]];
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -92,14 +88,6 @@
         case DETAIL_LIST_TYPE_MIXED:
             [[ManagerDownload sharedInstance] getListMenu:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
             break;
-            
-            //        case DETAIL_LIST_TYPE_COLLECTION:
-            //            [[ManagerDownload sharedInstance] getListLikedMenu:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
-            //            break;
-            //
-            //        case DETAIL_LIST_TYPE_FAVORITE:
-            //            [[ManagerDownload sharedInstance] getListLikedMenu:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
-            //            break;
             
         default:
             break;
@@ -531,12 +519,9 @@
 }
 
 - (void)resizeTable {
-    
+
     //テーブル高さをセルの最大値へセット
-    // INSERTED BY M.ama 2016.10.08 START
-    // テーブルサイズ調整
     _tableView.frame = CGRectMake(_tableView.frame.origin.x, _tableView.frame.origin.y, _tableView.frame.size.width, 0);
-    // INSERTED BY M.ama 2016.10.08 START
     _tableView.frame =
     CGRectMake(_tableView.frame.origin.x,
                _tableView.frame.origin.y,

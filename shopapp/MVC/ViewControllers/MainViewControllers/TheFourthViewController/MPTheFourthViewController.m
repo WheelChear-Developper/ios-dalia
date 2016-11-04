@@ -11,10 +11,7 @@
 #import "MPCouponDetailViewController.h"
 #import "MPUIConfigObject.h"
 #import "SettingViewController.h"
-// INSERTED By M.ama 2016.10.30 START
-// リスト取得件数変更
 #import "MPApnsDAO.h"
-// INSERTED By M.ama 2016.10.30 END
 
 #define HEIGHT_FOR_SETBIRTHDAY_FRAME 60
 
@@ -90,10 +87,8 @@
     [_tableView registerNib:nib forCellReuseIdentifier:@"couponIdentifier"];
     [_tableView reloadData];
 
-    // INSERTED BY M.ama 2016.102.29 START
     // 通知件数を０にする
     [[MPTabBarViewController sharedInstance] setCouponCount:0];
-    // INSERTED BY M.ama 2016.10.29 END
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -120,19 +115,14 @@
     [[MPTabBarViewController sharedInstance] setDisableHomeButton:YES];
 }
 
-// INSERTED BY M.ama 2016.10.25 START
-// 可変テーブル用
 -(void)viewDidLayoutSubviews {
 
     [super viewDidLayoutSubviews];
 }
-// INSERTED BY M.ama 2016.10.25 END
 
 #pragma mark - ManagerDownloadDelegate
 - (void)downloadDataSuccess:(DownloadParam *)param {
 
-    // REPRASED BY M.ama 2016.10.25 START
-    // 誕生日登録による表示変更
     switch (param.request_type) {
         case RequestType_GET_LIST_COUPON:
         {
@@ -201,8 +191,6 @@
             NSLog(@"%@",[param.listData lastObject]);
         {
 
-            // INSERTED By M.ama 2016.10.30 START
-            // リスト取得件数変更
             MPApnsObject *obj = [param.listData lastObject];
 
             long lng_notificationNo = [obj.apns_badge integerValue];
@@ -216,10 +204,6 @@
             [[MPTabBarViewController sharedInstance] setNewsCount:lng_notificationNo - lng_couponNO];
             [[MPTabBarViewController sharedInstance] setCouponCount:lng_couponNO];
 
-            // INSERTED By M.ama 2016.10.30 END
-
-            // INSERTED BY M.ama 2016.102.30 START
-            // テーブル高さ調整
             lng_TotalHeight = 0;
             for(long l=0;l<listCouponBase.count;l++){
 
@@ -233,14 +217,12 @@
             
             //テーブル高さ調整
             [self resizeTable];
-            // INSERTED BY M.ama 2016.102.30 END
         }
             break;
 
         default:
             break;
     }
-    // REPRASED BY M.ama 2016.10.25 END
 }
 
 - (void)downloadDataFail:(DownloadParam *)param {
@@ -334,9 +316,6 @@
 
 - (void)resizeTable {
 
-    // REPLACED BY M.ama 2016.10.25 START
-    // 可変テーブル用変数
-
     //テーブル高さをセルの最大値へセット
     _tableView.frame = CGRectMake(_tableView.frame.origin.x, _tableView.frame.origin.y, _tableView.frame.size.width, 0);
     _tableView.frame =
@@ -345,8 +324,6 @@
                _tableView.contentSize.width,
                lng_TotalHeight);
 
-    // INSERTED BY M.ama 2016.102.30 START
-    // テーブル高さ調整（情報なし対応）
     [lbl_notList removeFromSuperview];
     lbl_notList = [[UILabel alloc] init];
     lbl_notList.frame = CGRectMake(0, _tableView.frame.origin.y, cornerView.frame.size.width, 34);
@@ -408,10 +385,8 @@
         //スクロール内のVIEW幅調整
         [scr_inView setFrame:CGRectMake(scr_inView.frame.origin.x, scr_inView.frame.origin.y, scr_inView.frame.size.width, iv_toppics.frame.origin.y + iv_toppics.frame.size.height + 15 + lbl_notList.frame.size.height + 10 + 10 + 5)];
     }
-    // INSERTED BY M.ama 2016.102.30 END
 
     _scr_rootview.contentSize = scr_inView.bounds.size;
-    // REPLACED BY M.ama 2016.10.25 END
 }
 
 #pragma mark - MPCouponCellDelegate
@@ -420,11 +395,8 @@
     NSLog(@"use coupon:%@",object.coupon_name);
     couponUse = object;
     if (couponUse.limit_num <= 0) {
-        
-        // REPLACED BY M.ama 2016.10.09 START
-        // 無制限クーポン時、直接クーポン表示変更
+
         [self detailCoupon];
-        // REPLACED BY M.ama 2016.10.09 END
     }else{
         
         MPAlertView *alertView = (MPAlertView*) [Utility viewInBundleWithName:@"MPAlertView"];
@@ -459,12 +431,9 @@
 }
 
 - (void)setBirthDay {
-    
-    // REPLACED BY ama 2016.10.04 START
-    //プロフィール画面へ遷移
+
     UserSettingViewController *transVC = [[UserSettingViewController alloc] initWithNibName:@"UserSettingViewController" bundle:nil];
     [self.navigationController pushViewController:transVC animated:YES];
-    // REPLACED BY ama 2016.10.04 START
 }
 
 #pragma mark - PickerDatetime

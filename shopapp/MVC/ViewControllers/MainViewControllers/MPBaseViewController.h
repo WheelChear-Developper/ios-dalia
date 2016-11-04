@@ -26,20 +26,13 @@ typedef NS_ENUM(NSInteger, ElevenFunctionType) {
     UIImageView *navigationView;
     UIView *contentView;
     UIButton *backButton;
-    
-    // REPLACED BY M.ama 2016.10.08 START
-    // 設定ボタン設置
     UIImageView *iv_config;
     UIButton *btn_setting;
-    // REPLACED BY M.ama 2016.10.08 END
 }
 
 - (void)getTaskWithFunctions:(ElevenFunctionType)type;
 - (void)backButtonClicked:(UIButton*)sender;
 - (void)setHiddenBackButton:(BOOL)isHidden;
-// REPLACED BY M.ama 2016.10.08 START
-// 設定ボタン設置
 - (void)setHiddenSettingButton:(BOOL)isEnable;
-// REPLACED BY M.ama 2016.10.08 END
 
 @end

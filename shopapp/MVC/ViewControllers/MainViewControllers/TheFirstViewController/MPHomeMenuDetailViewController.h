@@ -27,7 +27,7 @@ typedef NS_ENUM(NSInteger, DETAIL_LIST_TYPE) {
     UIScrollView* _scr_rootview;
     UIView *scr_inView;
     UIView *cornerView;
-
+    UILabel *title;
     UIImageView *imageMenu;
     UILabel *titleMenu;
     UILabel *priceMenu;

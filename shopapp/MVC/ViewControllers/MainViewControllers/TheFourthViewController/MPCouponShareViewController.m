@@ -142,9 +142,6 @@
     
 }
 
-// INSERT START 2015.01.16
-// INSERTED BY M.FUJII
-// ADD OPTION9 (LINE連携追加)
 -(void)shareWithLinekDone {
     
     isShareLineDone= YES;
@@ -154,7 +151,6 @@
     [showView show];
 }
 
-// INSERT END 2015.01.16
 - (void)storeAccessToken:(NSString *)accessToken {
     
     [[NSUserDefaults standardUserDefaults]setObject:accessToken forKey:@"SavedAccessHTTPBody"];
@@ -201,7 +197,6 @@
             });
         }
     }];
-    //[self.na presentViewController:loginController animated:YES completion:nil];
     [self.navigationController pushViewController:loginController animated:YES];
 }
 
@@ -219,20 +214,7 @@
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    // REPLACE START 2015.01.16
-    // REPLACED BY M.FUJII
-    // ADD OPTION9 (LINE連携追加)
-    /*
-    if (isShareTwitterOkay) {
-        
-        
-        // type = 2 with share thank coupon
-        couponObject.coupon_type = 2;
-        [[ManagerDownload sharedInstance] submitRegistCoupon:[Utility getDeviceID] withAppID:[Utility getAppID] withCoupon:couponObject delegate:self];
-        isShareTwitterOkay = NO;
-    }
-    */
+
     if (isShareTwitterOkay|| isShareLineDone) {
         
         // type = 2 with share thank coupon

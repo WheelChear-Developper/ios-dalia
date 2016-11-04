@@ -8,11 +8,7 @@
 
 #import "MPTheThirdViewController.h"
 #import "MPTabBarViewController.h"
-// INSERTED BY M.ama 2016.10.27 START
-// 複数スタンプ選択更新
 #import "ProgressView.h"
-// INSERTED BY M.ama 2016.10.27 END
-
 
 @interface MPTheThirdViewController ()
 @end
@@ -50,13 +46,9 @@
     if ( [member_no length] > 0 ){
         self.lbl_recipe.text = [NSString stringWithFormat:@"会員ＩＤ %@", member_no];
     }
-    
-    // REPLACED BY ama 2016.10.08 START
-    // 土台設定修正
-    //クーポンVIEW表示
+
     [couponStampView removeFromSuperview];
     couponStampView = (MPCouponStampView*)[Utility viewInBundleWithName:@"MPCouponStampView"];
-    // REPLACED BY ama 2016.10.08 END
     couponStampView.delegate = self;
     [couponStampView setFrame:CGRectMake(0, 0, self.view_stamp.frame.size.width, self.view_stamp.frame.size.height)];
     [self.view_stamp addSubview:couponStampView];
@@ -90,8 +82,6 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-// INSERT BY ama 2016.10.05 START
-// ランクカラー設定
 - (void)setUserIDColor:(NSString*)colorNo {
     
     if(![colorNo isEqualToString:@""]){
@@ -113,18 +103,12 @@
     [scanner scanHexInt:&rgbValue];
     return [UIColor colorWithRed:((rgbValue & 0xFF0000) >> 16)/255.0 green:((rgbValue & 0xFF00) >> 8)/255.0 blue:(rgbValue & 0xFF)/255.0 alpha:1.0];
 }
-// INSERT BY ama 2016.10.05 END
 
-// INSERT BY M.ama 2016.10.26 START
-// 説明の更新
 -(void)setInfomation:(NSString*)comment {
 
     lbl_Infomation.text = comment;
 }
-// INSERT BY M.ama 2016.10.26 END
 
-// INSERT BY ama 2016.10.05 START
-// Bluetooth設定確認
 - (void)detectBluetooth {
     
     if(!bluetoothManager)
@@ -159,10 +143,7 @@
             break;
     }
 }
-// INSERT BY ama 2016.10.05 END
 
-// INSERTED BY M.ama 2016.10.12 START
-// クーポン件数取得用更新
 - (void)setArertCurpon:(NSString*)no {
     
     // 土台設定修正
@@ -200,10 +181,7 @@
         [self presentViewController:alert animated:YES completion:nil];
     }
 }
-// INSERT BY ama 2016.10.12 END
 
-// REPEATED BY M.ama 2016.10.15 START
-// アラート文言変更
 - (void)arert_StampErr {
     
     UIAlertController *alert =
@@ -219,10 +197,7 @@
     
     [self presentViewController:alert animated:YES completion:nil];
 }
-// REPEATED BY M.ama 2016.10.15 END
 
-// INSERTED BY M.ama 2016.10.27 START
-// 複数スタンプ選択更新
 - (void)arert_AllStamp:(NSString*)strFromInt UUID:(NSString *)uuid{
 
     UIAlertController *alert =
@@ -247,10 +222,7 @@
                                             }]];
     [self presentViewController:alert animated:YES completion:nil];
 }
-// INSERTED BY M.ama 2016.10.27 END
 
-// INSERTED BY M.ama 2016.10.27 START
-// スタンプ無効時の表示
 -(void)setNotStampForm {
 
     //スタンプ日付追加
@@ -266,7 +238,6 @@
     scr_inView.translatesAutoresizingMaskIntoConstraints = YES;
     [scr_inView setFrame:CGRectMake(0, 0, scr_inView.frame.size.width, 300)];
 }
-// INSERTED BY M.ama 2016.10.27 END
 
 - (void)didReceiveMemoryWarning {
     

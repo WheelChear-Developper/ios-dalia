@@ -39,9 +39,9 @@
     //アカウント画面呼び出し
     if([Configuration getFirstUserInfoSet] == false){
         
-        TheUserInfoViewController *initialViewController = [[TheUserInfoViewController alloc] initWithNibName:@"TheUserInfoViewController" bundle:nil];
-        initialViewController.TheUserInfoViewControllerDelegate = self;
-        [self presentViewController:initialViewController animated:NO completion:nil];
+//        TheUserInfoViewController *initialViewController = [[TheUserInfoViewController alloc] initWithNibName:@"TheUserInfoViewController" bundle:nil];
+//        initialViewController.TheUserInfoViewControllerDelegate = self;
+//        [self presentViewController:initialViewController animated:NO completion:nil];
     }
     
     //🔴バックアクション非表示
@@ -83,12 +83,9 @@
     float topImageHeight = 0;
     float newMessageHeight,listFunHeight = 0;
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
-        // REPLACED BY ama 2016.09.30 START
-        // トップ画像のサイズ変更
         topImageHeight = heightCalc*3.0;
         newMessageHeight = heightCalc *3.0;
         listFunHeight = heightCalc;
-        // REPLACED BY ama 2016.09.30 START
     }else{
         topImageHeight = heightCalc*1.85;
         newMessageHeight = heightCalc *2.25;
@@ -97,8 +94,6 @@
     
     CGRect topImageViewFrame = topImageView.frame;
     topImageViewFrame.origin.x = 15;
-    // REPLACED BY M.ama 2016.10.24 START
-    //ステータスバー表示設定
     topImageViewFrame.origin.y = 15;
     // REPLACED BY M.ama 2016.10.24 END
     topImageViewFrame.size.height = topImageHeight;
@@ -190,8 +185,6 @@
     btn_curpon.imageView.contentMode = UIViewContentModeScaleAspectFit;
     [cornerView addSubview:btn_curpon];
 
-    
-    // INSERT BY ama 2016.09.30 START
     //クーポンイメージダウンロード
     NSURL* url = [NSURL URLWithString:CURPON_IMAGE_URL];
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
@@ -208,8 +201,7 @@
                                }else{
                                    image = [UIImage imageNamed:@"hangaku.png"];
                                }
-                               // RESERVED BY ama 2016.10.31 START
-                               // 画像変更
+
                                UIImage *img_curpon = image;
                                CGFloat cgrange_curpon = (cornerView.frame.size.width - 20) / img_curpon.size.width;
 
@@ -219,10 +211,8 @@
 
                                btn_curpon.frame = CGRectMake(iv_curpon.frame.origin.x, iv_curpon.frame.origin.y, iv_curpon.frame.size.width, iv_curpon.frame.size.height);
                                [btn_curpon setImage:image forState:UIControlStateNormal];
-                               // RESERVED BY ama 2016.10.31 END
 
                            }];
-    // INSERT BY ama 2016.09.30 END
 
     //スクロールビュー大きさ再設定
     scr_inView.frame = CGRectMake(0, 0, contentView.frame.size.width, btn_curpon.frame.origin.y + btn_curpon.frame.size.height + 35);
@@ -230,8 +220,6 @@
     _scr_rootview.contentSize = scr_inView.bounds.size;
 }
 
-// INSERTED BY M.ama 2016.10.31 START
-// 可変テーブル用
 -(void)viewDidLayoutSubviews {
 
     [super viewDidLayoutSubviews];
@@ -241,7 +229,6 @@
     cornerView.frame = CGRectMake(8, 8, scr_inView.frame.size.width - 16, scr_inView.frame.size.height - 16);
     _scr_rootview.contentSize = scr_inView.bounds.size;
 }
-// INSERTED BY M.ama 2016.10.31 END
 
 - (void)viewWillAppear:(BOOL)animated {
     

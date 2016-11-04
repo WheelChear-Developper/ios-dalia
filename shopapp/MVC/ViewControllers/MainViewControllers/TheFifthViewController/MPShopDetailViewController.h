@@ -10,10 +10,7 @@
 #import "MPShopObject.h"
 #import "ManagerDownload.h"
 #import "MPHeaderShopView.h"
-// INSERTED BY ama 2016.10.18 START
-// デリゲート設定のため設定
 #import "MPShopDetailCell.h"
-// INSERTED BY ama 2016.10.18 END
 
 @interface MPShopDetailViewController : MPBaseViewController<ManagerDownloadDelegate, UITableViewDataSource, UITableViewDelegate, MPHeaderShopViewDelegate>
 {
@@ -27,12 +24,8 @@
     UIView *scr_inView;
     UIView *cornerView;
     UILabel *lbl_title;
-
-    // INSERTED BY ama 2016.10.18 START
-    // デリゲート設定のため設定
     MPHeaderShopView* headerView;
     long lng_TotalHeight;
-    // INSERTED BY ama 2016.10.18 END
 }
 @property (nonatomic, strong) NSString *shopId;
 @property (nonatomic) BOOL hasOneItem;

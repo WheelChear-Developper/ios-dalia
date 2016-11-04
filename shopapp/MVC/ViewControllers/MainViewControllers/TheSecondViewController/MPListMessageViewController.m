@@ -37,10 +37,6 @@
     //🔴contentView 高さ自動調整　幅自動調整
     [contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     
-    
-    
-    
-    
     UIImageView *view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title_bg.png"]];
     [view setFrame:CGRectMake(0, 0, 320, 30)];
     UILabel *title = [[UILabel alloc] initWithFrame:view.frame];
@@ -131,17 +127,6 @@
     
     return 37;
 }
-
-//- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-//    return 0;
-//}
-//
-//- (UIView*) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-//    UIView *view = [[UIView alloc] init];
-//    [view setBackgroundColor:[UIColor whiteColor]];
-//    
-//    return view;
-//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     

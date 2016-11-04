@@ -8,17 +8,7 @@
 
 #import "MPTransferViewController.h"
 
-@interface MPTransferViewController () <UITextFieldDelegate> {
-    NSString* transfer_code;
-}
-
-@property (strong, nonatomic) IBOutlet UIScrollView *baseView;
-@property (strong, nonatomic) IBOutlet UILabel *labelTransferCode;
-@property (strong, nonatomic) IBOutlet UITextField *activeTextFeild;
-@property (strong, nonatomic) IBOutlet UIView *inputView;
-@property (strong, nonatomic) IBOutlet UIButton *btnTransfer;
-@property (strong, nonatomic) IBOutlet UITextField *textTransferCode;
-
+@interface MPTransferViewController ()
 @end
 
 @implementation MPTransferViewController
@@ -32,14 +22,10 @@
     
     //🔴contentView 高さ自動調整　幅自動調整
     [contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
-    
-    // REPLACED BY ama 2016.09.29 START
-    //場所移動
+
     //xib表示設定
     [contentView setHidden:YES];
-    // REPLACED BY ama 2016.09.29 END
-    
-    // Do any additional setup after loading the view from its nib.
+
     [[ManagerDownload sharedInstance] getTransferCode:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
     
     NSString *isTransfer = [[NSUserDefaults standardUserDefaults] objectForKey:IS_TRANSFER];
@@ -49,6 +35,7 @@
 
     // キーボードアクション追加
     NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
+
     // キーボード表示を検知。
     [nc addObserver:self selector:@selector(showKeyboard:) name:UIKeyboardDidShowNotification object:nil];
 
@@ -65,7 +52,6 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
-
 }
 
 - (void)downloadDataSuccess:(DownloadParam *)param {
@@ -124,8 +110,6 @@
     [super didReceiveMemoryWarning];
 }
 
-// REPLACED BY ama 2016.10.31 START
-//場所移動
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
 
     CGRect rect_screen = [[UIScreen mainScreen] bounds];
@@ -189,7 +173,6 @@
     [self.baseView setContentOffset:CGPointMake(0, -20) animated:YES];
     return YES;
 }
-// REPLACED BY ama 2016.10.31 END
 
 - (void) updateTermCondition {
     

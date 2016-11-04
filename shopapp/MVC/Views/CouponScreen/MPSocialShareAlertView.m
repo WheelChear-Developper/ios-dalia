@@ -44,13 +44,11 @@
         case SocialType_Twitter:
             title = @"Twitterにシェア";
             break;
-        // INSERT START 2015.01.16
-        // INSERTED BY M.FUJII
-        // ADD OPTION9 (LINE連携追加)
+            
         case SocialType_Line:
             title = @"Lineにシェア";
             break;
-        // INSERT END 2015.01.16
+
         default:
             break;
     }

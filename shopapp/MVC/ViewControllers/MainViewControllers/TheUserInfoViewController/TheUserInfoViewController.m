@@ -36,8 +36,6 @@
     
     [contentView setHidden:YES];
     
-    // INSERT BY ama 2016.09.30 START
-    //日付設定用ピッカー設置
     //DataPicker 設定
     datePicker_Birthday = [[UIDatePicker alloc] init];
     datePicker_Birthday.datePickerMode=UIDatePickerModeDate;
@@ -77,12 +75,11 @@
     self.txt_birthday.inputAccessoryView = toolbar;
     self.txt_childrenBirthday1.inputAccessoryView = toolbar;
     self.txt_childrenBirthday2.inputAccessoryView = toolbar;
-    // INSERT BY ama 2016.09.30 END
-    
-    // INSERT BY ama 2016.10.13 START
+
     // キーボードアクション追加
     NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
-    // キーボード表示を検知。
+
+    // キーボード表示を検知
     [nc addObserver:self selector:@selector(showKeyboard:) name:UIKeyboardDidShowNotification object:nil];
     
     // キーボード収納を検知。
@@ -101,14 +98,11 @@
     numbaer_toolbar.items=@[numbaer_item0,numbaer_item1,numbaer_item2,numbaer_item3];
     //DataPicker上部バー設定
     self.txt_zipcode.inputAccessoryView = numbaer_toolbar;
-    // INSERT BY ama 2016.10.13 END
     
     //性別設定（初期：男）
     lng_sexflag = 1;
     [self setSexChenge:lng_sexflag];
 
-    // INSERT BY ama 2016.10.30 START
-    // キーボードアクション追加
     self.txt_nickname.layer.borderWidth=1.0;
     self.txt_nickname.layer.borderColor=[[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:1.0] CGColor];
     self.txt_birthday.layer.borderWidth=1.0;
@@ -123,7 +117,6 @@
     self.txt_childrenname2.layer.borderColor=[[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:1.0] CGColor];
     self.txt_childrenBirthday2.layer.borderWidth=1.0;
     self.txt_childrenBirthday2.layer.borderColor=[[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:1.0] CGColor];
-    // INSERT BY ama 2016.10.30 END
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -132,11 +125,8 @@
     
     //🔵設定ボタン表示設定
     [self setHiddenSettingButton:YES];
-    
-    // INSERT BY ama 2016.09.30 START
-    //ユーザー情報取得
+
     [[ManagerDownload sharedInstance] getMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
-    // INSERT BY ama 2016.09.30 END
 }
 
 - (void)didReceiveMemoryWarning {
@@ -144,8 +134,6 @@
     [super didReceiveMemoryWarning];
 }
 
-// INSERT BY ama 2016.09.30 START
-//日付設定用ピッカー設置
 -(void)dateSet_Birthday:(UIDatePicker *)picker {
     
     NSDate *selectDate=picker.date;
@@ -183,14 +171,11 @@
     
     [self.txt_zipcode resignFirstResponder];
 }
-// INSERT BY ama 2016.09.30 END
 
 #pragma mark - ManagerDownloadDelegate
 - (void)downloadDataSuccess:(DownloadParam *)param {
     
     switch (param.request_type) {
-        // INSERT BY ama 2016.09.30 START
-        //新規登録でもユーザー情報を取得するように変更
         case RequestType_GET_MEMBER_INFO:
         {
             if(param.listData.count > 0){
@@ -202,29 +187,20 @@
                 lng_sexflag = memberObj.gender;
                 [self setSexChenge:lng_sexflag];
                 self.txt_birthday.text = memberObj.birthday;
-                // INSERTED BY M.ama 2016.10.28 START
-                //子供の誕生日設定済みの場合編集出来なくする
                 if(![memberObj.birthday isEqualToString:@""]){
                     self.txt_birthday.enabled = NO;
                 }
-                // INSERTED BY M.ama 2016.10.28 END
                 self.txt_zipcode.text = memberObj.zipcode;
                 self.txt_childrenname1.text = memberObj.child1_name;
                 self.txt_childrenBirthday1.text = memberObj.child1_birthday;
-                // INSERT BY ama 2016.09.30 START
-                //子供の誕生日設定済みの場合編集出来なくする
                 if(![memberObj.child1_birthday isEqualToString:@""]){
                     self.txt_childrenBirthday1.enabled = NO;
                 }
-                // INSERT BY ama 2016.09.30 END
                 self.txt_childrenname2.text = memberObj.child2_name;
                 self.txt_childrenBirthday2.text = memberObj.child2_birthday;
-                // INSERT BY ama 2016.09.30 START
-                //子供の誕生日設定済みの場合編集出来なくする
                 if(![memberObj.child2_birthday isEqualToString:@""]){
                     self.txt_childrenBirthday2.enabled = NO;
                 }
-                // INSERT BY ama 2016.09.30 END
                 
             }else{
                 
@@ -243,7 +219,7 @@
             }
         }
             break;
-        // INSERT BY ama 2016.09.30 END
+
         case RequestType_SET_MEMBER_INFO:
         {
             // 初期値コミット
@@ -259,8 +235,6 @@
     }
 }
 
-// INSERT BY ama 2016.10.13 START
-// キーボードアクション追加
 -(void)setSexChenge:(long)flag {
     
     //キーボードクローズ
@@ -394,14 +368,10 @@
     [self.txt_childrenname2 resignFirstResponder];
     [self.txt_childrenBirthday2 resignFirstResponder];
 }
-// INSERT BY ama 2016.10.13 END
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    
 }
 
-// REPLACED BY M.ama 2016.10.09 START
-// 郵便番号にて数字以外入れれないように
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     //space remove
     if (![string compare:@" "]) {
@@ -412,9 +382,6 @@
     NSMutableString *tmp =[textField.text mutableCopy];
     // 編集後のtext
     [tmp replaceCharactersInRange:range withString:string];
-    
-    // INSERT BY ama 2016.09.30 START
-    // 入力文字数制限
     
     //ニックネーム入力規制
     if(textField == self.txt_nickname){
@@ -432,7 +399,6 @@
         
         return [tmp lengthOfBytesUsingEncoding:NSShiftJISStringEncoding] <= 7;
     }
-    // INSERT BY ama 2016.09.30 END
     
     return YES;
 }
@@ -443,7 +409,6 @@
     return [[NSCharacterSet decimalDigitCharacterSet] isSupersetOfSet:characterSet];
 
 }
-// REPLACED BY M.ama 2016.10.09 END
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     
@@ -510,9 +475,7 @@
 }
 
 - (IBAction)btn_start:(id)sender {
-    
-    // INSERT BY ama 2016.09.30 START
-    // 文字チェック追加
+
     //文字数チェック
     BOOL bln_LengthCheck = YES;
     if(self.txt_nickname.text.length == 0){
@@ -647,24 +610,17 @@
     
     if(bln_LengthCheck == YES){
 
-        // INSERTED BY M.ama 2016.10.27 START
-        // アラートカスタマイズ
         MPSettingAlertView *alertView = (MPSettingAlertView*) [Utility viewInBundleWithName:@"MPSettingAlertView"];
         alertView.delegate = self;
         [[MPAppDelegate sharedMPAppDelegate].window addSubview:alertView];
-        // INSERTED BY M.ama 2016.10.27 END
     }
-    // INSERT BY ama 2016.09.30 END
 }
 
-// INSERT BY ama 2016.10.27 START
-// カスタムアラート
 -(void)setUserData {
 
     //ユーザー情報取得
     [[ManagerDownload sharedInstance] setMemberInfo:str_ID withAppID:[Utility getAppID] withMemberNO:[[NSUserDefaults standardUserDefaults] objectForKey:MEMBER_NO] withDeviceID:[Utility getDeviceID] withNickName:self.txt_nickname.text withGender:lng_sexflag withBirthday:self.txt_birthday.text withZipcode:self.txt_zipcode.text withChild1Name:self.txt_childrenname1.text withChild1Birthday:self.txt_childrenBirthday1.text withChild2Name:self.txt_childrenname2.text withChild2Birthday:self.txt_childrenBirthday2.text delegate:self];
 }
-// INSERT BY ama 2016.10.27 END
 
 - (IBAction)btn_skip:(id)sender {
 

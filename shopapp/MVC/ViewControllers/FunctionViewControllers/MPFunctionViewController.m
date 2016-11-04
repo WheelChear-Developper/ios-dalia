@@ -52,11 +52,8 @@
     [view addSubview:title];
     NSLog(@"type function: %ld",(long)functionType);
     [contentView addSubview:view];
-    
-    // INSERTED BY M.FUJII 2016.02.04 START
-    // 簡易CMS対応
+
     UILabel* label_member_no;
-    // INSERTED BY M.FUJII 2016.02.04 END
     
     switch (functionType) {
         case ElevenFunctionType_1:
@@ -68,9 +65,6 @@
         case ElevenFunctionType_2:
         {
             //来店スタンプ
-            
-            // INSERTED BY M.FUJII 2016.02.04 START
-            // 簡易CMS対応
             label_member_no =  [[UILabel alloc] initWithFrame:CGRectMake(240.0f, 0.0f, 70.0f, 32.0f)];
             label_member_no.textAlignment = NSTextAlignmentRight;
             label_member_no.textColor = [UIColor whiteColor];
@@ -79,7 +73,6 @@
             if ( [member_no length] > 0 ){
                 label_member_no.text = [NSString stringWithFormat:@"No.%@", member_no];
             }
-            // INSERTED BY M.FUJII 2016.02.04 END
             
             [title setText:[[[[(MPUIConfigObject*)[MPUIConfigObject sharedInstance] objectAfterParsedPlistFile:[Utility getPatternType]] tab1] objectForKey:@"Function2"] objectForKey:@"titleHeader"]];
             MPCouponStampView *couponStampView = (MPCouponStampView*)[Utility viewInBundleWithName:@"MPCouponStampView"];
@@ -182,13 +175,10 @@
         default:
             break;
     }
-    
-    // INSERTED BY M.FUJII 2016.02.04 START
-    // 簡易CMS対応
+
     if (label_member_no){
         [contentView addSubview:label_member_no];
     }
-    // INSERTED BY M.FUJII 2016.02.04 END
 }
 
 #pragma mark - ManagerDownloadDelegate

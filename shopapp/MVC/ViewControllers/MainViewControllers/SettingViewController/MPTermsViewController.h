@@ -14,9 +14,7 @@
     IBOutlet UITextView *termContent;
     NSArray *listCompany;
 }
-// REPLACED BY ama 2016.10.05 START
-// レイアウト更新
+
 @property (weak, nonatomic) IBOutlet UIView *view_title;
-// REPLACED BY ama 2016.10.05 END
 
 @end

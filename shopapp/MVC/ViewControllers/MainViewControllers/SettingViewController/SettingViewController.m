@@ -37,14 +37,13 @@
     //🔴contentView 高さ自動調整　幅自動調整
     [contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
 
-    // INSERTED BY M.ama 2016.10.24 START
+
     //ステータスバー表示設定
     float statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
     CGRect frameContentView = contentView.frame;
     frameContentView.origin.y = contentView.frame.origin.y + statusHeight;
     frameContentView.size.height = contentView.frame.size.height - statusHeight;
     contentView.frame = frameContentView;
-    // INSERTED BY M.ama 2016.10.24 END
 
     //タイトルのグラデーション
     CAGradientLayer *gradient = [CAGradientLayer layer];
@@ -113,11 +112,8 @@
 }
 
 - (void)backButtonClicked:(UIButton *)sender {
-    
-    // REPLACED BY M.ama 2016.10.08 START
-    // 戻るアクション更新
+
     [self.navigationController popViewControllerAnimated:YES];
-    // REPLACED BY M.ama 2016.10.08 END
 }
 
 #pragma mark - ManagerDownloadDelegate

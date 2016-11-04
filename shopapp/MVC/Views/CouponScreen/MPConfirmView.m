@@ -88,10 +88,7 @@
 - (IBAction)yesButtonClicked:(id)sender {
     
     NSString *strFromInt = [NSString stringWithFormat:@"%ld",amount];
-    // REPLACED BY ama 2016.10.05 START
-    // iBeacon識別追加
     [[ManagerDownload sharedInstance] submitStamp:[Utility getDeviceID] withAppID:[Utility getAppID] withCoupon:couponObject withCode:secureTextField.text withAmount:strFromInt withUUID:@"" withMajor:@"0" withMinor:@"0" delegate:self];
-    // REPLACED BY ama 2016.10.05 END
     
     [UIView animateWithDuration:0.5 animations:^{
         [[self viewWithTag:1911] setFrame:DOWN_TO_VIEW];
@@ -119,8 +116,7 @@
         [self removeFromSuperview];
         return;
     }
-    // REPLACED BY M.ama 2016.10.08 START
-    // クーポン件数取得用更新
+
     if ([[[param.listData lastObject] objectForKey:@"message"] isEqualToString:@"OK"]) {
         [self removeFromSuperview];
         
@@ -134,7 +130,6 @@
         [alertView show];
         [self removeFromSuperview];
     }
-    // REPLACED BY M.ama 2016.10.08 START
 }
 
 - (void)downloadDataFail:(DownloadParam *)param {

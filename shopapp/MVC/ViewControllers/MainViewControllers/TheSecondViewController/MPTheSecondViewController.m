@@ -13,15 +13,9 @@
 #import "MPNewDetailViewController.h"
 #import "MPWpNewsDetailViewController.h"
 #import "MPListMessageViewController.h"
-// INSERTED By M.ama 2016.10.30 START
-// リスト取得件数変更
 #import "MPApnsDAO.h"
-// INSERTED By M.ama 2016.10.30 START
 
-// RESERVED  M.ama 2016.10.27 START
-// リスト取得件数変更
 #define LIMIT_RECORD_MESSAGE_RECEIVED @"-1"
-// RESERVED  M.ama 2016.10.27 END
 
 @interface MPTheSecondViewController ()
 @end
@@ -119,8 +113,6 @@
         case RequestType_GET_DEFAULT_NOTIFICATION:
             NSLog(@"%@",[param.listData lastObject]);
         {
-            // INSERTED By M.ama 2016.10.30 START
-            // リスト取得件数変更
             MPApnsObject *obj = [param.listData lastObject];
 
             long lng_notificationNo = [obj.apns_badge integerValue];
@@ -133,8 +125,6 @@
 
             [[MPTabBarViewController sharedInstance] setNewsCount:lng_notificationNo - lng_couponNO];
             [[MPTabBarViewController sharedInstance] setCouponCount:lng_couponNO];
-
-            // INSERTED By M.ama 2016.10.30 END
         }
             break;
             
@@ -178,11 +168,8 @@
     
     [cell setData:[self.listObject objectAtIndex:indexPath.row]];
     cell.backgroundColor = [UIColor clearColor];
-    // RESERVED  M.ama 2016.10.29 START
-    // 選択時の色変更
     cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
     [cell.selectedBackgroundView setBackgroundColor:[UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1.0]];
-    // RESERVED  M.ama 2016.10.29 END
     
     return cell;
 }
@@ -213,7 +200,6 @@
                MAX(_tableView.contentSize.height,
                    _tableView.bounds.size.height));
 
-    // INSERTED By M.ama 2016.10.30 START
     // 情報なしの場合のメッセージ
     if(self.listObject.count == 0){
 
@@ -234,7 +220,6 @@
         //スクロール内のVIEW幅調整
         [scr_inView setFrame:CGRectMake(scr_inView.frame.origin.x, scr_inView.frame.origin.y, scr_inView.frame.size.width, iv_toppics.frame.origin.y + iv_toppics.frame.size.height + _tableView.frame.size.height + 40)];
     }
-    // INSERTED By M.ama 2016.10.30 END
 
     _scr_rootview.contentSize = scr_inView.bounds.size;
 }

@@ -72,14 +72,11 @@
     [cornerView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     [scr_inView addSubview:cornerView];
 
-    // INSERTED BY ama 2016.10.18 START
-    // ヘッダーVIEWの表示変更
     //ヘッダーのセット
     headerView = (MPHeaderShopView*) [Utility viewInBundleWithName:@"MPHeaderShopView"];
     headerView.frame = CGRectMake(0, 0, cornerView.frame.size.width, headerView.frame.size.height);
     headerView.delegate = self;
     [cornerView addSubview:headerView];
-    // INSERTED BY ama 2016.10.18 END
 
     //テーブル追加
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, headerView.frame.origin.y, cornerView.frame.size.width, 0) style:UITableViewStylePlain];
@@ -105,10 +102,8 @@
     [self setHiddenSettingButton:NO];
     
     if (self.shopId) {
-        // REPLACED BY ama 2016.10.05 START
-        // パラメータ追加
+
         [[ManagerDownload sharedInstance] getDetailShop:[Utility getAppID] withShopID:self.shopId withDeviceID:[Utility getDeviceID] delegate:self];
-        // REPLACED BY ama 2016.10.05 END
     }
 }
 
@@ -117,8 +112,6 @@
     [super viewDidAppear:animated];
 }
 
-// INSERTED BY ama 2016.10.18 START
-// ヘッダーVIEWの表示変更
 -(void)viewDidLayoutSubviews {
 
     [super viewDidLayoutSubviews];
@@ -140,7 +133,6 @@
         [self resizeTable];
     }
 }
-// INSERTED BY ama 2016.10.18 END
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 }
@@ -164,17 +156,12 @@
     self.shopId = nil;
     shopObject = (MPShopObject*)[param.listData lastObject];
 
-    // INSERTED BY ama 2016.10.18 START
-    // ヘッダーVIEWの表示変更
     //Head値セット
     [headerView setData:shopObject];
-    // INSERTED BY ama 2016.10.18 END
 
     //店名設定
     lbl_title.text = shopObject.shop_name;
 
-    // REPRASED BY M.ama 2016.10.25 START
-    // その他の項目がない時表示しない用に修正
     if(![[Utility checkNIL:shopObject.other_content] isEqualToString:@""]){
 
         listContent = @[[Utility checkNIL:shopObject.phone],[Utility checkNIL:shopObject.business_hour],[Utility checkNIL:shopObject.regular_holiday],[Utility checkNIL:shopObject.parking],[Utility checkNIL:shopObject.seat_number],[Utility checkNIL:shopObject.other_content]];
@@ -184,7 +171,6 @@
         listContent = @[[Utility checkNIL:shopObject.phone],[Utility checkNIL:shopObject.business_hour],[Utility checkNIL:shopObject.regular_holiday],[Utility checkNIL:shopObject.parking],[Utility checkNIL:shopObject.seat_number],[Utility checkNIL:shopObject.other_content]];
         listTitle = @[@"電話番号",@"営業時間",@"定休日",@"駐車場",@"席数"];
     }
-    // REPRASED BY M.ama 2016.10.25 END
 
     [_tableView reloadData];
 }
@@ -192,8 +178,6 @@
 - (void)downloadDataFail:(DownloadParam *)param {
 }
 
-// INSERTED BY ama 2016.10.18 START
-// ヘッダーVIEWの表示変更
 #pragma mark - UITableViewDelegate & DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
@@ -252,10 +236,7 @@
     
     _scr_rootview.contentSize = scr_inView.bounds.size;
 }
-// INSERTED BY ama 2016.10.18 END
 
-// INSERTED BY ama 2016.10.08 START
-// マイショップ登録ダイアログ
 - (void)delShop {
     
     UIAlertController *alert =
@@ -285,7 +266,6 @@
                                             }]];
     [self presentViewController:alert animated:YES completion:nil];
 }
-// INSERTED BY ama 2016.10.08 END
 
 - (void)didReceiveMemoryWarning {
     

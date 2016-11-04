@@ -12,10 +12,7 @@
 
 @protocol MPConfirmViewDelegate<NSObject>
 - (void) getStamp: (UIButton*) tag;
-// INSERTED BY M.ama 2016.10.08 START
-// クーポン件数取得用更新
 - (void)setArertCurponNo:(NSString*)no;
-// INSERTED BY M.ama 2016.10.08 END
 @end
 
 @interface MPConfirmView : UIView<UITextFieldDelegate,ManagerDownloadDelegate>

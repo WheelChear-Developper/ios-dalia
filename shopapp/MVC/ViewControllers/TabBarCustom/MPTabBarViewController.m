@@ -201,8 +201,6 @@
     }
     [self.view addSubview:bgTabBar];
 
-    // INSERTED  M.ama 2016.10.26 START
-    // 新着情報取得設定
     UIImage *img_circle = [UIImage imageNamed:@"red_circle.png"];
     iv_news_count = [[UIImageView alloc] initWithImage:img_circle];
     iv_news_count.contentMode = UIViewContentModeScaleAspectFit;
@@ -218,10 +216,7 @@
     [self.view addSubview:lbl_news_count];
     iv_news_count.hidden = YES;
     lbl_news_count.hidden = YES;
-    // INSERTED  M.ama 2016.10.26 END
 
-    // INSERTED  M.ama 2016.10.26 START
-    // 新着情報取得設定
     iv_coupon_count = [[UIImageView alloc] initWithImage:img_circle];
     iv_coupon_count.contentMode = UIViewContentModeScaleAspectFit;
     iv_coupon_count.frame = CGRectMake(3 * widthBT + widthBT/2 + 5, rect.origin.y + 3, 17, 17);
@@ -236,13 +231,10 @@
     [self.view addSubview:lbl_coupon_count];
     iv_coupon_count.hidden = YES;
     lbl_coupon_count.hidden = YES;
-    // INSERTED  M.ama 2016.10.26 END
 
     [self selectTab:0];
 }
 
-// INSERTED  M.ama 2016.10.26 START
-// 新着情報取得設定
 -(void)setNewsCount:(long)count {
 
     if(count > 0){
@@ -257,10 +249,7 @@
         lbl_news_count.text = @"";
     }
 }
-// INSERTED  M.ama 2016.10.26 END
 
-// INSERTED  M.ama 2016.10.26 START
-// 新着情報取得設定
 -(void)setCouponCount:(long)count {
 
     if(count > 0){
@@ -275,7 +264,6 @@
         lbl_coupon_count.text = @"";
     }
 }
-// INSERTED  M.ama 2016.10.26 END
 
 - (void)buttonClicked:(UIButton*)sender {
     

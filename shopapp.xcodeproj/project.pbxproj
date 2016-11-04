@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		103B56711DC9D84E00F162CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 103B56701DC9D84E00F162CA /* main.m */; };
-		103B567C1DC9D84E00F162CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103B567B1DC9D84E00F162CA /* Assets.xcassets */; };
-		103B567F1DC9D84E00F162CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103B567D1DC9D84E00F162CA /* LaunchScreen.storyboard */; };
 		103B568A1DC9D84E00F162CA /* shopappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 103B56891DC9D84E00F162CA /* shopappTests.m */; };
 		103B56951DC9D84E00F162CA /* shopappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 103B56941DC9D84E00F162CA /* shopappUITests.m */; };
 		10559D821DCC56C100469AAF /* MPConfigObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559B2B1DCC56C000469AAF /* MPConfigObject.m */; };
@@ -366,7 +364,6 @@
 		10559F041DCC56C100469AAF /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559D7C1DCC56C100469AAF /* XMLReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		10559F051DCC56C100469AAF /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559D7E1DCC56C100469AAF /* Utility.m */; };
 		10559F061DCC56C100469AAF /* VerticallyAlignedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559D811DCC56C100469AAF /* VerticallyAlignedLabel.m */; };
-		10559F0A1DCC591700469AAF /* MPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559F091DCC591700469AAF /* MPAppDelegate.m */; };
 		10559F211DCC7EAC00469AAF /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559F0D1DCC7EAC00469AAF /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		10559F221DCC7EAC00469AAF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559F0F1DCC7EAC00469AAF /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		10559F231DCC7EAC00469AAF /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559F111DCC7EAC00469AAF /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -387,6 +384,8 @@
 		10559F3A1DCC851400469AAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10559F391DCC851400469AAF /* CoreGraphics.framework */; };
 		10559F3C1DCC852900469AAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10559F3B1DCC852900469AAF /* UIKit.framework */; };
 		10559F3E1DCC855000469AAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10559F3D1DCC855000469AAF /* Foundation.framework */; };
+		10A46E771DCCB1B9005CC4A0 /* MPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A46E761DCCB1B9005CC4A0 /* MPAppDelegate.m */; };
+		10A46E791DCCB3C5005CC4A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A46E781DCCB3C4005CC4A0 /* Images.xcassets */; };
 		41BA1737077A02944934C9E4 /* libPods-shopapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D062CC74FC38C9535D5C06 /* libPods-shopapp.a */; };
 /* End PBXBuildFile section */
 
@@ -411,8 +410,6 @@
 		0A1677B802BE02DA8676CE72 /* Pods-shopapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shopapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-shopapp/Pods-shopapp.release.xcconfig"; sourceTree = "<group>"; };
 		103B566C1DC9D84E00F162CA /* shopapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shopapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		103B56701DC9D84E00F162CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		103B567B1DC9D84E00F162CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		103B567E1DC9D84E00F162CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		103B56801DC9D84E00F162CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		103B56851DC9D84E00F162CA /* shopappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shopappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		103B56891DC9D84E00F162CA /* shopappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = shopappTests.m; sourceTree = "<group>"; };
@@ -422,7 +419,6 @@
 		103B56961DC9D84E00F162CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		103B56A21DC9D8BC00F162CA /* shopapp_develop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = shopapp_develop.entitlements; sourceTree = "<group>"; };
 		103B56A31DC9E02400F162CA /* shopapp_production.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = shopapp_production.entitlements; sourceTree = "<group>"; };
-		10559B261DCC553200469AAF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		10559B2A1DCC56C000469AAF /* MPConfigObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPConfigObject.h; sourceTree = "<group>"; };
 		10559B2B1DCC56C000469AAF /* MPConfigObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPConfigObject.m; sourceTree = "<group>"; };
 		10559B2C1DCC56C000469AAF /* MPUIConfigObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPUIConfigObject.h; sourceTree = "<group>"; };
@@ -882,8 +878,6 @@
 		10559D801DCC56C100469AAF /* VerticallyAlignedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticallyAlignedLabel.h; sourceTree = "<group>"; };
 		10559D811DCC56C100469AAF /* VerticallyAlignedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticallyAlignedLabel.m; sourceTree = "<group>"; };
 		10559F071DCC570C00469AAF /* shopapp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "shopapp-Prefix.pch"; sourceTree = "<group>"; };
-		10559F081DCC591700469AAF /* MPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAppDelegate.h; sourceTree = "<group>"; };
-		10559F091DCC591700469AAF /* MPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPAppDelegate.m; sourceTree = "<group>"; };
 		10559F0C1DCC7EAC00469AAF /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		10559F0D1DCC7EAC00469AAF /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		10559F0E1DCC7EAC00469AAF /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -915,6 +909,9 @@
 		10559F391DCC851400469AAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		10559F3B1DCC852900469AAF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		10559F3D1DCC855000469AAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		10A46E751DCCB1B9005CC4A0 /* MPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAppDelegate.h; sourceTree = "<group>"; };
+		10A46E761DCCB1B9005CC4A0 /* MPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPAppDelegate.m; sourceTree = "<group>"; };
+		10A46E781DCCB3C4005CC4A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		51D062CC74FC38C9535D5C06 /* libPods-shopapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-shopapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		629FBF65914DB4C27BCDBC4B /* Pods-shopapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shopapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shopapp/Pods-shopapp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -983,11 +980,10 @@
 				10559CD41DCC56C100469AAF /* Utilities */,
 				10559B271DCC56C000469AAF /* MVC */,
 				10559BFE1DCC56C000469AAF /* Resources */,
-				103B567B1DC9D84E00F162CA /* Assets.xcassets */,
-				103B567D1DC9D84E00F162CA /* LaunchScreen.storyboard */,
 				103B566F1DC9D84E00F162CA /* Supporting Files */,
-				10559F081DCC591700469AAF /* MPAppDelegate.h */,
-				10559F091DCC591700469AAF /* MPAppDelegate.m */,
+				10A46E781DCCB3C4005CC4A0 /* Images.xcassets */,
+				10A46E751DCCB1B9005CC4A0 /* MPAppDelegate.h */,
+				10A46E761DCCB1B9005CC4A0 /* MPAppDelegate.m */,
 				103B56A21DC9D8BC00F162CA /* shopapp_develop.entitlements */,
 				103B56A31DC9E02400F162CA /* shopapp_production.entitlements */,
 			);
@@ -1129,8 +1125,8 @@
 			isa = PBXGroup;
 			children = (
 				10559B481DCC56C000469AAF /* FunctionViewControllers */,
-				10559B4E1DCC56C000469AAF /* MainViewControllers */,
 				10559B971DCC56C000469AAF /* TabBarCustom */,
+				10559B4E1DCC56C000469AAF /* MainViewControllers */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1138,11 +1134,11 @@
 		10559B481DCC56C000469AAF /* FunctionViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				10559B491DCC56C000469AAF /* MPFunctionViewController+WebViewBottomBar.h */,
-				10559B4A1DCC56C000469AAF /* MPFunctionViewController+WebViewBottomBar.m */,
 				10559B4B1DCC56C000469AAF /* MPFunctionViewController.h */,
 				10559B4C1DCC56C000469AAF /* MPFunctionViewController.m */,
 				10559B4D1DCC56C000469AAF /* MPFunctionViewController.xib */,
+				10559B491DCC56C000469AAF /* MPFunctionViewController+WebViewBottomBar.h */,
+				10559B4A1DCC56C000469AAF /* MPFunctionViewController+WebViewBottomBar.m */,
 			);
 			path = FunctionViewControllers;
 			sourceTree = "<group>";
@@ -1152,12 +1148,12 @@
 			children = (
 				10559B4F1DCC56C000469AAF /* MPBaseViewController.h */,
 				10559B501DCC56C000469AAF /* MPBaseViewController.m */,
-				10559B511DCC56C000469AAF /* SettingViewController */,
-				10559B5B1DCC56C000469AAF /* TheFifthViewController */,
 				10559B621DCC56C000469AAF /* TheFirstViewController */,
-				10559B751DCC56C000469AAF /* TheFourthViewController */,
 				10559B7F1DCC56C000469AAF /* TheSecondViewController */,
 				10559B8C1DCC56C000469AAF /* TheThirdViewController */,
+				10559B751DCC56C000469AAF /* TheFourthViewController */,
+				10559B5B1DCC56C000469AAF /* TheFifthViewController */,
+				10559B511DCC56C000469AAF /* SettingViewController */,
 				10559B901DCC56C000469AAF /* TheUserInfoViewController */,
 			);
 			path = MainViewControllers;
@@ -1195,21 +1191,21 @@
 		10559B621DCC56C000469AAF /* TheFirstViewController */ = {
 			isa = PBXGroup;
 			children = (
-				10559B631DCC56C000469AAF /* MPHomeMenuDetailViewController.h */,
-				10559B641DCC56C000469AAF /* MPHomeMenuDetailViewController.m */,
-				10559B651DCC56C000469AAF /* MPHomeMenuDetailViewController.xib */,
-				10559B661DCC56C000469AAF /* MPHomeMenuViewController.h */,
-				10559B671DCC56C000469AAF /* MPHomeMenuViewController.m */,
-				10559B681DCC56C000469AAF /* MPHomeMenuViewController.xib */,
-				10559B691DCC56C000469AAF /* MPHomeMonjyaViewController.h */,
-				10559B6A1DCC56C000469AAF /* MPHomeMonjyaViewController.m */,
-				10559B6B1DCC56C000469AAF /* MPHomeMonjyaViewController.xib */,
-				10559B6C1DCC56C000469AAF /* MPHomeOkonomiViewController.h */,
-				10559B6D1DCC56C000469AAF /* MPHomeOkonomiViewController.m */,
-				10559B6E1DCC56C000469AAF /* MPHomeOkonomiViewController.xib */,
 				10559B6F1DCC56C000469AAF /* MPHomeViewController.h */,
 				10559B701DCC56C000469AAF /* MPHomeViewController.m */,
 				10559B711DCC56C000469AAF /* MPHomeViewController.xib */,
+				10559B661DCC56C000469AAF /* MPHomeMenuViewController.h */,
+				10559B671DCC56C000469AAF /* MPHomeMenuViewController.m */,
+				10559B681DCC56C000469AAF /* MPHomeMenuViewController.xib */,
+				10559B631DCC56C000469AAF /* MPHomeMenuDetailViewController.h */,
+				10559B641DCC56C000469AAF /* MPHomeMenuDetailViewController.m */,
+				10559B651DCC56C000469AAF /* MPHomeMenuDetailViewController.xib */,
+				10559B6C1DCC56C000469AAF /* MPHomeOkonomiViewController.h */,
+				10559B6D1DCC56C000469AAF /* MPHomeOkonomiViewController.m */,
+				10559B6E1DCC56C000469AAF /* MPHomeOkonomiViewController.xib */,
+				10559B691DCC56C000469AAF /* MPHomeMonjyaViewController.h */,
+				10559B6A1DCC56C000469AAF /* MPHomeMonjyaViewController.m */,
+				10559B6B1DCC56C000469AAF /* MPHomeMonjyaViewController.xib */,
 				10559B721DCC56C000469AAF /* MPHomeWebViewViewController.h */,
 				10559B731DCC56C000469AAF /* MPHomeWebViewViewController.m */,
 				10559B741DCC56C000469AAF /* MPHomeWebViewViewController.xib */,
@@ -2212,6 +2208,7 @@
 				10559E801DCC56C100469AAF /* button_open_selected.png in Resources */,
 				10559DCF1DCC56C100469AAF /* TopImageDetailView.xib in Resources */,
 				10559E5F1DCC56C100469AAF /* btn_twitter@2x.png in Resources */,
+				10A46E791DCCB3C5005CC4A0 /* Images.xcassets in Resources */,
 				10559E5A1DCC56C100469AAF /* btn_share_dialog.png in Resources */,
 				10559E411DCC56C100469AAF /* no@2x.png in Resources */,
 				10559EAA1DCC56C100469AAF /* syousai.png in Resources */,
@@ -2339,7 +2336,6 @@
 				10559E3E1DCC56C100469AAF /* line_coupon_detail.png in Resources */,
 				10559E101DCC56C100469AAF /* red_circle.png in Resources */,
 				10559DE51DCC56C100469AAF /* MPCouponBirthdayCell.xib in Resources */,
-				103B567F1DC9D84E00F162CA /* LaunchScreen.storyboard in Resources */,
 				10559EBB1DCC56C100469AAF /* yakikata01_push.png in Resources */,
 				10559EB01DCC56C100469AAF /* on_button@2x.png in Resources */,
 				10559DB41DCC56C100469AAF /* MPWpNewsDetailViewController.xib in Resources */,
@@ -2349,7 +2345,6 @@
 				10559E711DCC56C100469AAF /* icon_uncheck_stamp.png in Resources */,
 				10559EB41DCC56C100469AAF /* icon_shop_on.png in Resources */,
 				10559EBA1DCC56C100469AAF /* yakikata01.png in Resources */,
-				103B567C1DC9D84E00F162CA /* Assets.xcassets in Resources */,
 				10559E251DCC56C100469AAF /* button_ProfileEdit_push@2x.png in Resources */,
 				10559E6D1DCC56C100469AAF /* icon_coupon_detail.png in Resources */,
 				10559E021DCC56C100469AAF /* 3.png in Resources */,
@@ -2562,6 +2557,7 @@
 				10559D831DCC56C100469AAF /* MPUIConfigObject.m in Sources */,
 				10559DD41DCC56C100469AAF /* MPShopDetailCell.m in Sources */,
 				10559DC01DCC56C100469AAF /* MPSocialShareAlertView.m in Sources */,
+				10A46E771DCCB1B9005CC4A0 /* MPAppDelegate.m in Sources */,
 				10559ED41DCC56C100469AAF /* MPApnsDAO.m in Sources */,
 				10559DB71DCC56C100469AAF /* TheUserInfoViewController.m in Sources */,
 				10559DD81DCC56C100469AAF /* MPCouponDetailCell.m in Sources */,
@@ -2597,7 +2593,6 @@
 				10559EED1DCC56C100469AAF /* FHSTwitterEngine.m in Sources */,
 				10559DB51DCC56C100469AAF /* MPTheThirdViewController.m in Sources */,
 				10559EE61DCC56C100469AAF /* MBProgressHUD.m in Sources */,
-				10559F0A1DCC591700469AAF /* MPAppDelegate.m in Sources */,
 				10559EDE1DCC56C100469AAF /* FMDatabase.m in Sources */,
 				10559F281DCC7EAC00469AAF /* AFURLConnectionOperation.m in Sources */,
 				10559DC51DCC56C100469AAF /* MPSocialView.m in Sources */,
@@ -2676,18 +2671,6 @@
 			targetProxy = 103B56911DC9D84E00F162CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		103B567D1DC9D84E00F162CA /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				103B567E1DC9D84E00F162CA /* Base */,
-				10559B261DCC553200469AAF /* ja */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		103B56971DC9D84E00F162CA /* Debug */ = {
@@ -2787,6 +2770,7 @@
 			baseConfigurationReference = 629FBF65914DB4C27BCDBC4B /* Pods-shopapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = shopapp/shopapp_develop.entitlements;
 				DEVELOPMENT_TEAM = N5PT49EP9P;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2808,6 +2792,7 @@
 			baseConfigurationReference = 0A1677B802BE02DA8676CE72 /* Pods-shopapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = shopapp/shopapp_production.entitlements;
 				DEVELOPMENT_TEAM = N5PT49EP9P;
 				FRAMEWORK_SEARCH_PATHS = (

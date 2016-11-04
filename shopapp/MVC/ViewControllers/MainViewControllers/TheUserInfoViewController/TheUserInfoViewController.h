@@ -10,11 +10,7 @@
 #import "MPBaseViewController.h"
 #import "Configuration.h"
 #import "MPMemberObject.h"
-// INSERT BY ama 2016.10.27 START
-// カスタムアラート
 #import "MPSettingAlertView.h"
-// INSERT BY ama 2016.10.27 END
-
 #import "ManagerDownload.h"
 
 @protocol TheUserInfoViewControllerDelegate<NSObject>
@@ -25,20 +21,13 @@
     id<TheUserInfoViewControllerDelegate> _TheUserInfoViewControllerDelegate;
     
     long lng_sexflag;
-    // INSERT BY ama 2016.09.30 START
-    //IDパラメータ追加
     NSString* str_ID;
-    // INSERT BY ama 2016.09.30 END
     MPMemberObject* memberObj;
     UIDatePicker *datePicker_Birthday;
     UIDatePicker *datePicker_ChildeBirthday1;
     UIDatePicker *datePicker_ChildeBirthday2;
-    
-    // INSERT BY ama 2016.10.13 START
-    // キーボードアクション追加
     CGPoint cgpoint_tf;
     UIKeyboardType kb_type;
-    // INSERT BY ama 2016.10.13 END
 }
 @property (nonatomic) id<TheUserInfoViewControllerDelegate> TheUserInfoViewControllerDelegate;
 
@@ -56,11 +45,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnF_boy;
 @property (weak, nonatomic) IBOutlet UIButton *btnF_girl;
 
-// INSERTED BY M.ama 2016.10.27 START
-// アラートカスタマイズ
 @property (nonatomic) UIAlertController *alertController;  //アラートコントローラー本体
 @property (nonatomic) UILabel *chkLbl;  //ラベル
-// INSERTED BY M.ama 2016.10.27 END
 
 - (IBAction)btn_boy:(id)sender;
 - (IBAction)btn_girl:(id)sender;
