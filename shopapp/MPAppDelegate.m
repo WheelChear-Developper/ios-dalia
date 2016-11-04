@@ -40,7 +40,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     // DeployGateセット
-    [[DeployGateSDK sharedInstance] launchApplicationWithAuthor:@"akafune" key:@"217289b18ef0c5f9edb1fe46e5ac6740a7abebcc"];
+    [[DeployGateSDK sharedInstance] launchApplicationWithAuthor:@"akafune" key:@""];
     
     [NSThread sleepForTimeInterval:2.0];
     
@@ -165,7 +165,6 @@
             self.couponBadge = [obj.apns_cp integerValue];
             self.totalBadge = [obj.apns_badge integerValue];
 
-            [[MPTabBarViewController sharedInstance] setBadgeValue:self.couponBadge];
             [[UIApplication sharedApplication] setApplicationIconBadgeNumber:self.totalBadge];
 
             // INSERTED BY M.ama 2016.102.29 START
@@ -258,7 +257,6 @@
                 [[MPTabBarViewController sharedInstance] selectTab:1];
                 [[MPTabBarViewController sharedInstance] setUpTabBar];
                 //TODO: hard code number badge
-                [[MPTabBarViewController sharedInstance] setBadgeValue:0];
                 self.totalBadge -= self.couponBadge;
                 [[UIApplication sharedApplication] setApplicationIconBadgeNumber:self.totalBadge];
             }

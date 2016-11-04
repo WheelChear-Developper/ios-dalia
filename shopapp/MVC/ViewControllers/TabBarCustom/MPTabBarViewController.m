@@ -289,7 +289,6 @@
         [self setDisableHomeButton:YES];
         
     }else if(sender.tag == 1){
-        [self setBadgeValue:0];
         [MPAppDelegate sharedMPAppDelegate].totalBadge -= [MPAppDelegate sharedMPAppDelegate].couponBadge;
         [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[MPAppDelegate sharedMPAppDelegate].totalBadge];
     }else if(sender.tag == 3){
