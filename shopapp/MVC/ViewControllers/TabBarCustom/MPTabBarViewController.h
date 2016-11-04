@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MKNumberBadgeView.h"
 #import "ManagerDownload.h"
 
 @interface MPTabBarViewController : UITabBarController <ManagerDownloadDelegate>
@@ -15,7 +14,6 @@
     int numberTab;
     NSMutableArray *listButton;
     BOOL firstTimeRun;
-    MKNumberBadgeView *badgeView;
     NSArray *listShop;
     UIImageView *iv_config;
     UIButton *btn_setting;

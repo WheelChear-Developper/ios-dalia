@@ -316,11 +316,6 @@
 	self.selectedIndex = tabID;
 }
 
-- (void)setBadgeValue: (NSInteger)numberOfBadge {
-    
-    [badgeView setValue:numberOfBadge];
-}
-
 - (void)setDisableHomeButton:(BOOL)isEnable {
     
     UIView *specialView = [[self.view viewWithTag:1111] viewWithTag:0];
@@ -337,8 +332,7 @@
 }
 
 - (void)dealloc {
-    
-    badgeView = nil;
+
     listButton = nil;
 }
 

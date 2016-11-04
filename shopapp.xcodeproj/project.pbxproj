@@ -359,7 +359,6 @@
 		10559EE51DCC56C100469AAF /* KILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559D321DCC56C100469AAF /* KILabel.m */; };
 		10559EE61DCC56C100469AAF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559D351DCC56C100469AAF /* MBProgressHUD.m */; };
 		10559EE71DCC56C100469AAF /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559D371DCC56C100469AAF /* ProgressView.m */; };
-		10559EE81DCC56C100469AAF /* MKNumberBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559D3A1DCC56C100469AAF /* MKNumberBadgeView.m */; };
 		10559EE91DCC56C100469AAF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559D3D1DCC56C100469AAF /* Reachability.m */; };
 		10559EEA1DCC56C100469AAF /* InfinitePagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559D401DCC56C100469AAF /* InfinitePagingView.m */; };
 		10559EED1DCC56C100469AAF /* FHSTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559D4A1DCC56C100469AAF /* FHSTwitterEngine.m */; };
@@ -868,8 +867,6 @@
 		10559D351DCC56C100469AAF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		10559D361DCC56C100469AAF /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
 		10559D371DCC56C100469AAF /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
-		10559D391DCC56C100469AAF /* MKNumberBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNumberBadgeView.h; sourceTree = "<group>"; };
-		10559D3A1DCC56C100469AAF /* MKNumberBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNumberBadgeView.m; sourceTree = "<group>"; };
 		10559D3C1DCC56C100469AAF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		10559D3D1DCC56C100469AAF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		10559D3F1DCC56C100469AAF /* InfinitePagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfinitePagingView.h; sourceTree = "<group>"; };
@@ -1829,7 +1826,6 @@
 				10559D2D1DCC56C100469AAF /* KeychainItemWrapper */,
 				10559D301DCC56C100469AAF /* KILabel */,
 				10559D331DCC56C100469AAF /* MBProgressHUD */,
-				10559D381DCC56C100469AAF /* MKNumberBadgeView */,
 				10559D3B1DCC56C100469AAF /* Reachability */,
 				10559D3E1DCC56C100469AAF /* ScrollImageCus */,
 				10559D411DCC56C100469AAF /* Social network */,
@@ -1963,15 +1959,6 @@
 				10559D371DCC56C100469AAF /* ProgressView.m */,
 			);
 			path = MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		10559D381DCC56C100469AAF /* MKNumberBadgeView */ = {
-			isa = PBXGroup;
-			children = (
-				10559D391DCC56C100469AAF /* MKNumberBadgeView.h */,
-				10559D3A1DCC56C100469AAF /* MKNumberBadgeView.m */,
-			);
-			path = MKNumberBadgeView;
 			sourceTree = "<group>";
 		};
 		10559D3B1DCC56C100469AAF /* Reachability */ = {
@@ -2552,7 +2539,6 @@
 				10559D8C1DCC56C100469AAF /* MPVideoObject.m in Sources */,
 				10559DA11DCC56C100469AAF /* MPHomeOkonomiViewController.m in Sources */,
 				10559D9F1DCC56C100469AAF /* MPHomeMonjyaViewController.m in Sources */,
-				10559EE81DCC56C100469AAF /* MKNumberBadgeView.m in Sources */,
 				10559DA31DCC56C100469AAF /* MPHomeViewController.m in Sources */,
 				10559D9B1DCC56C100469AAF /* MPHomeMenuDetailViewController.m in Sources */,
 				10559D861DCC56C100469AAF /* MPItemObject.m in Sources */,

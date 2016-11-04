@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MKNumberBadgeView.h"
 
 typedef NS_ENUM(NSInteger, FunctionType) {
     FunctionType_1,
@@ -25,7 +24,6 @@ typedef NS_ENUM(NSInteger, FunctionType) {
 {
     NSArray *listFunction;
     NSMutableArray *listButton;
-    MKNumberBadgeView *numberBadgeView;
 }
 @property (nonatomic, assign) id<ListFunctionDelegate> delegate;
 
