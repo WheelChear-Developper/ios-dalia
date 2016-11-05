@@ -59,6 +59,7 @@
     //スクロールビュー作成
     _scr_rootview = [[UIScrollView alloc] initWithFrame:contentView.bounds];
     _scr_rootview.delegate = self;
+    _scr_rootview.showsVerticalScrollIndicator = NO;
     _scr_rootview.backgroundColor = [UIColor whiteColor];
     [_scr_rootview setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     

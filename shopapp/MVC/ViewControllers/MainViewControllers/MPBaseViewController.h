@@ -24,7 +24,8 @@ typedef NS_ENUM(NSInteger, ElevenFunctionType) {
 
 @interface MPBaseViewController : UIViewController
 {
-    UIImageView *navigationView;
+    UIImageView *basic_navigationView;
+    UIImageView *custom_navigationView;
     UIView *contentView;
     UIButton *backButton;
     UIImageView *iv_config;

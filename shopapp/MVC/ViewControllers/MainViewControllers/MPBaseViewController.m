@@ -55,12 +55,12 @@
     [contentView setBackgroundColor:[UIColor grayColor]];
     CGRect frameContentView = contentView.frame;
     frameContentView.origin.x = FRAME_ORGIN;
-    frameContentView.origin.y = navigationView.frame.size.height + statusHeight;
+    frameContentView.origin.y = basic_navigationView.frame.size.height + statusHeight;
     frameContentView.size.width = self.view.frame.size.width;
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
-        frameContentView.size.height = self.view.frame.size.height - navigationView.frame.size.height*2.1 - statusHeight;
+        frameContentView.size.height = self.view.frame.size.height - basic_navigationView.frame.size.height*2.1 - statusHeight;
     }else{
-        frameContentView.size.height = self.view.frame.size.height - navigationView.frame.size.height - statusHeight;
+        frameContentView.size.height = self.view.frame.size.height - basic_navigationView.frame.size.height - statusHeight;
     }
     contentView.frame = frameContentView;
     [self.view addSubview:contentView];
@@ -70,24 +70,43 @@
     [imageView setImage:[UIImage imageNamed:@"background.png"]];
     [contentView addSubview:imageView];
 
-    //ナビゲーション作成
+    //基本ナビゲーション作成
     [self.navigationController setNavigationBarHidden:YES];
-    navigationView = [[UIImageView alloc] init];
-    [navigationView setBackgroundColor:[UIColor clearColor]];
-    [navigationView setUserInteractionEnabled:YES];
-    [navigationView setImage:[UIImage imageNamed:@"basic_navigation_back.png"]];
-    CGRect frameNavigationView = navigationView.frame;
-    frameNavigationView.origin.x = FRAME_ORGIN;
-    frameNavigationView.origin.y = FRAME_ORGIN + statusHeight;
-    frameNavigationView.size.width = self.view.frame.size.width;
-    frameNavigationView.size.height = FRAME_HEIGHT;
-    navigationView.frame = frameNavigationView;
-    [self.view addSubview:navigationView];
+    basic_navigationView = [[UIImageView alloc] init];
+    [basic_navigationView setBackgroundColor:[UIColor clearColor]];
+    [basic_navigationView setUserInteractionEnabled:YES];
+    [basic_navigationView setImage:[UIImage imageNamed:@"basic_navigation_back.png"]];
+    CGRect basic_frameNavigationView = basic_navigationView.frame;
+    basic_frameNavigationView.origin.x = FRAME_ORGIN;
+    basic_frameNavigationView.origin.y = FRAME_ORGIN + statusHeight;
+    basic_frameNavigationView.size.width = self.view.frame.size.width;
+    basic_frameNavigationView.size.height = FRAME_HEIGHT;
+    basic_navigationView.frame = basic_frameNavigationView;
+    [self.view addSubview:basic_navigationView];
 
-    UIImageView *navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((frameNavigationView.size.width - ICON_WIDTH)/2, (frameNavigationView.size.height - ICON_HEIGHT)/2, ICON_WIDTH, ICON_HEIGHT)];
-    [navigationIcon setImage:[UIImage imageNamed:@"navigation_icon.png"]];
-    [navigationIcon setContentMode:UIViewContentModeScaleAspectFit];
-    [navigationView addSubview:navigationIcon];
+    UIImageView *basic_navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((basic_frameNavigationView.size.width - ICON_WIDTH)/2, (basic_frameNavigationView.size.height - ICON_HEIGHT)/2, ICON_WIDTH, ICON_HEIGHT)];
+    [basic_navigationIcon setImage:[UIImage imageNamed:@"navigation_icon.png"]];
+    [basic_navigationIcon setContentMode:UIViewContentModeScaleAspectFit];
+    [basic_navigationView addSubview:basic_navigationIcon];
+
+    //メイン画面用ナビゲーション作成
+    [self.navigationController setNavigationBarHidden:YES];
+    custom_navigationView = [[UIImageView alloc] init];
+    [custom_navigationView setBackgroundColor:[UIColor clearColor]];
+    [custom_navigationView setUserInteractionEnabled:YES];
+    [custom_navigationView setImage:[UIImage imageNamed:@"navigation_back.png"]];
+    CGRect custom_frameNavigationView = custom_navigationView.frame;
+    custom_frameNavigationView.origin.x = FRAME_ORGIN;
+    custom_frameNavigationView.origin.y = FRAME_ORGIN + statusHeight;
+    custom_frameNavigationView.size.width = self.view.frame.size.width;
+    custom_frameNavigationView.size.height = FRAME_HEIGHT;
+    custom_navigationView.frame = custom_frameNavigationView;
+    [self.view addSubview:custom_navigationView];
+
+    UIImageView *custom_navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((custom_frameNavigationView.size.width - ICON_WIDTH)/2, (custom_frameNavigationView.size.height - ICON_HEIGHT)/2, ICON_WIDTH, ICON_HEIGHT)];
+    [custom_navigationIcon setImage:[UIImage imageNamed:@"navigation_icon.png"]];
+    [custom_navigationIcon setContentMode:UIViewContentModeScaleAspectFit];
+    [custom_navigationView addSubview:custom_navigationIcon];
 
     //戻るボタン設定
     backButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -109,21 +128,21 @@
     [backButton setBackgroundColor:[UIColor clearColor]];
     [backButton addTarget:self action:@selector(backButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [backButton addSubview:button_BaseView];
-    [navigationView addSubview:backButton];
+    [basic_navigationView addSubview:backButton];
     [self setHiddenBackButton:YES];
 
     //サイド設定ボタン設置
     UIImage *img_config = [UIImage imageNamed:@"configuration.png"];
     iv_config = [[UIImageView alloc] initWithImage:img_config];
     iv_config.contentMode = UIViewContentModeScaleAspectFit;
-    iv_config.frame = CGRectMake(frameNavigationView.size.width - 24 - 10, 10, 24, 24);
-    [navigationView addSubview:iv_config];
+    iv_config.frame = CGRectMake(basic_frameNavigationView.size.width - 24 - 10, 10, 24, 24);
+    [basic_navigationView addSubview:iv_config];
     iv_config.hidden = NO;
 
     btn_setting = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    btn_setting.frame = CGRectMake(frameNavigationView.size.width - 44, 0, 44, 44);
+    btn_setting.frame = CGRectMake(basic_frameNavigationView.size.width - 44, 0, 44, 44);
     [btn_setting addTarget:self action:@selector(push_setting:) forControlEvents:UIControlEventTouchDown];
-    [navigationView addSubview:btn_setting];
+    [basic_navigationView addSubview:btn_setting];
     btn_setting.hidden = NO;
 }
 
@@ -153,7 +172,14 @@
 - (void)setNavigationHiden:(BOOL)isEnable {
 
     float statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
-    navigationView.hidden = isEnable;
+    basic_navigationView.hidden = isEnable;
+    if(isEnable){
+
+        custom_navigationView.hidden = NO;
+    }else{
+
+        custom_navigationView.hidden = YES;
+    }
 
     if(isEnable){
 
@@ -170,8 +196,8 @@
         contentView.translatesAutoresizingMaskIntoConstraints = YES;
 
         CGRect rect_navi = contentView.frame;
-        rect_navi.origin.y = statusHeight + navigationView.frame.size.height;
-        rect_navi.size.height = rect_navi.size.height - navigationView.frame.size.height;
+        rect_navi.origin.y = statusHeight + basic_navigationView.frame.size.height;
+        rect_navi.size.height = rect_navi.size.height - basic_navigationView.frame.size.height;
         contentView.frame = rect_navi;
 
         [contentView sizeToFit];
