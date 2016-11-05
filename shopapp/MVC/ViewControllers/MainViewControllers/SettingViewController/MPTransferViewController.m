@@ -8,7 +8,17 @@
 
 #import "MPTransferViewController.h"
 
-@interface MPTransferViewController ()
+@interface MPTransferViewController () <UITextFieldDelegate> {
+    NSString* transfer_code;
+}
+
+@property (strong, nonatomic) IBOutlet UIScrollView *baseView;
+@property (strong, nonatomic) IBOutlet UILabel *labelTransferCode;
+@property (strong, nonatomic) IBOutlet UITextField *activeTextFeild;
+@property (strong, nonatomic) IBOutlet UIView *inputView;
+@property (strong, nonatomic) IBOutlet UIButton *btnTransfer;
+@property (strong, nonatomic) IBOutlet UITextField *textTransferCode;
+
 @end
 
 @implementation MPTransferViewController
@@ -25,7 +35,8 @@
 
     //xib表示設定
     [contentView setHidden:YES];
-
+    
+    // Do any additional setup after loading the view from its nib.
     [[ManagerDownload sharedInstance] getTransferCode:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
     
     NSString *isTransfer = [[NSUserDefaults standardUserDefaults] objectForKey:IS_TRANSFER];
@@ -35,7 +46,6 @@
 
     // キーボードアクション追加
     NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
-
     // キーボード表示を検知。
     [nc addObserver:self selector:@selector(showKeyboard:) name:UIKeyboardDidShowNotification object:nil];
 
@@ -52,6 +62,7 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
+
 }
 
 - (void)downloadDataSuccess:(DownloadParam *)param {

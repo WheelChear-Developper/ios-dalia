@@ -14,7 +14,6 @@
     IBOutlet UITextView *termContent;
     NSArray *listCompany;
 }
-
 @property (weak, nonatomic) IBOutlet UIView *view_title;
 
 @end

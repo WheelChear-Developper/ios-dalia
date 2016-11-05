@@ -56,17 +56,16 @@
     //スクロールビュー作成
     _scr_rootview = [[UIScrollView alloc] initWithFrame:contentView.bounds];
     _scr_rootview.delegate = self;
-    _scr_rootview.backgroundColor = [UIColor colorWithRed:246/255.0 green:229/255.0 blue:203/255.0 alpha:1.0];
+    _scr_rootview.backgroundColor = [UIColor whiteColor];
     [_scr_rootview setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     
-    scr_inView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, contentView.frame.size.width, 1000)];
+    scr_inView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, contentView.frame.size.width, 0)];
     [_scr_rootview addSubview:scr_inView];
     _scr_rootview.contentSize = scr_inView.bounds.size;
     [contentView addSubview:_scr_rootview];
     
-    cornerView = [[UIView alloc] initWithFrame:CGRectMake(8, 8, scr_inView.frame.size.width-16, scr_inView.frame.size.height-16)];
+    cornerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, scr_inView.frame.size.width, scr_inView.frame.size.height)];
     cornerView.backgroundColor = [UIColor whiteColor];
-    cornerView.layer.cornerRadius = 8.0;
     cornerView.clipsToBounds = YES;
     [cornerView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     [scr_inView addSubview:cornerView];
@@ -93,9 +92,8 @@
     }
     
     CGRect topImageViewFrame = topImageView.frame;
-    topImageViewFrame.origin.x = 15;
-    topImageViewFrame.origin.y = 15;
-    // REPLACED BY M.ama 2016.10.24 END
+    topImageViewFrame.origin.x = 0;
+    topImageViewFrame.origin.y = 0;
     topImageViewFrame.size.height = topImageHeight;
     topImageView.frame = topImageViewFrame;
     [cornerView addSubview:topImageView];

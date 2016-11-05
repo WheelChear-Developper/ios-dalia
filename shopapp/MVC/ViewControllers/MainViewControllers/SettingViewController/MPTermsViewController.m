@@ -34,8 +34,6 @@
     //🔴contentView 高さ自動調整　幅自動調整
     [contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     
-    // REPLACED BY ama 2016.10.05 START
-    // レイアウト更新
     //タイトルのグラデーション
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = CGRectMake(0, 0, self.view_title.frame.size.width, self.view_title.frame.size.height);
@@ -82,8 +80,10 @@
     if (listCompany && listCompany.count) {
         company = [[listCompany objectAtIndex:0] objectForKey:@"company"];
     } else {
+
         company = @"Miコーポレーション株式会社";
     }
+
     NSString *appName = [NSString stringWithFormat:@"%@アプリ",[(MPConfigObject*)[[MPConfigObject sharedInstance] objectAfterParsedPlistFile:CONFIG_FILE] appName]];
 
     termContent.text = [termContent.text stringByReplacingOccurrencesOfString:@"xxxx" withString:appName];

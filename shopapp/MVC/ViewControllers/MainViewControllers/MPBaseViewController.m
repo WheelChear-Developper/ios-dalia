@@ -45,17 +45,32 @@
 
 - (void)setUpView {
 
+
     //ステータスバー表示設定
     float statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
     self.view.backgroundColor = [UIColor blackColor];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    
+
+    //
+    contentView = [[UIView alloc] init];
+    [contentView setBackgroundColor:[UIColor grayColor]];
+    CGRect frameContentView = contentView.frame;
+    frameContentView.origin.x = FRAME_ORGIN;
+    frameContentView.origin.y = statusHeight;
+    frameContentView.size.width = self.view.frame.size.width;
+    frameContentView.size.height = self.view.frame.size.height - statusHeight;
+
+    contentView.frame = frameContentView;
+    //[ contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+    [self.view addSubview:contentView];
+    //[contentView setBackgroundColor:[UIColor redColor]];
+
     //ナビゲーション作成
     [self.navigationController setNavigationBarHidden:YES];
     navigationView = [[UIImageView alloc] init];
     [navigationView setBackgroundColor:[UIColor clearColor]];
     [navigationView setUserInteractionEnabled:YES];
-    [navigationView setImage:[UIImage imageNamed:@"navigation.png"]];
+    [navigationView setImage:[UIImage imageNamed:@"navigation_back.png"]];
     CGRect frameNavigationView = navigationView.frame;
     frameNavigationView.origin.x = FRAME_ORGIN;
     frameNavigationView.origin.y = FRAME_ORGIN + statusHeight;
@@ -65,7 +80,7 @@
     [self.view addSubview:navigationView];
     
     UIImageView *navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((frameNavigationView.size.width - ICON_WIDTH)/2, (frameNavigationView.size.height - ICON_HEIGHT)/2, ICON_WIDTH, ICON_HEIGHT)];
-    [navigationIcon setImage:[UIImage imageNamed:@"navigation_icon.png"]];
+    //[navigationIcon setImage:[UIImage imageNamed:@"navigation_icon.png"]];
     [navigationIcon setContentMode:UIViewContentModeScaleAspectFit];
     [navigationView addSubview:navigationIcon];
     
@@ -92,32 +107,12 @@
     [navigationView addSubview:backButton];
     [self setHiddenBackButton:YES];
     
-    //
-    contentView = [[UIView alloc] init];
-    [contentView setBackgroundColor:[UIColor grayColor]];
-    CGRect frameContentView = contentView.frame;
-    frameContentView.origin.x = FRAME_ORGIN;
-    frameContentView.origin.y = navigationView.frame.size.height + statusHeight;
-    frameContentView.size.width = self.view.frame.size.width;
-    
-    
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
-        frameContentView.size.height = self.view.frame.size.height - navigationView.frame.size.height*2.1 - statusHeight;
-    }else{
-        frameContentView.size.height = self.view.frame.size.height - navigationView.frame.size.height - statusHeight;
-    }
-    
-    contentView.frame = frameContentView;
-    //[ contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
-    [self.view addSubview:contentView];
-    //[contentView setBackgroundColor:[UIColor redColor]];
-    
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frameContentView.size.width, frameContentView.size.height)];
     [imageView setImage:[UIImage imageNamed:@"background.png"]];
     [contentView addSubview:imageView];
 
     //サイド設定ボタン設置
-    UIImage *img_config = [UIImage imageNamed:@"configuration.png.png"];
+    UIImage *img_config = [UIImage imageNamed:@"configuration.png"];
     iv_config = [[UIImageView alloc] initWithImage:img_config];
     iv_config.contentMode = UIViewContentModeScaleAspectFit;
     iv_config.frame = CGRectMake(frameNavigationView.size.width - 24 - 10, 10 + statusHeight, 24, 24);

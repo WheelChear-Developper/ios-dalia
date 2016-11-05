@@ -37,8 +37,6 @@
     //🔴contentView 高さ自動調整　幅自動調整
     [contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
 
-
-    //ステータスバー表示設定
     float statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
     CGRect frameContentView = contentView.frame;
     frameContentView.origin.y = contentView.frame.origin.y + statusHeight;

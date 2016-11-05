@@ -14,7 +14,7 @@
 @interface SettingViewController : MPBaseViewController <ManagerDownloadDelegate>
 {
     IBOutlet UIButton *switchButton;
-    long touchCount;
+    int touchCount;
     IBOutlet UILabel *versionLabel;
 }
 @property (weak, nonatomic) IBOutlet UIView *view_title;

@@ -143,7 +143,7 @@
     rect.size.height = 50;
     UIImageView *bgTabBar = [[UIImageView alloc] initWithFrame:rect];
     [bgTabBar setTag:1111];
-    [bgTabBar setImage:[UIImage imageNamed:@"backBottom.png"]];
+    [bgTabBar setImage:[UIImage imageNamed:@"tab_back.png"]];
     [bgTabBar setUserInteractionEnabled:YES];
     float widthBT = rect.size.width / numberTab;
     for (int i = 0; i < numberTab; i++) {
@@ -156,32 +156,32 @@
         switch (i) {
                 
             case 0:{
-                urlImageNomal = @"1.png";
-                urlImageSelected = @"1_click.png";
+                //urlImageNomal = @"1.png";
+                //urlImageSelected = @"1_click.png";
                 break;
             }
                 
             case 1:{
-                urlImageNomal = @"2.png";
-                urlImageSelected = @"2_click.png";
+                //urlImageNomal = @"2.png";
+                //urlImageSelected = @"2_click.png";
                 break;
             }
                 
             case 2:{
-                urlImageNomal = @"3.png";
-                urlImageSelected = @"3_click.png";
+                //urlImageNomal = @"3.png";
+                //urlImageSelected = @"3_click.png";
                 break;
             }
                 
             case 3:{
-                urlImageNomal = @"4.png";
-                urlImageSelected = @"4_click.png";
+                //urlImageNomal = @"4.png";
+                //urlImageSelected = @"4_click.png";
                 break;
             }
                 
             case 4:{
-                urlImageNomal = @"5.png";
-                urlImageSelected = @"5_click.png";
+                //urlImageNomal = @"5.png";
+                //urlImageSelected = @"5_click.png";
                 break;
             }
                 
