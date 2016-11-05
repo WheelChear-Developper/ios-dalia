@@ -340,6 +340,7 @@
 		10559F3A1DCC851400469AAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10559F391DCC851400469AAF /* CoreGraphics.framework */; };
 		10559F3C1DCC852900469AAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10559F3B1DCC852900469AAF /* UIKit.framework */; };
 		10559F3E1DCC855000469AAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10559F3D1DCC855000469AAF /* Foundation.framework */; };
+		108391451DCDBE1500E4A8F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 108391431DCDBE1500E4A8F0 /* InfoPlist.strings */; };
 		10A46E771DCCB1B9005CC4A0 /* MPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A46E761DCCB1B9005CC4A0 /* MPAppDelegate.m */; };
 		10A46E791DCCB3C5005CC4A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A46E781DCCB3C4005CC4A0 /* Images.xcassets */; };
 		10A46E8D1DCCD97D005CC4A0 /* navigation_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10A46E8B1DCCD97D005CC4A0 /* navigation_back@2x.png */; };
@@ -846,6 +847,8 @@
 		10559F391DCC851400469AAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		10559F3B1DCC852900469AAF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		10559F3D1DCC855000469AAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		108391441DCDBE1500E4A8F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		108391461DCDBE2400E4A8F0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		10A46E751DCCB1B9005CC4A0 /* MPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAppDelegate.h; sourceTree = "<group>"; };
 		10A46E761DCCB1B9005CC4A0 /* MPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPAppDelegate.m; sourceTree = "<group>"; };
 		10A46E781DCCB3C4005CC4A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -997,6 +1000,7 @@
 		103B566F1DC9D84E00F162CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				108391431DCDBE1500E4A8F0 /* InfoPlist.strings */,
 				103B56801DC9D84E00F162CA /* Info.plist */,
 				10559F071DCC570C00469AAF /* shopapp-Prefix.pch */,
 				103B56701DC9D84E00F162CA /* main.m */,
@@ -2203,6 +2207,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 103B56631DC9D84E00F162CA;
 			productRefGroup = 103B566D1DC9D84E00F162CA /* Products */;
@@ -2345,6 +2350,7 @@
 				10559E841DCC56C100469AAF /* button_reload_selected.png in Resources */,
 				10559E221DCC56C100469AAF /* button_ProfileEdit.png in Resources */,
 				10559E741DCC56C100469AAF /* icon_uncheck_stamp_long@2x.png in Resources */,
+				108391451DCDBE1500E4A8F0 /* InfoPlist.strings in Resources */,
 				10559E381DCC56C100469AAF /* cancel.png in Resources */,
 				10559E391DCC56C100469AAF /* cancel@2x.png in Resources */,
 				10559E1F1DCC56C100469AAF /* button_edit@2x.png in Resources */,
@@ -2696,6 +2702,18 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		108391431DCDBE1500E4A8F0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				108391441DCDBE1500E4A8F0 /* en */,
+				108391461DCDBE2400E4A8F0 /* ja */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		103B56971DC9D84E00F162CA /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2796,6 +2814,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = shopapp/shopapp_develop.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = N5PT49EP9P;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2818,6 +2837,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = shopapp/shopapp_production.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = N5PT49EP9P;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
