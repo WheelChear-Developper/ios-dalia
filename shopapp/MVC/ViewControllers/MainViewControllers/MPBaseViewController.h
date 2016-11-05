@@ -21,6 +21,7 @@ typedef NS_ENUM(NSInteger, ElevenFunctionType) {
     ElevenFunctionType_11,    //Video channel
     ElevenFunctionType_12
 };
+
 @interface MPBaseViewController : UIViewController
 {
     UIImageView *navigationView;
@@ -29,10 +30,10 @@ typedef NS_ENUM(NSInteger, ElevenFunctionType) {
     UIImageView *iv_config;
     UIButton *btn_setting;
 }
-
 - (void)getTaskWithFunctions:(ElevenFunctionType)type;
 - (void)backButtonClicked:(UIButton*)sender;
 - (void)setHiddenBackButton:(BOOL)isHidden;
 - (void)setHiddenSettingButton:(BOOL)isEnable;
+- (void)setNavigationHiden:(BOOL)isEnable;
 
 @end

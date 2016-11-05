@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+
+    //🔴navigation表示
+    [self setNavigationHiden:NO];
     
     //🔴バックアクション非表示
     [self setHiddenBackButton:YES];

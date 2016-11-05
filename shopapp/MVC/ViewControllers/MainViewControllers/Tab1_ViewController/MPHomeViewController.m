@@ -43,6 +43,9 @@
 //        initialViewController.TheUserInfoViewControllerDelegate = self;
 //        [self presentViewController:initialViewController animated:NO completion:nil];
     }
+
+    //🔴navigation表示
+    [self setNavigationHiden:YES];
     
     //🔴バックアクション非表示
     [self setHiddenBackButton:YES];

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPTopImagesView"/>
@@ -16,10 +20,10 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fv-3q-I3F" customClass="InfinitePagingView">
                             <rect key="frame" x="0.0" y="0.0" width="274" height="192"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="0fv-3q-I3F" firstAttribute="leading" secondItem="4dG-qW-Unk" secondAttribute="leading" id="VZM-z2-KJx"/>
                         <constraint firstAttribute="trailing" secondItem="0fv-3q-I3F" secondAttribute="trailing" id="feZ-Ph-V7p"/>
@@ -29,14 +33,14 @@
                 </view>
                 <pageControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" defersCurrentPageDisplay="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oxE-2p-V4I" customClass="MPPageControl">
                     <rect key="frame" x="137" y="192" width="0.0" height="20"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="fgP-A0-JXE"/>
                     </constraints>
-                    <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="pageIndicatorTintColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </pageControl>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="4dG-qW-Unk" secondAttribute="trailing" id="04L-Mq-zuW"/>
                 <constraint firstItem="4dG-qW-Unk" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="ZDc-U4-Zpv"/>
@@ -51,7 +55,12 @@
                 <outlet property="pageControl" destination="oxE-2p-V4I" id="p73-7M-H8P"/>
                 <outlet property="scroll_PageView" destination="0fv-3q-I3F" id="EhY-tB-LVo"/>
             </connections>
-            <point key="canvasLocation" x="509" y="224"/>
+            <point key="canvasLocation" x="26" y="2"/>
         </view>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
 </document>

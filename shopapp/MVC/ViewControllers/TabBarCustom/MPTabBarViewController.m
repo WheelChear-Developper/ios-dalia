@@ -157,31 +157,31 @@
                 
             case 0:{
                 //urlImageNomal = @"1.png";
-                //urlImageSelected = @"1_click.png";
+                urlImageSelected = @"1_click.png";
                 break;
             }
                 
             case 1:{
                 //urlImageNomal = @"2.png";
-                //urlImageSelected = @"2_click.png";
+                urlImageSelected = @"2_click.png";
                 break;
             }
                 
             case 2:{
                 //urlImageNomal = @"3.png";
-                //urlImageSelected = @"3_click.png";
+                urlImageSelected = @"3_click.png";
                 break;
             }
                 
             case 3:{
                 //urlImageNomal = @"4.png";
-                //urlImageSelected = @"4_click.png";
+                urlImageSelected = @"4_click.png";
                 break;
             }
                 
             case 4:{
                 //urlImageNomal = @"5.png";
-                //urlImageSelected = @"5_click.png";
+                urlImageSelected = @"5_click.png";
                 break;
             }
                 

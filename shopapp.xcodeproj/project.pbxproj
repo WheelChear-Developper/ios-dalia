@@ -43,7 +43,6 @@
 		10559DCA1DCC56C100469AAF /* MPListFuntionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BB41DCC56C000469AAF /* MPListFuntionView.xib */; };
 		10559DCB1DCC56C100469AAF /* MPTopImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BB61DCC56C000469AAF /* MPTopImagesView.m */; };
 		10559DCC1DCC56C100469AAF /* MPTopImagesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BB71DCC56C000469AAF /* MPTopImagesView.xib */; };
-		10559DCD1DCC56C100469AAF /* MPTopImagesView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BB81DCC56C000469AAF /* MPTopImagesView1.xib */; };
 		10559DCE1DCC56C100469AAF /* TopImageDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BBA1DCC56C000469AAF /* TopImageDetailView.m */; };
 		10559DCF1DCC56C100469AAF /* TopImageDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BBB1DCC56C000469AAF /* TopImageDetailView.xib */; };
 		10559DD01DCC56C100469AAF /* MPSettingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BBE1DCC56C000469AAF /* MPSettingAlertView.m */; };
@@ -341,6 +340,8 @@
 		10559F3C1DCC852900469AAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10559F3B1DCC852900469AAF /* UIKit.framework */; };
 		10559F3E1DCC855000469AAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10559F3D1DCC855000469AAF /* Foundation.framework */; };
 		108391451DCDBE1500E4A8F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 108391431DCDBE1500E4A8F0 /* InfoPlist.strings */; };
+		108391491DCDC6EC00E4A8F0 /* basic_navigation_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 108391471DCDC6EC00E4A8F0 /* basic_navigation_back.png */; };
+		1083914A1DCDC6EC00E4A8F0 /* basic_navigation_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 108391481DCDC6EC00E4A8F0 /* basic_navigation_back@2x.png */; };
 		10A46E771DCCB1B9005CC4A0 /* MPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A46E761DCCB1B9005CC4A0 /* MPAppDelegate.m */; };
 		10A46E791DCCB3C5005CC4A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A46E781DCCB3C4005CC4A0 /* Images.xcassets */; };
 		10A46E8D1DCCD97D005CC4A0 /* navigation_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10A46E8B1DCCD97D005CC4A0 /* navigation_back@2x.png */; };
@@ -478,7 +479,6 @@
 		10559BB51DCC56C000469AAF /* MPTopImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTopImagesView.h; sourceTree = "<group>"; };
 		10559BB61DCC56C000469AAF /* MPTopImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTopImagesView.m; sourceTree = "<group>"; };
 		10559BB71DCC56C000469AAF /* MPTopImagesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTopImagesView.xib; sourceTree = "<group>"; };
-		10559BB81DCC56C000469AAF /* MPTopImagesView1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTopImagesView1.xib; sourceTree = "<group>"; };
 		10559BB91DCC56C000469AAF /* TopImageDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopImageDetailView.h; sourceTree = "<group>"; };
 		10559BBA1DCC56C000469AAF /* TopImageDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopImageDetailView.m; sourceTree = "<group>"; };
 		10559BBB1DCC56C000469AAF /* TopImageDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopImageDetailView.xib; sourceTree = "<group>"; };
@@ -849,6 +849,8 @@
 		10559F3D1DCC855000469AAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		108391441DCDBE1500E4A8F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		108391461DCDBE2400E4A8F0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		108391471DCDC6EC00E4A8F0 /* basic_navigation_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basic_navigation_back.png; sourceTree = "<group>"; };
+		108391481DCDC6EC00E4A8F0 /* basic_navigation_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic_navigation_back@2x.png"; sourceTree = "<group>"; };
 		10A46E751DCCB1B9005CC4A0 /* MPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAppDelegate.h; sourceTree = "<group>"; };
 		10A46E761DCCB1B9005CC4A0 /* MPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPAppDelegate.m; sourceTree = "<group>"; };
 		10A46E781DCCB3C4005CC4A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -1239,7 +1241,6 @@
 				10559BB51DCC56C000469AAF /* MPTopImagesView.h */,
 				10559BB61DCC56C000469AAF /* MPTopImagesView.m */,
 				10559BB71DCC56C000469AAF /* MPTopImagesView.xib */,
-				10559BB81DCC56C000469AAF /* MPTopImagesView1.xib */,
 				10559BB91DCC56C000469AAF /* TopImageDetailView.h */,
 				10559BBA1DCC56C000469AAF /* TopImageDetailView.m */,
 				10559BBB1DCC56C000469AAF /* TopImageDetailView.xib */,
@@ -1952,6 +1953,8 @@
 		10A46E7A1DCCD064005CC4A0 /* image_Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				108391471DCDC6EC00E4A8F0 /* basic_navigation_back.png */,
+				108391481DCDC6EC00E4A8F0 /* basic_navigation_back@2x.png */,
 				10A46E8B1DCCD97D005CC4A0 /* navigation_back@2x.png */,
 				10A46E8C1DCCD97D005CC4A0 /* navigation_back.png */,
 			);
@@ -2228,7 +2231,6 @@
 			files = (
 				10559E011DCC56C100469AAF /* 2_click@2x.png in Resources */,
 				10559E851DCC56C100469AAF /* button_reload_selected@2x.png in Resources */,
-				10559DCD1DCC56C100469AAF /* MPTopImagesView1.xib in Resources */,
 				10559E921DCC56C100469AAF /* idicator_open@2x.png in Resources */,
 				10559E801DCC56C100469AAF /* button_open_selected.png in Resources */,
 				10A46EFF1DCD6F6B005CC4A0 /* MPTermsViewController.xib in Resources */,
@@ -2403,6 +2405,7 @@
 				10559E531DCC56C100469AAF /* btn_facebook@2x.png in Resources */,
 				10A46EE01DCD6DD5005CC4A0 /* MPHomeWebViewViewController.xib in Resources */,
 				10559E591DCC56C100469AAF /* btn_positive_dialog_selected@2x.png in Resources */,
+				108391491DCDC6EC00E4A8F0 /* basic_navigation_back.png in Resources */,
 				10559DF81DCC56C100469AAF /* config.plist in Resources */,
 				10559DDB1DCC56C100469AAF /* MPCouponShareCell.xib in Resources */,
 				10559E861DCC56C100469AAF /* active_dot.png in Resources */,
@@ -2444,6 +2447,7 @@
 				10A46EEA1DCD6DD5005CC4A0 /* MPTheThirdViewController.xib in Resources */,
 				10559DCC1DCC56C100469AAF /* MPTopImagesView.xib in Resources */,
 				10559E1B1DCC56C100469AAF /* button_CurponStart@2x.png in Resources */,
+				1083914A1DCDC6EC00E4A8F0 /* basic_navigation_back@2x.png in Resources */,
 				10559E761DCC56C100469AAF /* button_back@2x.png in Resources */,
 				10559DC11DCC56C100469AAF /* MPSocialShareAlertView.xib in Resources */,
 				10559E661DCC56C100469AAF /* coupon_wari.png in Resources */,
