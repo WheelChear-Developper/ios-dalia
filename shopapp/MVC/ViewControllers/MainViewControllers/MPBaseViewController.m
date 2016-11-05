@@ -85,7 +85,7 @@
     [self.view addSubview:basic_navigationView];
 
     UIImageView *basic_navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((basic_frameNavigationView.size.width - ICON_WIDTH)/2, (basic_frameNavigationView.size.height - ICON_HEIGHT)/2, ICON_WIDTH, ICON_HEIGHT)];
-    [basic_navigationIcon setImage:[UIImage imageNamed:@"navigation_icon.png"]];
+//    [basic_navigationIcon setImage:[UIImage imageNamed:@"navigation_icon.png"]];
     [basic_navigationIcon setContentMode:UIViewContentModeScaleAspectFit];
     [basic_navigationView addSubview:basic_navigationIcon];
 
@@ -104,11 +104,11 @@
     [self.view addSubview:custom_navigationView];
 
     UIImageView *custom_navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((custom_frameNavigationView.size.width - ICON_WIDTH)/2, (custom_frameNavigationView.size.height - ICON_HEIGHT)/2, ICON_WIDTH, ICON_HEIGHT)];
-    [custom_navigationIcon setImage:[UIImage imageNamed:@"navigation_icon.png"]];
+//    [custom_navigationIcon setImage:[UIImage imageNamed:@"navigation_icon.png"]];
     [custom_navigationIcon setContentMode:UIViewContentModeScaleAspectFit];
     [custom_navigationView addSubview:custom_navigationIcon];
 
-    //戻るボタン設定
+    //基本　戻るボタン設定
     backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [backButton setFrame:FRAME_FOR_BACK_BUTTON];
 
@@ -131,7 +131,7 @@
     [basic_navigationView addSubview:backButton];
     [self setHiddenBackButton:YES];
 
-    //サイド設定ボタン設置
+    //基本　サイド設定ボタン設置
     UIImage *img_config = [UIImage imageNamed:@"configuration.png"];
     iv_config = [[UIImageView alloc] initWithImage:img_config];
     iv_config.contentMode = UIViewContentModeScaleAspectFit;
@@ -144,6 +144,18 @@
     [btn_setting addTarget:self action:@selector(push_setting:) forControlEvents:UIControlEventTouchDown];
     [basic_navigationView addSubview:btn_setting];
     btn_setting.hidden = NO;
+
+    //メイン画面用　leftメニューボタン設置
+    UIImage *custom_img_config = [UIImage imageNamed:@"configuration.png"];
+    custom_iv_config = [[UIImageView alloc] initWithImage:custom_img_config];
+    custom_iv_config.contentMode = UIViewContentModeScaleAspectFit;
+    custom_iv_config.frame = CGRectMake(10, 10, 24, 24);
+    [custom_navigationView addSubview:custom_iv_config];
+
+    custom_btn_setting = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    custom_btn_setting.frame = CGRectMake(0, 0, 44, 44);
+    [custom_btn_setting addTarget:self action:@selector(custom_push_menu:) forControlEvents:UIControlEventTouchDown];
+    [custom_navigationView addSubview:custom_btn_setting];
 }
 
 - (void)backButtonClicked:(UIButton*)sender {
@@ -167,6 +179,11 @@
 
     SettingViewController *transVC = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
     [self.navigationController pushViewController:transVC animated:YES];
+}
+
+- (void)custom_push_menu:(UIButton*)button {
+
+
 }
 
 - (void)setNavigationHiden:(BOOL)isEnable {

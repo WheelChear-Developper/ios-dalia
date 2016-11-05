@@ -25,10 +25,7 @@
     UIScrollView* _scr_rootview;
     UIView *scr_inView;
     UIView *cornerView;
-    UIImageView *iv_toppics;
     MPTopImagesView *topImageView;
-    NSMutableArray *listCoupon;
-    UIButton *btn_curpon;
 }
 
 @end

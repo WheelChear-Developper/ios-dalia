@@ -49,9 +49,6 @@
     
     //🔴バックアクション非表示
     [self setHiddenBackButton:YES];
-
-    NSLog(@"%f",contentView.frame.size.height);
-    float heightCalc = (contentView.frame.size.height) / DIV_PART_FROM_MAINVIEW;
     
     //🔴contentView 高さ自動調整　幅自動調整
     [contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
@@ -82,7 +79,10 @@
     }else{
         topImageView.isSquare = YES;
     }
-    
+
+    NSLog(@"%f",contentView.frame.size.height);
+    float heightCalc = (contentView.frame.size.height) / DIV_PART_FROM_MAINVIEW;
+
     float topImageHeight = 0;
     float newMessageHeight,listFunHeight = 0;
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
@@ -96,129 +96,211 @@
     }
     
     CGRect topImageViewFrame = topImageView.frame;
-    topImageViewFrame.origin.x = 0;
-    topImageViewFrame.origin.y = 0;
+    topImageViewFrame.origin.x = 2;
+    topImageViewFrame.origin.y = 2;
+    topImageViewFrame.size.width = topImageViewFrame.size.width - 4;
     topImageViewFrame.size.height = topImageHeight;
     topImageView.frame = topImageViewFrame;
     [cornerView addSubview:topImageView];
-    
-    //メニュー画像追加
-    UIImage *img_toppics = [UIImage imageNamed:@"toppic02.png"];
-    CGFloat cgrange_toppics = (cornerView.frame.size.width - 20) / img_toppics.size.width;
-    
-    iv_toppics = [[UIImageView alloc] initWithImage:img_toppics];
-    iv_toppics.contentMode = UIViewContentModeScaleAspectFit;
-    iv_toppics.frame = CGRectMake(15, topImageView.frame.origin.y + topImageView.frame.size.height + 5, cornerView.frame.size.width - 30, img_toppics.size.height * cgrange_toppics);
 
-    UIButton *btn_toppics = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn_toppics.frame = CGRectMake(iv_toppics.frame.origin.x, iv_toppics.frame.origin.y, iv_toppics.frame.size.width, iv_toppics.frame.size.height);
-    [btn_toppics addTarget:self action:@selector(push_toppics:) forControlEvents:UIControlEventTouchUpInside];
-    [btn_toppics setImage:[UIImage imageNamed:@"toppic02.png"] forState:UIControlStateNormal];
-    [btn_toppics setImage:[UIImage imageNamed:@"toppic02_push.png"] forState:UIControlStateHighlighted];
-    btn_toppics.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [cornerView addSubview:btn_toppics];
-    
-    //おいしい焼き方文字
-    UILabel *lbl_recipe = [[UILabel alloc] init];
-    lbl_recipe.frame = CGRectMake(15, iv_toppics.frame.origin.y + iv_toppics.frame.size.height + 5, cornerView.frame.size.width - 30, 24);
-    lbl_recipe.backgroundColor = [UIColor clearColor];
-    lbl_recipe.textColor = [UIColor blackColor];
-    lbl_recipe.font = [UIFont fontWithName:@"HelveticaNeue" size:14];
-    lbl_recipe.textAlignment = NSTextAlignmentCenter;
-    lbl_recipe.text = @"おいしい焼き方";
-    [cornerView addSubview:lbl_recipe];
-    
-    //おいしい焼き方画像１
-    UIImage *img_yakikata01 = [UIImage imageNamed:@"yakikata01.png"];
-    CGFloat cgrange_yakikata01 = (cornerView.frame.size.width - 20) / img_yakikata01.size.width;
-    
-    UIImageView *iv_yakikata01 = [[UIImageView alloc] initWithImage:img_yakikata01];
-    iv_yakikata01.contentMode = UIViewContentModeScaleAspectFit;
-    iv_yakikata01.frame = CGRectMake(15, lbl_recipe.frame.origin.y + lbl_recipe.frame.size.height + 5, cornerView.frame.size.width - 30, img_yakikata01.size.height * cgrange_yakikata01);
-    
-    UIButton *btn_yakikata01 = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn_yakikata01.frame = CGRectMake(iv_yakikata01.frame.origin.x, iv_yakikata01.frame.origin.y, iv_yakikata01.frame.size.width, iv_yakikata01.frame.size.height);
-    [btn_yakikata01 addTarget:self action:@selector(push_yakikata01:) forControlEvents:UIControlEventTouchUpInside];
+    // ブロック１設定
+    UIImageView* iv_block1 = [[UIImageView alloc] init];
+    iv_block1.contentMode = UIViewContentModeScaleAspectFit;
+    iv_block1.frame = CGRectMake(2, topImageView.frame.origin.y + topImageView.frame.size.height + 2, cornerView.frame.size.width / 3, 100);
+    iv_block1.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+    [cornerView addSubview:iv_block1];
 
-    [btn_yakikata01 setImage:[UIImage imageNamed:@"yakikata01.png"] forState:UIControlStateNormal];
-    [btn_yakikata01 setImage:[UIImage imageNamed:@"yakikata01_push.png"] forState:(UIControlStateNormal|UIControlStateHighlighted)];
-    btn_yakikata01.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [cornerView addSubview:btn_yakikata01];
-    
-    //おいしい焼き方画像２
-    UIImage *img_yakikata02 = [UIImage imageNamed:@"yakikata02.png"];
-    CGFloat cgrange_yakikata02 = (cornerView.frame.size.width - 20) / img_yakikata02.size.width;
-    
-    UIImageView *iv_yakikata02 = [[UIImageView alloc] initWithImage:img_yakikata02];
-    iv_yakikata02.contentMode = UIViewContentModeScaleAspectFit;
-    iv_yakikata02.frame = CGRectMake(15, iv_yakikata01.frame.origin.y + iv_yakikata01.frame.size.height + 10, cornerView.frame.size.width - 30, img_yakikata02.size.height * cgrange_yakikata02);
-    
-    UIButton *btn_yakikata02 = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn_yakikata02.frame = CGRectMake(iv_yakikata02.frame.origin.x, iv_yakikata02.frame.origin.y, iv_yakikata02.frame.size.width, iv_yakikata02.frame.size.height);
-    [btn_yakikata02 addTarget:self action:@selector(push_yakikata02:) forControlEvents:UIControlEventTouchUpInside];
-    [btn_yakikata02 setImage:[UIImage imageNamed:@"yakikata02.png"] forState:UIControlStateNormal];
-    [btn_yakikata02 setImage:[UIImage imageNamed:@"yakikata02_push.png"] forState:UIControlStateHighlighted];
-    btn_yakikata02.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [cornerView addSubview:btn_yakikata02];
-    
-    //クーポン文字
-    UILabel *lbl_curpon = [[UILabel alloc] init];
-    lbl_curpon.frame = CGRectMake(15, iv_yakikata02.frame.origin.y + iv_yakikata02.frame.size.height + 5, cornerView.frame.size.width - 30, 24);
-    lbl_curpon.backgroundColor = [UIColor clearColor];
-    lbl_curpon.textColor = [UIColor blackColor];
-    lbl_curpon.font = [UIFont fontWithName:@"HelveticaNeue" size:14];
-    lbl_curpon.textAlignment = NSTextAlignmentCenter;
-    lbl_curpon.text = @"クーポン";
-    [cornerView addSubview:lbl_curpon];
-    
-    //クーポン画像
-    UIImage *img_curpon = [UIImage imageNamed:@"hangaku.png"];
-    CGFloat cgrange_curpon = (cornerView.frame.size.width - 20) / img_curpon.size.width;
-    
-    UIImageView *iv_curpon = [[UIImageView alloc] initWithImage:img_curpon];
-    iv_curpon.contentMode = UIViewContentModeScaleAspectFit;
-    iv_curpon.frame = CGRectMake(15, lbl_curpon.frame.origin.y + lbl_curpon.frame.size.height + 5, cornerView.frame.size.width - 30, img_curpon.size.height * cgrange_curpon);
-    
-    btn_curpon = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn_curpon.frame = CGRectMake(iv_curpon.frame.origin.x, iv_curpon.frame.origin.y, iv_curpon.frame.size.width, iv_curpon.frame.size.height);
-    [btn_curpon addTarget:self action:@selector(push_curpon:) forControlEvents:UIControlEventTouchUpInside];
-    [btn_curpon setImage:[UIImage imageNamed:@"hangaku.png"] forState:UIControlStateNormal];
-//    [btn_curpon setImage:[UIImage imageNamed:@"hangaku_push.png"] forState:UIControlStateHighlighted];
-    btn_curpon.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [cornerView addSubview:btn_curpon];
+    UIButton *btn_block1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn_block1.frame = iv_block1.frame;
+    [btn_block1 addTarget:self action:@selector(push_block1:) forControlEvents:UIControlEventTouchUpInside];
+//    [btn_block1 setImage:[UIImage imageNamed:@"toppic02.png"] forState:UIControlStateNormal];
+//    [btn_block1 setImage:[UIImage imageNamed:@"toppic02_push.png"] forState:UIControlStateHighlighted];
+    btn_block1.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [cornerView addSubview:btn_block1];
 
-    //クーポンイメージダウンロード
-    NSURL* url = [NSURL URLWithString:CURPON_IMAGE_URL];
-    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+    // ブロック２設定
+    UIImageView* iv_block2 = [[UIImageView alloc] init];
+    iv_block2.contentMode = UIViewContentModeScaleAspectFit;
+    iv_block2.frame = CGRectMake(2 + iv_block1.frame.origin.x + iv_block1.frame.size.width, topImageView.frame.origin.y + topImageView.frame.size.height + 2, cornerView.frame.size.width / 3, 100);
+    iv_block2.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+    [cornerView addSubview:iv_block2];
+
+    UIButton *btn_block2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn_block2.frame = iv_block2.frame;
+    [btn_block2 addTarget:self action:@selector(push_block2:) forControlEvents:UIControlEventTouchUpInside];
+//    [btn_block2 setImage:[UIImage imageNamed:@"toppic02.png"] forState:UIControlStateNormal];
+//    [btn_block2 setImage:[UIImage imageNamed:@"toppic02_push.png"] forState:UIControlStateHighlighted];
+    btn_block2.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [cornerView addSubview:btn_block2];
+
+    // ブロック３設定
+    UIImageView* iv_block3 = [[UIImageView alloc] init];
+    iv_block3.contentMode = UIViewContentModeScaleAspectFit;
+    iv_block3.frame = CGRectMake(2 + iv_block2.frame.origin.x + iv_block2.frame.size.width, topImageView.frame.origin.y + topImageView.frame.size.height + 2, cornerView.frame.size.width / 3, 100);
+    iv_block3.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+    [cornerView addSubview:iv_block3];
+
+    UIButton *btn_block3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn_block3.frame = iv_block3.frame;
+    [btn_block3 addTarget:self action:@selector(push_block3:) forControlEvents:UIControlEventTouchUpInside];
+//    [btn_block3 setImage:[UIImage imageNamed:@"toppic02.png"] forState:UIControlStateNormal];
+//    [btn_block3 setImage:[UIImage imageNamed:@"toppic02_push.png"] forState:UIControlStateHighlighted];
+    btn_block3.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [cornerView addSubview:btn_block3];
+
+    // ブロック４設定
+    UIImageView* iv_block4 = [[UIImageView alloc] init];
+    iv_block4.contentMode = UIViewContentModeScaleAspectFit;
+    iv_block4.frame = CGRectMake(2, iv_block1.frame.origin.y + iv_block1.frame.size.height + 2, cornerView.frame.size.width / 2, 100);
+    iv_block4.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+    [cornerView addSubview:iv_block4];
+
+    UIButton *btn_block4 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn_block4.frame = iv_block4.frame;
+    [btn_block4 addTarget:self action:@selector(push_block4:) forControlEvents:UIControlEventTouchUpInside];
+    //    [btn_block4 setImage:[UIImage imageNamed:@"toppic02.png"] forState:UIControlStateNormal];
+    //    [btn_block4 setImage:[UIImage imageNamed:@"toppic02_push.png"] forState:UIControlStateHighlighted];
+    btn_block4.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [cornerView addSubview:btn_block4];
+
+    // ブロック５設定
+    UIImageView* iv_block5 = [[UIImageView alloc] init];
+    iv_block5.contentMode = UIViewContentModeScaleAspectFit;
+    iv_block5.frame = CGRectMake(2 + iv_block4.frame.origin.x + iv_block4.frame.size.width, iv_block1.frame.origin.y + iv_block1.frame.size.height + 2, cornerView.frame.size.width / 2, 100);
+    iv_block5.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+    [cornerView addSubview:iv_block5];
+
+    UIButton *btn_block5 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn_block5.frame = iv_block5.frame;
+    [btn_block5 addTarget:self action:@selector(push_block5:) forControlEvents:UIControlEventTouchUpInside];
+    //    [btn_block5 setImage:[UIImage imageNamed:@"toppic02.png"] forState:UIControlStateNormal];
+    //    [btn_block5 setImage:[UIImage imageNamed:@"toppic02_push.png"] forState:UIControlStateHighlighted];
+    btn_block5.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [cornerView addSubview:btn_block5];
+
+    //RECOMMEND ITEM
+    UIView* view_RecommendItem = [[UIView alloc] initWithFrame:CGRectMake(0, btn_block4.frame.origin.y + btn_block4.frame.size.height + 2, contentView.frame.size.width, 230)];
+    view_RecommendItem.backgroundColor = [UIColor clearColor];
+    [cornerView addSubview:view_RecommendItem];
+
+    //RECOMMEND TITLE
+    UILabel *lbl_RecommendTitle = [[UILabel alloc] init];
+    lbl_RecommendTitle.frame = CGRectMake(10, 5, view_RecommendItem.frame.size.width - 20, 24);
+    lbl_RecommendTitle.backgroundColor = [UIColor clearColor];
+    lbl_RecommendTitle.textColor = [UIColor blackColor];
+    lbl_RecommendTitle.font = [UIFont fontWithName:@"HelveticaNeue" size:14];
+    lbl_RecommendTitle.textAlignment = NSTextAlignmentLeft;
+    lbl_RecommendTitle.text = @"RECOMMEND ITEM";
+    [view_RecommendItem addSubview:lbl_RecommendTitle];
+
+    // RECOMMENDブロック1設定
+    UIImage *img_recommend1 = [UIImage imageNamed:@"unavailable.gif"];
+    UIImageView* iv_Recommend1 = [[UIImageView alloc] init];
+    iv_Recommend1.contentMode = UIViewContentModeScaleAspectFit;
+    iv_Recommend1.frame = CGRectMake(10, lbl_RecommendTitle.frame.origin.y + lbl_RecommendTitle.frame.size.height, (cornerView.frame.size.width - 20) / 3, 100);
+    iv_Recommend1.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+    [view_RecommendItem addSubview:iv_Recommend1];
+
+    UIButton *btn_Recommend1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn_Recommend1.frame = iv_Recommend1.frame;
+    btn_Recommend1.backgroundColor = [UIColor clearColor];
+    btn_Recommend1.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [btn_Recommend1 setImage:img_recommend1 forState:UIControlStateNormal];
+    [btn_Recommend1 addTarget:self action:@selector(push_recomend1:) forControlEvents:UIControlEventTouchUpInside];
+//    btn_Recommend1.adjustsImageWhenHighlighted = NO;
+    [view_RecommendItem addSubview:btn_Recommend1];
+
+    // RECOMMENDブロック2設定
+    UIImage *img_recommend2 = [UIImage imageNamed:@"unavailable.gif"];
+    UIImageView* iv_Recommend2 = [[UIImageView alloc] init];
+    iv_Recommend2.contentMode = UIViewContentModeScaleAspectFit;
+    iv_Recommend2.frame = CGRectMake(2 + iv_Recommend1.frame.origin.x + iv_Recommend1.frame.size.width, lbl_RecommendTitle.frame.origin.y + lbl_RecommendTitle.frame.size.height, (cornerView.frame.size.width - 20)/ 3, 100);
+    iv_Recommend2.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+    [view_RecommendItem addSubview:iv_Recommend2];
+
+    UIButton *btn_Recommend2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn_Recommend2.frame = iv_Recommend2.frame;
+    btn_Recommend2.backgroundColor = [UIColor clearColor];
+    btn_Recommend2.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [btn_Recommend2 setImage:img_recommend2 forState:UIControlStateNormal];
+    [btn_Recommend2 addTarget:self action:@selector(push_recomend2:) forControlEvents:UIControlEventTouchUpInside];
+    //    btn_Recommend1.adjustsImageWhenHighlighted = NO;
+    [view_RecommendItem addSubview:btn_Recommend2];
+
+    // RECOMMENDブロック3設定
+    UIImage *img_recommend3 = [UIImage imageNamed:@"unavailable.gif"];
+    UIImageView* iv_Recommend3 = [[UIImageView alloc] init];
+    iv_Recommend3.contentMode = UIViewContentModeScaleAspectFit;
+    iv_Recommend3.frame = CGRectMake(2 + iv_Recommend2.frame.origin.x + iv_Recommend2.frame.size.width, lbl_RecommendTitle.frame.origin.y + lbl_RecommendTitle.frame.size.height, (cornerView.frame.size.width - 20) / 3, 100);
+    iv_Recommend3.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+    [view_RecommendItem addSubview:iv_Recommend3];
+
+    UIButton *btn_Recommend3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn_Recommend3.frame = iv_Recommend3.frame;
+    btn_Recommend3.backgroundColor = [UIColor clearColor];
+    btn_Recommend3.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [btn_Recommend3 setImage:img_recommend3 forState:UIControlStateNormal];
+    [btn_Recommend3 addTarget:self action:@selector(push_recomend3:) forControlEvents:UIControlEventTouchUpInside];
+    //    btn_Recommend1.adjustsImageWhenHighlighted = NO;
+    [view_RecommendItem addSubview:btn_Recommend3];
+
+
+    // RECOMMENDブロック4設定
+    UIImage *img_recommend4 = [UIImage imageNamed:@"unavailable.gif"];
+    UIImageView* iv_Recommend4 = [[UIImageView alloc] init];
+    iv_Recommend4.contentMode = UIViewContentModeScaleAspectFit;
+    iv_Recommend4.frame = CGRectMake(10, iv_Recommend1.frame.origin.y + iv_Recommend1.frame.size.height, (cornerView.frame.size.width - 20) / 3, 100);
+    iv_Recommend4.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+    [view_RecommendItem addSubview:iv_Recommend4];
+
+    UIButton *btn_Recommend4 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn_Recommend4.frame = iv_Recommend4.frame;
+    btn_Recommend4.backgroundColor = [UIColor clearColor];
+    btn_Recommend4.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [btn_Recommend4 setImage:img_recommend4 forState:UIControlStateNormal];
+    [btn_Recommend4 addTarget:self action:@selector(push_recomend4:) forControlEvents:UIControlEventTouchUpInside];
+    //    btn_Recommend1.adjustsImageWhenHighlighted = NO;
+    [view_RecommendItem addSubview:btn_Recommend4];
+
+    // RECOMMENDブロック5設定
+    UIImage *img_recommend5 = [UIImage imageNamed:@"unavailable.gif"];
+    UIImageView* iv_Recommend5 = [[UIImageView alloc] init];
+    iv_Recommend5.contentMode = UIViewContentModeScaleAspectFit;
+    iv_Recommend5.frame = CGRectMake(2 + iv_Recommend4.frame.origin.x + iv_Recommend4.frame.size.width, iv_Recommend1.frame.origin.y + iv_Recommend1.frame.size.height, (cornerView.frame.size.width - 20)/ 3, 100);
+    iv_Recommend5.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+    [view_RecommendItem addSubview:iv_Recommend5];
+
+    UIButton *btn_Recommend5 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn_Recommend5.frame = iv_Recommend5.frame;
+    btn_Recommend5.backgroundColor = [UIColor clearColor];
+    btn_Recommend5.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [btn_Recommend5 setImage:img_recommend5 forState:UIControlStateNormal];
+    [btn_Recommend5 addTarget:self action:@selector(push_recomend5:) forControlEvents:UIControlEventTouchUpInside];
+    //    btn_Recommend1.adjustsImageWhenHighlighted = NO;
+    [view_RecommendItem addSubview:btn_Recommend5];
+
+    // RECOMMENDブロック6設定
+    UIImage *img_recommend6 = [UIImage imageNamed:@"unavailable.gif"];
+    UIImageView* iv_Recommend6 = [[UIImageView alloc] init];
+    iv_Recommend6.contentMode = UIViewContentModeScaleAspectFit;
+    iv_Recommend6.frame = CGRectMake(2 + iv_Recommend5.frame.origin.x + iv_Recommend5.frame.size.width, iv_Recommend1.frame.origin.y + iv_Recommend1.frame.size.height, (cornerView.frame.size.width - 20) / 3, 100);
+    iv_Recommend6.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+    [view_RecommendItem addSubview:iv_Recommend6];
+
+    UIButton *btn_Recommend6 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn_Recommend6.frame = iv_Recommend6.frame;
+    btn_Recommend6.backgroundColor = [UIColor clearColor];
+    btn_Recommend6.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [btn_Recommend6 setImage:img_recommend6 forState:UIControlStateNormal];
+    [btn_Recommend6 addTarget:self action:@selector(push_recomend6:) forControlEvents:UIControlEventTouchUpInside];
+    //    btn_Recommend1.adjustsImageWhenHighlighted = NO;
+    [view_RecommendItem addSubview:btn_Recommend6];
+
+
     
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse * response,
-                                               NSData * data,
-                                               NSError * error) {
-                               UIImage *image = nil;
-                               if (!error){
-                                   image = [[UIImage alloc] initWithData:data];
-                                   // do whatever you want with image
-                               }else{
-                                   image = [UIImage imageNamed:@"hangaku.png"];
-                               }
-
-                               UIImage *img_curpon = image;
-                               CGFloat cgrange_curpon = (cornerView.frame.size.width - 20) / img_curpon.size.width;
-
-                               UIImageView *iv_curpon = [[UIImageView alloc] initWithImage:image];
-                               iv_curpon.contentMode = UIViewContentModeScaleAspectFit;
-                               iv_curpon.frame = CGRectMake(15, lbl_curpon.frame.origin.y + lbl_curpon.frame.size.height + 5, cornerView.frame.size.width - 30, img_curpon.size.height * cgrange_curpon);
-
-                               btn_curpon.frame = CGRectMake(iv_curpon.frame.origin.x, iv_curpon.frame.origin.y, iv_curpon.frame.size.width, iv_curpon.frame.size.height);
-                               [btn_curpon setImage:image forState:UIControlStateNormal];
-
-                           }];
 
     //スクロールビュー大きさ再設定
-    scr_inView.frame = CGRectMake(0, 0, contentView.frame.size.width, btn_curpon.frame.origin.y + btn_curpon.frame.size.height + 35);
-    cornerView.frame = CGRectMake(8, 8, scr_inView.frame.size.width - 16, scr_inView.frame.size.height - 16);
+    scr_inView.frame = CGRectMake(0, 0, contentView.frame.size.width, view_RecommendItem.frame.origin.y + view_RecommendItem.frame.size.height + 35);
     _scr_rootview.contentSize = scr_inView.bounds.size;
 }
 
@@ -227,9 +309,8 @@
     [super viewDidLayoutSubviews];
 
     //スクロールビュー大きさ再設定
-    scr_inView.frame = CGRectMake(0, 0, contentView.frame.size.width, btn_curpon.frame.origin.y + btn_curpon.frame.size.height + 35);
-    cornerView.frame = CGRectMake(8, 8, scr_inView.frame.size.width - 16, scr_inView.frame.size.height - 16);
-    _scr_rootview.contentSize = scr_inView.bounds.size;
+//    scr_inView.frame = CGRectMake(0, 0, contentView.frame.size.width, view_RecommendItem.frame.origin.y + view_RecommendItem.frame.size.height + 35);
+//    _scr_rootview.contentSize = scr_inView.bounds.size;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -283,33 +364,69 @@
 
 #pragma mark - ManagerDownloadDelegate
 - (void)downloadDataSuccess:(DownloadParam *)param {
-
 }
 
 - (void)downloadDataFail:(DownloadParam *)param {
 }
 
+/*
 -(void)push_toppics:(UIButton*)button {
     
     //メニュー表示
     MPHomeMenuViewController *menuDetailVC = [[MPHomeMenuViewController alloc] initWithNibName:@"MPHomeMenuViewController" bundle:nil];
     [self.navigationController pushViewController:menuDetailVC animated:YES];
 }
+*/
 
--(void)push_yakikata01:(UIButton*)button {
+-(void)push_block1:(UIButton*)button {
 
     //お好み焼の焼き方画面
-    MPHomeOkonomiViewController *OkonomiVC = [[MPHomeOkonomiViewController alloc] initWithNibName:@"MPHomeOkonomiViewController" bundle:nil];
-    [self.navigationController pushViewController:OkonomiVC animated:YES];
+//    MPHomeOkonomiViewController *OkonomiVC = [[MPHomeOkonomiViewController alloc] initWithNibName:@"MPHomeOkonomiViewController" bundle:nil];
+//    [self.navigationController pushViewController:OkonomiVC animated:YES];
 }
 
--(void)push_yakikata02:(UIButton*)button {
-    
-    //もんじゃ焼の焼き方画面
-    MPHomeMonjyaViewController *MonjyaVC = [[MPHomeMonjyaViewController alloc] initWithNibName:@"MPHomeMonjyaViewController" bundle:nil];
-    [self.navigationController pushViewController:MonjyaVC animated:YES];
+-(void)push_block2:(UIButton*)button {
+
 }
 
+-(void)push_block3:(UIButton*)button {
+
+}
+
+-(void)push_block4:(UIButton*)button {
+
+}
+
+-(void)push_block5:(UIButton*)button {
+
+}
+
+-(void)push_recomend1:(UIButton*)button {
+
+}
+
+-(void)push_recomend2:(UIButton*)button {
+
+}
+
+-(void)push_recomend3:(UIButton*)button {
+
+}
+
+-(void)push_recomend4:(UIButton*)button {
+
+}
+
+-(void)push_recomend5:(UIButton*)button {
+
+}
+
+-(void)push_recomend6:(UIButton*)button {
+
+}
+
+
+/*
 -(void)push_curpon:(UIButton*)button {
     
     //クーポン画面
@@ -317,6 +434,7 @@
     [(MPTabBarViewController*)[self.navigationController parentViewController] selectTab:3];
     [self.navigationController popViewControllerAnimated:YES];
 }
+*/
 
 - (void)didReceiveMemoryWarning {
     

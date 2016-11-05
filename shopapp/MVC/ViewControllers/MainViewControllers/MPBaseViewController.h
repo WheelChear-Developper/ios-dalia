@@ -30,6 +30,8 @@ typedef NS_ENUM(NSInteger, ElevenFunctionType) {
     UIButton *backButton;
     UIImageView *iv_config;
     UIButton *btn_setting;
+    UIImageView *custom_iv_config;
+    UIButton *custom_btn_setting;
 }
 - (void)getTaskWithFunctions:(ElevenFunctionType)type;
 - (void)backButtonClicked:(UIButton*)sender;

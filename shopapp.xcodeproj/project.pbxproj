@@ -41,8 +41,6 @@
 		10559DC81DCC56C100469AAF /* MPCouponStampView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BB01DCC56C000469AAF /* MPCouponStampView.xib */; };
 		10559DC91DCC56C100469AAF /* MPListFuntionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BB31DCC56C000469AAF /* MPListFuntionView.m */; };
 		10559DCA1DCC56C100469AAF /* MPListFuntionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BB41DCC56C000469AAF /* MPListFuntionView.xib */; };
-		10559DCB1DCC56C100469AAF /* MPTopImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BB61DCC56C000469AAF /* MPTopImagesView.m */; };
-		10559DCC1DCC56C100469AAF /* MPTopImagesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BB71DCC56C000469AAF /* MPTopImagesView.xib */; };
 		10559DCE1DCC56C100469AAF /* TopImageDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BBA1DCC56C000469AAF /* TopImageDetailView.m */; };
 		10559DCF1DCC56C100469AAF /* TopImageDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BBB1DCC56C000469AAF /* TopImageDetailView.xib */; };
 		10559DD01DCC56C100469AAF /* MPSettingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BBE1DCC56C000469AAF /* MPSettingAlertView.m */; };
@@ -342,6 +340,9 @@
 		108391451DCDBE1500E4A8F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 108391431DCDBE1500E4A8F0 /* InfoPlist.strings */; };
 		108391491DCDC6EC00E4A8F0 /* basic_navigation_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 108391471DCDC6EC00E4A8F0 /* basic_navigation_back.png */; };
 		1083914A1DCDC6EC00E4A8F0 /* basic_navigation_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 108391481DCDC6EC00E4A8F0 /* basic_navigation_back@2x.png */; };
+		108391531DCDE15B00E4A8F0 /* MPTopImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083914D1DCDE15B00E4A8F0 /* MPTopImagesView.m */; };
+		108391541DCDE15B00E4A8F0 /* MPTopImagesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083914E1DCDE15B00E4A8F0 /* MPTopImagesView.xib */; };
+		108391571DCE1D5A00E4A8F0 /* button_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 108391561DCE1D5A00E4A8F0 /* button_mask.png */; };
 		10A46E771DCCB1B9005CC4A0 /* MPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A46E761DCCB1B9005CC4A0 /* MPAppDelegate.m */; };
 		10A46E791DCCB3C5005CC4A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A46E781DCCB3C4005CC4A0 /* Images.xcassets */; };
 		10A46E8D1DCCD97D005CC4A0 /* navigation_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10A46E8B1DCCD97D005CC4A0 /* navigation_back@2x.png */; };
@@ -476,9 +477,6 @@
 		10559BB21DCC56C000469AAF /* MPListFuntionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPListFuntionView.h; sourceTree = "<group>"; };
 		10559BB31DCC56C000469AAF /* MPListFuntionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPListFuntionView.m; sourceTree = "<group>"; };
 		10559BB41DCC56C000469AAF /* MPListFuntionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPListFuntionView.xib; sourceTree = "<group>"; };
-		10559BB51DCC56C000469AAF /* MPTopImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTopImagesView.h; sourceTree = "<group>"; };
-		10559BB61DCC56C000469AAF /* MPTopImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTopImagesView.m; sourceTree = "<group>"; };
-		10559BB71DCC56C000469AAF /* MPTopImagesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTopImagesView.xib; sourceTree = "<group>"; };
 		10559BB91DCC56C000469AAF /* TopImageDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopImageDetailView.h; sourceTree = "<group>"; };
 		10559BBA1DCC56C000469AAF /* TopImageDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopImageDetailView.m; sourceTree = "<group>"; };
 		10559BBB1DCC56C000469AAF /* TopImageDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopImageDetailView.xib; sourceTree = "<group>"; };
@@ -851,6 +849,10 @@
 		108391461DCDBE2400E4A8F0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		108391471DCDC6EC00E4A8F0 /* basic_navigation_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basic_navigation_back.png; sourceTree = "<group>"; };
 		108391481DCDC6EC00E4A8F0 /* basic_navigation_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic_navigation_back@2x.png"; sourceTree = "<group>"; };
+		1083914C1DCDE15B00E4A8F0 /* MPTopImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTopImagesView.h; sourceTree = "<group>"; };
+		1083914D1DCDE15B00E4A8F0 /* MPTopImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTopImagesView.m; sourceTree = "<group>"; };
+		1083914E1DCDE15B00E4A8F0 /* MPTopImagesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTopImagesView.xib; sourceTree = "<group>"; };
+		108391561DCE1D5A00E4A8F0 /* button_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_mask.png; sourceTree = "<group>"; };
 		10A46E751DCCB1B9005CC4A0 /* MPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAppDelegate.h; sourceTree = "<group>"; };
 		10A46E761DCCB1B9005CC4A0 /* MPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPAppDelegate.m; sourceTree = "<group>"; };
 		10A46E781DCCB3C4005CC4A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -1180,6 +1182,11 @@
 		10559B9A1DCC56C000469AAF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1083914B1DCDE15B00E4A8F0 /* Tab1_Screen */,
+				1083914F1DCDE15B00E4A8F0 /* Tab2_Screen */,
+				108391501DCDE15B00E4A8F0 /* Tab3_Screen */,
+				108391511DCDE15B00E4A8F0 /* Tab4_Screen */,
+				108391521DCDE15B00E4A8F0 /* Tab5_Screen */,
 				10559B9B1DCC56C000469AAF /* CouponScreen */,
 				10559BA51DCC56C000469AAF /* CouponShare */,
 				10559BAD1DCC56C000469AAF /* CouponStampScreen */,
@@ -1235,15 +1242,12 @@
 		10559BB11DCC56C000469AAF /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
-				10559BB21DCC56C000469AAF /* MPListFuntionView.h */,
-				10559BB31DCC56C000469AAF /* MPListFuntionView.m */,
-				10559BB41DCC56C000469AAF /* MPListFuntionView.xib */,
-				10559BB51DCC56C000469AAF /* MPTopImagesView.h */,
-				10559BB61DCC56C000469AAF /* MPTopImagesView.m */,
-				10559BB71DCC56C000469AAF /* MPTopImagesView.xib */,
 				10559BB91DCC56C000469AAF /* TopImageDetailView.h */,
 				10559BBA1DCC56C000469AAF /* TopImageDetailView.m */,
 				10559BBB1DCC56C000469AAF /* TopImageDetailView.xib */,
+				10559BB21DCC56C000469AAF /* MPListFuntionView.h */,
+				10559BB31DCC56C000469AAF /* MPListFuntionView.m */,
+				10559BB41DCC56C000469AAF /* MPListFuntionView.xib */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -1374,6 +1378,7 @@
 		10559C031DCC56C000469AAF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				108391551DCE1D5A00E4A8F0 /* image_Other */,
 				10A46E8F1DCD6B7B005CC4A0 /* image_Tab */,
 				10A46E7A1DCCD064005CC4A0 /* image_Navigation */,
 				10559C041DCC56C000469AAF /* iconTabBar */,
@@ -1673,11 +1678,11 @@
 		10559CD41DCC56C100469AAF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				10559D7D1DCC56C100469AAF /* Utility.h */,
+				10559D7E1DCC56C100469AAF /* Utility.m */,
 				10559CD51DCC56C100469AAF /* Configuration */,
 				10559CD81DCC56C100469AAF /* DownloadManager */,
 				10559CE11DCC56C100469AAF /* ThirdParty */,
-				10559D7D1DCC56C100469AAF /* Utility.h */,
-				10559D7E1DCC56C100469AAF /* Utility.m */,
 				10559D7F1DCC56C100469AAF /* VerticallyAlignedLabel */,
 			);
 			path = Utilities;
@@ -1948,6 +1953,52 @@
 				10559F201DCC7EAC00469AAF /* UIImageView+AFNetworking.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		1083914B1DCDE15B00E4A8F0 /* Tab1_Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1083914C1DCDE15B00E4A8F0 /* MPTopImagesView.h */,
+				1083914D1DCDE15B00E4A8F0 /* MPTopImagesView.m */,
+				1083914E1DCDE15B00E4A8F0 /* MPTopImagesView.xib */,
+			);
+			path = Tab1_Screen;
+			sourceTree = "<group>";
+		};
+		1083914F1DCDE15B00E4A8F0 /* Tab2_Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tab2_Screen;
+			sourceTree = "<group>";
+		};
+		108391501DCDE15B00E4A8F0 /* Tab3_Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tab3_Screen;
+			sourceTree = "<group>";
+		};
+		108391511DCDE15B00E4A8F0 /* Tab4_Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tab4_Screen;
+			sourceTree = "<group>";
+		};
+		108391521DCDE15B00E4A8F0 /* Tab5_Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tab5_Screen;
+			sourceTree = "<group>";
+		};
+		108391551DCE1D5A00E4A8F0 /* image_Other */ = {
+			isa = PBXGroup;
+			children = (
+				108391561DCE1D5A00E4A8F0 /* button_mask.png */,
+			);
+			path = image_Other;
 			sourceTree = "<group>";
 		};
 		10A46E7A1DCCD064005CC4A0 /* image_Navigation */ = {
@@ -2298,6 +2349,7 @@
 				10559E341DCC56C100469AAF /* btn_negative_dialog.png in Resources */,
 				10559E181DCC56C100469AAF /* button_Cansel.png in Resources */,
 				10A46EE21DCD6DD5005CC4A0 /* MPListMessageViewController.xib in Resources */,
+				108391541DCDE15B00E4A8F0 /* MPTopImagesView.xib in Resources */,
 				10559E371DCC56C100469AAF /* btn_negative_dialog_selected@2x.png in Resources */,
 				10559E641DCC56C100469AAF /* twitter_selected.png in Resources */,
 				10559E6E1DCC56C100469AAF /* icon_coupon_detail@2x.png in Resources */,
@@ -2313,6 +2365,7 @@
 				10559E6A1DCC56C100469AAF /* curpon_box_uncheck@2x.png in Resources */,
 				10A46EE61DCD6DD5005CC4A0 /* MPTheSecondViewController.xib in Resources */,
 				10559E351DCC56C100469AAF /* btn_negative_dialog@2x.png in Resources */,
+				108391571DCE1D5A00E4A8F0 /* button_mask.png in Resources */,
 				10559E2D1DCC56C100469AAF /* button_Skip_push@2x.png in Resources */,
 				10559DE91DCC56C100469AAF /* MPGymCell.xib in Resources */,
 				10559E091DCC56C100469AAF /* 4_click@2x.png in Resources */,
@@ -2445,7 +2498,6 @@
 				10559EB61DCC56C100469AAF /* hangaku.png in Resources */,
 				10A46EDA1DCD6DD5005CC4A0 /* MPHomeMonjyaViewController.xib in Resources */,
 				10A46EEA1DCD6DD5005CC4A0 /* MPTheThirdViewController.xib in Resources */,
-				10559DCC1DCC56C100469AAF /* MPTopImagesView.xib in Resources */,
 				10559E1B1DCC56C100469AAF /* button_CurponStart@2x.png in Resources */,
 				1083914A1DCDC6EC00E4A8F0 /* basic_navigation_back@2x.png in Resources */,
 				10559E761DCC56C100469AAF /* button_back@2x.png in Resources */,
@@ -2572,7 +2624,6 @@
 				10559F221DCC7EAC00469AAF /* AFHTTPRequestOperation.m in Sources */,
 				10559D8A1DCC56C100469AAF /* MPShopObject.m in Sources */,
 				10559ECF1DCC56C100469AAF /* NSString+URLEncoding.m in Sources */,
-				10559DCB1DCC56C100469AAF /* MPTopImagesView.m in Sources */,
 				10559ED31DCC56C100469AAF /* BaseDAO.m in Sources */,
 				10559ED71DCC56C100469AAF /* MPPresetDAO.m in Sources */,
 				10A46ED31DCD6DD5005CC4A0 /* UserSettingViewController.m in Sources */,
@@ -2613,6 +2664,7 @@
 				10559DF21DCC56C100469AAF /* MPVideoChannelDetailViewController.m in Sources */,
 				10559DEE1DCC56C100469AAF /* MPShopEliaCell.m in Sources */,
 				10559EC11DCC56C100469AAF /* ManagerDownload.m in Sources */,
+				108391531DCDE15B00E4A8F0 /* MPTopImagesView.m in Sources */,
 				10559DE21DCC56C100469AAF /* MPBlankCell.m in Sources */,
 				10559DE41DCC56C100469AAF /* MPCouponBirthdayCell.m in Sources */,
 				10559EC01DCC56C100469AAF /* LazyInternet.m in Sources */,

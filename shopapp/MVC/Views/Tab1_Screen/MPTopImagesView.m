@@ -93,8 +93,6 @@
         pageControl.currentPage = 0;
         int i = 0;
 
-        // REPERTED BY M.ama 2016.10.27 START
-        // 画像順番設定
         lng_imageDownloadCount = 0;
         ary_list = [NSMutableArray array];
         for (id obj in listImage) {
@@ -104,7 +102,6 @@
                 i ++;
             }
         }
-        // REPERTED BY M.ama 2016.10.27 END
 
         [self setImageCount];
         
@@ -116,8 +113,6 @@
     }
 }
 
-// INSERTED BY M.ama 2016.10.27 START
-// 画像順番設定
 -(void)setImageCount {
 
     if(lng_imageDownloadCount < ary_list.count){
@@ -131,10 +126,8 @@
         [lazyImage startDownload:[NSString stringWithFormat:BASE_PREFIX_URL,[(MPTopImageObject*)ary_list[lng_imageDownloadCount] topUrl]] withDelegate:self withUnique:image];
     }else{
 
-        // INSERTED BY M.ama 2016.10.08 START
         //４秒ごとのスライド
         [NSTimer scheduledTimerWithTimeInterval:4.0f target:self selector:@selector(timerScroll:) userInfo:nil repeats:YES];
-        // INSERTED BY M.ama 2016.10.08 END
     }
 }
 
@@ -142,10 +135,7 @@
 
     [scroll_PageView scrollToNextPage:YES];
 }
-// INSERTED BY M.ama 2016.10.27 END
 
-// REPERTED BY M.ama 2016.10.27 START
-// 画像順番設定
 - (void)lazyInternetDidLoad:(NSData *)data
                  withUnique:(id)unique {
 
@@ -175,55 +165,54 @@
         }else{
             frame = CGRectMake(0.f, 0.f, scroll_PageView.frame.size.height, scroll_PageView.frame.size.height);
         }
-        //add actual image to list
+
+        //イメージデータセット
         [listActualImage addObject:unique];
 
+        // 画像等のセット用view作成
+        UIView *myView = [[UIView alloc] initWithFrame:frame];
+
+        // 画像view作成
         UIImageView *newPageView = [[UIImageView alloc] initWithImage:unique];
         newPageView.contentMode = UIViewContentModeScaleAspectFit;
         newPageView.frame = frame;
-        newPageView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
-
-        UIView *myView = [[UIView alloc] initWithFrame:frame];
-        // REPLACED BY ama 2016.10.29 START
-        // 背景色変更
+        newPageView.frame = CGRectMake(0, 0, myView.frame.size.width, myView.frame.size.height);
         [newPageView setBackgroundColor:[UIColor clearColor]];
-        // REPLACED BY ama 2016.10.29 END
-
         [myView addSubview:newPageView];
-        // REPLACED BY ama 2016.09.30 START
-        // トップ画像のサイズ変更
+
+        // ラベル位置設定
         if(!self.isSquare){
-            // REPLACED BY M.ama 2016.10.08 START
-            // スライドエリアの文字位置修正
+
             titleView = [[UIView alloc] initWithFrame:CGRectMake(0, myView.frame.size.height - 30, frame.size.width, 30)];
             imageTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, myView.frame.size.height - 30, frame.size.width - 20, 30)];
-            // REPLACED BY M.ama 2016.10.08 END
         }else{
+
             titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 141, scroll_PageView.frame.size.height - 4, 60)];
             imageTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 141, scroll_PageView.frame.size.height - 20, 60)];
         }
+        // ラベルバックを黒に設定
         titleView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
-        // REPLACED BY ama 2016.09.30 END
-        
+
+        // ラベルフォーマット設定
         imageTitleLabel.backgroundColor = [UIColor clearColor];
         imageTitleLabel.numberOfLines = 2;
         imageTitleLabel.text = [(MPTopImageObject*)[listObjects objectAtIndex:lng_imageDownloadCount] topDesc];
-        [listDescriptionReceived addObject:[Utility checkNIL:imageTitleLabel.text]];
-        
-        NSString* url = [(MPTopImageObject*)[listObjects objectAtIndex:lng_imageDownloadCount] linkUrl];
-        [listLinkUrl addObject:[Utility checkNIL:url]];
-        
         imageTitleLabel.textColor = [UIColor whiteColor];
         [imageTitleLabel setFont:[UIFont systemFontOfSize:11]];
-        
+        [listDescriptionReceived addObject:[Utility checkNIL:imageTitleLabel.text]];
+
         [myView addSubview:titleView];
         [myView addSubview:imageTitleLabel];
 
+        // 画像URL設定
+        NSString* url = [(MPTopImageObject*)[listObjects objectAtIndex:lng_imageDownloadCount] linkUrl];
+        [listLinkUrl addObject:[Utility checkNIL:url]];
         
         if(![(MPTopImageObject*)[listObjects objectAtIndex:lng_imageDownloadCount] topDesc] ) {
             [titleView setHidden:YES];
         }
-        
+
+        // newマーク設定
         if([(MPTopImageObject*)[listObjects objectAtIndex:lng_imageDownloadCount] is_News] == 1) {
             UIImageView *view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
             [view setBackgroundColor:[UIColor clearColor]];
@@ -232,6 +221,7 @@
             [myView addSubview:view];
         }
 
+        // １画面ごとに設定
         [self.pageViews replaceObjectAtIndex:lng_imageDownloadCount withObject:myView];
         [scroll_PageView addPageView:[self.pageViews objectAtIndex:lng_imageDownloadCount] index:lng_imageDownloadCount];
         [scroll_PageView setClipsToBounds:YES];
@@ -240,7 +230,6 @@
         [self setImageCount];
     }
 }
-// REPERTED BY M.ama 2016.10.27 END
 
 #pragma mark - InfinitePagingViewDelegate
 - (void)pagingView:(InfinitePagingView *)pagingView didEndDecelerating:(UIScrollView *)scrollView atPageIndex:(NSInteger)pageIndex {
