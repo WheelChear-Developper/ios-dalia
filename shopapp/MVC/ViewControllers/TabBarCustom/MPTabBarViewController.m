@@ -51,12 +51,8 @@
 
 #pragma mark - ManagerDownloadDelegate
 - (void)downloadDataSuccess:(DownloadParam *)param {
-    
-    listShop = param.listData;
-    //if (listShop.count == 1) {
-        [self setUpTabBar];
-    //}
-    //listShop = nil;
+
+    [self setUpTabBar];
 }
 
 - (void)downloadDataFail:(DownloadParam *)param {
@@ -133,6 +129,165 @@
     }
     
     [self setViewControllers:listVC animated:YES];
+}
+
+- (void)setCustomNavigaion {
+
+    statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
+
+    ///////////// カスタムナビゲーション /////////////
+
+    //カスタムナビゲーション作成
+    view_custom_navigationView = [[UIView alloc] init];
+    [view_custom_navigationView setBackgroundColor:[UIColor clearColor]];
+    [view_custom_navigationView setUserInteractionEnabled:YES];
+    CGRect custom_frameNavigationView = view_custom_navigationView.frame;
+    custom_frameNavigationView.origin.x = FRAME_ORGIN;
+    custom_frameNavigationView.origin.y = FRAME_ORGIN + statusHeight;
+    custom_frameNavigationView.size.width = self.view.frame.size.width;
+    custom_frameNavigationView.size.height = FRAME_HEIGHT;
+    view_custom_navigationView.frame = custom_frameNavigationView;
+    [self.view addSubview:view_custom_navigationView];
+
+    //カスタムナビゲーション背景設定
+    UIImage *img_custom_navigationView_back = [UIImage imageNamed:@"navigation_back.png"];
+    UIImageView* iv_custom_navigationView_back = [[UIImageView alloc] initWithImage:img_custom_navigationView_back];
+    iv_custom_navigationView_back.contentMode = UIViewContentModeScaleAspectFit;
+    iv_custom_navigationView_back.frame = CGRectMake(0, 0, view_custom_navigationView.frame.size.width, view_custom_navigationView.frame.size.height);
+    [view_custom_navigationView addSubview:iv_custom_navigationView_back];
+
+    //カスタムナビゲーションタイトル画像設定
+    UIImageView *iv_custom_navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((custom_frameNavigationView.size.width - ICON_WIDTH)/2, (custom_frameNavigationView.size.height - ICON_HEIGHT)/2, ICON_WIDTH, ICON_HEIGHT)];
+    [iv_custom_navigationIcon setImage:[UIImage imageNamed:@"navigation_icon.png"]];
+    [iv_custom_navigationIcon setContentMode:UIViewContentModeScaleAspectFit];
+    [view_custom_navigationView addSubview:iv_custom_navigationIcon];
+
+    //カスタムナビゲーション　メニューオープンボタン設置
+    UIImage *img_custom_config = [UIImage imageNamed:@"configuration.png"];
+    iv_custom_config = [[UIImageView alloc] initWithImage:img_custom_config];
+    iv_custom_config.contentMode = UIViewContentModeScaleAspectFit;
+    iv_custom_config.frame = CGRectMake(10, 10, 24, 24);
+    [view_custom_navigationView addSubview:iv_custom_config];
+
+    btn_custom_setting = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    btn_custom_setting.frame = CGRectMake(0, 0, 44, 44);
+    [btn_custom_setting addTarget:self action:@selector(custom_open_NavigationMenu:) forControlEvents:UIControlEventTouchDown];
+    [view_custom_navigationView addSubview:btn_custom_setting];
+
+    ///////////// サイドメニュー /////////////
+    
+    //ナビゲーションメニュー設定
+    lng_NavigationMenu_point = - self.view.frame.size.width;
+    view_NaviFrame = [[UIView alloc] initWithFrame:CGRectMake(lng_NavigationMenu_point, statusHeight, self.view.frame.size.width, self.view.frame.size.height - statusHeight)];
+    view_NaviFrame.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:view_NaviFrame];
+    [self.view bringSubviewToFront:view_NaviFrame];
+
+    //メニュー用view
+    view_NaviMenu = [[UIView alloc] initWithFrame:CGRectMake(0, 0, view_NaviFrame.frame.size.width - 44, view_NaviFrame.frame.size.height)];
+    view_NaviMenu.backgroundColor = [UIColor blackColor];
+    [view_NaviFrame addSubview:view_NaviMenu];
+
+    //ナビゲーション画面用　closeボタン設置
+    UIImage *im_custom_NavigationMenu_closeButton = [UIImage imageNamed:@"configuration.png"];
+    UIImageView* iv_custom_NavigationMenu_closeButton = [[UIImageView alloc] initWithImage:im_custom_NavigationMenu_closeButton];
+    iv_custom_NavigationMenu_closeButton.contentMode = UIViewContentModeScaleAspectFit;
+    iv_custom_NavigationMenu_closeButton.frame = CGRectMake(view_NaviFrame.frame.size.width - 10 - 24, 10, 24, 24);
+    [view_NaviFrame addSubview:iv_custom_NavigationMenu_closeButton];
+
+    UIButton* btn_custom_btn_close = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    btn_custom_btn_close.frame = CGRectMake(view_NaviFrame.frame.size.width - 44, 0, 44, 44);
+    [btn_custom_btn_close addTarget:self action:@selector(custom_close_NavigationMenu:) forControlEvents:UIControlEventTouchDown];
+    [view_NaviFrame addSubview:btn_custom_btn_close];
+
+    //SwipeGestureのインスタンスを生成
+    UISwipeGestureRecognizer *swipeLeftGesture = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(custom_close_NavigationMenu:)];
+    //スワイプの方向（右から左）
+    swipeLeftGesture.direction = UISwipeGestureRecognizerDirectionLeft;
+    //self.viewにジェスチャーをのせる
+    [self.view addGestureRecognizer:swipeLeftGesture];
+}
+
+- (void)custom_open_TopNavigation:(UIButton*)button {
+
+    [self.view bringSubviewToFront:view_custom_navigationView];
+    [UIView animateWithDuration:0.5f
+                          delay:0.5f
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+
+                         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
+                         CGRect flt_navi = view_custom_navigationView.frame;
+                         flt_navi.origin.y = 20;
+                         flt_navi.size.height = FRAME_HEIGHT;
+                         view_custom_navigationView.frame = flt_navi;
+
+                     } completion:^(BOOL finished){
+
+                         //完了時のコールバック
+                         
+                     }];
+}
+
+- (void)custom_close_TopNavigation:(UIButton*)button {
+
+    [self.view bringSubviewToFront:view_custom_navigationView];
+    [UIView animateWithDuration:0.5f
+                          delay:0.5f
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+
+                         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
+                         CGRect flt_navi = view_custom_navigationView.frame;
+                         flt_navi.origin.y = - FRAME_HEIGHT;
+                         flt_navi.size.height = 0;
+                         view_custom_navigationView.frame = flt_navi;
+
+                     } completion:^(BOOL finished){
+
+                         //完了時のコールバック
+                         
+                     }];
+}
+
+- (void)custom_open_NavigationMenu:(UIButton*)button {
+
+    [self.view bringSubviewToFront:view_NaviFrame];
+    [UIView animateWithDuration:0.5f
+                          delay:0.5f
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+
+                         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
+                         CGRect flt_navi = view_NaviFrame.frame;
+                         flt_navi.origin.x = 0.0f;
+                         view_NaviFrame.frame = flt_navi;
+
+                     } completion:^(BOOL finished){
+
+                         //完了時のコールバック
+
+                     }];
+}
+
+- (void)custom_close_NavigationMenu:(UIButton*)button {
+
+    [self.view bringSubviewToFront:view_NaviFrame];
+    [UIView animateWithDuration:0.5f
+                          delay:0.5f
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+
+                         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
+                         CGRect flt_navi = view_NaviFrame.frame;
+                         flt_navi.origin.x = - view_NaviFrame.frame.size.width;
+                         view_NaviFrame.frame = flt_navi;
+
+                     } completion:^(BOOL finished){
+
+                         //完了時のコールバック
+                         
+                     }];
 }
 
 #pragma mark - Custom TabBar
@@ -316,6 +471,11 @@
         }
         
     }
+}
+
+- (void)setCustomNavigationHiden:(BOOL)isEnable {
+
+    view_custom_navigationView.hidden = isEnable;
 }
 
 - (void)dealloc {

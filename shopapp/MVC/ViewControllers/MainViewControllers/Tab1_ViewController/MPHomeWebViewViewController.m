@@ -7,6 +7,7 @@
 //
 
 #import "MPHomeWebViewViewController.h"
+#import "MPTabBarViewController.h"
 #import "CustomColor.h"
 #import "MPUIConfigObject.h"
 
@@ -31,7 +32,8 @@
     [super viewDidLoad];
 
     //🔴navigation表示
-    [self setNavigationHiden:NO];
+    [self setBasicNavigationHiden:NO];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
     
     //🔴バックアクション非表示
     [self setHiddenBackButton:NO];

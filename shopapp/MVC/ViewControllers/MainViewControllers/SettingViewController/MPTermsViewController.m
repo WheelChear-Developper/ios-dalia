@@ -29,7 +29,7 @@
     [super viewDidLoad];
 
     //🔴navigation表示
-    [self setNavigationHiden:NO];
+    [self setBasicNavigationHiden:NO];
     
     //🔴バックアクション非表示
     [self setHiddenBackButton:NO];

@@ -46,7 +46,7 @@
 - (void)setUpView {
 
     //ステータスバー表示設定
-    float statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
+    statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
     self.view.backgroundColor = [UIColor blackColor];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
@@ -89,25 +89,6 @@
     [basic_navigationIcon setContentMode:UIViewContentModeScaleAspectFit];
     [basic_navigationView addSubview:basic_navigationIcon];
 
-    //メイン画面用ナビゲーション作成
-    [self.navigationController setNavigationBarHidden:YES];
-    custom_navigationView = [[UIImageView alloc] init];
-    [custom_navigationView setBackgroundColor:[UIColor clearColor]];
-    [custom_navigationView setUserInteractionEnabled:YES];
-    [custom_navigationView setImage:[UIImage imageNamed:@"navigation_back.png"]];
-    CGRect custom_frameNavigationView = custom_navigationView.frame;
-    custom_frameNavigationView.origin.x = FRAME_ORGIN;
-    custom_frameNavigationView.origin.y = FRAME_ORGIN + statusHeight;
-    custom_frameNavigationView.size.width = self.view.frame.size.width;
-    custom_frameNavigationView.size.height = FRAME_HEIGHT;
-    custom_navigationView.frame = custom_frameNavigationView;
-    [self.view addSubview:custom_navigationView];
-
-    UIImageView *custom_navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((custom_frameNavigationView.size.width - ICON_WIDTH)/2, (custom_frameNavigationView.size.height - ICON_HEIGHT)/2, ICON_WIDTH, ICON_HEIGHT)];
-//    [custom_navigationIcon setImage:[UIImage imageNamed:@"navigation_icon.png"]];
-    [custom_navigationIcon setContentMode:UIViewContentModeScaleAspectFit];
-    [custom_navigationView addSubview:custom_navigationIcon];
-
     //基本　戻るボタン設定
     backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [backButton setFrame:FRAME_FOR_BACK_BUTTON];
@@ -144,18 +125,6 @@
     [btn_setting addTarget:self action:@selector(push_setting:) forControlEvents:UIControlEventTouchDown];
     [basic_navigationView addSubview:btn_setting];
     btn_setting.hidden = NO;
-
-    //メイン画面用　leftメニューボタン設置
-    UIImage *custom_img_config = [UIImage imageNamed:@"configuration.png"];
-    custom_iv_config = [[UIImageView alloc] initWithImage:custom_img_config];
-    custom_iv_config.contentMode = UIViewContentModeScaleAspectFit;
-    custom_iv_config.frame = CGRectMake(10, 10, 24, 24);
-    [custom_navigationView addSubview:custom_iv_config];
-
-    custom_btn_setting = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    custom_btn_setting.frame = CGRectMake(0, 0, 44, 44);
-    [custom_btn_setting addTarget:self action:@selector(custom_push_menu:) forControlEvents:UIControlEventTouchDown];
-    [custom_navigationView addSubview:custom_btn_setting];
 }
 
 - (void)backButtonClicked:(UIButton*)sender {
@@ -181,43 +150,23 @@
     [self.navigationController pushViewController:transVC animated:YES];
 }
 
-- (void)custom_push_menu:(UIButton*)button {
+- (void)setBasicNavigationHiden:(BOOL)isEnable {
 
-
-}
-
-- (void)setNavigationHiden:(BOOL)isEnable {
-
-    float statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
     basic_navigationView.hidden = isEnable;
-    if(isEnable){
-
-        custom_navigationView.hidden = NO;
-    }else{
-
-        custom_navigationView.hidden = YES;
-    }
 
     if(isEnable){
 
-        contentView.translatesAutoresizingMaskIntoConstraints = YES;
-
-        CGRect rect_navi = contentView.frame;
-        rect_navi.origin.y = statusHeight;
-        rect_navi.size.height = rect_navi.size.height;
-        contentView.frame = rect_navi;
-
-        [contentView sizeToFit];
+        //基本ステータスバーが無い場合の制御
+        CGRect flt_contentView = contentView.frame;
+        flt_contentView.origin.y = statusHeight;
+        contentView.frame = flt_contentView;
     }else{
 
-        contentView.translatesAutoresizingMaskIntoConstraints = YES;
-
-        CGRect rect_navi = contentView.frame;
-        rect_navi.origin.y = statusHeight + basic_navigationView.frame.size.height;
-        rect_navi.size.height = rect_navi.size.height - basic_navigationView.frame.size.height;
-        contentView.frame = rect_navi;
-
-        [contentView sizeToFit];
+        //基本ステータスバーが有る場合の制御
+        CGRect flt_contentView = contentView.frame;
+        flt_contentView.origin.y = statusHeight + basic_navigationView.frame.size.height;
+        flt_contentView.size.height = flt_contentView.size.height - basic_navigationView.frame.size.height;
+        contentView.frame = flt_contentView;
     }
 }
 

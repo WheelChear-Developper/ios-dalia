@@ -23,6 +23,7 @@
 @interface MPHomeViewController : MPBaseViewController<ManagerDownloadDelegate, MPTopImagesViewDelegate, TheUserInfoViewControllerDelegate ,UIScrollViewDelegate>
 {
     UIScrollView* _scr_rootview;
+    CGPoint scrollBeginingPoint;
     UIView *scr_inView;
     UIView *cornerView;
     MPTopImagesView *topImageView;

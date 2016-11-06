@@ -7,6 +7,7 @@
 //
 
 #import "MPTransferViewController.h"
+#import "MPTabBarViewController.h"
 
 @interface MPTransferViewController () <UITextFieldDelegate> {
     NSString* transfer_code;
@@ -28,7 +29,8 @@
     [super viewDidLoad];
 
     //🔴navigation表示
-    [self setNavigationHiden:NO];
+    [self setBasicNavigationHiden:NO];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
     
     //🔴バックアクション非表示
     [self setHiddenBackButton:YES];

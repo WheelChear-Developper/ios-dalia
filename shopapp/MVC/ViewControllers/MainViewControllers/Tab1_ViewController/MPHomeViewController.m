@@ -45,7 +45,8 @@
     }
 
     //🔴navigation表示
-    [self setNavigationHiden:YES];
+    [self setBasicNavigationHiden:YES];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:NO];
     
     //🔴バックアクション非表示
     [self setHiddenBackButton:YES];
@@ -324,6 +325,25 @@
 - (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+
+    scrollBeginingPoint = [scrollView contentOffset];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+
+    CGPoint currentPoint = [scrollView contentOffset];
+    if(scrollBeginingPoint.y < currentPoint.y){
+
+        //下方向の時のアクション
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_close_TopNavigation:NO];
+    }else if(currentPoint.y <= 0.0f){
+
+        //下方向の時のアクション
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:NO];
+    }
 }
 
 #pragma mark - TopImageDelegate

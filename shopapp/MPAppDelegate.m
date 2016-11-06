@@ -66,6 +66,7 @@
     //TODO: ADD TABBARCONTROLLER TO ROOT VIEW
     MPTabBarViewController *tabBarController = [MPTabBarViewController sharedInstance];
     [tabBarController setUpTabBar];
+    [tabBarController setCustomNavigaion];
     [self.window setRootViewController:tabBarController];
 
     //TODO: DATABASE

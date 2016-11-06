@@ -6,6 +6,7 @@
 //
 
 #import "TheUserInfoViewController.h"
+#import "MPTabBarViewController.h"
 
 @interface TheUserInfoViewController ()
 @end
@@ -19,7 +20,8 @@
     [super viewDidLoad];
 
     //🔴navigation表示
-    [self setNavigationHiden:NO];
+    [self setBasicNavigationHiden:NO];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
     
     //🔴バックアクション非表示
     [self setHiddenBackButton:YES];
