@@ -189,7 +189,7 @@
     [self.view bringSubviewToFront:view_NaviFrame];
 
     //ナビゲーション画面用　closeボタン設置
-    UIImage *im_custom_NavigationMenu_closeButton = [UIImage imageNamed:@"configuration.png"];
+    UIImage *im_custom_NavigationMenu_closeButton = [UIImage imageNamed:@"customMenu_close.png"];
     UIImageView* iv_custom_NavigationMenu_closeButton = [[UIImageView alloc] initWithImage:im_custom_NavigationMenu_closeButton];
     iv_custom_NavigationMenu_closeButton.contentMode = UIViewContentModeScaleAspectFit;
     iv_custom_NavigationMenu_closeButton.frame = CGRectMake(view_NaviFrame.frame.size.width - 10 - 24, 10, 24, 24);
