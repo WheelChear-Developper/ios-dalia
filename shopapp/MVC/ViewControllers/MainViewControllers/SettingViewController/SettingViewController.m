@@ -41,12 +41,6 @@
     //🔴contentView 高さ自動調整　幅自動調整
     [contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
 
-    float statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
-    CGRect frameContentView = contentView.frame;
-    frameContentView.origin.y = contentView.frame.origin.y + statusHeight;
-    frameContentView.size.height = contentView.frame.size.height - statusHeight;
-    contentView.frame = frameContentView;
-
     //タイトルのグラデーション
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = CGRectMake(0, 0, self.view_title.frame.size.width, self.view_title.frame.size.height);
