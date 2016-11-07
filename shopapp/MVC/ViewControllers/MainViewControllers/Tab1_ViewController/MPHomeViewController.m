@@ -7,7 +7,6 @@
 //
 
 #import "MPHomeViewController.h"
-#import "TopImageDetailView.h"
 #import "MPTopImagesView.h"
 #import "MPHomeMenuDetailViewController.h"
 #import "MPTabBarViewController.h"
