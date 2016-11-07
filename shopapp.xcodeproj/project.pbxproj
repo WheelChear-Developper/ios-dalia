@@ -201,6 +201,8 @@
 		10136D131DD08F6400D62C4D /* backBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10136C511DD08F6400D62C4D /* backBottom@2x.png */; };
 		10136D141DD08F6400D62C4D /* red_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 10136C521DD08F6400D62C4D /* red_circle.png */; };
 		10136D151DD08F6400D62C4D /* tab_select_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 10136C531DD08F6400D62C4D /* tab_select_back.png */; };
+		10136D1D1DD092DB00D62C4D /* MPSlideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10136D1C1DD092DB00D62C4D /* MPSlideMenuView.m */; };
+		10136D1F1DD092F400D62C4D /* MPSlideMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10136D1E1DD092F400D62C4D /* MPSlideMenuView.xib */; };
 		103B56711DC9D84E00F162CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 103B56701DC9D84E00F162CA /* main.m */; };
 		103B568A1DC9D84E00F162CA /* shopappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 103B56891DC9D84E00F162CA /* shopappTests.m */; };
 		103B56951DC9D84E00F162CA /* shopappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 103B56941DC9D84E00F162CA /* shopappUITests.m */; };
@@ -588,6 +590,9 @@
 		10136C511DD08F6400D62C4D /* backBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backBottom@2x.png"; sourceTree = "<group>"; };
 		10136C521DD08F6400D62C4D /* red_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_circle.png; sourceTree = "<group>"; };
 		10136C531DD08F6400D62C4D /* tab_select_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_select_back.png; sourceTree = "<group>"; };
+		10136D1B1DD092DB00D62C4D /* MPSlideMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSlideMenuView.h; sourceTree = "<group>"; };
+		10136D1C1DD092DB00D62C4D /* MPSlideMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSlideMenuView.m; sourceTree = "<group>"; };
+		10136D1E1DD092F400D62C4D /* MPSlideMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPSlideMenuView.xib; sourceTree = "<group>"; };
 		103B566C1DC9D84E00F162CA /* shopapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shopapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		103B56701DC9D84E00F162CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		103B56801DC9D84E00F162CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1459,6 +1464,9 @@
 			children = (
 				10559B981DCC56C000469AAF /* MPTabBarViewController.h */,
 				10559B991DCC56C000469AAF /* MPTabBarViewController.m */,
+				10136D1B1DD092DB00D62C4D /* MPSlideMenuView.h */,
+				10136D1C1DD092DB00D62C4D /* MPSlideMenuView.m */,
+				10136D1E1DD092F400D62C4D /* MPSlideMenuView.xib */,
 			);
 			path = TabBarCustom;
 			sourceTree = "<group>";
@@ -2388,6 +2396,7 @@
 				10136D061DD08F6400D62C4D /* 3.png in Resources */,
 				10136C591DD08F6400D62C4D /* button_BirthdaySet@2x.png in Resources */,
 				10136C7E1DD08F6400D62C4D /* check02.png in Resources */,
+				10136D1F1DD092F400D62C4D /* MPSlideMenuView.xib in Resources */,
 				10136C821DD08F6400D62C4D /* no.png in Resources */,
 				10136CE81DD08F6400D62C4D /* okonomiyaki06.png in Resources */,
 				10136D021DD08F6400D62C4D /* 2.png in Resources */,
@@ -2661,6 +2670,7 @@
 				10A46EF31DCD6DD5005CC4A0 /* MPTheFifthViewController.m in Sources */,
 				10559F271DCC7EAC00469AAF /* AFPropertyListRequestOperation.m in Sources */,
 				10A46EF11DCD6DD5005CC4A0 /* MPShopDetailViewController.m in Sources */,
+				10136D1D1DD092DB00D62C4D /* MPSlideMenuView.m in Sources */,
 				10559D881DCC56C100469AAF /* MPNewHomeObject.m in Sources */,
 				10559D821DCC56C100469AAF /* MPConfigObject.m in Sources */,
 				10559EEA1DCC56C100469AAF /* InfinitePagingView.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ManagerDownload.h"
+#import "MPSlideMenuView.h"
 
 #define FRAME_HEIGHT 44
 #define FRAME_ORGIN 0
@@ -15,7 +16,7 @@
 #define ICON_HEIGHT 44
 #define FRAME_FOR_BACK_BUTTON CGRectMake(0, 0, 50, 44)
 
-@interface MPTabBarViewController : UITabBarController <ManagerDownloadDelegate>
+@interface MPTabBarViewController : UITabBarController <ManagerDownloadDelegate, MPSlideMenuViewDelegate>
 {
     long numberTab;
     NSMutableArray *listButton;
@@ -32,7 +33,7 @@
     UIImageView *iv_custom_config;
     UIButton *btn_custom_setting;
     UIView* view_NaviFrame;
-    UIView* view_NaviMenu;
+    MPSlideMenuView* view_NaviMenu;
     long lng_NavigationMenu_point;
     float statusHeight;
 }

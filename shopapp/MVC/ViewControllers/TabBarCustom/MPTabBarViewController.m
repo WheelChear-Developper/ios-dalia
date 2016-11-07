@@ -201,8 +201,11 @@
     [view_NaviFrame addSubview:btn_custom_btn_close];
 
     //メニュー用view
-    view_NaviMenu = [[UIView alloc] initWithFrame:CGRectMake(0, 0, view_NaviFrame.frame.size.width - 44, view_NaviFrame.frame.size.height)];
-    view_NaviMenu.backgroundColor = [UIColor blackColor];
+    [view_NaviMenu removeFromSuperview];
+    view_NaviMenu = (MPSlideMenuView*)[Utility viewInBundleWithName:@"MPSlideMenuView"];
+    view_NaviMenu.delegate = self;
+    view_NaviMenu.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.88];
+    [view_NaviMenu setFrame:CGRectMake(0, 0, view_NaviFrame.frame.size.width - 44, view_NaviFrame.frame.size.height)];
     [view_NaviFrame addSubview:view_NaviMenu];
 
     //SwipeGestureのインスタンスを生成
