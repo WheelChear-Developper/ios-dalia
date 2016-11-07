@@ -158,7 +158,7 @@
 
     //カスタムナビゲーションタイトル画像設定
     UIImageView *iv_custom_navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((custom_frameNavigationView.size.width - ICON_WIDTH)/2, (custom_frameNavigationView.size.height - ICON_HEIGHT)/2, ICON_WIDTH, ICON_HEIGHT)];
-    [iv_custom_navigationIcon setImage:[UIImage imageNamed:@"navigation_icon.png"]];
+//    [iv_custom_navigationIcon setImage:[UIImage imageNamed:@"navigation_icon.png"]];
     [iv_custom_navigationIcon setContentMode:UIViewContentModeScaleAspectFit];
     [view_custom_navigationView addSubview:iv_custom_navigationIcon];
 
@@ -174,6 +174,11 @@
     [btn_custom_setting addTarget:self action:@selector(custom_open_NavigationMenu:) forControlEvents:UIControlEventTouchDown];
     [view_custom_navigationView addSubview:btn_custom_setting];
 
+    //ステータスバー背景設定
+    UIView* view_frameNavigationView_shadow = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, statusHeight)];
+    view_frameNavigationView_shadow.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:view_frameNavigationView_shadow];
+
     ///////////// サイドメニュー /////////////
     
     //ナビゲーションメニュー設定
@@ -182,11 +187,6 @@
     view_NaviFrame.backgroundColor = [UIColor clearColor];
     [self.view addSubview:view_NaviFrame];
     [self.view bringSubviewToFront:view_NaviFrame];
-
-    //メニュー用view
-    view_NaviMenu = [[UIView alloc] initWithFrame:CGRectMake(0, 0, view_NaviFrame.frame.size.width - 44, view_NaviFrame.frame.size.height)];
-    view_NaviMenu.backgroundColor = [UIColor blackColor];
-    [view_NaviFrame addSubview:view_NaviMenu];
 
     //ナビゲーション画面用　closeボタン設置
     UIImage *im_custom_NavigationMenu_closeButton = [UIImage imageNamed:@"configuration.png"];
@@ -200,6 +200,11 @@
     [btn_custom_btn_close addTarget:self action:@selector(custom_close_NavigationMenu:) forControlEvents:UIControlEventTouchDown];
     [view_NaviFrame addSubview:btn_custom_btn_close];
 
+    //メニュー用view
+    view_NaviMenu = [[UIView alloc] initWithFrame:CGRectMake(0, 0, view_NaviFrame.frame.size.width - 44, view_NaviFrame.frame.size.height)];
+    view_NaviMenu.backgroundColor = [UIColor blackColor];
+    [view_NaviFrame addSubview:view_NaviMenu];
+
     //SwipeGestureのインスタンスを生成
     UISwipeGestureRecognizer *swipeLeftGesture = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(custom_close_NavigationMenu:)];
     //スワイプの方向（右から左）
@@ -210,7 +215,7 @@
 
 - (void)custom_open_TopNavigation:(UIButton*)button {
 
-    [self.view bringSubviewToFront:view_custom_navigationView];
+//    [self.view bringSubviewToFront:view_custom_navigationView];
     [UIView animateWithDuration:0.5f
                           delay:0.5f
                         options:UIViewAnimationOptionCurveEaseInOut
@@ -231,7 +236,7 @@
 
 - (void)custom_close_TopNavigation:(UIButton*)button {
 
-    [self.view bringSubviewToFront:view_custom_navigationView];
+//    [self.view bringSubviewToFront:view_custom_navigationView];
     [UIView animateWithDuration:0.5f
                           delay:0.5f
                         options:UIViewAnimationOptionCurveEaseInOut
