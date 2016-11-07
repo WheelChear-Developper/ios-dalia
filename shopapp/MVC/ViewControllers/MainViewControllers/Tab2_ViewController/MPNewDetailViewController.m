@@ -110,8 +110,8 @@
     //タイムゾーンの指定
     [formatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:60 * 60 * 9]];
     
-    NSCalendar* calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents* comps = [calendar components:NSWeekdayCalendarUnit
+    NSCalendar* calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents* comps = [calendar components:NSCalendarUnitWeekday
                                           fromDate:[formatter dateFromString:dateString]];
     
     NSDateFormatter* df = [[NSDateFormatter alloc] init];

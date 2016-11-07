@@ -23,9 +23,14 @@
 
 + (CGSize) sizeWithFont: (UIFont*) font width:(float)width value: (NSString*) value{
     
-    return [value sizeWithFont:font
-             constrainedToSize:CGSizeMake(width, MAXFLOAT)
-                 lineBreakMode:NSLineBreakByWordWrapping];
+//    return [value sizeWithFont:font
+//             constrainedToSize:CGSizeMake(width, MAXFLOAT)
+//                 lineBreakMode:NSLineBreakByWordWrapping];
+
+    return [value boundingRectWithSize:CGSizeMake(width, MAXFLOAT)
+                              options:NSStringDrawingUsesLineFragmentOrigin
+                           attributes:@{NSFontAttributeName:font}
+                              context:nil].size;
 }
 + (NSDictionary *)dictionaryFromFilePlist:(NSString *)path{
     NSDictionary *theDict = [NSDictionary dictionaryWithContentsOfFile:path];
@@ -141,8 +146,8 @@
 }
 
 + (NSString*)numberDayOfWeek:(NSDate *)date{
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:date];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *comps = [gregorian components:NSCalendarUnitWeekday fromDate:date];
     long weekday = [comps weekday];
     NSString *dateString = @"";
     switch (weekday) {

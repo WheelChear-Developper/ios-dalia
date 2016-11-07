@@ -308,6 +308,7 @@
 
         NSUInteger idx = 0;
         for(UIView *pageView in _pageViews) {
+            NSLog(@"%@",pageView);
 
             UIView *pageView = [_pageViews objectAtIndex:idx];
             //        if((NSNull*)pageView != [NSNull null]){
