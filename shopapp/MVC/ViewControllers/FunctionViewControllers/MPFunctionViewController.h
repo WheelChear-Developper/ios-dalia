@@ -11,9 +11,8 @@
 #import "MPCouponStampView.h"
 #import "ManagerDownload.h"
 #import "MPCouponShareView.h"
-#import "MPVideoChannelView.h"
 
-@interface MPFunctionViewController : MPBaseViewController<ManagerDownloadDelegate, MPCouponStampViewDelegate, MPCouponShareViewDelegate, MPVideoChannelViewDelegate>
+@interface MPFunctionViewController : MPBaseViewController<ManagerDownloadDelegate, MPCouponStampViewDelegate, MPCouponShareViewDelegate>
 {
     ElevenFunctionType functionType;
     UIWebView *webView;

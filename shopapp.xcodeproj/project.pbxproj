@@ -291,40 +291,24 @@
 		108392661DD03BB800E4A8F0 /* MPHeaderShopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108391FF1DD03BB700E4A8F0 /* MPHeaderShopView.xib */; };
 		108392671DD03BB800E4A8F0 /* MPShopDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392011DD03BB700E4A8F0 /* MPShopDetailCell.m */; };
 		108392681DD03BB800E4A8F0 /* MPShopDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392021DD03BB700E4A8F0 /* MPShopDetailCell.xib */; };
-		108392691DD03BB800E4A8F0 /* MPShopDetaillView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392041DD03BB700E4A8F0 /* MPShopDetaillView.m */; };
-		1083926A1DD03BB800E4A8F0 /* MPShopDetaillView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392051DD03BB700E4A8F0 /* MPShopDetaillView.xib */; };
 		1083926B1DD03BB800E4A8F0 /* MPCouponDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083920D1DD03BB700E4A8F0 /* MPCouponDetailCell.m */; };
 		1083926C1DD03BB800E4A8F0 /* MPCouponDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083920E1DD03BB700E4A8F0 /* MPCouponDetailCell.xib */; };
 		1083926D1DD03BB800E4A8F0 /* MPCouponShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392101DD03BB700E4A8F0 /* MPCouponShareCell.m */; };
 		1083926E1DD03BB800E4A8F0 /* MPCouponShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392111DD03BB700E4A8F0 /* MPCouponShareCell.xib */; };
-		1083926F1DD03BB800E4A8F0 /* MPBlankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392131DD03BB700E4A8F0 /* MPBlankCell.m */; };
-		108392701DD03BB800E4A8F0 /* MPBlankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392141DD03BB700E4A8F0 /* MPBlankCell.xib */; };
-		108392711DD03BB800E4A8F0 /* MPCouponBirthdayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392161DD03BB700E4A8F0 /* MPCouponBirthdayCell.m */; };
-		108392721DD03BB800E4A8F0 /* MPCouponBirthdayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392171DD03BB700E4A8F0 /* MPCouponBirthdayCell.xib */; };
 		108392731DD03BB800E4A8F0 /* MPCouponCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392191DD03BB700E4A8F0 /* MPCouponCell.m */; };
 		108392741DD03BB800E4A8F0 /* MPCouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083921A1DD03BB700E4A8F0 /* MPCouponCell.xib */; };
-		108392751DD03BB800E4A8F0 /* MPGymCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083921C1DD03BB700E4A8F0 /* MPGymCell.m */; };
-		108392761DD03BB800E4A8F0 /* MPGymCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083921D1DD03BB700E4A8F0 /* MPGymCell.xib */; };
 		108392771DD03BB800E4A8F0 /* MPNewHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083921F1DD03BB700E4A8F0 /* MPNewHomeCell.m */; };
 		108392781DD03BB800E4A8F0 /* MPNewHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392201DD03BB700E4A8F0 /* MPNewHomeCell.xib */; };
 		108392791DD03BB800E4A8F0 /* MPShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392221DD03BB700E4A8F0 /* MPShopCell.m */; };
 		1083927A1DD03BB800E4A8F0 /* MPShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392231DD03BB700E4A8F0 /* MPShopCell.xib */; };
 		1083927B1DD03BB800E4A8F0 /* MPShopEliaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392251DD03BB700E4A8F0 /* MPShopEliaCell.m */; };
 		1083927C1DD03BB800E4A8F0 /* MPShopEliaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392261DD03BB700E4A8F0 /* MPShopEliaCell.xib */; };
-		1083927D1DD03BB800E4A8F0 /* MPVideoChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392281DD03BB700E4A8F0 /* MPVideoChannelCell.m */; };
-		1083927E1DD03BB800E4A8F0 /* MPVideoChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392291DD03BB700E4A8F0 /* MPVideoChannelCell.xib */; };
 		1083927F1DD03BB800E4A8F0 /* MPListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083922C1DD03BB700E4A8F0 /* MPListCell.m */; };
 		108392801DD03BB800E4A8F0 /* MPListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083922D1DD03BB700E4A8F0 /* MPListCell.xib */; };
 		108392811DD03BB800E4A8F0 /* MPMenuGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083922F1DD03BB700E4A8F0 /* MPMenuGridCell.m */; };
 		108392821DD03BB800E4A8F0 /* MPMenuGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392301DD03BB700E4A8F0 /* MPMenuGridCell.xib */; };
 		108392831DD03BB800E4A8F0 /* MPPlanTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392321DD03BB700E4A8F0 /* MPPlanTextCell.m */; };
 		108392841DD03BB800E4A8F0 /* MPPlanTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392331DD03BB700E4A8F0 /* MPPlanTextCell.xib */; };
-		108392851DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392361DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.m */; };
-		108392861DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392371DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.xib */; };
-		108392871DD03BB800E4A8F0 /* MPVideoChannelHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392391DD03BB800E4A8F0 /* MPVideoChannelHeaderView.m */; };
-		108392881DD03BB800E4A8F0 /* MPVideoChannelHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083923A1DD03BB800E4A8F0 /* MPVideoChannelHeaderView.xib */; };
-		108392891DD03BB800E4A8F0 /* MPVideoChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083923C1DD03BB800E4A8F0 /* MPVideoChannelView.m */; };
-		1083928A1DD03BB800E4A8F0 /* MPVideoChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083923D1DD03BB800E4A8F0 /* MPVideoChannelView.xib */; };
 		1083928B1DD03BB800E4A8F0 /* MPAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392401DD03BB800E4A8F0 /* MPAlertView.m */; };
 		1083928C1DD03BB800E4A8F0 /* MPAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392411DD03BB800E4A8F0 /* MPAlertView.xib */; };
 		1083928D1DD03BB800E4A8F0 /* MPConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392431DD03BB800E4A8F0 /* MPConfirmView.m */; };
@@ -338,8 +322,6 @@
 		108392951DD03BB800E4A8F0 /* MPSocialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083924F1DD03BB800E4A8F0 /* MPSocialView.xib */; };
 		108392961DD03BB800E4A8F0 /* MPCouponStampView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392521DD03BB800E4A8F0 /* MPCouponStampView.m */; };
 		108392971DD03BB800E4A8F0 /* MPCouponStampView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392531DD03BB800E4A8F0 /* MPCouponStampView.xib */; };
-		108392981DD03BB800E4A8F0 /* MPListFuntionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392561DD03BB800E4A8F0 /* MPListFuntionView.m */; };
-		108392991DD03BB800E4A8F0 /* MPListFuntionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392571DD03BB800E4A8F0 /* MPListFuntionView.xib */; };
 		1083929C1DD03BB800E4A8F0 /* MPTopImagesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083925D1DD03BB800E4A8F0 /* MPTopImagesView.xib */; };
 		1083929D1DD03BB800E4A8F0 /* MPTopImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083925E1DD03BB800E4A8F0 /* MPTopImagesView.m */; };
 		10A46E771DCCB1B9005CC4A0 /* MPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A46E761DCCB1B9005CC4A0 /* MPAppDelegate.m */; };
@@ -774,27 +756,15 @@
 		108392001DD03BB700E4A8F0 /* MPShopDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopDetailCell.h; sourceTree = "<group>"; };
 		108392011DD03BB700E4A8F0 /* MPShopDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPShopDetailCell.m; sourceTree = "<group>"; };
 		108392021DD03BB700E4A8F0 /* MPShopDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPShopDetailCell.xib; sourceTree = "<group>"; };
-		108392031DD03BB700E4A8F0 /* MPShopDetaillView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopDetaillView.h; sourceTree = "<group>"; };
-		108392041DD03BB700E4A8F0 /* MPShopDetaillView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPShopDetaillView.m; sourceTree = "<group>"; };
-		108392051DD03BB700E4A8F0 /* MPShopDetaillView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPShopDetaillView.xib; sourceTree = "<group>"; };
 		1083920C1DD03BB700E4A8F0 /* MPCouponDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponDetailCell.h; sourceTree = "<group>"; };
 		1083920D1DD03BB700E4A8F0 /* MPCouponDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponDetailCell.m; sourceTree = "<group>"; };
 		1083920E1DD03BB700E4A8F0 /* MPCouponDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponDetailCell.xib; sourceTree = "<group>"; };
 		1083920F1DD03BB700E4A8F0 /* MPCouponShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponShareCell.h; sourceTree = "<group>"; };
 		108392101DD03BB700E4A8F0 /* MPCouponShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponShareCell.m; sourceTree = "<group>"; };
 		108392111DD03BB700E4A8F0 /* MPCouponShareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponShareCell.xib; sourceTree = "<group>"; };
-		108392121DD03BB700E4A8F0 /* MPBlankCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBlankCell.h; sourceTree = "<group>"; };
-		108392131DD03BB700E4A8F0 /* MPBlankCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPBlankCell.m; sourceTree = "<group>"; };
-		108392141DD03BB700E4A8F0 /* MPBlankCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPBlankCell.xib; sourceTree = "<group>"; };
-		108392151DD03BB700E4A8F0 /* MPCouponBirthdayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponBirthdayCell.h; sourceTree = "<group>"; };
-		108392161DD03BB700E4A8F0 /* MPCouponBirthdayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponBirthdayCell.m; sourceTree = "<group>"; };
-		108392171DD03BB700E4A8F0 /* MPCouponBirthdayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponBirthdayCell.xib; sourceTree = "<group>"; };
 		108392181DD03BB700E4A8F0 /* MPCouponCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponCell.h; sourceTree = "<group>"; };
 		108392191DD03BB700E4A8F0 /* MPCouponCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponCell.m; sourceTree = "<group>"; };
 		1083921A1DD03BB700E4A8F0 /* MPCouponCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponCell.xib; sourceTree = "<group>"; };
-		1083921B1DD03BB700E4A8F0 /* MPGymCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGymCell.h; sourceTree = "<group>"; };
-		1083921C1DD03BB700E4A8F0 /* MPGymCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPGymCell.m; sourceTree = "<group>"; };
-		1083921D1DD03BB700E4A8F0 /* MPGymCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPGymCell.xib; sourceTree = "<group>"; };
 		1083921E1DD03BB700E4A8F0 /* MPNewHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNewHomeCell.h; sourceTree = "<group>"; };
 		1083921F1DD03BB700E4A8F0 /* MPNewHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPNewHomeCell.m; sourceTree = "<group>"; };
 		108392201DD03BB700E4A8F0 /* MPNewHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPNewHomeCell.xib; sourceTree = "<group>"; };
@@ -804,9 +774,6 @@
 		108392241DD03BB700E4A8F0 /* MPShopEliaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopEliaCell.h; sourceTree = "<group>"; };
 		108392251DD03BB700E4A8F0 /* MPShopEliaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPShopEliaCell.m; sourceTree = "<group>"; };
 		108392261DD03BB700E4A8F0 /* MPShopEliaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPShopEliaCell.xib; sourceTree = "<group>"; };
-		108392271DD03BB700E4A8F0 /* MPVideoChannelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVideoChannelCell.h; sourceTree = "<group>"; };
-		108392281DD03BB700E4A8F0 /* MPVideoChannelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVideoChannelCell.m; sourceTree = "<group>"; };
-		108392291DD03BB700E4A8F0 /* MPVideoChannelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPVideoChannelCell.xib; sourceTree = "<group>"; };
 		1083922B1DD03BB700E4A8F0 /* MPListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPListCell.h; sourceTree = "<group>"; };
 		1083922C1DD03BB700E4A8F0 /* MPListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPListCell.m; sourceTree = "<group>"; };
 		1083922D1DD03BB700E4A8F0 /* MPListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPListCell.xib; sourceTree = "<group>"; };
@@ -816,15 +783,6 @@
 		108392311DD03BB700E4A8F0 /* MPPlanTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPlanTextCell.h; sourceTree = "<group>"; };
 		108392321DD03BB700E4A8F0 /* MPPlanTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPlanTextCell.m; sourceTree = "<group>"; };
 		108392331DD03BB700E4A8F0 /* MPPlanTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPPlanTextCell.xib; sourceTree = "<group>"; };
-		108392351DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVideoChannelDetailViewController.h; sourceTree = "<group>"; };
-		108392361DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVideoChannelDetailViewController.m; sourceTree = "<group>"; };
-		108392371DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPVideoChannelDetailViewController.xib; sourceTree = "<group>"; };
-		108392381DD03BB800E4A8F0 /* MPVideoChannelHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVideoChannelHeaderView.h; sourceTree = "<group>"; };
-		108392391DD03BB800E4A8F0 /* MPVideoChannelHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVideoChannelHeaderView.m; sourceTree = "<group>"; };
-		1083923A1DD03BB800E4A8F0 /* MPVideoChannelHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPVideoChannelHeaderView.xib; sourceTree = "<group>"; };
-		1083923B1DD03BB800E4A8F0 /* MPVideoChannelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVideoChannelView.h; sourceTree = "<group>"; };
-		1083923C1DD03BB800E4A8F0 /* MPVideoChannelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVideoChannelView.m; sourceTree = "<group>"; };
-		1083923D1DD03BB800E4A8F0 /* MPVideoChannelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPVideoChannelView.xib; sourceTree = "<group>"; };
 		1083923F1DD03BB800E4A8F0 /* MPAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAlertView.h; sourceTree = "<group>"; };
 		108392401DD03BB800E4A8F0 /* MPAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPAlertView.m; sourceTree = "<group>"; };
 		108392411DD03BB800E4A8F0 /* MPAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPAlertView.xib; sourceTree = "<group>"; };
@@ -844,9 +802,6 @@
 		108392511DD03BB800E4A8F0 /* MPCouponStampView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponStampView.h; sourceTree = "<group>"; };
 		108392521DD03BB800E4A8F0 /* MPCouponStampView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponStampView.m; sourceTree = "<group>"; };
 		108392531DD03BB800E4A8F0 /* MPCouponStampView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponStampView.xib; sourceTree = "<group>"; };
-		108392551DD03BB800E4A8F0 /* MPListFuntionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPListFuntionView.h; sourceTree = "<group>"; };
-		108392561DD03BB800E4A8F0 /* MPListFuntionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPListFuntionView.m; sourceTree = "<group>"; };
-		108392571DD03BB800E4A8F0 /* MPListFuntionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPListFuntionView.xib; sourceTree = "<group>"; };
 		1083925C1DD03BB800E4A8F0 /* MPTopImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTopImagesView.h; sourceTree = "<group>"; };
 		1083925D1DD03BB800E4A8F0 /* MPTopImagesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTopImagesView.xib; sourceTree = "<group>"; };
 		1083925E1DD03BB800E4A8F0 /* MPTopImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTopImagesView.m; sourceTree = "<group>"; };
@@ -1802,11 +1757,9 @@
 				108391F81DD03BB700E4A8F0 /* Setting */,
 				108391FC1DD03BB700E4A8F0 /* ShopScreen */,
 				1083920A1DD03BB700E4A8F0 /* TableViewCellCus */,
-				108392341DD03BB800E4A8F0 /* VideoChanel */,
 				1083923E1DD03BB800E4A8F0 /* CouponScreen */,
 				108392481DD03BB800E4A8F0 /* CouponShare */,
 				108392501DD03BB800E4A8F0 /* CouponStampScreen */,
-				108392541DD03BB800E4A8F0 /* HomeScreen */,
 			);
 			path = old;
 			sourceTree = "<group>";
@@ -1830,9 +1783,6 @@
 				108392001DD03BB700E4A8F0 /* MPShopDetailCell.h */,
 				108392011DD03BB700E4A8F0 /* MPShopDetailCell.m */,
 				108392021DD03BB700E4A8F0 /* MPShopDetailCell.xib */,
-				108392031DD03BB700E4A8F0 /* MPShopDetaillView.h */,
-				108392041DD03BB700E4A8F0 /* MPShopDetaillView.m */,
-				108392051DD03BB700E4A8F0 /* MPShopDetaillView.xib */,
 			);
 			path = ShopScreen;
 			sourceTree = "<group>";
@@ -1841,18 +1791,9 @@
 			isa = PBXGroup;
 			children = (
 				1083920B1DD03BB700E4A8F0 /* CouponCell */,
-				108392121DD03BB700E4A8F0 /* MPBlankCell.h */,
-				108392131DD03BB700E4A8F0 /* MPBlankCell.m */,
-				108392141DD03BB700E4A8F0 /* MPBlankCell.xib */,
-				108392151DD03BB700E4A8F0 /* MPCouponBirthdayCell.h */,
-				108392161DD03BB700E4A8F0 /* MPCouponBirthdayCell.m */,
-				108392171DD03BB700E4A8F0 /* MPCouponBirthdayCell.xib */,
 				108392181DD03BB700E4A8F0 /* MPCouponCell.h */,
 				108392191DD03BB700E4A8F0 /* MPCouponCell.m */,
 				1083921A1DD03BB700E4A8F0 /* MPCouponCell.xib */,
-				1083921B1DD03BB700E4A8F0 /* MPGymCell.h */,
-				1083921C1DD03BB700E4A8F0 /* MPGymCell.m */,
-				1083921D1DD03BB700E4A8F0 /* MPGymCell.xib */,
 				1083921E1DD03BB700E4A8F0 /* MPNewHomeCell.h */,
 				1083921F1DD03BB700E4A8F0 /* MPNewHomeCell.m */,
 				108392201DD03BB700E4A8F0 /* MPNewHomeCell.xib */,
@@ -1862,9 +1803,6 @@
 				108392241DD03BB700E4A8F0 /* MPShopEliaCell.h */,
 				108392251DD03BB700E4A8F0 /* MPShopEliaCell.m */,
 				108392261DD03BB700E4A8F0 /* MPShopEliaCell.xib */,
-				108392271DD03BB700E4A8F0 /* MPVideoChannelCell.h */,
-				108392281DD03BB700E4A8F0 /* MPVideoChannelCell.m */,
-				108392291DD03BB700E4A8F0 /* MPVideoChannelCell.xib */,
 				1083922A1DD03BB700E4A8F0 /* MenuCell */,
 			);
 			path = TableViewCellCus;
@@ -1897,22 +1835,6 @@
 				108392331DD03BB700E4A8F0 /* MPPlanTextCell.xib */,
 			);
 			path = MenuCell;
-			sourceTree = "<group>";
-		};
-		108392341DD03BB800E4A8F0 /* VideoChanel */ = {
-			isa = PBXGroup;
-			children = (
-				108392351DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.h */,
-				108392361DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.m */,
-				108392371DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.xib */,
-				108392381DD03BB800E4A8F0 /* MPVideoChannelHeaderView.h */,
-				108392391DD03BB800E4A8F0 /* MPVideoChannelHeaderView.m */,
-				1083923A1DD03BB800E4A8F0 /* MPVideoChannelHeaderView.xib */,
-				1083923B1DD03BB800E4A8F0 /* MPVideoChannelView.h */,
-				1083923C1DD03BB800E4A8F0 /* MPVideoChannelView.m */,
-				1083923D1DD03BB800E4A8F0 /* MPVideoChannelView.xib */,
-			);
-			path = VideoChanel;
 			sourceTree = "<group>";
 		};
 		1083923E1DD03BB800E4A8F0 /* CouponScreen */ = {
@@ -1953,16 +1875,6 @@
 				108392531DD03BB800E4A8F0 /* MPCouponStampView.xib */,
 			);
 			path = CouponStampScreen;
-			sourceTree = "<group>";
-		};
-		108392541DD03BB800E4A8F0 /* HomeScreen */ = {
-			isa = PBXGroup;
-			children = (
-				108392551DD03BB800E4A8F0 /* MPListFuntionView.h */,
-				108392561DD03BB800E4A8F0 /* MPListFuntionView.m */,
-				108392571DD03BB800E4A8F0 /* MPListFuntionView.xib */,
-			);
-			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 		1083925B1DD03BB800E4A8F0 /* Tab1_Screen */ = {
@@ -2291,7 +2203,6 @@
 				10A46ED81DCD6DD5005CC4A0 /* MPHomeMenuViewController.xib in Resources */,
 				10559E5F1DCC56C100469AAF /* btn_twitter@2x.png in Resources */,
 				10A46E791DCCB3C5005CC4A0 /* Images.xcassets in Resources */,
-				108392861DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.xib in Resources */,
 				10559E5A1DCC56C100469AAF /* btn_share_dialog.png in Resources */,
 				10559E411DCC56C100469AAF /* no@2x.png in Resources */,
 				10559EAA1DCC56C100469AAF /* syousai.png in Resources */,
@@ -2308,11 +2219,9 @@
 				10559E5B1DCC56C100469AAF /* btn_share_dialog@2x.png in Resources */,
 				10559E071DCC56C100469AAF /* 4@2x.png in Resources */,
 				10559E611DCC56C100469AAF /* facebook_selected@2x.png in Resources */,
-				108392761DD03BB800E4A8F0 /* MPGymCell.xib in Resources */,
 				10559E721DCC56C100469AAF /* icon_uncheck_stamp@2x.png in Resources */,
 				10559E561DCC56C100469AAF /* btn_positive_dialog.png in Resources */,
 				10559EAD1DCC56C100469AAF /* off_button.png in Resources */,
-				1083927E1DD03BB800E4A8F0 /* MPVideoChannelCell.xib in Resources */,
 				10559EA31DCC56C100469AAF /* okonomiyaki01.png in Resources */,
 				10A46E8D1DCCD97D005CC4A0 /* navigation_back@2x.png in Resources */,
 				10559E8A1DCC56C100469AAF /* blackImage.png in Resources */,
@@ -2344,7 +2253,6 @@
 				10559E031DCC56C100469AAF /* 3@2x.png in Resources */,
 				108392641DD03BB800E4A8F0 /* MPSettingAlertView.xib in Resources */,
 				10559E0C1DCC56C100469AAF /* 5_click.png in Resources */,
-				108392991DD03BB800E4A8F0 /* MPListFuntionView.xib in Resources */,
 				10559E291DCC56C100469AAF /* button_ProfileSave_push@2x.png in Resources */,
 				10A46F031DCD6F6B005CC4A0 /* SettingViewController.xib in Resources */,
 				10559E3C1DCC56C100469AAF /* check02.png in Resources */,
@@ -2357,7 +2265,6 @@
 				10559E341DCC56C100469AAF /* btn_negative_dialog.png in Resources */,
 				10559E181DCC56C100469AAF /* button_Cansel.png in Resources */,
 				10A46EE21DCD6DD5005CC4A0 /* MPListMessageViewController.xib in Resources */,
-				1083928A1DD03BB800E4A8F0 /* MPVideoChannelView.xib in Resources */,
 				10559E371DCC56C100469AAF /* btn_negative_dialog_selected@2x.png in Resources */,
 				10559E641DCC56C100469AAF /* twitter_selected.png in Resources */,
 				10559E6E1DCC56C100469AAF /* icon_coupon_detail@2x.png in Resources */,
@@ -2377,7 +2284,6 @@
 				10559E2D1DCC56C100469AAF /* button_Skip_push@2x.png in Resources */,
 				10559E091DCC56C100469AAF /* 4_click@2x.png in Resources */,
 				10559EAB1DCC56C100469AAF /* thumbnail02.png in Resources */,
-				108392881DD03BB800E4A8F0 /* MPVideoChannelHeaderView.xib in Resources */,
 				10559E2F1DCC56C100469AAF /* button_Telephone@2x.png in Resources */,
 				10559E151DCC56C100469AAF /* button_ApliStart_push@2x.png in Resources */,
 				10559E431DCC56C100469AAF /* no_selected@2x.png in Resources */,
@@ -2445,7 +2351,6 @@
 				10559E901DCC56C100469AAF /* idicator_close@2x.png in Resources */,
 				10559E171DCC56C100469AAF /* button_BirthdaySet@2x.png in Resources */,
 				10559EA01DCC56C100469AAF /* monjya03.png in Resources */,
-				108392701DD03BB800E4A8F0 /* MPBlankCell.xib in Resources */,
 				10559E781DCC56C100469AAF /* button_back_selected@2x.png in Resources */,
 				10559EA41DCC56C100469AAF /* okonomiyaki02.png in Resources */,
 				10559E441DCC56C100469AAF /* pop-up.png in Resources */,
@@ -2490,7 +2395,6 @@
 				10559E751DCC56C100469AAF /* button_back.png in Resources */,
 				10559E621DCC56C100469AAF /* line_selected.png in Resources */,
 				10A46ED21DCD6DD5005CC4A0 /* TheUserInfoViewController.xib in Resources */,
-				108392721DD03BB800E4A8F0 /* MPCouponBirthdayCell.xib in Resources */,
 				10559E9B1DCC56C100469AAF /* no_photo.png in Resources */,
 				10559E9F1DCC56C100469AAF /* monjya02.png in Resources */,
 				10559E1E1DCC56C100469AAF /* button_edit.png in Resources */,
@@ -2530,7 +2434,6 @@
 				10559DF91DCC56C100469AAF /* UIConfig_food.plist in Resources */,
 				10559E201DCC56C100469AAF /* button_MapApli.png in Resources */,
 				10559EA11DCC56C100469AAF /* monjya04.png in Resources */,
-				1083926A1DD03BB800E4A8F0 /* MPShopDetaillView.xib in Resources */,
 				108392801DD03BB800E4A8F0 /* MPListCell.xib in Resources */,
 				10559E8C1DCC56C100469AAF /* btn_back@2x.png in Resources */,
 				10559D8F1DCC56C100469AAF /* MPFunctionViewController.xib in Resources */,
@@ -2636,8 +2539,6 @@
 				1083927F1DD03BB800E4A8F0 /* MPListCell.m in Sources */,
 				10559D871DCC56C100469AAF /* MPMenuObject.m in Sources */,
 				10559ED21DCC56C100469AAF /* MPPageControl.m in Sources */,
-				108392691DD03BB800E4A8F0 /* MPShopDetaillView.m in Sources */,
-				108392711DD03BB800E4A8F0 /* MPCouponBirthdayCell.m in Sources */,
 				10A46EE71DCD6DD5005CC4A0 /* MPWpNewsDetailViewController.m in Sources */,
 				108392631DD03BB800E4A8F0 /* MPSettingAlertView.m in Sources */,
 				10559F2A1DCC7EAC00469AAF /* UIImageView+AFNetworking.m in Sources */,
@@ -2655,7 +2556,6 @@
 				10559EE91DCC56C100469AAF /* Reachability.m in Sources */,
 				10A46EDD1DCD6DD5005CC4A0 /* MPHomeViewController.m in Sources */,
 				10A46EEB1DCD6DD5005CC4A0 /* MPCouponDetailViewController.m in Sources */,
-				108392891DD03BB800E4A8F0 /* MPVideoChannelView.m in Sources */,
 				10559EDC1DCC56C100469AAF /* MPHospitalObject.m in Sources */,
 				10559EDF1DCC56C100469AAF /* FMDatabaseAdditions.m in Sources */,
 				10559EE41DCC56C100469AAF /* KeychainItemWrapper.m in Sources */,
@@ -2670,7 +2570,6 @@
 				1083929D1DD03BB800E4A8F0 /* MPTopImagesView.m in Sources */,
 				10A46F001DCD6F6B005CC4A0 /* MPTransferViewController.m in Sources */,
 				10559EC11DCC56C100469AAF /* ManagerDownload.m in Sources */,
-				108392751DD03BB800E4A8F0 /* MPGymCell.m in Sources */,
 				10559EC01DCC56C100469AAF /* LazyInternet.m in Sources */,
 				108392811DD03BB800E4A8F0 /* MPMenuGridCell.m in Sources */,
 				10559EBF1DCC56C100469AAF /* DownloadParam.m in Sources */,
@@ -2685,7 +2584,6 @@
 				10559F281DCC7EAC00469AAF /* AFURLConnectionOperation.m in Sources */,
 				10559ED51DCC56C100469AAF /* MPGymDAO.m in Sources */,
 				10559F031DCC56C100469AAF /* UIAlertView+Blocks.m in Sources */,
-				1083927D1DD03BB800E4A8F0 /* MPVideoChannelCell.m in Sources */,
 				10559EE11DCC56C100469AAF /* FMDatabaseQueue.m in Sources */,
 				108392651DD03BB800E4A8F0 /* MPHeaderShopView.m in Sources */,
 				10559F291DCC7EAC00469AAF /* AFXMLRequestOperation.m in Sources */,
@@ -2693,7 +2591,6 @@
 				108392921DD03BB800E4A8F0 /* MPCouponShareView.m in Sources */,
 				10559F261DCC7EAC00469AAF /* AFNetworkActivityIndicatorManager.m in Sources */,
 				10559ED61DCC56C100469AAF /* MPHospitalDAO.m in Sources */,
-				1083926F1DD03BB800E4A8F0 /* MPBlankCell.m in Sources */,
 				10559D841DCC56C100469AAF /* MPCouponObject.m in Sources */,
 				10559EE51DCC56C100469AAF /* KILabel.m in Sources */,
 				108392791DD03BB800E4A8F0 /* MPShopCell.m in Sources */,
@@ -2706,7 +2603,6 @@
 				10A46ED11DCD6DD5005CC4A0 /* TheUserInfoViewController.m in Sources */,
 				10A46EDB1DCD6DD5005CC4A0 /* MPHomeOkonomiViewController.m in Sources */,
 				108392831DD03BB800E4A8F0 /* MPPlanTextCell.m in Sources */,
-				108392851DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.m in Sources */,
 				10559F241DCC7EAC00469AAF /* AFJSONRequestOperation.m in Sources */,
 				10559D8B1DCC56C100469AAF /* MPTopImageObject.m in Sources */,
 				10559EBE1DCC56C100469AAF /* Configuration.m in Sources */,
@@ -2719,9 +2615,7 @@
 				10A46EF11DCD6DD5005CC4A0 /* MPShopDetailViewController.m in Sources */,
 				10559D881DCC56C100469AAF /* MPNewHomeObject.m in Sources */,
 				10559D821DCC56C100469AAF /* MPConfigObject.m in Sources */,
-				108392981DD03BB800E4A8F0 /* MPListFuntionView.m in Sources */,
 				10559EEA1DCC56C100469AAF /* InfinitePagingView.m in Sources */,
-				108392871DD03BB800E4A8F0 /* MPVideoChannelHeaderView.m in Sources */,
 				10A46ED91DCD6DD5005CC4A0 /* MPHomeMonjyaViewController.m in Sources */,
 				10559EDD1DCC56C100469AAF /* MPPresetObject.m in Sources */,
 				103B56711DC9D84E00F162CA /* main.m in Sources */,

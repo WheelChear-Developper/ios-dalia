@@ -8,7 +8,6 @@
 
 #import "MPHeaderShopView.h"
 #import "CustomColor.h"
-#import "MPShopDetaillView.h"
 #import "MPUIConfigObject.h"
 
 #define BONUS_HEIGHT 20

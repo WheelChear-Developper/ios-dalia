@@ -9,7 +9,6 @@
 #import "MPFunctionViewController.h"
 #import "MPTabBarViewController.h"
 #import "MPCouponShareViewController.h"
-#import "MPVideoChannelDetailViewController.h"
 #import "MPFunctionViewController+WebViewBottomBar.h"
 
 @interface MPFunctionViewController ()
@@ -150,19 +149,7 @@
             
         case ElevenFunctionType_11:
         {
-            //動画チャンネル
-            
-            CGRect titleFrame = title.frame;
-            titleFrame.origin.x = TITLE_HEADER_LEFT;
-            
-            title.frame = titleFrame;
-            
-            [title setText:[[[[(MPUIConfigObject*)[MPUIConfigObject sharedInstance] objectAfterParsedPlistFile:[Utility getPatternType]] tab1] objectForKey:@"Function11"] objectForKey:@"titleHeader"]];
-            MPVideoChannelView *videoChannelView = (MPVideoChannelView*)[Utility viewInBundleWithName:@"MPVideoChannelView"];
-            videoChannelView.delegate = self;
-            [videoChannelView setFrame:CGRectMake(5, view.frame.size.height, 310, contentView.frame.size.height - view.frame.size.height)];
-            [contentView addSubview:videoChannelView];
-            [contentView bringSubviewToFront:videoChannelView];
+
         }
             break;
             
@@ -234,14 +221,6 @@
     MPCouponShareViewController *couponShareViewController = [[MPCouponShareViewController alloc] initWithNibName:@"MPCouponShareViewController" bundle:nil];
     [couponShareViewController setData:object];
     [self.navigationController pushViewController:couponShareViewController animated:YES];
-}
-
-#pragma mark - MPVideoChannelViewDelegate
-- (void)detailVideoChannel:(MPVideoObject *)object {
-    
-    MPVideoChannelDetailViewController *videoChannelDetailVC = [[MPVideoChannelDetailViewController alloc] initWithNibName:@"MPVideoChannelDetailViewController" bundle:nil];
-    videoChannelDetailVC.videoObject = object;
-    [self.navigationController pushViewController:videoChannelDetailVC animated:YES];
 }
 
 - (void)getTaskWithFunctions:(ElevenFunctionType)type {
