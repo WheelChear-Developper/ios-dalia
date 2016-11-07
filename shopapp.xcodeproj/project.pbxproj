@@ -26,63 +26,6 @@
 		10559D8F1DCC56C100469AAF /* MPFunctionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559B4D1DCC56C000469AAF /* MPFunctionViewController.xib */; };
 		10559D901DCC56C100469AAF /* MPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559B501DCC56C000469AAF /* MPBaseViewController.m */; };
 		10559DBB1DCC56C100469AAF /* MPTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559B991DCC56C000469AAF /* MPTabBarViewController.m */; };
-		10559DBC1DCC56C100469AAF /* MPAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559B9D1DCC56C000469AAF /* MPAlertView.m */; };
-		10559DBD1DCC56C100469AAF /* MPAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559B9E1DCC56C000469AAF /* MPAlertView.xib */; };
-		10559DBE1DCC56C100469AAF /* MPConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BA01DCC56C000469AAF /* MPConfirmView.m */; };
-		10559DBF1DCC56C100469AAF /* MPConfirmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BA11DCC56C000469AAF /* MPConfirmView.xib */; };
-		10559DC01DCC56C100469AAF /* MPSocialShareAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BA31DCC56C000469AAF /* MPSocialShareAlertView.m */; };
-		10559DC11DCC56C100469AAF /* MPSocialShareAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BA41DCC56C000469AAF /* MPSocialShareAlertView.xib */; };
-		10559DC21DCC56C100469AAF /* CouponShareHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BA61DCC56C000469AAF /* CouponShareHeaderView.xib */; };
-		10559DC31DCC56C100469AAF /* MPCouponShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BA81DCC56C000469AAF /* MPCouponShareView.m */; };
-		10559DC41DCC56C100469AAF /* MPCouponShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BA91DCC56C000469AAF /* MPCouponShareView.xib */; };
-		10559DC51DCC56C100469AAF /* MPSocialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BAB1DCC56C000469AAF /* MPSocialView.m */; };
-		10559DC61DCC56C100469AAF /* MPSocialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BAC1DCC56C000469AAF /* MPSocialView.xib */; };
-		10559DC71DCC56C100469AAF /* MPCouponStampView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BAF1DCC56C000469AAF /* MPCouponStampView.m */; };
-		10559DC81DCC56C100469AAF /* MPCouponStampView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BB01DCC56C000469AAF /* MPCouponStampView.xib */; };
-		10559DC91DCC56C100469AAF /* MPListFuntionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BB31DCC56C000469AAF /* MPListFuntionView.m */; };
-		10559DCA1DCC56C100469AAF /* MPListFuntionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BB41DCC56C000469AAF /* MPListFuntionView.xib */; };
-		10559DCE1DCC56C100469AAF /* TopImageDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BBA1DCC56C000469AAF /* TopImageDetailView.m */; };
-		10559DCF1DCC56C100469AAF /* TopImageDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BBB1DCC56C000469AAF /* TopImageDetailView.xib */; };
-		10559DD01DCC56C100469AAF /* MPSettingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BBE1DCC56C000469AAF /* MPSettingAlertView.m */; };
-		10559DD11DCC56C100469AAF /* MPSettingAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BBF1DCC56C000469AAF /* MPSettingAlertView.xib */; };
-		10559DD21DCC56C100469AAF /* MPHeaderShopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BC21DCC56C000469AAF /* MPHeaderShopView.m */; };
-		10559DD31DCC56C100469AAF /* MPHeaderShopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BC31DCC56C000469AAF /* MPHeaderShopView.xib */; };
-		10559DD41DCC56C100469AAF /* MPShopDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BC51DCC56C000469AAF /* MPShopDetailCell.m */; };
-		10559DD51DCC56C100469AAF /* MPShopDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BC61DCC56C000469AAF /* MPShopDetailCell.xib */; };
-		10559DD61DCC56C100469AAF /* MPShopDetaillView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BC81DCC56C000469AAF /* MPShopDetaillView.m */; };
-		10559DD71DCC56C100469AAF /* MPShopDetaillView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BC91DCC56C000469AAF /* MPShopDetaillView.xib */; };
-		10559DD81DCC56C100469AAF /* MPCouponDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BCD1DCC56C000469AAF /* MPCouponDetailCell.m */; };
-		10559DD91DCC56C100469AAF /* MPCouponDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BCE1DCC56C000469AAF /* MPCouponDetailCell.xib */; };
-		10559DDA1DCC56C100469AAF /* MPCouponShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BD01DCC56C000469AAF /* MPCouponShareCell.m */; };
-		10559DDB1DCC56C100469AAF /* MPCouponShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BD11DCC56C000469AAF /* MPCouponShareCell.xib */; };
-		10559DDC1DCC56C100469AAF /* MPListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BD41DCC56C000469AAF /* MPListCell.m */; };
-		10559DDD1DCC56C100469AAF /* MPListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BD51DCC56C000469AAF /* MPListCell.xib */; };
-		10559DDE1DCC56C100469AAF /* MPMenuGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BD71DCC56C000469AAF /* MPMenuGridCell.m */; };
-		10559DDF1DCC56C100469AAF /* MPMenuGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BD81DCC56C000469AAF /* MPMenuGridCell.xib */; };
-		10559DE01DCC56C100469AAF /* MPPlanTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BDA1DCC56C000469AAF /* MPPlanTextCell.m */; };
-		10559DE11DCC56C100469AAF /* MPPlanTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BDB1DCC56C000469AAF /* MPPlanTextCell.xib */; };
-		10559DE21DCC56C100469AAF /* MPBlankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BDD1DCC56C000469AAF /* MPBlankCell.m */; };
-		10559DE31DCC56C100469AAF /* MPBlankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BDE1DCC56C000469AAF /* MPBlankCell.xib */; };
-		10559DE41DCC56C100469AAF /* MPCouponBirthdayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BE01DCC56C000469AAF /* MPCouponBirthdayCell.m */; };
-		10559DE51DCC56C100469AAF /* MPCouponBirthdayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BE11DCC56C000469AAF /* MPCouponBirthdayCell.xib */; };
-		10559DE61DCC56C100469AAF /* MPCouponCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BE31DCC56C000469AAF /* MPCouponCell.m */; };
-		10559DE71DCC56C100469AAF /* MPCouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BE41DCC56C000469AAF /* MPCouponCell.xib */; };
-		10559DE81DCC56C100469AAF /* MPGymCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BE61DCC56C000469AAF /* MPGymCell.m */; };
-		10559DE91DCC56C100469AAF /* MPGymCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BE71DCC56C000469AAF /* MPGymCell.xib */; };
-		10559DEA1DCC56C100469AAF /* MPNewHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BE91DCC56C000469AAF /* MPNewHomeCell.m */; };
-		10559DEB1DCC56C100469AAF /* MPNewHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BEA1DCC56C000469AAF /* MPNewHomeCell.xib */; };
-		10559DEC1DCC56C100469AAF /* MPShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BEC1DCC56C000469AAF /* MPShopCell.m */; };
-		10559DED1DCC56C100469AAF /* MPShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BED1DCC56C000469AAF /* MPShopCell.xib */; };
-		10559DEE1DCC56C100469AAF /* MPShopEliaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BEF1DCC56C000469AAF /* MPShopEliaCell.m */; };
-		10559DEF1DCC56C100469AAF /* MPShopEliaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BF01DCC56C000469AAF /* MPShopEliaCell.xib */; };
-		10559DF01DCC56C100469AAF /* MPVideoChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BF21DCC56C000469AAF /* MPVideoChannelCell.m */; };
-		10559DF11DCC56C100469AAF /* MPVideoChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BF31DCC56C000469AAF /* MPVideoChannelCell.xib */; };
-		10559DF21DCC56C100469AAF /* MPVideoChannelDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BF61DCC56C000469AAF /* MPVideoChannelDetailViewController.m */; };
-		10559DF31DCC56C100469AAF /* MPVideoChannelDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BF71DCC56C000469AAF /* MPVideoChannelDetailViewController.xib */; };
-		10559DF41DCC56C100469AAF /* MPVideoChannelHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BF91DCC56C000469AAF /* MPVideoChannelHeaderView.m */; };
-		10559DF51DCC56C100469AAF /* MPVideoChannelHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BFA1DCC56C000469AAF /* MPVideoChannelHeaderView.xib */; };
-		10559DF61DCC56C100469AAF /* MPVideoChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10559BFC1DCC56C000469AAF /* MPVideoChannelView.m */; };
-		10559DF71DCC56C100469AAF /* MPVideoChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10559BFD1DCC56C000469AAF /* MPVideoChannelView.xib */; };
 		10559DF81DCC56C100469AAF /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10559C001DCC56C000469AAF /* config.plist */; };
 		10559DF91DCC56C100469AAF /* UIConfig_food.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10559C021DCC56C000469AAF /* UIConfig_food.plist */; };
 		10559DFA1DCC56C100469AAF /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 10559C051DCC56C000469AAF /* 1.png */; };
@@ -340,10 +283,67 @@
 		108391451DCDBE1500E4A8F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 108391431DCDBE1500E4A8F0 /* InfoPlist.strings */; };
 		108391491DCDC6EC00E4A8F0 /* basic_navigation_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 108391471DCDC6EC00E4A8F0 /* basic_navigation_back.png */; };
 		1083914A1DCDC6EC00E4A8F0 /* basic_navigation_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 108391481DCDC6EC00E4A8F0 /* basic_navigation_back@2x.png */; };
-		108391531DCDE15B00E4A8F0 /* MPTopImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083914D1DCDE15B00E4A8F0 /* MPTopImagesView.m */; };
-		108391541DCDE15B00E4A8F0 /* MPTopImagesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083914E1DCDE15B00E4A8F0 /* MPTopImagesView.xib */; };
 		108391571DCE1D5A00E4A8F0 /* button_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 108391561DCE1D5A00E4A8F0 /* button_mask.png */; };
 		108391591DD02D4200E4A8F0 /* customMenu_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 108391581DD02D4200E4A8F0 /* customMenu_close.png */; };
+		108392631DD03BB800E4A8F0 /* MPSettingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108391FA1DD03BB700E4A8F0 /* MPSettingAlertView.m */; };
+		108392641DD03BB800E4A8F0 /* MPSettingAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108391FB1DD03BB700E4A8F0 /* MPSettingAlertView.xib */; };
+		108392651DD03BB800E4A8F0 /* MPHeaderShopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108391FE1DD03BB700E4A8F0 /* MPHeaderShopView.m */; };
+		108392661DD03BB800E4A8F0 /* MPHeaderShopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108391FF1DD03BB700E4A8F0 /* MPHeaderShopView.xib */; };
+		108392671DD03BB800E4A8F0 /* MPShopDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392011DD03BB700E4A8F0 /* MPShopDetailCell.m */; };
+		108392681DD03BB800E4A8F0 /* MPShopDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392021DD03BB700E4A8F0 /* MPShopDetailCell.xib */; };
+		108392691DD03BB800E4A8F0 /* MPShopDetaillView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392041DD03BB700E4A8F0 /* MPShopDetaillView.m */; };
+		1083926A1DD03BB800E4A8F0 /* MPShopDetaillView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392051DD03BB700E4A8F0 /* MPShopDetaillView.xib */; };
+		1083926B1DD03BB800E4A8F0 /* MPCouponDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083920D1DD03BB700E4A8F0 /* MPCouponDetailCell.m */; };
+		1083926C1DD03BB800E4A8F0 /* MPCouponDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083920E1DD03BB700E4A8F0 /* MPCouponDetailCell.xib */; };
+		1083926D1DD03BB800E4A8F0 /* MPCouponShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392101DD03BB700E4A8F0 /* MPCouponShareCell.m */; };
+		1083926E1DD03BB800E4A8F0 /* MPCouponShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392111DD03BB700E4A8F0 /* MPCouponShareCell.xib */; };
+		1083926F1DD03BB800E4A8F0 /* MPBlankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392131DD03BB700E4A8F0 /* MPBlankCell.m */; };
+		108392701DD03BB800E4A8F0 /* MPBlankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392141DD03BB700E4A8F0 /* MPBlankCell.xib */; };
+		108392711DD03BB800E4A8F0 /* MPCouponBirthdayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392161DD03BB700E4A8F0 /* MPCouponBirthdayCell.m */; };
+		108392721DD03BB800E4A8F0 /* MPCouponBirthdayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392171DD03BB700E4A8F0 /* MPCouponBirthdayCell.xib */; };
+		108392731DD03BB800E4A8F0 /* MPCouponCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392191DD03BB700E4A8F0 /* MPCouponCell.m */; };
+		108392741DD03BB800E4A8F0 /* MPCouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083921A1DD03BB700E4A8F0 /* MPCouponCell.xib */; };
+		108392751DD03BB800E4A8F0 /* MPGymCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083921C1DD03BB700E4A8F0 /* MPGymCell.m */; };
+		108392761DD03BB800E4A8F0 /* MPGymCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083921D1DD03BB700E4A8F0 /* MPGymCell.xib */; };
+		108392771DD03BB800E4A8F0 /* MPNewHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083921F1DD03BB700E4A8F0 /* MPNewHomeCell.m */; };
+		108392781DD03BB800E4A8F0 /* MPNewHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392201DD03BB700E4A8F0 /* MPNewHomeCell.xib */; };
+		108392791DD03BB800E4A8F0 /* MPShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392221DD03BB700E4A8F0 /* MPShopCell.m */; };
+		1083927A1DD03BB800E4A8F0 /* MPShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392231DD03BB700E4A8F0 /* MPShopCell.xib */; };
+		1083927B1DD03BB800E4A8F0 /* MPShopEliaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392251DD03BB700E4A8F0 /* MPShopEliaCell.m */; };
+		1083927C1DD03BB800E4A8F0 /* MPShopEliaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392261DD03BB700E4A8F0 /* MPShopEliaCell.xib */; };
+		1083927D1DD03BB800E4A8F0 /* MPVideoChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392281DD03BB700E4A8F0 /* MPVideoChannelCell.m */; };
+		1083927E1DD03BB800E4A8F0 /* MPVideoChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392291DD03BB700E4A8F0 /* MPVideoChannelCell.xib */; };
+		1083927F1DD03BB800E4A8F0 /* MPListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083922C1DD03BB700E4A8F0 /* MPListCell.m */; };
+		108392801DD03BB800E4A8F0 /* MPListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083922D1DD03BB700E4A8F0 /* MPListCell.xib */; };
+		108392811DD03BB800E4A8F0 /* MPMenuGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083922F1DD03BB700E4A8F0 /* MPMenuGridCell.m */; };
+		108392821DD03BB800E4A8F0 /* MPMenuGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392301DD03BB700E4A8F0 /* MPMenuGridCell.xib */; };
+		108392831DD03BB800E4A8F0 /* MPPlanTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392321DD03BB700E4A8F0 /* MPPlanTextCell.m */; };
+		108392841DD03BB800E4A8F0 /* MPPlanTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392331DD03BB700E4A8F0 /* MPPlanTextCell.xib */; };
+		108392851DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392361DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.m */; };
+		108392861DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392371DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.xib */; };
+		108392871DD03BB800E4A8F0 /* MPVideoChannelHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392391DD03BB800E4A8F0 /* MPVideoChannelHeaderView.m */; };
+		108392881DD03BB800E4A8F0 /* MPVideoChannelHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083923A1DD03BB800E4A8F0 /* MPVideoChannelHeaderView.xib */; };
+		108392891DD03BB800E4A8F0 /* MPVideoChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083923C1DD03BB800E4A8F0 /* MPVideoChannelView.m */; };
+		1083928A1DD03BB800E4A8F0 /* MPVideoChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083923D1DD03BB800E4A8F0 /* MPVideoChannelView.xib */; };
+		1083928B1DD03BB800E4A8F0 /* MPAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392401DD03BB800E4A8F0 /* MPAlertView.m */; };
+		1083928C1DD03BB800E4A8F0 /* MPAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392411DD03BB800E4A8F0 /* MPAlertView.xib */; };
+		1083928D1DD03BB800E4A8F0 /* MPConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392431DD03BB800E4A8F0 /* MPConfirmView.m */; };
+		1083928E1DD03BB800E4A8F0 /* MPConfirmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392441DD03BB800E4A8F0 /* MPConfirmView.xib */; };
+		1083928F1DD03BB800E4A8F0 /* MPSocialShareAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392461DD03BB800E4A8F0 /* MPSocialShareAlertView.m */; };
+		108392901DD03BB800E4A8F0 /* MPSocialShareAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392471DD03BB800E4A8F0 /* MPSocialShareAlertView.xib */; };
+		108392911DD03BB800E4A8F0 /* CouponShareHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392491DD03BB800E4A8F0 /* CouponShareHeaderView.xib */; };
+		108392921DD03BB800E4A8F0 /* MPCouponShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083924B1DD03BB800E4A8F0 /* MPCouponShareView.m */; };
+		108392931DD03BB800E4A8F0 /* MPCouponShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083924C1DD03BB800E4A8F0 /* MPCouponShareView.xib */; };
+		108392941DD03BB800E4A8F0 /* MPSocialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083924E1DD03BB800E4A8F0 /* MPSocialView.m */; };
+		108392951DD03BB800E4A8F0 /* MPSocialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083924F1DD03BB800E4A8F0 /* MPSocialView.xib */; };
+		108392961DD03BB800E4A8F0 /* MPCouponStampView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392521DD03BB800E4A8F0 /* MPCouponStampView.m */; };
+		108392971DD03BB800E4A8F0 /* MPCouponStampView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392531DD03BB800E4A8F0 /* MPCouponStampView.xib */; };
+		108392981DD03BB800E4A8F0 /* MPListFuntionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392561DD03BB800E4A8F0 /* MPListFuntionView.m */; };
+		108392991DD03BB800E4A8F0 /* MPListFuntionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108392571DD03BB800E4A8F0 /* MPListFuntionView.xib */; };
+		1083929A1DD03BB800E4A8F0 /* TopImageDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 108392591DD03BB800E4A8F0 /* TopImageDetailView.m */; };
+		1083929B1DD03BB800E4A8F0 /* TopImageDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083925A1DD03BB800E4A8F0 /* TopImageDetailView.xib */; };
+		1083929C1DD03BB800E4A8F0 /* MPTopImagesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1083925D1DD03BB800E4A8F0 /* MPTopImagesView.xib */; };
+		1083929D1DD03BB800E4A8F0 /* MPTopImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083925E1DD03BB800E4A8F0 /* MPTopImagesView.m */; };
 		10A46E771DCCB1B9005CC4A0 /* MPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A46E761DCCB1B9005CC4A0 /* MPAppDelegate.m */; };
 		10A46E791DCCB3C5005CC4A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A46E781DCCB3C4005CC4A0 /* Images.xcassets */; };
 		10A46E8D1DCCD97D005CC4A0 /* navigation_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10A46E8B1DCCD97D005CC4A0 /* navigation_back@2x.png */; };
@@ -456,91 +456,6 @@
 		10559B501DCC56C000469AAF /* MPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPBaseViewController.m; sourceTree = "<group>"; };
 		10559B981DCC56C000469AAF /* MPTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTabBarViewController.h; sourceTree = "<group>"; };
 		10559B991DCC56C000469AAF /* MPTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTabBarViewController.m; sourceTree = "<group>"; };
-		10559B9C1DCC56C000469AAF /* MPAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAlertView.h; sourceTree = "<group>"; };
-		10559B9D1DCC56C000469AAF /* MPAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPAlertView.m; sourceTree = "<group>"; };
-		10559B9E1DCC56C000469AAF /* MPAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPAlertView.xib; sourceTree = "<group>"; };
-		10559B9F1DCC56C000469AAF /* MPConfirmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPConfirmView.h; sourceTree = "<group>"; };
-		10559BA01DCC56C000469AAF /* MPConfirmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPConfirmView.m; sourceTree = "<group>"; };
-		10559BA11DCC56C000469AAF /* MPConfirmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPConfirmView.xib; sourceTree = "<group>"; };
-		10559BA21DCC56C000469AAF /* MPSocialShareAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSocialShareAlertView.h; sourceTree = "<group>"; };
-		10559BA31DCC56C000469AAF /* MPSocialShareAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSocialShareAlertView.m; sourceTree = "<group>"; };
-		10559BA41DCC56C000469AAF /* MPSocialShareAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPSocialShareAlertView.xib; sourceTree = "<group>"; };
-		10559BA61DCC56C000469AAF /* CouponShareHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CouponShareHeaderView.xib; sourceTree = "<group>"; };
-		10559BA71DCC56C000469AAF /* MPCouponShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponShareView.h; sourceTree = "<group>"; };
-		10559BA81DCC56C000469AAF /* MPCouponShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponShareView.m; sourceTree = "<group>"; };
-		10559BA91DCC56C000469AAF /* MPCouponShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponShareView.xib; sourceTree = "<group>"; };
-		10559BAA1DCC56C000469AAF /* MPSocialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSocialView.h; sourceTree = "<group>"; };
-		10559BAB1DCC56C000469AAF /* MPSocialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSocialView.m; sourceTree = "<group>"; };
-		10559BAC1DCC56C000469AAF /* MPSocialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPSocialView.xib; sourceTree = "<group>"; };
-		10559BAE1DCC56C000469AAF /* MPCouponStampView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponStampView.h; sourceTree = "<group>"; };
-		10559BAF1DCC56C000469AAF /* MPCouponStampView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponStampView.m; sourceTree = "<group>"; };
-		10559BB01DCC56C000469AAF /* MPCouponStampView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponStampView.xib; sourceTree = "<group>"; };
-		10559BB21DCC56C000469AAF /* MPListFuntionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPListFuntionView.h; sourceTree = "<group>"; };
-		10559BB31DCC56C000469AAF /* MPListFuntionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPListFuntionView.m; sourceTree = "<group>"; };
-		10559BB41DCC56C000469AAF /* MPListFuntionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPListFuntionView.xib; sourceTree = "<group>"; };
-		10559BB91DCC56C000469AAF /* TopImageDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopImageDetailView.h; sourceTree = "<group>"; };
-		10559BBA1DCC56C000469AAF /* TopImageDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopImageDetailView.m; sourceTree = "<group>"; };
-		10559BBB1DCC56C000469AAF /* TopImageDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopImageDetailView.xib; sourceTree = "<group>"; };
-		10559BBD1DCC56C000469AAF /* MPSettingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSettingAlertView.h; sourceTree = "<group>"; };
-		10559BBE1DCC56C000469AAF /* MPSettingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSettingAlertView.m; sourceTree = "<group>"; };
-		10559BBF1DCC56C000469AAF /* MPSettingAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPSettingAlertView.xib; sourceTree = "<group>"; };
-		10559BC11DCC56C000469AAF /* MPHeaderShopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPHeaderShopView.h; sourceTree = "<group>"; };
-		10559BC21DCC56C000469AAF /* MPHeaderShopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPHeaderShopView.m; sourceTree = "<group>"; };
-		10559BC31DCC56C000469AAF /* MPHeaderShopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPHeaderShopView.xib; sourceTree = "<group>"; };
-		10559BC41DCC56C000469AAF /* MPShopDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopDetailCell.h; sourceTree = "<group>"; };
-		10559BC51DCC56C000469AAF /* MPShopDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPShopDetailCell.m; sourceTree = "<group>"; };
-		10559BC61DCC56C000469AAF /* MPShopDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPShopDetailCell.xib; sourceTree = "<group>"; };
-		10559BC71DCC56C000469AAF /* MPShopDetaillView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopDetaillView.h; sourceTree = "<group>"; };
-		10559BC81DCC56C000469AAF /* MPShopDetaillView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPShopDetaillView.m; sourceTree = "<group>"; };
-		10559BC91DCC56C000469AAF /* MPShopDetaillView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPShopDetaillView.xib; sourceTree = "<group>"; };
-		10559BCC1DCC56C000469AAF /* MPCouponDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponDetailCell.h; sourceTree = "<group>"; };
-		10559BCD1DCC56C000469AAF /* MPCouponDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponDetailCell.m; sourceTree = "<group>"; };
-		10559BCE1DCC56C000469AAF /* MPCouponDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponDetailCell.xib; sourceTree = "<group>"; };
-		10559BCF1DCC56C000469AAF /* MPCouponShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponShareCell.h; sourceTree = "<group>"; };
-		10559BD01DCC56C000469AAF /* MPCouponShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponShareCell.m; sourceTree = "<group>"; };
-		10559BD11DCC56C000469AAF /* MPCouponShareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponShareCell.xib; sourceTree = "<group>"; };
-		10559BD31DCC56C000469AAF /* MPListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPListCell.h; sourceTree = "<group>"; };
-		10559BD41DCC56C000469AAF /* MPListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPListCell.m; sourceTree = "<group>"; };
-		10559BD51DCC56C000469AAF /* MPListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPListCell.xib; sourceTree = "<group>"; };
-		10559BD61DCC56C000469AAF /* MPMenuGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuGridCell.h; sourceTree = "<group>"; };
-		10559BD71DCC56C000469AAF /* MPMenuGridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuGridCell.m; sourceTree = "<group>"; };
-		10559BD81DCC56C000469AAF /* MPMenuGridCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPMenuGridCell.xib; sourceTree = "<group>"; };
-		10559BD91DCC56C000469AAF /* MPPlanTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPlanTextCell.h; sourceTree = "<group>"; };
-		10559BDA1DCC56C000469AAF /* MPPlanTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPlanTextCell.m; sourceTree = "<group>"; };
-		10559BDB1DCC56C000469AAF /* MPPlanTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPPlanTextCell.xib; sourceTree = "<group>"; };
-		10559BDC1DCC56C000469AAF /* MPBlankCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBlankCell.h; sourceTree = "<group>"; };
-		10559BDD1DCC56C000469AAF /* MPBlankCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPBlankCell.m; sourceTree = "<group>"; };
-		10559BDE1DCC56C000469AAF /* MPBlankCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPBlankCell.xib; sourceTree = "<group>"; };
-		10559BDF1DCC56C000469AAF /* MPCouponBirthdayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponBirthdayCell.h; sourceTree = "<group>"; };
-		10559BE01DCC56C000469AAF /* MPCouponBirthdayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponBirthdayCell.m; sourceTree = "<group>"; };
-		10559BE11DCC56C000469AAF /* MPCouponBirthdayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponBirthdayCell.xib; sourceTree = "<group>"; };
-		10559BE21DCC56C000469AAF /* MPCouponCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponCell.h; sourceTree = "<group>"; };
-		10559BE31DCC56C000469AAF /* MPCouponCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponCell.m; sourceTree = "<group>"; };
-		10559BE41DCC56C000469AAF /* MPCouponCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponCell.xib; sourceTree = "<group>"; };
-		10559BE51DCC56C000469AAF /* MPGymCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGymCell.h; sourceTree = "<group>"; };
-		10559BE61DCC56C000469AAF /* MPGymCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPGymCell.m; sourceTree = "<group>"; };
-		10559BE71DCC56C000469AAF /* MPGymCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPGymCell.xib; sourceTree = "<group>"; };
-		10559BE81DCC56C000469AAF /* MPNewHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNewHomeCell.h; sourceTree = "<group>"; };
-		10559BE91DCC56C000469AAF /* MPNewHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPNewHomeCell.m; sourceTree = "<group>"; };
-		10559BEA1DCC56C000469AAF /* MPNewHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPNewHomeCell.xib; sourceTree = "<group>"; };
-		10559BEB1DCC56C000469AAF /* MPShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopCell.h; sourceTree = "<group>"; };
-		10559BEC1DCC56C000469AAF /* MPShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPShopCell.m; sourceTree = "<group>"; };
-		10559BED1DCC56C000469AAF /* MPShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPShopCell.xib; sourceTree = "<group>"; };
-		10559BEE1DCC56C000469AAF /* MPShopEliaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopEliaCell.h; sourceTree = "<group>"; };
-		10559BEF1DCC56C000469AAF /* MPShopEliaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPShopEliaCell.m; sourceTree = "<group>"; };
-		10559BF01DCC56C000469AAF /* MPShopEliaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPShopEliaCell.xib; sourceTree = "<group>"; };
-		10559BF11DCC56C000469AAF /* MPVideoChannelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVideoChannelCell.h; sourceTree = "<group>"; };
-		10559BF21DCC56C000469AAF /* MPVideoChannelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVideoChannelCell.m; sourceTree = "<group>"; };
-		10559BF31DCC56C000469AAF /* MPVideoChannelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPVideoChannelCell.xib; sourceTree = "<group>"; };
-		10559BF51DCC56C000469AAF /* MPVideoChannelDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVideoChannelDetailViewController.h; sourceTree = "<group>"; };
-		10559BF61DCC56C000469AAF /* MPVideoChannelDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVideoChannelDetailViewController.m; sourceTree = "<group>"; };
-		10559BF71DCC56C000469AAF /* MPVideoChannelDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPVideoChannelDetailViewController.xib; sourceTree = "<group>"; };
-		10559BF81DCC56C000469AAF /* MPVideoChannelHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVideoChannelHeaderView.h; sourceTree = "<group>"; };
-		10559BF91DCC56C000469AAF /* MPVideoChannelHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVideoChannelHeaderView.m; sourceTree = "<group>"; };
-		10559BFA1DCC56C000469AAF /* MPVideoChannelHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPVideoChannelHeaderView.xib; sourceTree = "<group>"; };
-		10559BFB1DCC56C000469AAF /* MPVideoChannelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVideoChannelView.h; sourceTree = "<group>"; };
-		10559BFC1DCC56C000469AAF /* MPVideoChannelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVideoChannelView.m; sourceTree = "<group>"; };
-		10559BFD1DCC56C000469AAF /* MPVideoChannelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPVideoChannelView.xib; sourceTree = "<group>"; };
 		10559C001DCC56C000469AAF /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		10559C011DCC56C000469AAF /* MPAppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAppConstant.h; sourceTree = "<group>"; };
 		10559C021DCC56C000469AAF /* UIConfig_food.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UIConfig_food.plist; sourceTree = "<group>"; };
@@ -850,11 +765,96 @@
 		108391461DCDBE2400E4A8F0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		108391471DCDC6EC00E4A8F0 /* basic_navigation_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basic_navigation_back.png; sourceTree = "<group>"; };
 		108391481DCDC6EC00E4A8F0 /* basic_navigation_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic_navigation_back@2x.png"; sourceTree = "<group>"; };
-		1083914C1DCDE15B00E4A8F0 /* MPTopImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTopImagesView.h; sourceTree = "<group>"; };
-		1083914D1DCDE15B00E4A8F0 /* MPTopImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTopImagesView.m; sourceTree = "<group>"; };
-		1083914E1DCDE15B00E4A8F0 /* MPTopImagesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTopImagesView.xib; sourceTree = "<group>"; };
 		108391561DCE1D5A00E4A8F0 /* button_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_mask.png; sourceTree = "<group>"; };
 		108391581DD02D4200E4A8F0 /* customMenu_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customMenu_close.png; sourceTree = "<group>"; };
+		108391F91DD03BB700E4A8F0 /* MPSettingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSettingAlertView.h; sourceTree = "<group>"; };
+		108391FA1DD03BB700E4A8F0 /* MPSettingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSettingAlertView.m; sourceTree = "<group>"; };
+		108391FB1DD03BB700E4A8F0 /* MPSettingAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPSettingAlertView.xib; sourceTree = "<group>"; };
+		108391FD1DD03BB700E4A8F0 /* MPHeaderShopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPHeaderShopView.h; sourceTree = "<group>"; };
+		108391FE1DD03BB700E4A8F0 /* MPHeaderShopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPHeaderShopView.m; sourceTree = "<group>"; };
+		108391FF1DD03BB700E4A8F0 /* MPHeaderShopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPHeaderShopView.xib; sourceTree = "<group>"; };
+		108392001DD03BB700E4A8F0 /* MPShopDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopDetailCell.h; sourceTree = "<group>"; };
+		108392011DD03BB700E4A8F0 /* MPShopDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPShopDetailCell.m; sourceTree = "<group>"; };
+		108392021DD03BB700E4A8F0 /* MPShopDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPShopDetailCell.xib; sourceTree = "<group>"; };
+		108392031DD03BB700E4A8F0 /* MPShopDetaillView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopDetaillView.h; sourceTree = "<group>"; };
+		108392041DD03BB700E4A8F0 /* MPShopDetaillView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPShopDetaillView.m; sourceTree = "<group>"; };
+		108392051DD03BB700E4A8F0 /* MPShopDetaillView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPShopDetaillView.xib; sourceTree = "<group>"; };
+		1083920C1DD03BB700E4A8F0 /* MPCouponDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponDetailCell.h; sourceTree = "<group>"; };
+		1083920D1DD03BB700E4A8F0 /* MPCouponDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponDetailCell.m; sourceTree = "<group>"; };
+		1083920E1DD03BB700E4A8F0 /* MPCouponDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponDetailCell.xib; sourceTree = "<group>"; };
+		1083920F1DD03BB700E4A8F0 /* MPCouponShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponShareCell.h; sourceTree = "<group>"; };
+		108392101DD03BB700E4A8F0 /* MPCouponShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponShareCell.m; sourceTree = "<group>"; };
+		108392111DD03BB700E4A8F0 /* MPCouponShareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponShareCell.xib; sourceTree = "<group>"; };
+		108392121DD03BB700E4A8F0 /* MPBlankCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBlankCell.h; sourceTree = "<group>"; };
+		108392131DD03BB700E4A8F0 /* MPBlankCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPBlankCell.m; sourceTree = "<group>"; };
+		108392141DD03BB700E4A8F0 /* MPBlankCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPBlankCell.xib; sourceTree = "<group>"; };
+		108392151DD03BB700E4A8F0 /* MPCouponBirthdayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponBirthdayCell.h; sourceTree = "<group>"; };
+		108392161DD03BB700E4A8F0 /* MPCouponBirthdayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponBirthdayCell.m; sourceTree = "<group>"; };
+		108392171DD03BB700E4A8F0 /* MPCouponBirthdayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponBirthdayCell.xib; sourceTree = "<group>"; };
+		108392181DD03BB700E4A8F0 /* MPCouponCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponCell.h; sourceTree = "<group>"; };
+		108392191DD03BB700E4A8F0 /* MPCouponCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponCell.m; sourceTree = "<group>"; };
+		1083921A1DD03BB700E4A8F0 /* MPCouponCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponCell.xib; sourceTree = "<group>"; };
+		1083921B1DD03BB700E4A8F0 /* MPGymCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGymCell.h; sourceTree = "<group>"; };
+		1083921C1DD03BB700E4A8F0 /* MPGymCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPGymCell.m; sourceTree = "<group>"; };
+		1083921D1DD03BB700E4A8F0 /* MPGymCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPGymCell.xib; sourceTree = "<group>"; };
+		1083921E1DD03BB700E4A8F0 /* MPNewHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNewHomeCell.h; sourceTree = "<group>"; };
+		1083921F1DD03BB700E4A8F0 /* MPNewHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPNewHomeCell.m; sourceTree = "<group>"; };
+		108392201DD03BB700E4A8F0 /* MPNewHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPNewHomeCell.xib; sourceTree = "<group>"; };
+		108392211DD03BB700E4A8F0 /* MPShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopCell.h; sourceTree = "<group>"; };
+		108392221DD03BB700E4A8F0 /* MPShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPShopCell.m; sourceTree = "<group>"; };
+		108392231DD03BB700E4A8F0 /* MPShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPShopCell.xib; sourceTree = "<group>"; };
+		108392241DD03BB700E4A8F0 /* MPShopEliaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopEliaCell.h; sourceTree = "<group>"; };
+		108392251DD03BB700E4A8F0 /* MPShopEliaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPShopEliaCell.m; sourceTree = "<group>"; };
+		108392261DD03BB700E4A8F0 /* MPShopEliaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPShopEliaCell.xib; sourceTree = "<group>"; };
+		108392271DD03BB700E4A8F0 /* MPVideoChannelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVideoChannelCell.h; sourceTree = "<group>"; };
+		108392281DD03BB700E4A8F0 /* MPVideoChannelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVideoChannelCell.m; sourceTree = "<group>"; };
+		108392291DD03BB700E4A8F0 /* MPVideoChannelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPVideoChannelCell.xib; sourceTree = "<group>"; };
+		1083922B1DD03BB700E4A8F0 /* MPListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPListCell.h; sourceTree = "<group>"; };
+		1083922C1DD03BB700E4A8F0 /* MPListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPListCell.m; sourceTree = "<group>"; };
+		1083922D1DD03BB700E4A8F0 /* MPListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPListCell.xib; sourceTree = "<group>"; };
+		1083922E1DD03BB700E4A8F0 /* MPMenuGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuGridCell.h; sourceTree = "<group>"; };
+		1083922F1DD03BB700E4A8F0 /* MPMenuGridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuGridCell.m; sourceTree = "<group>"; };
+		108392301DD03BB700E4A8F0 /* MPMenuGridCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPMenuGridCell.xib; sourceTree = "<group>"; };
+		108392311DD03BB700E4A8F0 /* MPPlanTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPlanTextCell.h; sourceTree = "<group>"; };
+		108392321DD03BB700E4A8F0 /* MPPlanTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPlanTextCell.m; sourceTree = "<group>"; };
+		108392331DD03BB700E4A8F0 /* MPPlanTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPPlanTextCell.xib; sourceTree = "<group>"; };
+		108392351DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVideoChannelDetailViewController.h; sourceTree = "<group>"; };
+		108392361DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVideoChannelDetailViewController.m; sourceTree = "<group>"; };
+		108392371DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPVideoChannelDetailViewController.xib; sourceTree = "<group>"; };
+		108392381DD03BB800E4A8F0 /* MPVideoChannelHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVideoChannelHeaderView.h; sourceTree = "<group>"; };
+		108392391DD03BB800E4A8F0 /* MPVideoChannelHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVideoChannelHeaderView.m; sourceTree = "<group>"; };
+		1083923A1DD03BB800E4A8F0 /* MPVideoChannelHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPVideoChannelHeaderView.xib; sourceTree = "<group>"; };
+		1083923B1DD03BB800E4A8F0 /* MPVideoChannelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVideoChannelView.h; sourceTree = "<group>"; };
+		1083923C1DD03BB800E4A8F0 /* MPVideoChannelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVideoChannelView.m; sourceTree = "<group>"; };
+		1083923D1DD03BB800E4A8F0 /* MPVideoChannelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPVideoChannelView.xib; sourceTree = "<group>"; };
+		1083923F1DD03BB800E4A8F0 /* MPAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAlertView.h; sourceTree = "<group>"; };
+		108392401DD03BB800E4A8F0 /* MPAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPAlertView.m; sourceTree = "<group>"; };
+		108392411DD03BB800E4A8F0 /* MPAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPAlertView.xib; sourceTree = "<group>"; };
+		108392421DD03BB800E4A8F0 /* MPConfirmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPConfirmView.h; sourceTree = "<group>"; };
+		108392431DD03BB800E4A8F0 /* MPConfirmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPConfirmView.m; sourceTree = "<group>"; };
+		108392441DD03BB800E4A8F0 /* MPConfirmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPConfirmView.xib; sourceTree = "<group>"; };
+		108392451DD03BB800E4A8F0 /* MPSocialShareAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSocialShareAlertView.h; sourceTree = "<group>"; };
+		108392461DD03BB800E4A8F0 /* MPSocialShareAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSocialShareAlertView.m; sourceTree = "<group>"; };
+		108392471DD03BB800E4A8F0 /* MPSocialShareAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPSocialShareAlertView.xib; sourceTree = "<group>"; };
+		108392491DD03BB800E4A8F0 /* CouponShareHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CouponShareHeaderView.xib; sourceTree = "<group>"; };
+		1083924A1DD03BB800E4A8F0 /* MPCouponShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponShareView.h; sourceTree = "<group>"; };
+		1083924B1DD03BB800E4A8F0 /* MPCouponShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponShareView.m; sourceTree = "<group>"; };
+		1083924C1DD03BB800E4A8F0 /* MPCouponShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponShareView.xib; sourceTree = "<group>"; };
+		1083924D1DD03BB800E4A8F0 /* MPSocialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSocialView.h; sourceTree = "<group>"; };
+		1083924E1DD03BB800E4A8F0 /* MPSocialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSocialView.m; sourceTree = "<group>"; };
+		1083924F1DD03BB800E4A8F0 /* MPSocialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPSocialView.xib; sourceTree = "<group>"; };
+		108392511DD03BB800E4A8F0 /* MPCouponStampView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponStampView.h; sourceTree = "<group>"; };
+		108392521DD03BB800E4A8F0 /* MPCouponStampView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponStampView.m; sourceTree = "<group>"; };
+		108392531DD03BB800E4A8F0 /* MPCouponStampView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponStampView.xib; sourceTree = "<group>"; };
+		108392551DD03BB800E4A8F0 /* MPListFuntionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPListFuntionView.h; sourceTree = "<group>"; };
+		108392561DD03BB800E4A8F0 /* MPListFuntionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPListFuntionView.m; sourceTree = "<group>"; };
+		108392571DD03BB800E4A8F0 /* MPListFuntionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPListFuntionView.xib; sourceTree = "<group>"; };
+		108392581DD03BB800E4A8F0 /* TopImageDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopImageDetailView.h; sourceTree = "<group>"; };
+		108392591DD03BB800E4A8F0 /* TopImageDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopImageDetailView.m; sourceTree = "<group>"; };
+		1083925A1DD03BB800E4A8F0 /* TopImageDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopImageDetailView.xib; sourceTree = "<group>"; };
+		1083925C1DD03BB800E4A8F0 /* MPTopImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTopImagesView.h; sourceTree = "<group>"; };
+		1083925D1DD03BB800E4A8F0 /* MPTopImagesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTopImagesView.xib; sourceTree = "<group>"; };
+		1083925E1DD03BB800E4A8F0 /* MPTopImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTopImagesView.m; sourceTree = "<group>"; };
 		10A46E751DCCB1B9005CC4A0 /* MPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAppDelegate.h; sourceTree = "<group>"; };
 		10A46E761DCCB1B9005CC4A0 /* MPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPAppDelegate.m; sourceTree = "<group>"; };
 		10A46E781DCCB3C4005CC4A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -1184,178 +1184,14 @@
 		10559B9A1DCC56C000469AAF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1083914B1DCDE15B00E4A8F0 /* Tab1_Screen */,
-				1083914F1DCDE15B00E4A8F0 /* Tab2_Screen */,
-				108391501DCDE15B00E4A8F0 /* Tab3_Screen */,
-				108391511DCDE15B00E4A8F0 /* Tab4_Screen */,
-				108391521DCDE15B00E4A8F0 /* Tab5_Screen */,
-				10559B9B1DCC56C000469AAF /* CouponScreen */,
-				10559BA51DCC56C000469AAF /* CouponShare */,
-				10559BAD1DCC56C000469AAF /* CouponStampScreen */,
-				10559BB11DCC56C000469AAF /* HomeScreen */,
-				10559BBC1DCC56C000469AAF /* Setting */,
-				10559BC01DCC56C000469AAF /* ShopScreen */,
-				10559BCA1DCC56C000469AAF /* TableViewCellCus */,
-				10559BF41DCC56C000469AAF /* VideoChanel */,
+				108391F71DD03BB700E4A8F0 /* old */,
+				1083925B1DD03BB800E4A8F0 /* Tab1_Screen */,
+				1083925F1DD03BB800E4A8F0 /* Tab2_Scresn */,
+				108392601DD03BB800E4A8F0 /* Tab3_Scresn */,
+				108392611DD03BB800E4A8F0 /* Tab4_Scresn */,
+				108392621DD03BB800E4A8F0 /* Tab5_Scresn */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		10559B9B1DCC56C000469AAF /* CouponScreen */ = {
-			isa = PBXGroup;
-			children = (
-				10559B9C1DCC56C000469AAF /* MPAlertView.h */,
-				10559B9D1DCC56C000469AAF /* MPAlertView.m */,
-				10559B9E1DCC56C000469AAF /* MPAlertView.xib */,
-				10559B9F1DCC56C000469AAF /* MPConfirmView.h */,
-				10559BA01DCC56C000469AAF /* MPConfirmView.m */,
-				10559BA11DCC56C000469AAF /* MPConfirmView.xib */,
-				10559BA21DCC56C000469AAF /* MPSocialShareAlertView.h */,
-				10559BA31DCC56C000469AAF /* MPSocialShareAlertView.m */,
-				10559BA41DCC56C000469AAF /* MPSocialShareAlertView.xib */,
-			);
-			path = CouponScreen;
-			sourceTree = "<group>";
-		};
-		10559BA51DCC56C000469AAF /* CouponShare */ = {
-			isa = PBXGroup;
-			children = (
-				10559BA61DCC56C000469AAF /* CouponShareHeaderView.xib */,
-				10559BA71DCC56C000469AAF /* MPCouponShareView.h */,
-				10559BA81DCC56C000469AAF /* MPCouponShareView.m */,
-				10559BA91DCC56C000469AAF /* MPCouponShareView.xib */,
-				10559BAA1DCC56C000469AAF /* MPSocialView.h */,
-				10559BAB1DCC56C000469AAF /* MPSocialView.m */,
-				10559BAC1DCC56C000469AAF /* MPSocialView.xib */,
-			);
-			path = CouponShare;
-			sourceTree = "<group>";
-		};
-		10559BAD1DCC56C000469AAF /* CouponStampScreen */ = {
-			isa = PBXGroup;
-			children = (
-				10559BAE1DCC56C000469AAF /* MPCouponStampView.h */,
-				10559BAF1DCC56C000469AAF /* MPCouponStampView.m */,
-				10559BB01DCC56C000469AAF /* MPCouponStampView.xib */,
-			);
-			path = CouponStampScreen;
-			sourceTree = "<group>";
-		};
-		10559BB11DCC56C000469AAF /* HomeScreen */ = {
-			isa = PBXGroup;
-			children = (
-				10559BB91DCC56C000469AAF /* TopImageDetailView.h */,
-				10559BBA1DCC56C000469AAF /* TopImageDetailView.m */,
-				10559BBB1DCC56C000469AAF /* TopImageDetailView.xib */,
-				10559BB21DCC56C000469AAF /* MPListFuntionView.h */,
-				10559BB31DCC56C000469AAF /* MPListFuntionView.m */,
-				10559BB41DCC56C000469AAF /* MPListFuntionView.xib */,
-			);
-			path = HomeScreen;
-			sourceTree = "<group>";
-		};
-		10559BBC1DCC56C000469AAF /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				10559BBD1DCC56C000469AAF /* MPSettingAlertView.h */,
-				10559BBE1DCC56C000469AAF /* MPSettingAlertView.m */,
-				10559BBF1DCC56C000469AAF /* MPSettingAlertView.xib */,
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
-		10559BC01DCC56C000469AAF /* ShopScreen */ = {
-			isa = PBXGroup;
-			children = (
-				10559BC11DCC56C000469AAF /* MPHeaderShopView.h */,
-				10559BC21DCC56C000469AAF /* MPHeaderShopView.m */,
-				10559BC31DCC56C000469AAF /* MPHeaderShopView.xib */,
-				10559BC41DCC56C000469AAF /* MPShopDetailCell.h */,
-				10559BC51DCC56C000469AAF /* MPShopDetailCell.m */,
-				10559BC61DCC56C000469AAF /* MPShopDetailCell.xib */,
-				10559BC71DCC56C000469AAF /* MPShopDetaillView.h */,
-				10559BC81DCC56C000469AAF /* MPShopDetaillView.m */,
-				10559BC91DCC56C000469AAF /* MPShopDetaillView.xib */,
-			);
-			path = ShopScreen;
-			sourceTree = "<group>";
-		};
-		10559BCA1DCC56C000469AAF /* TableViewCellCus */ = {
-			isa = PBXGroup;
-			children = (
-				10559BCB1DCC56C000469AAF /* CouponCell */,
-				10559BD21DCC56C000469AAF /* MenuCell */,
-				10559BDC1DCC56C000469AAF /* MPBlankCell.h */,
-				10559BDD1DCC56C000469AAF /* MPBlankCell.m */,
-				10559BDE1DCC56C000469AAF /* MPBlankCell.xib */,
-				10559BDF1DCC56C000469AAF /* MPCouponBirthdayCell.h */,
-				10559BE01DCC56C000469AAF /* MPCouponBirthdayCell.m */,
-				10559BE11DCC56C000469AAF /* MPCouponBirthdayCell.xib */,
-				10559BE21DCC56C000469AAF /* MPCouponCell.h */,
-				10559BE31DCC56C000469AAF /* MPCouponCell.m */,
-				10559BE41DCC56C000469AAF /* MPCouponCell.xib */,
-				10559BE51DCC56C000469AAF /* MPGymCell.h */,
-				10559BE61DCC56C000469AAF /* MPGymCell.m */,
-				10559BE71DCC56C000469AAF /* MPGymCell.xib */,
-				10559BE81DCC56C000469AAF /* MPNewHomeCell.h */,
-				10559BE91DCC56C000469AAF /* MPNewHomeCell.m */,
-				10559BEA1DCC56C000469AAF /* MPNewHomeCell.xib */,
-				10559BEB1DCC56C000469AAF /* MPShopCell.h */,
-				10559BEC1DCC56C000469AAF /* MPShopCell.m */,
-				10559BED1DCC56C000469AAF /* MPShopCell.xib */,
-				10559BEE1DCC56C000469AAF /* MPShopEliaCell.h */,
-				10559BEF1DCC56C000469AAF /* MPShopEliaCell.m */,
-				10559BF01DCC56C000469AAF /* MPShopEliaCell.xib */,
-				10559BF11DCC56C000469AAF /* MPVideoChannelCell.h */,
-				10559BF21DCC56C000469AAF /* MPVideoChannelCell.m */,
-				10559BF31DCC56C000469AAF /* MPVideoChannelCell.xib */,
-			);
-			path = TableViewCellCus;
-			sourceTree = "<group>";
-		};
-		10559BCB1DCC56C000469AAF /* CouponCell */ = {
-			isa = PBXGroup;
-			children = (
-				10559BCC1DCC56C000469AAF /* MPCouponDetailCell.h */,
-				10559BCD1DCC56C000469AAF /* MPCouponDetailCell.m */,
-				10559BCE1DCC56C000469AAF /* MPCouponDetailCell.xib */,
-				10559BCF1DCC56C000469AAF /* MPCouponShareCell.h */,
-				10559BD01DCC56C000469AAF /* MPCouponShareCell.m */,
-				10559BD11DCC56C000469AAF /* MPCouponShareCell.xib */,
-			);
-			path = CouponCell;
-			sourceTree = "<group>";
-		};
-		10559BD21DCC56C000469AAF /* MenuCell */ = {
-			isa = PBXGroup;
-			children = (
-				10559BD31DCC56C000469AAF /* MPListCell.h */,
-				10559BD41DCC56C000469AAF /* MPListCell.m */,
-				10559BD51DCC56C000469AAF /* MPListCell.xib */,
-				10559BD61DCC56C000469AAF /* MPMenuGridCell.h */,
-				10559BD71DCC56C000469AAF /* MPMenuGridCell.m */,
-				10559BD81DCC56C000469AAF /* MPMenuGridCell.xib */,
-				10559BD91DCC56C000469AAF /* MPPlanTextCell.h */,
-				10559BDA1DCC56C000469AAF /* MPPlanTextCell.m */,
-				10559BDB1DCC56C000469AAF /* MPPlanTextCell.xib */,
-			);
-			path = MenuCell;
-			sourceTree = "<group>";
-		};
-		10559BF41DCC56C000469AAF /* VideoChanel */ = {
-			isa = PBXGroup;
-			children = (
-				10559BF51DCC56C000469AAF /* MPVideoChannelDetailViewController.h */,
-				10559BF61DCC56C000469AAF /* MPVideoChannelDetailViewController.m */,
-				10559BF71DCC56C000469AAF /* MPVideoChannelDetailViewController.xib */,
-				10559BF81DCC56C000469AAF /* MPVideoChannelHeaderView.h */,
-				10559BF91DCC56C000469AAF /* MPVideoChannelHeaderView.m */,
-				10559BFA1DCC56C000469AAF /* MPVideoChannelHeaderView.xib */,
-				10559BFB1DCC56C000469AAF /* MPVideoChannelView.h */,
-				10559BFC1DCC56C000469AAF /* MPVideoChannelView.m */,
-				10559BFD1DCC56C000469AAF /* MPVideoChannelView.xib */,
-			);
-			path = VideoChanel;
 			sourceTree = "<group>";
 		};
 		10559BFE1DCC56C000469AAF /* Resources */ = {
@@ -1957,50 +1793,222 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
-		1083914B1DCDE15B00E4A8F0 /* Tab1_Screen */ = {
-			isa = PBXGroup;
-			children = (
-				1083914C1DCDE15B00E4A8F0 /* MPTopImagesView.h */,
-				1083914D1DCDE15B00E4A8F0 /* MPTopImagesView.m */,
-				1083914E1DCDE15B00E4A8F0 /* MPTopImagesView.xib */,
-			);
-			path = Tab1_Screen;
-			sourceTree = "<group>";
-		};
-		1083914F1DCDE15B00E4A8F0 /* Tab2_Screen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tab2_Screen;
-			sourceTree = "<group>";
-		};
-		108391501DCDE15B00E4A8F0 /* Tab3_Screen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tab3_Screen;
-			sourceTree = "<group>";
-		};
-		108391511DCDE15B00E4A8F0 /* Tab4_Screen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tab4_Screen;
-			sourceTree = "<group>";
-		};
-		108391521DCDE15B00E4A8F0 /* Tab5_Screen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tab5_Screen;
-			sourceTree = "<group>";
-		};
 		108391551DCE1D5A00E4A8F0 /* image_Other */ = {
 			isa = PBXGroup;
 			children = (
 				108391561DCE1D5A00E4A8F0 /* button_mask.png */,
 			);
 			path = image_Other;
+			sourceTree = "<group>";
+		};
+		108391F71DD03BB700E4A8F0 /* old */ = {
+			isa = PBXGroup;
+			children = (
+				108391F81DD03BB700E4A8F0 /* Setting */,
+				108391FC1DD03BB700E4A8F0 /* ShopScreen */,
+				1083920A1DD03BB700E4A8F0 /* TableViewCellCus */,
+				108392341DD03BB800E4A8F0 /* VideoChanel */,
+				1083923E1DD03BB800E4A8F0 /* CouponScreen */,
+				108392481DD03BB800E4A8F0 /* CouponShare */,
+				108392501DD03BB800E4A8F0 /* CouponStampScreen */,
+				108392541DD03BB800E4A8F0 /* HomeScreen */,
+			);
+			path = old;
+			sourceTree = "<group>";
+		};
+		108391F81DD03BB700E4A8F0 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				108391F91DD03BB700E4A8F0 /* MPSettingAlertView.h */,
+				108391FA1DD03BB700E4A8F0 /* MPSettingAlertView.m */,
+				108391FB1DD03BB700E4A8F0 /* MPSettingAlertView.xib */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		108391FC1DD03BB700E4A8F0 /* ShopScreen */ = {
+			isa = PBXGroup;
+			children = (
+				108391FD1DD03BB700E4A8F0 /* MPHeaderShopView.h */,
+				108391FE1DD03BB700E4A8F0 /* MPHeaderShopView.m */,
+				108391FF1DD03BB700E4A8F0 /* MPHeaderShopView.xib */,
+				108392001DD03BB700E4A8F0 /* MPShopDetailCell.h */,
+				108392011DD03BB700E4A8F0 /* MPShopDetailCell.m */,
+				108392021DD03BB700E4A8F0 /* MPShopDetailCell.xib */,
+				108392031DD03BB700E4A8F0 /* MPShopDetaillView.h */,
+				108392041DD03BB700E4A8F0 /* MPShopDetaillView.m */,
+				108392051DD03BB700E4A8F0 /* MPShopDetaillView.xib */,
+			);
+			path = ShopScreen;
+			sourceTree = "<group>";
+		};
+		1083920A1DD03BB700E4A8F0 /* TableViewCellCus */ = {
+			isa = PBXGroup;
+			children = (
+				1083920B1DD03BB700E4A8F0 /* CouponCell */,
+				108392121DD03BB700E4A8F0 /* MPBlankCell.h */,
+				108392131DD03BB700E4A8F0 /* MPBlankCell.m */,
+				108392141DD03BB700E4A8F0 /* MPBlankCell.xib */,
+				108392151DD03BB700E4A8F0 /* MPCouponBirthdayCell.h */,
+				108392161DD03BB700E4A8F0 /* MPCouponBirthdayCell.m */,
+				108392171DD03BB700E4A8F0 /* MPCouponBirthdayCell.xib */,
+				108392181DD03BB700E4A8F0 /* MPCouponCell.h */,
+				108392191DD03BB700E4A8F0 /* MPCouponCell.m */,
+				1083921A1DD03BB700E4A8F0 /* MPCouponCell.xib */,
+				1083921B1DD03BB700E4A8F0 /* MPGymCell.h */,
+				1083921C1DD03BB700E4A8F0 /* MPGymCell.m */,
+				1083921D1DD03BB700E4A8F0 /* MPGymCell.xib */,
+				1083921E1DD03BB700E4A8F0 /* MPNewHomeCell.h */,
+				1083921F1DD03BB700E4A8F0 /* MPNewHomeCell.m */,
+				108392201DD03BB700E4A8F0 /* MPNewHomeCell.xib */,
+				108392211DD03BB700E4A8F0 /* MPShopCell.h */,
+				108392221DD03BB700E4A8F0 /* MPShopCell.m */,
+				108392231DD03BB700E4A8F0 /* MPShopCell.xib */,
+				108392241DD03BB700E4A8F0 /* MPShopEliaCell.h */,
+				108392251DD03BB700E4A8F0 /* MPShopEliaCell.m */,
+				108392261DD03BB700E4A8F0 /* MPShopEliaCell.xib */,
+				108392271DD03BB700E4A8F0 /* MPVideoChannelCell.h */,
+				108392281DD03BB700E4A8F0 /* MPVideoChannelCell.m */,
+				108392291DD03BB700E4A8F0 /* MPVideoChannelCell.xib */,
+				1083922A1DD03BB700E4A8F0 /* MenuCell */,
+			);
+			path = TableViewCellCus;
+			sourceTree = "<group>";
+		};
+		1083920B1DD03BB700E4A8F0 /* CouponCell */ = {
+			isa = PBXGroup;
+			children = (
+				1083920C1DD03BB700E4A8F0 /* MPCouponDetailCell.h */,
+				1083920D1DD03BB700E4A8F0 /* MPCouponDetailCell.m */,
+				1083920E1DD03BB700E4A8F0 /* MPCouponDetailCell.xib */,
+				1083920F1DD03BB700E4A8F0 /* MPCouponShareCell.h */,
+				108392101DD03BB700E4A8F0 /* MPCouponShareCell.m */,
+				108392111DD03BB700E4A8F0 /* MPCouponShareCell.xib */,
+			);
+			path = CouponCell;
+			sourceTree = "<group>";
+		};
+		1083922A1DD03BB700E4A8F0 /* MenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				1083922B1DD03BB700E4A8F0 /* MPListCell.h */,
+				1083922C1DD03BB700E4A8F0 /* MPListCell.m */,
+				1083922D1DD03BB700E4A8F0 /* MPListCell.xib */,
+				1083922E1DD03BB700E4A8F0 /* MPMenuGridCell.h */,
+				1083922F1DD03BB700E4A8F0 /* MPMenuGridCell.m */,
+				108392301DD03BB700E4A8F0 /* MPMenuGridCell.xib */,
+				108392311DD03BB700E4A8F0 /* MPPlanTextCell.h */,
+				108392321DD03BB700E4A8F0 /* MPPlanTextCell.m */,
+				108392331DD03BB700E4A8F0 /* MPPlanTextCell.xib */,
+			);
+			path = MenuCell;
+			sourceTree = "<group>";
+		};
+		108392341DD03BB800E4A8F0 /* VideoChanel */ = {
+			isa = PBXGroup;
+			children = (
+				108392351DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.h */,
+				108392361DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.m */,
+				108392371DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.xib */,
+				108392381DD03BB800E4A8F0 /* MPVideoChannelHeaderView.h */,
+				108392391DD03BB800E4A8F0 /* MPVideoChannelHeaderView.m */,
+				1083923A1DD03BB800E4A8F0 /* MPVideoChannelHeaderView.xib */,
+				1083923B1DD03BB800E4A8F0 /* MPVideoChannelView.h */,
+				1083923C1DD03BB800E4A8F0 /* MPVideoChannelView.m */,
+				1083923D1DD03BB800E4A8F0 /* MPVideoChannelView.xib */,
+			);
+			path = VideoChanel;
+			sourceTree = "<group>";
+		};
+		1083923E1DD03BB800E4A8F0 /* CouponScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1083923F1DD03BB800E4A8F0 /* MPAlertView.h */,
+				108392401DD03BB800E4A8F0 /* MPAlertView.m */,
+				108392411DD03BB800E4A8F0 /* MPAlertView.xib */,
+				108392421DD03BB800E4A8F0 /* MPConfirmView.h */,
+				108392431DD03BB800E4A8F0 /* MPConfirmView.m */,
+				108392441DD03BB800E4A8F0 /* MPConfirmView.xib */,
+				108392451DD03BB800E4A8F0 /* MPSocialShareAlertView.h */,
+				108392461DD03BB800E4A8F0 /* MPSocialShareAlertView.m */,
+				108392471DD03BB800E4A8F0 /* MPSocialShareAlertView.xib */,
+			);
+			path = CouponScreen;
+			sourceTree = "<group>";
+		};
+		108392481DD03BB800E4A8F0 /* CouponShare */ = {
+			isa = PBXGroup;
+			children = (
+				108392491DD03BB800E4A8F0 /* CouponShareHeaderView.xib */,
+				1083924A1DD03BB800E4A8F0 /* MPCouponShareView.h */,
+				1083924B1DD03BB800E4A8F0 /* MPCouponShareView.m */,
+				1083924C1DD03BB800E4A8F0 /* MPCouponShareView.xib */,
+				1083924D1DD03BB800E4A8F0 /* MPSocialView.h */,
+				1083924E1DD03BB800E4A8F0 /* MPSocialView.m */,
+				1083924F1DD03BB800E4A8F0 /* MPSocialView.xib */,
+			);
+			path = CouponShare;
+			sourceTree = "<group>";
+		};
+		108392501DD03BB800E4A8F0 /* CouponStampScreen */ = {
+			isa = PBXGroup;
+			children = (
+				108392511DD03BB800E4A8F0 /* MPCouponStampView.h */,
+				108392521DD03BB800E4A8F0 /* MPCouponStampView.m */,
+				108392531DD03BB800E4A8F0 /* MPCouponStampView.xib */,
+			);
+			path = CouponStampScreen;
+			sourceTree = "<group>";
+		};
+		108392541DD03BB800E4A8F0 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				108392551DD03BB800E4A8F0 /* MPListFuntionView.h */,
+				108392561DD03BB800E4A8F0 /* MPListFuntionView.m */,
+				108392571DD03BB800E4A8F0 /* MPListFuntionView.xib */,
+				108392581DD03BB800E4A8F0 /* TopImageDetailView.h */,
+				108392591DD03BB800E4A8F0 /* TopImageDetailView.m */,
+				1083925A1DD03BB800E4A8F0 /* TopImageDetailView.xib */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		1083925B1DD03BB800E4A8F0 /* Tab1_Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1083925C1DD03BB800E4A8F0 /* MPTopImagesView.h */,
+				1083925D1DD03BB800E4A8F0 /* MPTopImagesView.xib */,
+				1083925E1DD03BB800E4A8F0 /* MPTopImagesView.m */,
+			);
+			path = Tab1_Screen;
+			sourceTree = "<group>";
+		};
+		1083925F1DD03BB800E4A8F0 /* Tab2_Scresn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tab2_Scresn;
+			sourceTree = "<group>";
+		};
+		108392601DD03BB800E4A8F0 /* Tab3_Scresn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tab3_Scresn;
+			sourceTree = "<group>";
+		};
+		108392611DD03BB800E4A8F0 /* Tab4_Scresn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tab4_Scresn;
+			sourceTree = "<group>";
+		};
+		108392621DD03BB800E4A8F0 /* Tab5_Scresn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tab5_Scresn;
 			sourceTree = "<group>";
 		};
 		10A46E7A1DCCD064005CC4A0 /* image_Navigation */ = {
@@ -2288,10 +2296,10 @@
 				10559E921DCC56C100469AAF /* idicator_open@2x.png in Resources */,
 				10559E801DCC56C100469AAF /* button_open_selected.png in Resources */,
 				10A46EFF1DCD6F6B005CC4A0 /* MPTermsViewController.xib in Resources */,
-				10559DCF1DCC56C100469AAF /* TopImageDetailView.xib in Resources */,
 				10A46ED81DCD6DD5005CC4A0 /* MPHomeMenuViewController.xib in Resources */,
 				10559E5F1DCC56C100469AAF /* btn_twitter@2x.png in Resources */,
 				10A46E791DCCB3C5005CC4A0 /* Images.xcassets in Resources */,
+				108392861DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.xib in Resources */,
 				10559E5A1DCC56C100469AAF /* btn_share_dialog.png in Resources */,
 				10559E411DCC56C100469AAF /* no@2x.png in Resources */,
 				10559EAA1DCC56C100469AAF /* syousai.png in Resources */,
@@ -2304,24 +2312,27 @@
 				10559E6B1DCC56C100469AAF /* icon_checked_stamp.png in Resources */,
 				10559E601DCC56C100469AAF /* facebook_selected.png in Resources */,
 				10A46EEE1DCD6DD5005CC4A0 /* MPCouponShareViewController.xib in Resources */,
-				10559DDD1DCC56C100469AAF /* MPListCell.xib in Resources */,
-				10559DD91DCC56C100469AAF /* MPCouponDetailCell.xib in Resources */,
 				10559E651DCC56C100469AAF /* twitter_selected@2x.png in Resources */,
 				10559E5B1DCC56C100469AAF /* btn_share_dialog@2x.png in Resources */,
 				10559E071DCC56C100469AAF /* 4@2x.png in Resources */,
 				10559E611DCC56C100469AAF /* facebook_selected@2x.png in Resources */,
+				108392761DD03BB800E4A8F0 /* MPGymCell.xib in Resources */,
 				10559E721DCC56C100469AAF /* icon_uncheck_stamp@2x.png in Resources */,
 				10559E561DCC56C100469AAF /* btn_positive_dialog.png in Resources */,
 				10559EAD1DCC56C100469AAF /* off_button.png in Resources */,
+				1083927E1DD03BB800E4A8F0 /* MPVideoChannelCell.xib in Resources */,
 				10559EA31DCC56C100469AAF /* okonomiyaki01.png in Resources */,
 				10A46E8D1DCCD97D005CC4A0 /* navigation_back@2x.png in Resources */,
 				10559E8A1DCC56C100469AAF /* blackImage.png in Resources */,
+				108392661DD03BB800E4A8F0 /* MPHeaderShopView.xib in Resources */,
 				10559E0B1DCC56C100469AAF /* 5@2x.png in Resources */,
 				10559E541DCC56C100469AAF /* btn_line.png in Resources */,
 				10559E041DCC56C100469AAF /* 3_click.png in Resources */,
 				10559EA81DCC56C100469AAF /* okonomiyaki06.png in Resources */,
+				108392951DD03BB800E4A8F0 /* MPSocialView.xib in Resources */,
 				10559EB31DCC56C100469AAF /* icon_shop_off.png in Resources */,
 				10559E831DCC56C100469AAF /* button_reload@2x.png in Resources */,
+				108392781DD03BB800E4A8F0 /* MPNewHomeCell.xib in Resources */,
 				10559EA51DCC56C100469AAF /* okonomiyaki03.png in Resources */,
 				10559E4A1DCC56C100469AAF /* stamp.png in Resources */,
 				10559E3D1DCC56C100469AAF /* coupon.png in Resources */,
@@ -2330,7 +2341,7 @@
 				10559E081DCC56C100469AAF /* 4_click.png in Resources */,
 				10559E701DCC56C100469AAF /* icon_get_stamp@2x.png in Resources */,
 				10559E8B1DCC56C100469AAF /* btn_back.png in Resources */,
-				10559DD71DCC56C100469AAF /* MPShopDetaillView.xib in Resources */,
+				108392911DD03BB800E4A8F0 /* CouponShareHeaderView.xib in Resources */,
 				10559E141DCC56C100469AAF /* button_ApliStart_push.png in Resources */,
 				10559E4D1DCC56C100469AAF /* top_background_coupon_detail@2x.png in Resources */,
 				10559E5C1DCC56C100469AAF /* btn_share_dialog_selected.png in Resources */,
@@ -2339,28 +2350,30 @@
 				10559E001DCC56C100469AAF /* 2_click.png in Resources */,
 				10559E5D1DCC56C100469AAF /* btn_share_dialog_selected@2x.png in Resources */,
 				10559E031DCC56C100469AAF /* 3@2x.png in Resources */,
+				108392641DD03BB800E4A8F0 /* MPSettingAlertView.xib in Resources */,
 				10559E0C1DCC56C100469AAF /* 5_click.png in Resources */,
+				108392991DD03BB800E4A8F0 /* MPListFuntionView.xib in Resources */,
 				10559E291DCC56C100469AAF /* button_ProfileSave_push@2x.png in Resources */,
 				10A46F031DCD6F6B005CC4A0 /* SettingViewController.xib in Resources */,
 				10559E3C1DCC56C100469AAF /* check02.png in Resources */,
 				10559E3A1DCC56C100469AAF /* cancel_selected.png in Resources */,
+				108392841DD03BB800E4A8F0 /* MPPlanTextCell.xib in Resources */,
 				10559E7C1DCC56C100469AAF /* button_forward_selected@2x.png in Resources */,
 				10559EB21DCC56C100469AAF /* icon_shop.png in Resources */,
 				10559EB81DCC56C100469AAF /* toppic02.png in Resources */,
-				10559DD11DCC56C100469AAF /* MPSettingAlertView.xib in Resources */,
 				10559E361DCC56C100469AAF /* btn_negative_dialog_selected.png in Resources */,
 				10559E341DCC56C100469AAF /* btn_negative_dialog.png in Resources */,
 				10559E181DCC56C100469AAF /* button_Cansel.png in Resources */,
 				10A46EE21DCD6DD5005CC4A0 /* MPListMessageViewController.xib in Resources */,
-				108391541DCDE15B00E4A8F0 /* MPTopImagesView.xib in Resources */,
+				1083928A1DD03BB800E4A8F0 /* MPVideoChannelView.xib in Resources */,
 				10559E371DCC56C100469AAF /* btn_negative_dialog_selected@2x.png in Resources */,
 				10559E641DCC56C100469AAF /* twitter_selected.png in Resources */,
 				10559E6E1DCC56C100469AAF /* icon_coupon_detail@2x.png in Resources */,
 				10559E051DCC56C100469AAF /* 3_click@2x.png in Resources */,
 				10559EB11DCC56C100469AAF /* icon_map.png in Resources */,
 				10559E1D1DCC56C100469AAF /* button_CurponStart_push@2x.png in Resources */,
-				10559DD31DCC56C100469AAF /* MPHeaderShopView.xib in Resources */,
 				10559E941DCC56C100469AAF /* inactive_dot@2x.png in Resources */,
+				1083928C1DD03BB800E4A8F0 /* MPAlertView.xib in Resources */,
 				10559EA21DCC56C100469AAF /* monjya05.png in Resources */,
 				10559EA91DCC56C100469AAF /* news.png in Resources */,
 				10559DFD1DCC56C100469AAF /* 1_click@2x.png in Resources */,
@@ -2370,17 +2383,16 @@
 				10559E351DCC56C100469AAF /* btn_negative_dialog@2x.png in Resources */,
 				108391571DCE1D5A00E4A8F0 /* button_mask.png in Resources */,
 				10559E2D1DCC56C100469AAF /* button_Skip_push@2x.png in Resources */,
-				10559DE91DCC56C100469AAF /* MPGymCell.xib in Resources */,
 				10559E091DCC56C100469AAF /* 4_click@2x.png in Resources */,
 				10559EAB1DCC56C100469AAF /* thumbnail02.png in Resources */,
-				10559DBF1DCC56C100469AAF /* MPConfirmView.xib in Resources */,
+				108392881DD03BB800E4A8F0 /* MPVideoChannelHeaderView.xib in Resources */,
 				10559E2F1DCC56C100469AAF /* button_Telephone@2x.png in Resources */,
 				10559E151DCC56C100469AAF /* button_ApliStart_push@2x.png in Resources */,
+				1083929B1DD03BB800E4A8F0 /* TopImageDetailView.xib in Resources */,
 				10559E431DCC56C100469AAF /* no_selected@2x.png in Resources */,
 				10559E451DCC56C100469AAF /* pop-up@2x.png in Resources */,
+				1083926E1DD03BB800E4A8F0 /* MPCouponShareCell.xib in Resources */,
 				10A46EF21DCD6DD5005CC4A0 /* MPShopDetailViewController.xib in Resources */,
-				10559DE71DCC56C100469AAF /* MPCouponCell.xib in Resources */,
-				10559DCA1DCC56C100469AAF /* MPListFuntionView.xib in Resources */,
 				10559E931DCC56C100469AAF /* inactive_dot.png in Resources */,
 				10559E0E1DCC56C100469AAF /* backBottom.png in Resources */,
 				10559E1C1DCC56C100469AAF /* button_CurponStart_push.png in Resources */,
@@ -2390,12 +2402,11 @@
 				10559DFA1DCC56C100469AAF /* 1.png in Resources */,
 				10559EAC1DCC56C100469AAF /* configuration.png in Resources */,
 				10559DFF1DCC56C100469AAF /* 2@2x.png in Resources */,
-				10559DD51DCC56C100469AAF /* MPShopDetailCell.xib in Resources */,
 				10559E9C1DCC56C100469AAF /* top_image_new.png in Resources */,
+				1083927A1DD03BB800E4A8F0 /* MPShopCell.xib in Resources */,
+				108392971DD03BB800E4A8F0 /* MPCouponStampView.xib in Resources */,
 				10559E0D1DCC56C100469AAF /* 5_click@2x.png in Resources */,
 				10559E1A1DCC56C100469AAF /* button_CurponStart.png in Resources */,
-				10559DC41DCC56C100469AAF /* MPCouponShareView.xib in Resources */,
-				10559DBD1DCC56C100469AAF /* MPAlertView.xib in Resources */,
 				10559E871DCC56C100469AAF /* active_dot@2x.png in Resources */,
 				10559E6F1DCC56C100469AAF /* icon_get_stamp.png in Resources */,
 				10559E3B1DCC56C100469AAF /* cancel_selected@2x.png in Resources */,
@@ -2412,18 +2423,17 @@
 				10559E381DCC56C100469AAF /* cancel.png in Resources */,
 				10559E391DCC56C100469AAF /* cancel@2x.png in Resources */,
 				10559E1F1DCC56C100469AAF /* button_edit@2x.png in Resources */,
-				10559DDF1DCC56C100469AAF /* MPMenuGridCell.xib in Resources */,
 				10A46ED41DCD6DD5005CC4A0 /* UserSettingViewController.xib in Resources */,
 				10559E771DCC56C100469AAF /* button_back_selected.png in Resources */,
 				10559E7D1DCC56C100469AAF /* button_leftback.png in Resources */,
 				10559EB51DCC56C100469AAF /* icon_tel.png in Resources */,
 				10559EB91DCC56C100469AAF /* toppic02_push.png in Resources */,
+				1083928E1DD03BB800E4A8F0 /* MPConfirmView.xib in Resources */,
 				10559E3E1DCC56C100469AAF /* line_coupon_detail.png in Resources */,
+				1083929C1DD03BB800E4A8F0 /* MPTopImagesView.xib in Resources */,
 				10559E101DCC56C100469AAF /* red_circle.png in Resources */,
-				10559DE51DCC56C100469AAF /* MPCouponBirthdayCell.xib in Resources */,
 				10559EBB1DCC56C100469AAF /* yakikata01_push.png in Resources */,
 				10559EB01DCC56C100469AAF /* on_button@2x.png in Resources */,
-				10559DC61DCC56C100469AAF /* MPSocialView.xib in Resources */,
 				10559E891DCC56C100469AAF /* background@2x.png in Resources */,
 				108391591DD02D4200E4A8F0 /* customMenu_close.png in Resources */,
 				10559E231DCC56C100469AAF /* button_ProfileEdit@2x.png in Resources */,
@@ -2432,17 +2442,19 @@
 				10A46F011DCD6F6B005CC4A0 /* MPTransferViewController.xib in Resources */,
 				10A46EE41DCD6DD5005CC4A0 /* MPNewDetailViewController.xib in Resources */,
 				10559EBA1DCC56C100469AAF /* yakikata01.png in Resources */,
+				108392741DD03BB800E4A8F0 /* MPCouponCell.xib in Resources */,
 				10559E251DCC56C100469AAF /* button_ProfileEdit_push@2x.png in Resources */,
 				10A46E931DCD6B7B005CC4A0 /* tab_back@2x.png in Resources */,
 				10559E6D1DCC56C100469AAF /* icon_coupon_detail.png in Resources */,
+				108392901DD03BB800E4A8F0 /* MPSocialShareAlertView.xib in Resources */,
 				10559E021DCC56C100469AAF /* 3.png in Resources */,
 				10559E511DCC56C100469AAF /* yes_selected@2x.png in Resources */,
 				10559E4C1DCC56C100469AAF /* top_background_coupon_detail.png in Resources */,
-				10559DF71DCC56C100469AAF /* MPVideoChannelView.xib in Resources */,
 				10559E311DCC56C100469AAF /* background_coupon_detail@2x.png in Resources */,
 				10559E901DCC56C100469AAF /* idicator_close@2x.png in Resources */,
 				10559E171DCC56C100469AAF /* button_BirthdaySet@2x.png in Resources */,
 				10559EA01DCC56C100469AAF /* monjya03.png in Resources */,
+				108392701DD03BB800E4A8F0 /* MPBlankCell.xib in Resources */,
 				10559E781DCC56C100469AAF /* button_back_selected@2x.png in Resources */,
 				10559EA41DCC56C100469AAF /* okonomiyaki02.png in Resources */,
 				10559E441DCC56C100469AAF /* pop-up.png in Resources */,
@@ -2453,7 +2465,7 @@
 				10559E261DCC56C100469AAF /* button_ProfileSave.png in Resources */,
 				10559E501DCC56C100469AAF /* yes_selected.png in Resources */,
 				10559E2B1DCC56C100469AAF /* button_Skip@2x.png in Resources */,
-				10559DF31DCC56C100469AAF /* MPVideoChannelDetailViewController.xib in Resources */,
+				1083927C1DD03BB800E4A8F0 /* MPShopEliaCell.xib in Resources */,
 				10559E241DCC56C100469AAF /* button_ProfileEdit_push.png in Resources */,
 				10559E821DCC56C100469AAF /* button_reload.png in Resources */,
 				10559E491DCC56C100469AAF /* small-background_coupon_detail@2x.png in Resources */,
@@ -2464,14 +2476,13 @@
 				10559E591DCC56C100469AAF /* btn_positive_dialog_selected@2x.png in Resources */,
 				108391491DCDC6EC00E4A8F0 /* basic_navigation_back.png in Resources */,
 				10559DF81DCC56C100469AAF /* config.plist in Resources */,
-				10559DDB1DCC56C100469AAF /* MPCouponShareCell.xib in Resources */,
 				10559E861DCC56C100469AAF /* active_dot.png in Resources */,
 				10559EAF1DCC56C100469AAF /* on_button.png in Resources */,
 				10A46E921DCD6B7B005CC4A0 /* tab_back.png in Resources */,
 				10559E7A1DCC56C100469AAF /* button_forward@2x.png in Resources */,
-				10559DEB1DCC56C100469AAF /* MPNewHomeCell.xib in Resources */,
 				10A46EEC1DCD6DD5005CC4A0 /* MPCouponDetailViewController.xib in Resources */,
 				10559E8E1DCC56C100469AAF /* idicator@2x.png in Resources */,
+				1083926C1DD03BB800E4A8F0 /* MPCouponDetailCell.xib in Resources */,
 				10559E131DCC56C100469AAF /* button_ApliStart@2x.png in Resources */,
 				10559E7E1DCC56C100469AAF /* button_open.png in Resources */,
 				10559E161DCC56C100469AAF /* button_BirthdaySet.png in Resources */,
@@ -2479,7 +2490,6 @@
 				10559E061DCC56C100469AAF /* 4.png in Resources */,
 				10559EA71DCC56C100469AAF /* okonomiyaki05.png in Resources */,
 				10559E691DCC56C100469AAF /* curpon_box_uncheck.png in Resources */,
-				10559DE31DCC56C100469AAF /* MPBlankCell.xib in Resources */,
 				10A46E8E1DCCD97D005CC4A0 /* navigation_back.png in Resources */,
 				10559E811DCC56C100469AAF /* button_open_selected@2x.png in Resources */,
 				10559DFB1DCC56C100469AAF /* 1@2x.png in Resources */,
@@ -2489,14 +2499,15 @@
 				10559E751DCC56C100469AAF /* button_back.png in Resources */,
 				10559E621DCC56C100469AAF /* line_selected.png in Resources */,
 				10A46ED21DCD6DD5005CC4A0 /* TheUserInfoViewController.xib in Resources */,
+				108392721DD03BB800E4A8F0 /* MPCouponBirthdayCell.xib in Resources */,
 				10559E9B1DCC56C100469AAF /* no_photo.png in Resources */,
 				10559E9F1DCC56C100469AAF /* monjya02.png in Resources */,
 				10559E1E1DCC56C100469AAF /* button_edit.png in Resources */,
 				10559E3F1DCC56C100469AAF /* line_coupon_detail@2x.png in Resources */,
-				10559DC81DCC56C100469AAF /* MPCouponStampView.xib in Resources */,
 				10559E271DCC56C100469AAF /* button_ProfileSave@2x.png in Resources */,
 				10559E6C1DCC56C100469AAF /* icon_checked_stamp@2x.png in Resources */,
 				10559E581DCC56C100469AAF /* btn_positive_dialog_selected.png in Resources */,
+				108392821DD03BB800E4A8F0 /* MPMenuGridCell.xib in Resources */,
 				10559E791DCC56C100469AAF /* button_forward.png in Resources */,
 				10559E121DCC56C100469AAF /* button_ApliStart.png in Resources */,
 				10559EB61DCC56C100469AAF /* hangaku.png in Resources */,
@@ -2505,7 +2516,6 @@
 				10559E1B1DCC56C100469AAF /* button_CurponStart@2x.png in Resources */,
 				1083914A1DCDC6EC00E4A8F0 /* basic_navigation_back@2x.png in Resources */,
 				10559E761DCC56C100469AAF /* button_back@2x.png in Resources */,
-				10559DC11DCC56C100469AAF /* MPSocialShareAlertView.xib in Resources */,
 				10559E661DCC56C100469AAF /* coupon_wari.png in Resources */,
 				10559E911DCC56C100469AAF /* idicator_open.png in Resources */,
 				10559E7B1DCC56C100469AAF /* button_forward_selected.png in Resources */,
@@ -2516,22 +2526,21 @@
 				10559E0F1DCC56C100469AAF /* backBottom@2x.png in Resources */,
 				10A46EF41DCD6DD5005CC4A0 /* MPTheFifthViewController.xib in Resources */,
 				10559E211DCC56C100469AAF /* button_MapApli@2x.png in Resources */,
+				108392931DD03BB800E4A8F0 /* MPCouponShareView.xib in Resources */,
+				108392681DD03BB800E4A8F0 /* MPShopDetailCell.xib in Resources */,
 				10A46EE81DCD6DD5005CC4A0 /* MPWpNewsDetailViewController.xib in Resources */,
 				10559E2A1DCC56C100469AAF /* button_Skip.png in Resources */,
-				10559DEF1DCC56C100469AAF /* MPShopEliaCell.xib in Resources */,
 				10559E401DCC56C100469AAF /* no.png in Resources */,
-				10559DED1DCC56C100469AAF /* MPShopCell.xib in Resources */,
-				10559DF11DCC56C100469AAF /* MPVideoChannelCell.xib in Resources */,
-				10559DC21DCC56C100469AAF /* CouponShareHeaderView.xib in Resources */,
 				10559E9D1DCC56C100469AAF /* unavailable.gif in Resources */,
 				10559E9E1DCC56C100469AAF /* monjya01.png in Resources */,
 				10559E471DCC56C100469AAF /* pop-up_share@2x.png in Resources */,
 				10559E2C1DCC56C100469AAF /* button_Skip_push.png in Resources */,
 				10559EBC1DCC56C100469AAF /* yakikata02.png in Resources */,
-				10559DE11DCC56C100469AAF /* MPPlanTextCell.xib in Resources */,
 				10559DF91DCC56C100469AAF /* UIConfig_food.plist in Resources */,
 				10559E201DCC56C100469AAF /* button_MapApli.png in Resources */,
 				10559EA11DCC56C100469AAF /* monjya04.png in Resources */,
+				1083926A1DD03BB800E4A8F0 /* MPShopDetaillView.xib in Resources */,
+				108392801DD03BB800E4A8F0 /* MPListCell.xib in Resources */,
 				10559E8C1DCC56C100469AAF /* btn_back@2x.png in Resources */,
 				10559D8F1DCC56C100469AAF /* MPFunctionViewController.xib in Resources */,
 				10559E461DCC56C100469AAF /* pop-up_share.png in Resources */,
@@ -2540,7 +2549,6 @@
 				10559DFC1DCC56C100469AAF /* 1_click.png in Resources */,
 				10559E301DCC56C100469AAF /* background_coupon_detail.png in Resources */,
 				10559E731DCC56C100469AAF /* icon_uncheck_stamp_long.png in Resources */,
-				10559DF51DCC56C100469AAF /* MPVideoChannelHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2613,15 +2621,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10559DE01DCC56C100469AAF /* MPPlanTextCell.m in Sources */,
+				108392731DD03BB800E4A8F0 /* MPCouponCell.m in Sources */,
+				108392941DD03BB800E4A8F0 /* MPSocialView.m in Sources */,
 				10559D8D1DCC56C100469AAF /* MPFunctionViewController+WebViewBottomBar.m in Sources */,
 				10559EC21DCC56C100469AAF /* ManagerErrors.m in Sources */,
-				10559DEC1DCC56C100469AAF /* MPShopCell.m in Sources */,
 				10559DBB1DCC56C100469AAF /* MPTabBarViewController.m in Sources */,
+				1083928D1DD03BB800E4A8F0 /* MPConfirmView.m in Sources */,
 				10559EE31DCC56C100469AAF /* TVOPickerDate.m in Sources */,
-				10559DF41DCC56C100469AAF /* MPVideoChannelHeaderView.m in Sources */,
 				10559EE21DCC56C100469AAF /* FMResultSet.m in Sources */,
+				1083928F1DD03BB800E4A8F0 /* MPSocialShareAlertView.m in Sources */,
 				10559D8C1DCC56C100469AAF /* MPVideoObject.m in Sources */,
+				1083926B1DD03BB800E4A8F0 /* MPCouponDetailCell.m in Sources */,
 				10559D861DCC56C100469AAF /* MPItemObject.m in Sources */,
 				10559EDB1DCC56C100469AAF /* MPGymObject.m in Sources */,
 				10559ED81DCC56C100469AAF /* DatabaseManager.m in Sources */,
@@ -2629,90 +2639,89 @@
 				10559D8A1DCC56C100469AAF /* MPShopObject.m in Sources */,
 				10559ECF1DCC56C100469AAF /* NSString+URLEncoding.m in Sources */,
 				10559ED31DCC56C100469AAF /* BaseDAO.m in Sources */,
+				1083928B1DD03BB800E4A8F0 /* MPAlertView.m in Sources */,
 				10559ED71DCC56C100469AAF /* MPPresetDAO.m in Sources */,
 				10A46ED31DCD6DD5005CC4A0 /* UserSettingViewController.m in Sources */,
-				10559DDE1DCC56C100469AAF /* MPMenuGridCell.m in Sources */,
+				1083927F1DD03BB800E4A8F0 /* MPListCell.m in Sources */,
 				10559D871DCC56C100469AAF /* MPMenuObject.m in Sources */,
 				10559ED21DCC56C100469AAF /* MPPageControl.m in Sources */,
+				108392691DD03BB800E4A8F0 /* MPShopDetaillView.m in Sources */,
+				108392711DD03BB800E4A8F0 /* MPCouponBirthdayCell.m in Sources */,
 				10A46EE71DCD6DD5005CC4A0 /* MPWpNewsDetailViewController.m in Sources */,
+				108392631DD03BB800E4A8F0 /* MPSettingAlertView.m in Sources */,
 				10559F2A1DCC7EAC00469AAF /* UIImageView+AFNetworking.m in Sources */,
 				10559ED91DCC56C100469AAF /* BaseEntity.m in Sources */,
+				1083927B1DD03BB800E4A8F0 /* MPShopEliaCell.m in Sources */,
+				108392771DD03BB800E4A8F0 /* MPNewHomeCell.m in Sources */,
 				10A46EDF1DCD6DD5005CC4A0 /* MPHomeWebViewViewController.m in Sources */,
-				10559DD61DCC56C100469AAF /* MPShopDetaillView.m in Sources */,
 				10559F231DCC7EAC00469AAF /* AFImageRequestOperation.m in Sources */,
 				10559D831DCC56C100469AAF /* MPUIConfigObject.m in Sources */,
-				10559DD41DCC56C100469AAF /* MPShopDetailCell.m in Sources */,
-				10559DC01DCC56C100469AAF /* MPSocialShareAlertView.m in Sources */,
 				10A46EEF1DCD6DD5005CC4A0 /* MPTheFourthViewController.m in Sources */,
 				10A46E771DCCB1B9005CC4A0 /* MPAppDelegate.m in Sources */,
 				10559ED41DCC56C100469AAF /* MPApnsDAO.m in Sources */,
-				10559DD81DCC56C100469AAF /* MPCouponDetailCell.m in Sources */,
-				10559DF61DCC56C100469AAF /* MPVideoChannelView.m in Sources */,
 				10559F211DCC7EAC00469AAF /* AFHTTPClient.m in Sources */,
 				10559D891DCC56C100469AAF /* MPShopCatObject.m in Sources */,
-				10559DE81DCC56C100469AAF /* MPGymCell.m in Sources */,
 				10559EE91DCC56C100469AAF /* Reachability.m in Sources */,
 				10A46EDD1DCD6DD5005CC4A0 /* MPHomeViewController.m in Sources */,
 				10A46EEB1DCD6DD5005CC4A0 /* MPCouponDetailViewController.m in Sources */,
+				108392891DD03BB800E4A8F0 /* MPVideoChannelView.m in Sources */,
 				10559EDC1DCC56C100469AAF /* MPHospitalObject.m in Sources */,
-				10559DD21DCC56C100469AAF /* MPHeaderShopView.m in Sources */,
 				10559EDF1DCC56C100469AAF /* FMDatabaseAdditions.m in Sources */,
 				10559EE41DCC56C100469AAF /* KeychainItemWrapper.m in Sources */,
+				108392961DD03BB800E4A8F0 /* MPCouponStampView.m in Sources */,
 				10559F041DCC56C100469AAF /* XMLReader.m in Sources */,
 				10559F051DCC56C100469AAF /* Utility.m in Sources */,
 				10559EDA1DCC56C100469AAF /* MPApnsObject.m in Sources */,
 				10559ED11DCC56C100469AAF /* CustomColor.m in Sources */,
 				10A46EE31DCD6DD5005CC4A0 /* MPNewDetailViewController.m in Sources */,
 				10559D901DCC56C100469AAF /* MPBaseViewController.m in Sources */,
+				108392671DD03BB800E4A8F0 /* MPShopDetailCell.m in Sources */,
+				1083929D1DD03BB800E4A8F0 /* MPTopImagesView.m in Sources */,
 				10A46F001DCD6F6B005CC4A0 /* MPTransferViewController.m in Sources */,
-				10559DF21DCC56C100469AAF /* MPVideoChannelDetailViewController.m in Sources */,
-				10559DEE1DCC56C100469AAF /* MPShopEliaCell.m in Sources */,
 				10559EC11DCC56C100469AAF /* ManagerDownload.m in Sources */,
-				108391531DCDE15B00E4A8F0 /* MPTopImagesView.m in Sources */,
-				10559DE21DCC56C100469AAF /* MPBlankCell.m in Sources */,
-				10559DE41DCC56C100469AAF /* MPCouponBirthdayCell.m in Sources */,
+				108392751DD03BB800E4A8F0 /* MPGymCell.m in Sources */,
 				10559EC01DCC56C100469AAF /* LazyInternet.m in Sources */,
+				108392811DD03BB800E4A8F0 /* MPMenuGridCell.m in Sources */,
 				10559EBF1DCC56C100469AAF /* DownloadParam.m in Sources */,
-				10559DDA1DCC56C100469AAF /* MPCouponShareCell.m in Sources */,
 				10A46EFE1DCD6F6B005CC4A0 /* MPTermsViewController.m in Sources */,
 				10A46EE11DCD6DD5005CC4A0 /* MPListMessageViewController.m in Sources */,
+				1083926D1DD03BB800E4A8F0 /* MPCouponShareCell.m in Sources */,
 				10A46EE91DCD6DD5005CC4A0 /* MPTheThirdViewController.m in Sources */,
 				10559EED1DCC56C100469AAF /* FHSTwitterEngine.m in Sources */,
 				10559EE61DCC56C100469AAF /* MBProgressHUD.m in Sources */,
 				10559EDE1DCC56C100469AAF /* FMDatabase.m in Sources */,
 				10A46EED1DCD6DD5005CC4A0 /* MPCouponShareViewController.m in Sources */,
 				10559F281DCC7EAC00469AAF /* AFURLConnectionOperation.m in Sources */,
-				10559DC51DCC56C100469AAF /* MPSocialView.m in Sources */,
 				10559ED51DCC56C100469AAF /* MPGymDAO.m in Sources */,
 				10559F031DCC56C100469AAF /* UIAlertView+Blocks.m in Sources */,
+				1083927D1DD03BB800E4A8F0 /* MPVideoChannelCell.m in Sources */,
 				10559EE11DCC56C100469AAF /* FMDatabaseQueue.m in Sources */,
+				108392651DD03BB800E4A8F0 /* MPHeaderShopView.m in Sources */,
 				10559F291DCC7EAC00469AAF /* AFXMLRequestOperation.m in Sources */,
 				10559EE01DCC56C100469AAF /* FMDatabasePool.m in Sources */,
+				108392921DD03BB800E4A8F0 /* MPCouponShareView.m in Sources */,
 				10559F261DCC7EAC00469AAF /* AFNetworkActivityIndicatorManager.m in Sources */,
 				10559ED61DCC56C100469AAF /* MPHospitalDAO.m in Sources */,
+				1083926F1DD03BB800E4A8F0 /* MPBlankCell.m in Sources */,
 				10559D841DCC56C100469AAF /* MPCouponObject.m in Sources */,
 				10559EE51DCC56C100469AAF /* KILabel.m in Sources */,
+				108392791DD03BB800E4A8F0 /* MPShopCell.m in Sources */,
 				10A46F021DCD6F6B005CC4A0 /* SettingViewController.m in Sources */,
-				10559DDC1DCC56C100469AAF /* MPListCell.m in Sources */,
 				10559ED01DCC56C100469AAF /* NSURL+Base.m in Sources */,
 				10559D8E1DCC56C100469AAF /* MPFunctionViewController.m in Sources */,
 				10A46ED71DCD6DD5005CC4A0 /* MPHomeMenuViewController.m in Sources */,
 				10559F061DCC56C100469AAF /* VerticallyAlignedLabel.m in Sources */,
-				10559DC31DCC56C100469AAF /* MPCouponShareView.m in Sources */,
 				10559EE71DCC56C100469AAF /* ProgressView.m in Sources */,
 				10A46ED11DCD6DD5005CC4A0 /* TheUserInfoViewController.m in Sources */,
-				10559DBC1DCC56C100469AAF /* MPAlertView.m in Sources */,
 				10A46EDB1DCD6DD5005CC4A0 /* MPHomeOkonomiViewController.m in Sources */,
-				10559DE61DCC56C100469AAF /* MPCouponCell.m in Sources */,
-				10559DC91DCC56C100469AAF /* MPListFuntionView.m in Sources */,
+				108392831DD03BB800E4A8F0 /* MPPlanTextCell.m in Sources */,
+				1083929A1DD03BB800E4A8F0 /* TopImageDetailView.m in Sources */,
+				108392851DD03BB800E4A8F0 /* MPVideoChannelDetailViewController.m in Sources */,
 				10559F241DCC7EAC00469AAF /* AFJSONRequestOperation.m in Sources */,
 				10559D8B1DCC56C100469AAF /* MPTopImageObject.m in Sources */,
 				10559EBE1DCC56C100469AAF /* Configuration.m in Sources */,
 				10A46ED51DCD6DD5005CC4A0 /* MPHomeMenuDetailViewController.m in Sources */,
-				10559DC71DCC56C100469AAF /* MPCouponStampView.m in Sources */,
 				10A46EE51DCD6DD5005CC4A0 /* MPTheSecondViewController.m in Sources */,
-				10559DBE1DCC56C100469AAF /* MPConfirmView.m in Sources */,
-				10559DEA1DCC56C100469AAF /* MPNewHomeCell.m in Sources */,
 				10559ECD1DCC56C100469AAF /* Base64.m in Sources */,
 				10559F251DCC7EAC00469AAF /* AFJSONUtilities.m in Sources */,
 				10A46EF31DCD6DD5005CC4A0 /* MPTheFifthViewController.m in Sources */,
@@ -2720,14 +2729,13 @@
 				10A46EF11DCD6DD5005CC4A0 /* MPShopDetailViewController.m in Sources */,
 				10559D881DCC56C100469AAF /* MPNewHomeObject.m in Sources */,
 				10559D821DCC56C100469AAF /* MPConfigObject.m in Sources */,
+				108392981DD03BB800E4A8F0 /* MPListFuntionView.m in Sources */,
 				10559EEA1DCC56C100469AAF /* InfinitePagingView.m in Sources */,
+				108392871DD03BB800E4A8F0 /* MPVideoChannelHeaderView.m in Sources */,
 				10A46ED91DCD6DD5005CC4A0 /* MPHomeMonjyaViewController.m in Sources */,
 				10559EDD1DCC56C100469AAF /* MPPresetObject.m in Sources */,
 				103B56711DC9D84E00F162CA /* main.m in Sources */,
-				10559DF01DCC56C100469AAF /* MPVideoChannelCell.m in Sources */,
-				10559DD01DCC56C100469AAF /* MPSettingAlertView.m in Sources */,
 				10559D851DCC56C100469AAF /* MPMemberObject.m in Sources */,
-				10559DCE1DCC56C100469AAF /* TopImageDetailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

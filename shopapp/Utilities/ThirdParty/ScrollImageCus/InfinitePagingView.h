@@ -84,7 +84,7 @@ typedef enum {
  */
 @property (nonatomic, assign) id<InfinitePagingViewDelegate> delegate;
 
-/*!
+/*
  Add a view object to inner scrollView view.
  @method addPageView:
  @param UIView *pageView
