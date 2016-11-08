@@ -10,7 +10,7 @@
 #import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
 
-@interface MPTheSecondViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate>
+@interface MPTheSecondViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate>
 {
     UIScrollView* _scr_rootview;
     UIView *_scr_inView;

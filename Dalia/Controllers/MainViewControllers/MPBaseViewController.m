@@ -52,7 +52,7 @@
 
     //基本ビュー作成（基本ビューとなる部分）
     contentView = [[UIView alloc] init];
-    [contentView setBackgroundColor:[UIColor grayColor]];
+    [contentView setBackgroundColor:[UIColor whiteColor]];
     CGRect frameContentView = contentView.frame;
     frameContentView.origin.x = FRAME_ORGIN;
     frameContentView.origin.y = basic_navigationView.frame.size.height + statusHeight;
@@ -66,9 +66,9 @@
     [self.view addSubview:contentView];
 
     //基本ビューの背景画像設定
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frameContentView.size.width, frameContentView.size.height)];
-    [imageView setImage:[UIImage imageNamed:@"background.png"]];
-    [contentView addSubview:imageView];
+//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frameContentView.size.width, frameContentView.size.height)];
+//    [imageView setImage:[UIImage imageNamed:@"background.png"]];
+//    [contentView addSubview:imageView];
 
     //基本ナビゲーション作成
     [self.navigationController setNavigationBarHidden:YES];
@@ -158,13 +158,14 @@
 
         //基本ステータスバーが無い場合の制御
         CGRect flt_contentView = contentView.frame;
-        flt_contentView.origin.y = statusHeight;
+        flt_contentView.origin.y = 0;
+        flt_contentView.size.height = flt_contentView.size.height + statusHeight;
         contentView.frame = flt_contentView;
     }else{
 
         //基本ステータスバーが有る場合の制御
         CGRect flt_contentView = contentView.frame;
-        flt_contentView.origin.y = statusHeight + basic_navigationView.frame.size.height;
+        flt_contentView.origin.y = basic_navigationView.frame.size.height;
         flt_contentView.size.height = flt_contentView.size.height - basic_navigationView.frame.size.height;
         contentView.frame = flt_contentView;
     }

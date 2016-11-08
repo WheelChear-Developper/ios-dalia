@@ -35,24 +35,32 @@
     
     //🔴contentView 高さ自動調整　幅自動調整
     [contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+
+    //XIB表示のため、contentViewを非表示
+    [contentView setHidden:NO];
     
     //スクロールビュー作成
     _scr_rootview = [[UIScrollView alloc] initWithFrame:contentView.bounds];
     _scr_rootview.delegate = self;
-    _scr_rootview.backgroundColor = [UIColor whiteColor];
+    _scr_rootview.showsVerticalScrollIndicator = NO;
+    _scr_rootview.backgroundColor = [UIColor clearColor];
     [_scr_rootview setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
 
     _scr_inView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, contentView.frame.size.width, 0)];
     [_scr_rootview addSubview:_scr_inView];
     _scr_rootview.contentSize = _scr_inView.bounds.size;
+    _scr_rootview.backgroundColor = [UIColor colorWithRed:229/255.0 green:228/255.0 blue:228/255.0 alpha:1.0];
     [contentView addSubview:_scr_rootview];
 
     _cornerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _scr_inView.frame.size.width, _scr_inView.frame.size.height)];
-    _cornerView.backgroundColor = [UIColor whiteColor];
+    _cornerView.backgroundColor = [UIColor clearColor];
     _cornerView.clipsToBounds = YES;
     [_cornerView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     [_scr_inView addSubview:_cornerView];
-    
+
+    //スクロールビュー大きさ再設定
+    _scr_inView.frame = CGRectMake(0, 0, contentView.frame.size.width, 200 + 35);
+    _scr_rootview.contentSize = _scr_inView.bounds.size;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

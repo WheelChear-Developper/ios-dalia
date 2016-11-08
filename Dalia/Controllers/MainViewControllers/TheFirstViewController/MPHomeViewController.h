@@ -15,7 +15,7 @@
 
 //#import "DeployGateSDK/DeployGateSDK.h"
 
-@interface MPHomeViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate>
+@interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate>
 {
     UIScrollView* _scr_rootview;
     UIView *_scr_inView;
