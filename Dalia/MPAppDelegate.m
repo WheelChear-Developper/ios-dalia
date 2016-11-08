@@ -88,18 +88,10 @@
 //        [application registerForRemoteNotificationTypes:
 //         (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound)];
     }
+
     //TODO: Get default notification
     [[ManagerDownload sharedInstance] getDefaultNotification:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
 
-    //TODO: GET UUID
-    //    NSString *uuidString = nil;
-    //    CFUUIDRef uuid = CFUUIDCreate(NULL);
-    //    if (uuid) {
-    //        uuidString = (NSString *)CFBridgingRelease(CFUUIDCreateString(NULL, uuid));
-    //        CFRelease(uuid);
-    //    }
-    //
-    //    uuidString = [uuidString stringByReplacingOccurrencesOfString:@"-" withString:@""];
     NSLog(@"generic device ID: %@ %@",[Utility deviceID],[Utility getDeviceID]);
     //TODO: Save device id to UserDefault
     [[ManagerDownload sharedInstance] submitDeviceID:[Utility deviceID] withAppID:[Utility getAppID] withType:@"1" delegate:self];
@@ -107,7 +99,6 @@
     //if (![userDefault objectForKey:DEVICE_ID_USER_DEFAULT]) {
     [userDefault setObject:[Utility deviceID] forKey:DEVICE_ID_USER_DEFAULT];
     [userDefault synchronize];
-    // }
 
     // INSERTED BY M.FUJII 2016.02.04 START
     // 簡易CMS対応
@@ -116,22 +107,6 @@
         [[ManagerDownload sharedInstance] getMemberNo:[Utility getAppID] withDeviceID:[Utility deviceID] delegate:self];
     }
     // INSERTED BY M.FUJII 2016.02.04 END
-
-    // List all fonts on iPhone
-    //    NSArray *familyNames = [[NSArray alloc] initWithArray:[UIFont familyNames]];
-    //    NSArray *fontNames;
-    //    NSInteger indFamily, indFont;
-    //    for (indFamily=0; indFamily<[familyNames count]; ++indFamily)
-    //    {
-    //        NSLog(@"Family name: %@", [familyNames objectAtIndex:indFamily]);
-    //        fontNames = [[NSArray alloc] initWithArray:
-    //                     [UIFont fontNamesForFamilyName:
-    //                      [familyNames objectAtIndex:indFamily]]];
-    //        for (indFont=0; indFont<[fontNames count]; ++indFont)
-    //        {
-    //            NSLog(@"    Font name: %@", [fontNames objectAtIndex:indFont]);
-    //        }
-    //    }
 
     return YES;
 }
@@ -217,8 +192,6 @@
     dt = [dt stringByReplacingOccurrencesOfString:@" " withString:@""];
     NSLog(@"My token is: %@ - %@", deviceToken,dt);
     NSString *appId = [Utility getAppID];
-
-
 
     //TODO: Post device id & post device token
     //[[ManagerDownload sharedInstance] submitDeviceID:dt withAppID:appId withType:@"1" delegate:self];

@@ -2,11 +2,11 @@
 //  UserSettingViewController.m
 //  Misepuri
 //
-//  Created by AMA on 2016/09/09.
+//  Created by M.Amatani on 2016/11/02.
+//  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
 #import "UserSettingViewController.h"
-#import "MPTabBarViewController.h"
 
 @interface UserSettingViewController ()
 @end

@@ -2,16 +2,11 @@
 //  SettingViewController.m
 //  Misepuri
 //
-//  Created by TUYENBQ on 11/25/13.
-//  Copyright (c) 2013 3SI-TUYENBQ. All rights reserved.
+//  Created by M.Amatani on 2016/11/02.
+//  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
 #import "SettingViewController.h"
-#import "MPTermsViewController.h"
-#import "MPTabBarViewController.h"
-#import "MPConfigObject.h"
-#import "CustomColor.h"
-#import "MPTransferViewController.h"
 
 @interface SettingViewController ()
 @end

@@ -2,30 +2,21 @@
 //  MPTheThirdViewController.h
 //  Misepuri
 //
-//  Created by TUYENBQ on 11/25/13.
-//  Copyright (c) 2013 3SI-TUYENBQ. All rights reserved.
+//  Created by M.Amatani on 2016/11/02.
+//  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <CoreBluetooth/CoreBluetooth.h>
 #import "MPBaseViewController.h"
-#import "MPCouponStampView.h"
+#import "MPTabBarViewController.h"
+#import "ManagerDownload.h"
 
-@interface MPTheThirdViewController : MPBaseViewController <ManagerDownloadDelegate, MPCouponStampViewDelegate, UIScrollViewDelegate, CBCentralManagerDelegate>
+@interface MPTheThirdViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate>
 {
-
-    MPCouponStampView *couponStampView;
-    CBCentralManager* bluetoothManager;
-
-    __weak IBOutlet UILabel *lbl_Infomation;
-    IBOutlet UIScrollView* scr_rootview;
-    IBOutlet UIView *scr_inView;
-    IBOutlet UIView *cornerView;
+    UIScrollView* _scr_rootview;
+    UIView *_scr_inView;
+    UIView *_cornerView;
+    
 }
-@property (weak, nonatomic) IBOutlet UILabel *lbl_recipe;
-@property (weak, nonatomic) IBOutlet UIView *view_stamp;
-@property (weak, nonatomic) IBOutlet UIView *view_IdBackColor;
 
-- (void)setArertCurpon:(NSString*)no;
 
 @end

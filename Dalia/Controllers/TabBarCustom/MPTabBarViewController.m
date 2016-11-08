@@ -12,7 +12,6 @@
 #import "MPTheThirdViewController.h"
 #import "MPTheFourthViewController.h"
 #import "MPTheFifthViewController.h"
-#import "MPShopDetailViewController.h"
 #import "MPShopObject.h"
 #import "MPConfigObject.h"
 

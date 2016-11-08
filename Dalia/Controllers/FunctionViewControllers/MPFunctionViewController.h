@@ -7,7 +7,6 @@
 //
 
 #import "MPBaseViewController.h"
-#import "MPHomeMenuDetailViewController.h"
 #import "MPCouponStampView.h"
 #import "ManagerDownload.h"
 #import "MPCouponShareView.h"

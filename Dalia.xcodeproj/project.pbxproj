@@ -7,36 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		101308AC1DD1C36200E8C9E6 /* MPShopDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101308791DD1C36200E8C9E6 /* MPShopDetailViewController.m */; };
-		101308AD1DD1C36200E8C9E6 /* MPShopDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1013087A1DD1C36200E8C9E6 /* MPShopDetailViewController.xib */; };
 		101308AE1DD1C36200E8C9E6 /* MPTheFifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1013087C1DD1C36200E8C9E6 /* MPTheFifthViewController.m */; };
 		101308AF1DD1C36200E8C9E6 /* MPTheFifthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1013087D1DD1C36200E8C9E6 /* MPTheFifthViewController.xib */; };
-		101308B01DD1C36200E8C9E6 /* MPHomeMenuDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101308801DD1C36200E8C9E6 /* MPHomeMenuDetailViewController.m */; };
-		101308B11DD1C36200E8C9E6 /* MPHomeMenuDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101308811DD1C36200E8C9E6 /* MPHomeMenuDetailViewController.xib */; };
-		101308B21DD1C36200E8C9E6 /* MPHomeMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101308831DD1C36200E8C9E6 /* MPHomeMenuViewController.m */; };
-		101308B31DD1C36200E8C9E6 /* MPHomeMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101308841DD1C36200E8C9E6 /* MPHomeMenuViewController.xib */; };
-		101308B41DD1C36200E8C9E6 /* MPHomeMonjyaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101308861DD1C36200E8C9E6 /* MPHomeMonjyaViewController.m */; };
-		101308B51DD1C36200E8C9E6 /* MPHomeMonjyaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101308871DD1C36200E8C9E6 /* MPHomeMonjyaViewController.xib */; };
-		101308B61DD1C36200E8C9E6 /* MPHomeOkonomiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101308891DD1C36200E8C9E6 /* MPHomeOkonomiViewController.m */; };
-		101308B71DD1C36200E8C9E6 /* MPHomeOkonomiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1013088A1DD1C36200E8C9E6 /* MPHomeOkonomiViewController.xib */; };
 		101308B81DD1C36200E8C9E6 /* MPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1013088C1DD1C36200E8C9E6 /* MPHomeViewController.m */; };
 		101308B91DD1C36200E8C9E6 /* MPHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1013088D1DD1C36200E8C9E6 /* MPHomeViewController.xib */; };
-		101308BA1DD1C36200E8C9E6 /* MPHomeWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1013088F1DD1C36200E8C9E6 /* MPHomeWebViewViewController.m */; };
-		101308BB1DD1C36200E8C9E6 /* MPHomeWebViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101308901DD1C36200E8C9E6 /* MPHomeWebViewViewController.xib */; };
-		101308BC1DD1C36200E8C9E6 /* MPCouponDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101308931DD1C36200E8C9E6 /* MPCouponDetailViewController.m */; };
-		101308BD1DD1C36200E8C9E6 /* MPCouponDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101308941DD1C36200E8C9E6 /* MPCouponDetailViewController.xib */; };
-		101308BE1DD1C36200E8C9E6 /* MPCouponShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101308961DD1C36200E8C9E6 /* MPCouponShareViewController.xib */; };
 		101308BF1DD1C36200E8C9E6 /* MPTheFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101308981DD1C36200E8C9E6 /* MPTheFourthViewController.m */; };
 		101308C01DD1C36200E8C9E6 /* MPTheFourthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101308991DD1C36200E8C9E6 /* MPTheFourthViewController.xib */; };
-		101308C11DD1C36200E8C9E6 /* MPCouponShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1013089A1DD1C36200E8C9E6 /* MPCouponShareViewController.m */; };
-		101308C21DD1C36200E8C9E6 /* MPListMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1013089D1DD1C36200E8C9E6 /* MPListMessageViewController.m */; };
-		101308C31DD1C36200E8C9E6 /* MPListMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1013089E1DD1C36200E8C9E6 /* MPListMessageViewController.xib */; };
-		101308C41DD1C36200E8C9E6 /* MPNewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1013089F1DD1C36200E8C9E6 /* MPNewDetailViewController.m */; };
-		101308C51DD1C36200E8C9E6 /* MPNewDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101308A01DD1C36200E8C9E6 /* MPNewDetailViewController.xib */; };
 		101308C61DD1C36200E8C9E6 /* MPTheSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101308A21DD1C36200E8C9E6 /* MPTheSecondViewController.m */; };
 		101308C71DD1C36200E8C9E6 /* MPTheSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101308A31DD1C36200E8C9E6 /* MPTheSecondViewController.xib */; };
-		101308C81DD1C36200E8C9E6 /* MPWpNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101308A51DD1C36200E8C9E6 /* MPWpNewsDetailViewController.m */; };
-		101308C91DD1C36200E8C9E6 /* MPWpNewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101308A61DD1C36200E8C9E6 /* MPWpNewsDetailViewController.xib */; };
 		101308CA1DD1C36200E8C9E6 /* MPTheThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101308AA1DD1C36200E8C9E6 /* MPTheThirdViewController.m */; };
 		101308CB1DD1C36200E8C9E6 /* MPTheThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101308AB1DD1C36200E8C9E6 /* MPTheThirdViewController.xib */; };
 		101309B01DD1D93300E8C9E6 /* basic_navigation_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 101308CD1DD1D93200E8C9E6 /* basic_navigation_back.png */; };
@@ -210,51 +188,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		101308781DD1C36200E8C9E6 /* MPShopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopDetailViewController.h; sourceTree = "<group>"; };
-		101308791DD1C36200E8C9E6 /* MPShopDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPShopDetailViewController.m; sourceTree = "<group>"; };
-		1013087A1DD1C36200E8C9E6 /* MPShopDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPShopDetailViewController.xib; sourceTree = "<group>"; };
 		1013087B1DD1C36200E8C9E6 /* MPTheFifthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTheFifthViewController.h; sourceTree = "<group>"; };
 		1013087C1DD1C36200E8C9E6 /* MPTheFifthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTheFifthViewController.m; sourceTree = "<group>"; };
 		1013087D1DD1C36200E8C9E6 /* MPTheFifthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheFifthViewController.xib; sourceTree = "<group>"; };
-		1013087F1DD1C36200E8C9E6 /* MPHomeMenuDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPHomeMenuDetailViewController.h; sourceTree = "<group>"; };
-		101308801DD1C36200E8C9E6 /* MPHomeMenuDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPHomeMenuDetailViewController.m; sourceTree = "<group>"; };
-		101308811DD1C36200E8C9E6 /* MPHomeMenuDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPHomeMenuDetailViewController.xib; sourceTree = "<group>"; };
-		101308821DD1C36200E8C9E6 /* MPHomeMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPHomeMenuViewController.h; sourceTree = "<group>"; };
-		101308831DD1C36200E8C9E6 /* MPHomeMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPHomeMenuViewController.m; sourceTree = "<group>"; };
-		101308841DD1C36200E8C9E6 /* MPHomeMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPHomeMenuViewController.xib; sourceTree = "<group>"; };
-		101308851DD1C36200E8C9E6 /* MPHomeMonjyaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPHomeMonjyaViewController.h; sourceTree = "<group>"; };
-		101308861DD1C36200E8C9E6 /* MPHomeMonjyaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPHomeMonjyaViewController.m; sourceTree = "<group>"; };
-		101308871DD1C36200E8C9E6 /* MPHomeMonjyaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPHomeMonjyaViewController.xib; sourceTree = "<group>"; };
-		101308881DD1C36200E8C9E6 /* MPHomeOkonomiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPHomeOkonomiViewController.h; sourceTree = "<group>"; };
-		101308891DD1C36200E8C9E6 /* MPHomeOkonomiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPHomeOkonomiViewController.m; sourceTree = "<group>"; };
-		1013088A1DD1C36200E8C9E6 /* MPHomeOkonomiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPHomeOkonomiViewController.xib; sourceTree = "<group>"; };
 		1013088B1DD1C36200E8C9E6 /* MPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPHomeViewController.h; sourceTree = "<group>"; };
 		1013088C1DD1C36200E8C9E6 /* MPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPHomeViewController.m; sourceTree = "<group>"; };
 		1013088D1DD1C36200E8C9E6 /* MPHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPHomeViewController.xib; sourceTree = "<group>"; };
-		1013088E1DD1C36200E8C9E6 /* MPHomeWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPHomeWebViewViewController.h; sourceTree = "<group>"; };
-		1013088F1DD1C36200E8C9E6 /* MPHomeWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPHomeWebViewViewController.m; sourceTree = "<group>"; };
-		101308901DD1C36200E8C9E6 /* MPHomeWebViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPHomeWebViewViewController.xib; sourceTree = "<group>"; };
-		101308921DD1C36200E8C9E6 /* MPCouponDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponDetailViewController.h; sourceTree = "<group>"; };
-		101308931DD1C36200E8C9E6 /* MPCouponDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponDetailViewController.m; sourceTree = "<group>"; };
-		101308941DD1C36200E8C9E6 /* MPCouponDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponDetailViewController.xib; sourceTree = "<group>"; };
-		101308951DD1C36200E8C9E6 /* MPCouponShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponShareViewController.h; sourceTree = "<group>"; };
-		101308961DD1C36200E8C9E6 /* MPCouponShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPCouponShareViewController.xib; sourceTree = "<group>"; };
 		101308971DD1C36200E8C9E6 /* MPTheFourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTheFourthViewController.h; sourceTree = "<group>"; };
 		101308981DD1C36200E8C9E6 /* MPTheFourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTheFourthViewController.m; sourceTree = "<group>"; };
 		101308991DD1C36200E8C9E6 /* MPTheFourthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheFourthViewController.xib; sourceTree = "<group>"; };
-		1013089A1DD1C36200E8C9E6 /* MPCouponShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponShareViewController.m; sourceTree = "<group>"; };
-		1013089C1DD1C36200E8C9E6 /* MPListMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPListMessageViewController.h; sourceTree = "<group>"; };
-		1013089D1DD1C36200E8C9E6 /* MPListMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPListMessageViewController.m; sourceTree = "<group>"; };
-		1013089E1DD1C36200E8C9E6 /* MPListMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPListMessageViewController.xib; sourceTree = "<group>"; };
-		1013089F1DD1C36200E8C9E6 /* MPNewDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPNewDetailViewController.m; sourceTree = "<group>"; };
-		101308A01DD1C36200E8C9E6 /* MPNewDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPNewDetailViewController.xib; sourceTree = "<group>"; };
 		101308A11DD1C36200E8C9E6 /* MPTheSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTheSecondViewController.h; sourceTree = "<group>"; };
 		101308A21DD1C36200E8C9E6 /* MPTheSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTheSecondViewController.m; sourceTree = "<group>"; };
 		101308A31DD1C36200E8C9E6 /* MPTheSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheSecondViewController.xib; sourceTree = "<group>"; };
-		101308A41DD1C36200E8C9E6 /* MPWpNewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWpNewsDetailViewController.h; sourceTree = "<group>"; };
-		101308A51DD1C36200E8C9E6 /* MPWpNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWpNewsDetailViewController.m; sourceTree = "<group>"; };
-		101308A61DD1C36200E8C9E6 /* MPWpNewsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPWpNewsDetailViewController.xib; sourceTree = "<group>"; };
-		101308A71DD1C36200E8C9E6 /* MPNewDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNewDetailViewController.h; sourceTree = "<group>"; };
 		101308A91DD1C36200E8C9E6 /* MPTheThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTheThirdViewController.h; sourceTree = "<group>"; };
 		101308AA1DD1C36200E8C9E6 /* MPTheThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTheThirdViewController.m; sourceTree = "<group>"; };
 		101308AB1DD1C36200E8C9E6 /* MPTheThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheThirdViewController.xib; sourceTree = "<group>"; };
@@ -548,9 +493,6 @@
 		101308771DD1C36200E8C9E6 /* TheFifthViewController */ = {
 			isa = PBXGroup;
 			children = (
-				101308781DD1C36200E8C9E6 /* MPShopDetailViewController.h */,
-				101308791DD1C36200E8C9E6 /* MPShopDetailViewController.m */,
-				1013087A1DD1C36200E8C9E6 /* MPShopDetailViewController.xib */,
 				1013087B1DD1C36200E8C9E6 /* MPTheFifthViewController.h */,
 				1013087C1DD1C36200E8C9E6 /* MPTheFifthViewController.m */,
 				1013087D1DD1C36200E8C9E6 /* MPTheFifthViewController.xib */,
@@ -561,24 +503,9 @@
 		1013087E1DD1C36200E8C9E6 /* TheFirstViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1013087F1DD1C36200E8C9E6 /* MPHomeMenuDetailViewController.h */,
-				101308801DD1C36200E8C9E6 /* MPHomeMenuDetailViewController.m */,
-				101308811DD1C36200E8C9E6 /* MPHomeMenuDetailViewController.xib */,
-				101308821DD1C36200E8C9E6 /* MPHomeMenuViewController.h */,
-				101308831DD1C36200E8C9E6 /* MPHomeMenuViewController.m */,
-				101308841DD1C36200E8C9E6 /* MPHomeMenuViewController.xib */,
-				101308851DD1C36200E8C9E6 /* MPHomeMonjyaViewController.h */,
-				101308861DD1C36200E8C9E6 /* MPHomeMonjyaViewController.m */,
-				101308871DD1C36200E8C9E6 /* MPHomeMonjyaViewController.xib */,
-				101308881DD1C36200E8C9E6 /* MPHomeOkonomiViewController.h */,
-				101308891DD1C36200E8C9E6 /* MPHomeOkonomiViewController.m */,
-				1013088A1DD1C36200E8C9E6 /* MPHomeOkonomiViewController.xib */,
 				1013088B1DD1C36200E8C9E6 /* MPHomeViewController.h */,
 				1013088C1DD1C36200E8C9E6 /* MPHomeViewController.m */,
 				1013088D1DD1C36200E8C9E6 /* MPHomeViewController.xib */,
-				1013088E1DD1C36200E8C9E6 /* MPHomeWebViewViewController.h */,
-				1013088F1DD1C36200E8C9E6 /* MPHomeWebViewViewController.m */,
-				101308901DD1C36200E8C9E6 /* MPHomeWebViewViewController.xib */,
 			);
 			path = TheFirstViewController;
 			sourceTree = "<group>";
@@ -586,15 +513,9 @@
 		101308911DD1C36200E8C9E6 /* TheFourthViewController */ = {
 			isa = PBXGroup;
 			children = (
-				101308921DD1C36200E8C9E6 /* MPCouponDetailViewController.h */,
-				101308931DD1C36200E8C9E6 /* MPCouponDetailViewController.m */,
-				101308941DD1C36200E8C9E6 /* MPCouponDetailViewController.xib */,
-				101308951DD1C36200E8C9E6 /* MPCouponShareViewController.h */,
-				101308961DD1C36200E8C9E6 /* MPCouponShareViewController.xib */,
 				101308971DD1C36200E8C9E6 /* MPTheFourthViewController.h */,
 				101308981DD1C36200E8C9E6 /* MPTheFourthViewController.m */,
 				101308991DD1C36200E8C9E6 /* MPTheFourthViewController.xib */,
-				1013089A1DD1C36200E8C9E6 /* MPCouponShareViewController.m */,
 			);
 			path = TheFourthViewController;
 			sourceTree = "<group>";
@@ -602,18 +523,9 @@
 		1013089B1DD1C36200E8C9E6 /* TheSecondViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1013089C1DD1C36200E8C9E6 /* MPListMessageViewController.h */,
-				1013089D1DD1C36200E8C9E6 /* MPListMessageViewController.m */,
-				1013089E1DD1C36200E8C9E6 /* MPListMessageViewController.xib */,
-				1013089F1DD1C36200E8C9E6 /* MPNewDetailViewController.m */,
-				101308A01DD1C36200E8C9E6 /* MPNewDetailViewController.xib */,
 				101308A11DD1C36200E8C9E6 /* MPTheSecondViewController.h */,
 				101308A21DD1C36200E8C9E6 /* MPTheSecondViewController.m */,
 				101308A31DD1C36200E8C9E6 /* MPTheSecondViewController.xib */,
-				101308A41DD1C36200E8C9E6 /* MPWpNewsDetailViewController.h */,
-				101308A51DD1C36200E8C9E6 /* MPWpNewsDetailViewController.m */,
-				101308A61DD1C36200E8C9E6 /* MPWpNewsDetailViewController.xib */,
-				101308A71DD1C36200E8C9E6 /* MPNewDetailViewController.h */,
 			);
 			path = TheSecondViewController;
 			sourceTree = "<group>";
@@ -798,15 +710,15 @@
 		103025DF1DD19EAD00F266D8 /* SettingViewController */ = {
 			isa = PBXGroup;
 			children = (
+				103025E61DD19EAD00F266D8 /* SettingViewController.h */,
+				103025E71DD19EAD00F266D8 /* SettingViewController.m */,
+				103025E81DD19EAD00F266D8 /* SettingViewController.xib */,
 				103025E01DD19EAD00F266D8 /* MPTermsViewController.h */,
 				103025E11DD19EAD00F266D8 /* MPTermsViewController.m */,
 				103025E21DD19EAD00F266D8 /* MPTermsViewController.xib */,
 				103025E31DD19EAD00F266D8 /* MPTransferViewController.h */,
 				103025E41DD19EAD00F266D8 /* MPTransferViewController.m */,
 				103025E51DD19EAD00F266D8 /* MPTransferViewController.xib */,
-				103025E61DD19EAD00F266D8 /* SettingViewController.h */,
-				103025E71DD19EAD00F266D8 /* SettingViewController.m */,
-				103025E81DD19EAD00F266D8 /* SettingViewController.xib */,
 				103025E91DD19EAD00F266D8 /* TheUserInfoViewController */,
 			);
 			path = SettingViewController;
@@ -815,12 +727,12 @@
 		103025E91DD19EAD00F266D8 /* TheUserInfoViewController */ = {
 			isa = PBXGroup;
 			children = (
+				103025EF1DD19EAD00F266D8 /* TheUserInfoViewController.h */,
 				103025EA1DD19EAD00F266D8 /* TheUserInfoViewController.m */,
 				103025EB1DD19EAD00F266D8 /* TheUserInfoViewController.xib */,
+				103025EE1DD19EAD00F266D8 /* UserSettingViewController.h */,
 				103025EC1DD19EAD00F266D8 /* UserSettingViewController.m */,
 				103025ED1DD19EAD00F266D8 /* UserSettingViewController.xib */,
-				103025EE1DD19EAD00F266D8 /* UserSettingViewController.h */,
-				103025EF1DD19EAD00F266D8 /* TheUserInfoViewController.h */,
 			);
 			path = TheUserInfoViewController;
 			sourceTree = "<group>";
@@ -1483,27 +1395,22 @@
 				103026F41DD1A36200F266D8 /* Images.xcassets in Resources */,
 				103025D11DD197E600F266D8 /* config.plist in Resources */,
 				103026DB1DD19EAD00F266D8 /* MPHeaderShopView.xib in Resources */,
-				101308BD1DD1C36200E8C9E6 /* MPCouponDetailViewController.xib in Resources */,
 				103026E71DD19EAD00F266D8 /* MPPlanTextCell.xib in Resources */,
 				101309B01DD1D93300E8C9E6 /* basic_navigation_back.png in Resources */,
 				101309B41DD1D93300E8C9E6 /* icon_facebook_black.png in Resources */,
-				101308B71DD1C36200E8C9E6 /* MPHomeOkonomiViewController.xib in Resources */,
 				103026D31DD19EAD00F266D8 /* MPCouponShareView.xib in Resources */,
 				101308B91DD1C36200E8C9E6 /* MPHomeViewController.xib in Resources */,
 				10130AC71DD1E89A00E8C9E6 /* footer_btn_coupon_on.jpg in Resources */,
 				103026D91DD19EAD00F266D8 /* MPSettingAlertView.xib in Resources */,
 				103026E11DD19EAD00F266D8 /* MPCouponShareCell.xib in Resources */,
 				101309B61DD1D93300E8C9E6 /* icon_twitter_black.png in Resources */,
-				101308C31DD1C36200E8C9E6 /* MPListMessageViewController.xib in Resources */,
 				101309B71DD1D93300E8C9E6 /* icon_web_black.png in Resources */,
 				103026D71DD19EAD00F266D8 /* MPCouponStampView.xib in Resources */,
-				101308C91DD1C36200E8C9E6 /* MPWpNewsDetailViewController.xib in Resources */,
 				101309BA1DD1D93300E8C9E6 /* button_mask.png in Resources */,
 				103026CE1DD19EAD00F266D8 /* MPConfirmView.xib in Resources */,
 				103026CC1DD19EAD00F266D8 /* MPAlertView.xib in Resources */,
 				103026D11DD19EAD00F266D8 /* CouponShareHeaderView.xib in Resources */,
 				10130AC31DD1E89A00E8C9E6 /* footer_btn_access_on.jpg in Resources */,
-				101308BB1DD1C36200E8C9E6 /* MPHomeWebViewViewController.xib in Resources */,
 				101309B91DD1D93300E8C9E6 /* navigation_back@2x.png in Resources */,
 				101309B11DD1D93300E8C9E6 /* basic_navigation_back@2x.png in Resources */,
 				103026EF1DD19EAD00F266D8 /* MPShopEliaCell.xib in Resources */,
@@ -1519,14 +1426,12 @@
 				10130AD61DD1E89A00E8C9E6 /* footer_btn_setting@2x.png in Resources */,
 				1030269A1DD19EAD00F266D8 /* TheUserInfoViewController.xib in Resources */,
 				101308AF1DD1C36200E8C9E6 /* MPTheFifthViewController.xib in Resources */,
-				101308B31DD1C36200E8C9E6 /* MPHomeMenuViewController.xib in Resources */,
 				10130AC41DD1E89A00E8C9E6 /* footer_btn_access_on@2x.png in Resources */,
 				10130AAD1DD1DA7500E8C9E6 /* red_circle.png in Resources */,
 				103026E51DD19EAD00F266D8 /* MPMenuGridCell.xib in Resources */,
 				101309B21DD1D93300E8C9E6 /* customMenu_close.png in Resources */,
 				10130AC81DD1E89A00E8C9E6 /* footer_btn_coupon_on@2x.png in Resources */,
 				10130ADA1DD1ECDD00E8C9E6 /* icon_menu.png in Resources */,
-				101308B51DD1C36200E8C9E6 /* MPHomeMonjyaViewController.xib in Resources */,
 				101308C01DD1C36200E8C9E6 /* MPTheFourthViewController.xib in Resources */,
 				10130AD11DD1E89A00E8C9E6 /* footer_btn_menu.jpg in Resources */,
 				103026961DD19EAD00F266D8 /* MPTransferViewController.xib in Resources */,
@@ -1539,11 +1444,9 @@
 				103026EB1DD19EAD00F266D8 /* MPNewHomeCell.xib in Resources */,
 				101309B81DD1D93300E8C9E6 /* navigation_back.png in Resources */,
 				103026941DD19EAD00F266D8 /* MPTermsViewController.xib in Resources */,
-				101308AD1DD1C36200E8C9E6 /* MPShopDetailViewController.xib in Resources */,
 				101309B51DD1D93300E8C9E6 /* icon_instagram_black.png in Resources */,
 				10130ACB1DD1E89A00E8C9E6 /* footer_btn_home_on.jpg in Resources */,
 				101309BB1DD1D93300E8C9E6 /* tab_back.png in Resources */,
-				101308B11DD1C36200E8C9E6 /* MPHomeMenuDetailViewController.xib in Resources */,
 				10130AD41DD1E89A00E8C9E6 /* footer_btn_setting_on@2x.png in Resources */,
 				10130AC91DD1E89A00E8C9E6 /* footer_btn_coupon.jpg in Resources */,
 				10130AD31DD1E89A00E8C9E6 /* footer_btn_setting_on.jpg in Resources */,
@@ -1559,11 +1462,9 @@
 				103026BE1DD19EAD00F266D8 /* MPSlideMenuView.xib in Resources */,
 				103026981DD19EAD00F266D8 /* SettingViewController.xib in Resources */,
 				103026ED1DD19EAD00F266D8 /* MPShopCell.xib in Resources */,
-				101308BE1DD1C36200E8C9E6 /* MPCouponShareViewController.xib in Resources */,
 				101308CB1DD1C36200E8C9E6 /* MPTheThirdViewController.xib in Resources */,
 				10130ACD1DD1E89A00E8C9E6 /* footer_btn_home.jpg in Resources */,
 				101309B31DD1D93300E8C9E6 /* icon_blog_black.png in Resources */,
-				101308C51DD1C36200E8C9E6 /* MPNewDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1597,7 +1498,6 @@
 				103026E01DD19EAD00F266D8 /* MPCouponShareCell.m in Sources */,
 				272CCD951DCAF096006BC4EB /* BaseDAO.m in Sources */,
 				272CCD881DCAF096006BC4EB /* AFJSONRequestOperation.m in Sources */,
-				101308BC1DD1C36200E8C9E6 /* MPCouponDetailViewController.m in Sources */,
 				101308C61DD1C36200E8C9E6 /* MPTheSecondViewController.m in Sources */,
 				272CCDAB1DCAF096006BC4EB /* Reachability.m in Sources */,
 				103026CD1DD19EAD00F266D8 /* MPConfirmView.m in Sources */,
@@ -1605,7 +1505,6 @@
 				272CCD941DCAF096006BC4EB /* MPPageControl.m in Sources */,
 				103026D41DD19EAD00F266D8 /* MPSocialView.m in Sources */,
 				103026CF1DD19EAD00F266D8 /* MPSocialShareAlertView.m in Sources */,
-				101308AC1DD1C36200E8C9E6 /* MPShopDetailViewController.m in Sources */,
 				103026E21DD19EAD00F266D8 /* MPListCell.m in Sources */,
 				272CCD981DCAF096006BC4EB /* MPHospitalDAO.m in Sources */,
 				272CCDA91DCAF096006BC4EB /* ProgressView.m in Sources */,
@@ -1613,14 +1512,12 @@
 				103026CB1DD19EAD00F266D8 /* MPAlertView.m in Sources */,
 				103026991DD19EAD00F266D8 /* TheUserInfoViewController.m in Sources */,
 				103026E81DD19EAD00F266D8 /* MPCouponCell.m in Sources */,
-				101308BA1DD1C36200E8C9E6 /* MPHomeWebViewViewController.m in Sources */,
 				272CCD9F1DCAF096006BC4EB /* MPPresetObject.m in Sources */,
 				103026C31DD19EAD00F266D8 /* MPMemberObject.m in Sources */,
 				272CCD861DCAF096006BC4EB /* AFHTTPRequestOperation.m in Sources */,
 				272CCDA41DCAF096006BC4EB /* FMResultSet.m in Sources */,
 				103026C01DD19EAD00F266D8 /* MPConfigObject.m in Sources */,
 				103026C81DD19EAD00F266D8 /* MPShopObject.m in Sources */,
-				101308C41DD1C36200E8C9E6 /* MPNewDetailViewController.m in Sources */,
 				272CCDA81DCAF096006BC4EB /* MBProgressHUD.m in Sources */,
 				272CCD871DCAF096006BC4EB /* AFImageRequestOperation.m in Sources */,
 				103026901DD19EAD00F266D8 /* MPFunctionViewController.m in Sources */,
@@ -1636,9 +1533,7 @@
 				272CCD9C1DCAF096006BC4EB /* MPApnsObject.m in Sources */,
 				272CCDC71DCAF096006BC4EB /* Utility.m in Sources */,
 				272CCD841DCAF096006BC4EB /* ManagerErrors.m in Sources */,
-				101308B01DD1C36200E8C9E6 /* MPHomeMenuDetailViewController.m in Sources */,
 				272CCD9E1DCAF096006BC4EB /* MPHospitalObject.m in Sources */,
-				101308B21DD1C36200E8C9E6 /* MPHomeMenuViewController.m in Sources */,
 				103026F01DD19EAD00F266D8 /* MPTopImagesView.m in Sources */,
 				103026EA1DD19EAD00F266D8 /* MPNewHomeCell.m in Sources */,
 				272CCDA21DCAF096006BC4EB /* FMDatabasePool.m in Sources */,
@@ -1656,26 +1551,21 @@
 				103026DC1DD19EAD00F266D8 /* MPShopDetailCell.m in Sources */,
 				272CCD961DCAF096006BC4EB /* MPApnsDAO.m in Sources */,
 				272CCDAC1DCAF096006BC4EB /* InfinitePagingView.m in Sources */,
-				101308C21DD1C36200E8C9E6 /* MPListMessageViewController.m in Sources */,
 				272CCD801DCAF096006BC4EB /* Configuration.m in Sources */,
 				272CCD8A1DCAF096006BC4EB /* AFNetworkActivityIndicatorManager.m in Sources */,
 				103026931DD19EAD00F266D8 /* MPTermsViewController.m in Sources */,
 				272CCCBD1DCAEF12006BC4EB /* main.m in Sources */,
 				272CCDA51DCAF096006BC4EB /* TVOPickerDate.m in Sources */,
 				103026D21DD19EAD00F266D8 /* MPCouponShareView.m in Sources */,
-				101308C81DD1C36200E8C9E6 /* MPWpNewsDetailViewController.m in Sources */,
 				103026DE1DD19EAD00F266D8 /* MPCouponDetailCell.m in Sources */,
 				272CCD921DCAF096006BC4EB /* NSURL+Base.m in Sources */,
 				103026C21DD19EAD00F266D8 /* MPCouponObject.m in Sources */,
 				272CCDC51DCAF096006BC4EB /* UIAlertView+Blocks.m in Sources */,
 				103026E61DD19EAD00F266D8 /* MPPlanTextCell.m in Sources */,
-				101308B41DD1C36200E8C9E6 /* MPHomeMonjyaViewController.m in Sources */,
 				103026921DD19EAD00F266D8 /* MPBaseViewController.m in Sources */,
 				103026C11DD19EAD00F266D8 /* MPUIConfigObject.m in Sources */,
-				101308B61DD1C36200E8C9E6 /* MPHomeOkonomiViewController.m in Sources */,
 				272CCDC61DCAF096006BC4EB /* XMLReader.m in Sources */,
 				272CCDAF1DCAF096006BC4EB /* FHSTwitterEngine.m in Sources */,
-				101308C11DD1C36200E8C9E6 /* MPCouponShareViewController.m in Sources */,
 				103026BD1DD19EAD00F266D8 /* MPSlideMenuView.m in Sources */,
 				272CCD9A1DCAF096006BC4EB /* DatabaseManager.m in Sources */,
 				272CCDA71DCAF096006BC4EB /* KILabel.m in Sources */,

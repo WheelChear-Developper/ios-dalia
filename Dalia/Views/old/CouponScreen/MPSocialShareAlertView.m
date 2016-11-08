@@ -7,7 +7,6 @@
 //
 
 #import "MPSocialShareAlertView.h"
-#import "MPCouponShareViewController.h"
 
 #define UP_TO_VIEW_4 CGRectMake(15,1,290,262)
 #define UP_TO_VIEW_5 CGRectMake(15,80,290,262)

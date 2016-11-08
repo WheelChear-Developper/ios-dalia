@@ -2,15 +2,11 @@
 //  MPHomeViewController.m
 //  Misepuri
 //
-//  Created by TUYENBQ on 11/25/13.
-//  Copyright (c) 2013 3SI-TUYENBQ. All rights reserved.
+//  Created by M.Amatani on 2016/11/02.
+//  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
 #import "MPHomeViewController.h"
-#import "MPTopImagesView.h"
-#import "MPHomeMenuDetailViewController.h"
-#import "MPTabBarViewController.h"
-#import "MPConfigObject.h"
 
 #define DIV_PART_FROM_MAINVIEW 5
 
@@ -60,16 +56,16 @@
     _scr_rootview.backgroundColor = [UIColor whiteColor];
     [_scr_rootview setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     
-    scr_inView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, contentView.frame.size.width, 0)];
-    [_scr_rootview addSubview:scr_inView];
-    _scr_rootview.contentSize = scr_inView.bounds.size;
+    _scr_inView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, contentView.frame.size.width, 0)];
+    [_scr_rootview addSubview:_scr_inView];
+    _scr_rootview.contentSize = _scr_inView.bounds.size;
     [contentView addSubview:_scr_rootview];
     
-    cornerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, scr_inView.frame.size.width, scr_inView.frame.size.height)];
-    cornerView.backgroundColor = [UIColor whiteColor];
-    cornerView.clipsToBounds = YES;
-    [cornerView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
-    [scr_inView addSubview:cornerView];
+    _cornerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _scr_inView.frame.size.width, _scr_inView.frame.size.height)];
+    _cornerView.backgroundColor = [UIColor whiteColor];
+    _cornerView.clipsToBounds = YES;
+    [_cornerView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+    [_scr_inView addSubview:_cornerView];
     
     //横スクロールイメージビュー追加（商品紹介）
     topImageView = (MPTopImagesView*)[Utility viewInBundleWithName:@"MPTopImagesView"];
@@ -101,14 +97,14 @@
     topImageViewFrame.size.width = topImageViewFrame.size.width - 4;
     topImageViewFrame.size.height = topImageHeight;
     topImageView.frame = topImageViewFrame;
-    [cornerView addSubview:topImageView];
+    [_cornerView addSubview:topImageView];
 
     // ブロック１設定
     UIImageView* iv_block1 = [[UIImageView alloc] init];
     iv_block1.contentMode = UIViewContentModeScaleAspectFit;
-    iv_block1.frame = CGRectMake(2, topImageView.frame.origin.y + topImageView.frame.size.height + 2, cornerView.frame.size.width / 3, 100);
+    iv_block1.frame = CGRectMake(2, topImageView.frame.origin.y + topImageView.frame.size.height + 2, _cornerView.frame.size.width / 3, 100);
     iv_block1.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
-    [cornerView addSubview:iv_block1];
+    [_cornerView addSubview:iv_block1];
 
     UIButton *btn_block1 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn_block1.frame = iv_block1.frame;
@@ -116,14 +112,14 @@
 //    [btn_block1 setImage:[UIImage imageNamed:@"toppic02.png"] forState:UIControlStateNormal];
 //    [btn_block1 setImage:[UIImage imageNamed:@"toppic02_push.png"] forState:UIControlStateHighlighted];
     btn_block1.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [cornerView addSubview:btn_block1];
+    [_cornerView addSubview:btn_block1];
 
     // ブロック２設定
     UIImageView* iv_block2 = [[UIImageView alloc] init];
     iv_block2.contentMode = UIViewContentModeScaleAspectFit;
-    iv_block2.frame = CGRectMake(2 + iv_block1.frame.origin.x + iv_block1.frame.size.width, topImageView.frame.origin.y + topImageView.frame.size.height + 2, cornerView.frame.size.width / 3, 100);
+    iv_block2.frame = CGRectMake(2 + iv_block1.frame.origin.x + iv_block1.frame.size.width, topImageView.frame.origin.y + topImageView.frame.size.height + 2, _cornerView.frame.size.width / 3, 100);
     iv_block2.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
-    [cornerView addSubview:iv_block2];
+    [_cornerView addSubview:iv_block2];
 
     UIButton *btn_block2 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn_block2.frame = iv_block2.frame;
@@ -131,14 +127,14 @@
 //    [btn_block2 setImage:[UIImage imageNamed:@"toppic02.png"] forState:UIControlStateNormal];
 //    [btn_block2 setImage:[UIImage imageNamed:@"toppic02_push.png"] forState:UIControlStateHighlighted];
     btn_block2.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [cornerView addSubview:btn_block2];
+    [_cornerView addSubview:btn_block2];
 
     // ブロック３設定
     UIImageView* iv_block3 = [[UIImageView alloc] init];
     iv_block3.contentMode = UIViewContentModeScaleAspectFit;
-    iv_block3.frame = CGRectMake(2 + iv_block2.frame.origin.x + iv_block2.frame.size.width, topImageView.frame.origin.y + topImageView.frame.size.height + 2, cornerView.frame.size.width / 3, 100);
+    iv_block3.frame = CGRectMake(2 + iv_block2.frame.origin.x + iv_block2.frame.size.width, topImageView.frame.origin.y + topImageView.frame.size.height + 2, _cornerView.frame.size.width / 3, 100);
     iv_block3.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
-    [cornerView addSubview:iv_block3];
+    [_cornerView addSubview:iv_block3];
 
     UIButton *btn_block3 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn_block3.frame = iv_block3.frame;
@@ -146,14 +142,14 @@
 //    [btn_block3 setImage:[UIImage imageNamed:@"toppic02.png"] forState:UIControlStateNormal];
 //    [btn_block3 setImage:[UIImage imageNamed:@"toppic02_push.png"] forState:UIControlStateHighlighted];
     btn_block3.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [cornerView addSubview:btn_block3];
+    [_cornerView addSubview:btn_block3];
 
     // ブロック４設定
     UIImageView* iv_block4 = [[UIImageView alloc] init];
     iv_block4.contentMode = UIViewContentModeScaleAspectFit;
-    iv_block4.frame = CGRectMake(2, iv_block1.frame.origin.y + iv_block1.frame.size.height + 2, cornerView.frame.size.width / 2, 100);
+    iv_block4.frame = CGRectMake(2, iv_block1.frame.origin.y + iv_block1.frame.size.height + 2, _cornerView.frame.size.width / 2, 100);
     iv_block4.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
-    [cornerView addSubview:iv_block4];
+    [_cornerView addSubview:iv_block4];
 
     UIButton *btn_block4 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn_block4.frame = iv_block4.frame;
@@ -161,14 +157,14 @@
     //    [btn_block4 setImage:[UIImage imageNamed:@"toppic02.png"] forState:UIControlStateNormal];
     //    [btn_block4 setImage:[UIImage imageNamed:@"toppic02_push.png"] forState:UIControlStateHighlighted];
     btn_block4.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [cornerView addSubview:btn_block4];
+    [_cornerView addSubview:btn_block4];
 
     // ブロック５設定
     UIImageView* iv_block5 = [[UIImageView alloc] init];
     iv_block5.contentMode = UIViewContentModeScaleAspectFit;
-    iv_block5.frame = CGRectMake(2 + iv_block4.frame.origin.x + iv_block4.frame.size.width, iv_block1.frame.origin.y + iv_block1.frame.size.height + 2, cornerView.frame.size.width / 2, 100);
+    iv_block5.frame = CGRectMake(2 + iv_block4.frame.origin.x + iv_block4.frame.size.width, iv_block1.frame.origin.y + iv_block1.frame.size.height + 2, _cornerView.frame.size.width / 2, 100);
     iv_block5.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
-    [cornerView addSubview:iv_block5];
+    [_cornerView addSubview:iv_block5];
 
     UIButton *btn_block5 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn_block5.frame = iv_block5.frame;
@@ -176,12 +172,12 @@
     //    [btn_block5 setImage:[UIImage imageNamed:@"toppic02.png"] forState:UIControlStateNormal];
     //    [btn_block5 setImage:[UIImage imageNamed:@"toppic02_push.png"] forState:UIControlStateHighlighted];
     btn_block5.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [cornerView addSubview:btn_block5];
+    [_cornerView addSubview:btn_block5];
 
     //RECOMMEND ITEM
     UIView* view_RecommendItem = [[UIView alloc] initWithFrame:CGRectMake(0, btn_block4.frame.origin.y + btn_block4.frame.size.height + 2, contentView.frame.size.width, 230)];
     view_RecommendItem.backgroundColor = [UIColor clearColor];
-    [cornerView addSubview:view_RecommendItem];
+    [_cornerView addSubview:view_RecommendItem];
 
     //RECOMMEND TITLE
     UILabel *lbl_RecommendTitle = [[UILabel alloc] init];
@@ -197,7 +193,7 @@
     UIImage *img_recommend1 = [UIImage imageNamed:@"unavailable.gif"];
     UIImageView* iv_Recommend1 = [[UIImageView alloc] init];
     iv_Recommend1.contentMode = UIViewContentModeScaleAspectFit;
-    iv_Recommend1.frame = CGRectMake(10, lbl_RecommendTitle.frame.origin.y + lbl_RecommendTitle.frame.size.height, (cornerView.frame.size.width - 20) / 3, 100);
+    iv_Recommend1.frame = CGRectMake(10, lbl_RecommendTitle.frame.origin.y + lbl_RecommendTitle.frame.size.height, (_cornerView.frame.size.width - 20) / 3, 100);
     iv_Recommend1.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
     [view_RecommendItem addSubview:iv_Recommend1];
 
@@ -214,7 +210,7 @@
     UIImage *img_recommend2 = [UIImage imageNamed:@"unavailable.gif"];
     UIImageView* iv_Recommend2 = [[UIImageView alloc] init];
     iv_Recommend2.contentMode = UIViewContentModeScaleAspectFit;
-    iv_Recommend2.frame = CGRectMake(2 + iv_Recommend1.frame.origin.x + iv_Recommend1.frame.size.width, lbl_RecommendTitle.frame.origin.y + lbl_RecommendTitle.frame.size.height, (cornerView.frame.size.width - 20)/ 3, 100);
+    iv_Recommend2.frame = CGRectMake(2 + iv_Recommend1.frame.origin.x + iv_Recommend1.frame.size.width, lbl_RecommendTitle.frame.origin.y + lbl_RecommendTitle.frame.size.height, (_cornerView.frame.size.width - 20)/ 3, 100);
     iv_Recommend2.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
     [view_RecommendItem addSubview:iv_Recommend2];
 
@@ -231,7 +227,7 @@
     UIImage *img_recommend3 = [UIImage imageNamed:@"unavailable.gif"];
     UIImageView* iv_Recommend3 = [[UIImageView alloc] init];
     iv_Recommend3.contentMode = UIViewContentModeScaleAspectFit;
-    iv_Recommend3.frame = CGRectMake(2 + iv_Recommend2.frame.origin.x + iv_Recommend2.frame.size.width, lbl_RecommendTitle.frame.origin.y + lbl_RecommendTitle.frame.size.height, (cornerView.frame.size.width - 20) / 3, 100);
+    iv_Recommend3.frame = CGRectMake(2 + iv_Recommend2.frame.origin.x + iv_Recommend2.frame.size.width, lbl_RecommendTitle.frame.origin.y + lbl_RecommendTitle.frame.size.height, (_cornerView.frame.size.width - 20) / 3, 100);
     iv_Recommend3.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
     [view_RecommendItem addSubview:iv_Recommend3];
 
@@ -249,7 +245,7 @@
     UIImage *img_recommend4 = [UIImage imageNamed:@"unavailable.gif"];
     UIImageView* iv_Recommend4 = [[UIImageView alloc] init];
     iv_Recommend4.contentMode = UIViewContentModeScaleAspectFit;
-    iv_Recommend4.frame = CGRectMake(10, iv_Recommend1.frame.origin.y + iv_Recommend1.frame.size.height, (cornerView.frame.size.width - 20) / 3, 100);
+    iv_Recommend4.frame = CGRectMake(10, iv_Recommend1.frame.origin.y + iv_Recommend1.frame.size.height, (_cornerView.frame.size.width - 20) / 3, 100);
     iv_Recommend4.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
     [view_RecommendItem addSubview:iv_Recommend4];
 
@@ -266,7 +262,7 @@
     UIImage *img_recommend5 = [UIImage imageNamed:@"unavailable.gif"];
     UIImageView* iv_Recommend5 = [[UIImageView alloc] init];
     iv_Recommend5.contentMode = UIViewContentModeScaleAspectFit;
-    iv_Recommend5.frame = CGRectMake(2 + iv_Recommend4.frame.origin.x + iv_Recommend4.frame.size.width, iv_Recommend1.frame.origin.y + iv_Recommend1.frame.size.height, (cornerView.frame.size.width - 20)/ 3, 100);
+    iv_Recommend5.frame = CGRectMake(2 + iv_Recommend4.frame.origin.x + iv_Recommend4.frame.size.width, iv_Recommend1.frame.origin.y + iv_Recommend1.frame.size.height, (_cornerView.frame.size.width - 20)/ 3, 100);
     iv_Recommend5.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
     [view_RecommendItem addSubview:iv_Recommend5];
 
@@ -283,7 +279,7 @@
     UIImage *img_recommend6 = [UIImage imageNamed:@"unavailable.gif"];
     UIImageView* iv_Recommend6 = [[UIImageView alloc] init];
     iv_Recommend6.contentMode = UIViewContentModeScaleAspectFit;
-    iv_Recommend6.frame = CGRectMake(2 + iv_Recommend5.frame.origin.x + iv_Recommend5.frame.size.width, iv_Recommend1.frame.origin.y + iv_Recommend1.frame.size.height, (cornerView.frame.size.width - 20) / 3, 100);
+    iv_Recommend6.frame = CGRectMake(2 + iv_Recommend5.frame.origin.x + iv_Recommend5.frame.size.width, iv_Recommend1.frame.origin.y + iv_Recommend1.frame.size.height, (_cornerView.frame.size.width - 20) / 3, 100);
     iv_Recommend6.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
     [view_RecommendItem addSubview:iv_Recommend6];
 
@@ -300,21 +296,12 @@
     
 
     //スクロールビュー大きさ再設定
-    scr_inView.frame = CGRectMake(0, 0, contentView.frame.size.width, view_RecommendItem.frame.origin.y + view_RecommendItem.frame.size.height + 35);
-    _scr_rootview.contentSize = scr_inView.bounds.size;
-}
-
--(void)viewDidLayoutSubviews {
-
-    [super viewDidLayoutSubviews];
-
-    //スクロールビュー大きさ再設定
-//    scr_inView.frame = CGRectMake(0, 0, contentView.frame.size.width, view_RecommendItem.frame.origin.y + view_RecommendItem.frame.size.height + 35);
-//    _scr_rootview.contentSize = scr_inView.bounds.size;
+    _scr_inView.frame = CGRectMake(0, 0, contentView.frame.size.width, view_RecommendItem.frame.origin.y + view_RecommendItem.frame.size.height + 35);
+    _scr_rootview.contentSize = _scr_inView.bounds.size;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    
+
     [super viewWillAppear:animated];
 
     //🔵設定ボタン表示設定
@@ -322,8 +309,18 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    
+
     [super viewDidAppear:animated];
+}
+
+- (void)didReceiveMemoryWarning {
+
+    [super didReceiveMemoryWarning];
+}
+
+-(void)viewDidLayoutSubviews {
+
+    [super viewDidLayoutSubviews];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -345,63 +342,20 @@
     }
 }
 
-#pragma mark - TopImageDelegate
 - (void)showWebView:(NSString *)text {
-    
+/*
     MPHomeWebViewViewController *webViewVC = [[MPHomeWebViewViewController alloc] initWithNibName:@"MPHomeWebViewViewController" bundle:nil];
     webViewVC.linkUrl = text;
     [self.navigationController pushViewController:webViewVC animated:YES];
-}
-
-- (void)bounceOutAnimationStoped:(UIView*)view {
-    
-    [UIView animateWithDuration:0.1 animations:
-     ^(void){
-         view.transform = CGAffineTransformScale(CGAffineTransformIdentity,0.9, 0.9);
-         view.alpha = 1;
-     }
-                     completion:^(BOOL finished){
-                         [self bounceInAnimationStoped:view];
-                     }];
-}
-
-- (void)bounceInAnimationStoped:(UIView*)view {
-    
-    [UIView animateWithDuration:0.1 animations:
-     ^(void){
-         view.transform = CGAffineTransformScale(CGAffineTransformIdentity,1, 1);
-         view.alpha = 1;
-     }
-                     completion:^(BOOL finished){
-                         [self animationStoped];
-                         
-                     }];
-}
-
-- (void)animationStoped {
-}
-
-#pragma mark - ManagerDownloadDelegate
-- (void)downloadDataSuccess:(DownloadParam *)param {
-}
-
-- (void)downloadDataFail:(DownloadParam *)param {
-}
-
-/*
--(void)push_toppics:(UIButton*)button {
-    
-    //メニュー表示
-    MPHomeMenuViewController *menuDetailVC = [[MPHomeMenuViewController alloc] initWithNibName:@"MPHomeMenuViewController" bundle:nil];
-    [self.navigationController pushViewController:menuDetailVC animated:YES];
-}
 */
+}
+
+- (void)backButtonClicked:(UIButton *)sender {
+
+}
 
 -(void)push_block1:(UIButton*)button {
 
-    //お好み焼の焼き方画面
-//    MPHomeOkonomiViewController *OkonomiVC = [[MPHomeOkonomiViewController alloc] initWithNibName:@"MPHomeOkonomiViewController" bundle:nil];
-//    [self.navigationController pushViewController:OkonomiVC animated:YES];
 }
 
 -(void)push_block2:(UIButton*)button {
@@ -441,23 +395,26 @@
 }
 
 -(void)push_recomend6:(UIButton*)button {
-
+    
 }
 
+#pragma mark - ManagerDownloadDelegate
+- (void)downloadDataSuccess:(DownloadParam *)param {
 
-/*
--(void)push_curpon:(UIButton*)button {
-    
-    //クーポン画面
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setSelectedIndex:2];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] selectTab:3];
-    [self.navigationController popViewControllerAnimated:YES];
+    switch (param.request_type) {
+        case RequestType_GET_LIST_COUPON:
+        {
+
+
+        }
+            break;
+
+        default:
+            break;
+    }
 }
-*/
 
-- (void)didReceiveMemoryWarning {
-    
-    [super didReceiveMemoryWarning];
+- (void)downloadDataFail:(DownloadParam *)param {
 }
 
 @end

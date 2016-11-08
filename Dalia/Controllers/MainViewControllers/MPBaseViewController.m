@@ -73,9 +73,9 @@
     //基本ナビゲーション作成
     [self.navigationController setNavigationBarHidden:YES];
     basic_navigationView = [[UIImageView alloc] init];
-    [basic_navigationView setBackgroundColor:[UIColor clearColor]];
+    [basic_navigationView setBackgroundColor:[UIColor whiteColor]];
     [basic_navigationView setUserInteractionEnabled:YES];
-    [basic_navigationView setImage:[UIImage imageNamed:@"basic_navigation_back.png"]];
+//    [basic_navigationView setImage:[UIImage imageNamed:@"basic_navigation_back.png"]];
     CGRect basic_frameNavigationView = basic_navigationView.frame;
     basic_frameNavigationView.origin.x = FRAME_ORGIN;
     basic_frameNavigationView.origin.y = FRAME_ORGIN + statusHeight;

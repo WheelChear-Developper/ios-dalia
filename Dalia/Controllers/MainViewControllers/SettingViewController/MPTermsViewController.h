@@ -2,12 +2,13 @@
 //  MPTermsViewController.h
 //  Misepuri
 //
-//  Created by 3SI-TUYENBQ on 11/29/13.
-//  Copyright (c) 2013 3SI-TUYENBQ. All rights reserved.
+//  Created by M.Amatani on 2016/11/02.
+//  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
 #import "MPBaseViewController.h"
 #import "ManagerDownload.h"
+#import "MPConfigObject.h"
 
 @interface MPTermsViewController : MPBaseViewController<ManagerDownloadDelegate>
 {

@@ -8,7 +8,6 @@
 
 #import "MPFunctionViewController.h"
 #import "MPTabBarViewController.h"
-#import "MPCouponShareViewController.h"
 #import "MPFunctionViewController+WebViewBottomBar.h"
 
 @interface MPFunctionViewController ()
@@ -217,10 +216,11 @@
 
 #pragma mark - MPCouponShareViewDelegate
 - (void)getCouponShare:(MPCouponObject *)object {
-    
+/*
     MPCouponShareViewController *couponShareViewController = [[MPCouponShareViewController alloc] initWithNibName:@"MPCouponShareViewController" bundle:nil];
     [couponShareViewController setData:object];
     [self.navigationController pushViewController:couponShareViewController animated:YES];
+*/
 }
 
 - (void)getTaskWithFunctions:(ElevenFunctionType)type {

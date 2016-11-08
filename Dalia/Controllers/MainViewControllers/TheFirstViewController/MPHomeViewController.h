@@ -2,31 +2,26 @@
 //  MPHomeViewController.h
 //  Misepuri
 //
-//  Created by TUYENBQ on 11/25/13.
-//  Copyright (c) 2013 3SI-TUYENBQ. All rights reserved.
+//  Created by M.Amatani on 2016/11/02.
+//  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
 #import "MPBaseViewController.h"
+#import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
 #import "MPTopImagesView.h"
+#import "MPConfigObject.h"
 #import "Configuration.h"
-#import "TheUserInfoViewController.h"
-#import "MPHomeMenuViewController.h"
-#import "MPHomeOkonomiViewController.h"
-#import "MPHomeMonjyaViewController.h"
-#import "MPHomeWebViewViewController.h"
-#import "MPNewHomeObject.h"
+
 //#import "DeployGateSDK/DeployGateSDK.h"
 
-@interface MPHomeViewController : MPBaseViewController<ManagerDownloadDelegate, MPTopImagesViewDelegate, TheUserInfoViewControllerDelegate ,UIScrollViewDelegate>
+@interface MPHomeViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate>
 {
     UIScrollView* _scr_rootview;
-    CGPoint scrollBeginingPoint;
-    UIView *scr_inView;
-    UIView *cornerView;
+    UIView *_scr_inView;
+    UIView *_cornerView;
     MPTopImagesView *topImageView;
+    CGPoint scrollBeginingPoint;
 }
 
 @end

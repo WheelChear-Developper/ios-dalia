@@ -2,14 +2,16 @@
 //  SettingViewController.h
 //  Misepuri
 //
-//  Created by TUYENBQ on 11/25/13.
-//  Copyright (c) 2013 3SI-TUYENBQ. All rights reserved.
+//  Created by M.Amatani on 2016/11/02.
+//  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "MPBaseViewController.h"
+#import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
 #import "UserSettingViewController.h"
+#import "MPTermsViewController.h"
+#import "MPTransferViewController.h"
 
 @interface SettingViewController : MPBaseViewController <ManagerDownloadDelegate>
 {

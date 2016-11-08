@@ -2,12 +2,11 @@
 //  MPTransferViewController.m
 //  
 //
-//  Created by Fujii-iMac on 2015/12/12.
-//
+//  Created by M.Amatani on 2016/11/02.
+//  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
 #import "MPTransferViewController.h"
-#import "MPTabBarViewController.h"
 
 @interface MPTransferViewController () <UITextFieldDelegate> {
     NSString* transfer_code;
