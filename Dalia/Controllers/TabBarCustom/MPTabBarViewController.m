@@ -150,15 +150,15 @@
     [self.view addSubview:view_custom_navigationView];
 
     //カスタムナビゲーション背景設定
-    UIImage *img_custom_navigationView_back = [UIImage imageNamed:@"navigation_back.png"];
+    UIImage *img_custom_navigationView_back = [UIImage imageNamed:@"icon_menu.png"];
     UIImageView* iv_custom_navigationView_back = [[UIImageView alloc] initWithImage:img_custom_navigationView_back];
     iv_custom_navigationView_back.contentMode = UIViewContentModeScaleAspectFit;
-    iv_custom_navigationView_back.frame = CGRectMake(0, 0, view_custom_navigationView.frame.size.width, view_custom_navigationView.frame.size.height);
+    iv_custom_navigationView_back.frame = CGRectMake(5, 5, 44 - 10, view_custom_navigationView.frame.size.height - 10);
     [view_custom_navigationView addSubview:iv_custom_navigationView_back];
 
     //カスタムナビゲーションタイトル画像設定
     UIImageView *iv_custom_navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((custom_frameNavigationView.size.width - ICON_WIDTH)/2, (custom_frameNavigationView.size.height - ICON_HEIGHT)/2, ICON_WIDTH, ICON_HEIGHT)];
-//    [iv_custom_navigationIcon setImage:[UIImage imageNamed:@"navigation_icon.png"]];
+    [iv_custom_navigationIcon setImage:[UIImage imageNamed:@"header_logo.png"]];
     [iv_custom_navigationIcon setContentMode:UIViewContentModeScaleAspectFit];
     [view_custom_navigationView addSubview:iv_custom_navigationIcon];
 
@@ -319,32 +319,32 @@
         switch (i) {
                 
             case 0:{
-                //urlImageNomal = @"1.png";
-                urlImageSelected = @"1_click.png";
+                urlImageNomal = @"footer_btn_home.png";
+                urlImageSelected = @"footer_btn_home_on.png";
                 break;
             }
                 
             case 1:{
-                //urlImageNomal = @"2.png";
-                urlImageSelected = @"2_click.png";
+                urlImageNomal = @"footer_btn_coupon.png";
+                urlImageSelected = @"footer_btn_coupon_on.png";
                 break;
             }
                 
             case 2:{
-                //urlImageNomal = @"3.png";
-                urlImageSelected = @"3_click.png";
+                urlImageNomal = @"footer_btn_menu.png";
+                urlImageSelected = @"footer_btn_menu_on.png";
                 break;
             }
                 
             case 3:{
-                //urlImageNomal = @"4.png";
-                urlImageSelected = @"4_click.png";
+                urlImageNomal = @"footer_btn_access.png";
+                urlImageSelected = @"footer_btn_access_on.png";
                 break;
             }
                 
             case 4:{
-                //urlImageNomal = @"5.png";
-                urlImageSelected = @"5_click.png";
+                urlImageNomal = @"footer_btn_setting.png";
+                urlImageSelected = @"footer_btn_setting_on.png";
                 break;
             }
                 
