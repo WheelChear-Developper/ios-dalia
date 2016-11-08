@@ -135,6 +135,8 @@
 		103026F01DD19EAD00F266D8 /* MPTopImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1030268D1DD19EAD00F266D8 /* MPTopImagesView.m */; };
 		103026F11DD19EAD00F266D8 /* MPTopImagesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1030268E1DD19EAD00F266D8 /* MPTopImagesView.xib */; };
 		103026F41DD1A36200F266D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103026F31DD1A36200F266D8 /* Images.xcassets */; };
+		103E257C1DD2261F00988A18 /* ttl_recommenditem.png in Resources */ = {isa = PBXBuildFile; fileRef = 103E257B1DD2261F00988A18 /* ttl_recommenditem.png */; };
+		103E257E1DD233EA00988A18 /* ttl_more.png in Resources */ = {isa = PBXBuildFile; fileRef = 103E257D1DD233EA00988A18 /* ttl_more.png */; };
 		272CCCBD1DCAEF12006BC4EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 272CCCBC1DCAEF12006BC4EB /* main.m */; };
 		272CCD801DCAF096006BC4EB /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 272CCCD51DCAF096006BC4EB /* Configuration.m */; };
 		272CCD811DCAF096006BC4EB /* DownloadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 272CCCD81DCAF096006BC4EB /* DownloadParam.m */; };
@@ -365,6 +367,8 @@
 		1030268E1DD19EAD00F266D8 /* MPTopImagesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTopImagesView.xib; sourceTree = "<group>"; };
 		103026F21DD1A1B100F266D8 /* Dalia_production.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Dalia_production.entitlements; sourceTree = "<group>"; };
 		103026F31DD1A36200F266D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		103E257B1DD2261F00988A18 /* ttl_recommenditem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ttl_recommenditem.png; sourceTree = "<group>"; };
+		103E257D1DD233EA00988A18 /* ttl_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ttl_more.png; sourceTree = "<group>"; };
 		272CCCB81DCAEF12006BC4EB /* Dalia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dalia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		272CCCBC1DCAEF12006BC4EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		272CCCCC1DCAEF12006BC4EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -610,6 +614,8 @@
 		101308DD1DD1D93200E8C9E6 /* image_TheFirstViewController */ = {
 			isa = PBXGroup;
 			children = (
+				103E257D1DD233EA00988A18 /* ttl_more.png */,
+				103E257B1DD2261F00988A18 /* ttl_recommenditem.png */,
 			);
 			path = image_TheFirstViewController;
 			sourceTree = "<group>";
@@ -983,11 +989,11 @@
 				101308CC1DD1D93200E8C9E6 /* image_Navigation */,
 				101308D71DD1D93200E8C9E6 /* image_Other */,
 				101308D91DD1D93200E8C9E6 /* image_Tab */,
-				101308DC1DD1D93200E8C9E6 /* image_TheFifthViewController */,
 				101308DD1DD1D93200E8C9E6 /* image_TheFirstViewController */,
-				101308DE1DD1D93200E8C9E6 /* image_TheFourthViewController */,
 				101308DF1DD1D93200E8C9E6 /* image_TheSecondViewController */,
 				101308E01DD1D93200E8C9E6 /* image_TheThirdViewController */,
+				101308DE1DD1D93200E8C9E6 /* image_TheFourthViewController */,
+				101308DC1DD1D93200E8C9E6 /* image_TheFifthViewController */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -1433,9 +1439,11 @@
 				10130AC81DD1E89A00E8C9E6 /* footer_btn_coupon_on@2x.png in Resources */,
 				10130ADA1DD1ECDD00E8C9E6 /* icon_menu.png in Resources */,
 				101308C01DD1C36200E8C9E6 /* MPTheFourthViewController.xib in Resources */,
+				103E257E1DD233EA00988A18 /* ttl_more.png in Resources */,
 				10130AD11DD1E89A00E8C9E6 /* footer_btn_menu.jpg in Resources */,
 				103026961DD19EAD00F266D8 /* MPTransferViewController.xib in Resources */,
 				10130AD01DD1E89A00E8C9E6 /* footer_btn_menu_on@2x.png in Resources */,
+				103E257C1DD2261F00988A18 /* ttl_recommenditem.png in Resources */,
 				10130AD91DD1ECDD00E8C9E6 /* header_logo.png in Resources */,
 				103026E31DD19EAD00F266D8 /* MPListCell.xib in Resources */,
 				103026DD1DD19EAD00F266D8 /* MPShopDetailCell.xib in Resources */,

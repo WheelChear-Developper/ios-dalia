@@ -86,8 +86,8 @@
     float topImageHeight = 0;
     float newMessageHeight,listFunHeight = 0;
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
-        topImageHeight = heightCalc*3.0;
-        newMessageHeight = heightCalc *3.0;
+        topImageHeight = heightCalc * 2.5;
+        newMessageHeight = heightCalc * 2.5;
         listFunHeight = heightCalc;
     }else{
         topImageHeight = heightCalc*1.85;
@@ -179,25 +179,24 @@
     [_cornerView addSubview:btn_block5];
 
     //RECOMMEND ITEM
-    UIView* view_RecommendItem = [[UIView alloc] initWithFrame:CGRectMake(0, btn_block4.frame.origin.y + btn_block4.frame.size.height + 2, contentView.frame.size.width, 230)];
+    UIView* view_RecommendItem = [[UIView alloc] initWithFrame:CGRectMake(0, btn_block4.frame.origin.y + btn_block4.frame.size.height + 2 + 10, contentView.frame.size.width, 260)];
     view_RecommendItem.backgroundColor = [UIColor clearColor];
     [_cornerView addSubview:view_RecommendItem];
 
     //RECOMMEND TITLE
-    UILabel *lbl_RecommendTitle = [[UILabel alloc] init];
-    lbl_RecommendTitle.frame = CGRectMake(10, 5, view_RecommendItem.frame.size.width - 20, 24);
-    lbl_RecommendTitle.backgroundColor = [UIColor clearColor];
-    lbl_RecommendTitle.textColor = [UIColor blackColor];
-    lbl_RecommendTitle.font = [UIFont fontWithName:@"HelveticaNeue" size:14];
-    lbl_RecommendTitle.textAlignment = NSTextAlignmentLeft;
-    lbl_RecommendTitle.text = @"RECOMMEND ITEM";
-    [view_RecommendItem addSubview:lbl_RecommendTitle];
+    UIImage *img_recommendTitle = [UIImage imageNamed:@"ttl_recommenditem.png"];
+    CGFloat cgrange_toppics = (_cornerView.frame.size.width / 2 - 20) / img_recommendTitle.size.width;
+
+    UIImageView* iv_RecommendTitle = [[UIImageView alloc] initWithImage:img_recommendTitle];
+    iv_RecommendTitle.contentMode = UIViewContentModeScaleAspectFit;
+    iv_RecommendTitle.frame = CGRectMake(10, 5, _cornerView.frame.size.width / 2 - 20, img_recommendTitle.size.height *cgrange_toppics);
+    [view_RecommendItem addSubview:iv_RecommendTitle];
 
     // RECOMMENDブロック1設定
     UIImage *img_recommend1 = [UIImage imageNamed:@"unavailable.gif"];
     UIImageView* iv_Recommend1 = [[UIImageView alloc] init];
     iv_Recommend1.contentMode = UIViewContentModeScaleAspectFit;
-    iv_Recommend1.frame = CGRectMake(10, lbl_RecommendTitle.frame.origin.y + lbl_RecommendTitle.frame.size.height, (_cornerView.frame.size.width - 20) / 3, 100);
+    iv_Recommend1.frame = CGRectMake(10, iv_RecommendTitle.frame.origin.y + iv_RecommendTitle.frame.size.height + 5, (_cornerView.frame.size.width - 20) / 3, 100);
     iv_Recommend1.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
     [view_RecommendItem addSubview:iv_Recommend1];
 
@@ -214,7 +213,7 @@
     UIImage *img_recommend2 = [UIImage imageNamed:@"unavailable.gif"];
     UIImageView* iv_Recommend2 = [[UIImageView alloc] init];
     iv_Recommend2.contentMode = UIViewContentModeScaleAspectFit;
-    iv_Recommend2.frame = CGRectMake(2 + iv_Recommend1.frame.origin.x + iv_Recommend1.frame.size.width, lbl_RecommendTitle.frame.origin.y + lbl_RecommendTitle.frame.size.height, (_cornerView.frame.size.width - 20)/ 3, 100);
+    iv_Recommend2.frame = CGRectMake(2 + iv_Recommend1.frame.origin.x + iv_Recommend1.frame.size.width, iv_RecommendTitle.frame.origin.y + iv_RecommendTitle.frame.size.height + 5, (_cornerView.frame.size.width - 20)/ 3, 100);
     iv_Recommend2.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
     [view_RecommendItem addSubview:iv_Recommend2];
 
@@ -231,7 +230,7 @@
     UIImage *img_recommend3 = [UIImage imageNamed:@"unavailable.gif"];
     UIImageView* iv_Recommend3 = [[UIImageView alloc] init];
     iv_Recommend3.contentMode = UIViewContentModeScaleAspectFit;
-    iv_Recommend3.frame = CGRectMake(2 + iv_Recommend2.frame.origin.x + iv_Recommend2.frame.size.width, lbl_RecommendTitle.frame.origin.y + lbl_RecommendTitle.frame.size.height, (_cornerView.frame.size.width - 20) / 3, 100);
+    iv_Recommend3.frame = CGRectMake(2 + iv_Recommend2.frame.origin.x + iv_Recommend2.frame.size.width, iv_RecommendTitle.frame.origin.y + iv_RecommendTitle.frame.size.height + 5, (_cornerView.frame.size.width - 20) / 3, 100);
     iv_Recommend3.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
     [view_RecommendItem addSubview:iv_Recommend3];
 
@@ -249,7 +248,7 @@
     UIImage *img_recommend4 = [UIImage imageNamed:@"unavailable.gif"];
     UIImageView* iv_Recommend4 = [[UIImageView alloc] init];
     iv_Recommend4.contentMode = UIViewContentModeScaleAspectFit;
-    iv_Recommend4.frame = CGRectMake(10, iv_Recommend1.frame.origin.y + iv_Recommend1.frame.size.height, (_cornerView.frame.size.width - 20) / 3, 100);
+    iv_Recommend4.frame = CGRectMake(10, iv_Recommend1.frame.origin.y + iv_Recommend1.frame.size.height + 2, (_cornerView.frame.size.width - 20) / 3, 100);
     iv_Recommend4.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
     [view_RecommendItem addSubview:iv_Recommend4];
 
@@ -266,7 +265,7 @@
     UIImage *img_recommend5 = [UIImage imageNamed:@"unavailable.gif"];
     UIImageView* iv_Recommend5 = [[UIImageView alloc] init];
     iv_Recommend5.contentMode = UIViewContentModeScaleAspectFit;
-    iv_Recommend5.frame = CGRectMake(2 + iv_Recommend4.frame.origin.x + iv_Recommend4.frame.size.width, iv_Recommend1.frame.origin.y + iv_Recommend1.frame.size.height, (_cornerView.frame.size.width - 20)/ 3, 100);
+    iv_Recommend5.frame = CGRectMake(2 + iv_Recommend4.frame.origin.x + iv_Recommend4.frame.size.width, iv_Recommend1.frame.origin.y + iv_Recommend1.frame.size.height + 2, (_cornerView.frame.size.width - 20)/ 3, 100);
     iv_Recommend5.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
     [view_RecommendItem addSubview:iv_Recommend5];
 
@@ -283,7 +282,7 @@
     UIImage *img_recommend6 = [UIImage imageNamed:@"unavailable.gif"];
     UIImageView* iv_Recommend6 = [[UIImageView alloc] init];
     iv_Recommend6.contentMode = UIViewContentModeScaleAspectFit;
-    iv_Recommend6.frame = CGRectMake(2 + iv_Recommend5.frame.origin.x + iv_Recommend5.frame.size.width, iv_Recommend1.frame.origin.y + iv_Recommend1.frame.size.height, (_cornerView.frame.size.width - 20) / 3, 100);
+    iv_Recommend6.frame = CGRectMake(2 + iv_Recommend5.frame.origin.x + iv_Recommend5.frame.size.width, iv_Recommend1.frame.origin.y + iv_Recommend1.frame.size.height + 2, (_cornerView.frame.size.width - 20) / 3, 100);
     iv_Recommend6.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
     [view_RecommendItem addSubview:iv_Recommend6];
 
@@ -296,11 +295,31 @@
     //    btn_Recommend1.adjustsImageWhenHighlighted = NO;
     [view_RecommendItem addSubview:btn_Recommend6];
 
+    // RECOMMEND MORE
+    UIImage *img_recommendMore = [UIImage imageNamed:@"ttl_more.png"];
+    CGFloat cgrange_recommendMore = (_cornerView.frame.size.width / 5) / img_recommendMore.size.width;
 
+    UIImageView* iv_RecommendMore = [[UIImageView alloc] initWithImage:img_recommendMore];
+    iv_RecommendMore.contentMode = UIViewContentModeScaleAspectFit;
+    iv_RecommendMore.frame = CGRectMake(_cornerView.frame.size.width - (_cornerView.frame.size.width / 5) - 10, iv_Recommend4.frame.origin.y + iv_Recommend4.frame.size.height + 10, _cornerView.frame.size.width / 5, img_recommendTitle.size.height * cgrange_recommendMore);
+
+    UIButton *btn_RecommendMore = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn_RecommendMore.frame = iv_RecommendMore.frame;
+    btn_RecommendMore.backgroundColor = [UIColor clearColor];
+    btn_RecommendMore.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [btn_RecommendMore setImage:img_recommendMore forState:UIControlStateNormal];
+    [btn_RecommendMore addTarget:self action:@selector(push_recomendMore:) forControlEvents:UIControlEventTouchUpInside];
+    //    btn_RecommendMore.adjustsImageWhenHighlighted = NO;
+    [view_RecommendItem addSubview:btn_RecommendMore];
+
+    //RECOMMEND MENU
+    UIView* view_RecommendMenu = [[UIView alloc] initWithFrame:CGRectMake(0, view_RecommendItem.frame.origin.y + view_RecommendItem.frame.size.height + 2, contentView.frame.size.width, 230)];
+    view_RecommendMenu.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+    [_cornerView addSubview:view_RecommendMenu];
     
 
     //スクロールビュー大きさ再設定
-    _scr_inView.frame = CGRectMake(0, 0, contentView.frame.size.width, view_RecommendItem.frame.origin.y + view_RecommendItem.frame.size.height + 35);
+    _scr_inView.frame = CGRectMake(0, 0, contentView.frame.size.width, view_RecommendMenu.frame.origin.y + view_RecommendMenu.frame.size.height + 35);
     _scr_rootview.contentSize = _scr_inView.bounds.size;
 }
 
