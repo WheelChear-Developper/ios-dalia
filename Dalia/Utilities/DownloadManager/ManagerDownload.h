@@ -47,7 +47,6 @@
 - (void) getDetailCouponShare: (NSString*) deviceID withAppID: (NSString*) appID withCoupon:(MPCouponObject*) coupon delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 - (void) getDetailCouponStamp: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 - (void) getRecommendProduct: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
-- (void) getListVideo: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 - (void) getLink: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 - (void) getBookLink: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 - (void) getCompany: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;

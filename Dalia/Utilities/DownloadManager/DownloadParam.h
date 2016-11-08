@@ -37,7 +37,6 @@ typedef NS_ENUM(NSInteger, RequestType) {
     RequestType_GET_DETAIL_COUPON_STAMP,
     RequestType_SET_STAMP,
     RequestType_RECOMMEND_PRODUCT,
-    RequestType_GET_LIST_VIDEO,
     RequestType_GET_LINK,
     RequestType_GET_BOOK_LINK,
     RequestType_GET_COMPANY,

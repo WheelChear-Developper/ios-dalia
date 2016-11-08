@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="couponShareIdentifier" rowHeight="224" id="GRr-w1-sA6" customClass="MPCouponShareCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="224"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GRr-w1-sA6" id="gCh-Af-OIT">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="223.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8WU-7n-q4T">
+                        <rect key="frame" x="11" y="4" width="214" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <string key="text" base64-UTF8="YES">
+44OJ44Oq44Oz44Kv5Y2K6aGN44Kv44O844Od44OzIOODieODquODs+OCr+WNiumhjeOCr+ODvOODneOD
+syDjg4njg6rjg7Pjgq/ljYrpoY3jgq/jg7zjg53jg7MNCgANCgA
+</string>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="11"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w0e-fy-Ae2">
+                        <rect key="frame" x="5" y="37" width="117" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <string key="text" base64-UTF8="YES">
+44CQ44GU5Yip55So5Y+v6IO95pyf6ZaT44CRAA
+</string>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p1A-4Z-SVN">
+                        <rect key="frame" x="5" y="73" width="77" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <string key="text" base64-UTF8="YES">
+44CQ5Yip55So5p2h5Lu244CRDQoAA
+</string>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3OM-gz-C0S">
+                        <rect key="frame" x="11" y="51" width="117" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <string key="text" base64-UTF8="YES">
+55m66KGM44GL44KJMzDml6XplpMAA
+</string>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UJZ-Jv-moh">
+                        <rect key="frame" x="11" y="89" width="213" height="69"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <string key="text" base64-UTF8="YES">
+44O7MeWbnjHmnprpmZDjgooNCuODuzHjgrDjg6vjg7zjg5cx5p6a44GnT0sNCuODu+OCteODvOODk+OC
+ueOBruS9teeUqOOBr+OBp+OBjeOBi+OBreOBvuOBmQ0K44O75Lya6KiI5pmC44Gr44GU5o+Q56S6DQrj
+g7vnqI7ovrznibnliKXjgrPjg7zjgrnjgajjga7kvbXnlKjkuI3lj68NCgAAA
+</string>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" id="jqL-6k-0z3">
+                        <rect key="frame" x="0.0" y="222" width="320" height="2"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idicator.png" id="QIi-hj-Vv2">
+                        <rect key="frame" x="283" y="101" width="14" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                </subviews>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="conditionLabel" destination="UJZ-Jv-moh" id="GT4-Ie-bsg"/>
+                <outlet property="dueDateLabel" destination="3OM-gz-C0S" id="7Xm-7b-D6i"/>
+                <outlet property="indicatorView" destination="QIi-hj-Vv2" id="kT9-Cb-beO"/>
+                <outlet property="lineView" destination="jqL-6k-0z3" id="PHg-KQ-qlY"/>
+                <outlet property="nameCouponLabel" destination="8WU-7n-q4T" id="cl7-eH-LvB"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="background.png" width="640" height="1136"/>
+        <image name="idicator.png" width="15" height="23"/>
+    </resources>
+</document>

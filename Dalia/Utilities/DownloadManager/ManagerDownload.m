@@ -19,7 +19,6 @@
 #import "MPMenuObject.h"
 #import "MPItemObject.h"
 #import "MPShopObject.h"
-#import "MPVideoObject.h"
 #import "MPApnsObject.h"
 
 @implementation ManagerDownload
@@ -191,10 +190,6 @@
                 
             case RequestType_RECOMMEND_PRODUCT:
                 [self processRecommendProduct:listObject with:parameter];
-                break;
-                
-            case RequestType_GET_LIST_VIDEO:
-                [self processListVideo:listObject with:parameter];
                 break;
                 
             case RequestType_GET_LINK:
@@ -615,23 +610,6 @@
     paramenter.delegate = delegate;
     NSString *strRequest = @"";
     strRequest = [NSString stringWithFormat:BASE_URL,RECOMMENT_PRODUCT];
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
-    [request setHTTPMethod:@"POST"];
-    [Utility setParamWithMethodPost:params forRequest:request];
-    [self baseRequestJSON:request parameter:paramenter];
-}
-
-- (void) getListVideo: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate
-{
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    
-    [params setValue:deviceID forKey:@"device_id"];
-    [params setValue:appID forKey:@"app_id"];
-    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_LIST_VIDEO];
-    paramenter.delegate = delegate;
-    NSString *strRequest = @"";
-    strRequest = [NSString stringWithFormat:BASE_URL,GET_LIST_VIDEO];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
     [request setHTTPMethod:@"POST"];
@@ -1185,34 +1163,6 @@
         itemObj.order_by = [[Utility checkNULL:[dic objectForKey:@"order_by"]] integerValue];
         itemObj.likedd = [[Utility checkNULL:[dic objectForKey:@"liked"]] integerValue];
         [param.listData addObject:itemObj];
-    }
-}
-
-- (void) processListVideo:(NSArray *)listObject with:(DownloadParam *)param{
-    
-    for (NSDictionary *dic in listObject) {
-        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
-            return;
-        }
-        
-        MPVideoObject *videoObj = [[MPVideoObject alloc] init];
-        videoObj.id = [Utility checkNULL:[dic objectForKey:@"id"]];
-        videoObj.title = [Utility checkNULL:[dic objectForKey:@"title"]];
-        videoObj.video_id = [Utility checkNULL:[dic objectForKey:@"video_id"]];
-        videoObj.detail = [Utility checkNULL:[dic objectForKey:@"detail"]];
-        videoObj.published = [Utility checkNULL:[dic objectForKey:@"published"]];
-        if ([[dic objectForKey:@"url_video"] isKindOfClass:[NSArray class]]) {
-            videoObj.url_video = [Utility checkNULL:[[[dic objectForKey:@"url_video"] objectAtIndex:0] objectForKey:@"url"]];
-        }else{
-            videoObj.url_video = @"";
-        }
-        if ([[dic objectForKey:@"thumbnail"] isKindOfClass:[NSArray class]]) {
-            videoObj.thumbnail = [Utility checkNULL:[[[dic objectForKey:@"thumbnail"] objectAtIndex:0] objectForKey:@"url"]];
-        }else{
-            videoObj.thumbnail = @"";
-        }
-        
-        [param.listData addObject:videoObj];
     }
 }
 

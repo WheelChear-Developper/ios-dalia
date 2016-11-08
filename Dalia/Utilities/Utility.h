@@ -38,5 +38,4 @@ typedef NS_ENUM(NSInteger, DEVICE_TYPE) {
 + (NSString*) numberDayOfWeek: (NSDate*) date;
 + (BOOL) compareTwoDate: (NSDate*) date1 withDate: (NSDate*) date2;
 + (long) deviceType;
-+ (void) embedYouTube:(NSString*)url webview: (UIWebView*) videoView frame:(CGRect)frame;
 @end

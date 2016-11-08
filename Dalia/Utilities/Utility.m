@@ -218,28 +218,6 @@
     return deviceType;
 }
 
-#pragma mark - Embed YouTube
-+ (void)embedYouTube:(NSString*)url webview: (UIWebView*) videoView frame:(CGRect)frame {
-    NSString* embedHTML = @"\
-    <html><head>\
-    <style type=\"text/css\">\
-    body {\
-        background-color: transparent;\
-    color: white;\
-    }\
-    </style>\
-    </head><body style=\"margin:0\">\
-    <embed id=\"yt\" src=\"%@\" type=\"%@\" \
-    width=\"%0.0f\" height=\"%0.0f\"></embed>\
-    </body></html>";
-    NSString* html = [NSString stringWithFormat:embedHTML, url,@"application/x-shockwave-flash", frame.size.width, frame.size.height];
-//    if(videoView == nil) {
-//        videoView = [[UIWebView alloc] initWithFrame:frame];
-//        [self.view addSubview:videoView];
-//    }
-    [videoView loadHTMLString:html baseURL:nil];
-}
-
 #pragma mark - Utility
 + (NSString *)stringParamWithMethodHTTPGET:(NSDictionary *)param moreParam:(BOOL)more{
     //NSlog(@"%s",__func__);

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPTermsViewController">
+            <connections>
+                <outlet property="termContent" destination="ZuU-ds-N7X" id="lrK-fY-bap"/>
+                <outlet property="view" destination="1" id="3"/>
+                <outlet property="view_title" destination="bIf-8X-HVN" id="f4n-MC-1Dk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="5d6-Z2-OPM">
+                    <rect key="frame" x="0.0" y="20" width="320" height="647"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3D-Wk-dAf">
+                    <rect key="frame" x="0.0" y="64" width="320" height="554"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIf-8X-HVN">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="cjc-Zb-JYk"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qi3-9W-Hzr">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="利用規約" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYP-HM-UEE">
+                                    <rect key="frame" x="8" y="9" width="304" height="13"/>
+                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="EYP-HM-UEE" firstAttribute="leading" secondItem="Qi3-9W-Hzr" secondAttribute="leading" constant="8" id="cq8-4H-pbU"/>
+                                <constraint firstAttribute="trailing" secondItem="EYP-HM-UEE" secondAttribute="trailing" constant="8" id="fIS-kQ-j99"/>
+                                <constraint firstAttribute="height" constant="30" id="ldZ-yE-eVH"/>
+                                <constraint firstItem="EYP-HM-UEE" firstAttribute="centerY" secondItem="Qi3-9W-Hzr" secondAttribute="centerY" id="z8V-f5-CLp"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="noo-jP-kY5">
+                            <rect key="frame" x="0.0" y="30" width="320" height="524"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dK7-Y7-o3l">
+                                    <rect key="frame" x="10" y="10" width="300" height="504"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuU-ds-N7X">
+                                            <rect key="frame" x="5" y="0.0" width="290" height="504"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <string key="text">[companyName]（以下「当社」といいます）が提供する「xxxx」（以下「本アプリ」といいます）の利用者（以下「ユーザー」といいます）は、当社が以下に定める利用規約（以下「本規約」といいます）に同意のうえ、本アプリを使用するものとします。ユーザーは、事前に本規約を熟読した上で使用するものとし、ユーザーが本アプリを使用した場合には、本規約に同意したものとみなされます。
+
+第１条 （本アプリの使用・削除等）
+本アプリの利用料は無料です。但し、本サービスの利用に伴い発生するパケット料金などの通信料はユーザーの費用負担にて行うものとします。本アプリのインストール・使用・削除は、ユーザーの費用と責任において行うものとします。当社はユーザーに予告なく、本アプリをバージョンアップすることができるものとします。ユーザーは自己の費用と責任において最新バージョンの有無の確認を行い、最新バージョンの本アプリをインストールするものとし、最新バージョンを使用しない場合、本アプリが正常に動作しない場合があることをあらかじめ承諾するものとします。
+
+第２条 （使用許諾）
+当社はユーザーに対して、本規約に基づき、本アプリを非営利目的で使用するための非独占的かつ譲渡不能の使用権を許諾します。
+ユーザーは、本アプリを以下の範囲で使用することができるものとします。
+ユーザーは、本アプリを複製し、改変し、送信可能化し、または送信することはできません。ただし、著作権法上の「私的使用」の範囲における複製は、この限りではないものとします。
+ユーザーは、本アプリをリバース・エンジニアリング、逆コンパイル、逆アセンブルしまたは翻案することはできません。
+本条の規定に違反して問題が発生した場合、ユーザーは、自己の費用と責任においてかかる問題を解決するとともに、当社に何等の迷惑または損害を与えないものとします。
+ユーザーが本規約に違反した場合、当社は当社の判断に基づき、事前にユーザーに通知することなく、当該ユーザーに対する本アプリの使用許諾を終了することができるものとします。
+
+第３条（会員情報）
+ユーザーの会員情報は当社の個人情報保護方針に従い取り扱うものとします。
+当サービスをご利用いただくにあたり、お名前/性別/生年月日/お住まいの郵便番号/お子様のお名前/お子様の生年月日/アプリ利用履歴、その他これらに準ずる情報を収集させて頂く場合があります。
+当社は会員情報を以下の目的で利用できるものとします。
+・ユーザーに対する商品やサービス等に関する情報提供のため。
+・マーケティング活動やサービス改善に利用するため。
+ユーザーがサービス利用停止を希望される場合は本アプリの削除を行ってください。なお、本アプリの削除を行った場合でも当社が既に取得した会員情報は削除されませんのでご了承ください。
+
+第３条 （知的財産権）
+本アプリに含まれる著作権その他のあらゆる知的財産権は、当社または当社がその利用に関する権利の許諾を受けた第三者に帰属します。
+
+第４条 （本サービスの中断・終了等）
+当社は、以下に該当する場合、ユーザーに告知することなく、本サービスの一部若しくはすべてを一時中断、停止する場合があります。
+・システムの保守、更新または弊社が緊急と判断した場合
+・天災、火災、停電等不可抗力によりサービス提供が困難な場合
+・店頭のスタンプ端末及びこれに付随する機器等が利用不能となった場合
+・その他、不測の事態によりサービス提供が困難な場合
+当社は、その裁量で、ユーザーに告知することなく、本サービスの提供を終了することがあります。
+前２項の場合において、ユーザーに損害や不利益が発生しても、当社はその損害につき一切の責任を負わないものとします。
+
+第５条 （禁止事項）
+ユーザーは、本規約に基づいて禁止される他の事項に加え、本アプリの利用にあたって以下の行為を行ってはならないものとします。
+・当社もしくは第三者の著作権を含む一切の権利を侵害し、または当社もしくは第三者に不利益もしくは損害を与える行為、またはその虞のある行為
+・当社または第三者の信用を毀損する行為
+・本アプリを不正に使用する行為
+・本アプリを通じてもしくは本アプリに関連してウィルス等有害なプログラムを使用しまたは提供する行為
+・本アプリ内のスタンプ及びクーポンを改ざん又は不正な手段で取得、利用する行為
+・ユーザーとしての地位、権利又は義務を、第三者に対し譲渡、移転等をする行為
+・法令に違反する、または違反するおそれのある行為
+・その他、当社が不適切と判断する行為
+なお、上記の行為が発覚した場合には、当社は予告なく当該ユーザーの本アプリを利用停止及び会員情報の削除を行う場合があります。
+
+第６条 （保証および免責）
+ユーザーは、本アプリならびに当社が提供する情報に誤り、エラー、バグおよび中断がないこと、または信頼性、正確性、完全性、および有効性について一切保証していないことをあらかじめ承諾するものとします。
+ユーザーは、本アプリを使用したことまたは使用できなかったことから生じうるあらゆる損害・損失、および当社が本アプリまたは本サービスの内容等を変更したことから生じうるあらゆる損害・損失に関して当社は一切の責任を負わないものとします。
+ユーザーは、本アプリに連携して稼動する当社以外の第三者により提供される機能については、各機能の利用規約等に従い利用するものとします。また、ユーザーは、各機能の使用により生じうるあらゆる損害・損失に関して当社を免責するものとします。
+本アプリを使用するにあたり発生したデータ通信等に係る費用は、ユーザーが負担するものとし、当社は一切負担しないものとします。
+
+第７条 （損害賠償）
+ユーザーが、本規約に違反したことにより、当社または第三者に損害を与えた場合、ユーザーはその責任と費用でこれを賠償するものとします。また、ユーザーが本アプリを使用することにより第三者との間で生じたクレーム、紛争等については、ユーザーと当該第三者との間で処理、解決することとし、当社に対して一切迷惑をかけないものとします。
+
+第８条 （本規約の変更）
+当社は、本規約をユーザーに対し予告なしに改訂できるものとします。本規約変更後、ユーザーが本アプリを使用・利用した場合、ユーザーがその変更を承諾したものとみなします。
+
+第９条 （その他）
+本規約は日本国法に基づき解釈されるものとします。
+ユーザーは、許諾ソフトウェアを日本国外に持ち出して使用する場合、適用ある輸出管理規制、法律、命令に従うものとします。
+本規約に関して、当社とユーザーとの間で紛争が生じた場合には、当事者間において誠意をもって協議しその解決に努力するものとします。
+当社とユーザーとの間で、本規約に関し協議が整わず紛争が生じた場合には、当社の本店所在地を管轄する地方裁判所を専属的合意管轄裁判所とします。
+
+以上
+
+改定日　2016年11月1日
+
+[companyName]
+
+</string>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="vOl-TB-smS"/>
+                                            </connections>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="ZuU-ds-N7X" secondAttribute="bottom" id="BVt-Pt-xyA"/>
+                                        <constraint firstItem="ZuU-ds-N7X" firstAttribute="leading" secondItem="dK7-Y7-o3l" secondAttribute="leading" constant="5" id="e39-hY-dTQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="ZuU-ds-N7X" secondAttribute="trailing" constant="5" id="n8M-mh-hc6"/>
+                                        <constraint firstItem="ZuU-ds-N7X" firstAttribute="top" secondItem="dK7-Y7-o3l" secondAttribute="top" id="sHp-tq-k25"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="0.96470588235294119" green="0.89803921568627454" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="dK7-Y7-o3l" secondAttribute="trailing" constant="10" id="MOP-OH-pOC"/>
+                                <constraint firstItem="dK7-Y7-o3l" firstAttribute="top" secondItem="noo-jP-kY5" secondAttribute="top" constant="10" id="STR-us-7td"/>
+                                <constraint firstItem="dK7-Y7-o3l" firstAttribute="leading" secondItem="noo-jP-kY5" secondAttribute="leading" constant="10" id="eLe-i1-fzG"/>
+                                <constraint firstAttribute="bottom" secondItem="dK7-Y7-o3l" secondAttribute="bottom" constant="10" id="tvC-uQ-hcf"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="noo-jP-kY5" secondAttribute="trailing" id="3wQ-ds-SVE"/>
+                        <constraint firstItem="noo-jP-kY5" firstAttribute="leading" secondItem="f3D-Wk-dAf" secondAttribute="leading" id="IKp-fk-QGg"/>
+                        <constraint firstItem="Qi3-9W-Hzr" firstAttribute="leading" secondItem="f3D-Wk-dAf" secondAttribute="leading" id="RsN-1v-mTJ"/>
+                        <constraint firstAttribute="trailing" secondItem="Qi3-9W-Hzr" secondAttribute="trailing" id="WRr-3L-EX6"/>
+                        <constraint firstItem="Qi3-9W-Hzr" firstAttribute="top" secondItem="f3D-Wk-dAf" secondAttribute="top" id="dfH-Ic-R20"/>
+                        <constraint firstItem="bIf-8X-HVN" firstAttribute="top" secondItem="f3D-Wk-dAf" secondAttribute="top" id="fFg-dL-OI2"/>
+                        <constraint firstItem="noo-jP-kY5" firstAttribute="top" secondItem="Qi3-9W-Hzr" secondAttribute="bottom" id="l9R-g3-Gky"/>
+                        <constraint firstAttribute="bottom" secondItem="noo-jP-kY5" secondAttribute="bottom" id="op1-0U-awR"/>
+                        <constraint firstAttribute="trailing" secondItem="bIf-8X-HVN" secondAttribute="trailing" id="qn4-RX-4wm"/>
+                        <constraint firstItem="bIf-8X-HVN" firstAttribute="leading" secondItem="f3D-Wk-dAf" secondAttribute="leading" id="zRN-he-Cnd"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="f3D-Wk-dAf" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="4KL-6t-GBl"/>
+                <constraint firstAttribute="trailing" secondItem="f3D-Wk-dAf" secondAttribute="trailing" id="4VS-97-eaM"/>
+                <constraint firstAttribute="trailing" secondItem="5d6-Z2-OPM" secondAttribute="trailing" id="88P-7T-kWQ"/>
+                <constraint firstItem="f3D-Wk-dAf" firstAttribute="top" secondItem="1" secondAttribute="top" constant="64" id="MFO-Gh-uJf"/>
+                <constraint firstAttribute="bottom" secondItem="5d6-Z2-OPM" secondAttribute="bottom" id="X8F-ZN-mWy"/>
+                <constraint firstAttribute="bottom" secondItem="f3D-Wk-dAf" secondAttribute="bottom" constant="49" id="ckq-UT-i8J"/>
+                <constraint firstItem="5d6-Z2-OPM" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="fRD-XM-LEh"/>
+                <constraint firstItem="5d6-Z2-OPM" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" id="nhI-be-2tF"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="731" y="339"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background.png" width="320" height="568"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
