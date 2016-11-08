@@ -152,7 +152,7 @@
     UIImage *img_custom_navigationView_back = [UIImage imageNamed:@"icon_menu.png"];
     UIImageView* iv_custom_navigationView_back = [[UIImageView alloc] initWithImage:img_custom_navigationView_back];
     iv_custom_navigationView_back.contentMode = UIViewContentModeScaleAspectFit;
-    iv_custom_navigationView_back.frame = CGRectMake(5, 5, 44 - 10, view_custom_navigationView.frame.size.height - 10);
+    iv_custom_navigationView_back.frame = CGRectMake(10, 10, 44 - 20, view_custom_navigationView.frame.size.height - 20);
     [view_custom_navigationView addSubview:iv_custom_navigationView_back];
 
     //カスタムナビゲーションタイトル画像設定
@@ -217,7 +217,6 @@
 
 - (void)custom_open_TopNavigation:(UIButton*)button {
 
-//    [self.view bringSubviewToFront:view_custom_navigationView];
     [UIView animateWithDuration:0.5f
                           delay:0.5f
                         options:UIViewAnimationOptionCurveEaseInOut
@@ -226,7 +225,6 @@
                          //アニメーションで変化させたい値を設定する（最終的に変更したい値）
                          CGRect flt_navi = view_custom_navigationView.frame;
                          flt_navi.origin.y = 20;
-                         flt_navi.size.height = FRAME_HEIGHT;
                          view_custom_navigationView.frame = flt_navi;
 
                      } completion:^(BOOL finished){
@@ -238,7 +236,6 @@
 
 - (void)custom_close_TopNavigation:(UIButton*)button {
 
-//    [self.view bringSubviewToFront:view_custom_navigationView];
     [UIView animateWithDuration:0.5f
                           delay:0.5f
                         options:UIViewAnimationOptionCurveEaseInOut
@@ -247,7 +244,6 @@
                          //アニメーションで変化させたい値を設定する（最終的に変更したい値）
                          CGRect flt_navi = view_custom_navigationView.frame;
                          flt_navi.origin.y = - FRAME_HEIGHT;
-                         flt_navi.size.height = 0;
                          view_custom_navigationView.frame = flt_navi;
 
                      } completion:^(BOOL finished){
@@ -297,15 +293,53 @@
                      }];
 }
 
+- (void)open_Tab:(UIButton*)button {
+
+    [UIView animateWithDuration:0.5f
+                          delay:0.5f
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+
+                         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
+                         CGRect flt_navi = bgTabBar.frame;
+                         flt_navi.origin.y = self.view.frame.size.height - 50;
+                         bgTabBar.frame = flt_navi;
+
+                     } completion:^(BOOL finished){
+
+                         //完了時のコールバック
+
+                     }];
+}
+
+- (void)close_Tab:(UIButton*)button {
+
+    [UIView animateWithDuration:0.5f
+                          delay:0.5f
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+
+                         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
+                         CGRect flt_navi = bgTabBar.frame;
+                         flt_navi.origin.y = self.view.frame.size.height;
+                         bgTabBar.frame = flt_navi;
+
+                     } completion:^(BOOL finished){
+                         
+                         //完了時のコールバック
+                         
+                     }];
+}
+
 #pragma mark - Custom TabBar
 - (void)customTabBar {
     
     [self.tabBar setHidden:YES];
     CGRect rect = self.tabBar.frame;
     rect.size.height = 50;
-    UIImageView *bgTabBar = [[UIImageView alloc] initWithFrame:rect];
+    bgTabBar = [[UIImageView alloc] initWithFrame:rect];
     [bgTabBar setTag:1111];
-    [bgTabBar setImage:[UIImage imageNamed:@"tab_back.png"]];
+//    [bgTabBar setImage:[UIImage imageNamed:@"tab_back.png"]];
     [bgTabBar setUserInteractionEnabled:YES];
     float widthBT = rect.size.width / numberTab;
     for (int i = 0; i < numberTab; i++) {

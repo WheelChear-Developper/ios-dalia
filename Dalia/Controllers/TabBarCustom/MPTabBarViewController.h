@@ -36,6 +36,7 @@
     MPSlideMenuView* view_NaviMenu;
     long lng_NavigationMenu_point;
     float statusHeight;
+    UIImageView *bgTabBar;
 }
 @property (nonatomic) BOOL bln_ScreenSetting;
 
@@ -49,5 +50,7 @@
 - (void)setCustomNavigationHiden:(BOOL)isEnable;
 - (void)custom_open_TopNavigation:(UIButton*)button;
 - (void)custom_close_TopNavigation:(UIButton*)button;
+- (void)open_Tab:(UIButton*)button;
+- (void)close_Tab:(UIButton*)button;
 
 @end

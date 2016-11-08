@@ -334,11 +334,20 @@
     if(scrollBeginingPoint.y < currentPoint.y){
 
         //下方向の時のアクション
+        //カスタムトップナビゲーション　クローズ
         [(MPTabBarViewController*)[self.navigationController parentViewController] custom_close_TopNavigation:NO];
-    }else if(currentPoint.y <= 0.0f){
 
-        //下方向の時のアクション
+        //タブのオープン
+        [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:NO];
+
+    }else{
+
+        //上方向の時のアクション
+        //カスタムトップナビゲーション　オープン
         [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:NO];
+
+        //タブのクローズ
+        [(MPTabBarViewController*)[self.navigationController parentViewController] close_Tab:NO];
     }
 }
 
