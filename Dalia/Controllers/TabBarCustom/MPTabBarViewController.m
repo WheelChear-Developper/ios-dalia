@@ -138,7 +138,7 @@
 
     //カスタムナビゲーション作成
     view_custom_navigationView = [[UIView alloc] init];
-    [view_custom_navigationView setBackgroundColor:[UIColor clearColor]];
+    [view_custom_navigationView setBackgroundColor:[UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0.95]];
     [view_custom_navigationView setUserInteractionEnabled:YES];
     CGRect custom_frameNavigationView = view_custom_navigationView.frame;
     custom_frameNavigationView.origin.x = FRAME_ORGIN;
@@ -148,7 +148,7 @@
     view_custom_navigationView.frame = custom_frameNavigationView;
     [self.view addSubview:view_custom_navigationView];
 
-    //カスタムナビゲーション背景設定
+    //カスタムナビゲーションメニューアイコン設定
     UIImage *img_custom_navigationView_back = [UIImage imageNamed:@"icon_menu.png"];
     UIImageView* iv_custom_navigationView_back = [[UIImageView alloc] initWithImage:img_custom_navigationView_back];
     iv_custom_navigationView_back.contentMode = UIViewContentModeScaleAspectFit;
@@ -156,8 +156,7 @@
     [view_custom_navigationView addSubview:iv_custom_navigationView_back];
 
     //カスタムナビゲーションタイトル画像設定
-    UIImageView *iv_custom_navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((custom_frameNavigationView.size.width - ICON_WIDTH)/2, (custom_frameNavigationView.size.height - ICON_HEIGHT)/2, ICON_WIDTH, ICON_HEIGHT)];
-    [iv_custom_navigationIcon setImage:[UIImage imageNamed:@"header_logo.png"]];
+    iv_custom_navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((custom_frameNavigationView.size.width - ICON_WIDTH)/2, (custom_frameNavigationView.size.height - ICON_HEIGHT)/2, ICON_WIDTH, ICON_HEIGHT)];
     [iv_custom_navigationIcon setContentMode:UIViewContentModeScaleAspectFit];
     [view_custom_navigationView addSubview:iv_custom_navigationIcon];
 
@@ -175,7 +174,7 @@
 
     //ステータスバー背景設定
     UIView* view_frameNavigationView_shadow = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, statusHeight)];
-    view_frameNavigationView_shadow.backgroundColor = [UIColor blackColor];
+    view_frameNavigationView_shadow.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0.95];
     [self.view addSubview:view_frameNavigationView_shadow];
 
     ///////////// サイドメニュー /////////////
@@ -213,6 +212,11 @@
     swipeLeftGesture.direction = UISwipeGestureRecognizerDirectionLeft;
     //self.viewにジェスチャーをのせる
     [self.view addGestureRecognizer:swipeLeftGesture];
+}
+
+- (void)SetCustomNavigationLogo:(UIImage*)image {
+
+    [iv_custom_navigationIcon setImage:image];
 }
 
 - (void)custom_open_TopNavigation:(UIButton*)button {

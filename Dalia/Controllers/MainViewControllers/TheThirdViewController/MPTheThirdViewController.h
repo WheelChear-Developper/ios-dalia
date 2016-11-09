@@ -15,6 +15,7 @@
     UIScrollView* _scr_rootview;
     UIView *_scr_inView;
     UIView *_cornerView;
+    CGPoint _scrollBeginingPoint;
     
 }
 

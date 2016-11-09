@@ -48,7 +48,6 @@
     //ステータスバー表示設定
     statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
     self.view.backgroundColor = [UIColor blackColor];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
     //基本ビュー作成（基本ビューとなる部分）
     contentView = [[UIView alloc] init];

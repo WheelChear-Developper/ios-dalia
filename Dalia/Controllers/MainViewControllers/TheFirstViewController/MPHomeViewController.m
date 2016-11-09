@@ -42,6 +42,7 @@
     //🔴navigation表示
     [self setBasicNavigationHiden:YES];
     [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:NO];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] SetCustomNavigationLogo:[UIImage imageNamed:@"header_logo.png"]];
     
     //🔴バックアクション非表示
     [self setHiddenBackButton:YES];
@@ -429,6 +430,15 @@
         //下方向の時のアクション
         //カスタムトップナビゲーション　クローズ
         [(MPTabBarViewController*)[self.navigationController parentViewController] custom_close_TopNavigation:NO];
+
+        //タブのオープン
+        [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:NO];
+
+    }else if(_scrollBeginingPoint.y ==0){
+
+        //スクロール０
+        //カスタムトップナビゲーション　クローズ
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:NO];
 
         //タブのオープン
         [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:NO];

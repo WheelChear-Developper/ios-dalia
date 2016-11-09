@@ -37,6 +37,7 @@
     long lng_NavigationMenu_point;
     float statusHeight;
     UIImageView *bgTabBar;
+    UIImageView *iv_custom_navigationIcon;
 }
 @property (nonatomic) BOOL bln_ScreenSetting;
 
@@ -52,5 +53,6 @@
 - (void)custom_close_TopNavigation:(UIButton*)button;
 - (void)open_Tab:(UIButton*)button;
 - (void)close_Tab:(UIButton*)button;
+- (void)SetCustomNavigationLogo:(UIImage*)image;
 
 @end
