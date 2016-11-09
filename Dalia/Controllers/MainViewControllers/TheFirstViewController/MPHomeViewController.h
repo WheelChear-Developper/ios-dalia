@@ -14,10 +14,11 @@
 #import "Configuration.h"
 #import "MPMenuListHomeCell.h"
 #import "MPNewHomeCell.h"
+#import "TheUserInfoViewController.h"
 
 //#import "DeployGateSDK/DeployGateSDK.h"
 
-@interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, TheUserInfoViewControllerDelegate>
 {
     UIScrollView* _scr_rootview;
     UIView* _scr_inView;

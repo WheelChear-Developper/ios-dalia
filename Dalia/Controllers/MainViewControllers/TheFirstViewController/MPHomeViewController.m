@@ -34,9 +34,9 @@
     //アカウント画面呼び出し
     if([Configuration getFirstUserInfoSet] == false){
         
-//        TheUserInfoViewController *initialViewController = [[TheUserInfoViewController alloc] initWithNibName:@"TheUserInfoViewController" bundle:nil];
-//        initialViewController.TheUserInfoViewControllerDelegate = self;
-//        [self presentViewController:initialViewController animated:NO completion:nil];
+        TheUserInfoViewController *initialViewController = [[TheUserInfoViewController alloc] initWithNibName:@"TheUserInfoViewController" bundle:nil];
+        initialViewController.TheUserInfoViewControllerDelegate = self;
+        [self presentViewController:initialViewController animated:NO completion:nil];
     }
 
     //🔴navigation表示

@@ -20,27 +20,43 @@
     [super viewDidLoad];
 
     //🔴navigation表示
-    [self setBasicNavigationHiden:NO];
+    [self setBasicNavigationHiden:YES];
     [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
-    
+
     //🔴バックアクション非表示
     [self setHiddenBackButton:YES];
-    
+
     //🔴contentView 高さ自動調整　幅自動調整
     [contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
-    
-    //タイトルのグラデーション
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = CGRectMake(0, 0, self.view_title.frame.size.width, self.view_title.frame.size.height);
-    gradient.colors = @[
-                        (id)[UIColor colorWithRed:0.992 green:0.937 blue:0.831 alpha:1].CGColor,
-                        (id)[UIColor colorWithRed:0.894 green:0.820 blue:0.694 alpha:1].CGColor,
-                        (id)[UIColor colorWithRed:0.780 green:0.706 blue:0.576 alpha:1].CGColor
-                        ];
-    [self.view_title.layer addSublayer:gradient];
-    
+
+    //XIB表示切り替え
     [contentView setHidden:YES];
-    
+
+    [self.txt_farstName setTintColor:UIColor.whiteColor];
+    [self.txt_lastName setTintColor:UIColor.whiteColor];
+    [self.txt_nickName setTintColor:UIColor.whiteColor];
+    [self.txt_birthday setTintColor:UIColor.whiteColor];
+    [self.txt_zipCode setTintColor:UIColor.whiteColor];
+    [self.txt_introductionCode setTintColor:UIColor.whiteColor];
+    [self.txt_machineChengeCode setTintColor:UIColor.whiteColor];
+
+    //ヒント文字色設定
+    UIColor *color = [UIColor colorWithRed:124/255.0 green:123/255.0 blue:123/255.0 alpha:1.0];
+    self.txt_farstName.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"姓"
+                                                                           attributes:@{ NSForegroundColorAttributeName:color }];
+    self.txt_lastName.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"名"
+                                                                               attributes:@{ NSForegroundColorAttributeName:color }];
+    self.txt_nickName.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@""
+                                                                               attributes:@{ NSForegroundColorAttributeName:color }];
+    self.txt_birthday.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"月・日は記入せず、４ケタの数字をご入力ください。例：0620"
+                                                                               attributes:@{ NSForegroundColorAttributeName:color }];
+    self.txt_zipCode.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"ハイフンはなしでご入力ください"
+                                                                               attributes:@{ NSForegroundColorAttributeName:color }];
+    self.txt_introductionCode.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"例：123456"
+                                                                               attributes:@{ NSForegroundColorAttributeName:color }];
+    self.txt_machineChengeCode.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"例：12345678"
+                                                                               attributes:@{ NSForegroundColorAttributeName:color }];
+
     //DataPicker 設定
     datePicker_Birthday = [[UIDatePicker alloc] init];
     datePicker_Birthday.datePickerMode=UIDatePickerModeDate;
@@ -49,22 +65,7 @@
     datePicker_Birthday.locale=[[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"];
     [datePicker_Birthday addTarget:self action:@selector(dateSet_Birthday:) forControlEvents:UIControlEventValueChanged];
     self.txt_birthday.inputView = datePicker_Birthday;
-    
-    datePicker_ChildeBirthday1 = [[UIDatePicker alloc] init];
-    datePicker_ChildeBirthday1.datePickerMode=UIDatePickerModeDate;
-    datePicker_ChildeBirthday1.maximumDate = [NSDate date];
-    datePicker_ChildeBirthday1.backgroundColor = [UIColor whiteColor];
-    datePicker_ChildeBirthday1.locale=[[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"];
-    [datePicker_ChildeBirthday1 addTarget:self action:@selector(dateSet_childrenBirthday1:) forControlEvents:UIControlEventValueChanged];
-    self.txt_childrenBirthday1.inputView = datePicker_ChildeBirthday1;
-    
-    datePicker_ChildeBirthday2 = [[UIDatePicker alloc] init];
-    datePicker_ChildeBirthday2.datePickerMode=UIDatePickerModeDate;
-    datePicker_ChildeBirthday2.maximumDate = [NSDate date];
-    datePicker_ChildeBirthday2.backgroundColor = [UIColor whiteColor];
-    datePicker_ChildeBirthday2.locale=[[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"];
-    [datePicker_ChildeBirthday2 addTarget:self action:@selector(dateSet_childrenBirthday2:) forControlEvents:UIControlEventValueChanged];
-    self.txt_childrenBirthday2.inputView = datePicker_ChildeBirthday2;
+
     //DataPicker上部バー作成
     UIToolbar *toolbar = [[UIToolbar alloc] init];
     toolbar.backgroundColor = [UIColor whiteColor];
@@ -78,8 +79,6 @@
     toolbar.items=@[item0,item1,item2,item3];
     //DataPicker上部バー設定
     self.txt_birthday.inputAccessoryView = toolbar;
-    self.txt_childrenBirthday1.inputAccessoryView = toolbar;
-    self.txt_childrenBirthday2.inputAccessoryView = toolbar;
 
     // キーボードアクション追加
     NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
@@ -102,26 +101,7 @@
     numbaer_item3.tintColor = [UIColor blackColor];
     numbaer_toolbar.items=@[numbaer_item0,numbaer_item1,numbaer_item2,numbaer_item3];
     //DataPicker上部バー設定
-    self.txt_zipcode.inputAccessoryView = numbaer_toolbar;
-    
-    //性別設定（初期：男）
-    lng_sexflag = 1;
-    [self setSexChenge:lng_sexflag];
-
-    self.txt_nickname.layer.borderWidth=1.0;
-    self.txt_nickname.layer.borderColor=[[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:1.0] CGColor];
-    self.txt_birthday.layer.borderWidth=1.0;
-    self.txt_birthday.layer.borderColor=[[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:1.0] CGColor];
-    self.txt_zipcode.layer.borderWidth=1.0;
-    self.txt_zipcode.layer.borderColor=[[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:1.0] CGColor];
-    self.txt_childrenname1.layer.borderWidth=1.0;
-    self.txt_childrenname1.layer.borderColor=[[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:1.0] CGColor];
-    self.txt_childrenBirthday1.layer.borderWidth=1.0;
-    self.txt_childrenBirthday1.layer.borderColor=[[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:1.0] CGColor];
-    self.txt_childrenname2.layer.borderWidth=1.0;
-    self.txt_childrenname2.layer.borderColor=[[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:1.0] CGColor];
-    self.txt_childrenBirthday2.layer.borderWidth=1.0;
-    self.txt_childrenBirthday2.layer.borderColor=[[UIColor colorWithRed:178.0f/255.0f green:178.0f/255.0f blue:178.0f/255.0f alpha:1.0] CGColor];
+    self.txt_zipCode.inputAccessoryView = numbaer_toolbar;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -131,7 +111,7 @@
     //🔵設定ボタン表示設定
     [self setHiddenSettingButton:YES];
 
-    [[ManagerDownload sharedInstance] getMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
+//    [[ManagerDownload sharedInstance] getMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -148,33 +128,14 @@
     
     self.txt_birthday.text = stringDate;
 }
--(void)dateSet_childrenBirthday1:(UIDatePicker *)picker {
-    
-    NSDate *selectDate=picker.date;
-    NSDateFormatter *formatter=[[NSDateFormatter alloc] init];
-    formatter.dateFormat=@"yyy-MM-dd";
-    NSString *stringDate=[formatter stringFromDate:selectDate];
-    
-    self.txt_childrenBirthday1.text = stringDate;
-}
--(void)dateSet_childrenBirthday2:(UIDatePicker *)picker {
-    
-    NSDate *selectDate=picker.date;
-    NSDateFormatter *formatter=[[NSDateFormatter alloc] init];
-    formatter.dateFormat=@"yyy-MM-dd";
-    NSString *stringDate=[formatter stringFromDate:selectDate];
-    
-    self.txt_childrenBirthday2.text = stringDate;
-}
+
 -(void)previousBtnClick {
     
     [self.txt_birthday resignFirstResponder];
-    [self.txt_childrenBirthday1 resignFirstResponder];
-    [self.txt_childrenBirthday2 resignFirstResponder];
 }
 -(void)numbaerBtnClick {
     
-    [self.txt_zipcode resignFirstResponder];
+    [self.txt_zipCode resignFirstResponder];
 }
 
 #pragma mark - ManagerDownloadDelegate
@@ -186,7 +147,7 @@
             if(param.listData.count > 0){
                 
                 memberObj = param.listData[0];
-                
+/*
                 str_ID = memberObj.id;
                 self.txt_nickname.text = memberObj.nick_name;
                 lng_sexflag = memberObj.gender;
@@ -206,7 +167,7 @@
                 if(![memberObj.child2_birthday isEqualToString:@""]){
                     self.txt_childrenBirthday2.enabled = NO;
                 }
-                
+*/
             }else{
                 
                 UIAlertController *alert =
@@ -222,6 +183,7 @@
                 
                 [self presentViewController:alert animated:YES completion:nil];
             }
+ 
         }
             break;
 
@@ -240,32 +202,6 @@
     }
 }
 
--(void)setSexChenge:(long)flag {
-    
-    //キーボードクローズ
-    [self.txt_nickname resignFirstResponder];
-    [self.txt_birthday resignFirstResponder];
-    [self.txt_zipcode resignFirstResponder];
-    [self.txt_childrenname1 resignFirstResponder];
-    [self.txt_childrenBirthday1 resignFirstResponder];
-    [self.txt_childrenname2 resignFirstResponder];
-    [self.txt_childrenBirthday2 resignFirstResponder];
-    
-    switch (flag) {
-        case 1:
-            
-            [self.btnF_boy setTitle:@"男 ◉" forState:UIControlStateNormal];
-            [self.btnF_girl setTitle:@"女 ○" forState:UIControlStateNormal];
-            break;
-            
-        case 2:
-            
-            [self.btnF_boy setTitle:@"男 ○" forState:UIControlStateNormal];
-            [self.btnF_girl setTitle:@"女 ◉" forState:UIControlStateNormal];
-            break;
-    }
-}
-
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
 //    NSLog(@"scrool:%f",scrollView.contentOffset.y);
@@ -276,46 +212,46 @@
     CGRect rect_screen = [[UIScreen mainScreen] bounds];
     NSLog(@"height : %f", rect_screen.size.height);
     
-    if(textField == self.txt_nickname){
+    if(textField == self.txt_farstName){
         
         cgpoint_tf.x = 0.0f;
-        cgpoint_tf.y = 74;
+        cgpoint_tf.y = 0;
     }
     
-    if(textField == self.txt_birthday){
+    if(textField == self.txt_lastName){
         
         cgpoint_tf.x = 0.0f;
-        cgpoint_tf.y = 194;
+        cgpoint_tf.y = 0;
     }
     
-    if(textField == self.txt_zipcode){
+    if(textField == self.txt_nickName){
         
         cgpoint_tf.x = 0.0f;
         cgpoint_tf.y = 254;
     }
-    
-    if(textField == self.txt_childrenname1){
+
+    if(textField == self.txt_birthday){
+
+        cgpoint_tf.x = 0.0f;
+        cgpoint_tf.y = 254;
+    }
+
+    if(textField == self.txt_zipCode){
         
         cgpoint_tf.x = 0.0f;
         cgpoint_tf.y = 314;
     }
     
-    if(textField == self.txt_childrenBirthday1){
+    if(textField == self.txt_introductionCode){
         
         cgpoint_tf.x = 0.0f;
         cgpoint_tf.y = 374;
     }
     
-    if(textField == self.txt_childrenname2){
+    if(textField == self.txt_machineChengeCode){
         
         cgpoint_tf.x = 0.0f;
         cgpoint_tf.y = 434;
-    }
-    
-    if(textField == self.txt_childrenBirthday2){
-        
-        cgpoint_tf.x = 0.0f;
-        cgpoint_tf.y = 494;
     }
     
     kb_type = textField.keyboardType;
@@ -353,25 +289,26 @@
 - (void)enterButton:(UIButton*)sender {
     
     //キーボードクローズ
-    [self.txt_nickname resignFirstResponder];
+    [self.txt_farstName resignFirstResponder];
+    [self.txt_lastName resignFirstResponder];
+    [self.txt_nickName resignFirstResponder];
     [self.txt_birthday resignFirstResponder];
-    [self.txt_zipcode resignFirstResponder];
-    [self.txt_childrenname1 resignFirstResponder];
-    [self.txt_childrenBirthday1 resignFirstResponder];
-    [self.txt_childrenname2 resignFirstResponder];
-    [self.txt_childrenBirthday2 resignFirstResponder];
+    [self.txt_zipCode resignFirstResponder];
+    [self.txt_introductionCode resignFirstResponder];
+    [self.txt_machineChengeCode resignFirstResponder];
 }
 
 - (void)hideKeyboard:(NSNotification*)notification {
     
     //キーボードクローズ
-    [self.txt_nickname resignFirstResponder];
+    [self.txt_farstName resignFirstResponder];
+    [self.txt_lastName resignFirstResponder];
+    [self.txt_nickName resignFirstResponder];
     [self.txt_birthday resignFirstResponder];
-    [self.txt_zipcode resignFirstResponder];
-    [self.txt_childrenname1 resignFirstResponder];
-    [self.txt_childrenBirthday1 resignFirstResponder];
-    [self.txt_childrenname2 resignFirstResponder];
-    [self.txt_childrenBirthday2 resignFirstResponder];
+    [self.txt_zipCode resignFirstResponder];
+    [self.txt_introductionCode resignFirstResponder];
+    [self.txt_machineChengeCode resignFirstResponder];
+
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
@@ -389,13 +326,13 @@
     [tmp replaceCharactersInRange:range withString:string];
     
     //ニックネーム入力規制
-    if(textField == self.txt_nickname){
+    if(textField == self.txt_nickName){
         
         return [tmp lengthOfBytesUsingEncoding:NSShiftJISStringEncoding] <= 20;
     }
     
     //郵便番号入力規制
-    if(textField == self.txt_zipcode){
+    if(textField == self.txt_zipCode){
         
         if(![self containsOnlyDecimalNumbers1:tmp]){
             
@@ -417,46 +354,46 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     
-    if(textField == self.txt_nickname){
+    if(textField == self.txt_farstName){
         
         // 受け取った入力をラベルに代入
-        self.txt_nickname.text = textField.text;
+        self.txt_farstName.text = textField.text;
     }
     
-    if(textField == self.txt_birthday){
+    if(textField == self.txt_lastName){
         
+        // 受け取った入力をラベルに代入
+        self.txt_lastName.text = textField.text;
+    }
+    
+    if(textField == self.txt_nickName){
+        
+        // 受け取った入力をラベルに代入
+        self.txt_nickName.text = textField.text;
+    }
+
+    if(textField == self.txt_birthday){
+
         // 受け取った入力をラベルに代入
         self.txt_birthday.text = textField.text;
     }
-    
-    if(textField == self.txt_zipcode){
+
+    if(textField == self.txt_zipCode){
         
         // 受け取った入力をラベルに代入
-        self.txt_zipcode.text = textField.text;
+        self.txt_zipCode.text = textField.text;
     }
     
-    if(textField == self.txt_childrenname1){
+    if(textField == self.txt_introductionCode){
         
         // 受け取った入力をラベルに代入
-        self.txt_childrenname1.text = textField.text;
+        self.txt_introductionCode.text = textField.text;
     }
     
-    if(textField == self.txt_childrenBirthday1){
+    if(textField == self.txt_machineChengeCode){
         
         // 受け取った入力をラベルに代入
-        self.txt_childrenBirthday1.text = textField.text;
-    }
-    
-    if(textField == self.txt_childrenname2){
-        
-        // 受け取った入力をラベルに代入
-        self.txt_childrenname2.text = textField.text;
-    }
-    
-    if(textField == self.txt_childrenBirthday2){
-        
-        // 受け取った入力をラベルに代入
-        self.txt_childrenBirthday2.text = textField.text;
+        self.txt_machineChengeCode.text = textField.text;
     }
     
     // キーボードを閉じる
@@ -465,25 +402,11 @@
     return YES;
 }
 
-- (IBAction)btn_boy:(id)sender {
-    
-    //性別変更
-    lng_sexflag = 1;
-    [self setSexChenge:lng_sexflag];
-}
-
-- (IBAction)btn_girl:(id)sender {
-    
-    //性別変更
-    lng_sexflag = 2;
-    [self setSexChenge:lng_sexflag];
-}
-
 - (IBAction)btn_start:(id)sender {
 
     //文字数チェック
     BOOL bln_LengthCheck = YES;
-    if(self.txt_nickname.text.length == 0){
+    if(self.txt_nickName.text.length == 0){
         
         bln_LengthCheck = NO;
         
@@ -517,7 +440,7 @@
         
         [self presentViewController:alert animated:YES completion:nil];
     }
-    if(self.txt_zipcode.text.length < 7){
+    if(self.txt_zipCode.text.length < 7){
         
         bln_LengthCheck = NO;
         
@@ -534,84 +457,6 @@
         
         [self presentViewController:alert animated:YES completion:nil];
     }
-    if(![self.txt_childrenname1.text isEqualToString:@""]){
-        
-        if(self.txt_childrenBirthday1.text.length == 0){
-            
-            bln_LengthCheck = NO;
-            
-            UIAlertController *alert =
-            [UIAlertController alertControllerWithTitle:@"お子様（１）の生年月日が設定されていません。"
-                                                message:@""
-                                         preferredStyle:UIAlertControllerStyleAlert];
-            
-            [alert addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                      style:UIAlertActionStyleDefault
-                                                    handler:^(UIAlertAction *action) {
-                                                        
-                                                    }]];
-            
-            [self presentViewController:alert animated:YES completion:nil];
-        }
-    }else{
-        
-        if(self.txt_childrenBirthday1.text.length > 0){
-            
-            bln_LengthCheck = NO;
-            
-            UIAlertController *alert =
-            [UIAlertController alertControllerWithTitle:@"お子様（１）の生年月日が設定されていますが、名前が設定されていません。"
-                                                message:@""
-                                         preferredStyle:UIAlertControllerStyleAlert];
-            
-            [alert addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                      style:UIAlertActionStyleDefault
-                                                    handler:^(UIAlertAction *action) {
-                                                        
-                                                    }]];
-            
-            [self presentViewController:alert animated:YES completion:nil];
-        }
-    }
-    if(![self.txt_childrenname2.text isEqualToString:@""]){
-        
-        if(self.txt_childrenBirthday2.text.length == 0){
-            
-            bln_LengthCheck = NO;
-            
-            UIAlertController *alert =
-            [UIAlertController alertControllerWithTitle:@"お子様（２）の生年月日が設定されていません。"
-                                                message:@""
-                                         preferredStyle:UIAlertControllerStyleAlert];
-            
-            [alert addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                      style:UIAlertActionStyleDefault
-                                                    handler:^(UIAlertAction *action) {
-                                                        
-                                                    }]];
-            
-            [self presentViewController:alert animated:YES completion:nil];
-        }
-    }else{
-        
-        if(self.txt_childrenBirthday2.text.length > 0){
-            
-            bln_LengthCheck = NO;
-            
-            UIAlertController *alert =
-            [UIAlertController alertControllerWithTitle:@"お子様（２）の生年月日が設定されていますが、名前が設定されていません。"
-                                                message:@""
-                                         preferredStyle:UIAlertControllerStyleAlert];
-            
-            [alert addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                      style:UIAlertActionStyleDefault
-                                                    handler:^(UIAlertAction *action) {
-                                                        
-                                                    }]];
-            
-            [self presentViewController:alert animated:YES completion:nil];
-        }
-    }
     
     if(bln_LengthCheck == YES){
 
@@ -624,11 +469,11 @@
 -(void)setUserData {
 
     //ユーザー情報取得
-    [[ManagerDownload sharedInstance] setMemberInfo:str_ID withAppID:[Utility getAppID] withMemberNO:[[NSUserDefaults standardUserDefaults] objectForKey:MEMBER_NO] withDeviceID:[Utility getDeviceID] withNickName:self.txt_nickname.text withGender:lng_sexflag withBirthday:self.txt_birthday.text withZipcode:self.txt_zipcode.text withChild1Name:self.txt_childrenname1.text withChild1Birthday:self.txt_childrenBirthday1.text withChild2Name:self.txt_childrenname2.text withChild2Birthday:self.txt_childrenBirthday2.text delegate:self];
+//    [[ManagerDownload sharedInstance] setMemberInfo:str_ID withAppID:[Utility getAppID] withMemberNO:[[NSUserDefaults standardUserDefaults] objectForKey:MEMBER_NO] withDeviceID:[Utility getDeviceID] withNickName:self.txt_nickname.text withGender:lng_sexflag withBirthday:self.txt_birthday.text withZipcode:self.txt_zipcode.text withChild1Name:self.txt_childrenname1.text withChild1Birthday:self.txt_childrenBirthday1.text withChild2Name:self.txt_childrenname2.text withChild2Birthday:self.txt_childrenBirthday2.text delegate:self];
 }
 
 - (IBAction)btn_skip:(id)sender {
-
+/*
     UIAlertController *alert =
     [UIAlertController alertControllerWithTitle:@""
                                         message:@"ユーザ情報は設定画面よりいつでも登録できます。\nご登録いただくとお得なクーポンが貰えます"
@@ -646,6 +491,13 @@
                                                 
                                             }]];
     [self presentViewController:alert animated:YES completion:nil];
+ */
+
+    //初期値コミット
+    [Configuration setFirstUserInfoSet:YES];
+
+    //画面クローズ
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

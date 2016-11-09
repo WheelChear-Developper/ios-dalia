@@ -16,7 +16,7 @@
 @protocol TheUserInfoViewControllerDelegate<NSObject>
 @end
 
-@interface TheUserInfoViewController : MPBaseViewController <UITextFieldDelegate, ManagerDownloadDelegate, MPSettingAlertViewDelegate>
+@interface TheUserInfoViewController : MPBaseViewController <UITextFieldDelegate, ManagerDownloadDelegate, MPSettingAlertViewDelegate, UIScrollViewDelegate>
 {    
     id<TheUserInfoViewControllerDelegate> _TheUserInfoViewControllerDelegate;
     
@@ -32,24 +32,17 @@
 @property (nonatomic) id<TheUserInfoViewControllerDelegate> TheUserInfoViewControllerDelegate;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scr_view;
-@property (weak, nonatomic) IBOutlet UIView *view_title;
 
-@property (weak, nonatomic) IBOutlet UITextField *txt_nickname;
+@property (weak, nonatomic) IBOutlet UITextField *txt_farstName;
+@property (weak, nonatomic) IBOutlet UITextField *txt_lastName;
+@property (weak, nonatomic) IBOutlet UITextField *txt_nickName;
 @property (weak, nonatomic) IBOutlet UITextField *txt_birthday;
-@property (weak, nonatomic) IBOutlet UITextField *txt_zipcode;
-@property (weak, nonatomic) IBOutlet UITextField *txt_childrenname1;
-@property (weak, nonatomic) IBOutlet UITextField *txt_childrenBirthday1;
-@property (weak, nonatomic) IBOutlet UITextField *txt_childrenname2;
-@property (weak, nonatomic) IBOutlet UITextField *txt_childrenBirthday2;
-
-@property (weak, nonatomic) IBOutlet UIButton *btnF_boy;
-@property (weak, nonatomic) IBOutlet UIButton *btnF_girl;
+@property (weak, nonatomic) IBOutlet UITextField *txt_zipCode;
+@property (weak, nonatomic) IBOutlet UITextField *txt_introductionCode;
+@property (weak, nonatomic) IBOutlet UITextField *txt_machineChengeCode;
 
 @property (nonatomic) UIAlertController *alertController;  //アラートコントローラー本体
 @property (nonatomic) UILabel *chkLbl;  //ラベル
-
-- (IBAction)btn_boy:(id)sender;
-- (IBAction)btn_girl:(id)sender;
 
 - (IBAction)btn_start:(id)sender;
 - (IBAction)btn_skip:(id)sender;

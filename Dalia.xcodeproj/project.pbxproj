@@ -147,6 +147,8 @@
 		106130681DD2D10B00B789B5 /* MPMenuObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 106130571DD2D10B00B789B5 /* MPMenuObject.m */; };
 		106130691DD2D10B00B789B5 /* MPNewHomeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1061305B1DD2D10B00B789B5 /* MPNewHomeObject.m */; };
 		1061306D1DD2D7B700B789B5 /* MPMenuListHomeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1061306B1DD2D7B700B789B5 /* MPMenuListHomeObject.m */; };
+		106130711DD319C500B789B5 /* btn_setting_touroku.png in Resources */ = {isa = PBXBuildFile; fileRef = 1061306F1DD319C500B789B5 /* btn_setting_touroku.png */; };
+		106130721DD319C500B789B5 /* btn_setting_touroku@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 106130701DD319C500B789B5 /* btn_setting_touroku@2x.png */; };
 		272CCCBD1DCAEF12006BC4EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 272CCCBC1DCAEF12006BC4EB /* main.m */; };
 		272CCD801DCAF096006BC4EB /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 272CCCD51DCAF096006BC4EB /* Configuration.m */; };
 		272CCD811DCAF096006BC4EB /* DownloadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 272CCCD81DCAF096006BC4EB /* DownloadParam.m */; };
@@ -391,6 +393,8 @@
 		1061305B1DD2D10B00B789B5 /* MPNewHomeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPNewHomeObject.m; sourceTree = "<group>"; };
 		1061306B1DD2D7B700B789B5 /* MPMenuListHomeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuListHomeObject.m; sourceTree = "<group>"; };
 		1061306C1DD2D7B700B789B5 /* MPMenuListHomeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuListHomeObject.h; sourceTree = "<group>"; };
+		1061306F1DD319C500B789B5 /* btn_setting_touroku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_setting_touroku.png; sourceTree = "<group>"; };
+		106130701DD319C500B789B5 /* btn_setting_touroku@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_setting_touroku@2x.png"; sourceTree = "<group>"; };
 		272CCCB81DCAEF12006BC4EB /* Dalia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dalia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		272CCCBC1DCAEF12006BC4EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		272CCCCC1DCAEF12006BC4EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1121,9 +1125,19 @@
 			path = Men_List;
 			sourceTree = "<group>";
 		};
+		1061306E1DD319C500B789B5 /* image_Setting */ = {
+			isa = PBXGroup;
+			children = (
+				1061306F1DD319C500B789B5 /* btn_setting_touroku.png */,
+				106130701DD319C500B789B5 /* btn_setting_touroku@2x.png */,
+			);
+			path = image_Setting;
+			sourceTree = "<group>";
+		};
 		10D76F7C1DD1AE3B0038FE4A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1061306E1DD319C500B789B5 /* image_Setting */,
 				101308CC1DD1D93200E8C9E6 /* image_Navigation */,
 				101308D71DD1D93200E8C9E6 /* image_Other */,
 				101308D91DD1D93200E8C9E6 /* image_Tab */,
@@ -1563,6 +1577,7 @@
 				101309B11DD1D93300E8C9E6 /* basic_navigation_back@2x.png in Resources */,
 				106130341DD2BA2C00B789B5 /* ttl_recommendmenu@2x.png in Resources */,
 				103026EF1DD19EAD00F266D8 /* MPShopEliaCell.xib in Resources */,
+				106130711DD319C500B789B5 /* btn_setting_touroku.png in Resources */,
 				10130AAB1DD1DA7500E8C9E6 /* backBottom.png in Resources */,
 				10130AD21DD1E89A00E8C9E6 /* footer_btn_menu@2x.png in Resources */,
 				103026F11DD19EAD00F266D8 /* MPTopImagesView.xib in Resources */,
@@ -1616,6 +1631,7 @@
 				103026BE1DD19EAD00F266D8 /* MPSlideMenuView.xib in Resources */,
 				103026981DD19EAD00F266D8 /* SettingViewController.xib in Resources */,
 				103026ED1DD19EAD00F266D8 /* MPShopCell.xib in Resources */,
+				106130721DD319C500B789B5 /* btn_setting_touroku@2x.png in Resources */,
 				101308CB1DD1C36200E8C9E6 /* MPTheThirdViewController.xib in Resources */,
 				10130ACD1DD1E89A00E8C9E6 /* footer_btn_home.jpg in Resources */,
 				101309B31DD1D93300E8C9E6 /* icon_blog_black.png in Resources */,
