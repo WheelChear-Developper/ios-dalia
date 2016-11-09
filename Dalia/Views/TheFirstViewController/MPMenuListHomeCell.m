@@ -1,14 +1,14 @@
 //
-//  MPNewHomeCell.m
+//  MPMenuHomeCell.m
 //  Misepuri
 //
 //  Created by 3SI-TUYENBQ on 11/27/13.
 //  Copyright (c) 2013 3SI-TUYENBQ. All rights reserved.
 //
 
-#import "MPNewHomeCell.h"
+#import "MPMenuListHomeCell.h"
 
-@implementation MPNewHomeCell
+@implementation MPMenuListHomeCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     
@@ -25,7 +25,7 @@
     [super setSelected:selected animated:animated];
 }
 
-- (void)setData:(MPNewHomeObject*)object {
+- (void)setData:(MPMenuListHomeObject*)object {
     
     //非同期画像セット
     if (object.image) {
@@ -64,10 +64,7 @@
     
     //メッセージ設定
     [lbl_Message setText:object.content];
-    // REPLACED BY ama 2016.10.04 START
-    //文字位置調整
     [txt_Message setText:object.content];
-    // REPLACED BY ama 2016.10.04 END
     
     //NEW表示
     if (object.is_read == 0) {
@@ -79,29 +76,21 @@
     }
     
     if (object.is_read == 0) {
-        
-        // REPLACED BY ama 2016.10.04 START
-        //フォント更新
+
         [titleNewLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:16]];
         [lbl_Message setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:13]];
         [txt_Message setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:13]];
-        // REPLACED BY ama 2016.10.04 END
+
     }else{
 
-        // REPLACED BY ama 2016.10.04 START
-        //フォント更新
         [titleNewLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:16]];
         [lbl_Message setFont:[UIFont fontWithName:@"HelveticaNeue" size:13]];
         [txt_Message setFont:[UIFont fontWithName:@"HelveticaNeue" size:13]];
-        // REPLACED BY ama 2016.10.04 END
-        
     }
-    
-    // INSERTED BY ama 2016.10.04 START
+
     // TEXTFIELDのマージンを０に設定
     txt_Message.textContainerInset = UIEdgeInsetsZero;
     txt_Message.textContainer.lineFragmentPadding = 0;
-    // INSERTED BY ama 2016.10.04 END
 }
 
 //曜日取得
@@ -112,8 +101,8 @@
     //タイムゾーンの指定
     [formatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:60 * 60 * 9]];
     
-    NSCalendar* calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents* comps = [calendar components:NSCalendarUnitWeekday
+    NSCalendar* calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents* comps = [calendar components:NSWeekdayCalendarUnit
                                           fromDate:[formatter dateFromString:dateString]];
     
     NSDateFormatter* df = [[NSDateFormatter alloc] init];
