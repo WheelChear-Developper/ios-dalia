@@ -508,11 +508,11 @@
     UIView *specialView = [[self.view viewWithTag:1111] viewWithTag:0];
     if ([specialView isKindOfClass:[UIButton class]]) {
         if (isEnable) {
-            [(UIButton*)specialView setBackgroundImage:[UIImage imageNamed:@"1_click.png"] forState:UIControlStateSelected];
-            [(UIButton*)specialView setBackgroundImage:[UIImage imageNamed:@"1_click.png"] forState:UIControlStateHighlighted];
+            [(UIButton*)specialView setBackgroundImage:[UIImage imageNamed:@"footer_btn_home_on.png"] forState:UIControlStateSelected];
+            [(UIButton*)specialView setBackgroundImage:[UIImage imageNamed:@"footer_btn_home_on.png"] forState:UIControlStateHighlighted];
         }else{
-            [(UIButton*)specialView setBackgroundImage:[UIImage imageNamed:@"1.png"] forState:UIControlStateSelected];
-            [(UIButton*)specialView setBackgroundImage:[UIImage imageNamed:@"1.png"] forState:UIControlStateHighlighted];
+            [(UIButton*)specialView setBackgroundImage:[UIImage imageNamed:@"footer_btn_home.png"] forState:UIControlStateSelected];
+            [(UIButton*)specialView setBackgroundImage:[UIImage imageNamed:@"footer_btn_home.png"] forState:UIControlStateHighlighted];
         }
         
     }
