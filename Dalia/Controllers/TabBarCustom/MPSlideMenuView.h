@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ManagerDownload.h"
+#import "MPSlideMenuCell.h"
 
 @protocol MPSlideMenuViewDelegate<NSObject>
 
@@ -15,9 +16,9 @@
 
 @interface MPSlideMenuView : UIView <ManagerDownloadDelegate>
 {
-IBOutlet UIView *slideMenuView;
-    
+    IBOutlet UITableView* _menu_table;
 }
 @property (nonatomic, assign) id<MPSlideMenuViewDelegate> delegate;
+
 
 @end

@@ -167,6 +167,10 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gx3-Qn-lYg">
                     <rect key="frame" x="0.0" y="44" width="280" height="524"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="RHD-j3-Jo6"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="KuC-r5-cEY"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -183,6 +187,9 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="_menu_table" destination="Gx3-Qn-lYg" id="7bw-B2-9JD"/>
+            </connections>
             <point key="canvasLocation" x="-60" y="3"/>
         </view>
     </objects>
