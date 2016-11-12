@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 3SI-TUYENBQ. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "ManagerDownload.h"
 #import "MPSlideMenuView.h"
 
