@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -29,10 +30,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4L-EF-Gt7">
-                    <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アプリ会員登録" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNW-eu-wxJ">
-                            <rect key="frame" x="114.5" y="15.5" width="91.5" height="13"/>
+                            <rect key="frame" x="114.5" y="38.5" width="91.5" height="13"/>
                             <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -41,8 +42,8 @@
                     <color key="backgroundColor" red="0.76862745099999996" green="0.74901960779999999" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="qNW-eu-wxJ" firstAttribute="centerX" secondItem="c4L-EF-Gt7" secondAttribute="centerX" id="EJk-Nm-4Dk"/>
-                        <constraint firstItem="qNW-eu-wxJ" firstAttribute="centerY" secondItem="c4L-EF-Gt7" secondAttribute="centerY" id="EPz-vB-R4O"/>
-                        <constraint firstAttribute="height" constant="44" id="zUr-bs-TxO"/>
+                        <constraint firstItem="qNW-eu-wxJ" firstAttribute="centerY" secondItem="c4L-EF-Gt7" secondAttribute="centerY" multiplier="1.4" id="EPz-vB-R4O"/>
+                        <constraint firstAttribute="height" constant="64" id="zUr-bs-TxO"/>
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKq-sK-imv">
@@ -544,7 +545,7 @@
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="c4L-EF-Gt7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="2DZ-mh-Y3X"/>
+                <constraint firstItem="c4L-EF-Gt7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2DZ-mh-Y3X"/>
                 <constraint firstItem="qKq-sK-imv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JBY-Qd-kH1"/>
                 <constraint firstItem="c4L-EF-Gt7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KKM-xj-x3P"/>
                 <constraint firstAttribute="trailing" secondItem="qKq-sK-imv" secondAttribute="trailing" id="PI2-Hw-ckO"/>
