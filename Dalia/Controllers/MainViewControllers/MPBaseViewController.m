@@ -40,6 +40,9 @@
 
     [super viewDidLoad];
 
+    //DeviceID Deploygateへ通知
+    DGSLog(@"(log By M.ama) DeviceID : %@", [Utility getDeviceID]);
+
     [self setUpView];
 }
 

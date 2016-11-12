@@ -13,7 +13,7 @@
 #import "ManagerDownload.h"
 #import "MPApnsDAO.h"
 
-//#import "DeployGateSDK/DeployGateSDK.h"
+#import "DeployGateSDK/DeployGateSDK.h"
 
 @implementation MPAppDelegate
 
@@ -40,7 +40,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     // DeployGateセット
-//    [[DeployGateSDK sharedInstance] launchApplicationWithAuthor:@"akafune" key:@""];
+    [[DeployGateSDK sharedInstance] launchApplicationWithAuthor:@"akafune" key:@"4c2b720f624aed3f6d4d59ca21341c65d29e3e47"];
 
     [NSThread sleepForTimeInterval:2.0];
 

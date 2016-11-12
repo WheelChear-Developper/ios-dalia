@@ -6,7 +6,8 @@
 //  Copyright (c) 2013 3SI-TUYENBQ. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DeployGateSDK/DeployGateSDK.h"
+
 typedef NS_ENUM(NSInteger, ElevenFunctionType) {
     ElevenFunctionType_1 = 1, //Recommended product
     ElevenFunctionType_2,     //Visiting-shop stamp

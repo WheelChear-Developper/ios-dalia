@@ -29,8 +29,6 @@
     
     [super viewDidLoad];
     
-//    DGSLog(@"(log By M.ama) DeviceID : %@", [Utility getDeviceID]);
-    
     //アカウント画面呼び出し
     if([Configuration getFirstUserInfoSet] == false){
         
