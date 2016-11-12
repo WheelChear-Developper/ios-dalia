@@ -226,62 +226,6 @@
 */
 }
 
-- (void)backButtonClicked:(UIButton *)sender {
-
-}
-
--(void)push_block1:(UIButton*)button {
-
-}
-
--(void)push_block2:(UIButton*)button {
-
-}
-
--(void)push_block3:(UIButton*)button {
-
-}
-
--(void)push_block4:(UIButton*)button {
-
-}
-
--(void)push_block5:(UIButton*)button {
-
-}
-
--(void)push_recomend1:(UIButton*)button {
-
-}
-
--(void)push_recomend2:(UIButton*)button {
-
-}
-
--(void)push_recomend3:(UIButton*)button {
-
-}
-
--(void)push_recomend4:(UIButton*)button {
-
-}
-
--(void)push_recomend5:(UIButton*)button {
-
-}
-
--(void)push_recomend6:(UIButton*)button {
-    
-}
-
--(void)push_recomend_Item_More:(UIButton*)button {
-
-}
-
--(void)push_recomend_Menu_More:(UIButton*)button {
-
-}
-
 - (void)resizeTable {
 
     //テーブル高さをセルの最大値へセット
@@ -294,24 +238,6 @@
                MAX(_RecommendMenuList_tableView.contentSize.height,
                    _RecommendMenuList_tableView.bounds.size.height));
 
-    NSLog(@"%f",_RecommendMenuList_tableView.bounds.size.height);
-
-    //Recommend moreボタン位置
-//    CGRect cg_Recomend_Menu_more = btn_Recommend_Menu_More.frame;
-//    cg_Recomend_Menu_more.origin.y = _RecommendMenuList_tableView.frame.origin.y + _RecommendMenuList_tableView.frame.size.height + 5;
-//    iv_Recommend_Menu_More.frame = cg_Recomend_Menu_more;
-//    btn_Recommend_Menu_More.frame = cg_Recomend_Menu_more;
-
-    //Recommend_Menuサイズ修正
-//    CGRect cg_Recomend_Menu = view_Recommend_Menu.frame;
-//    cg_Recomend_Menu.size.height = btn_Recommend_Menu_More.frame.origin.y + btn_Recommend_Menu_More.frame.size.height;
-//    view_Recommend_Menu.frame = cg_Recomend_Menu;
-
-    //WhatsNew位置修正
-//    CGRect cg_WhatsNew = view_WhatsNew.frame;
-//    cg_WhatsNew.origin.y = view_Recommend_Menu.frame.origin.y + view_Recommend_Menu.frame.size.height;
-//    view_WhatsNew.frame = cg_WhatsNew;
-
     //エリアテーブル位置設定
     _WhatsNew_tableView.translatesAutoresizingMaskIntoConstraints = YES;
     _WhatsNew_tableView.frame = CGRectMake(_WhatsNew_tableView.frame.origin.x, _WhatsNew_tableView.frame.origin.y, _WhatsNew_tableView.frame.size.width, 0);
@@ -322,20 +248,6 @@
                MAX(_WhatsNew_tableView.contentSize.height,
                    _WhatsNew_tableView.bounds.size.height));
 
-    //Recommend moreボタン位置
-//    CGRect cg_WhatsNew_more = btn_WhatsNew_More.frame;
-//    cg_WhatsNew_more.origin.y = _WhatsNew_tableView.frame.origin.y + _WhatsNew_tableView.frame.size.height + 5;
-//    iv_WhatsNew_More.frame = cg_WhatsNew_more;
-//   btn_WhatsNew_More.frame = cg_WhatsNew_more;
-
-    //WhatsNew位置修正
-//    btn_WhatsNew_More.frame = iv_WhatsNew_More.frame;
-//    cg_WhatsNew = view_WhatsNew.frame;
-//    cg_WhatsNew.size.height = btn_WhatsNew_More.frame.origin.y + btn_WhatsNew_More.frame.size.height;
-//    view_WhatsNew.frame = cg_WhatsNew;
-
-//    [_scr_inView setFrame:CGRectMake(0, 0, _scr_inView.frame.size.width, view_WhatsNew.frame.origin.y + view_WhatsNew.frame.size.height)];
-//    _scr_rootview.contentSize = _scr_inView.bounds.size;
 }
 
 
@@ -356,6 +268,10 @@
 }
 
 - (void)downloadDataFail:(DownloadParam *)param {
+}
+
+- (void)backButtonClicked:(UIButton *)sender {
+
 }
 
 - (IBAction)btn_block1:(id)sender {
@@ -396,4 +312,5 @@
 
 - (IBAction)btn_Recomend6:(id)sender {
 }
+
 @end
