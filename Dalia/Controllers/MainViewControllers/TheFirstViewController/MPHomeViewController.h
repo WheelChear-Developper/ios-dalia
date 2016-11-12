@@ -16,25 +16,37 @@
 #import "MPNewHomeCell.h"
 #import "TheUserInfoViewController.h"
 
-//#import "DeployGateSDK/DeployGateSDK.h"
-
 @interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, TheUserInfoViewControllerDelegate>
 {
-    UIScrollView* _scr_rootview;
-    UIView* _scr_inView;
-    UIView* _cornerView;
+    __weak IBOutlet UIScrollView* _scr_rootview;
+    __weak IBOutlet UIView* _scr_inView;
+
     MPTopImagesView* _topImageView;
     CGPoint _scrollBeginingPoint;
 
-    UIView* view_Recommend_Menu;
-    UITableView* _RecommendMenuList_tableView;
-    UIImageView* iv_Recommend_Menu_More;
-    UIButton* btn_Recommend_Menu_More;
+    __weak IBOutlet UIButton* btn_block1;
+    __weak IBOutlet UIButton* btn_block2;
+    __weak IBOutlet UIButton* btn_block3;
+    __weak IBOutlet UIButton* btn_block4;
+    __weak IBOutlet UIButton* btn_block5;
 
-    UIView* view_WhatsNew;
-    UITableView* _WhatsNew_tableView;
-    UIImageView* iv_WhatsNew_More;
-    UIButton *btn_WhatsNew_More;
+    __weak IBOutlet UITableView* _RecommendMenuList_tableView;
+    __weak IBOutlet UITableView* _WhatsNew_tableView;
 }
+- (IBAction)btn_block1:(id)sender;
+- (IBAction)btn_block2:(id)sender;
+- (IBAction)btn_block3:(id)sender;
+- (IBAction)btn_block4:(id)sender;
+- (IBAction)btn_block5:(id)sender;
+
+- (IBAction)btn_Recomend1:(id)sender;
+- (IBAction)btn_Recomend2:(id)sender;
+- (IBAction)btn_Recomend3:(id)sender;
+- (IBAction)btn_Recomend4:(id)sender;
+- (IBAction)btn_Recomend5:(id)sender;
+- (IBAction)btn_Recomend6:(id)sender;
+- (IBAction)btn_Recommend_Menu_More:(id)sender;
+
+- (IBAction)btn_WhatsNew_More:(id)sender;
 
 @end
