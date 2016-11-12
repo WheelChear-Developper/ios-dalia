@@ -78,7 +78,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
-                <outlet property="img_menu" destination="k5S-F5-Wg1" id="pkN-ov-rhI"/>
+                <outlet property="img_menu" destination="k5S-F5-Wg1" id="cDn-Ln-2ue"/>
             </connections>
             <point key="canvasLocation" x="521" y="576"/>
         </tableViewCell>

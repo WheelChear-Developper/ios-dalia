@@ -12,6 +12,7 @@
 #import "MPTheThirdViewController.h"
 #import "MPTheFourthViewController.h"
 #import "MPTheFifthViewController.h"
+#import "SettingViewController.h"
 #import "MPShopObject.h"
 #import "MPConfigObject.h"
 
@@ -514,13 +515,146 @@
             [(UIButton*)specialView setBackgroundImage:[UIImage imageNamed:@"footer_btn_home.png"] forState:UIControlStateSelected];
             [(UIButton*)specialView setBackgroundImage:[UIImage imageNamed:@"footer_btn_home.png"] forState:UIControlStateHighlighted];
         }
-        
     }
 }
 
 - (void)setCustomNavigationHiden:(BOOL)isEnable {
 
     view_custom_navigationView.hidden = isEnable;
+}
+
+- (void)setNavigationSetView:(long)count {
+
+    //メニュー閉じる
+    [self.view bringSubviewToFront:view_NaviFrame];
+    [UIView animateWithDuration:0.5f
+                          delay:0.5f
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+
+                         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
+                         CGRect flt_navi = view_NaviFrame.frame;
+                         flt_navi.origin.x = - view_NaviFrame.frame.size.width;
+                         view_NaviFrame.frame = flt_navi;
+
+                     } completion:^(BOOL finished){
+
+                         //完了時のコールバック
+                         
+                     }];
+
+    switch (count) {
+        case 1:
+        {
+            MPHomeViewController *vc_Setting = [[MPHomeViewController alloc] initWithNibName:@"MPHomeViewController" bundle:nil];
+            UIViewController *vc = vc_Setting;
+            NSMutableArray *listVC = [[NSMutableArray alloc] init];
+            [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
+            [self setViewControllers:listVC animated:YES];
+        }
+            break;
+        case 2:
+        {
+            /*
+            SettingViewController *vc_Setting = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
+            UIViewController *vc = vc_Setting;
+            NSMutableArray *listVC = [[NSMutableArray alloc] init];
+            [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
+            [self setViewControllers:listVC animated:YES];
+             */
+        }
+            break;
+        case 3:
+        {
+            /*
+             SettingViewController *vc_Setting = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
+             UIViewController *vc = vc_Setting;
+             NSMutableArray *listVC = [[NSMutableArray alloc] init];
+             [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
+             [self setViewControllers:listVC animated:YES];
+             */
+        }
+            break;
+        case 4:
+        {
+            /*
+            SettingViewController *vc_Setting = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
+            UIViewController *vc = vc_Setting;
+            NSMutableArray *listVC = [[NSMutableArray alloc] init];
+            [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
+            [self setViewControllers:listVC animated:YES];
+             */
+        }
+            break;
+        case 5:
+        {
+            /*
+            SettingViewController *vc_Setting = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
+            UIViewController *vc = vc_Setting;
+            NSMutableArray *listVC = [[NSMutableArray alloc] init];
+            [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
+            [self setViewControllers:listVC animated:YES];
+             */
+        }
+            break;
+        case 6:
+        {
+            /*
+             SettingViewController *vc_Setting = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
+             UIViewController *vc = vc_Setting;
+             NSMutableArray *listVC = [[NSMutableArray alloc] init];
+             [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
+             [self setViewControllers:listVC animated:YES];
+             */
+        }
+            break;
+        case 7:
+        {
+             MPTheSecondViewController *vc_Setting = [[MPTheSecondViewController alloc] initWithNibName:@"MPTheSecondViewController" bundle:nil];
+             UIViewController *vc = vc_Setting;
+             NSMutableArray *listVC = [[NSMutableArray alloc] init];
+             [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
+             [self setViewControllers:listVC animated:YES];
+        }
+            break;
+        case 8:
+        {
+            /*
+             SettingViewController *vc_Setting = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
+             UIViewController *vc = vc_Setting;
+             NSMutableArray *listVC = [[NSMutableArray alloc] init];
+             [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
+             [self setViewControllers:listVC animated:YES];
+             */
+        }
+            break;
+        case 9:
+        {
+            /*
+             SettingViewController *vc_Setting = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
+             UIViewController *vc = vc_Setting;
+             NSMutableArray *listVC = [[NSMutableArray alloc] init];
+             [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
+             [self setViewControllers:listVC animated:YES];
+             */
+        }
+            break;
+        case 10:
+        {
+            /*
+             SettingViewController *vc_Setting = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
+             UIViewController *vc = vc_Setting;
+             NSMutableArray *listVC = [[NSMutableArray alloc] init];
+             [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
+             [self setViewControllers:listVC animated:YES];
+             */
+        }
+            break;
+
+        default:
+            break;
+    }
+
 }
 
 - (void)dealloc {

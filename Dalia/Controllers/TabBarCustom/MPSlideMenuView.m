@@ -42,7 +42,7 @@
 #pragma mark - UITableViewDelegate & UITableViewDatasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 5;
+    return 10;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -69,10 +69,54 @@
         cell = [nib objectAtIndex:0];
     }
 
-    //        [cell setData:[self.listObject objectAtIndex:indexPath.row]];
-//    cell.backgroundColor = [UIColor clearColor];
-//    cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
-//    [cell.selectedBackgroundView setBackgroundColor:[UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1.0]];
+    NSArray *newArr = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
+
+    long lng_ch = [[newArr objectAtIndex:indexPath.row] integerValue];
+    switch (lng_ch) {
+        case 1:
+            cell.img_menu.image = [UIImage imageNamed:@"sidemenu_home.png"];
+
+            break;
+        case 2:
+            cell.img_menu.image = [UIImage imageNamed:@"sidemenu_memberscard.png"];
+
+            break;
+        case 3:
+            cell.img_menu.image = [UIImage imageNamed:@"sidemenu_reserve.png"];
+
+            break;
+        case 4:
+            cell.img_menu.image = [UIImage imageNamed:@"sidemenu_point.png"];
+
+            break;
+        case 5:
+            cell.img_menu.image = [UIImage imageNamed:@"sidemenu_whatsnew.png"];
+
+            break;
+        case 6:
+            cell.img_menu.image = [UIImage imageNamed:@"sidemenu_onlineshop.png"];
+
+            break;
+        case 7:
+            cell.img_menu.image = [UIImage imageNamed:@"sidemenu_coupon.png"];
+
+            break;
+        case 8:
+            cell.img_menu.image = [UIImage imageNamed:@"sidemenu_menu.png"];
+
+            break;
+        case 9:
+            cell.img_menu.image = [UIImage imageNamed:@"sidemenu_access.png"];
+
+            break;
+        case 10:
+            cell.img_menu.image = [UIImage imageNamed:@"sidemenu_setting.png"];
+
+            break;
+
+        default:
+            break;
+    }
 
     return cell;
 }
@@ -80,11 +124,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    /*
-     MPNewDetailViewController *newDetailVC = [[MPNewDetailViewController alloc] initWithNibName:@"MPNewDetailViewController" bundle:nil];
-     [newDetailVC setData:[self.listObject objectAtIndex:indexPath.row]];
-     [self.navigationController pushViewController:newDetailVC animated:YES];
-     */
+
+    //メニュー指定
+    [self.delegate setNavigationSetView:indexPath.row + 1];
 }
 
 

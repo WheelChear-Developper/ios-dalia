@@ -10,7 +10,8 @@
 
 @interface MPSlideMenuCell : UITableViewCell
 {
-    __weak IBOutlet UIImageView *img_menu; 
+
 }
+@property (weak, nonatomic) IBOutlet UIImageView *img_menu;
 
 @end
