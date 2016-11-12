@@ -6,11 +6,10 @@
 //  Copyright (c) 2013 3SI-TUYENBQ. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "Reachability.h"
 #import "ManagerDownload.h"
 
-@interface MPAppDelegate : UIResponder <UIApplicationDelegate,ManagerDownloadDelegate>
+@interface MPAppDelegate : UIResponder <UIApplicationDelegate, ManagerDownloadDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) Reachability *reachability;

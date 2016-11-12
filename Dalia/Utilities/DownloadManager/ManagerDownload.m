@@ -90,12 +90,35 @@
             listObject = [NSArray arrayWithObject:obj];
         }
         switch (parameter.request_type) {
+            case RequestType_GET_DEFAULT_NOTIFICATION:
+                [self processDefaultNotification:listObject with:parameter];
+                break;
+
             case RequestType_SUBMIT_DEVICE_ID:
-                // INSERTED BY M.FUJII 2016.02.04 START
-                // 簡易CMS対応
                 [self processSetDeviceId:listObject with:parameter];
                 break;
-                // INSERTED BY M.FUJII 2016.02.04 END
+
+            // INSERTED BY M.FUJII 2015.12.12 END
+            // INSERTED BY M.FUJII 201602:04 START
+            // 簡易CMS対応
+            case RequestType_GET_MEMBER_NO:
+                if ( [JSON[@"error_code"] integerValue] != 200 ){
+                    listObject = nil;
+                }
+                [self processGetMemberNo:listObject with:parameter];
+                break;
+            // INSERTED BY M.FUJII 201602:04 END
+
+
+
+
+
+
+
+
+
+
+
                 
             case RequestType_GET_MEMBER_INFO:
                 [self processGetMemberInfo:listObject with:parameter];
@@ -109,9 +132,7 @@
             case RequestType_ENABLE_NOTIFICATION:
                 break;
                 
-            case RequestType_GET_DEFAULT_NOTIFICATION:
-                [self processDefaultNotification:listObject with:parameter];
-                break;
+
                 
             case RequestType_GET_LIST_IMAGES:
                 [self processListImage:listObject with:parameter];
@@ -223,16 +244,7 @@
                 }
                 [self processTransfer:listObject with:parameter];
                 break;
-            // INSERTED BY M.FUJII 2015.12.12 END
-            // INSERTED BY M.FUJII 201602:04 START
-            // 簡易CMS対応
-            case RequestType_GET_MEMBER_NO:
-                if ( [JSON[@"error_code"] integerValue] != 200 ){
-                    listObject = nil;
-                }
-                [self processGetMemberNo:listObject with:parameter];
-                break;
-            // INSERTED BY M.FUJII 201602:04 END
+
             default:
                 break;
         }
@@ -291,10 +303,11 @@
 
 #pragma mark - ACCESS API
 - (void) getDefaultNotification: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate{
+
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    [params setValue:[NSString stringWithFormat:@"%@",deviceID] forKey:@"device_id"];
     [params setValue:[NSString stringWithFormat:@"%@",appID] forKey:@"app_id"];
-    
+    [params setValue:[NSString stringWithFormat:@"%@",deviceID] forKey:@"device_id"];
+
     NSString *strRequest = @"";
     strRequest = [NSString stringWithFormat:BASE_URL,GET_DEFAULT_NOTIFICATION];
     
@@ -306,6 +319,19 @@
     [request setHTTPMethod:@"GET"];
     [self baseRequestJSON:request parameter:paramenter];
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 - (void) getMemberInfo: (NSString*) appID withDeviceID:(NSString*) deviceID delegate: (NSObject<ManagerDownloadDelegate>*) delegate {
     
@@ -704,6 +730,40 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
+- (void) getMemberNo:(NSString*) appID withDeviceID: (NSString*) deviceID delegate: (NSObject<ManagerDownloadDelegate>*) delegate
+{
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setValue:[NSString stringWithFormat:@"%@",deviceID] forKey:@"device_id"];
+    [params setValue:[NSString stringWithFormat:@"%@",appID] forKey:@"app_id"];
+
+    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_MEMBER_NO];
+    paramenter.delegate = delegate;
+    NSString *strRequest = @"";
+    strRequest = [NSString stringWithFormat:BASE_URL,GET_MEMBER_NO];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
+    [request setHTTPMethod:@"POST"];
+    [Utility setParamWithMethodPost:params forRequest:request];
+    [self baseRequestJSON:request parameter:paramenter];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - (void) enableNotificationToDevice: (NSString*) deviceID withAppID: (NSString*) appID withReceived: (NSString*) received delegate: (NSObject<ManagerDownloadDelegate>*) delegate
 {
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
@@ -824,6 +884,7 @@
 
 #pragma mark - process Data
 - (void) processDefaultNotification:(NSArray *)listObject with:(DownloadParam *)param{
+
     for (NSDictionary *dic in listObject) {
         if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
             return;
@@ -833,9 +894,45 @@
         object.apns_badge = [Utility checkNULL:[dic objectForKey:@"total"]];
         
         [param.listData addObject:object];
-        
     }
 }
+
+- (void) processSetDeviceId:(NSArray *)listObject with:(DownloadParam *)param{
+
+    for (NSDictionary *dic in listObject) {
+        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
+            return;
+        }
+
+        NSLog(@"dic = %@", dic);
+        [param.listData addObject:dic];
+
+    }
+}
+
+- (void) processGetMemberNo:(NSArray *)listObject with:(DownloadParam *)param{
+
+    for (NSDictionary *dic in listObject) {
+        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
+            return;
+        }
+
+        NSLog(@"dic = %@", dic);
+        [param.listData addObject:dic];
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 - (void) processGetMemberInfo:(NSArray *)listObject with:(DownloadParam *)param{
     
@@ -1260,45 +1357,8 @@
 // INSERTED BY M.FUJII 2015.12.12 END
 // INSERTED BY M.FUJII 2016.02.04 START
 // 簡易CMSタンプ対応
-- (void) getMemberNo:(NSString*) appID withDeviceID: (NSString*) deviceID delegate: (NSObject<ManagerDownloadDelegate>*) delegate
-{
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    [params setValue:[NSString stringWithFormat:@"%@",deviceID] forKey:@"device_id"];
-    [params setValue:[NSString stringWithFormat:@"%@",appID] forKey:@"app_id"];
-    
-    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_MEMBER_NO];
-    paramenter.delegate = delegate;
-    NSString *strRequest = @"";
-    strRequest = [NSString stringWithFormat:BASE_URL,GET_MEMBER_NO];
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
-    [request setHTTPMethod:@"POST"];
-    [Utility setParamWithMethodPost:params forRequest:request];
-    [self baseRequestJSON:request parameter:paramenter];
-}
-- (void) processSetDeviceId:(NSArray *)listObject with:(DownloadParam *)param{
-    
-    for (NSDictionary *dic in listObject) {
-        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
-            return;
-        }
-        
-        NSLog(@"dic = %@", dic);
-        [param.listData addObject:dic];
-        
-    }
-}
-- (void) processGetMemberNo:(NSArray *)listObject with:(DownloadParam *)param{
-    
-    for (NSDictionary *dic in listObject) {
-        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
-            return;
-        }
-        
-        NSLog(@"dic = %@", dic);
-        [param.listData addObject:dic];
-        
-    }
-}
+
+
+
 // INSERTED BY M.FUJII 2016.02.04 END
 @end

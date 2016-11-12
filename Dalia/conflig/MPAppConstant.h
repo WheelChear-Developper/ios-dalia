@@ -55,16 +55,13 @@
 #define MONTH_BIRTH @"MONTH_BIRTH"
 #define UNAVAILABLE_IMAGE @"no_photo.png"
 
-// REPLACED BY ama 2016.10.05 START
-// ドメイン更新
 //URL Webservice Misepuri
-#define BASE_PREFIX_URL @"http://test-mock123.com/%@"
+#define BASE_PREFIX_URL @"http://dalia.miseapps.com/%@"
 //#define BASE_PREFIX_URL @"http://dondontei.miseapps.com/%@"
-#define BASE_URL @"http://test-mock123.com/index.php/services/%@"
+#define BASE_URL @"http://dalia.miseapps.com/index.php/services/%@"
 //#define BASE_URL @"http://dondontei.miseapps.com/index.php/services/%@"
 //CURPON IMAGE
 //#define CURPON_IMAGE_URL @"http://dondontei.miseapps.com/images/top_coupon_bunner.png"
-// REPLACED BY ama 2016.10.05 END
 
 #define SET_DEVICE @"device/setDevice"
 #define SET_DEVICE_TOKEN @"device/setDeviceToken"
@@ -72,6 +69,17 @@
 
 //DEFAULT NOTIFICATION
 #define GET_DEFAULT_NOTIFICATION @"default/notification"
+
+
+
+
+
+
+
+
+
+
+
 
 //USER
 #define GET_MEMBER_INFO @"member/getMemberInfo"

@@ -12,7 +12,6 @@
 #import "DatabaseManager.h"
 #import "ManagerDownload.h"
 #import "MPApnsDAO.h"
-
 #import "DeployGateSDK/DeployGateSDK.h"
 
 @implementation MPAppDelegate
@@ -42,36 +41,45 @@
     // DeployGateセット
     [[DeployGateSDK sharedInstance] launchApplicationWithAuthor:@"akafune" key:@"4c2b720f624aed3f6d4d59ca21341c65d29e3e47"];
 
+    //2秒止める
     [NSThread sleepForTimeInterval:2.0];
 
+    //画面生成
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
+    //Notification 有効化
     //TODO: SET ENABLE NOTIFICATION - 1:ENABLE - 0:DISABLE
     self.enableNotificationString = @"1";
 
+    //@"kReachabilityChangedNotification" という文字列で通知を受け取れるようにする
     //TODO: check network connection
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkChangeStatus:) name:kReachabilityChangedNotification object:nil];
 
+    //通信状態の確認用
     self.reachability = [Reachability reachabilityForInternetConnection];
     self.networkStatus = [self.reachability currentReachabilityStatus];
     [self.reachability startNotifier];
 
+    //マルチスレッド数設定
     //TODO: CREATE QUEUE
     self.mainQueue = [[NSOperationQueue alloc] init];
     [self.mainQueue setMaxConcurrentOperationCount:7];
 
+    //TABの設定
     //TODO: ADD TABBARCONTROLLER TO ROOT VIEW
     MPTabBarViewController *tabBarController = [MPTabBarViewController sharedInstance];
     [tabBarController setUpTabBar];
     [tabBarController setCustomNavigaion];
     [self.window setRootViewController:tabBarController];
 
+    //データベース前準備
     //TODO: DATABASE
     [DatabaseManager checkPhycicalDatabase];
 
+    //通知設定（デバイストークン取得）
     //TODO: Let the device know we want to receive push notifications
     //[[UIApplication sharedApplication] registerForRemoteNotificationTypes:
     // (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
@@ -89,14 +97,16 @@
 //         (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound)];
     }
 
+    //通知件数取得
     //TODO: Get default notification
     [[ManagerDownload sharedInstance] getDefaultNotification:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
 
     NSLog(@"generic device ID: %@ %@",[Utility deviceID],[Utility getDeviceID]);
+
+    //デバイス登録（iOSで登録）
     //TODO: Save device id to UserDefault
     [[ManagerDownload sharedInstance] submitDeviceID:[Utility deviceID] withAppID:[Utility getAppID] withType:@"1" delegate:self];
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    //if (![userDefault objectForKey:DEVICE_ID_USER_DEFAULT]) {
     [userDefault setObject:[Utility deviceID] forKey:DEVICE_ID_USER_DEFAULT];
     [userDefault synchronize];
 
@@ -155,6 +165,7 @@
             // 簡易CMS対応
             break;
         case RequestType_GET_MEMBER_NO:
+            
             if ( ![param.listData[0][@"member_no"] isEqualToString:@""] ) {
                 [[NSUserDefaults standardUserDefaults] setObject:param.listData[0][@"member_no"]  forKey:MEMBER_NO];
                 [[NSUserDefaults standardUserDefaults] synchronize];
@@ -164,7 +175,6 @@
         default:
             break;
     }
-
 }
 
 - (void)downloadDataFail:(DownloadParam *)param {
@@ -195,7 +205,9 @@
 
     //TODO: Post device id & post device token
     //[[ManagerDownload sharedInstance] submitDeviceID:dt withAppID:appId withType:@"1" delegate:self];
-    [[ManagerDownload sharedInstance] submitDeviceToken:dt withAppID:appId withDeviceID:[Utility getDeviceID] delegate:self];
+    
+//API 確認必要（M.ama １１／１３）
+//    [[ManagerDownload sharedInstance] submitDeviceToken:dt withAppID:appId withDeviceID:[Utility getDeviceID] delegate:self];
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
