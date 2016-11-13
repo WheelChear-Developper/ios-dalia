@@ -17,6 +17,7 @@
 @interface MPSlideMenuView : UIView <ManagerDownloadDelegate>
 {
     IBOutlet UITableView* _menu_table;
+    NSArray* _ary_menuData;
 }
 @property (nonatomic, assign) id<MPSlideMenuViewDelegate> delegate;
 

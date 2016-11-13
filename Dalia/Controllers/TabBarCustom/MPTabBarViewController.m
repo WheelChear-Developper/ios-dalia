@@ -551,6 +551,8 @@
             NSMutableArray *listVC = [[NSMutableArray alloc] init];
             [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
             [self setViewControllers:listVC animated:YES];
+
+            [self selectTab:0];
         }
             break;
         case 2:
@@ -615,46 +617,47 @@
              NSMutableArray *listVC = [[NSMutableArray alloc] init];
              [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
              [self setViewControllers:listVC animated:YES];
+
+            [self selectTab:1];
         }
             break;
         case 8:
         {
-            /*
-             SettingViewController *vc_Setting = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
+             MPTheThirdViewController *vc_Setting = [[MPTheThirdViewController alloc] initWithNibName:@"MPTheThirdViewController" bundle:nil];
              UIViewController *vc = vc_Setting;
              NSMutableArray *listVC = [[NSMutableArray alloc] init];
              [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
              [self setViewControllers:listVC animated:YES];
-             */
+
+            [self selectTab:2];
         }
             break;
         case 9:
         {
-            /*
-             SettingViewController *vc_Setting = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
+             MPTheFourthViewController *vc_Setting = [[MPTheFourthViewController alloc] initWithNibName:@"MPTheFourthViewController" bundle:nil];
              UIViewController *vc = vc_Setting;
              NSMutableArray *listVC = [[NSMutableArray alloc] init];
              [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
              [self setViewControllers:listVC animated:YES];
-             */
+
+            [self selectTab:3];
         }
             break;
         case 10:
         {
-            /*
-             SettingViewController *vc_Setting = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
+             MPTheFifthViewController *vc_Setting = [[MPTheFifthViewController alloc] initWithNibName:@"MPTheFifthViewController" bundle:nil];
              UIViewController *vc = vc_Setting;
              NSMutableArray *listVC = [[NSMutableArray alloc] init];
              [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
              [self setViewControllers:listVC animated:YES];
-             */
+
+            [self selectTab:4];
         }
             break;
 
         default:
             break;
     }
-
 }
 
 - (void)dealloc {

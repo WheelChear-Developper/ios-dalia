@@ -620,10 +620,10 @@
 			isa = PBXGroup;
 			children = (
 				106A30F21DD7082A00C0C741 /* FunctionViewControllers */,
-				106A30F71DD7082A00C0C741 /* MainViewControllers */,
 				106A31151DD7082A00C0C741 /* SlideMenu */,
-				106A31181DD7082A00C0C741 /* SubViews */,
 				106A31651DD7082A00C0C741 /* TabBarCustom */,
+				106A30F71DD7082A00C0C741 /* MainViewControllers */,
+				106A31181DD7082A00C0C741 /* SubViews */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -645,10 +645,10 @@
 			isa = PBXGroup;
 			children = (
 				106A302C1DD7080E00C0C741 /* FunctionViewControllers */,
-				106A302E1DD7080E00C0C741 /* MainViewControllers */,
 				106A304B1DD7080E00C0C741 /* SlideMenu */,
-				106A30751DD7080E00C0C741 /* SubViews */,
 				106A307F1DD7080E00C0C741 /* TabBarCustom */,
+				106A302E1DD7080E00C0C741 /* MainViewControllers */,
+				106A30751DD7080E00C0C741 /* SubViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";

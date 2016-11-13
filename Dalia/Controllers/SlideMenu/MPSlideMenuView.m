@@ -69,9 +69,9 @@
         cell = [nib objectAtIndex:0];
     }
 
-    NSArray *newArr = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
+    _ary_menuData = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
 
-    long lng_ch = [[newArr objectAtIndex:indexPath.row] integerValue];
+    long lng_ch = [[_ary_menuData objectAtIndex:indexPath.row] integerValue];
     switch (lng_ch) {
         case 1:
             cell.img_menu.image = [UIImage imageNamed:@"sidemenu_home.png"];
@@ -126,7 +126,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     //メニュー指定
-    [self.delegate setNavigationSetView:indexPath.row + 1];
+    long menuNo = [[_ary_menuData objectAtIndex:indexPath.row] integerValue];
+    [self.delegate setNavigationSetView:menuNo];
 }
 
 
