@@ -48,6 +48,23 @@
     //XIB表示のため、contentViewを非表示
     [contentView setHidden:YES];
 
+    //横スクロールイメージビュー追加（商品紹介）
+    _topImageView = (MPTopImagesView*)[Utility viewInBundleWithName:@"MPTopImagesView"];
+    _topImageView.delegate = self;
+    if ([[(MPConfigObject*)[[MPConfigObject sharedInstance] objectAfterParsedPlistFile:CONFIG_FILE] top_image_type] isEqualToString:@"rectangular"]) {
+        _topImageView.isSquare = NO;
+    }else{
+        _topImageView.isSquare = YES;
+    }
+
+    CGRect topImageViewFrame = _topImageView.frame;
+    topImageViewFrame.origin.x = 2;
+    topImageViewFrame.origin.y = 2;
+    topImageViewFrame.size.width = _topimg_rootView.frame.size.width - 4;
+    topImageViewFrame.size.height = _topimg_rootView.frame.size.height - 4;
+    _topImageView.frame = topImageViewFrame;
+    [_topimg_rootView addSubview:_topImageView];
+
     //ボタン画像Fix
     btn_block1.imageView.contentMode = UIViewContentModeScaleAspectFit;
     btn_block2.imageView.contentMode = UIViewContentModeScaleAspectFit;

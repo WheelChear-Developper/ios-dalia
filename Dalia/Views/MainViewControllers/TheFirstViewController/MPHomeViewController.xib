@@ -16,6 +16,7 @@
                 <outlet property="_WhatsNew_tableView" destination="ZDm-gv-pmn" id="aR9-v4-4S1"/>
                 <outlet property="_scr_inView" destination="YeY-gZ-jat" id="GSf-0H-iea"/>
                 <outlet property="_scr_rootview" destination="ZTI-Q5-hGY" id="4yI-BQ-GSv"/>
+                <outlet property="_topimg_rootView" destination="uHD-J9-317" id="hXc-Ii-3zw"/>
                 <outlet property="btn_block1" destination="TiC-Jt-fyX" id="7yW-xs-He0"/>
                 <outlet property="btn_block2" destination="79R-We-lGk" id="PjV-mn-dCA"/>
                 <outlet property="btn_block3" destination="oPI-FA-fcB" id="KkB-nv-mWz"/>
