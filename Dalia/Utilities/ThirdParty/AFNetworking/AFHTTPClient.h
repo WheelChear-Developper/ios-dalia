@@ -169,7 +169,7 @@ extern NSString * AFQueryStringFromParametersWithEncoding(NSDictionary *paramete
 /// @name Managing Reachability Status
 ///-----------------------------------
 
-/**
+/*
  Sets a callback to be executed when the network availability of the `baseURL` host changes.
  
  @param block A block object to be executed when the network availability of the `baseURL` host changes.. This block has no return value and takes a single argument, which is `YES` if the host is available, otherwise `NO`.
@@ -184,7 +184,7 @@ extern NSString * AFQueryStringFromParametersWithEncoding(NSDictionary *paramete
 /// @name Managing HTTP Operations
 ///-------------------------------
 
-/**
+/*
  Attempts to register a subclass of `AFHTTPRequestOperation`, adding it to a chain to automatically generate request operations from a URL request.
  
  @param The subclass of `AFHTTPRequestOperation` to register
@@ -197,7 +197,7 @@ extern NSString * AFQueryStringFromParametersWithEncoding(NSDictionary *paramete
  */
 - (BOOL)registerHTTPOperationClass:(Class)operationClass;
 
-/**
+/*
  Unregisters the specified subclass of `AFHTTPRequestOperation`.
  
  @param The class conforming to the `AFHTTPClientOperation` protocol to unregister

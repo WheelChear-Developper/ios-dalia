@@ -84,7 +84,7 @@ typedef enum {
  */
 @property (nonatomic, assign) id<InfinitePagingViewDelegate> delegate;
 
-/*!
+/*
  Add a view object to inner scrollView view.
  @method addPageView:
  @param UIView *pageView
@@ -92,13 +92,13 @@ typedef enum {
 // REPERTED BY M.ama 2016.10.27 START
 // 画像順番設定
 - (void)addPageView:(UIView *)pageView index:(long)tagno;
-/*!
+/*
  Scroll to previous page.
  @method scrollToPrevious
  */
 - (void)scrollToPreviousPage:(BOOL)animation;
 
-/*!
+/*
  Scroll to next page.
  @method scrollToPrevious
  */
