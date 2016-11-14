@@ -313,7 +313,7 @@ extern NSString * AFQueryStringFromParametersWithEncoding(NSDictionary *paramete
  */
 - (void)enqueueHTTPRequestOperation:(AFHTTPRequestOperation *)operation;
 
-/**
+/*
  Cancels all operations in the HTTP client's operation queue whose URLs match the specified HTTP method and path.
  
  @param method The HTTP method to match for the cancelled requests, such as `GET`, `POST`, `PUT`, or `DELETE`. If `nil`, all request operations with URLs matching the path will be cancelled. 
@@ -454,7 +454,7 @@ extern NSString * AFQueryStringFromParametersWithEncoding(NSDictionary *paramete
  */
 - (void)appendPartWithFormData:(NSData *)data name:(NSString *)name;
 
-/**
+/*
  Appends the HTTP header `Content-Disposition: file; filename=#{filename}; name=#{name}"` and `Content-Type: #{mimeType}`, followed by the encoded file data and the multipart form boundary.
  
  @param data The data to be encoded and appended to the form data.
