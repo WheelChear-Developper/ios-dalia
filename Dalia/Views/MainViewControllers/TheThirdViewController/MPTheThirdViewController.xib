@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPTheThirdViewController">
             <connections>
+                <outlet property="_scr_inView" destination="yLB-vt-V4q" id="26K-za-qvt"/>
+                <outlet property="_scr_rootview" destination="mCx-wF-6NC" id="ZdZ-1K-lnF"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -18,7 +20,38 @@
         <view contentMode="scaleToFill" id="1">
             <rect key="frame" x="0.0" y="0.0" width="320" height="1700"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCx-wF-6NC">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="1700"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLB-vt-V4q">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1000" id="AQA-eE-JSv"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="yLB-vt-V4q" secondAttribute="trailing" id="L3h-3K-noT"/>
+                        <constraint firstItem="yLB-vt-V4q" firstAttribute="top" secondItem="mCx-wF-6NC" secondAttribute="top" id="MyN-RD-wjD"/>
+                        <constraint firstItem="yLB-vt-V4q" firstAttribute="leading" secondItem="mCx-wF-6NC" secondAttribute="leading" id="bHw-sY-jlE"/>
+                        <constraint firstItem="yLB-vt-V4q" firstAttribute="centerX" secondItem="mCx-wF-6NC" secondAttribute="centerX" id="kR4-Gs-hnb"/>
+                        <constraint firstAttribute="bottom" secondItem="yLB-vt-V4q" secondAttribute="bottom" id="w6X-Nl-E1f"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="NVo-KP-XlU"/>
+                    </connections>
+                </scrollView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="mCx-wF-6NC" secondAttribute="bottom" id="NuI-Yw-juv"/>
+                <constraint firstAttribute="trailing" secondItem="mCx-wF-6NC" secondAttribute="trailing" id="dwT-2Z-sVH"/>
+                <constraint firstItem="mCx-wF-6NC" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="hhK-Z7-OpA"/>
+                <constraint firstItem="mCx-wF-6NC" firstAttribute="top" secondItem="1" secondAttribute="top" id="xoX-J3-05F"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="519" y="27"/>

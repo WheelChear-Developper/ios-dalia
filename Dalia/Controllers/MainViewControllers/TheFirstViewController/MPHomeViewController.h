@@ -20,10 +20,10 @@
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;
+    CGPoint _scrollBeginingPoint;
 
     __weak IBOutlet UIView* _topimg_rootView;
     MPTopImagesView* _topImageView;
-    CGPoint _scrollBeginingPoint;
 
     __weak IBOutlet UIButton* btn_block1;
     __weak IBOutlet UIButton* btn_block2;

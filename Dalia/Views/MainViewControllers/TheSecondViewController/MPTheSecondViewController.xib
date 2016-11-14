@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPTheSecondViewController">
             <connections>
+                <outlet property="_scr_inView" destination="u1q-N1-Kdh" id="ZBH-fO-rj2"/>
+                <outlet property="_scr_rootview" destination="j4j-iq-f64" id="qMf-4o-Z76"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -18,7 +20,38 @@
         <view contentMode="scaleToFill" id="1">
             <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4j-iq-f64">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1q-N1-Kdh">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1000" id="nuA-fF-rzL"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="u1q-N1-Kdh" secondAttribute="trailing" id="18n-9C-gjA"/>
+                        <constraint firstItem="u1q-N1-Kdh" firstAttribute="centerX" secondItem="j4j-iq-f64" secondAttribute="centerX" id="Kld-yx-5FW"/>
+                        <constraint firstItem="u1q-N1-Kdh" firstAttribute="leading" secondItem="j4j-iq-f64" secondAttribute="leading" id="SLA-DM-soO"/>
+                        <constraint firstAttribute="bottom" secondItem="u1q-N1-Kdh" secondAttribute="bottom" id="guD-Sx-kNE"/>
+                        <constraint firstItem="u1q-N1-Kdh" firstAttribute="top" secondItem="j4j-iq-f64" secondAttribute="top" id="kau-Mn-tke"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="heh-hX-FKh"/>
+                    </connections>
+                </scrollView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="j4j-iq-f64" secondAttribute="trailing" id="8X4-9S-C3y"/>
+                <constraint firstAttribute="bottom" secondItem="j4j-iq-f64" secondAttribute="bottom" id="WWh-xi-hXS"/>
+                <constraint firstItem="j4j-iq-f64" firstAttribute="top" secondItem="1" secondAttribute="top" id="qXF-rS-mcY"/>
+                <constraint firstItem="j4j-iq-f64" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="vry-6a-fLH"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>

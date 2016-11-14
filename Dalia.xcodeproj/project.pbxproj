@@ -88,8 +88,6 @@
 		10C4B7651DD9DFEE00E26096 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6EB1DD9DFEE00E26096 /* SettingViewController.xib */; };
 		10C4B7661DD9DFEE00E26096 /* TheUserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6ED1DD9DFEE00E26096 /* TheUserInfoViewController.xib */; };
 		10C4B7671DD9DFEE00E26096 /* UserSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6EE1DD9DFEE00E26096 /* UserSettingViewController.xib */; };
-		10C4B7681DD9DFEE00E26096 /* btn_setting_touroku.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6F11DD9DFEE00E26096 /* btn_setting_touroku.png */; };
-		10C4B7691DD9DFEE00E26096 /* btn_setting_touroku@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6F21DD9DFEE00E26096 /* btn_setting_touroku@2x.png */; };
 		10C4B76A1DD9DFEE00E26096 /* MPTheFifthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6F41DD9DFEE00E26096 /* MPTheFifthViewController.xib */; };
 		10C4B76B1DD9DFEE00E26096 /* MPHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6F71DD9DFEE00E26096 /* MPHomeViewController.xib */; };
 		10C4B76C1DD9DFEE00E26096 /* home_btn_memberscard.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6F91DD9DFEE00E26096 /* home_btn_memberscard.png */; };
@@ -182,6 +180,8 @@
 		10C4B7C31DD9DFEE00E26096 /* footer_btn_access_on.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B75F1DD9DFEE00E26096 /* footer_btn_access_on.jpg */; };
 		10C4B7C41DD9DFEE00E26096 /* backBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B7601DD9DFEE00E26096 /* backBottom@2x.png */; };
 		10C4B7C51DD9DFEE00E26096 /* backBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B7611DD9DFEE00E26096 /* backBottom.png */; };
+		10C4B7CC1DD9ECFF00E26096 /* UserInfo_btn_setting_touroku@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B7CA1DD9ECFF00E26096 /* UserInfo_btn_setting_touroku@2x.png */; };
+		10C4B7CF1DD9ED3A00E26096 /* UserInfo_btn_setting_touroku.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B7CE1DD9ED3A00E26096 /* UserInfo_btn_setting_touroku.png */; };
 		10DE079A1DD838810068C3A9 /* MPMenuListHomeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DE07931DD838810068C3A9 /* MPMenuListHomeObject.m */; };
 		10DE079B1DD838810068C3A9 /* MPNewHomeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DE07961DD838810068C3A9 /* MPNewHomeObject.m */; };
 		10DE079C1DD838810068C3A9 /* MPTopImageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DE07991DD838810068C3A9 /* MPTopImageObject.m */; };
@@ -369,8 +369,6 @@
 		10C4B6EB1DD9DFEE00E26096 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		10C4B6ED1DD9DFEE00E26096 /* TheUserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TheUserInfoViewController.xib; sourceTree = "<group>"; };
 		10C4B6EE1DD9DFEE00E26096 /* UserSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserSettingViewController.xib; sourceTree = "<group>"; };
-		10C4B6F11DD9DFEE00E26096 /* btn_setting_touroku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_setting_touroku.png; sourceTree = "<group>"; };
-		10C4B6F21DD9DFEE00E26096 /* btn_setting_touroku@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_setting_touroku@2x.png"; sourceTree = "<group>"; };
 		10C4B6F41DD9DFEE00E26096 /* MPTheFifthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheFifthViewController.xib; sourceTree = "<group>"; };
 		10C4B6F71DD9DFEE00E26096 /* MPHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPHomeViewController.xib; sourceTree = "<group>"; };
 		10C4B6F91DD9DFEE00E26096 /* home_btn_memberscard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_btn_memberscard.png; sourceTree = "<group>"; };
@@ -463,6 +461,8 @@
 		10C4B75F1DD9DFEE00E26096 /* footer_btn_access_on.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = footer_btn_access_on.jpg; sourceTree = "<group>"; };
 		10C4B7601DD9DFEE00E26096 /* backBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backBottom@2x.png"; sourceTree = "<group>"; };
 		10C4B7611DD9DFEE00E26096 /* backBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backBottom.png; sourceTree = "<group>"; };
+		10C4B7CA1DD9ECFF00E26096 /* UserInfo_btn_setting_touroku@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UserInfo_btn_setting_touroku@2x.png"; sourceTree = "<group>"; };
+		10C4B7CE1DD9ED3A00E26096 /* UserInfo_btn_setting_touroku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserInfo_btn_setting_touroku.png; sourceTree = "<group>"; };
 		10DE07921DD838810068C3A9 /* MPMenuListHomeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuListHomeObject.h; sourceTree = "<group>"; };
 		10DE07931DD838810068C3A9 /* MPMenuListHomeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuListHomeObject.m; sourceTree = "<group>"; };
 		10DE07951DD838810068C3A9 /* MPNewHomeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNewHomeObject.h; sourceTree = "<group>"; };
@@ -816,8 +816,8 @@
 		106A31051DD7082A00C0C741 /* TheSecondViewController */ = {
 			isa = PBXGroup;
 			children = (
-				106A31061DD7082A00C0C741 /* MPTheSecondViewController.m */,
 				106A31071DD7082A00C0C741 /* MPTheSecondViewController.h */,
+				106A31061DD7082A00C0C741 /* MPTheSecondViewController.m */,
 			);
 			path = TheSecondViewController;
 			sourceTree = "<group>";
@@ -1113,9 +1113,9 @@
 			isa = PBXGroup;
 			children = (
 				10C4B6F01DD9DFEE00E26096 /* images */,
+				10C4B6EB1DD9DFEE00E26096 /* SettingViewController.xib */,
 				10C4B6E91DD9DFEE00E26096 /* MPTermsViewController.xib */,
 				10C4B6EA1DD9DFEE00E26096 /* MPTransferViewController.xib */,
-				10C4B6EB1DD9DFEE00E26096 /* SettingViewController.xib */,
 				10C4B6EC1DD9DFEE00E26096 /* TheUserInfoViewController */,
 			);
 			path = SettingViewController;
@@ -1134,6 +1134,8 @@
 		10C4B6EF1DD9DFEE00E26096 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				10C4B7CE1DD9ED3A00E26096 /* UserInfo_btn_setting_touroku.png */,
+				10C4B7CA1DD9ECFF00E26096 /* UserInfo_btn_setting_touroku@2x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -1141,8 +1143,6 @@
 		10C4B6F01DD9DFEE00E26096 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				10C4B6F11DD9DFEE00E26096 /* btn_setting_touroku.png */,
-				10C4B6F21DD9DFEE00E26096 /* btn_setting_touroku@2x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -1431,12 +1431,12 @@
 		272CCCBA1DCAEF12006BC4EB /* Dalia */ = {
 			isa = PBXGroup;
 			children = (
+				103025D21DD1989A00F266D8 /* MPAppDelegate.h */,
+				103025D31DD1989A00F266D8 /* MPAppDelegate.m */,
 				272CCCD21DCAF096006BC4EB /* Utilities */,
 				1030262B1DD19EAD00F266D8 /* Models */,
 				1030264A1DD19EAD00F266D8 /* Views */,
 				103025D51DD19EAD00F266D8 /* Controllers */,
-				103025D21DD1989A00F266D8 /* MPAppDelegate.h */,
-				103025D31DD1989A00F266D8 /* MPAppDelegate.m */,
 				106A31A21DD709E000C0C741 /* conflig */,
 				103026F31DD1A36200F266D8 /* Images.xcassets */,
 				272CCCCC1DCAEF12006BC4EB /* Info.plist */,
@@ -1826,7 +1826,6 @@
 				10C4B76E1DD9DFEE00E26096 /* home_btn_onlineshop.png in Resources */,
 				10C4B77B1DD9DFEE00E26096 /* ttl_recommendmenu@2x.png in Resources */,
 				10C4B7C31DD9DFEE00E26096 /* footer_btn_access_on.jpg in Resources */,
-				10C4B7681DD9DFEE00E26096 /* btn_setting_touroku.png in Resources */,
 				10C4B7BB1DD9DFEE00E26096 /* footer_btn_home_on.jpg in Resources */,
 				10C4B7BC1DD9DFEE00E26096 /* footer_btn_coupon@2x.png in Resources */,
 				106A31771DD7082A00C0C741 /* MPAlertView.xib in Resources */,
@@ -1869,7 +1868,6 @@
 				106A31921DD7082A00C0C741 /* MPPlanTextCell.xib in Resources */,
 				10C4B7A71DD9DFEE00E26096 /* icon_instagram_black.png in Resources */,
 				10C4B7831DD9DFEE00E26096 /* MPSlideMenuView.xib in Resources */,
-				10C4B7691DD9DFEE00E26096 /* btn_setting_touroku@2x.png in Resources */,
 				10C4B7B51DD9DFEE00E26096 /* footer_btn_menu.jpg in Resources */,
 				10C4B7A81DD9DFEE00E26096 /* icon_menu.png in Resources */,
 				10C4B7AF1DD9DFEE00E26096 /* tab_back@2x.png in Resources */,
@@ -1880,6 +1878,7 @@
 				10C4B7981DD9DFEE00E26096 /* sidemenu_whatsnew.png in Resources */,
 				10C4B76B1DD9DFEE00E26096 /* MPHomeViewController.xib in Resources */,
 				10C4B7851DD9DFEE00E26096 /* navigation_back@2x.png in Resources */,
+				10C4B7CC1DD9ECFF00E26096 /* UserInfo_btn_setting_touroku@2x.png in Resources */,
 				10C4B7821DD9DFEE00E26096 /* MPSlideMenuCell.xib in Resources */,
 				10C4B7A11DD9DFEE00E26096 /* header_ttl_recommendmenu.png in Resources */,
 				10C4B7B81DD9DFEE00E26096 /* footer_btn_home@2x.png in Resources */,
@@ -1932,6 +1931,7 @@
 				106A317C1DD7082A00C0C741 /* CouponShareHeaderView.xib in Resources */,
 				10C4B77F1DD9DFEE00E26096 /* MPTheFourthViewController.xib in Resources */,
 				10C4B7811DD9DFEE00E26096 /* MPTheThirdViewController.xib in Resources */,
+				10C4B7CF1DD9ED3A00E26096 /* UserInfo_btn_setting_touroku.png in Resources */,
 				10C4B78E1DD9DFEE00E26096 /* sidemenu_menu.png in Resources */,
 				10C4B79B1DD9DFEE00E26096 /* customMenu_close.png in Resources */,
 				10C4B7771DD9DFEE00E26096 /* ttl_more@2x.png in Resources */,

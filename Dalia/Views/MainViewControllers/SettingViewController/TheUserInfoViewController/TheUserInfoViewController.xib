@@ -421,7 +421,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
-                                                    <state key="normal" image="btn_setting_touroku.png">
+                                                    <state key="normal" image="UserInfo_btn_setting_touroku.png">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <state key="selected" image="btn_setting_touroku.png"/>
@@ -560,6 +560,7 @@
         </view>
     </objects>
     <resources>
+        <image name="UserInfo_btn_setting_touroku.png" width="250" height="37"/>
         <image name="btn_setting_touroku.png" width="250" height="37"/>
         <image name="yajirushi.png" width="39" height="59"/>
     </resources>
