@@ -135,6 +135,21 @@
     }
 }
 
+#pragma mark - TopImageDelegate
+- (void)showWebView:(NSString*)text isUrlOpen:(NSString*)openFlg {
+
+    if([openFlg isEqualToString:@"0"]){
+
+        MPWebViewController *webViewVC = [[MPWebViewController alloc] initWithNibName:@"MPWebViewController" bundle:nil];
+        webViewVC.linkUrl = text;
+        [self.navigationController pushViewController:webViewVC animated:YES];
+
+    }else if([openFlg isEqualToString:@"0"]){
+
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:text]];
+    }
+}
+
 #pragma mark - UITableViewDelegate & UITableViewDatasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
@@ -232,16 +247,6 @@
     [self.navigationController pushViewController:newDetailVC animated:YES];
 */
  }
-
-
-
-- (void)showWebView:(NSString *)text {
-/*
-    MPHomeWebViewViewController *webViewVC = [[MPHomeWebViewViewController alloc] initWithNibName:@"MPHomeWebViewViewController" bundle:nil];
-    webViewVC.linkUrl = text;
-    [self.navigationController pushViewController:webViewVC animated:YES];
-*/
-}
 
 - (void)resizeTable {
 

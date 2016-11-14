@@ -15,6 +15,7 @@
 #import "MPMenuListHomeCell.h"
 #import "MPNewHomeCell.h"
 #import "TheUserInfoViewController.h"
+#import "MPWebViewController.h"
 
 @interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, TheUserInfoViewControllerDelegate>
 {

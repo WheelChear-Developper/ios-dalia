@@ -109,7 +109,10 @@
                 break;
             // INSERTED BY M.FUJII 201602:04 END
 
-
+            case RequestType_GET_LIST_IMAGES:
+                //トップスライドイメージ取得
+                [self processListImage:listObject with:parameter];
+                break;
 
 
 
@@ -134,9 +137,7 @@
                 
 
                 
-            case RequestType_GET_LIST_IMAGES:
-                [self processListImage:listObject with:parameter];
-                break;
+
                 
             case RequestType_GET_LIST_MESSAGES:
                 [self processListMessage:listObject with:parameter];
@@ -302,7 +303,7 @@
 }
 
 #pragma mark - ACCESS API
-- (void) getDefaultNotification: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate{
+- (void) getDefaultNotification:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate>*) delegate{
 
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     [params setValue:[NSString stringWithFormat:@"%@",appID] forKey:@"app_id"];
@@ -319,6 +320,28 @@
     [request setHTTPMethod:@"GET"];
     [self baseRequestJSON:request parameter:paramenter];
 }
+
+- (void) getListImage:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate>*)delegate {
+
+    //トップスライドイメージ取得
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+
+    [params setValue:appID forKey:@"app_id"];
+    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_LIST_IMAGES];
+    paramenter.delegate = delegate;
+    NSString *strRequest = @"";
+    strRequest = [NSString stringWithFormat:BASE_URL,GET_LIST_IMAGES];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
+    [request setHTTPMethod:@"POST"];
+    [Utility setParamWithMethodPost:params forRequest:request];
+    [self baseRequestJSON:request parameter:paramenter];
+}
+
+
+
+
+
 
 
 
@@ -377,20 +400,7 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
-- (void) getListImage: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate{
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    
-    [params setValue:appID forKey:@"app_id"];
-    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_LIST_IMAGES];
-    paramenter.delegate = delegate;
-    NSString *strRequest = @""; 
-    strRequest = [NSString stringWithFormat:BASE_URL,GET_LIST_IMAGES];
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
-    [request setHTTPMethod:@"POST"];
-    [Utility setParamWithMethodPost:params forRequest:request];
-    [self baseRequestJSON:request parameter:paramenter];
-}
+
 
 - (void) getListMessage: (NSString*) deviceID withAppID: (NSString*) appID withLimit:(NSString *)limit delegate:(NSObject<ManagerDownloadDelegate> *)delegate
 {
@@ -694,6 +704,11 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
+
+
+
+
+
 #pragma mark - SUBMIT DATA
 - (void)submitDeviceID:(NSString *)deviceID withAppID:(NSString *)appID withType:(NSString *)type delegate: (NSObject<ManagerDownloadDelegate>*) delegate{
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
@@ -882,6 +897,11 @@
 }
 // REPLACED BY ama 2016.10.05 END
 
+
+
+
+
+
 #pragma mark - process Data
 - (void) processDefaultNotification:(NSArray *)listObject with:(DownloadParam *)param{
 
@@ -922,6 +942,29 @@
 
     }
 }
+
+- (void) processListImage:(NSArray *)listObject with:(DownloadParam *)param {
+
+    //トップスライドイメージ取得
+    for (NSDictionary *dic in listObject) {
+        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
+            return;
+        }
+        MPTopImageObject *topImageObj = [[MPTopImageObject alloc] init];
+        topImageObj.topID = [Utility checkNULL:[dic objectForKey:@"id"]];
+        topImageObj.topUrl = [Utility checkNULL:[dic objectForKey:@"image"]];
+        topImageObj.topDesc = [Utility checkNULL:[dic objectForKey:@"description"]];
+        topImageObj.linkUrl = [Utility checkNULL:[dic objectForKey:@"url"]];
+        topImageObj.is_url_open = [[Utility checkNULL:[dic objectForKey:@"is_url_open"]] integerValue];
+        topImageObj.is_News = [[Utility checkNULL:[dic objectForKey:@"is_new"]] integerValue];
+        [param.listData addObject: topImageObj];
+    }
+}
+
+
+
+
+
 
 
 
@@ -965,23 +1008,6 @@
         }
         MPMemberObject *memberInfoObj = [[MPMemberObject alloc] init];
         [param.listData addObject: memberInfoObj];
-    }
-}
-
-- (void) processListImage:(NSArray *)listObject with:(DownloadParam *)param{
-    
-    for (NSDictionary *dic in listObject) {
-        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
-            return;
-        }
-        MPTopImageObject *topImageObj = [[MPTopImageObject alloc] init];
-        topImageObj.topID = [Utility checkNULL:[dic objectForKey:@"id"]];
-        topImageObj.topUrl = [Utility checkNULL:[dic objectForKey:@"image"]];
-        topImageObj.topDesc = [Utility checkNULL:[dic objectForKey:@"description"]];
-        topImageObj.linkUrl = [Utility checkNULL:[dic objectForKey:@"url"]];
-        topImageObj.is_News = [[Utility checkNULL:[dic objectForKey:@"is_new"]] integerValue];
-        //topImageObj.is_News = 1;
-        [param.listData addObject: topImageObj];
     }
 }
 

@@ -42,13 +42,13 @@
 #pragma mark - Show detail top image
 - (void)singleTapGestureCaptured:(UITapGestureRecognizer *)gesture {
     
-    if([self.delegate respondsToSelector:@selector(showWebView:)]){
+    if([self.delegate respondsToSelector:@selector(showWebView:isUrlOpen:)]){
         
         NSString* str_url = [listLinkUrl objectAtIndex:pageControl.currentPage];
         NSLog(@"PageNo:%d linkurl: %@", pageControl.currentPage, str_url);
         if(![str_url isEqualToString:@""]){
             
-            [self.delegate showWebView:[listLinkUrl objectAtIndex:pageControl.currentPage]];
+            [self.delegate showWebView:[listLinkUrl objectAtIndex:pageControl.currentPage] isUrlOpen:[isUrlLink objectAtIndex:pageControl.currentPage]];
         }
     }
     
@@ -80,6 +80,7 @@
         self.pageViews = [[NSMutableArray alloc] init];
         listDescriptionReceived = [[NSMutableArray alloc] init];
         listLinkUrl = [[NSMutableArray alloc] init];
+        isUrlLink = [[NSMutableArray alloc] init];
         for (NSInteger i = 0; i < listImage.count; ++i) {
             [self.pageViews addObject:[NSNull null]];
         }
@@ -207,6 +208,9 @@
         // 画像URL設定
         NSString* url = [(MPTopImageObject*)[listObjects objectAtIndex:lng_imageDownloadCount] linkUrl];
         [listLinkUrl addObject:[Utility checkNIL:url]];
+
+        long lng_isUrlLink = [(MPTopImageObject*)[listObjects objectAtIndex:lng_imageDownloadCount] is_url_open];
+        [isUrlLink addObject:[Utility checkNIL:[NSString stringWithFormat:@"%ld",lng_isUrlLink]]];
         
         if(![(MPTopImageObject*)[listObjects objectAtIndex:lng_imageDownloadCount] topDesc] ) {
             [titleView setHidden:YES];

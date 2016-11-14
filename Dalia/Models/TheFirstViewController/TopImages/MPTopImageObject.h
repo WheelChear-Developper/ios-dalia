@@ -13,5 +13,6 @@
 @property (nonatomic, strong) NSString *topUrl;
 @property (nonatomic, strong) NSString *topDesc;
 @property (nonatomic, strong) NSString *linkUrl;
+@property (nonatomic) long is_url_open;
 @property (nonatomic) long is_News;
 @end

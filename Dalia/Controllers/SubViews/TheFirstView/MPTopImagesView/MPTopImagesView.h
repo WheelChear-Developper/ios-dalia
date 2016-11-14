@@ -15,7 +15,7 @@
 
 @protocol MPTopImagesViewDelegate<NSObject>
 @required
-- (void)showWebView:(NSString*)text;
+- (void)showWebView:(NSString*)text isUrlOpen:(NSString*)openFlg;
 @end
 
 @interface MPTopImagesView : UIView<ManagerDownloadDelegate,LazyInternetDelegate,InfinitePagingViewDelegate>
@@ -29,6 +29,7 @@
     NSMutableArray *listDescriptionReceived;
     BOOL _isSquare;
     NSMutableArray *listLinkUrl;
+    NSMutableArray *isUrlLink;
     NSMutableArray *ary_list;
     long lng_imageDownloadCount;
 }
