@@ -12,12 +12,23 @@
 // お気に入り削除追加
 typedef NS_ENUM(NSInteger, RequestType) {
     RequestType_GET_DEFAULT_NOTIFICATION,
+    RequestType_SUBMIT_DEVICE_ID,
+    RequestType_GET_LIST_IMAGES,
+    RequestType_SET_SEND_MESSAGE,
+
+
+
+
+
+
+    
+    
     RequestType_GET_MEMBER_INFO,
     RequestType_SET_MEMBER_INFO,
-    RequestType_SUBMIT_DEVICE_ID,
+
     RequestType_SUBMIT_DEVICE_TOKEN,
     RequestType_ENABLE_NOTIFICATION,
-    RequestType_GET_LIST_IMAGES,
+
     RequestType_GET_LIST_MESSAGES,
     RequestType_READ_MESSAGE,
     RequestType_GET_LIST_MENU,
@@ -42,8 +53,7 @@ typedef NS_ENUM(NSInteger, RequestType) {
     RequestType_GET_COMPANY,
     RequestType_GET_TRANSFER_CODE,
     RequestType_SET_TRANSFER_DIVESE,
-    RequestType_DEL_TRANSFER_CODE,
-    RequestType_GET_MEMBER_NO
+    RequestType_DEL_TRANSFER_CODE
 };
 // REPLACED BY ama 2016.10.05 END
 

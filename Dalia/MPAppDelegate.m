@@ -110,14 +110,6 @@
     [userDefault setObject:[Utility deviceID] forKey:DEVICE_ID_USER_DEFAULT];
     [userDefault synchronize];
 
-    // INSERTED BY M.FUJII 2016.02.04 START
-    // 簡易CMS対応
-    NSString *member_no = [[NSUserDefaults standardUserDefaults] objectForKey:MEMBER_NO];
-    if ( [member_no length] <= 0 ){
-        [[ManagerDownload sharedInstance] getMemberNo:[Utility getAppID] withDeviceID:[Utility deviceID] delegate:self];
-    }
-    // INSERTED BY M.FUJII 2016.02.04 END
-
     return YES;
 }
 
@@ -128,12 +120,11 @@
         case RequestType_SUBMIT_DEVICE_ID:
             NSLog(@"Submitted device id");
         {
-            // INSERTED BY M.FUJII 2016.02.04 START
-            // 簡易CMS対応
-            if ( ![param.listData[0][@"member_no"] isEqualToString:@""] ) {
+            //デバイス登録
+            if(![param.listData[0][@"member_no"] isEqualToString:@""] ) {
                 [[NSUserDefaults standardUserDefaults] setObject:param.listData[0][@"member_no"]  forKey:MEMBER_NO];
             }
-            // INSERTED BY M.FUJII 2016.02.04 END
+
             [[NSUserDefaults standardUserDefaults] setObject:[Utility formatDateToString:[NSDate date]] forKey:SET_DATE_SUBMIT_DEVICE_USER_DEFAULT];
             [[NSUserDefaults standardUserDefaults] synchronize];
         }
@@ -164,14 +155,7 @@
             // INSERTED BY M.FUJII 2016.02.04 START
             // 簡易CMS対応
             break;
-        case RequestType_GET_MEMBER_NO:
-            
-            if ( ![param.listData[0][@"member_no"] isEqualToString:@""] ) {
-                [[NSUserDefaults standardUserDefaults] setObject:param.listData[0][@"member_no"]  forKey:MEMBER_NO];
-                [[NSUserDefaults standardUserDefaults] synchronize];
-            }
-            break;
-            // INSERTED BY M.FUJII 2016.02.04 END
+
         default:
             break;
     }

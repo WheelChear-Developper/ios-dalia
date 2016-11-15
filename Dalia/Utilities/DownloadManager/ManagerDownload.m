@@ -91,31 +91,23 @@
         }
         switch (parameter.request_type) {
             case RequestType_GET_DEFAULT_NOTIFICATION:
+                //バッジ情報取得
                 [self processDefaultNotification:listObject with:parameter];
                 break;
 
             case RequestType_SUBMIT_DEVICE_ID:
+                //デバイス登録
                 [self processSetDeviceId:listObject with:parameter];
                 break;
-
-            // INSERTED BY M.FUJII 2015.12.12 END
-            // INSERTED BY M.FUJII 201602:04 START
-            // 簡易CMS対応
-            case RequestType_GET_MEMBER_NO:
-                if ( [JSON[@"error_code"] integerValue] != 200 ){
-                    listObject = nil;
-                }
-                [self processGetMemberNo:listObject with:parameter];
-                break;
-            // INSERTED BY M.FUJII 201602:04 END
 
             case RequestType_GET_LIST_IMAGES:
                 //トップスライドイメージ取得
                 [self processListImage:listObject with:parameter];
                 break;
 
-
-
+            case RequestType_SET_SEND_MESSAGE:
+                //お知らせ配信依頼
+                break;
 
 
 
@@ -303,8 +295,9 @@
 }
 
 #pragma mark - ACCESS API
-- (void) getDefaultNotification:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate>*) delegate{
+- (void)getDefaultNotification:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate>*) delegate{
 
+    //バッジ情報取得
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     [params setValue:[NSString stringWithFormat:@"%@",appID] forKey:@"app_id"];
     [params setValue:[NSString stringWithFormat:@"%@",deviceID] forKey:@"device_id"];
@@ -321,7 +314,7 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
-- (void) getListImage:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate>*)delegate {
+- (void)getListImage:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate>*)delegate {
 
     //トップスライドイメージ取得
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
@@ -338,7 +331,30 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
+- (void)setSendMessage:(long)member_mode member_ids:(NSArray*)member_ids send_mode:(long)send_mode postion:(long)postion title:(NSString*)title descliption:(NSString*)descliption image:(NSString*)image delegate:(NSObject<ManagerDownloadDelegate>*)delegate {
 
+    //お知らせ配信依頼
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+
+    [params setValue:[NSString stringWithFormat:@"%ld",member_mode] forKey:@"member_mode"];
+    [params setValue:member_ids forKey:@"member_ids"];
+    [params setValue:[NSString stringWithFormat:@"%ld",send_mode] forKey:@"send_mode"];
+    [params setValue:[NSString stringWithFormat:@"%ld",postion] forKey:@"postion"];
+    [params setValue:title forKey:@"title"];
+    [params setValue:descliption forKey:@"descliption"];
+    [params setValue:image forKey:@"image"];
+
+    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_SET_SEND_MESSAGE];
+    paramenter.delegate = delegate;
+    NSString *strRequest = @"";
+    strRequest = [NSString stringWithFormat:BASE_URL,SET_SEND_DEVICE];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
+    [request setHTTPMethod:@"POST"];
+    [Utility setParamWithMethodPost:params forRequest:request];
+    [self baseRequestJSON:request parameter:paramenter];
+
+}
 
 
 
@@ -710,7 +726,9 @@
 
 
 #pragma mark - SUBMIT DATA
-- (void)submitDeviceID:(NSString *)deviceID withAppID:(NSString *)appID withType:(NSString *)type delegate: (NSObject<ManagerDownloadDelegate>*) delegate{
+- (void)submitDeviceID:(NSString *)deviceID withAppID:(NSString *)appID withType:(NSString *)type delegate: (NSObject<ManagerDownloadDelegate>*) delegate {
+
+    //デバイス登録
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     [params setValue:[NSString stringWithFormat:@"%@",deviceID] forKey:@"device_id"];
     [params setValue:[NSString stringWithFormat:@"%@",appID] forKey:@"app_id"];
@@ -726,6 +744,12 @@
     [Utility setParamWithMethodPost:params forRequest:request];
     [self baseRequestJSON:request parameter:paramenter];
 }
+
+
+
+
+
+
 
 - (void) submitDeviceToken: (NSString*) deviceToken withAppID: (NSString*) appID withDeviceID: (NSString*) deviceID delegate: (NSObject<ManagerDownloadDelegate>*) delegate
 {
@@ -745,22 +769,7 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
-- (void) getMemberNo:(NSString*) appID withDeviceID: (NSString*) deviceID delegate: (NSObject<ManagerDownloadDelegate>*) delegate
-{
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    [params setValue:[NSString stringWithFormat:@"%@",deviceID] forKey:@"device_id"];
-    [params setValue:[NSString stringWithFormat:@"%@",appID] forKey:@"app_id"];
 
-    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_MEMBER_NO];
-    paramenter.delegate = delegate;
-    NSString *strRequest = @"";
-    strRequest = [NSString stringWithFormat:BASE_URL,GET_MEMBER_NO];
-
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
-    [request setHTTPMethod:@"POST"];
-    [Utility setParamWithMethodPost:params forRequest:request];
-    [self baseRequestJSON:request parameter:paramenter];
-}
 
 
 
@@ -903,8 +912,9 @@
 
 
 #pragma mark - process Data
-- (void) processDefaultNotification:(NSArray *)listObject with:(DownloadParam *)param{
+- (void)processDefaultNotification:(NSArray *)listObject with:(DownloadParam *)param{
 
+    //バッジ情報取得
     for (NSDictionary *dic in listObject) {
         if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
             return;
@@ -917,8 +927,9 @@
     }
 }
 
-- (void) processSetDeviceId:(NSArray *)listObject with:(DownloadParam *)param{
+- (void)processSetDeviceId:(NSArray *)listObject with:(DownloadParam *)param{
 
+    //デバイス登録
     for (NSDictionary *dic in listObject) {
         if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
             return;
@@ -926,20 +937,6 @@
 
         NSLog(@"dic = %@", dic);
         [param.listData addObject:dic];
-
-    }
-}
-
-- (void) processGetMemberNo:(NSArray *)listObject with:(DownloadParam *)param{
-
-    for (NSDictionary *dic in listObject) {
-        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
-            return;
-        }
-
-        NSLog(@"dic = %@", dic);
-        [param.listData addObject:dic];
-
     }
 }
 

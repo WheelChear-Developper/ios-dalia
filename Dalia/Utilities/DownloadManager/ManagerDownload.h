@@ -19,14 +19,27 @@
     BOOL appDisable;
 }
 + (ManagerDownload *)sharedInstance;
-//{"error_code":203,"message":"App is disabled"}
+
 #pragma mark - ACCESS API
-- (void) getDefaultNotification: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
+//バッジ情報取得
+- (void)getDefaultNotification:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
+//トップスライドイメージ取得
+- (void)getListImage:(NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
+//お知らせ配信依頼
+- (void)setSendMessage:(long)member_mode member_ids:(NSArray*)member_ids send_mode:(long)send_mode postion:(long)postion title:(NSString*)title descliption:(NSString*)descliption image:(NSString*)image delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
+
+
+
+
+
+
+
+
 
 - (void) getMemberInfo:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*) delegate;
 - (void) setMemberInfo:(NSString*)userID withAppID:(NSString*)appID withMemberNO:(NSString*)memberNO withDeviceID:(NSString*)deviceID withNickName:(NSString*)nickName withGender:(long)gender withBirthday:(NSString*)birthday withZipcode:(NSString*)zipcode withChild1Name:(NSString*)child1name withChild1Birthday:(NSString*)child1birthday withChild2Name:(NSString*)child2name withChild2Birthday:(NSString*)child2birthday delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 
-- (void) getListImage: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
+
 - (void) getListMessage: (NSString*) deviceID withAppID: (NSString*) appID withLimit: (NSString*) limit delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 - (void) readMessage: (NSString*) deviceID withAppID: (NSString*) appID withMessageID: (NSString*) messageID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 - (void) getListMenu: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
@@ -53,10 +66,23 @@
 - (void) getTransferCode: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 - (void) setTransferDevice: (NSString*) deviceID withAppID: (NSString*) appID transfer_code: (NSString*) transfer_code delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 - (void) delTransferCode: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
-- (void) getMemberNo:(NSString*) appID withDeviceID: (NSString*) deviceID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
+
+
+
 
 #pragma mark - SUBMIT DATA TO SERVER
-- (void) submitDeviceID: (NSString*) deviceID withAppID: (NSString*) appID withType: (NSString*) type delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
+//デバイス登録
+- (void)submitDeviceID:(NSString*)deviceID withAppID:(NSString*)appID withType:(NSString*)type delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
+
+
+
+
+
+
+
+
+
+
 - (void) submitDeviceToken: (NSString*) deviceToken withAppID: (NSString*) appID withDeviceID: (NSString*) deviceID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 - (void) enableNotificationToDevice: (NSString*) deviceID withAppID: (NSString*) appID withReceived: (NSString*) received delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 - (void) submitLikedMenu: (NSString*) deviceID withAppID: (NSString*) appID withMenuID: (NSString*) menuID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;

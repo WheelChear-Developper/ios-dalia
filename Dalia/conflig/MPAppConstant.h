@@ -57,18 +57,27 @@
 
 //URL Webservice Misepuri
 #define BASE_PREFIX_URL @"http://dalia.miseapps.com/%@"
-//#define BASE_PREFIX_URL @"http://dondontei.miseapps.com/%@"
 #define BASE_URL @"http://dalia.miseapps.com/index.php/services/%@"
-//#define BASE_URL @"http://dondontei.miseapps.com/index.php/services/%@"
-//CURPON IMAGE
-//#define CURPON_IMAGE_URL @"http://dondontei.miseapps.com/images/top_coupon_bunner.png"
 
+//バッジ情報取得
+#define GET_DEFAULT_NOTIFICATION @"default/notification"
+
+//デバイス登録
 #define SET_DEVICE @"device/setDevice"
+
+//トップスライドイメージ取得
+#define GET_LIST_MENU @"menu/getListMenu"
+
+//お知らせ配信依頼
+#define SET_SEND_DEVICE @"apiDalia/sendMessage"
+
+
+
+
 #define SET_DEVICE_TOKEN @"device/setDeviceToken"
 #define SET_ENABLE_NOTIFICATION @"device/setAcceptNotification"
 
-//DEFAULT NOTIFICATION
-#define GET_DEFAULT_NOTIFICATION @"default/notification"
+
 
 
 
@@ -91,7 +100,7 @@
 #define READ_MESSAGE @"message/read"
 
 //MENU
-#define GET_LIST_MENU @"menu/getListMenu"
+
 #define GET_DETAIL_MENU @"menu/getDetailMenu"
 #define GET_LIST_LIKED_MENU @"menu/getListLikedMenu"
 #define SET_LIKED_MENU @"menu/setLikedMenu"
