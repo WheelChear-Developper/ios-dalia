@@ -10,12 +10,12 @@
 
 @interface MPMenuNewsCell : UITableViewCell
 {
-    __weak IBOutlet UIImageView *img_Photo;
-    __weak IBOutlet UILabel *dateNewLabel;
+    __weak IBOutlet UIImageView *_img_Photo;
+    __weak IBOutlet UILabel *_titleLabel;
+    __weak IBOutlet UILabel *_lbl_Message;
+    __weak IBOutlet UILabel *_dateNewLabel;
+
     __weak IBOutlet UIImageView *newIcon;
-    __weak IBOutlet UILabel *titleNewLabel;
-    __weak IBOutlet UILabel *lbl_Message;
-    __weak IBOutlet UITextView *txt_Message;
 }
 - (void)setData:(MPMenuNewsObject*)object;
 

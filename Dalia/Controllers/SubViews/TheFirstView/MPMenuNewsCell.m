@@ -44,10 +44,10 @@
                                    }else{
                                        image = [UIImage imageNamed:UNAVAILABLE_IMAGE];
                                    }
-                                   [img_Photo setImage:image];
+                                   [_img_Photo setImage:image];
                                }];
     }else{
-        [img_Photo setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
+        [_img_Photo setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
     }
     
     //時間設定
@@ -55,16 +55,15 @@
         if(![object.update_at isEqualToString:@""]){
             NSArray *dateArr1 = [[[object.update_at componentsSeparatedByString:@" "] objectAtIndex:0] componentsSeparatedByString:@"-"];
             NSArray *dateArr2 = [[[object.update_at componentsSeparatedByString:@" "] objectAtIndex:1] componentsSeparatedByString:@":"];
-            [dateNewLabel setText:[NSString stringWithFormat:@"%@ 年 %@ 月 %@ 日（%@）%@ 時 %@ 分", [dateArr1 objectAtIndex:0], [dateArr1 objectAtIndex:1], [dateArr1 objectAtIndex:2], [self getWeekday:object.update_at], [dateArr2 objectAtIndex:0], [dateArr2 objectAtIndex:1]]];
+            [_dateNewLabel setText:[NSString stringWithFormat:@"%@ 年 %@ 月 %@ 日（%@）%@ 時 %@ 分", [dateArr1 objectAtIndex:0], [dateArr1 objectAtIndex:1], [dateArr1 objectAtIndex:2], [self getWeekday:object.update_at], [dateArr2 objectAtIndex:0], [dateArr2 objectAtIndex:1]]];
         }
     }
     
     //タイトル設定
-    [titleNewLabel setText:object.title];
+    [_titleLabel setText:object.title];
     
     //メッセージ設定
-    [lbl_Message setText:object.content];
-    [txt_Message setText:object.content];
+    [_lbl_Message setText:object.content];
     
     //NEW表示
     if (object.is_read == 0) {
@@ -77,20 +76,14 @@
     
     if (object.is_read == 0) {
 
-        [titleNewLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:16]];
-        [lbl_Message setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:13]];
-        [txt_Message setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:13]];
+        [_titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:16]];
+        [_lbl_Message setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:13]];
 
     }else{
 
-        [titleNewLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:16]];
-        [lbl_Message setFont:[UIFont fontWithName:@"HelveticaNeue" size:13]];
-        [txt_Message setFont:[UIFont fontWithName:@"HelveticaNeue" size:13]];
+        [_titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:16]];
+        [_lbl_Message setFont:[UIFont fontWithName:@"HelveticaNeue" size:13]];
     }
-
-    // TEXTFIELDのマージンを０に設定
-    txt_Message.textContainerInset = UIEdgeInsetsZero;
-    txt_Message.textContainer.lineFragmentPadding = 0;
 }
 
 //曜日取得

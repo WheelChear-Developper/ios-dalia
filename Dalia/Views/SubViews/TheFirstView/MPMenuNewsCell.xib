@@ -78,7 +78,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yajirushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="HoF-DM-b9Y">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_yajirushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="HoF-DM-b9Y">
                                         <rect key="frame" x="168" y="12" width="12" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="HoF-DM-b9Y" secondAttribute="height" multiplier="39:59" id="0o9-D3-Kcx"/>
@@ -99,9 +99,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVV-12-rsT">
                                 <rect key="frame" x="120" y="73" width="180" height="25"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hI-Vz-FZS">
-                                        <rect key="frame" x="5" y="13" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="9hI-Vz-FZS">
+                                        <rect key="frame" x="5" y="13" width="170" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -109,6 +109,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="9hI-Vz-FZS" firstAttribute="leading" secondItem="zVV-12-rsT" secondAttribute="leading" constant="5" id="KGv-uO-IFB"/>
+                                    <constraint firstAttribute="trailing" secondItem="9hI-Vz-FZS" secondAttribute="trailing" constant="5" id="RT7-M2-FGO"/>
                                     <constraint firstItem="9hI-Vz-FZS" firstAttribute="centerY" secondItem="zVV-12-rsT" secondAttribute="centerY" id="gb1-0W-zOo"/>
                                     <constraint firstAttribute="height" constant="25" id="vF4-NS-jk3"/>
                                 </constraints>
@@ -150,11 +151,18 @@
                     <constraint firstAttribute="trailing" secondItem="nSP-vC-I1r" secondAttribute="trailing" constant="10" id="kvs-XP-0QM"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="_dateNewLabel" destination="9hI-Vz-FZS" id="Gcm-63-lAp"/>
+                <outlet property="_img_Photo" destination="CXN-OB-kap" id="s5h-J2-w2g"/>
+                <outlet property="_lbl_Message" destination="dIQ-Gw-ZRG" id="Qx0-br-JNp"/>
+                <outlet property="_titleLabel" destination="24b-vS-NVg" id="meP-R7-y61"/>
+                <outlet property="lbl_Message" destination="dIQ-Gw-ZRG" id="ecw-h5-aBG"/>
+            </connections>
             <point key="canvasLocation" x="521" y="576"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="yajirushi.png" width="39" height="59"/>
+        <image name="home_yajirushi.png" width="39" height="59"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

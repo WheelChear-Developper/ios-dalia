@@ -11,7 +11,7 @@
 @interface MPMenuRecommendMenuCell : UITableViewCell
 {
     __weak IBOutlet UIImageView *_img_Photo;
-    __weak IBOutlet UILabel *_titleNewLabel;
+    __weak IBOutlet UILabel *_titleLabel;
     __weak IBOutlet UILabel *_lbl_Message;
     __weak IBOutlet UILabel *_dateNewLabel;
 }

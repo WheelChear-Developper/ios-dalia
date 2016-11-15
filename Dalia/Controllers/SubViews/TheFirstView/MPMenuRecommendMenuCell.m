@@ -61,7 +61,7 @@
     }
     
     //タイトル設定
-    [_titleNewLabel setText:object.title];
+    [_titleLabel setText:object.title];
     
     //メッセージ設定
     [_lbl_Message setText:object.content];
