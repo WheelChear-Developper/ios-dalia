@@ -2,8 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>function_id</key>
-	<string></string>
+	<key>menu_id</key>
+	<string>2#3#4#11</string>
+    <key>top_menu_id</key>
+    <string>2#3#4#11</string>
 	<key>app_id</key>
 	<string>1</string>
 	<key>app_name</key>
@@ -13,6 +15,6 @@
 	<key>top_image_type</key>
 	<string>rectangular</string>
 	<key>browser_key</key>
-	<string></string>
+	<string>1</string>
 </dict>
 </plist>
