@@ -27,8 +27,8 @@
 - (void)getListImage:(NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 //お知らせ配信依頼
 - (void)setSendMessage:(long)member_mode member_ids:(NSArray*)member_ids send_mode:(long)send_mode postion:(long)postion title:(NSString*)title descliption:(NSString*)descliption image:(NSString*)image delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
-
-
+//トップ画面情報取得
+- (void)getTopInfo:(NSString*)appID withDeviceID:(NSString*) deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
 
 
 

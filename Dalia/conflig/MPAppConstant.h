@@ -71,6 +71,12 @@
 //お知らせ配信依頼
 #define SET_SEND_DEVICE @"apiDalia/sendMessage"
 
+//トップ画面情報取得
+#define GET_TOP_INFO @"app/getTopInfo"
+
+
+
+
 
 
 

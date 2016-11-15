@@ -1,14 +1,14 @@
 //
-//  MPMenuHomeCell.m
+//  MPMenuNewCell.m
 //  Misepuri
 //
 //  Created by 3SI-TUYENBQ on 11/27/13.
 //  Copyright (c) 2013 3SI-TUYENBQ. All rights reserved.
 //
 
-#import "MPMenuListHomeCell.h"
+#import "MPMenuNewsCell.h"
 
-@implementation MPMenuListHomeCell
+@implementation MPMenuNewsCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     
@@ -25,7 +25,7 @@
     [super setSelected:selected animated:animated];
 }
 
-- (void)setData:(MPMenuListHomeObject*)object {
+- (void)setData:(MPMenuNewsObject*)object {
     
     //非同期画像セット
     if (object.image) {

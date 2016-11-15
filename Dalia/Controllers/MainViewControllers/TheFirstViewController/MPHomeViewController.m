@@ -79,6 +79,9 @@
 
     //🔵設定ボタン表示設定
     [self setHiddenSettingButton:NO];
+
+    //トップ画面情報取得
+    [[ManagerDownload sharedInstance] getTopInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -155,12 +158,12 @@
 
     if(tableView == _RecommendMenuList_tableView){
 
-        return 3;
+        return list_RecommendMenu.count;
     }
 
     if(tableView == _WhatsNew_tableView){
 
-        return 4;
+        return list_news.count;
     }
 
     return 0;
@@ -203,27 +206,23 @@
 
     if(tableView == _RecommendMenuList_tableView){
 
-        MPMenuListHomeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"newMenuListIdentifier"];
+        MPMenuRecommendMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:@"menuRecommendMenuIdentifier"];
         if(cell == nil){
 
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPMenuListHomeCell" owner:self options:nil];
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPMenuRecommendMenuCell" owner:self options:nil];
             cell = [nib objectAtIndex:0];
         }
 
-//        [cell setData:[self.listObject objectAtIndex:indexPath.row]];
-        cell.backgroundColor = [UIColor clearColor];
-        cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
-        [cell.selectedBackgroundView setBackgroundColor:[UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1.0]];
-
+        [cell setData:[list_RecommendMenu objectAtIndex:indexPath.row]];
         return cell;
     }
 
     if(tableView == _WhatsNew_tableView){
 
-        MPNewHomeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"newHomeIdentifier"];
+        MPMenuNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"homeNewsIdentifier"];
         if(cell == nil){
 
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPNewHomeCell" owner:self options:nil];
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPMenuNewsCell" owner:self options:nil];
             cell = [nib objectAtIndex:0];
         }
 
@@ -270,6 +269,22 @@
                MAX(_WhatsNew_tableView.contentSize.height,
                    _WhatsNew_tableView.bounds.size.height));
 
+    if(list_RecommendItem.count == 0){
+//        self.view_item.translatesAutoresizingMaskIntoConstraints = YES;
+//        self.view_item.frame = CGRectMake(self.view_item.frame.origin.x, self.view_item.frame.origin.y, 0, 0);
+    }
+
+
+    if(list_RecommendMenu.count == 0){
+//        self.view_recommend.translatesAutoresizingMaskIntoConstraints = YES;
+//        self.view_recommend.frame = CGRectMake(self.view_recommend.frame.origin.x, self.view_recommend.frame.origin.y, 0, 0);
+    }
+
+
+    if(list_news.count == 0){
+//        self.view_news.translatesAutoresizingMaskIntoConstraints = YES;
+//        self.view_news.frame = CGRectMake(self.view_news.frame.origin.x, self.view_news.frame.origin.y, self.view_news.frame.size.width, 0);
+    }
 }
 
 
@@ -277,9 +292,32 @@
 - (void)downloadDataSuccess:(DownloadParam *)param {
 
     switch (param.request_type) {
-        case RequestType_GET_LIST_COUPON:
+        case RequestType_GET_TOP_INFO:
         {
+            MPMenuTopinfoObject* listObject = [param.listData objectAtIndex:0];
 
+            NSMutableArray* obj_item = listObject.recommend_item;
+            list_RecommendItem = [[NSMutableArray alloc] init];
+            for (MPMenuRecommend_itemObject *obj in obj_item) {
+
+                [list_RecommendItem addObject:obj];
+            }
+
+            NSMutableArray* obj_menu = listObject.recommend_menu;
+            list_RecommendMenu = [[NSMutableArray alloc] init];
+            for (MPMenuRecommend_menuObject *obj in obj_menu) {
+
+                [list_RecommendMenu addObject:obj];
+            }
+            [_RecommendMenuList_tableView reloadData];
+
+            NSMutableArray* obj_new = listObject.news;
+            list_news = [[NSMutableArray alloc] init];
+            for (MPMenuNewsObject *obj in obj_new) {
+
+                [list_news addObject:obj];
+            }
+            [_WhatsNew_tableView reloadData];
 
         }
             break;

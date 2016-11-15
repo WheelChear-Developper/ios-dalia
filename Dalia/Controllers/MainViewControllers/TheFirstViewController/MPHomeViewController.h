@@ -12,10 +12,15 @@
 #import "MPTopImagesView.h"
 #import "MPConfigObject.h"
 #import "Configuration.h"
-#import "MPMenuListHomeCell.h"
-#import "MPNewHomeCell.h"
+
 #import "TheUserInfoViewController.h"
 #import "MPWebViewController.h"
+#import "MPMenuTopinfoObject.h"
+#import "MPMenuRecommend_menuObject.h"
+#import "MPMenuRecommend_itemObject.h"
+#import "MPMenuNewsObject.h"
+#import "MPMenuRecommendMenuCell.h"
+#import "MPMenuNewsCell.h"
 
 @interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, TheUserInfoViewControllerDelegate>
 {
@@ -34,12 +39,20 @@
 
     __weak IBOutlet UITableView* _RecommendMenuList_tableView;
     __weak IBOutlet UITableView* _WhatsNew_tableView;
+
+    NSMutableArray* list_RecommendItem;
+    NSMutableArray* list_RecommendMenu;
+    NSMutableArray* list_news;
 }
+@property (weak, nonatomic) IBOutlet UIView *view_item;
+
 - (IBAction)btn_block1:(id)sender;
 - (IBAction)btn_block2:(id)sender;
 - (IBAction)btn_block3:(id)sender;
 - (IBAction)btn_block4:(id)sender;
 - (IBAction)btn_block5:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIView *view_recommend;
 
 - (IBAction)btn_Recomend1:(id)sender;
 - (IBAction)btn_Recomend2:(id)sender;
@@ -50,5 +63,7 @@
 - (IBAction)btn_Recommend_Menu_More:(id)sender;
 
 - (IBAction)btn_WhatsNew_More:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIView *view_news;
 
 @end

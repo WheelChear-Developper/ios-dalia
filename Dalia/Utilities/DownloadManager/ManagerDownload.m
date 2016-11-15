@@ -12,8 +12,20 @@
 #import "MPTabBarViewController.h"
 #import "MPAppDelegate.h"
 #import "Utility.h"
-#import "MPMemberObject.h"
+
 #import "MPTopImageObject.h"
+#import "MPMenuTopinfoObject.h"
+#import "MPMenuRecommend_itemObject.h"
+#import "MPMenuRecommend_menuObject.h"
+#import "MPMenuNewsObject.h"
+
+
+
+
+
+
+#import "MPMemberObject.h"
+
 #import "MPNewHomeObject.h"
 #import "MPCouponObject.h"
 #import "MPMenuObject.h"
@@ -108,8 +120,10 @@
             case RequestType_SET_SEND_MESSAGE:
                 //お知らせ配信依頼
                 break;
-
-
+            case RequestType_GET_TOP_INFO:
+                //トップ画面情報取得
+                [self processGetTopInfo:listObject with:parameter];
+                break;
 
 
 
@@ -354,6 +368,24 @@
     [Utility setParamWithMethodPost:params forRequest:request];
     [self baseRequestJSON:request parameter:paramenter];
 
+}
+
+- (void)getTopInfo:(NSString*)appID withDeviceID:(NSString*) deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate {
+
+    //トップ画面情報取得
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+
+    [params setValue:appID forKey:@"app_id"];
+    [params setValue:deviceID forKey:@"device_id"];
+    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_TOP_INFO];
+    paramenter.delegate = delegate;
+    NSString *strRequest = @"";
+    strRequest = [NSString stringWithFormat:BASE_URL,GET_TOP_INFO];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
+    [request setHTTPMethod:@"POST"];
+    [Utility setParamWithMethodPost:params forRequest:request];
+    [self baseRequestJSON:request parameter:paramenter];
 }
 
 
@@ -912,7 +944,7 @@
 
 
 #pragma mark - process Data
-- (void)processDefaultNotification:(NSArray *)listObject with:(DownloadParam *)param{
+- (void)processDefaultNotification:(NSArray *)listObject with:(DownloadParam *)param {
 
     //バッジ情報取得
     for (NSDictionary *dic in listObject) {
@@ -927,7 +959,7 @@
     }
 }
 
-- (void)processSetDeviceId:(NSArray *)listObject with:(DownloadParam *)param{
+- (void)processSetDeviceId:(NSArray *)listObject with:(DownloadParam *)param {
 
     //デバイス登録
     for (NSDictionary *dic in listObject) {
@@ -940,7 +972,7 @@
     }
 }
 
-- (void) processListImage:(NSArray *)listObject with:(DownloadParam *)param {
+- (void)processListImage:(NSArray *)listObject with:(DownloadParam *)param {
 
     //トップスライドイメージ取得
     for (NSDictionary *dic in listObject) {
@@ -958,8 +990,63 @@
     }
 }
 
+- (void)processGetTopInfo:(NSArray *)listObject with:(DownloadParam *)param {
 
+    //トップ画面情報取得
+    for (NSDictionary *dic in listObject) {
+        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
+            return;
+        }
 
+        MPMenuTopinfoObject *topInfoObject = [[MPMenuTopinfoObject alloc] init];
+
+        NSArray *ary_recommend_item = [Utility checkNULL:[dic objectForKey:@"recommend_item"]];
+        NSArray *ary_recommend_menu = [Utility checkNULL:[dic objectForKey:@"recommend_menu"]];
+        NSArray *ary_news = [Utility checkNULL:[dic objectForKey:@"news"]];
+
+        for (long i = 0; i < ary_recommend_item.count; i ++) {
+
+            MPMenuRecommend_itemObject *itemObject = [[MPMenuRecommend_itemObject alloc] init];
+            itemObject.id = [Utility checkNULL:[[ary_recommend_item objectAtIndex:i] objectForKey:@"id"]];
+            itemObject.title = [Utility checkNULL:[[ary_recommend_item objectAtIndex:i] objectForKey:@"title"]];
+            itemObject.image = [Utility checkNULL:[[ary_recommend_item objectAtIndex:i] objectForKey:@"image"]];
+            itemObject.brand_name = [Utility checkNULL:[[ary_recommend_item objectAtIndex:i] objectForKey:@"brand_name"]];
+            itemObject.modified = [Utility checkNULL:[[ary_recommend_item objectAtIndex:i] objectForKey:@"modified"]];
+            [topInfoObject.recommend_item addObject:itemObject];
+        }
+
+        for (long i = 0; i < ary_recommend_menu.count; i ++) {
+
+            MPMenuRecommend_menuObject *menuObject = [[MPMenuRecommend_menuObject alloc] init];
+            menuObject.id = [Utility checkNULL:[[ary_recommend_menu objectAtIndex:i] objectForKey:@"id"]];
+            menuObject.title = [Utility checkNULL:[[ary_recommend_menu objectAtIndex:i] objectForKey:@"title"]];
+            menuObject.image = [Utility checkNULL:[[ary_recommend_menu objectAtIndex:i] objectForKey:@"image"]];
+            menuObject.content = [Utility checkNULL:[[ary_recommend_menu objectAtIndex:i] objectForKey:@"content"]];
+            menuObject.thumbnail = [Utility checkNULL:[[ary_recommend_menu objectAtIndex:i] objectForKey:@"thumbnail"]];
+            menuObject.updated_at = [Utility checkNULL:[[ary_recommend_menu objectAtIndex:i] objectForKey:@"updated_at"]];
+            [topInfoObject.recommend_menu addObject:menuObject];
+        }
+
+        for (long i = 0; i < ary_news.count; i ++) {
+
+            MPMenuNewsObject *newsObject = [[MPMenuNewsObject alloc] init];
+            newsObject.id = [Utility checkNULL:[[ary_news objectAtIndex:i] objectForKey:@"id"]];
+            newsObject.title = [Utility checkNULL:[[ary_news objectAtIndex:i] objectForKey:@"title"]];
+            newsObject.content = [Utility checkNULL:[[ary_news objectAtIndex:i] objectForKey:@"content"]];
+            newsObject.is_new = [Utility checkNULL:[[ary_news objectAtIndex:i] objectForKey:@"is_new"]];
+            newsObject.is_read = [[Utility checkNULL:[[ary_news objectAtIndex:i] objectForKey:@"is_read"]] integerValue];
+            newsObject.update_at = [Utility checkNULL:[[ary_news objectAtIndex:i] objectForKey:@"update_at"]];
+            newsObject.isOptionPlus01 = [[Utility checkNULL:[[ary_news objectAtIndex:i] objectForKey:@"isOptionPlus01"]] integerValue];
+            newsObject.position = [[Utility checkNULL:[[ary_news objectAtIndex:i] objectForKey:@"position"]] integerValue];
+            newsObject.image = [Utility checkNULL:[[ary_news objectAtIndex:i] objectForKey:@"image"]];
+            newsObject.thumbnail = [Utility checkNULL:[[ary_news objectAtIndex:i] objectForKey:@"thumbnail"]];
+            newsObject.wp_url = [Utility checkNULL:[[ary_news objectAtIndex:i] objectForKey:@"wp_url"]];
+            newsObject.wp_flg = [[Utility checkNULL:[[ary_news objectAtIndex:i] objectForKey:@"wp_flg"]] integerValue];
+            [topInfoObject.news addObject:newsObject];
+        }
+        [param.listData addObject: topInfoObject];
+    }
+}
 
 
 

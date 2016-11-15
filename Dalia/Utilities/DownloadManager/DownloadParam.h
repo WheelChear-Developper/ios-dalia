@@ -15,7 +15,7 @@ typedef NS_ENUM(NSInteger, RequestType) {
     RequestType_SUBMIT_DEVICE_ID,
     RequestType_GET_LIST_IMAGES,
     RequestType_SET_SEND_MESSAGE,
-
+    RequestType_GET_TOP_INFO,
 
 
 

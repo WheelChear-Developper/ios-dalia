@@ -1,14 +1,14 @@
 //
-//  MPNewHomeCell.m
+//  MPMenuRecommendMenuCell.m
 //  Misepuri
 //
 //  Created by 3SI-TUYENBQ on 11/27/13.
 //  Copyright (c) 2013 3SI-TUYENBQ. All rights reserved.
 //
 
-#import "MPNewHomeCell.h"
+#import "MPMenuRecommendMenuCell.h"
 
-@implementation MPNewHomeCell
+@implementation MPMenuRecommendMenuCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     
@@ -25,10 +25,10 @@
     [super setSelected:selected animated:animated];
 }
 
-- (void)setData:(MPNewHomeObject*)object {
+- (void)setData:(MPMenuRecommend_menuObject*)object {
     
     //非同期画像セット
-    if (object.image) {
+    if (![object.thumbnail isEqualToString:@""] && [object.thumbnail length] > 0) {
         NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:BASE_PREFIX_URL,object.thumbnail]];
         NSURLRequest* request = [NSURLRequest requestWithURL:url];
         
@@ -44,53 +44,27 @@
                                    }else{
                                        image = [UIImage imageNamed:UNAVAILABLE_IMAGE];
                                    }
-                                   [img_Photo setImage:image];
+                                   [_img_Photo setImage:image];
                                }];
     }else{
-        [img_Photo setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
+
+        [_img_Photo setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
     }
     
     //時間設定
-    if(object.update_at != nil){
-        if(![object.update_at isEqualToString:@""]){
-            NSArray *dateArr1 = [[[object.update_at componentsSeparatedByString:@" "] objectAtIndex:0] componentsSeparatedByString:@"-"];
-            NSArray *dateArr2 = [[[object.update_at componentsSeparatedByString:@" "] objectAtIndex:1] componentsSeparatedByString:@":"];
-            [dateNewLabel setText:[NSString stringWithFormat:@"%@ 年 %@ 月 %@ 日（%@）%@ 時 %@ 分", [dateArr1 objectAtIndex:0], [dateArr1 objectAtIndex:1], [dateArr1 objectAtIndex:2], [self getWeekday:object.update_at], [dateArr2 objectAtIndex:0], [dateArr2 objectAtIndex:1]]];
+    if(object.updated_at != nil){
+        if(![object.updated_at isEqualToString:@""]){
+            NSArray *dateArr1 = [[[object.updated_at componentsSeparatedByString:@" "] objectAtIndex:0] componentsSeparatedByString:@"-"];
+            NSArray *dateArr2 = [[[object.updated_at componentsSeparatedByString:@" "] objectAtIndex:1] componentsSeparatedByString:@":"];
+            [_dateNewLabel setText:[NSString stringWithFormat:@"%@ 年 %@ 月 %@ 日（%@）%@ 時 %@ 分", [dateArr1 objectAtIndex:0], [dateArr1 objectAtIndex:1], [dateArr1 objectAtIndex:2], [self getWeekday:object.updated_at], [dateArr2 objectAtIndex:0], [dateArr2 objectAtIndex:1]]];
         }
     }
     
     //タイトル設定
-    [titleNewLabel setText:object.title];
+    [_titleNewLabel setText:object.title];
     
     //メッセージ設定
-    [lbl_Message setText:object.content];
-    [txt_Message setText:object.content];
-    
-    //NEW表示
-    if (object.is_read == 0) {
-        
-        [newIcon setHidden:NO];
-    }else{
-        
-        [newIcon setHidden:YES];
-    }
-    
-    if (object.is_read == 0) {
-
-        [titleNewLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:16]];
-        [lbl_Message setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:13]];
-        [txt_Message setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:13]];
-
-    }else{
-
-        [titleNewLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:16]];
-        [lbl_Message setFont:[UIFont fontWithName:@"HelveticaNeue" size:13]];
-        [txt_Message setFont:[UIFont fontWithName:@"HelveticaNeue" size:13]];
-    }
-
-    // TEXTFIELDのマージンを０に設定
-    txt_Message.textContainerInset = UIEdgeInsetsZero;
-    txt_Message.textContainer.lineFragmentPadding = 0;
+    [_lbl_Message setText:object.content];
 }
 
 //曜日取得
