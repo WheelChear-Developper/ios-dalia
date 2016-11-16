@@ -71,6 +71,10 @@
     btn_block3.imageView.contentMode = UIViewContentModeScaleAspectFit;
     btn_block4.imageView.contentMode = UIViewContentModeScaleAspectFit;
     btn_block5.imageView.contentMode = UIViewContentModeScaleAspectFit;
+
+    //load cell xib and attach with collectionView
+    UINib *cellNib = [UINib nibWithNibName:@"MPMenuListCollectionCell" bundle:nil];
+    [_item_collectionView registerNib:cellNib forCellWithReuseIdentifier:@"cell"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -247,7 +251,59 @@
 */
  }
 
+#pragma mark - UICollectionView
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    return CGSizeMake(100.0f, 100.0f);
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(0.0f, 5.0f, 0.0f, 5.0f);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0.0f;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 5.0f;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return list_RecommendItem.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    MPMenuListCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+
+    [cell setImage:[UIImage imageNamed:@"home_btn_reserve.png"]];
+
+     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"Clicked %d-%d",indexPath.section,indexPath.row);
+}
+
 - (void)resizeTable {
+
+    //コレクション高さをセルの最大値へセット
+    _item_collectionView.translatesAutoresizingMaskIntoConstraints = YES;
+    _item_collectionView.frame = CGRectMake(_RecommendMenuList_tableView.frame.origin.x, _RecommendMenuList_tableView.frame.origin.y, _RecommendMenuList_tableView.frame.size.width, 0);
+    _item_collectionView.frame =
+    CGRectMake(_item_collectionView.frame.origin.x,
+               _item_collectionView.frame.origin.y,
+               _item_collectionView.contentSize.width,
+               MAX(_item_collectionView.contentSize.height,
+                   _item_collectionView.bounds.size.height));
 
     //テーブル高さをセルの最大値へセット
     _RecommendMenuList_tableView.translatesAutoresizingMaskIntoConstraints = YES;
@@ -268,24 +324,8 @@
                _WhatsNew_tableView.contentSize.width,
                MAX(_WhatsNew_tableView.contentSize.height,
                    _WhatsNew_tableView.bounds.size.height));
-
-    if(list_RecommendItem.count == 0){
-//        self.view_item.translatesAutoresizingMaskIntoConstraints = YES;
-//        self.view_item.frame = CGRectMake(self.view_item.frame.origin.x, self.view_item.frame.origin.y, 0, 0);
-    }
-
-
-    if(list_RecommendMenu.count == 0){
-//        self.view_recommend.translatesAutoresizingMaskIntoConstraints = YES;
-//        self.view_recommend.frame = CGRectMake(self.view_recommend.frame.origin.x, self.view_recommend.frame.origin.y, 0, 0);
-    }
-
-
-    if(list_news.count == 0){
-//        self.view_news.translatesAutoresizingMaskIntoConstraints = YES;
-//        self.view_news.frame = CGRectMake(self.view_news.frame.origin.x, self.view_news.frame.origin.y, self.view_news.frame.size.width, 0);
-    }
 }
+
 
 
 #pragma mark - ManagerDownloadDelegate
@@ -309,7 +349,6 @@
 
                 [list_RecommendMenu addObject:obj];
             }
-            [_RecommendMenuList_tableView reloadData];
 
             NSMutableArray* obj_new = listObject.news;
             list_news = [[NSMutableArray alloc] init];
@@ -317,6 +356,27 @@
 
                 [list_news addObject:obj];
             }
+/*
+            if(list_RecommendItem.count == 0){
+                //        view_item.hidden = YES;
+                view_item.translatesAutoresizingMaskIntoConstraints = YES;
+                view_item.frame = CGRectMake(view_item.frame.origin.x, view_item.frame.origin.y, view_item.frame.size.width, 0);
+            }
+
+            if(list_RecommendMenu.count == 0){
+//                view_recommend.hidden = YES;
+                view_recommend.translatesAutoresizingMaskIntoConstraints = YES;
+                view_recommend.frame = CGRectMake(view_recommend.frame.origin.x, view_recommend.frame.origin.y, view_recommend.frame.size.width, 0);
+            }
+
+            if(list_news.count == 0){
+                //        view_news.hidden = YES;
+                view_news.translatesAutoresizingMaskIntoConstraints = YES;
+                view_news.frame = CGRectMake(view_news.frame.origin.x, view_news.frame.origin.y, view_news.frame.size.width, 0);
+            }
+*/
+            [_item_collectionView reloadData];
+            [_RecommendMenuList_tableView reloadData];
             [_WhatsNew_tableView reloadData];
 
         }

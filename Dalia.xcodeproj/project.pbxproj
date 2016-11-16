@@ -43,6 +43,8 @@
 		106A31751DD7082A00C0C741 /* MPSlideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106A31171DD7082A00C0C741 /* MPSlideMenuView.m */; };
 		106A319D1DD7082A00C0C741 /* MPTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106A31671DD7082A00C0C741 /* MPTabBarViewController.m */; };
 		106A31A51DD709E000C0C741 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 106A31A31DD709E000C0C741 /* config.plist */; };
+		1076A9131DDC0CAF0080E8CD /* MPMenuListCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1076A9121DDC0CAF0080E8CD /* MPMenuListCollectionCell.xib */; };
+		10967BC61DDB5DFF004DA122 /* MPMenuListCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10967BC41DDB5DFF004DA122 /* MPMenuListCollectionCell.m */; };
 		10C4B7621DD9DFEE00E26096 /* MPFunctionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6E51DD9DFEE00E26096 /* MPFunctionViewController.xib */; };
 		10C4B7631DD9DFEE00E26096 /* MPTermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6E91DD9DFEE00E26096 /* MPTermsViewController.xib */; };
 		10C4B7641DD9DFEE00E26096 /* MPTransferViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6EA1DD9DFEE00E26096 /* MPTransferViewController.xib */; };
@@ -327,6 +329,9 @@
 		106A31671DD7082A00C0C741 /* MPTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTabBarViewController.m; sourceTree = "<group>"; };
 		106A31A31DD709E000C0C741 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		106A31A41DD709E000C0C741 /* MPAppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAppConstant.h; sourceTree = "<group>"; };
+		1076A9121DDC0CAF0080E8CD /* MPMenuListCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPMenuListCollectionCell.xib; sourceTree = "<group>"; };
+		10967BC31DDB5DFF004DA122 /* MPMenuListCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuListCollectionCell.h; sourceTree = "<group>"; };
+		10967BC41DDB5DFF004DA122 /* MPMenuListCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuListCollectionCell.m; sourceTree = "<group>"; };
 		10C4B6E51DD9DFEE00E26096 /* MPFunctionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPFunctionViewController.xib; sourceTree = "<group>"; };
 		10C4B6E91DD9DFEE00E26096 /* MPTermsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTermsViewController.xib; sourceTree = "<group>"; };
 		10C4B6EA1DD9DFEE00E26096 /* MPTransferViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTransferViewController.xib; sourceTree = "<group>"; };
@@ -1208,6 +1213,7 @@
 			isa = PBXGroup;
 			children = (
 				10C4B7471DD9DFEE00E26096 /* images */,
+				1076A9121DDC0CAF0080E8CD /* MPMenuListCollectionCell.xib */,
 				10C4B7451DD9DFEE00E26096 /* MPMenuRecommendMenuCell.xib */,
 				10C4B7461DD9DFEE00E26096 /* MPMenuNewsCell.xib */,
 			);
@@ -1398,6 +1404,8 @@
 				10C4B89E1DD9FC2100E26096 /* MPMenuRecommendMenuCell.m */,
 				10C4B89F1DD9FC2100E26096 /* MPMenuNewsCell.h */,
 				10C4B8A01DD9FC2100E26096 /* MPMenuNewsCell.m */,
+				10967BC31DDB5DFF004DA122 /* MPMenuListCollectionCell.h */,
+				10967BC41DDB5DFF004DA122 /* MPMenuListCollectionCell.m */,
 			);
 			path = TheFirstView;
 			sourceTree = "<group>";
@@ -2004,6 +2012,7 @@
 				10C4B7A11DD9DFEE00E26096 /* header_ttl_recommendmenu.png in Resources */,
 				10C4B7B81DD9DFEE00E26096 /* footer_btn_home@2x.png in Resources */,
 				10C4B77E1DD9DFEE00E26096 /* home_yajirushi.png in Resources */,
+				1076A9131DDC0CAF0080E8CD /* MPMenuListCollectionCell.xib in Resources */,
 				10C4B8C41DD9FC2200E26096 /* MPShopCell.xib in Resources */,
 				10C4B8B01DD9FC2100E26096 /* CouponShareHeaderView.xib in Resources */,
 				10C4B7941DD9DFEE00E26096 /* sidemenu_reserve.png in Resources */,
@@ -2165,6 +2174,7 @@
 				10C4B8CB1DD9FC2200E26096 /* MPPlanTextCell.m in Sources */,
 				106130661DD2D10B00B789B5 /* MPMemberObject.m in Sources */,
 				272CCD871DCAF096006BC4EB /* AFImageRequestOperation.m in Sources */,
+				10967BC61DDB5DFF004DA122 /* MPMenuListCollectionCell.m in Sources */,
 				106130651DD2D10B00B789B5 /* MPCouponObject.m in Sources */,
 				10DE079A1DD838810068C3A9 /* MPMenuListHomeObject.m in Sources */,
 				272CCD8E1DCAF096006BC4EB /* UIImageView+AFNetworking.m in Sources */,
