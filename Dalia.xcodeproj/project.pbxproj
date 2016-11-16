@@ -44,6 +44,7 @@
 		106A319D1DD7082A00C0C741 /* MPTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106A31671DD7082A00C0C741 /* MPTabBarViewController.m */; };
 		106A31A51DD709E000C0C741 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 106A31A31DD709E000C0C741 /* config.plist */; };
 		1076A9131DDC0CAF0080E8CD /* MPMenuListCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1076A9121DDC0CAF0080E8CD /* MPMenuListCollectionCell.xib */; };
+		1076A9151DDC14DB0080E8CD /* UIConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1076A9141DDC14DB0080E8CD /* UIConfig.plist */; };
 		10967BC61DDB5DFF004DA122 /* MPMenuListCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10967BC41DDB5DFF004DA122 /* MPMenuListCollectionCell.m */; };
 		10C4B7621DD9DFEE00E26096 /* MPFunctionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6E51DD9DFEE00E26096 /* MPFunctionViewController.xib */; };
 		10C4B7631DD9DFEE00E26096 /* MPTermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6E91DD9DFEE00E26096 /* MPTermsViewController.xib */; };
@@ -330,6 +331,7 @@
 		106A31A31DD709E000C0C741 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		106A31A41DD709E000C0C741 /* MPAppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAppConstant.h; sourceTree = "<group>"; };
 		1076A9121DDC0CAF0080E8CD /* MPMenuListCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPMenuListCollectionCell.xib; sourceTree = "<group>"; };
+		1076A9141DDC14DB0080E8CD /* UIConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UIConfig.plist; sourceTree = "<group>"; };
 		10967BC31DDB5DFF004DA122 /* MPMenuListCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuListCollectionCell.h; sourceTree = "<group>"; };
 		10967BC41DDB5DFF004DA122 /* MPMenuListCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuListCollectionCell.m; sourceTree = "<group>"; };
 		10C4B6E51DD9DFEE00E26096 /* MPFunctionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPFunctionViewController.xib; sourceTree = "<group>"; };
@@ -957,6 +959,7 @@
 			children = (
 				106A31A31DD709E000C0C741 /* config.plist */,
 				106A31A41DD709E000C0C741 /* MPAppConstant.h */,
+				1076A9141DDC14DB0080E8CD /* UIConfig.plist */,
 			);
 			path = conflig;
 			sourceTree = "<group>";
@@ -1981,6 +1984,7 @@
 				10C4B8FF1DDA04AD00E26096 /* button_open_selected@2x.png in Resources */,
 				10C4B9001DDA04AD00E26096 /* button_open.png in Resources */,
 				10C4B8FD1DDA04AD00E26096 /* button_leftback.png in Resources */,
+				1076A9151DDC14DB0080E8CD /* UIConfig.plist in Resources */,
 				10C4B7A21DD9DFEE00E26096 /* header_ttl_recommendmenu@2x.png in Resources */,
 				10C4B78C1DD9DFEE00E26096 /* sidemenu_memberscard.png in Resources */,
 				10C4B7721DD9DFEE00E26096 /* home_btn_reserve.png in Resources */,

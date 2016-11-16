@@ -23,6 +23,11 @@
 
     [super awakeFromNib];
 
+    //サイドメニュー情報をplistから読み込み
+    NSBundle* bundle = [NSBundle mainBundle];
+    NSString* path = [bundle pathForResource:@"UIConfig" ofType:@"plist"];
+    NSDictionary* dic = [NSDictionary dictionaryWithContentsOfFile:path];
+    _ary_menuData =[NSArray arrayWithArray:[dic objectForKey:@"SideMenuType"]];
 }
 
 #pragma mark - ManagerDownloadDelegateƒ
@@ -42,7 +47,7 @@
 #pragma mark - UITableViewDelegate & UITableViewDatasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 10;
+    return _ary_menuData.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -68,8 +73,6 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPSlideMenuCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-
-    _ary_menuData = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
 
     long lng_ch = [[_ary_menuData objectAtIndex:indexPath.row] integerValue];
     switch (lng_ch) {
