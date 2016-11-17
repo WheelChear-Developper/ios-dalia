@@ -34,11 +34,6 @@
         [self presentViewController:initialViewController animated:NO completion:nil];
     }
 
-    //🔴navigation表示
-    [self setBasicNavigationHiden:YES];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:NO];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] SetCustomNavigationLogo:[UIImage imageNamed:@"header_logo.png"]];
-    
     //🔴バックアクション非表示
     [self setHiddenBackButton:YES];
     
@@ -79,10 +74,15 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 
-    [super viewWillAppear:animated];
+    //🔴navigation表示
+    [self setBasicNavigationHiden:YES];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:NO];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] SetCustomNavigationLogo:[UIImage imageNamed:@"header_logo.png"]];
 
     //🔵設定ボタン表示設定
     [self setHiddenSettingButton:NO];
+
+    [super viewWillAppear:animated];
 
     //トップ画面情報取得
     [[ManagerDownload sharedInstance] getTopInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
@@ -149,7 +149,7 @@
     if([openFlg isEqualToString:@"0"]){
 
         MPWebViewController *webViewVC = [[MPWebViewController alloc] initWithNibName:@"MPWebViewController" bundle:nil];
-        webViewVC.linkUrl = text;
+        webViewVC.linkUrl = @"http://www.yahoo.co.jp/";//text;
         [self.navigationController pushViewController:webViewVC animated:YES];
 
     }else if([openFlg isEqualToString:@"0"]){

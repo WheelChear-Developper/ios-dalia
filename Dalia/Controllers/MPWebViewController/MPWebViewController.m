@@ -30,8 +30,8 @@
     [super viewDidLoad];
 
     //🔴navigation表示
-    [self setBasicNavigationHiden:YES];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:NO];
+    [self setBasicNavigationHiden:NO];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
     [(MPTabBarViewController*)[self.navigationController parentViewController] SetCustomNavigationLogo:[UIImage imageNamed:@"header_logo.png"]];
 
     //🔴バックアクション非表示
@@ -65,6 +65,8 @@
 }
 
 - (void)backButtonClicked:(UIButton *)sender {
+
+    [self setBasicNavigationHiden:NO];
 
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -152,12 +154,12 @@
     NSLog(@"Scrool Potion - %f - %f",_scrollBeginingPoint.y, currentPoint.y);
     if(_scrollBeginingPoint.y < currentPoint.y){
 
-        //下方向の時のアクション
-        //カスタムトップナビゲーション　クローズ
-        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_close_TopNavigation:false];
+        //標準ナビゲーションのクローズ
+        [self close_TopNavigation];
 
-        //タブのオープン
-//        [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:false];
+        //下方向の時のアクション
+        //カスタムトップナビゲーション　オープン
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_close_TopNavigation:false];
 
         [UIView animateWithDuration:0.5f
                               delay:0.5f
@@ -177,14 +179,20 @@
 
     }else if(_scrollBeginingPoint.y ==0){
 
+        //標準ナビゲーションのオープン
+        [self open_TopNavigation];
+
         //スクロール０
         //カスタムトップナビゲーション　クローズ
         [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
 
     }else if(_scrollBeginingPoint.y > currentPoint.y){
 
+        //標準ナビゲーションのオープン
+        [self open_TopNavigation];
+
         //上方向の時のアクション
-        //カスタムトップナビゲーション　オープン
+        //カスタムトップナビゲーション　クローズ
         [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
 
         [UIView animateWithDuration:0.5f

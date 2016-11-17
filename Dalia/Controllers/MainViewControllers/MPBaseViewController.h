@@ -37,5 +37,7 @@ typedef NS_ENUM(NSInteger, ElevenFunctionType) {
 - (void)setHiddenBackButton:(BOOL)isHidden;
 - (void)setHiddenSettingButton:(BOOL)isEnable;
 - (void)setBasicNavigationHiden:(BOOL)isEnable;
+- (void)open_TopNavigation;
+- (void)close_TopNavigation;
 
 @end

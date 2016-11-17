@@ -67,15 +67,10 @@
     contentView.frame = frameContentView;
     [self.view addSubview:contentView];
 
-    //基本ビューの背景画像設定
-//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frameContentView.size.width, frameContentView.size.height)];
-//    [imageView setImage:[UIImage imageNamed:@"background.png"]];
-//    [contentView addSubview:imageView];
-
     //基本ナビゲーション作成
     [self.navigationController setNavigationBarHidden:YES];
     basic_navigationView = [[UIImageView alloc] init];
-    [basic_navigationView setBackgroundColor:[UIColor whiteColor]];
+    [basic_navigationView setBackgroundColor:[UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0.95]];
     [basic_navigationView setUserInteractionEnabled:YES];
 //    [basic_navigationView setImage:[UIImage imageNamed:@"basic_navigation_back.png"]];
     CGRect basic_frameNavigationView = basic_navigationView.frame;
@@ -87,7 +82,7 @@
     [self.view addSubview:basic_navigationView];
 
     UIImageView *basic_navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((basic_frameNavigationView.size.width - ICON_WIDTH)/2, (basic_frameNavigationView.size.height - ICON_HEIGHT)/2, ICON_WIDTH, ICON_HEIGHT)];
-//    [basic_navigationIcon setImage:[UIImage imageNamed:@"navigation_icon.png"]];
+    [basic_navigationIcon setImage:[UIImage imageNamed:@"header_logo.png"]];
     [basic_navigationIcon setContentMode:UIViewContentModeScaleAspectFit];
     [basic_navigationView addSubview:basic_navigationIcon];
 
@@ -98,14 +93,10 @@
     UIView * button_BaseView = [[UIView alloc] initWithFrame:FRAME_FOR_BACK_BUTTON];
     [button_BaseView setUserInteractionEnabled:NO];
 
-    UIImageView *button_imageview = [[UIImageView alloc] initWithFrame:CGRectMake(8, 12, 18, 18)];
-    button_imageview.image = [UIImage imageNamed:@"button_leftback.png"];
-    [button_BaseView addSubview:button_imageview];
-
-    UILabel *back_title = [[UILabel alloc] initWithFrame:CGRectMake(30, 0, 30, 44)];
-    back_title.text = @"戻る";
+    UILabel *back_title = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 30, 44)];
+    back_title.text = @"＜";
     back_title.font = [UIFont fontWithName:@"AppleGothic" size:14];
-    back_title.textColor = [UIColor whiteColor];
+    back_title.textColor = [UIColor darkGrayColor];
     [button_BaseView addSubview:back_title];
 
     [backButton setBackgroundColor:[UIColor clearColor]];
@@ -127,6 +118,44 @@
     [btn_setting addTarget:self action:@selector(push_setting:) forControlEvents:UIControlEventTouchDown];
     [basic_navigationView addSubview:btn_setting];
     btn_setting.hidden = NO;
+}
+
+- (void)open_TopNavigation {
+
+    [UIView animateWithDuration:0.5f
+                          delay:0.5f
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+
+                         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
+                         CGRect flt_navi = basic_navigationView.frame;
+                         flt_navi.origin.y = 20;
+                         basic_navigationView.frame = flt_navi;
+
+                     } completion:^(BOOL finished){
+
+                         //完了時のコールバック
+
+                     }];
+}
+
+- (void)close_TopNavigation {
+
+    [UIView animateWithDuration:0.5f
+                          delay:0.5f
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+
+                         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
+                         CGRect flt_navi = basic_navigationView.frame;
+                         flt_navi.origin.y = - FRAME_HEIGHT;
+                         basic_navigationView.frame = flt_navi;
+
+                     } completion:^(BOOL finished){
+                         
+                         //完了時のコールバック
+                         
+                     }];
 }
 
 - (void)backButtonClicked:(UIButton*)sender {

@@ -27,11 +27,6 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-
-    //🔴navigation表示
-    [self setBasicNavigationHiden:YES];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:NO];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] SetCustomNavigationLogo:[UIImage imageNamed:@"header_ttl_coupon.png"]];
     
     //🔴バックアクション非表示
     [self setHiddenBackButton:YES];
@@ -62,10 +57,15 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 
-    [super viewWillAppear:animated];
+    //🔴navigation表示
+    [self setBasicNavigationHiden:YES];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:NO];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] SetCustomNavigationLogo:[UIImage imageNamed:@"header_ttl_coupon.png"]];
 
     //🔵設定ボタン表示設定
     [self setHiddenSettingButton:NO];
+
+    [super viewWillAppear:animated];
 
     //クーポンデータ取得
     [[ManagerDownload sharedInstance] getListCoupon:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
