@@ -11,6 +11,8 @@
     NSMutableData *activeDownload;
     id <LazyInternetDelegate> delegate;
     NSString *unique;
+
+    long _statusCode;
 }
 - (void)startDownload:(NSString *)url withDelegate:(id)_delegate withUnique:(id)_unique;
 

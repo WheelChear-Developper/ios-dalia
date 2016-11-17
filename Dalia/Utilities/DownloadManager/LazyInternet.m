@@ -17,6 +17,9 @@
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
 
     activeDownload = [NSMutableData data];
+
+    //ステータスコード
+    _statusCode = ((NSHTTPURLResponse *)response).statusCode;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
@@ -32,10 +35,13 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
 
-    NSData *data = activeDownload;
-    activeDownload = nil;
-    intConnection = nil;
-    [delegate lazyInternetDidLoad:data withUnique:unique];
+    if(_statusCode != 404){
+
+        NSData *data = activeDownload;
+        activeDownload = nil;
+        intConnection = nil;
+        [delegate lazyInternetDidLoad:data withUnique:unique];
+    }
 }
 
 @end

@@ -45,6 +45,15 @@
 		106A31A51DD709E000C0C741 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 106A31A31DD709E000C0C741 /* config.plist */; };
 		1076A9131DDC0CAF0080E8CD /* MPMenuListCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1076A9121DDC0CAF0080E8CD /* MPMenuListCollectionCell.xib */; };
 		1076A9151DDC14DB0080E8CD /* UIConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1076A9141DDC14DB0080E8CD /* UIConfig.plist */; };
+		1076A9211DDC3A080080E8CD /* secondview_icon_facebook_maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 1076A91E1DDC3A080080E8CD /* secondview_icon_facebook_maru.png */; };
+		1076A9221DDC3A080080E8CD /* secondview_icon_line_maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 1076A91F1DDC3A080080E8CD /* secondview_icon_line_maru.png */; };
+		1076A9231DDC3A080080E8CD /* secondview_icon_twitter_maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 1076A9201DDC3A080080E8CD /* secondview_icon_twitter_maru.png */; };
+		1076A9251DDC3F120080E8CD /* UserInfo_yajirushi.png in Resources */ = {isa = PBXBuildFile; fileRef = 1076A9241DDC3F120080E8CD /* UserInfo_yajirushi.png */; };
+		1076A9271DDC424C0080E8CD /* secondview_icon_specialcoupon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1076A9261DDC424C0080E8CD /* secondview_icon_specialcoupon.png */; };
+		1076A92A1DDC46A20080E8CD /* MPView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 1076A9291DDC46A20080E8CD /* MPView+Border.m */; };
+		1076A93B1DDC56370080E8CD /* MPTheSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1076A9391DDC56370080E8CD /* MPTheSecondViewController.xib */; };
+		107957A61DDD555E008F35A6 /* MPTheSecond_SlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 107957A51DDD555E008F35A6 /* MPTheSecond_SlideView.m */; };
+		107957A81DDD5571008F35A6 /* MPTheSecond_SlideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107957A71DDD5571008F35A6 /* MPTheSecond_SlideView.xib */; };
 		10967BC61DDB5DFF004DA122 /* MPMenuListCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10967BC41DDB5DFF004DA122 /* MPMenuListCollectionCell.m */; };
 		10C4B7621DD9DFEE00E26096 /* MPFunctionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6E51DD9DFEE00E26096 /* MPFunctionViewController.xib */; };
 		10C4B7631DD9DFEE00E26096 /* MPTermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6E91DD9DFEE00E26096 /* MPTermsViewController.xib */; };
@@ -74,7 +83,6 @@
 		10C4B77D1DD9DFEE00E26096 /* home_whatsnew@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B70A1DD9DFEE00E26096 /* home_whatsnew@2x.png */; };
 		10C4B77E1DD9DFEE00E26096 /* home_yajirushi.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B70B1DD9DFEE00E26096 /* home_yajirushi.png */; };
 		10C4B77F1DD9DFEE00E26096 /* MPTheFourthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B70D1DD9DFEE00E26096 /* MPTheFourthViewController.xib */; };
-		10C4B7801DD9DFEE00E26096 /* MPTheSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B7101DD9DFEE00E26096 /* MPTheSecondViewController.xib */; };
 		10C4B7811DD9DFEE00E26096 /* MPTheThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B7131DD9DFEE00E26096 /* MPTheThirdViewController.xib */; };
 		10C4B7821DD9DFEE00E26096 /* MPSlideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B7161DD9DFEE00E26096 /* MPSlideMenuCell.xib */; };
 		10C4B7831DD9DFEE00E26096 /* MPSlideMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B7171DD9DFEE00E26096 /* MPSlideMenuView.xib */; };
@@ -332,6 +340,17 @@
 		106A31A41DD709E000C0C741 /* MPAppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAppConstant.h; sourceTree = "<group>"; };
 		1076A9121DDC0CAF0080E8CD /* MPMenuListCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPMenuListCollectionCell.xib; sourceTree = "<group>"; };
 		1076A9141DDC14DB0080E8CD /* UIConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UIConfig.plist; sourceTree = "<group>"; };
+		1076A91E1DDC3A080080E8CD /* secondview_icon_facebook_maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secondview_icon_facebook_maru.png; sourceTree = "<group>"; };
+		1076A91F1DDC3A080080E8CD /* secondview_icon_line_maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secondview_icon_line_maru.png; sourceTree = "<group>"; };
+		1076A9201DDC3A080080E8CD /* secondview_icon_twitter_maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secondview_icon_twitter_maru.png; sourceTree = "<group>"; };
+		1076A9241DDC3F120080E8CD /* UserInfo_yajirushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserInfo_yajirushi.png; sourceTree = "<group>"; };
+		1076A9261DDC424C0080E8CD /* secondview_icon_specialcoupon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secondview_icon_specialcoupon.png; sourceTree = "<group>"; };
+		1076A9281DDC46A20080E8CD /* MPView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MPView+Border.h"; sourceTree = "<group>"; };
+		1076A9291DDC46A20080E8CD /* MPView+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MPView+Border.m"; sourceTree = "<group>"; };
+		1076A9391DDC56370080E8CD /* MPTheSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheSecondViewController.xib; sourceTree = "<group>"; };
+		107957A41DDD555E008F35A6 /* MPTheSecond_SlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTheSecond_SlideView.h; sourceTree = "<group>"; };
+		107957A51DDD555E008F35A6 /* MPTheSecond_SlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTheSecond_SlideView.m; sourceTree = "<group>"; };
+		107957A71DDD5571008F35A6 /* MPTheSecond_SlideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheSecond_SlideView.xib; sourceTree = "<group>"; };
 		10967BC31DDB5DFF004DA122 /* MPMenuListCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuListCollectionCell.h; sourceTree = "<group>"; };
 		10967BC41DDB5DFF004DA122 /* MPMenuListCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuListCollectionCell.m; sourceTree = "<group>"; };
 		10C4B6E51DD9DFEE00E26096 /* MPFunctionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPFunctionViewController.xib; sourceTree = "<group>"; };
@@ -362,7 +381,6 @@
 		10C4B70A1DD9DFEE00E26096 /* home_whatsnew@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_whatsnew@2x.png"; sourceTree = "<group>"; };
 		10C4B70B1DD9DFEE00E26096 /* home_yajirushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_yajirushi.png; sourceTree = "<group>"; };
 		10C4B70D1DD9DFEE00E26096 /* MPTheFourthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheFourthViewController.xib; sourceTree = "<group>"; };
-		10C4B7101DD9DFEE00E26096 /* MPTheSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheSecondViewController.xib; sourceTree = "<group>"; };
 		10C4B7131DD9DFEE00E26096 /* MPTheThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheThirdViewController.xib; sourceTree = "<group>"; };
 		10C4B7161DD9DFEE00E26096 /* MPSlideMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPSlideMenuCell.xib; sourceTree = "<group>"; };
 		10C4B7171DD9DFEE00E26096 /* MPSlideMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPSlideMenuView.xib; sourceTree = "<group>"; };
@@ -935,6 +953,8 @@
 		106A31181DD7082A00C0C741 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				1076A9281DDC46A20080E8CD /* MPView+Border.h */,
+				1076A9291DDC46A20080E8CD /* MPView+Border.m */,
 				10C4B85E1DD9FC2100E26096 /* old */,
 				10C4B89C1DD9FC2100E26096 /* TheFirstView */,
 				10C4B8A81DD9FC2100E26096 /* TheSecondView */,
@@ -962,6 +982,25 @@
 				1076A9141DDC14DB0080E8CD /* UIConfig.plist */,
 			);
 			path = conflig;
+			sourceTree = "<group>";
+		};
+		1076A91D1DDC3A080080E8CD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				1076A9261DDC424C0080E8CD /* secondview_icon_specialcoupon.png */,
+				1076A91E1DDC3A080080E8CD /* secondview_icon_facebook_maru.png */,
+				1076A91F1DDC3A080080E8CD /* secondview_icon_line_maru.png */,
+				1076A9201DDC3A080080E8CD /* secondview_icon_twitter_maru.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		1076A92E1DDC4C850080E8CD /* TheSecondView */ = {
+			isa = PBXGroup;
+			children = (
+				107957A71DDD5571008F35A6 /* MPTheSecond_SlideView.xib */,
+			);
+			path = TheSecondView;
 			sourceTree = "<group>";
 		};
 		10C4B6E41DD9DFEE00E26096 /* FunctionViewControllers */ = {
@@ -1018,6 +1057,7 @@
 		10C4B6EF1DD9DFEE00E26096 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1076A9241DDC3F120080E8CD /* UserInfo_yajirushi.png */,
 				10C4B7CE1DD9ED3A00E26096 /* UserInfo_btn_setting_touroku.png */,
 				10C4B7CA1DD9ECFF00E26096 /* UserInfo_btn_setting_touroku@2x.png */,
 			);
@@ -1101,17 +1141,10 @@
 		10C4B70F1DD9DFEE00E26096 /* TheSecondViewController */ = {
 			isa = PBXGroup;
 			children = (
-				10C4B7111DD9DFEE00E26096 /* images */,
-				10C4B7101DD9DFEE00E26096 /* MPTheSecondViewController.xib */,
+				1076A9391DDC56370080E8CD /* MPTheSecondViewController.xib */,
+				1076A91D1DDC3A080080E8CD /* images */,
 			);
 			path = TheSecondViewController;
-			sourceTree = "<group>";
-		};
-		10C4B7111DD9DFEE00E26096 /* images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = images;
 			sourceTree = "<group>";
 		};
 		10C4B7121DD9DFEE00E26096 /* TheThirdViewController */ = {
@@ -1191,6 +1224,7 @@
 			children = (
 				10C4B7411DD9DFEE00E26096 /* MPTopImagesView */,
 				10C4B7441DD9DFEE00E26096 /* TheFirstView */,
+				1076A92E1DDC4C850080E8CD /* TheSecondView */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -1432,6 +1466,8 @@
 		10C4B8A81DD9FC2100E26096 /* TheSecondView */ = {
 			isa = PBXGroup;
 			children = (
+				107957A41DDD555E008F35A6 /* MPTheSecond_SlideView.h */,
+				107957A51DDD555E008F35A6 /* MPTheSecond_SlideView.m */,
 			);
 			path = TheSecondView;
 			sourceTree = "<group>";
@@ -1948,6 +1984,7 @@
 				10C4B7BB1DD9DFEE00E26096 /* footer_btn_home_on.jpg in Resources */,
 				10C4B8B61DD9FC2200E26096 /* MPCouponStampView.xib in Resources */,
 				10C4B7BC1DD9DFEE00E26096 /* footer_btn_coupon@2x.png in Resources */,
+				1076A9221DDC3A080080E8CD /* secondview_icon_line_maru.png in Resources */,
 				10C4B9011DDA04AD00E26096 /* button_open@2x.png in Resources */,
 				10C4B7631DD9DFEE00E26096 /* MPTermsViewController.xib in Resources */,
 				10C4B7881DD9DFEE00E26096 /* sidemenu_coupon.png in Resources */,
@@ -1955,11 +1992,11 @@
 				10C4B7C21DD9DFEE00E26096 /* footer_btn_access_on@2x.png in Resources */,
 				10C4B7921DD9DFEE00E26096 /* sidemenu_point.png in Resources */,
 				10C4B76C1DD9DFEE00E26096 /* home_btn_memberscard.png in Resources */,
-				10C4B7801DD9DFEE00E26096 /* MPTheSecondViewController.xib in Resources */,
 				10C4B7841DD9DFEE00E26096 /* navigation_back.png in Resources */,
 				10C4B8BC1DD9FC2200E26096 /* MPShopDetailCell.xib in Resources */,
 				10C4B7641DD9DFEE00E26096 /* MPTransferViewController.xib in Resources */,
 				10C4B7791DD9DFEE00E26096 /* home_recommenditem@2x.png in Resources */,
+				107957A81DDD5571008F35A6 /* MPTheSecond_SlideView.xib in Resources */,
 				10C4B9031DDA04AD00E26096 /* button_reload_selected@2x.png in Resources */,
 				10C4B9071DDA133C00E26096 /* top_image_new.png in Resources */,
 				10C4B7AC1DD9DFEE00E26096 /* MPMenuRecommendMenuCell.xib in Resources */,
@@ -1971,6 +2008,7 @@
 				10C4B8BE1DD9FC2200E26096 /* MPCouponDetailCell.xib in Resources */,
 				10C4B8F71DDA04AD00E26096 /* button_back.png in Resources */,
 				10C4B7A01DD9DFEE00E26096 /* header_ttl_coupon@2x.png in Resources */,
+				1076A9231DDC3A080080E8CD /* secondview_icon_twitter_maru.png in Resources */,
 				10C4B7781DD9DFEE00E26096 /* home_recommenditem.png in Resources */,
 				10C4B8AB1DD9FC2100E26096 /* MPAlertView.xib in Resources */,
 				10C4B7B61DD9DFEE00E26096 /* footer_btn_menu_on@2x.png in Resources */,
@@ -2027,6 +2065,8 @@
 				10C4B7671DD9DFEE00E26096 /* UserSettingViewController.xib in Resources */,
 				10C4B7931DD9DFEE00E26096 /* sidemenu_point@2x.png in Resources */,
 				10C4B8B41DD9FC2200E26096 /* MPSocialView.xib in Resources */,
+				1076A9271DDC424C0080E8CD /* secondview_icon_specialcoupon.png in Resources */,
+				1076A93B1DDC56370080E8CD /* MPTheSecondViewController.xib in Resources */,
 				10C4B9041DDA04AD00E26096 /* button_reload.png in Resources */,
 				10C4B8CC1DD9FC2200E26096 /* MPPlanTextCell.xib in Resources */,
 				10C4B7AE1DD9DFEE00E26096 /* tab_back.png in Resources */,
@@ -2048,6 +2088,7 @@
 				10C4B7C51DD9DFEE00E26096 /* backBottom.png in Resources */,
 				10C4B8F51DDA04AD00E26096 /* button_back_selected.png in Resources */,
 				10C4B77D1DD9DFEE00E26096 /* home_whatsnew@2x.png in Resources */,
+				1076A9211DDC3A080080E8CD /* secondview_icon_facebook_maru.png in Resources */,
 				10C4B7B91DD9DFEE00E26096 /* footer_btn_home.jpg in Resources */,
 				10C4B7A31DD9DFEE00E26096 /* header_ttl_setting.png in Resources */,
 				10C4B9021DDA04AD00E26096 /* button_reload_selected.png in Resources */,
@@ -2064,6 +2105,7 @@
 				10C4B7961DD9DFEE00E26096 /* sidemenu_setting.png in Resources */,
 				10C4B7991DD9DFEE00E26096 /* sidemenu_whatsnew@2x.png in Resources */,
 				10C4B78D1DD9DFEE00E26096 /* sidemenu_memberscard@2x.png in Resources */,
+				1076A9251DDC3F120080E8CD /* UserInfo_yajirushi.png in Resources */,
 				10C4B77F1DD9DFEE00E26096 /* MPTheFourthViewController.xib in Resources */,
 				10C4B7811DD9DFEE00E26096 /* MPTheThirdViewController.xib in Resources */,
 				10C4B7CF1DD9ED3A00E26096 /* UserInfo_btn_setting_touroku.png in Resources */,
@@ -2168,6 +2210,7 @@
 				10C4B9141DDAC3F200E26096 /* MPMenuTopinfoObject.m in Sources */,
 				272CCDA91DCAF096006BC4EB /* ProgressView.m in Sources */,
 				272CCD971DCAF096006BC4EB /* MPGymDAO.m in Sources */,
+				1076A92A1DDC46A20080E8CD /* MPView+Border.m in Sources */,
 				272CCD9F1DCAF096006BC4EB /* MPPresetObject.m in Sources */,
 				10C4B90F1DDABE4E00E26096 /* MPMenuRecommend_itemObject.m in Sources */,
 				10C4B8DE1DDA024D00E26096 /* MPWebViewController.m in Sources */,
@@ -2223,6 +2266,7 @@
 				10C4B8CD1DD9FC2200E26096 /* MPMenuRecommendMenuCell.m in Sources */,
 				10C4B8B31DD9FC2200E26096 /* MPSocialView.m in Sources */,
 				106130641DD2D10B00B789B5 /* MPUIConfigObject.m in Sources */,
+				107957A61DDD555E008F35A6 /* MPTheSecond_SlideView.m in Sources */,
 				272CCD801DCAF096006BC4EB /* Configuration.m in Sources */,
 				106130671DD2D10B00B789B5 /* MPItemObject.m in Sources */,
 				106A31681DD7082A00C0C741 /* MPFunctionViewController+WebViewBottomBar.m in Sources */,
@@ -2352,7 +2396,7 @@
 				);
 				GCC_PREFIX_HEADER = "Dalia/Dalia-Prefix.pch";
 				INFOPLIST_FILE = Dalia/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.dalia.salonapps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2376,7 +2420,7 @@
 				);
 				GCC_PREFIX_HEADER = "Dalia/Dalia-Prefix.pch";
 				INFOPLIST_FILE = Dalia/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.dalia.salonapps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
