@@ -336,6 +336,11 @@
                      }];
 }
 
+- (void)close_TabHidden:(BOOL)isEnable {
+
+    bgTabBar.hidden = isEnable;
+}
+
 #pragma mark - Custom TabBar
 - (void)customTabBar {
     

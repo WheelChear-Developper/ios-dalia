@@ -54,6 +54,7 @@
 - (void)open_Tab:(UIButton*)button;
 - (void)close_Tab:(UIButton*)button;
 - (void)SetCustomNavigationLogo:(UIImage*)image;
--(void)setTabNotificationHidden:(BOOL)isEnable;
+- (void)setTabNotificationHidden:(BOOL)isEnable;
+- (void)close_TabHidden:(BOOL)isEnable;
 
 @end

@@ -6,15 +6,13 @@
 //  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
-#import "ManagerDownload.h"
 #import "MPSlideMenuCell.h"
-//#import "SettingViewController.h"
 
 @protocol MPSlideMenuViewDelegate<NSObject>
 - (void)setNavigationSetView:(long)count;
 @end
 
-@interface MPSlideMenuView : UIView <ManagerDownloadDelegate>
+@interface MPSlideMenuView : UIView
 {
     IBOutlet UITableView* _menu_table;
     NSArray* _ary_menuData;

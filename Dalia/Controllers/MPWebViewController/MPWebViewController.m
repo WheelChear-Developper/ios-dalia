@@ -10,20 +10,6 @@
 #import "CustomColor.h"
 
 @interface MPWebViewController ()
-
-@property (strong, nonatomic) IBOutlet UILabel *titleBackground;
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
-@property (strong, nonatomic) IBOutlet UIView *footerBar;
-@property (strong, nonatomic) IBOutlet UIButton *btnBack;
-@property (strong, nonatomic) IBOutlet UIButton *btnForward;
-@property (strong, nonatomic) IBOutlet UIButton *btnReload;
-@property (strong, nonatomic) IBOutlet UIButton *btnOpenBrowser;
-
-- (IBAction)backButtonWebClicked:(id)sender;
-- (IBAction)forwardButtonClicked:(id)sender;
-- (IBAction)reloadButtonClicked:(id)sender;
-- (IBAction)openBrowserButtonClicked:(id)sender;
-
 @end
 
 @implementation MPWebViewController
@@ -42,43 +28,35 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
+
+    //🔴navigation表示
+    [self setBasicNavigationHiden:YES];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:NO];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] SetCustomNavigationLogo:[UIImage imageNamed:@"header_logo.png"]];
+
     //🔴バックアクション非表示
     [self setHiddenBackButton:NO];
-    
+
     //🔴contentView 高さ自動調整　幅自動調整
     [contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
-    
-    //XIB自身での表示とする
+
+    //XIB表示のため、contentViewを非表示
     [contentView setHidden:YES];
 
-    [self addBottomBar];
+    //タブのクローズ
+    [(MPTabBarViewController*)[self.navigationController parentViewController] close_TabHidden:YES];
+
+    webView.scrollView.delegate = self;
     
     NSURL *url = [NSURL URLWithString:_linkUrl];
     [webView loadRequest:[NSURLRequest requestWithURL:url]];
     
-    [self.titleBackground setText:[[[[(MPUIConfigObject*)[MPUIConfigObject sharedInstance] objectAfterParsedPlistFile:[Utility getPatternType]] tab1] objectForKey:@"NewDetail"] objectForKey:@"titleHeader"]];
+    [titleBackground setText:[[[[(MPUIConfigObject*)[MPUIConfigObject sharedInstance] objectAfterParsedPlistFile:[Utility getPatternType]] tab1] objectForKey:@"NewDetail"] objectForKey:@"titleHeader"]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
-/*
-    if (_contents) {
-
-        if (_contents.is_read == 0) {
-
-            //reset badge app here
-            if ([MPAppDelegate sharedMPAppDelegate].totalBadge > 0) {
-                [MPAppDelegate sharedMPAppDelegate].totalBadge -=1;
-                [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[MPAppDelegate sharedMPAppDelegate].totalBadge];
-            }
-            
-            //did read message
-            [[ManagerDownload sharedInstance] readMessage:[Utility getDeviceID] withAppID:[Utility getAppID] withMessageID:_contents.id delegate:self];
-        }
-    }
-*/
 }
 
 - (void)didReceiveMemoryWarning {
@@ -91,20 +69,9 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-#define  kFooterBarHeight       44
-#pragma mark - Add Bottom Bar
-- (void)addBottomBar {
-    
-    webView.delegate = self;
-    webView.scrollView.delegate = self;
-    [self setFooterBarHide:NO];
-    [self.view bringSubviewToFront:_footerBar];
-}
-
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    [self setFooterBarHide:NO];
 }
 
 #pragma mark - WebView Button Actions
@@ -127,17 +94,27 @@
 }
 
 - (IBAction)openBrowserButtonClicked:(id)sender {
-    
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Safariでページを開きますか？" delegate:self cancelButtonTitle:@"キャンセル" otherButtonTitles:@"開く", nil];
-    alertView.tag = 68;
-    [alertView show];
-}
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    if (alertView.tag == 68 && buttonIndex == 1) {
-        [[UIApplication sharedApplication] openURL:webView.request.URL];
-    }
+    UIAlertController *alert =
+    [UIAlertController alertControllerWithTitle:@"Safariでページを開きますか？"
+                                        message:@""
+                                 preferredStyle:UIAlertControllerStyleAlert];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"キャンセル"
+                                              style:UIAlertActionStyleCancel
+                                            handler:^(UIAlertAction *action) {
+
+                                            }]];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"開く"
+                                              style:UIAlertActionStyleDefault
+                                            handler:^(UIAlertAction *action) {
+
+                                                [[UIApplication sharedApplication] openURL:webView.request.URL];
+
+                                            }]];
+
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)updateButtonsStatus {
@@ -164,26 +141,68 @@
     [self updateButtonsStatus];
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
-    if (lastContentOffset > scrollView.contentOffset.y) { // scroll down
-        [self setFooterBarHide:NO];
-    }
-    else if (scrollView.contentOffset.y > 0 && lastContentOffset < scrollView.contentOffset.y) { // scroll up
-        [self setFooterBarHide:YES];
-    }
-    lastContentOffset = scrollView.contentOffset.y;
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+
+    _scrollBeginingPoint = [scrollView contentOffset];
 }
 
-- (void)setFooterBarHide:(BOOL)isHide {
-    
-    [UIView animateWithDuration:0.3 animations:^{
-        if (isHide) {
-            _footerBar.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - self.navigationController.navigationBar.frame.size.height, _footerBar.frame.size.width, kFooterBarHeight);
-        } else {
-            _footerBar.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - self.navigationController.navigationBar.frame.size.height - kFooterBarHeight, _footerBar.frame.size.width, kFooterBarHeight);
-        }
-    }];
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+
+    CGPoint currentPoint = [scrollView contentOffset];
+    NSLog(@"Scrool Potion - %f - %f",_scrollBeginingPoint.y, currentPoint.y);
+    if(_scrollBeginingPoint.y < currentPoint.y){
+
+        //下方向の時のアクション
+        //カスタムトップナビゲーション　クローズ
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_close_TopNavigation:false];
+
+        //タブのオープン
+//        [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:false];
+
+        [UIView animateWithDuration:0.5f
+                              delay:0.5f
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+
+                             //アニメーションで変化させたい値を設定する（最終的に変更したい値）
+                             CGRect flt_navi = _footerBar.frame;
+                             flt_navi.origin.y = self.view.frame.size.height - 50;
+                             _footerBar.frame = flt_navi;
+
+                         } completion:^(BOOL finished){
+
+                             //完了時のコールバック
+
+                         }];
+
+    }else if(_scrollBeginingPoint.y ==0){
+
+        //スクロール０
+        //カスタムトップナビゲーション　クローズ
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
+
+    }else if(_scrollBeginingPoint.y > currentPoint.y){
+
+        //上方向の時のアクション
+        //カスタムトップナビゲーション　オープン
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
+
+        [UIView animateWithDuration:0.5f
+                              delay:0.5f
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+
+                             //アニメーションで変化させたい値を設定する（最終的に変更したい値）
+                             CGRect flt_navi = _footerBar.frame;
+                             flt_navi.origin.y = self.view.frame.size.height;
+                             _footerBar.frame = flt_navi;
+
+                         } completion:^(BOOL finished){
+
+                             //完了時のコールバック
+
+                         }];
+    }
 }
 
 @end

@@ -8,11 +8,25 @@
 
 #import "MPBaseViewController.h"
 #import "ManagerDownload.h"
+#import "MPTabBarViewController.h"
 
 @interface MPWebViewController : MPBaseViewController<UIWebViewDelegate, UIScrollViewDelegate, ManagerDownloadDelegate>
 {
-    CGFloat lastContentOffset;
+    UILabel *titleBackground;
+    CGPoint _scrollBeginingPoint;
+    CGFloat _lastContentOffset;
 }
 @property (nonatomic, strong) NSString* linkUrl;
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) IBOutlet UIView *footerBar;
+@property (strong, nonatomic) IBOutlet UIButton *btnBack;
+@property (strong, nonatomic) IBOutlet UIButton *btnForward;
+@property (strong, nonatomic) IBOutlet UIButton *btnReload;
+@property (strong, nonatomic) IBOutlet UIButton *btnOpenBrowser;
+
+- (IBAction)backButtonWebClicked:(id)sender;
+- (IBAction)forwardButtonClicked:(id)sender;
+- (IBAction)reloadButtonClicked:(id)sender;
+- (IBAction)openBrowserButtonClicked:(id)sender;
 
 @end

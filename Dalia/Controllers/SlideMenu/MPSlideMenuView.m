@@ -30,15 +30,6 @@
     _ary_menuData =[NSArray arrayWithArray:[dic objectForKey:@"SideMenuType"]];
 }
 
-#pragma mark - ManagerDownloadDelegateƒ
-- (void)downloadDataSuccess:(DownloadParam *)param {
-
-
-}
-
-- (void)downloadDataFail:(DownloadParam *)param {
-}
-
 //画面のスタンプViewを追加
 - (void)setUpView:(MPCouponObject*)object {
 
