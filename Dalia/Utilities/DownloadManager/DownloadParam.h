@@ -16,7 +16,7 @@ typedef NS_ENUM(NSInteger, RequestType) {
     RequestType_GET_LIST_IMAGES,
     RequestType_SET_SEND_MESSAGE,
     RequestType_GET_TOP_INFO,
-
+    RequestType_GET_LIST_COUPON,
 
 
 
@@ -39,7 +39,7 @@ typedef NS_ENUM(NSInteger, RequestType) {
     RequestType_GET_DETAIL_SHOP,
     RequestType_SET_FAVORITE_SHOP,
     RequestType_DEL_FAVORITE_SHOP,
-    RequestType_GET_LIST_COUPON,
+
     RequestType_SET_USE_COUPON,
     RequestType_SET_REGIST_COUPON,
     RequestType_SET_BIRTHDAY,

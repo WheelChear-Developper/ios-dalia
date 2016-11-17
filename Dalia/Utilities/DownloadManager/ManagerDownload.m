@@ -125,10 +125,15 @@
                 [self processGetTopInfo:listObject with:parameter];
                 break;
 
+            case RequestType_GET_LIST_COUPON:
+                //クーポン取得
+                [self processListCoupon:listObject with:parameter];
+                break;
 
 
 
-                
+
+/*
             case RequestType_GET_MEMBER_INFO:
                 [self processGetMemberInfo:listObject with:parameter];
                 break;
@@ -180,11 +185,6 @@
                 break;
                 
             case RequestType_DEL_FAVORITE_SHOP:
-                break;
-                
-            case RequestType_GET_LIST_COUPON:
-                parameter.dobCoupon = [JSON objectForKey:@"dob"];
-                [self processListCoupon:listObject with:parameter];
                 break;
                 
             case RequestType_SET_USE_COUPON:
@@ -251,7 +251,7 @@
                 }
                 [self processTransfer:listObject with:parameter];
                 break;
-
+*/
             default:
                 break;
         }
@@ -388,6 +388,23 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
+- (void) getListCoupon: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate
+{
+    //クーポン取得
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+
+    [params setValue:appID forKey:@"app_id"];
+    [params setValue:deviceID forKey:@"device_id"];
+    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_LIST_COUPON];
+    paramenter.delegate = delegate;
+    NSString *strRequest = @"";
+    strRequest = [NSString stringWithFormat:BASE_URL,GET_LIST_COUPON];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
+    [request setHTTPMethod:@"POST"];
+    [Utility setParamWithMethodPost:params forRequest:request];
+    [self baseRequestJSON:request parameter:paramenter];
+}
 
 
 
@@ -403,6 +420,7 @@
 
 
 
+/*
 
 - (void) getMemberInfo: (NSString*) appID withDeviceID:(NSString*) deviceID delegate: (NSObject<ManagerDownloadDelegate>*) delegate {
     
@@ -615,22 +633,7 @@
 }
 // INSERTED BY ama 2016.10.05 END
 
-- (void) getListCoupon: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate
-{
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    
-    [params setValue:deviceID forKey:@"device_id"];
-    [params setValue:appID forKey:@"app_id"];
-    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_LIST_COUPON];
-    paramenter.delegate = delegate;
-    NSString *strRequest = @"";
-    strRequest = [NSString stringWithFormat:BASE_URL,GET_LIST_COUPON];
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
-    [request setHTTPMethod:@"POST"];
-    [Utility setParamWithMethodPost:params forRequest:request];
-    [self baseRequestJSON:request parameter:paramenter];
-}
+
 
 - (void) getListCouponShare: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate
 {
@@ -751,7 +754,7 @@
     [Utility setParamWithMethodPost:params forRequest:request];
     [self baseRequestJSON:request parameter:paramenter];
 }
-
+*/
 
 
 
@@ -818,7 +821,7 @@
 
 
 
-
+/*
 
 - (void) enableNotificationToDevice: (NSString*) deviceID withAppID: (NSString*) appID withReceived: (NSString*) received delegate: (NSObject<ManagerDownloadDelegate>*) delegate
 {
@@ -939,7 +942,7 @@
 // REPLACED BY ama 2016.10.05 END
 
 
-
+*/
 
 
 
@@ -1048,6 +1051,34 @@
     }
 }
 
+- (void) processListCoupon:(NSArray *)listObject with:(DownloadParam *)param{
+
+    //クーポン取得
+    for (NSDictionary *dic in listObject) {
+        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
+            return;
+        }
+
+        MPCouponObject *couponObj = [[MPCouponObject alloc] init];
+        couponObj.id = [Utility checkNULL:[dic objectForKey:@"id"]];
+        couponObj.name = [Utility checkNULL:[dic objectForKey:@"name"]];
+        couponObj.is_due_date = [[Utility checkNULL:[dic objectForKey:@"is_due_date"]] integerValue];
+        couponObj.due_date = [Utility checkNULL:[dic objectForKey:@"due_date"]];
+        couponObj.limit_num = [[Utility checkNULL:[dic objectForKey:@"limit_num"]] integerValue];
+        couponObj.condition = [Utility checkNULL:[dic objectForKey:@"condition"]];
+        couponObj.coupon_image = [Utility checkNULL:[dic objectForKey:@"coupon_image"]];
+        couponObj.tokuten_mode = [[Utility checkNULL:[dic objectForKey:@"tokuten_mode"]] integerValue];
+        couponObj.percentage = [[Utility checkNULL:[dic objectForKey:@"percentage"]] integerValue];
+        couponObj.original_price = [[Utility checkNULL:[dic objectForKey:@"original_price"]] integerValue];
+        couponObj.open_price = [[Utility checkNULL:[dic objectForKey:@"open_price"]] integerValue];
+        couponObj.tokuten_free_word = [Utility checkNULL:[dic objectForKey:@"tokuten_free_word"]];
+        couponObj.coupon_type = [[Utility checkNULL:[dic objectForKey:@"coupon_type"]] integerValue];
+        couponObj.is_birthday = [[Utility checkNULL:[dic objectForKey:@"is_birthday"]] integerValue];
+        couponObj.tokuten_detail = [Utility checkNULL:[dic objectForKey:@"tokuten_detail"]];
+        couponObj.created_at = [Utility checkNULL:[dic objectForKey:@"created_at"]];
+        [param.listData addObject:couponObj];
+    }
+}
 
 
 
@@ -1058,8 +1089,7 @@
 
 
 
-
-
+/*
 
 - (void) processGetMemberInfo:(NSArray *)listObject with:(DownloadParam *)param{
     
@@ -1248,29 +1278,7 @@
     }
 }
 
-- (void) processListCoupon:(NSArray *)listObject with:(DownloadParam *)param{
-    
-    for (NSDictionary *dic in listObject) {
-        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
-            return;
-        }
-        
-        MPCouponObject *couponObj = [[MPCouponObject alloc] init];
-        couponObj.coupon_id = [Utility checkNULL:[dic objectForKey:@"id"]];
-        couponObj.coupon_name = [Utility checkNULL:[dic objectForKey:@"name"]];
-        couponObj.is_due_date = [[Utility checkNULL:[dic objectForKey:@"is_due_date"]] integerValue];
-        couponObj.due_date = [Utility checkNULL:[dic objectForKey:@"due_date"]];
-        couponObj.limit_num = [[Utility checkNULL:[dic objectForKey:@"limit_num"]] integerValue];
-        couponObj.condition = [Utility checkNULL:[dic objectForKey:@"condition"]];
-        couponObj.coupon_type = [[Utility checkNULL:[dic objectForKey:@"coupon_type"]] integerValue];
-        couponObj.is_birthday = [[Utility checkNULL:[dic objectForKey:@"is_birthday"]] integerValue];
-        // INSERTED BY M.ama 2016.10.25 START
-        // クーポンの画像取得
-        couponObj.coupon_image = [Utility checkNULL:[dic objectForKey:@"coupon_image"]];
-        // INSERTED BY M.ama 2016.10.25 END
-        [param.listData addObject:couponObj];
-    }
-}
+
 
 - (void) processListCouponShare:(NSArray *)listObject with:(DownloadParam *)param{
     
@@ -1464,11 +1472,6 @@
         
     }
 }
-// INSERTED BY M.FUJII 2015.12.12 END
-// INSERTED BY M.FUJII 2016.02.04 START
-// 簡易CMSタンプ対応
+*/
 
-
-
-// INSERTED BY M.FUJII 2016.02.04 END
 @end

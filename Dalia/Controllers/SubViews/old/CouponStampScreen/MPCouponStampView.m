@@ -668,7 +668,7 @@
 // ボタンの押された時の処理（押した時）　1.手で押した時
 - (void)getStampButtonClicked:(UIButton*)sender {
     
-    NSLog(@"count = %lu", (unsigned long)couponObject.stamp_date_set.count);
+//    NSLog(@"count = %lu", (unsigned long)couponObject.stamp_date_set.count);
     
     if (is_beacon == NO){
         
@@ -709,7 +709,7 @@
 // 電子スタンプ機能実装
 -(void)setBeacons:(MPCouponObject*)object {
     
-    NSLog(@"stamp_devices = %@", object.stamp_devices);
+//    NSLog(@"stamp_devices = %@", object.stamp_devices);
     beaconCount = 0;
     if ([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]] && [object.stamp_devices count] > 0 ) {
         _locationManager = [[CLLocationManager alloc] init];
@@ -721,7 +721,7 @@
         NSString* bundle_id = [bundle bundleIdentifier];
         NSLog(@"bundle_id = %@", bundle_id);
         is_beacon = YES;
-        NSLog(@"uuid = %@", object.stamp_devices[0][@"uuid"]);
+//        NSLog(@"uuid = %@", object.stamp_devices[0][@"uuid"]);
         NSUUID* proximityUUID = [[NSUUID alloc] initWithUUIDString:object.stamp_devices[0][@"uuid"]];
         _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:proximityUUID identifier:bundle_id];
         

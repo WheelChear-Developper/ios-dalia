@@ -7,11 +7,9 @@
 //
 
 #import "MPBaseViewController.h"
-#import "MPCouponStampView.h"
 #import "ManagerDownload.h"
-#import "MPCouponShareView.h"
 
-@interface MPFunctionViewController : MPBaseViewController<ManagerDownloadDelegate, MPCouponStampViewDelegate, MPCouponShareViewDelegate>
+@interface MPFunctionViewController : MPBaseViewController<ManagerDownloadDelegate>
 {
     ElevenFunctionType functionType;
     UIWebView *webView;

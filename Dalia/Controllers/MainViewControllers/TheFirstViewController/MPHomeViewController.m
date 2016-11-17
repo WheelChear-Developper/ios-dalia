@@ -113,6 +113,7 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
     CGPoint currentPoint = [scrollView contentOffset];
+    NSLog(@"Scrool Potion - %f - %f",_scrollBeginingPoint.y, currentPoint.y);
     if(_scrollBeginingPoint.y < currentPoint.y){
 
         //下方向の時のアクション
@@ -131,7 +132,7 @@
         //タブのオープン
         [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:false];
 
-    }else{
+    }else if(_scrollBeginingPoint.y > currentPoint.y){
 
         //上方向の時のアクション
         //カスタムトップナビゲーション　オープン

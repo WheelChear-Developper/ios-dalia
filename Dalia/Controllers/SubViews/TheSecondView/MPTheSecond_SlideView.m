@@ -18,6 +18,9 @@
 }
 */
 
+- (IBAction)btn_detail:(id)sender {
+}
+
 -(void)setNumberOfPages:(long)count {
 
     _pgc_page.numberOfPages = count;

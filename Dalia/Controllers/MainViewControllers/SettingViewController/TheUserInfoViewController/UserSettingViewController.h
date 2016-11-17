@@ -9,11 +9,10 @@
 #import "MPBaseViewController.h"
 #import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
-#import "MPSettingAlertView.h"
 #import "MPMemberObject.h"
 #import "Configuration.h"
 
-@interface UserSettingViewController : MPBaseViewController <UITextFieldDelegate, ManagerDownloadDelegate, MPSettingAlertViewDelegate>
+@interface UserSettingViewController : MPBaseViewController <UITextFieldDelegate, ManagerDownloadDelegate>
 {    
     long lng_sexflag;
     NSString* str_ID;

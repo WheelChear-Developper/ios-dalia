@@ -41,7 +41,7 @@
     [contentView setHidden:YES];
     
     // Do any additional setup after loading the view from its nib.
-    [[ManagerDownload sharedInstance] getTransferCode:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
+//    [[ManagerDownload sharedInstance] getTransferCode:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
     
     NSString *isTransfer = [[NSUserDefaults standardUserDefaults] objectForKey:IS_TRANSFER];
     if ( [isTransfer isEqualToString:@"OK"] ){
@@ -205,7 +205,7 @@
         return;
     }
     NSLog(@"getDeviceID = %@", [Utility getDeviceID]);
-    [[ManagerDownload sharedInstance] setTransferDevice:[Utility getDeviceID] withAppID:[Utility getAppID] transfer_code:_activeTextFeild.text delegate:self];
+//    [[ManagerDownload sharedInstance] setTransferDevice:[Utility getDeviceID] withAppID:[Utility getAppID] transfer_code:_activeTextFeild.text delegate:self];
 }
 
 -(void)closeTransfer {

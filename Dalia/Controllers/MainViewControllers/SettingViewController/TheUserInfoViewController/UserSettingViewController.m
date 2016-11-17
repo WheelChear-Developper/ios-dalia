@@ -146,7 +146,7 @@
     [self setHiddenSettingButton:YES];
     
     //ユーザー情報取得
-    [[ManagerDownload sharedInstance] getMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
+//    [[ManagerDownload sharedInstance] getMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -666,12 +666,11 @@
     
     if(bln_LengthCheck == YES){
         
-        // INSERTED BY M.ama 2016.10.27 START
-        // アラートカスタマイズ
+/*
         MPSettingAlertView *alertView = (MPSettingAlertView*) [Utility viewInBundleWithName:@"MPSettingAlertView"];
         alertView.delegate = self;
         [[MPAppDelegate sharedMPAppDelegate].window addSubview:alertView];
-        // INSERTED BY M.ama 2016.10.27 END
+*/
     }
     // INSERT BY ama 2016.09.30 END
 }
@@ -681,7 +680,7 @@
 -(void)setUserData {
 
     //ユーザー情報取得
-    [[ManagerDownload sharedInstance] setMemberInfo:str_ID withAppID:[Utility getAppID] withMemberNO:[[NSUserDefaults standardUserDefaults] objectForKey:MEMBER_NO] withDeviceID:[Utility getDeviceID] withNickName:self.txt_nickname.text withGender:lng_sexflag withBirthday:self.txt_birthday.text withZipcode:self.txt_zipcode.text withChild1Name:self.txt_childrenname1.text withChild1Birthday:self.txt_childrenBirthday1.text withChild2Name:self.txt_childrenname2.text withChild2Birthday:self.txt_childrenBirthday2.text delegate:self];
+//    [[ManagerDownload sharedInstance] setMemberInfo:str_ID withAppID:[Utility getAppID] withMemberNO:[[NSUserDefaults standardUserDefaults] objectForKey:MEMBER_NO] withDeviceID:[Utility getDeviceID] withNickName:self.txt_nickname.text withGender:lng_sexflag withBirthday:self.txt_birthday.text withZipcode:self.txt_zipcode.text withChild1Name:self.txt_childrenname1.text withChild1Birthday:self.txt_childrenBirthday1.text withChild2Name:self.txt_childrenname2.text withChild2Birthday:self.txt_childrenBirthday2.text delegate:self];
 }
 // INSERT BY ama 2016.10.27 END
 

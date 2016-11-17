@@ -9,14 +9,13 @@
 #import "MPBaseViewController.h"
 #import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
-#import "MPSettingAlertView.h"
 #import "MPMemberObject.h"
 #import "Configuration.h"
 
 @protocol TheUserInfoViewControllerDelegate<NSObject>
 @end
 
-@interface TheUserInfoViewController : MPBaseViewController <UITextFieldDelegate, ManagerDownloadDelegate, MPSettingAlertViewDelegate, UIScrollViewDelegate>
+@interface TheUserInfoViewController : MPBaseViewController <UITextFieldDelegate, ManagerDownloadDelegate, UIScrollViewDelegate>
 {    
     id<TheUserInfoViewControllerDelegate> _TheUserInfoViewControllerDelegate;
     

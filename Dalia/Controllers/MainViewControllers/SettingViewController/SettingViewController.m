@@ -87,7 +87,7 @@
         [MPAppDelegate sharedMPAppDelegate].enableNotificationString = @"0";
     }
     
-   [[ManagerDownload sharedInstance] enableNotificationToDevice:[Utility getDeviceID] withAppID:[Utility getAppID] withReceived:[MPAppDelegate sharedMPAppDelegate].enableNotificationString delegate:self];
+//   [[ManagerDownload sharedInstance] enableNotificationToDevice:[Utility getDeviceID] withAppID:[Utility getAppID] withReceived:[MPAppDelegate sharedMPAppDelegate].enableNotificationString delegate:self];
 }
 
 - (IBAction)readTermsButtonClicked:(UIButton *)sender {

@@ -67,6 +67,9 @@
     //🔵設定ボタン表示設定
     [self setHiddenSettingButton:NO];
 
+    //クーポンデータ取得
+    [[ManagerDownload sharedInstance] getListCoupon:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
+
     long lng_dt_count = 3;
     long lng_insetViewSize = self.view.frame.size.width * lng_dt_count;
     CGRect rect_inview = _scr_inView.frame;
@@ -110,28 +113,28 @@
 
         //下方向の時のアクション
         //カスタムトップナビゲーション　クローズ
-//        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_close_TopNavigation:NO];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_close_TopNavigation:false];
 
         //タブのオープン
-//        [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:NO];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:false];
 
     }else if(_scrollBeginingPoint.y ==0){
 
         //スクロール０
         //カスタムトップナビゲーション　クローズ
-//        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:NO];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
 
         //タブのオープン
-//        [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:NO];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:false];
         
-    }else{
+    }else if(_scrollBeginingPoint.y > currentPoint.y){
 
         //上方向の時のアクション
         //カスタムトップナビゲーション　オープン
-//        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:NO];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
 
         //タブのクローズ
-//        [(MPTabBarViewController*)[self.navigationController parentViewController] close_Tab:NO];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] close_Tab:false];
     }
 
     CGFloat pageWidth = _scr_rootview.frame.size.width;

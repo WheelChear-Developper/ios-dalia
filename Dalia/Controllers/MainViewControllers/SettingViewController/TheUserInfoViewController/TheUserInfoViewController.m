@@ -459,10 +459,11 @@
     }
     
     if(bln_LengthCheck == YES){
-
+/*
         MPSettingAlertView *alertView = (MPSettingAlertView*) [Utility viewInBundleWithName:@"MPSettingAlertView"];
         alertView.delegate = self;
         [[MPAppDelegate sharedMPAppDelegate].window addSubview:alertView];
+ */
     }
 }
 

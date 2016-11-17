@@ -53,7 +53,7 @@
     }
     
     [titleHeaderLabel setText:title];
-    [shareContentTextView setText:object.share_content];
+//    [shareContentTextView setText:object.share_content];
 }
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView {

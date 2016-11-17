@@ -62,6 +62,7 @@
             
         case ElevenFunctionType_2:
         {
+/*
             //来店スタンプ
             label_member_no =  [[UILabel alloc] initWithFrame:CGRectMake(240.0f, 0.0f, 70.0f, 32.0f)];
             label_member_no.textAlignment = NSTextAlignmentRight;
@@ -78,13 +79,14 @@
             [couponStampView setFrame:CGRectMake(5, view.frame.size.height +5, 310, contentView.frame.size.height - view.frame.size.height -10)];
             [contentView addSubview:couponStampView];
             [contentView bringSubviewToFront:couponStampView];
+ */
         }
             break;
             
         case ElevenFunctionType_3:
         {
             //ホームページ
-            
+/*
             [title setText:[[[[(MPUIConfigObject*)[MPUIConfigObject sharedInstance] objectAfterParsedPlistFile:[Utility getPatternType]] tab1] objectForKey:@"Function3"] objectForKey:@"titleHeader"]];
              webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, view.frame.size.height, 320, contentView.frame.size.height - view.frame.size.height)];
             [webView setBackgroundColor:[UIColor clearColor]];
@@ -94,19 +96,21 @@
             
             [[ManagerDownload sharedInstance] getLink:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
             [self addBottomBar];
+ */
         }
             break;
             
         case ElevenFunctionType_4:
         {
             //友人の紹介
-            
+/*
             [title setText:[[[[(MPUIConfigObject*)[MPUIConfigObject sharedInstance] objectAfterParsedPlistFile:[Utility getPatternType]] tab1] objectForKey:@"Function4"] objectForKey:@"titleHeader"]];
             MPCouponShareView *couponShareView = (MPCouponShareView*)[Utility viewInBundleWithName:@"MPCouponShareView"];
             couponShareView.delegate = self;
             [couponShareView setFrame:CGRectMake(0, view.frame.size.height, 320, contentView.frame.size.height - view.frame.size.height)];
             [contentView addSubview:couponShareView];
             [contentView bringSubviewToFront:couponShareView];
+ */
         }
             break;
             

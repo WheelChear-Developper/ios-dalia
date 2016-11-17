@@ -36,7 +36,7 @@
 }
 
 -(void)setAmount:(NSInteger)amountStamp {
-    
+/*
     if ([couponObject.is_limit_stamp isEqualToString:@"1"]) {
         amount = 1;
     }else{
@@ -49,7 +49,8 @@
         NSString*msg = [NSString stringWithFormat:@"スタンプ数は %ld 個です。認証番号を 入力してください",amount];
         [lbMesager setText:msg];
     }
-}
+*/
+ }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     
