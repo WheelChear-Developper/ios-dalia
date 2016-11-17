@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPTheSecondViewController">
             <connections>
-                <outlet property="_pgc_page" destination="V6q-L1-ynJ" id="zXP-dy-IBh"/>
                 <outlet property="_scr_inView" destination="u1q-N1-Kdh" id="ZBH-fO-rj2"/>
                 <outlet property="_scr_rootview" destination="j4j-iq-f64" id="qMf-4o-Z76"/>
                 <outlet property="view" destination="1" id="3"/>
@@ -132,20 +131,13 @@
                                 <constraint firstItem="ena-Fk-SGH" firstAttribute="top" secondItem="gQ7-sF-l2x" secondAttribute="top" id="dAO-dw-r2s"/>
                             </constraints>
                         </view>
-                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="V6q-L1-ynJ">
-                            <rect key="frame" x="140" y="481" width="39" height="37"/>
-                            <color key="pageIndicatorTintColor" red="0.48627450979999998" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="gQ7-sF-l2x" secondAttribute="bottom" constant="100" id="Ahh-jv-e3B"/>
                         <constraint firstAttribute="width" constant="320" id="X7c-tW-w2u"/>
-                        <constraint firstItem="V6q-L1-ynJ" firstAttribute="centerX" secondItem="Lyg-Ul-1RN" secondAttribute="centerX" id="Z5y-aG-Sxi"/>
                         <constraint firstItem="gQ7-sF-l2x" firstAttribute="top" secondItem="Lyg-Ul-1RN" secondAttribute="top" constant="130" id="ZaI-rD-SOB"/>
                         <constraint firstAttribute="trailing" secondItem="gQ7-sF-l2x" secondAttribute="trailing" id="kCq-4c-SOW"/>
-                        <constraint firstAttribute="bottom" secondItem="V6q-L1-ynJ" secondAttribute="bottom" constant="50" id="mp2-Ev-FiR"/>
                         <constraint firstItem="gQ7-sF-l2x" firstAttribute="leading" secondItem="Lyg-Ul-1RN" secondAttribute="leading" id="t2d-JD-26c"/>
                     </constraints>
                 </view>

@@ -17,7 +17,6 @@
     __weak IBOutlet UIView* _scr_inView;
     CGPoint _scrollBeginingPoint;
 
-    __weak IBOutlet UIPageControl *_pgc_page;
     long _lng_MaxPageCount;
     long _lng_PageCount;
 

@@ -42,6 +42,10 @@
     //XIB表示のため、contentViewを非表示
     [contentView setHidden:YES];
 
+    //スライド画面設定
+    _view_slide = (MPTheSecond_SlideView*)[Utility viewInBundleWithName:@"MPTheSecond_SlideView"];
+    _view_slide.delegate = self;
+
     // Do any additional setup after loading the view, typically from a nib.
     // スクロールビューのページ遷移を許可する。
     _scr_rootview.pagingEnabled = YES;
@@ -51,9 +55,9 @@
     _scr_rootview.showsHorizontalScrollIndicator = NO;
     _scr_rootview.showsVerticalScrollIndicator = NO;
     // ページコントロールのページ数を3ページにする
-    _pgc_page.numberOfPages = pageCount;
+    [_view_slide setNumberOfPages:pageCount];
     // 現在のページを0に初期化する。
-    _pgc_page.currentPage = 0;
+    [_view_slide setCurrentCount:0];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -131,7 +135,7 @@
     }
 
     CGFloat pageWidth = _scr_rootview.frame.size.width;
-    _pgc_page.currentPage = floor((_scr_rootview.contentOffset.x - pageWidth / 2) / pageWidth ) + 1;
+    [_view_slide setCurrentCount:floor((_scr_rootview.contentOffset.x - pageWidth / 2) / pageWidth ) + 1];
 }
 
 #pragma mark - ManagerDownloadDelegate
@@ -159,13 +163,13 @@
 
 - (IBAction)btn_back:(id)sender {
 
-    _pgc_page.currentPage = 0;
+    [_view_slide setCurrentCount:0];
     [self setScrrolAction];
 }
 
 - (IBAction)btn_next:(id)sender {
 
-    _pgc_page.currentPage = 1;
+    [_view_slide setCurrentCount:1];
     [self setScrrolAction];
 }
 
@@ -174,7 +178,7 @@
     // スクロールビューのframeを取得
     CGPoint offset = _scr_rootview.frame.origin;
     // _scrollViewのフレームを現在のpageControlの値に合わせる
-    offset.x = self.view.frame.size.width * _pgc_page.currentPage;
+    offset.x = self.view.frame.size.width * [_view_slide getCurrentCount];
     offset.y = -20;
     // スクロールビューを現在の可視領域にスクロールさせる
     [_scr_rootview setContentOffset:offset animated:YES];

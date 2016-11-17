@@ -18,4 +18,19 @@
 }
 */
 
+-(void)setNumberOfPages:(long)count {
+
+    _pgc_page.numberOfPages = count;
+}
+
+-(void)setCurrentCount:(long)count {
+
+    _pgc_page.currentPage = count;
+}
+
+-(long)getCurrentCount {
+
+    return _pgc_page.currentPage;
+}
+
 @end
