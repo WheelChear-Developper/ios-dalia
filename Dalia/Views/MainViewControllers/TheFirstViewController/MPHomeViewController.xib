@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,6 +22,11 @@
                 <outlet property="btn_block3" destination="oPI-FA-fcB" id="KkB-nv-mWz"/>
                 <outlet property="btn_block4" destination="GjN-Ys-ADo" id="mZ9-wt-lhp"/>
                 <outlet property="btn_block5" destination="BtN-NM-pTD" id="cD9-by-Ke2"/>
+                <outlet property="img_notification_block1" destination="J0P-7Y-Uz9" id="Nsc-Rg-cGD"/>
+                <outlet property="img_notification_block2" destination="GVw-dB-Tw2" id="mxg-l7-MaW"/>
+                <outlet property="img_notification_block3" destination="agO-fb-DDC" id="4HB-wa-x1K"/>
+                <outlet property="img_notification_block4" destination="a5W-nH-AMV" id="wDV-cv-uZW"/>
+                <outlet property="img_notification_block5" destination="26d-3W-aA9" id="MPG-gk-OPK"/>
                 <outlet property="view" destination="1" id="3"/>
                 <outlet property="view_item" destination="SAr-SR-Icw" id="p3g-dW-VW2"/>
                 <outlet property="view_news" destination="1n9-ym-66u" id="Pj0-7u-EUN"/>
@@ -62,9 +66,18 @@
                                                         <action selector="btn_block1:" destination="-1" eventType="touchUpInside" id="VO1-Gp-mQ7"/>
                                                     </connections>
                                                 </button>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="J0P-7Y-Uz9">
+                                                    <rect key="frame" x="23.5" y="17.5" width="5" height="5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="5" id="Wkz-yR-S0r"/>
+                                                        <constraint firstAttribute="width" constant="5" id="iKY-yq-Cs7"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
+                                                <constraint firstItem="J0P-7Y-Uz9" firstAttribute="centerX" secondItem="IaU-Bs-Gmf" secondAttribute="centerX" multiplier="0.5" id="I8m-eA-Csa"/>
+                                                <constraint firstItem="J0P-7Y-Uz9" firstAttribute="centerY" secondItem="IaU-Bs-Gmf" secondAttribute="centerY" multiplier="0.4" id="ITU-R9-wBT"/>
                                                 <constraint firstAttribute="height" constant="100" id="ewT-QG-3P4"/>
                                                 <constraint firstAttribute="bottom" secondItem="TiC-Jt-fyX" secondAttribute="bottom" id="lAF-aL-OuS"/>
                                                 <constraint firstItem="TiC-Jt-fyX" firstAttribute="top" secondItem="IaU-Bs-Gmf" secondAttribute="top" id="pox-km-7dc"/>
@@ -84,12 +97,21 @@
                                                         <action selector="btn_block2:" destination="-1" eventType="touchUpInside" id="Sxg-Yk-QbX"/>
                                                     </connections>
                                                 </button>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="GVw-dB-Tw2">
+                                                    <rect key="frame" x="23.5" y="17.5" width="5" height="5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="5" id="clc-x2-CPE"/>
+                                                        <constraint firstAttribute="height" constant="5" id="feO-GQ-q1p"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
+                                                <constraint firstItem="GVw-dB-Tw2" firstAttribute="centerX" secondItem="3iW-Nf-tXc" secondAttribute="centerX" multiplier="0.5" id="5Xh-tE-nFJ"/>
                                                 <constraint firstAttribute="height" constant="100" id="DVl-ff-tnj"/>
                                                 <constraint firstItem="79R-We-lGk" firstAttribute="top" secondItem="3iW-Nf-tXc" secondAttribute="top" id="SlI-Lb-5kO"/>
                                                 <constraint firstAttribute="bottom" secondItem="79R-We-lGk" secondAttribute="bottom" id="ZRo-na-l2u"/>
+                                                <constraint firstItem="GVw-dB-Tw2" firstAttribute="centerY" secondItem="3iW-Nf-tXc" secondAttribute="centerY" multiplier="0.4" id="aRG-67-bh9"/>
                                                 <constraint firstItem="79R-We-lGk" firstAttribute="leading" secondItem="3iW-Nf-tXc" secondAttribute="leading" id="iME-Yl-dUA"/>
                                                 <constraint firstAttribute="trailing" secondItem="79R-We-lGk" secondAttribute="trailing" id="ura-um-qfA"/>
                                             </constraints>
@@ -106,14 +128,23 @@
                                                         <action selector="btn_block3:" destination="-1" eventType="touchUpInside" id="wsz-gB-zq8"/>
                                                     </connections>
                                                 </button>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="agO-fb-DDC">
+                                                    <rect key="frame" x="23.5" y="17.5" width="5" height="5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="5" id="QcB-bn-XH5"/>
+                                                        <constraint firstAttribute="height" constant="5" id="v8Y-Gl-9lT"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="oPI-FA-fcB" firstAttribute="top" secondItem="tnT-Uh-Qp2" secondAttribute="top" id="2I4-XA-M59"/>
                                                 <constraint firstItem="oPI-FA-fcB" firstAttribute="leading" secondItem="tnT-Uh-Qp2" secondAttribute="leading" id="Qhn-BD-R56"/>
                                                 <constraint firstAttribute="trailing" secondItem="oPI-FA-fcB" secondAttribute="trailing" id="Scq-L4-V2V"/>
+                                                <constraint firstItem="agO-fb-DDC" firstAttribute="centerY" secondItem="tnT-Uh-Qp2" secondAttribute="centerY" multiplier="0.4" id="etN-Tp-cgo"/>
                                                 <constraint firstAttribute="height" constant="100" id="pAG-4P-sAf"/>
                                                 <constraint firstAttribute="bottom" secondItem="oPI-FA-fcB" secondAttribute="bottom" id="sAq-vt-RPa"/>
+                                                <constraint firstItem="agO-fb-DDC" firstAttribute="centerX" secondItem="tnT-Uh-Qp2" secondAttribute="centerX" multiplier="0.5" id="wHk-d9-87f"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEn-DI-rrp">
@@ -128,14 +159,23 @@
                                                         <action selector="btn_block4:" destination="-1" eventType="touchUpInside" id="ZNa-hf-JKl"/>
                                                     </connections>
                                                 </button>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="a5W-nH-AMV">
+                                                    <rect key="frame" x="52" y="17.5" width="5" height="5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="5" id="3Sm-SA-q0W"/>
+                                                        <constraint firstAttribute="width" constant="5" id="uEq-DM-6BH"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="GjN-Ys-ADo" secondAttribute="trailing" id="4yi-v1-CtR"/>
                                                 <constraint firstItem="GjN-Ys-ADo" firstAttribute="top" secondItem="hEn-DI-rrp" secondAttribute="top" id="8nu-X8-B2H"/>
+                                                <constraint firstItem="a5W-nH-AMV" firstAttribute="centerY" secondItem="hEn-DI-rrp" secondAttribute="centerY" multiplier="0.4" id="AtV-r6-67w"/>
                                                 <constraint firstAttribute="bottom" secondItem="GjN-Ys-ADo" secondAttribute="bottom" id="fgK-8C-ijH"/>
                                                 <constraint firstAttribute="height" constant="100" id="jbB-m0-52A"/>
                                                 <constraint firstItem="GjN-Ys-ADo" firstAttribute="leading" secondItem="hEn-DI-rrp" secondAttribute="leading" id="qUo-07-Ox1"/>
+                                                <constraint firstItem="a5W-nH-AMV" firstAttribute="centerX" secondItem="hEn-DI-rrp" secondAttribute="centerX" multiplier="0.7" id="zDr-Kk-P2B"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ts0-ty-Z2A">
@@ -150,12 +190,21 @@
                                                         <action selector="btn_block5:" destination="-1" eventType="touchUpInside" id="EF8-TQ-ZTp"/>
                                                     </connections>
                                                 </button>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="26d-3W-aA9">
+                                                    <rect key="frame" x="52" y="17.5" width="5" height="5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="5" id="OfX-iW-7sV"/>
+                                                        <constraint firstAttribute="width" constant="5" id="Vpc-eR-OqW"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
+                                                <constraint firstItem="26d-3W-aA9" firstAttribute="centerX" secondItem="Ts0-ty-Z2A" secondAttribute="centerX" multiplier="0.7" id="9FD-PR-yXE"/>
                                                 <constraint firstAttribute="trailing" secondItem="BtN-NM-pTD" secondAttribute="trailing" id="GSg-yf-gWt"/>
                                                 <constraint firstItem="BtN-NM-pTD" firstAttribute="leading" secondItem="Ts0-ty-Z2A" secondAttribute="leading" id="Irz-Wa-usv"/>
                                                 <constraint firstItem="BtN-NM-pTD" firstAttribute="top" secondItem="Ts0-ty-Z2A" secondAttribute="top" id="JaK-JC-hQI"/>
+                                                <constraint firstItem="26d-3W-aA9" firstAttribute="centerY" secondItem="Ts0-ty-Z2A" secondAttribute="centerY" multiplier="0.4" id="WRx-2b-8Sx"/>
                                                 <constraint firstAttribute="height" constant="100" id="dmv-Yj-lT2"/>
                                                 <constraint firstAttribute="bottom" secondItem="BtN-NM-pTD" secondAttribute="bottom" id="piQ-aU-lbM"/>
                                             </constraints>
@@ -388,6 +437,7 @@
         <image name="home_recommenditem.png" width="320" height="12"/>
         <image name="home_recommendmenu.png" width="320" height="12"/>
         <image name="home_whatsnew.png" width="320" height="12"/>
+        <image name="new_badge.png" width="60" height="60"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

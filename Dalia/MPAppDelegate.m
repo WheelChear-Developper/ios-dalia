@@ -99,7 +99,7 @@
 
     //通知件数取得
     //TODO: Get default notification
-    [[ManagerDownload sharedInstance] getDefaultNotification:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
+//    [[ManagerDownload sharedInstance] getDefaultNotification:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
 
     NSLog(@"generic device ID: %@ %@",[Utility deviceID],[Utility getDeviceID]);
 
@@ -267,7 +267,7 @@
     //[FBSession.activeSession handleDidBecomeActive];
 
     //TODO: Get default notification
-    [[ManagerDownload sharedInstance] getDefaultNotification:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
+//    [[ManagerDownload sharedInstance] getDefaultNotification:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
 
     //TODO: log history to server
     NSString *dateHis = [[NSUserDefaults standardUserDefaults] objectForKey:SET_DATE_SUBMIT_DEVICE_USER_DEFAULT];

@@ -54,6 +54,7 @@
 		1076A93B1DDC56370080E8CD /* MPTheSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1076A9391DDC56370080E8CD /* MPTheSecondViewController.xib */; };
 		107957A61DDD555E008F35A6 /* MPTheSecond_SlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 107957A51DDD555E008F35A6 /* MPTheSecond_SlideView.m */; };
 		107957A81DDD5571008F35A6 /* MPTheSecond_SlideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107957A71DDD5571008F35A6 /* MPTheSecond_SlideView.xib */; };
+		107957AC1DDD9738008F35A6 /* new_badge.png in Resources */ = {isa = PBXBuildFile; fileRef = 107957AB1DDD9738008F35A6 /* new_badge.png */; };
 		10967BC61DDB5DFF004DA122 /* MPMenuListCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10967BC41DDB5DFF004DA122 /* MPMenuListCollectionCell.m */; };
 		10C4B7621DD9DFEE00E26096 /* MPFunctionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6E51DD9DFEE00E26096 /* MPFunctionViewController.xib */; };
 		10C4B7631DD9DFEE00E26096 /* MPTermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6E91DD9DFEE00E26096 /* MPTermsViewController.xib */; };
@@ -351,6 +352,7 @@
 		107957A41DDD555E008F35A6 /* MPTheSecond_SlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTheSecond_SlideView.h; sourceTree = "<group>"; };
 		107957A51DDD555E008F35A6 /* MPTheSecond_SlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTheSecond_SlideView.m; sourceTree = "<group>"; };
 		107957A71DDD5571008F35A6 /* MPTheSecond_SlideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheSecond_SlideView.xib; sourceTree = "<group>"; };
+		107957AB1DDD9738008F35A6 /* new_badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_badge.png; sourceTree = "<group>"; };
 		10967BC31DDB5DFF004DA122 /* MPMenuListCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuListCollectionCell.h; sourceTree = "<group>"; };
 		10967BC41DDB5DFF004DA122 /* MPMenuListCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuListCollectionCell.m; sourceTree = "<group>"; };
 		10C4B6E51DD9DFEE00E26096 /* MPFunctionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPFunctionViewController.xib; sourceTree = "<group>"; };
@@ -1099,6 +1101,7 @@
 		10C4B6F81DD9DFEE00E26096 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				107957AB1DDD9738008F35A6 /* new_badge.png */,
 				10C4B6F91DD9DFEE00E26096 /* home_btn_memberscard.png */,
 				10C4B6FA1DD9DFEE00E26096 /* home_btn_memberscard_on.png */,
 				10C4B6FB1DD9DFEE00E26096 /* home_btn_onlineshop.png */,
@@ -2068,6 +2071,7 @@
 				1076A9271DDC424C0080E8CD /* secondview_icon_specialcoupon.png in Resources */,
 				1076A93B1DDC56370080E8CD /* MPTheSecondViewController.xib in Resources */,
 				10C4B9041DDA04AD00E26096 /* button_reload.png in Resources */,
+				107957AC1DDD9738008F35A6 /* new_badge.png in Resources */,
 				10C4B8CC1DD9FC2200E26096 /* MPPlanTextCell.xib in Resources */,
 				10C4B7AE1DD9DFEE00E26096 /* tab_back.png in Resources */,
 				10C4B7B01DD9DFEE00E26096 /* footer_btn_setting@2x.png in Resources */,

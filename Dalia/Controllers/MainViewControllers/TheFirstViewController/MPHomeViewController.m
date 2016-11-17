@@ -117,28 +117,28 @@
 
         //下方向の時のアクション
         //カスタムトップナビゲーション　クローズ
-        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_close_TopNavigation:NO];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_close_TopNavigation:false];
 
         //タブのオープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:NO];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:false];
 
     }else if(_scrollBeginingPoint.y ==0){
 
         //スクロール０
         //カスタムトップナビゲーション　クローズ
-        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:NO];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
 
         //タブのオープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:NO];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:false];
 
     }else{
 
         //上方向の時のアクション
         //カスタムトップナビゲーション　オープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:NO];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
 
         //タブのクローズ
-        [(MPTabBarViewController*)[self.navigationController parentViewController] close_Tab:NO];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] close_Tab:false];
     }
 }
 
@@ -379,6 +379,78 @@
             [_RecommendMenuList_tableView reloadData];
             [_WhatsNew_tableView reloadData];
 
+            //通知件数取得
+            [[ManagerDownload sharedInstance] getDefaultNotification:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
+
+        }
+            break;
+        case RequestType_GET_DEFAULT_NOTIFICATION:
+        {
+            NSLog(@"%@",[param.listData lastObject]);
+            MPApnsObject *obj = [param.listData lastObject];
+
+            long couponBadge = [obj.apns_cp integerValue];
+            long totalBadge = [obj.apns_badge integerValue];
+
+            //通知件数セット
+            [[UIApplication sharedApplication] setApplicationIconBadgeNumber:totalBadge];
+
+            // 通知件数を新着件数に設定
+//            [(MPTabBarViewController*)[self.navigationController parentViewController] setNewsCount:false];
+//            [(MPTabBarViewController*)[self.navigationController parentViewController] setCouponCount:false];
+
+            //通知設定
+            long lng_notification_position = 4;
+            img_notification_block1.hidden = YES;
+            img_notification_block2.hidden = YES;
+            img_notification_block3.hidden = YES;
+            img_notification_block4.hidden = YES;
+            img_notification_block5.hidden = YES;
+            switch (lng_notification_position) {
+                case 1:
+                    if(totalBadge > 0){
+
+                        img_notification_block1.hidden = NO;
+                        //TABの通知マーク設定
+                        [(MPTabBarViewController*)[self.navigationController parentViewController] setTabNotificationHidden:false];
+                    }
+                    break;
+                case 2:
+                    if(totalBadge > 0){
+
+                        img_notification_block2.hidden = NO;
+                        //TABの通知マーク設定
+                        [(MPTabBarViewController*)[self.navigationController parentViewController] setTabNotificationHidden:false];
+                    }
+                    break;
+                case 3:
+                    if(totalBadge > 0){
+
+                        img_notification_block3.hidden = NO;
+                        //TABの通知マーク設定
+                        [(MPTabBarViewController*)[self.navigationController parentViewController] setTabNotificationHidden:false];
+                    }
+                    break;
+                case 4:
+                    if(totalBadge > 0){
+
+                        img_notification_block4.hidden = NO;
+                        //TABの通知マーク設定
+                        [(MPTabBarViewController*)[self.navigationController parentViewController] setTabNotificationHidden:false];
+                    }
+                    break;
+                case 5:
+                    if(totalBadge > 0){
+
+                        img_notification_block5.hidden = NO;
+                        //TABの通知マーク設定
+                        [(MPTabBarViewController*)[self.navigationController parentViewController] setTabNotificationHidden:false];
+                    }
+                    break;
+                    
+                default:
+                    break;
+            }
         }
             break;
 

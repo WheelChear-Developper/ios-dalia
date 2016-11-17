@@ -399,6 +399,17 @@
         [bt addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [bgTabBar addSubview:bt];
         [listButton addObject:bt];
+
+        //カスタムナビゲーション　メニューオープンボタン設置
+        if(i == 1){
+
+            UIImage *img_notification = [UIImage imageNamed:@"new_badge.png"];
+            imv_notification = [[UIImageView alloc] initWithImage:img_notification];
+            imv_notification.contentMode = UIViewContentModeScaleAspectFit;
+            imv_notification.frame = CGRectMake(10 + rect.size.width / 5 * i, 10, 5, 5);
+            [bgTabBar addSubview:imv_notification];
+            imv_notification.hidden = YES;
+        }
     }
     [self.view addSubview:bgTabBar];
 
@@ -658,6 +669,11 @@
         default:
             break;
     }
+}
+
+-(void)setTabNotificationHidden:(BOOL)isEnable {
+
+    imv_notification.hidden = isEnable;
 }
 
 - (void)dealloc {

@@ -37,6 +37,7 @@
     float statusHeight;
     UIImageView *bgTabBar;
     UIImageView *iv_custom_navigationIcon;
+    UIImageView* imv_notification;
 }
 @property (nonatomic) BOOL bln_ScreenSetting;
 
@@ -53,5 +54,6 @@
 - (void)open_Tab:(UIButton*)button;
 - (void)close_Tab:(UIButton*)button;
 - (void)SetCustomNavigationLogo:(UIImage*)image;
+-(void)setTabNotificationHidden:(BOOL)isEnable;
 
 @end

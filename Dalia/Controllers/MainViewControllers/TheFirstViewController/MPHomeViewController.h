@@ -23,6 +23,7 @@
 #import "MPMenuNewsObject.h"
 #import "MPMenuRecommendMenuCell.h"
 #import "MPMenuNewsCell.h"
+#import "MPApnsObject.h"
 
 @interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, TheUserInfoViewControllerDelegate ,UICollectionViewDataSource, UICollectionViewDelegate>
 {
@@ -40,6 +41,12 @@
     __weak IBOutlet UIButton* btn_block4;
     __weak IBOutlet UIButton* btn_block5;
 
+    __weak IBOutlet UIImageView *img_notification_block1;
+    __weak IBOutlet UIImageView *img_notification_block2;
+        __weak IBOutlet UIImageView *img_notification_block3;
+        __weak IBOutlet UIImageView *img_notification_block4;
+        __weak IBOutlet UIImageView *img_notification_block5;
+
     __weak IBOutlet UICollectionView *_item_collectionView;
 
     __weak IBOutlet UIView *view_recommend;
@@ -51,6 +58,8 @@
     NSMutableArray* list_RecommendItem;
     NSMutableArray* list_RecommendMenu;
     NSMutableArray* list_news;
+
+
 }
 
 - (IBAction)btn_block1:(id)sender;
