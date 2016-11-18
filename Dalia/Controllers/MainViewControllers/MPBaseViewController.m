@@ -92,11 +92,11 @@
     UIView * button_BaseView = [[UIView alloc] initWithFrame:FRAME_FOR_BACK_BUTTON];
     [button_BaseView setUserInteractionEnabled:NO];
 
-    UILabel *back_title = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 30, 44)];
-    back_title.text = @"＜";
-    back_title.font = [UIFont fontWithName:@"AppleGothic" size:14];
-    back_title.textColor = [UIColor darkGrayColor];
-    [button_BaseView addSubview:back_title];
+    UIImage *img_normal_back = [UIImage imageNamed:@"left_yajirushi.png"];
+    UIImageView* iv_normal_back = [[UIImageView alloc] initWithImage:img_normal_back];
+    iv_normal_back.contentMode = UIViewContentModeScaleAspectFit;
+    iv_normal_back.frame = CGRectMake(10, 10, 24, 24);
+    [_backButton addSubview:iv_normal_back];
 
     [_backButton setBackgroundColor:[UIColor clearColor]];
     [_backButton addTarget:self action:@selector(backButtonClicked:) forControlEvents:UIControlEventTouchUpInside];

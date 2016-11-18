@@ -35,9 +35,6 @@
     //XIB表示のため、contentViewを非表示
     [_contentView setHidden:YES];
 
-    //タブのクローズ
-    [(MPTabBarViewController*)[self.navigationController parentViewController] close_TabHidden:YES];
-
     webView.scrollView.delegate = self;
     
     NSURL *url = [NSURL URLWithString:_linkUrl];
@@ -56,6 +53,9 @@
 
     //🔴バックアクション非表示
     [self setHiddenBackButton:NO];
+
+    //🔴タブのクローズ
+    [(MPTabBarViewController*)[self.navigationController parentViewController] tabHidden:YES];
 
     [super viewDidAppear:animated];
 }

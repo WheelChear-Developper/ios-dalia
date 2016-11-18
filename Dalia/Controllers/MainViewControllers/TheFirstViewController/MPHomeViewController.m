@@ -80,6 +80,9 @@
     //🔴バックアクション非表示
     [self setHiddenBackButton:YES];
 
+    //🔴タブのクローズ
+    [(MPTabBarViewController*)[self.navigationController parentViewController] tabHidden:NO];
+
     [super viewWillAppear:animated];
 
     //トップ画面情報取得

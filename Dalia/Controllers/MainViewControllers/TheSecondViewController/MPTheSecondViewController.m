@@ -63,6 +63,9 @@
     //🔴バックアクション非表示
     [self setHiddenBackButton:YES];
 
+    //🔴タブのクローズ
+    [(MPTabBarViewController*)[self.navigationController parentViewController] tabHidden:NO];
+
     [super viewWillAppear:animated];
 
     //クーポンデータ取得

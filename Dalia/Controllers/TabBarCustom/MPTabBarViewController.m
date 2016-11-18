@@ -336,7 +336,7 @@
                      }];
 }
 
-- (void)close_TabHidden:(BOOL)isEnable {
+- (void)tabHidden:(BOOL)isEnable {
 
     bgTabBar.hidden = isEnable;
 }
