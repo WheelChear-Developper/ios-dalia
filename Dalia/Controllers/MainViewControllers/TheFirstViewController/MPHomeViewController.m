@@ -71,16 +71,16 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 
-    //🔴navigation表示
+    //🔴標準navigation
     [self setBasicNavigationHidden:YES];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:NO];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] SetCustomNavigationLogo:[UIImage imageNamed:@"header_logo.png"]];
-    [self SetNavigationLogo:nil];
-
-    //🔴バックアクション非表示
+    [self setNavigationLogo:nil];
     [self setHiddenBackButton:YES];
 
-    //🔴タブのクローズ
+    //🔴カスタムnavigation
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:NO];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationLogo:[UIImage imageNamed:@"header_logo.png"]];
+
+    //🔴タブの表示
     [(MPTabBarViewController*)[self.navigationController parentViewController] tabHidden:NO];
 
     [super viewWillAppear:animated];
@@ -119,28 +119,28 @@
 
         //下方向の時のアクション
         //カスタムトップナビゲーション　クローズ
-        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_close_TopNavigation:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_TopNavigationHidden:true];
 
         //タブのオープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] close_Tab:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] openTab:true];
 
     }else if(_scrollBeginingPoint.y ==0){
 
         //スクロール０
         //カスタムトップナビゲーション　クローズ
-        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_TopNavigationHidden:false];
 
         //タブのオープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] openTab:false];
 
     }else if(_scrollBeginingPoint.y > currentPoint.y){
 
         //上方向の時のアクション
         //カスタムトップナビゲーション　オープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_TopNavigationHidden:false];
 
         //タブのクローズ
-        [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] openTab:false];
     }
 }
 

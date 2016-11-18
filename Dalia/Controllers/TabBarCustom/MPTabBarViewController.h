@@ -49,11 +49,9 @@
 - (void)setNewsCount:(long)count;
 - (void)setCouponCount:(long)count;
 - (void)setCustomNavigationHiden:(BOOL)isEnable;
-- (void)custom_open_TopNavigation:(UIButton*)button;
-- (void)custom_close_TopNavigation:(UIButton*)button;
-- (void)open_Tab:(UIButton*)button;
-- (void)close_Tab:(UIButton*)button;
-- (void)SetCustomNavigationLogo:(UIImage*)image;
+- (void)custom_TopNavigationHidden:(BOOL)isEnable;
+- (void)openTab:(BOOL)isEnable;
+- (void)setCustomNavigationLogo:(UIImage*)image;
 - (void)setTabNotificationHidden:(BOOL)isEnable;
 - (void)tabHidden:(BOOL)isEnable;
 

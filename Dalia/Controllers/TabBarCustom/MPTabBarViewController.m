@@ -215,48 +215,52 @@
     [self.view addGestureRecognizer:swipeLeftGesture];
 }
 
-- (void)SetCustomNavigationLogo:(UIImage*)image {
+- (void)setCustomNavigationLogo:(UIImage*)image {
 
     [iv_custom_navigationIcon setImage:image];
 }
 
-- (void)custom_open_TopNavigation:(UIButton*)button {
+- (void)custom_TopNavigationHidden:(BOOL)flg {
 
-    [UIView animateWithDuration:0.5f
-                          delay:0.5f
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
+    if(flg){
 
-                         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
-                         CGRect flt_navi = view_custom_navigationView.frame;
-                         flt_navi.origin.y = 20;
-                         view_custom_navigationView.frame = flt_navi;
+        [UIView animateWithDuration:0.5f
+                              delay:0.5f
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
 
-                     } completion:^(BOOL finished){
+                             //アニメーションで変化させたい値を設定する（最終的に変更したい値）
+                             CGRect flt_navi = view_custom_navigationView.frame;
+                             flt_navi.origin.y = - FRAME_HEIGHT;
+                             view_custom_navigationView.frame = flt_navi;
 
-                         //完了時のコールバック
-                         
-                     }];
+                         } completion:^(BOOL finished){
+
+                             //完了時のコールバック
+                             
+                         }];
+
+    }else{
+
+        [UIView animateWithDuration:0.5f
+                              delay:0.5f
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+
+                             //アニメーションで変化させたい値を設定する（最終的に変更したい値）
+                             CGRect flt_navi = view_custom_navigationView.frame;
+                             flt_navi.origin.y = 20;
+                             view_custom_navigationView.frame = flt_navi;
+
+                         } completion:^(BOOL finished){
+                             
+                             //完了時のコールバック
+                             
+                         }];
+    }
 }
 
-- (void)custom_close_TopNavigation:(UIButton*)button {
 
-    [UIView animateWithDuration:0.5f
-                          delay:0.5f
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
-
-                         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
-                         CGRect flt_navi = view_custom_navigationView.frame;
-                         flt_navi.origin.y = - FRAME_HEIGHT;
-                         view_custom_navigationView.frame = flt_navi;
-
-                     } completion:^(BOOL finished){
-
-                         //完了時のコールバック
-                         
-                     }];
-}
 
 - (void)custom_open_NavigationMenu:(UIButton*)button {
 
@@ -298,42 +302,44 @@
                      }];
 }
 
-- (void)open_Tab:(UIButton*)button {
+- (void)openTab:(BOOL)flg {
 
-    [UIView animateWithDuration:0.5f
-                          delay:0.5f
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
+    if(flg){
 
-                         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
-                         CGRect flt_navi = bgTabBar.frame;
-                         flt_navi.origin.y = self.view.frame.size.height - 50;
-                         bgTabBar.frame = flt_navi;
+        [UIView animateWithDuration:0.5f
+                              delay:0.5f
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
 
-                     } completion:^(BOOL finished){
+                             //アニメーションで変化させたい値を設定する（最終的に変更したい値）
+                             CGRect flt_navi = bgTabBar.frame;
+                             flt_navi.origin.y = self.view.frame.size.height;
+                             bgTabBar.frame = flt_navi;
 
-                         //完了時のコールバック
+                         } completion:^(BOOL finished){
 
-                     }];
-}
+                             //完了時のコールバック
+                             
+                         }];
 
-- (void)close_Tab:(UIButton*)button {
+    }else{
 
-    [UIView animateWithDuration:0.5f
-                          delay:0.5f
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
+        [UIView animateWithDuration:0.5f
+                              delay:0.5f
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
 
-                         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
-                         CGRect flt_navi = bgTabBar.frame;
-                         flt_navi.origin.y = self.view.frame.size.height;
-                         bgTabBar.frame = flt_navi;
+                             //アニメーションで変化させたい値を設定する（最終的に変更したい値）
+                             CGRect flt_navi = bgTabBar.frame;
+                             flt_navi.origin.y = self.view.frame.size.height - 50;
+                             bgTabBar.frame = flt_navi;
 
-                     } completion:^(BOOL finished){
-                         
-                         //完了時のコールバック
-                         
-                     }];
+                         } completion:^(BOOL finished){
+                             
+                             //完了時のコールバック
+                             
+                         }];
+    }
 }
 
 - (void)tabHidden:(BOOL)isEnable {

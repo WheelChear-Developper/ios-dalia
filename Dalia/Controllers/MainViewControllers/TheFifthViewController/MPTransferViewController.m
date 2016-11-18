@@ -8,17 +8,7 @@
 
 #import "MPTransferViewController.h"
 
-@interface MPTransferViewController () <UITextFieldDelegate> {
-    NSString* transfer_code;
-}
-
-@property (strong, nonatomic) IBOutlet UIScrollView *baseView;
-@property (strong, nonatomic) IBOutlet UILabel *labelTransferCode;
-@property (strong, nonatomic) IBOutlet UITextField *activeTextFeild;
-@property (strong, nonatomic) IBOutlet UIView *inputView;
-@property (strong, nonatomic) IBOutlet UIButton *btnTransfer;
-@property (strong, nonatomic) IBOutlet UITextField *textTransferCode;
-
+@interface MPTransferViewController () <UITextFieldDelegate>
 @end
 
 @implementation MPTransferViewController
@@ -30,16 +20,8 @@
     //🔴contentView 高さ自動調整　幅自動調整
     [_contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
 
-    //xib表示設定
+    //XIB表示のため、contentViewを非表示
     [_contentView setHidden:YES];
-    
-    // Do any additional setup after loading the view from its nib.
-//    [[ManagerDownload sharedInstance] getTransferCode:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
-    
-    NSString *isTransfer = [[NSUserDefaults standardUserDefaults] objectForKey:IS_TRANSFER];
-    if ( [isTransfer isEqualToString:@"OK"] ){
-        [self closeTransfer];
-    }
 
     // キーボードアクション追加
     NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
@@ -48,22 +30,40 @@
 
     // キーボード収納を検知。
     [nc addObserver:self selector:@selector(hideKeyboard:) name:UIKeyboardDidHideNotification object:nil];
+
+
+
+    // Do any additional setup after loading the view from its nib.
+    //    [[ManagerDownload sharedInstance] getTransferCode:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
+    
+    NSString *isTransfer = [[NSUserDefaults standardUserDefaults] objectForKey:IS_TRANSFER];
+    if ( [isTransfer isEqualToString:@"OK"] ){
+        [self closeTransfer];
+    }
+
+
 }
 
 -(void)viewWillAppear:(BOOL)animated {
 
     //🔴navigation表示
     [self setBasicNavigationHidden:NO];
+    [self setNavigationLogo:[UIImage imageNamed:@"header_ttl_setting.png"]];
+    [self setHiddenBackButton:NO];
+    
+    //🔴カスタムnavigation
     [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationLogo:nil];
 
-    //🔴バックアクション非表示
-    [self setHiddenBackButton:YES];
+    //🔴タブの表示
+    [(MPTabBarViewController*)[self.navigationController parentViewController] tabHidden:NO];
 
     [super viewWillAppear:animated];
 }
 
--(void)viewWillDisappear:(BOOL)animated {
+- (void)didReceiveMemoryWarning {
 
+    [super didReceiveMemoryWarning];
 }
 
 - (void)downloadDataSuccess:(DownloadParam *)param {
@@ -112,14 +112,55 @@
     [self updateTermCondition];
 }
 
-- (void)backButtonClicked:(UIButton *)sender{
-    
-    [self.navigationController popViewControllerAnimated:YES];
+- (void)updateTermCondition {
+
+    _labelTransferCode.text = transfer_code;
+
+    [self setHiddenBackButton:NO];
 }
 
-- (void)didReceiveMemoryWarning {
-    
-    [super didReceiveMemoryWarning];
+-(void)closeTransfer {
+
+    _btnTransfer.hidden = YES;
+    _textTransferCode.enabled = NO;
+}
+
+#pragma mark - ScrollDelegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+
+    _scrollBeginingPoint = [scrollView contentOffset];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+
+    CGPoint currentPoint = [scrollView contentOffset];
+    if(_scrollBeginingPoint.y < currentPoint.y){
+
+        //下方向の時のアクション
+        //カスタムトップナビゲーション　クローズ
+//        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_close_TopNavigation:false];
+
+        //タブのオープン
+//        [(MPTabBarViewController*)[self.navigationController parentViewController] openTab:true];
+
+    }else if(_scrollBeginingPoint.y ==0){
+
+        //スクロール０
+        //カスタムトップナビゲーション　クローズ
+//        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
+
+        //タブのオープン
+        [(MPTabBarViewController*)[self.navigationController parentViewController] openTab:false];
+
+    }else if(_scrollBeginingPoint.y > currentPoint.y){
+
+        //上方向の時のアクション
+        //カスタムトップナビゲーション　オープン
+//        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
+
+        //タブのクローズ
+//        [(MPTabBarViewController*)[self.navigationController parentViewController] openTab:false];
+    }
 }
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
@@ -161,36 +202,34 @@
         cgpoint_reset.y = flt_SetScroolPoint - flt_SetScreenSize + 7;
     }
 
-    [self.baseView setContentOffset:cgpoint_reset animated:YES];
+//    [_scr_rootview setContentOffset:cgpoint_reset animated:YES];
+}
+
+- (void)backButtonClicked:(UIButton *)sender{
+
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)enterButton:(UIButton*)sender {
 
     //キーボードクローズ
     [self.activeTextFeild resignFirstResponder];
-    [self.baseView setContentOffset:CGPointMake(0, -20) animated:YES];
+//    [_scr_rootview setContentOffset:CGPointMake(0, -20) animated:YES];
 }
 
 - (void)hideKeyboard:(NSNotification*)notification {
 
     //キーボードクローズ
     [self.activeTextFeild resignFirstResponder];
-    [self.baseView setContentOffset:CGPointMake(0, -20) animated:YES];
+//    [_scr_rootview setContentOffset:CGPointMake(0, -20) animated:YES];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 
     // キーボードを閉じる
     [textField resignFirstResponder];
-    [self.baseView setContentOffset:CGPointMake(0, -20) animated:YES];
+//    [_scr_rootview setContentOffset:CGPointMake(0, -20) animated:YES];
     return YES;
-}
-
-- (void) updateTermCondition {
-    
-    _labelTransferCode.text = transfer_code;
-    
-    [self setHiddenBackButton:NO];
 }
 
 - (IBAction)changeTransferButtonClicked:(UIButton *)sender {
@@ -203,12 +242,6 @@
     }
     NSLog(@"getDeviceID = %@", [Utility getDeviceID]);
 //    [[ManagerDownload sharedInstance] setTransferDevice:[Utility getDeviceID] withAppID:[Utility getAppID] transfer_code:_activeTextFeild.text delegate:self];
-}
-
--(void)closeTransfer {
-    
-    _btnTransfer.hidden = YES;
-    _textTransferCode.enabled = NO;
 }
 
 @end

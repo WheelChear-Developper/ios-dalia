@@ -175,7 +175,7 @@
                      }];
 }
 
--(void)SetNavigationLogo:(UIImage*)image {
+-(void)setNavigationLogo:(UIImage*)image {
 
     [_basic_navigationIcon setImage:image];
 }

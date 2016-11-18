@@ -37,6 +37,6 @@ typedef NS_ENUM(NSInteger, ElevenFunctionType) {
 - (void)setBasicNavigationHidden:(BOOL)isEnable;
 - (void)open_TopNavigation;
 - (void)close_TopNavigation;
-- (void)SetNavigationLogo:(UIImage*)image;
+- (void)setNavigationLogo:(UIImage*)image;
 
 @end

@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPTheFifthViewController">
             <connections>
+                <outlet property="_lbl_version" destination="Vx3-ln-rI8" id="Y9q-nz-yg5"/>
                 <outlet property="_scr_inView" destination="acg-Dn-n7O" id="ynw-ya-m0s"/>
                 <outlet property="_scr_rootview" destination="4R2-QB-Fbc" id="kfn-G1-R6P"/>
                 <outlet property="view" destination="1" id="3"/>
@@ -402,6 +403,9 @@
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsb-sN-wGI">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                            <connections>
+                                                <action selector="btn_transfer:" destination="-1" eventType="touchUpInside" id="0xB-vj-qju"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -435,6 +439,9 @@
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iza-Lq-K97">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                            <connections>
+                                                <action selector="btn_teams:" destination="-1" eventType="touchUpInside" id="032-cv-ulB"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

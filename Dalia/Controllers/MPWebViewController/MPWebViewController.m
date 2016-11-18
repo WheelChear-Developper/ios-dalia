@@ -45,14 +45,14 @@
 
 - (void)viewDidAppear:(BOOL)animated {
 
-    //🔴navigation表示
+   //🔴標準navigation
     [self setBasicNavigationHidden:NO];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] SetCustomNavigationLogo:nil];
-    [self SetNavigationLogo:[UIImage imageNamed:@"header_logo.png"]];
-
-    //🔴バックアクション非表示
+    [self setNavigationLogo:[UIImage imageNamed:@"header_logo.png"]];
     [self setHiddenBackButton:NO];
+
+    //🔴カスタムnavigation
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationLogo:nil];
 
     //🔴タブのクローズ
     [(MPTabBarViewController*)[self.navigationController parentViewController] tabHidden:YES];
@@ -158,7 +158,7 @@
 
         //下方向の時のアクション
         //カスタムトップナビゲーション　オープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_close_TopNavigation:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_TopNavigationHidden:true];
 
         //アクションボタンスライド
         [UIView animateWithDuration:0.5f
@@ -184,7 +184,7 @@
 
         //スクロール０
         //カスタムトップナビゲーション　クローズ
-        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_TopNavigationHidden:false];
 
     }else if(_scrollBeginingPoint.y > currentPoint.y){
 
@@ -193,7 +193,7 @@
 
         //上方向の時のアクション
         //カスタムトップナビゲーション　クローズ
-        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_TopNavigationHidden:false];
 
         //アクションボタンスライド
         [UIView animateWithDuration:0.5f

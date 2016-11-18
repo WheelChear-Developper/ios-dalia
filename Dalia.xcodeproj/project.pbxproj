@@ -21,6 +21,10 @@
 		103026F41DD1A36200F266D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103026F31DD1A36200F266D8 /* Images.xcassets */; };
 		1038EF8B1DDEF6B100134331 /* fifth_yajirushi.png in Resources */ = {isa = PBXBuildFile; fileRef = 1038EF8A1DDEF6B100134331 /* fifth_yajirushi.png */; };
 		1038EF8D1DDF1F8200134331 /* left_yajirushi.png in Resources */ = {isa = PBXBuildFile; fileRef = 1038EF8C1DDF1F8200134331 /* left_yajirushi.png */; };
+		1038EF921DDF2DF900134331 /* MPTransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1038EF911DDF2DF900134331 /* MPTransferViewController.m */; };
+		1038EF961DDF2E6500134331 /* MPTransferViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1038EF951DDF2E6500134331 /* MPTransferViewController.xib */; };
+		1038EF9A1DDF310300134331 /* MPTermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1038EF991DDF310300134331 /* MPTermsViewController.xib */; };
+		1038EF9D1DDF312100134331 /* MPTermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1038EF9C1DDF312100134331 /* MPTermsViewController.m */; };
 		106130601DD2D10B00B789B5 /* MPShopCatObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 106130411DD2D10B00B789B5 /* MPShopCatObject.m */; };
 		106130611DD2D10B00B789B5 /* MPShopObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 106130431DD2D10B00B789B5 /* MPShopObject.m */; };
 		106130631DD2D10B00B789B5 /* MPConfigObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1061304A1DD2D10B00B789B5 /* MPConfigObject.m */; };
@@ -48,8 +52,6 @@
 		1069E2C41DDE8FAE00FCC6D6 /* header_ttl_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1069E2BA1DDE8FAE00FCC6D6 /* header_ttl_setting@2x.png */; };
 		1069E2C51DDE8FAE00FCC6D6 /* header_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1069E2BB1DDE8FAE00FCC6D6 /* header_logo@2x.png */; };
 		106A316A1DD7082A00C0C741 /* MPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106A30F81DD7082A00C0C741 /* MPBaseViewController.m */; };
-		106A316B1DD7082A00C0C741 /* MPTermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106A30FA1DD7082A00C0C741 /* MPTermsViewController.m */; };
-		106A316C1DD7082A00C0C741 /* MPTransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106A30FC1DD7082A00C0C741 /* MPTransferViewController.m */; };
 		106A316D1DD7082A00C0C741 /* UserSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106A31021DD7082A00C0C741 /* UserSettingViewController.m */; };
 		106A316E1DD7082A00C0C741 /* TheUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106A31031DD7082A00C0C741 /* TheUserInfoViewController.m */; };
 		106A316F1DD7082A00C0C741 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106A31041DD7082A00C0C741 /* SettingViewController.m */; };
@@ -83,8 +85,6 @@
 		107957BE1DDDA7DB008F35A6 /* coupon_60.png in Resources */ = {isa = PBXBuildFile; fileRef = 107957B61DDDA7DB008F35A6 /* coupon_60.png */; };
 		107957BF1DDDA7DB008F35A6 /* sharethanks_34.png in Resources */ = {isa = PBXBuildFile; fileRef = 107957B71DDDA7DB008F35A6 /* sharethanks_34.png */; };
 		10967BC61DDB5DFF004DA122 /* MPMenuListCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10967BC41DDB5DFF004DA122 /* MPMenuListCollectionCell.m */; };
-		10C4B7631DD9DFEE00E26096 /* MPTermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6E91DD9DFEE00E26096 /* MPTermsViewController.xib */; };
-		10C4B7641DD9DFEE00E26096 /* MPTransferViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6EA1DD9DFEE00E26096 /* MPTransferViewController.xib */; };
 		10C4B7651DD9DFEE00E26096 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6EB1DD9DFEE00E26096 /* SettingViewController.xib */; };
 		10C4B7661DD9DFEE00E26096 /* TheUserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6ED1DD9DFEE00E26096 /* TheUserInfoViewController.xib */; };
 		10C4B7671DD9DFEE00E26096 /* UserSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6EE1DD9DFEE00E26096 /* UserSettingViewController.xib */; };
@@ -258,6 +258,12 @@
 		103026F31DD1A36200F266D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1038EF8A1DDEF6B100134331 /* fifth_yajirushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifth_yajirushi.png; sourceTree = "<group>"; };
 		1038EF8C1DDF1F8200134331 /* left_yajirushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_yajirushi.png; sourceTree = "<group>"; };
+		1038EF901DDF2DF900134331 /* MPTransferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTransferViewController.h; sourceTree = "<group>"; };
+		1038EF911DDF2DF900134331 /* MPTransferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTransferViewController.m; sourceTree = "<group>"; };
+		1038EF951DDF2E6500134331 /* MPTransferViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTransferViewController.xib; sourceTree = "<group>"; };
+		1038EF991DDF310300134331 /* MPTermsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTermsViewController.xib; sourceTree = "<group>"; };
+		1038EF9B1DDF312100134331 /* MPTermsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTermsViewController.h; sourceTree = "<group>"; };
+		1038EF9C1DDF312100134331 /* MPTermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTermsViewController.m; sourceTree = "<group>"; };
 		106130401DD2D10B00B789B5 /* MPShopCatObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopCatObject.h; sourceTree = "<group>"; };
 		106130411DD2D10B00B789B5 /* MPShopCatObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPShopCatObject.m; sourceTree = "<group>"; };
 		106130421DD2D10B00B789B5 /* MPShopObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopObject.h; sourceTree = "<group>"; };
@@ -293,11 +299,7 @@
 		1069E2BA1DDE8FAE00FCC6D6 /* header_ttl_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header_ttl_setting@2x.png"; sourceTree = "<group>"; };
 		1069E2BB1DDE8FAE00FCC6D6 /* header_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header_logo@2x.png"; sourceTree = "<group>"; };
 		106A30F81DD7082A00C0C741 /* MPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPBaseViewController.m; sourceTree = "<group>"; };
-		106A30FA1DD7082A00C0C741 /* MPTermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTermsViewController.m; sourceTree = "<group>"; };
-		106A30FB1DD7082A00C0C741 /* MPTransferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTransferViewController.h; sourceTree = "<group>"; };
-		106A30FC1DD7082A00C0C741 /* MPTransferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTransferViewController.m; sourceTree = "<group>"; };
 		106A30FD1DD7082A00C0C741 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
-		106A30FE1DD7082A00C0C741 /* MPTermsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTermsViewController.h; sourceTree = "<group>"; };
 		106A31001DD7082A00C0C741 /* UserSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettingViewController.h; sourceTree = "<group>"; };
 		106A31011DD7082A00C0C741 /* TheUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheUserInfoViewController.h; sourceTree = "<group>"; };
 		106A31021DD7082A00C0C741 /* UserSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingViewController.m; sourceTree = "<group>"; };
@@ -345,8 +347,6 @@
 		107957B71DDDA7DB008F35A6 /* sharethanks_34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sharethanks_34.png; sourceTree = "<group>"; };
 		10967BC31DDB5DFF004DA122 /* MPMenuListCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuListCollectionCell.h; sourceTree = "<group>"; };
 		10967BC41DDB5DFF004DA122 /* MPMenuListCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuListCollectionCell.m; sourceTree = "<group>"; };
-		10C4B6E91DD9DFEE00E26096 /* MPTermsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTermsViewController.xib; sourceTree = "<group>"; };
-		10C4B6EA1DD9DFEE00E26096 /* MPTransferViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTransferViewController.xib; sourceTree = "<group>"; };
 		10C4B6EB1DD9DFEE00E26096 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		10C4B6ED1DD9DFEE00E26096 /* TheUserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TheUserInfoViewController.xib; sourceTree = "<group>"; };
 		10C4B6EE1DD9DFEE00E26096 /* UserSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserSettingViewController.xib; sourceTree = "<group>"; };
@@ -777,10 +777,6 @@
 				106A30FF1DD7082A00C0C741 /* TheUserInfoViewController */,
 				106A30FD1DD7082A00C0C741 /* SettingViewController.h */,
 				106A31041DD7082A00C0C741 /* SettingViewController.m */,
-				106A30FE1DD7082A00C0C741 /* MPTermsViewController.h */,
-				106A30FA1DD7082A00C0C741 /* MPTermsViewController.m */,
-				106A30FB1DD7082A00C0C741 /* MPTransferViewController.h */,
-				106A30FC1DD7082A00C0C741 /* MPTransferViewController.m */,
 			);
 			path = SettingViewController;
 			sourceTree = "<group>";
@@ -828,6 +824,10 @@
 			children = (
 				106A310F1DD7082A00C0C741 /* MPTheFifthViewController.h */,
 				106A31101DD7082A00C0C741 /* MPTheFifthViewController.m */,
+				1038EF901DDF2DF900134331 /* MPTransferViewController.h */,
+				1038EF911DDF2DF900134331 /* MPTransferViewController.m */,
+				1038EF9B1DDF312100134331 /* MPTermsViewController.h */,
+				1038EF9C1DDF312100134331 /* MPTermsViewController.m */,
 			);
 			path = TheFifthViewController;
 			sourceTree = "<group>";
@@ -939,8 +939,6 @@
 			children = (
 				10C4B6F01DD9DFEE00E26096 /* images */,
 				10C4B6EB1DD9DFEE00E26096 /* SettingViewController.xib */,
-				10C4B6E91DD9DFEE00E26096 /* MPTermsViewController.xib */,
-				10C4B6EA1DD9DFEE00E26096 /* MPTransferViewController.xib */,
 				10C4B6EC1DD9DFEE00E26096 /* TheUserInfoViewController */,
 			);
 			path = SettingViewController;
@@ -978,6 +976,8 @@
 			children = (
 				10C4B6F51DD9DFEE00E26096 /* images */,
 				10C4B6F41DD9DFEE00E26096 /* MPTheFifthViewController.xib */,
+				1038EF951DDF2E6500134331 /* MPTransferViewController.xib */,
+				1038EF991DDF310300134331 /* MPTermsViewController.xib */,
 			);
 			path = TheFifthViewController;
 			sourceTree = "<group>";
@@ -1749,7 +1749,6 @@
 				10C4B7BC1DD9DFEE00E26096 /* footer_btn_coupon@2x.png in Resources */,
 				1076A9221DDC3A080080E8CD /* secondview_icon_line_maru.png in Resources */,
 				1061C6AB1DDDD9B7000CEAA2 /* webview_btn_update_on.png in Resources */,
-				10C4B7631DD9DFEE00E26096 /* MPTermsViewController.xib in Resources */,
 				10C4B7881DD9DFEE00E26096 /* sidemenu_coupon.png in Resources */,
 				1061C6B11DDDD9B7000CEAA2 /* webview_btn_back_on.png in Resources */,
 				10C4B77A1DD9DFEE00E26096 /* home_recommendmenu.png in Resources */,
@@ -1757,7 +1756,6 @@
 				10C4B7921DD9DFEE00E26096 /* sidemenu_point.png in Resources */,
 				10C4B76C1DD9DFEE00E26096 /* home_btn_memberscard.png in Resources */,
 				10C4B7841DD9DFEE00E26096 /* navigation_back.png in Resources */,
-				10C4B7641DD9DFEE00E26096 /* MPTransferViewController.xib in Resources */,
 				10C4B7791DD9DFEE00E26096 /* home_recommenditem@2x.png in Resources */,
 				107957A81DDD5571008F35A6 /* MPTheSecond_SlideView.xib in Resources */,
 				1038EF8B1DDEF6B100134331 /* fifth_yajirushi.png in Resources */,
@@ -1831,6 +1829,7 @@
 				10C4B7B41DD9DFEE00E26096 /* footer_btn_menu@2x.png in Resources */,
 				107957B81DDDA7DB008F35A6 /* coupon_17.png in Resources */,
 				1069E2BF1DDE8FAE00FCC6D6 /* header_ttl_coupon.png in Resources */,
+				1038EF9A1DDF310300134331 /* MPTermsViewController.xib in Resources */,
 				10C4B7661DD9DFEE00E26096 /* TheUserInfoViewController.xib in Resources */,
 				10C4B7B31DD9DFEE00E26096 /* footer_btn_setting_on.jpg in Resources */,
 				10C4B7AB1DD9DFEE00E26096 /* MPTopImagesView.xib in Resources */,
@@ -1870,6 +1869,7 @@
 				1069E2BD1DDE8FAE00FCC6D6 /* header_ttl_access.png in Resources */,
 				10C4B76F1DD9DFEE00E26096 /* home_btn_onlineshop_on.png in Resources */,
 				10C4B7731DD9DFEE00E26096 /* home_btn_reserve_on.png in Resources */,
+				1038EF961DDF2E6500134331 /* MPTransferViewController.xib in Resources */,
 				10C4B78F1DD9DFEE00E26096 /* sidemenu_menu@2x.png in Resources */,
 				10C4B7A61DD9DFEE00E26096 /* icon_facebook_black.png in Resources */,
 			);
@@ -1943,8 +1943,6 @@
 				272CCD881DCAF096006BC4EB /* AFJSONRequestOperation.m in Sources */,
 				272CCDAB1DCAF096006BC4EB /* Reachability.m in Sources */,
 				272CCD941DCAF096006BC4EB /* MPPageControl.m in Sources */,
-				106A316C1DD7082A00C0C741 /* MPTransferViewController.m in Sources */,
-				106A316B1DD7082A00C0C741 /* MPTermsViewController.m in Sources */,
 				10C4B9111DDABE4E00E26096 /* MPMenuNewsObject.m in Sources */,
 				106130611DD2D10B00B789B5 /* MPShopObject.m in Sources */,
 				272CCD981DCAF096006BC4EB /* MPHospitalDAO.m in Sources */,
@@ -1962,6 +1960,7 @@
 				272CCDA81DCAF096006BC4EB /* MBProgressHUD.m in Sources */,
 				106130661DD2D10B00B789B5 /* MPMemberObject.m in Sources */,
 				272CCD871DCAF096006BC4EB /* AFImageRequestOperation.m in Sources */,
+				1038EF921DDF2DF900134331 /* MPTransferViewController.m in Sources */,
 				10967BC61DDB5DFF004DA122 /* MPMenuListCollectionCell.m in Sources */,
 				10DE079A1DD838810068C3A9 /* MPMenuListHomeObject.m in Sources */,
 				272CCD8E1DCAF096006BC4EB /* UIImageView+AFNetworking.m in Sources */,
@@ -1975,6 +1974,7 @@
 				106A31701DD7082A00C0C741 /* MPTheSecondViewController.m in Sources */,
 				106A319D1DD7082A00C0C741 /* MPTabBarViewController.m in Sources */,
 				272CCDC71DCAF096006BC4EB /* Utility.m in Sources */,
+				1038EF9D1DDF312100134331 /* MPTermsViewController.m in Sources */,
 				272CCD841DCAF096006BC4EB /* ManagerErrors.m in Sources */,
 				272CCD9E1DCAF096006BC4EB /* MPHospitalObject.m in Sources */,
 				106A31711DD7082A00C0C741 /* MPTheThirdViewController.m in Sources */,
