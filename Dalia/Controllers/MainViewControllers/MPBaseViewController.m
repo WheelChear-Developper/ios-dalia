@@ -81,7 +81,7 @@
     _basic_navigationView.frame = basic_frameNavigationView;
     [self.view addSubview:_basic_navigationView];
 
-    _basic_navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((35 + _basic_navigationView.frame.size.width - ICON_WIDTH)/2, (_basic_navigationView.frame.size.height - ICON_HEIGHT)/2, ICON_WIDTH - 30, ICON_HEIGHT)];
+    _basic_navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((35 + _basic_navigationView.frame.size.width - ICON_WIDTH)/2, (_basic_navigationView.frame.size.height - ICON_HEIGHT)/2 + 5, ICON_WIDTH - 30, ICON_HEIGHT)];
     [_basic_navigationIcon setContentMode:UIViewContentModeScaleAspectFit];
     [_basic_navigationView addSubview:_basic_navigationIcon];
 
