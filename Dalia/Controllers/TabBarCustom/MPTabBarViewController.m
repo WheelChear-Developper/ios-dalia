@@ -157,7 +157,7 @@
     [view_custom_navigationView addSubview:iv_custom_navigationView_back];
 
     //カスタムナビゲーションタイトル画像設定
-    iv_custom_navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((35 + custom_frameNavigationView.size.width - ICON_WIDTH)/2, (custom_frameNavigationView.size.height - ICON_HEIGHT)/2, ICON_WIDTH - 30, ICON_HEIGHT)];
+    iv_custom_navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((35 + custom_frameNavigationView.size.width - ICON_WIDTH)/2, (custom_frameNavigationView.size.height - ICON_HEIGHT)/2 + 5, ICON_WIDTH - 30, ICON_HEIGHT)];
     [iv_custom_navigationIcon setContentMode:UIViewContentModeScaleAspectFit];
     [view_custom_navigationView addSubview:iv_custom_navigationIcon];
 
