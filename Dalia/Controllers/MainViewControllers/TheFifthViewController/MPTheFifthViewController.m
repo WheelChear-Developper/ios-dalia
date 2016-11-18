@@ -74,7 +74,7 @@
         [(MPTabBarViewController*)[self.navigationController parentViewController] custom_close_TopNavigation:false];
 
         //タブのオープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] close_Tab:false];
 
     }else if(_scrollBeginingPoint.y ==0){
 
@@ -92,7 +92,7 @@
         [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
 
         //タブのクローズ
-        [(MPTabBarViewController*)[self.navigationController parentViewController] close_Tab:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] open_Tab:false];
     }
 }
 

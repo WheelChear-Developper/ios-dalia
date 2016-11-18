@@ -160,6 +160,7 @@
         //カスタムトップナビゲーション　オープン
         [(MPTabBarViewController*)[self.navigationController parentViewController] custom_close_TopNavigation:false];
 
+        //アクションボタンスライド
         [UIView animateWithDuration:0.5f
                               delay:0.5f
                             options:UIViewAnimationOptionCurveEaseInOut
@@ -167,13 +168,13 @@
 
                              //アニメーションで変化させたい値を設定する（最終的に変更したい値）
                              CGRect flt_navi = _footerBar.frame;
-                             flt_navi.origin.y = self.view.frame.size.height - 50;
+                             flt_navi.origin.y = self.view.frame.size.height;
                              _footerBar.frame = flt_navi;
 
                          } completion:^(BOOL finished){
 
                              //完了時のコールバック
-
+                             
                          }];
 
     }else if(_scrollBeginingPoint.y ==0){
@@ -194,6 +195,7 @@
         //カスタムトップナビゲーション　クローズ
         [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
 
+        //アクションボタンスライド
         [UIView animateWithDuration:0.5f
                               delay:0.5f
                             options:UIViewAnimationOptionCurveEaseInOut
@@ -201,13 +203,13 @@
 
                              //アニメーションで変化させたい値を設定する（最終的に変更したい値）
                              CGRect flt_navi = _footerBar.frame;
-                             flt_navi.origin.y = self.view.frame.size.height;
+                             flt_navi.origin.y = self.view.frame.size.height - 50;
                              _footerBar.frame = flt_navi;
 
                          } completion:^(BOOL finished){
 
                              //完了時のコールバック
-
+                             
                          }];
     }
 }
