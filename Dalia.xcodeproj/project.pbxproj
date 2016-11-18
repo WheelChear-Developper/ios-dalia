@@ -19,6 +19,7 @@
 		102E519C1DD175A100AFB718 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102E519B1DD175A100AFB718 /* Foundation.framework */; };
 		103025D41DD1989A00F266D8 /* MPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 103025D31DD1989A00F266D8 /* MPAppDelegate.m */; };
 		103026F41DD1A36200F266D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103026F31DD1A36200F266D8 /* Images.xcassets */; };
+		1038EF8B1DDEF6B100134331 /* fifth_yajirushi.png in Resources */ = {isa = PBXBuildFile; fileRef = 1038EF8A1DDEF6B100134331 /* fifth_yajirushi.png */; };
 		106130601DD2D10B00B789B5 /* MPShopCatObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 106130411DD2D10B00B789B5 /* MPShopCatObject.m */; };
 		106130611DD2D10B00B789B5 /* MPShopObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 106130431DD2D10B00B789B5 /* MPShopObject.m */; };
 		106130631DD2D10B00B789B5 /* MPConfigObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1061304A1DD2D10B00B789B5 /* MPConfigObject.m */; };
@@ -254,6 +255,7 @@
 		103025D31DD1989A00F266D8 /* MPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPAppDelegate.m; sourceTree = "<group>"; };
 		103026F21DD1A1B100F266D8 /* Dalia_production.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Dalia_production.entitlements; sourceTree = "<group>"; };
 		103026F31DD1A36200F266D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1038EF8A1DDEF6B100134331 /* fifth_yajirushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifth_yajirushi.png; sourceTree = "<group>"; };
 		106130401DD2D10B00B789B5 /* MPShopCatObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopCatObject.h; sourceTree = "<group>"; };
 		106130411DD2D10B00B789B5 /* MPShopCatObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPShopCatObject.m; sourceTree = "<group>"; };
 		106130421DD2D10B00B789B5 /* MPShopObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopObject.h; sourceTree = "<group>"; };
@@ -981,6 +983,7 @@
 		10C4B6F51DD9DFEE00E26096 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1038EF8A1DDEF6B100134331 /* fifth_yajirushi.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -1754,6 +1757,7 @@
 				10C4B7641DD9DFEE00E26096 /* MPTransferViewController.xib in Resources */,
 				10C4B7791DD9DFEE00E26096 /* home_recommenditem@2x.png in Resources */,
 				107957A81DDD5571008F35A6 /* MPTheSecond_SlideView.xib in Resources */,
+				1038EF8B1DDEF6B100134331 /* fifth_yajirushi.png in Resources */,
 				10C4B9071DDA133C00E26096 /* top_image_new.png in Resources */,
 				10C4B7AC1DD9DFEE00E26096 /* MPMenuRecommendMenuCell.xib in Resources */,
 				10C4B7711DD9DFEE00E26096 /* home_btn_point_on.png in Resources */,

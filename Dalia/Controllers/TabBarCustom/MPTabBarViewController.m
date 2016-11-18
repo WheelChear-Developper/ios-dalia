@@ -139,7 +139,7 @@
 
     //カスタムナビゲーション作成
     view_custom_navigationView = [[UIView alloc] init];
-    [view_custom_navigationView setBackgroundColor:[UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0.95]];
+    [view_custom_navigationView setBackgroundColor:[UIColor colorWithRed:247/255.0 green:247/255.0 blue:245/255.0 alpha:1.00]];
     [view_custom_navigationView setUserInteractionEnabled:YES];
     CGRect custom_frameNavigationView = view_custom_navigationView.frame;
     custom_frameNavigationView.origin.x = FRAME_ORGIN;
