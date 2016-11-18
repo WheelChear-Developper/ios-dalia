@@ -33,15 +33,12 @@
         initialViewController.TheUserInfoViewControllerDelegate = self;
         [self presentViewController:initialViewController animated:NO completion:nil];
     }
-
-    //🔴バックアクション非表示
-    [self setHiddenBackButton:YES];
     
     //🔴contentView 高さ自動調整　幅自動調整
-    [contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+    [_contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
 
     //XIB表示のため、contentViewを非表示
-    [contentView setHidden:YES];
+    [_contentView setHidden:YES];
 
     //横スクロールイメージビュー追加（商品紹介）
     _topImageView = (MPTopImagesView*)[Utility viewInBundleWithName:@"MPTopImagesView"];
@@ -75,12 +72,13 @@
 - (void)viewWillAppear:(BOOL)animated {
 
     //🔴navigation表示
-    [self setBasicNavigationHiden:YES];
+    [self setBasicNavigationHidden:YES];
     [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:NO];
     [(MPTabBarViewController*)[self.navigationController parentViewController] SetCustomNavigationLogo:[UIImage imageNamed:@"header_logo.png"]];
+    [self SetNavigationLogo:nil];
 
-    //🔵設定ボタン表示設定
-    [self setHiddenSettingButton:NO];
+    //🔴バックアクション非表示
+    [self setHiddenBackButton:YES];
 
     [super viewWillAppear:animated];
 
@@ -149,7 +147,7 @@
     if([openFlg isEqualToString:@"0"]){
 
         MPWebViewController *webViewVC = [[MPWebViewController alloc] initWithNibName:@"MPWebViewController" bundle:nil];
-        webViewVC.linkUrl = @"http://www.yahoo.co.jp/";//text;
+        webViewVC.linkUrl = text;
         [self.navigationController pushViewController:webViewVC animated:YES];
 
     }else if([openFlg isEqualToString:@"0"]){

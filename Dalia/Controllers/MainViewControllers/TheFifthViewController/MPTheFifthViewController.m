@@ -23,25 +23,23 @@
     
     [super viewDidLoad];
     
-    //🔴バックアクション非表示
-    [self setHiddenBackButton:YES];
-    
     //🔴contentView 高さ自動調整　幅自動調整
-    [contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+    [_contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
 
     //XIB表示のため、contentViewを非表示
-    [contentView setHidden:YES];
+    [_contentView setHidden:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 
     //🔴navigation表示
-    [self setBasicNavigationHiden:YES];
+    [self setBasicNavigationHidden:YES];
     [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:NO];
     [(MPTabBarViewController*)[self.navigationController parentViewController] SetCustomNavigationLogo:[UIImage imageNamed:@"header_ttl_setting.png"]];
+    [self SetNavigationLogo:nil];
 
-    //🔵設定ボタン表示設定
-    [self setHiddenSettingButton:NO];
+    //🔴バックアクション非表示
+    [self setHiddenBackButton:YES];
 
     [super viewWillAppear:animated];
 }

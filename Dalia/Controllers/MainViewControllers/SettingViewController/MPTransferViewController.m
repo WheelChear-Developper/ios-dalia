@@ -26,19 +26,12 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-
-    //🔴navigation表示
-    [self setBasicNavigationHiden:NO];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
-    
-    //🔴バックアクション非表示
-    [self setHiddenBackButton:YES];
     
     //🔴contentView 高さ自動調整　幅自動調整
-    [contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+    [_contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
 
     //xib表示設定
-    [contentView setHidden:YES];
+    [_contentView setHidden:YES];
     
     // Do any additional setup after loading the view from its nib.
 //    [[ManagerDownload sharedInstance] getTransferCode:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
@@ -58,11 +51,15 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-    
+
+    //🔴navigation表示
+    [self setBasicNavigationHidden:NO];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
+
+    //🔴バックアクション非表示
+    [self setHiddenBackButton:YES];
+
     [super viewWillAppear:animated];
-    
-    //🔵設定ボタン表示設定
-    [self setHiddenSettingButton:YES];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {

@@ -25,16 +25,9 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-
-    //🔴navigation表示
-    [self setBasicNavigationHiden:NO];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
-    
-    //🔴バックアクション非表示
-    [self setHiddenBackButton:NO];
     
     //🔴contentView 高さ自動調整　幅自動調整
-    [contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+    [_contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     
     //タイトルのグラデーション
     CAGradientLayer *gradient = [CAGradientLayer layer];
@@ -46,7 +39,7 @@
                         ];
     [self.view_title.layer addSublayer:gradient];
     
-    [contentView setHidden:YES];
+    [_contentView setHidden:YES];
     
     // INSERT BY ama 2016.09.30 START
     //日付設定用ピッカー設置
@@ -139,11 +132,15 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    
+
+    //🔴navigation表示
+    [self setBasicNavigationHidden:NO];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
+
+    //🔴バックアクション非表示
+    [self setHiddenBackButton:NO];
+
     [super viewWillAppear:animated];
-    
-    //🔵設定ボタン表示設定
-    [self setHiddenSettingButton:YES];
     
     //ユーザー情報取得
 //    [[ManagerDownload sharedInstance] getMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];

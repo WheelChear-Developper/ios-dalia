@@ -19,18 +19,11 @@
     
     [super viewDidLoad];
 
-    //🔴navigation表示
-    [self setBasicNavigationHiden:YES];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
-
-    //🔴バックアクション非表示
-    [self setHiddenBackButton:YES];
-
     //🔴contentView 高さ自動調整　幅自動調整
-    [contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+    [_contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
 
     //XIB表示切り替え
-    [contentView setHidden:YES];
+    [_contentView setHidden:YES];
 
     [self.txt_farstName setTintColor:UIColor.whiteColor];
     [self.txt_lastName setTintColor:UIColor.whiteColor];
@@ -105,11 +98,15 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+
+    //🔴navigation表示
+    [self setBasicNavigationHidden:YES];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
+
+    //🔴バックアクション非表示
+    [self setHiddenBackButton:YES];
     
     [super viewWillAppear:animated];
-    
-    //🔵設定ボタン表示設定
-    [self setHiddenSettingButton:YES];
 
 //    [[ManagerDownload sharedInstance] getMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
 }
