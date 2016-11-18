@@ -17,42 +17,32 @@
 
 @interface MPTabBarViewController : UITabBarController <ManagerDownloadDelegate, MPSlideMenuViewDelegate>
 {
-    long numberTab;
-    NSMutableArray *listButton;
-    BOOL firstTimeRun;
-    NSArray *listShop;
-    UIImageView *iv_config;
-    UIButton *btn_setting;
-    UIImageView *iv_news_count;
-    UILabel *lbl_news_count;
-    UIImageView *iv_coupon_count;
-    UILabel *lbl_coupon_count;
-
-    UIView *view_custom_navigationView;
-    UIImageView *iv_custom_config;
-    UIButton *btn_custom_setting;
-    UIView* view_NaviFrame;
-    MPSlideMenuView* view_NaviMenu;
-    long lng_NavigationMenu_point;
-    float statusHeight;
-    UIImageView *bgTabBar;
-    UIImageView *iv_custom_navigationIcon;
-    UIImageView* imv_notification;
+    long _numberTab;
+    NSMutableArray* _listButton;
+    BOOL _firstTimeRun;
+    UIView* _view_custom_navigationView;
+    UIImageView* _iv_custom_config;
+    UIButton* _btn_custom_setting;
+    UIView* _view_NaviFrame;
+    MPSlideMenuView* _view_NaviMenu;
+    float _statusHeight;
+    UIImageView* _bgTabBar;
+    UIImageView* _iv_custom_navigationIcon;
+    UIImageView* _imv_notification;
 }
 @property (nonatomic) BOOL bln_ScreenSetting;
 
 + (MPTabBarViewController*) sharedInstance;
 - (void)setUpTabBar;
-- (void)setCustomNavigaion;
 - (void)selectTab:(long)tabID;
+- (void)openTab:(BOOL)isEnable;
+- (void)tabHidden:(BOOL)isEnable;
+- (void)setTabNotificationHidden:(BOOL)isEnable;
 - (void)setDisableHomeButton:(BOOL)isEnable;
-- (void)setNewsCount:(long)count;
-- (void)setCouponCount:(long)count;
+
+- (void)setCustomNavigaion;
+- (void)setCustomNavigationLogo:(UIImage*)image;
 - (void)setCustomNavigationHiden:(BOOL)isEnable;
 - (void)custom_TopNavigationHidden:(BOOL)isEnable;
-- (void)openTab:(BOOL)isEnable;
-- (void)setCustomNavigationLogo:(UIImage*)image;
-- (void)setTabNotificationHidden:(BOOL)isEnable;
-- (void)tabHidden:(BOOL)isEnable;
 
 @end

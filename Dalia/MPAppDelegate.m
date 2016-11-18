@@ -145,15 +145,7 @@
 //            [[MPTabBarViewController sharedInstance] setBadgeValue:self.couponBadge];
             [[UIApplication sharedApplication] setApplicationIconBadgeNumber:self.totalBadge];
 
-            // INSERTED BY M.ama 2016.102.29 START
-            // 通知件数を新着件数に設定
-            [[MPTabBarViewController sharedInstance] setNewsCount:self.totalBadge - self.couponBadge];
-            [[MPTabBarViewController sharedInstance] setCouponCount:self.couponBadge];
-            // INSERTED BY M.ama 2016.10.29 END
-
         }
-            // INSERTED BY M.FUJII 2016.02.04 START
-            // 簡易CMS対応
             break;
 
         default:
