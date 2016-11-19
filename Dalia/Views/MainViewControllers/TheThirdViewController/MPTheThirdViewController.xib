@@ -18,14 +18,14 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="1">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCx-wF-6NC">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLB-vt-V4q">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="690"/>
                             <subviews>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AJl-T3-NSe">
                                     <rect key="frame" x="0.0" y="-200" width="320" height="290"/>
@@ -81,11 +81,11 @@
                                         <constraint firstAttribute="height" constant="290" id="STR-sj-n5q"/>
                                     </constraints>
                                 </view>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ypu-ZK-n1I">
-                                    <rect key="frame" x="0.0" y="90" width="320" height="910"/>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ypu-ZK-n1I">
+                                    <rect key="frame" x="0.0" y="90" width="320" height="600"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="910" id="DLK-F9-8BL"/>
+                                        <constraint firstAttribute="height" constant="600" id="DLK-F9-8BL"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="dataSource" destination="-1" id="uvH-5x-rtE"/>

@@ -31,6 +31,10 @@
 		1037B82E1DE03419000D834C /* menu_other.png in Resources */ = {isa = PBXBuildFile; fileRef = 1037B8241DE03419000D834C /* menu_other.png */; };
 		1037B82F1DE03419000D834C /* menu_perm.png in Resources */ = {isa = PBXBuildFile; fileRef = 1037B8251DE03419000D834C /* menu_perm.png */; };
 		1037B8301DE03419000D834C /* menu_teatment.png in Resources */ = {isa = PBXBuildFile; fileRef = 1037B8261DE03419000D834C /* menu_teatment.png */; };
+		1037B8341DE0365C000D834C /* MPTheThirdSumMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1037B8321DE0365C000D834C /* MPTheThirdSumMenuViewController.m */; };
+		1037B8371DE036A5000D834C /* MPTheThirdSumMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1037B8361DE036A5000D834C /* MPTheThirdSumMenuViewController.xib */; };
+		1037B83B1DE05D06000D834C /* MPTheSubMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1037B8391DE05D06000D834C /* MPTheSubMenuCell.m */; };
+		1037B83E1DE05D4D000D834C /* MPTheSubMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1037B83D1DE05D4D000D834C /* MPTheSubMenuCell.xib */; };
 		1038EF8B1DDEF6B100134331 /* fifth_yajirushi.png in Resources */ = {isa = PBXBuildFile; fileRef = 1038EF8A1DDEF6B100134331 /* fifth_yajirushi.png */; };
 		1038EF8D1DDF1F8200134331 /* left_yajirushi.png in Resources */ = {isa = PBXBuildFile; fileRef = 1038EF8C1DDF1F8200134331 /* left_yajirushi.png */; };
 		1038EF921DDF2DF900134331 /* MPTransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1038EF911DDF2DF900134331 /* MPTransferViewController.m */; };
@@ -282,6 +286,12 @@
 		1037B8241DE03419000D834C /* menu_other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_other.png; sourceTree = "<group>"; };
 		1037B8251DE03419000D834C /* menu_perm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_perm.png; sourceTree = "<group>"; };
 		1037B8261DE03419000D834C /* menu_teatment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_teatment.png; sourceTree = "<group>"; };
+		1037B8311DE0365C000D834C /* MPTheThirdSumMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTheThirdSumMenuViewController.h; sourceTree = "<group>"; };
+		1037B8321DE0365C000D834C /* MPTheThirdSumMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTheThirdSumMenuViewController.m; sourceTree = "<group>"; };
+		1037B8361DE036A5000D834C /* MPTheThirdSumMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheThirdSumMenuViewController.xib; sourceTree = "<group>"; };
+		1037B8381DE05D06000D834C /* MPTheSubMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTheSubMenuCell.h; sourceTree = "<group>"; };
+		1037B8391DE05D06000D834C /* MPTheSubMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTheSubMenuCell.m; sourceTree = "<group>"; };
+		1037B83D1DE05D4D000D834C /* MPTheSubMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheSubMenuCell.xib; sourceTree = "<group>"; };
 		1038EF8A1DDEF6B100134331 /* fifth_yajirushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifth_yajirushi.png; sourceTree = "<group>"; };
 		1038EF8C1DDF1F8200134331 /* left_yajirushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_yajirushi.png; sourceTree = "<group>"; };
 		1038EF901DDF2DF900134331 /* MPTransferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTransferViewController.h; sourceTree = "<group>"; };
@@ -710,6 +720,7 @@
 			isa = PBXGroup;
 			children = (
 				10467E771DE01BB600C51AA3 /* MPTheMenuCell.xib */,
+				1037B83D1DE05D4D000D834C /* MPTheSubMenuCell.xib */,
 			);
 			path = TheThirdView;
 			sourceTree = "<group>";
@@ -878,6 +889,8 @@
 			children = (
 				106A31091DD7082A00C0C741 /* MPTheThirdViewController.h */,
 				106A310A1DD7082A00C0C741 /* MPTheThirdViewController.m */,
+				1037B8311DE0365C000D834C /* MPTheThirdSumMenuViewController.h */,
+				1037B8321DE0365C000D834C /* MPTheThirdSumMenuViewController.m */,
 			);
 			path = TheThirdViewController;
 			sourceTree = "<group>";
@@ -1129,6 +1142,7 @@
 			children = (
 				1037B81B1DE03419000D834C /* image */,
 				10C4B7131DD9DFEE00E26096 /* MPTheThirdViewController.xib */,
+				1037B8361DE036A5000D834C /* MPTheThirdSumMenuViewController.xib */,
 			);
 			path = TheThirdViewController;
 			sourceTree = "<group>";
@@ -1316,6 +1330,8 @@
 			children = (
 				10467E731DE01B5900C51AA3 /* MPTheMenuCell.h */,
 				10467E741DE01B5900C51AA3 /* MPTheMenuCell.m */,
+				1037B8381DE05D06000D834C /* MPTheSubMenuCell.h */,
+				1037B8391DE05D06000D834C /* MPTheSubMenuCell.m */,
 			);
 			path = TheThirdView;
 			sourceTree = "<group>";
@@ -1867,6 +1883,7 @@
 				10C4B7A81DD9DFEE00E26096 /* icon_menu.png in Resources */,
 				10C4B7AF1DD9DFEE00E26096 /* tab_back@2x.png in Resources */,
 				107957BE1DDDA7DB008F35A6 /* coupon_60.png in Resources */,
+				1037B83E1DE05D4D000D834C /* MPTheSubMenuCell.xib in Resources */,
 				1037B82C1DE03419000D834C /* menu_color.png in Resources */,
 				10C4B7A91DD9DFEE00E26096 /* icon_twitter_black.png in Resources */,
 				10C4B7AA1DD9DFEE00E26096 /* icon_web_black.png in Resources */,
@@ -1876,6 +1893,7 @@
 				10C4B7851DD9DFEE00E26096 /* navigation_back@2x.png in Resources */,
 				10C4B7CC1DD9ECFF00E26096 /* UserInfo_btn_setting_touroku@2x.png in Resources */,
 				10C4B8E31DDA03FC00E26096 /* MPWebViewController.xib in Resources */,
+				1037B8371DE036A5000D834C /* MPTheThirdSumMenuViewController.xib in Resources */,
 				10C4B7821DD9DFEE00E26096 /* MPSlideMenuCell.xib in Resources */,
 				107957BF1DDDA7DB008F35A6 /* sharethanks_34.png in Resources */,
 				10C4B7B81DD9DFEE00E26096 /* footer_btn_home@2x.png in Resources */,
@@ -2020,6 +2038,7 @@
 				272CCD9B1DCAF096006BC4EB /* BaseEntity.m in Sources */,
 				10DE079B1DD838810068C3A9 /* MPNewHomeObject.m in Sources */,
 				272CCDA11DCAF096006BC4EB /* FMDatabaseAdditions.m in Sources */,
+				1037B8341DE0365C000D834C /* MPTheThirdSumMenuViewController.m in Sources */,
 				272CCD951DCAF096006BC4EB /* BaseDAO.m in Sources */,
 				272CCD881DCAF096006BC4EB /* AFJSONRequestOperation.m in Sources */,
 				272CCDAB1DCAF096006BC4EB /* Reachability.m in Sources */,
@@ -2098,6 +2117,7 @@
 				272CCD9A1DCAF096006BC4EB /* DatabaseManager.m in Sources */,
 				272CCDA71DCAF096006BC4EB /* KILabel.m in Sources */,
 				272CCD8D1DCAF096006BC4EB /* AFXMLRequestOperation.m in Sources */,
+				1037B83B1DE05D06000D834C /* MPTheSubMenuCell.m in Sources */,
 				106A31731DD7082A00C0C741 /* MPTheFifthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

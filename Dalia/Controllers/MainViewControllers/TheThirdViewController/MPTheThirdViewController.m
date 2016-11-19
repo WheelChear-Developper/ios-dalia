@@ -33,8 +33,10 @@
     [_contentView setHidden:YES];
 
     //テーブル設定
-    _tbl_menulist.estimatedRowHeight = 100;
+    _tbl_menulist.scrollEnabled = false;
+    _tbl_menulist.estimatedRowHeight = 100.0f;
     _tbl_menulist.rowHeight = UITableViewAutomaticDimension;
+    [_tbl_menulist setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 
     UINib *nib = [UINib nibWithNibName:@"MPTheMenuCell" bundle:nil];
     [_tbl_menulist registerNib:nib forCellReuseIdentifier:@"menulistIdentifier"];
@@ -58,9 +60,146 @@
     [super viewWillAppear:animated];
 
     //メニュー項目設定
-    ary_image = [@[@"menu_18.png", @"menu_26.png", @"menu_28.png", @"menu_30.png", @"menu_32.png"] mutableCopy];
-    ary_title = [@[@"Cut", @"Color", @"Perm", @"Treatment", @"Other"] mutableCopy];
-    ary_subTitle = [@[@"カット", @"カラー", @"パーマ", @"トリートメント", @"その他"] mutableCopy];
+    _ary_image = [@[@"menu_18.png", @"menu_26.png", @"menu_28.png", @"menu_30.png", @"menu_32.png"] mutableCopy];
+    _ary_title = [@[@"Cut", @"Color", @"Perm", @"Treatment", @"Other"] mutableCopy];
+    _ary_subTitle = [@[@"カット", @"カラー", @"パーマ", @"トリートメント", @"その他"] mutableCopy];
+
+    _ary_infoImage = [@[@"menu_cut.png", @"menu_color.png", @"menu_perm.png", @"menu_teatment.png", @"menu_other.png"] mutableCopy];
+
+    NSMutableDictionary *dic_menuset1 = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *dic_menuList1 = [[NSMutableDictionary alloc] init];
+    [dic_menuList1 setValue:@"ディレクターズカット" forKey:@"title"];
+    [dic_menuList1 setValue:@"シャンプー・ブロー込" forKey:@"subTitle"];
+    [dic_menuList1 setValue:@"¥6,000" forKey:@"money"];
+
+    NSMutableDictionary *dic_menuList2 = [[NSMutableDictionary alloc] init];
+    [dic_menuList2 setValue:@"トップスタイリストカット" forKey:@"title"];
+    [dic_menuList2 setValue:@"シャンプー・ブロー込" forKey:@"subTitle"];
+    [dic_menuList2 setValue:@"¥5,000" forKey:@"money"];
+
+    NSMutableDictionary *dic_menuList3 = [[NSMutableDictionary alloc] init];
+    [dic_menuList3 setValue:@"スタイリストカット" forKey:@"title"];
+    [dic_menuList3 setValue:@"シャンプー・ブロー込" forKey:@"subTitle"];
+    [dic_menuList3 setValue:@"¥4,500" forKey:@"money"];
+
+    NSMutableDictionary *dic_menuList4 = [[NSMutableDictionary alloc] init];
+    [dic_menuList4 setValue:@"前髪カット" forKey:@"title"];
+    [dic_menuList4 setValue:@"シャンプー・ブロー別" forKey:@"subTitle"];
+    [dic_menuList4 setValue:@"¥1,000" forKey:@"money"];
+    [dic_menuset1 setValue:dic_menuList1 forKey:@"1"];
+    [dic_menuset1 setValue:dic_menuList2 forKey:@"2"];
+    [dic_menuset1 setValue:dic_menuList3 forKey:@"3"];
+    [dic_menuset1 setValue:dic_menuList4 forKey:@"4"];
+
+    NSMutableDictionary *dic_menuset2 = [[NSMutableDictionary alloc] init];
+    dic_menuList1 = [[NSMutableDictionary alloc] init];
+    [dic_menuList1 setValue:@"ディレクターズカット" forKey:@"title"];
+    [dic_menuList1 setValue:@"シャンプー・ブロー込" forKey:@"subTitle"];
+    [dic_menuList1 setValue:@"¥6,000" forKey:@"money"];
+
+    dic_menuList2 = [[NSMutableDictionary alloc] init];
+    [dic_menuList2 setValue:@"トップスタイリストカット" forKey:@"title"];
+    [dic_menuList2 setValue:@"シャンプー・ブロー込" forKey:@"subTitle"];
+    [dic_menuList2 setValue:@"¥5,000" forKey:@"money"];
+
+    dic_menuList3 = [[NSMutableDictionary alloc] init];
+    [dic_menuList3 setValue:@"ディレクターズカット" forKey:@"title"];
+    [dic_menuList3 setValue:@"シャンプー・ブロー込" forKey:@"subTitle"];
+    [dic_menuList3 setValue:@"¥4,500" forKey:@"money"];
+
+    dic_menuList4 = [[NSMutableDictionary alloc] init];
+    [dic_menuList4 setValue:@"前髪カット" forKey:@"title"];
+    [dic_menuList4 setValue:@"シャンプー・ブロー別" forKey:@"subTitle"];
+    [dic_menuList4 setValue:@"¥1,000" forKey:@"money"];
+    [dic_menuset2 setValue:dic_menuList1 forKey:@"1"];
+    [dic_menuset2 setValue:dic_menuList2 forKey:@"2"];
+    [dic_menuset2 setValue:dic_menuList3 forKey:@"3"];
+    [dic_menuset2 setValue:dic_menuList4 forKey:@"4"];
+
+    NSMutableDictionary *dic_menuset3 = [[NSMutableDictionary alloc] init];
+    dic_menuList1 = [[NSMutableDictionary alloc] init];
+    [dic_menuList1 setValue:@"ディレクターズカット" forKey:@"title"];
+    [dic_menuList1 setValue:@"シャンプー・ブロー込" forKey:@"subTitle"];
+    [dic_menuList1 setValue:@"¥6,000" forKey:@"money"];
+
+    dic_menuList2 = [[NSMutableDictionary alloc] init];
+    [dic_menuList2 setValue:@"トップスタイリストカット" forKey:@"title"];
+    [dic_menuList2 setValue:@"シャンプー・ブロー込" forKey:@"subTitle"];
+    [dic_menuList2 setValue:@"¥5,000" forKey:@"money"];
+
+    dic_menuList3 = [[NSMutableDictionary alloc] init];
+    [dic_menuList3 setValue:@"スタイリストカット" forKey:@"title"];
+    [dic_menuList3 setValue:@"シャンプー・ブロー込" forKey:@"subTitle"];
+    [dic_menuList3 setValue:@"¥6,000" forKey:@"money"];
+
+    dic_menuList4 = [[NSMutableDictionary alloc] init];
+    [dic_menuList4 setValue:@"前髪カット" forKey:@"title"];
+    [dic_menuList4 setValue:@"シャンプー・ブロー別" forKey:@"subTitle"];
+    [dic_menuList4 setValue:@"¥1,000" forKey:@"money"];
+    [dic_menuset3 setValue:dic_menuList1 forKey:@"1"];
+    [dic_menuset3 setValue:dic_menuList2 forKey:@"2"];
+    [dic_menuset3 setValue:dic_menuList3 forKey:@"3"];
+    [dic_menuset3 setValue:dic_menuList4 forKey:@"4"];
+
+    NSMutableDictionary *dic_menuset4 = [[NSMutableDictionary alloc] init];
+    dic_menuList1 = [[NSMutableDictionary alloc] init];
+    [dic_menuList1 setValue:@"ディレクターズカット" forKey:@"title"];
+    [dic_menuList1 setValue:@"シャンプー・ブロー込" forKey:@"subTitle"];
+    [dic_menuList1 setValue:@"¥6,000" forKey:@"money"];
+
+    dic_menuList2 = [[NSMutableDictionary alloc] init];
+    [dic_menuList2 setValue:@"トップスタイリストカット" forKey:@"title"];
+    [dic_menuList2 setValue:@"シャンプー・ブロー込" forKey:@"subTitle"];
+    [dic_menuList2 setValue:@"¥5,000" forKey:@"money"];
+
+    dic_menuList3 = [[NSMutableDictionary alloc] init];
+    [dic_menuList3 setValue:@"スタイリストカット" forKey:@"title"];
+    [dic_menuList3 setValue:@"シャンプー・ブロー込" forKey:@"subTitle"];
+    [dic_menuList3 setValue:@"¥4,500" forKey:@"money"];
+
+    dic_menuList4 = [[NSMutableDictionary alloc] init];
+    [dic_menuList4 setValue:@"前髪カット" forKey:@"title"];
+    [dic_menuList4 setValue:@"シャンプー・ブロー別" forKey:@"subTitle"];
+    [dic_menuList4 setValue:@"¥1,000" forKey:@"money"];
+    [dic_menuset4 setValue:dic_menuList1 forKey:@"1"];
+    [dic_menuset4 setValue:dic_menuList2 forKey:@"2"];
+    [dic_menuset4 setValue:dic_menuList3 forKey:@"3"];
+    [dic_menuset4 setValue:dic_menuList4 forKey:@"4"];
+
+    NSMutableDictionary *dic_menuset5 = [[NSMutableDictionary alloc] init];
+    dic_menuList1 = [[NSMutableDictionary alloc] init];
+    [dic_menuList1 setValue:@"ディレクターズカット" forKey:@"title"];
+    [dic_menuList1 setValue:@"シャンプー・ブロー込" forKey:@"subTitle"];
+    [dic_menuList1 setValue:@"¥6,000" forKey:@"money"];
+
+    dic_menuList2 = [[NSMutableDictionary alloc] init];
+    [dic_menuList2 setValue:@"トップスタイリストカット" forKey:@"title"];
+    [dic_menuList2 setValue:@"シャンプー・ブロー込" forKey:@"subTitle"];
+    [dic_menuList2 setValue:@"¥5,000" forKey:@"money"];
+
+    dic_menuList3 = [[NSMutableDictionary alloc] init];
+    [dic_menuList3 setValue:@"スタイリストカット" forKey:@"title"];
+    [dic_menuList3 setValue:@"シャンプー・ブロー込" forKey:@"subTitle"];
+    [dic_menuList3 setValue:@"¥4,500" forKey:@"money"];
+
+    dic_menuList4 = [[NSMutableDictionary alloc] init];
+    [dic_menuList4 setValue:@"前髪カット" forKey:@"title"];
+    [dic_menuList4 setValue:@"シャンプー・ブロー別" forKey:@"subTitle"];
+    [dic_menuList4 setValue:@"¥1,000" forKey:@"money"];
+    [dic_menuset5 setValue:dic_menuList1 forKey:@"1"];
+    [dic_menuset5 setValue:dic_menuList2 forKey:@"2"];
+    [dic_menuset5 setValue:dic_menuList3 forKey:@"3"];
+    [dic_menuset5 setValue:dic_menuList4 forKey:@"4"];
+
+    _dic_menu_data = [@{
+                        @"0" : dic_menuset1,
+                        @"1" : dic_menuset2,
+                        @"2" : dic_menuset3,
+                        @"3" : dic_menuset4,
+                        @"4" : dic_menuset5
+                        } mutableCopy];
+
+    [_tbl_menulist reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -143,7 +282,7 @@
 #pragma mark - UITableViewDelegate & DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-   return ary_image.count;
+   return _ary_image.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -160,10 +299,22 @@
         cell = [nib objectAtIndex:0];
     }
 
-    cell.img_photo.image = [UIImage imageNamed:[ary_image objectAtIndex:indexPath.row]];
-    cell.lbl_title.text = [ary_title objectAtIndex:indexPath.row];
-    cell.lbl_subtitle.text = [ary_subTitle objectAtIndex:indexPath.row];
+    cell.img_photo.image = [UIImage imageNamed:[_ary_image objectAtIndex:indexPath.row]];
+    cell.lbl_title.text = [_ary_title objectAtIndex:indexPath.row];
+    cell.lbl_subtitle.text = [_ary_subTitle objectAtIndex:indexPath.row];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    MPTheThirdSumMenuViewController *vc = [[MPTheThirdSumMenuViewController alloc] initWithNibName:@"MPTheThirdSumMenuViewController" bundle:nil];
+    vc.delegate = self;
+
+    vc.menuCount = indexPath.row;
+    vc.ary_infoImage = _ary_infoImage;
+    vc.dic_menu_data = [_dic_menu_data objectForKey:[NSString stringWithFormat:@"%d",indexPath.row]];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)resizeTable {
