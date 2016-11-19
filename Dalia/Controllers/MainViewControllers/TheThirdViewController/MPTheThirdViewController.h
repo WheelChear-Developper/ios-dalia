@@ -9,6 +9,7 @@
 #import "MPBaseViewController.h"
 #import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
+#import "MPTheMenuCell.h"
 
 @interface MPTheThirdViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate>
 {
@@ -16,6 +17,11 @@
     __weak IBOutlet UIView* _scr_inView;
     CGPoint _scrollBeginingPoint;
     
+    __weak IBOutlet UITableView *_tbl_menulist;
+
+    NSMutableArray *ary_image;
+    NSMutableArray *ary_title;
+    NSMutableArray *ary_subTitle;
 }
 
 

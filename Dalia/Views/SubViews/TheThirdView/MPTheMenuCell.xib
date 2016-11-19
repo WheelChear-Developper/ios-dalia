@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menulistIdentifier" id="Eq6-6T-pb9" customClass="MPTheMenuCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eq6-6T-pb9" id="9rT-V8-T1Z">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V5q-gx-xYa">
+                        <rect key="frame" x="5" y="5" width="125" height="89"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="125" id="5Yf-x5-QbY"/>
+                            <constraint firstAttribute="height" constant="89" id="E9F-5j-S4f"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAL-mx-igg">
+                        <rect key="frame" x="135" y="5" width="180" height="27"/>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="27"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カット" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COh-LN-oxU">
+                        <rect key="frame" x="135" y="37" width="172" height="12"/>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fifth_yajirushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="CVI-dA-AqT">
+                        <rect key="frame" x="285" y="54.5" width="15" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="CUc-Gs-pfP"/>
+                            <constraint firstAttribute="width" constant="15" id="zjx-iv-l3s"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIZ-eG-eKe">
+                        <rect key="frame" x="0.0" y="99" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="8aE-iF-QlS"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="V5q-gx-xYa" firstAttribute="leading" secondItem="9rT-V8-T1Z" secondAttribute="leading" constant="5" id="13J-ph-IJA"/>
+                    <constraint firstItem="COh-LN-oxU" firstAttribute="top" secondItem="ZAL-mx-igg" secondAttribute="bottom" constant="5" id="3gc-Ex-Rjj"/>
+                    <constraint firstItem="CVI-dA-AqT" firstAttribute="centerY" secondItem="9rT-V8-T1Z" secondAttribute="centerY" multiplier="1.3" id="8LV-VL-9CH"/>
+                    <constraint firstItem="ZAL-mx-igg" firstAttribute="top" secondItem="9rT-V8-T1Z" secondAttribute="top" constant="5" id="Dm1-0U-Fhd"/>
+                    <constraint firstAttribute="trailing" secondItem="iIZ-eG-eKe" secondAttribute="trailing" id="F05-dv-okx"/>
+                    <constraint firstAttribute="bottom" secondItem="V5q-gx-xYa" secondAttribute="bottom" constant="5" id="Fei-mG-akb"/>
+                    <constraint firstAttribute="trailing" secondItem="ZAL-mx-igg" secondAttribute="trailing" constant="5" id="Qa6-Fp-2Cn"/>
+                    <constraint firstItem="V5q-gx-xYa" firstAttribute="top" secondItem="9rT-V8-T1Z" secondAttribute="top" constant="5" id="RJr-pI-QLB"/>
+                    <constraint firstItem="iIZ-eG-eKe" firstAttribute="leading" secondItem="9rT-V8-T1Z" secondAttribute="leading" id="gga-KJ-PHP"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="COh-LN-oxU" secondAttribute="trailing" constant="5" id="kbA-dy-pp0"/>
+                    <constraint firstItem="COh-LN-oxU" firstAttribute="leading" secondItem="V5q-gx-xYa" secondAttribute="trailing" constant="5" id="qFI-ao-vFU"/>
+                    <constraint firstAttribute="bottom" secondItem="iIZ-eG-eKe" secondAttribute="bottom" id="u2x-lK-Kbi"/>
+                    <constraint firstItem="ZAL-mx-igg" firstAttribute="leading" secondItem="V5q-gx-xYa" secondAttribute="trailing" constant="5" id="usV-L7-fVJ"/>
+                    <constraint firstAttribute="trailing" secondItem="CVI-dA-AqT" secondAttribute="trailing" constant="20" id="w1p-9X-A6x"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="img_photo" destination="V5q-gx-xYa" id="r7Z-Fm-noA"/>
+                <outlet property="lbl_subtitle" destination="COh-LN-oxU" id="vnf-Wn-yFT"/>
+                <outlet property="lbl_title" destination="ZAL-mx-igg" id="w4Q-p1-ccN"/>
+            </connections>
+            <point key="canvasLocation" x="52" y="-136"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="fifth_yajirushi.png" width="39" height="59"/>
+    </resources>
+</document>
