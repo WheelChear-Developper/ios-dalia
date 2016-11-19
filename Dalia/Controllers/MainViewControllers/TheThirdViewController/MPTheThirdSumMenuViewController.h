@@ -12,7 +12,6 @@
 #import "MPTheSubMenuCell.h"
 
 @protocol MPTheThirdSumMenuViewControllerDelegate<NSObject>
-
 @end
 
 @interface MPTheThirdSumMenuViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate>

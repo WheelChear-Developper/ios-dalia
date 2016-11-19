@@ -246,6 +246,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    if(tableView == _RecommendMenuList_tableView){
+
+
+    }
 /*
     MPNewDetailViewController *newDetailVC = [[MPNewDetailViewController alloc] initWithNibName:@"MPNewDetailViewController" bundle:nil];
     [newDetailVC setData:[self.listObject objectAtIndex:indexPath.row]];
@@ -299,7 +304,7 @@
 
     //コレクション高さをセルの最大値へセット
     _item_collectionView.translatesAutoresizingMaskIntoConstraints = YES;
-    _item_collectionView.frame = CGRectMake(_RecommendMenuList_tableView.frame.origin.x, _RecommendMenuList_tableView.frame.origin.y, _RecommendMenuList_tableView.frame.size.width, 0);
+    _item_collectionView.frame = CGRectMake(_item_collectionView.frame.origin.x, _item_collectionView.frame.origin.y, _item_collectionView.frame.size.width, 0);
     _item_collectionView.frame =
     CGRectMake(_item_collectionView.frame.origin.x,
                _item_collectionView.frame.origin.y,
@@ -484,6 +489,11 @@
 }
 
 - (IBAction)btn_Recommend_Menu_More:(id)sender {
+
+    MPFavoriteMenuViewController *vc = [[MPFavoriteMenuViewController alloc] initWithNibName:@"MPFavoriteMenuViewController" bundle:nil];
+    vc.delegate = self;
+
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)btn_WhatsNew_More:(id)sender {

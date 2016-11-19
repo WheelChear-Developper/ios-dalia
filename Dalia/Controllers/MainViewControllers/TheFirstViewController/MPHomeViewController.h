@@ -25,7 +25,9 @@
 #import "MPMenuNewsCell.h"
 #import "MPApnsObject.h"
 
-@interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, TheUserInfoViewControllerDelegate ,UICollectionViewDataSource, UICollectionViewDelegate>
+#import "MPFavoriteMenuViewController.h"
+
+@interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, TheUserInfoViewControllerDelegate ,UICollectionViewDataSource, UICollectionViewDelegate, MPFavoriteMenuViewControllerDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;
@@ -43,9 +45,9 @@
 
     __weak IBOutlet UIImageView *img_notification_block1;
     __weak IBOutlet UIImageView *img_notification_block2;
-        __weak IBOutlet UIImageView *img_notification_block3;
-        __weak IBOutlet UIImageView *img_notification_block4;
-        __weak IBOutlet UIImageView *img_notification_block5;
+    __weak IBOutlet UIImageView *img_notification_block3;
+    __weak IBOutlet UIImageView *img_notification_block4;
+    __weak IBOutlet UIImageView *img_notification_block5;
 
     __weak IBOutlet UICollectionView *_item_collectionView;
 
@@ -58,8 +60,6 @@
     NSMutableArray* list_RecommendItem;
     NSMutableArray* list_RecommendMenu;
     NSMutableArray* list_news;
-
-
 }
 
 - (IBAction)btn_block1:(id)sender;

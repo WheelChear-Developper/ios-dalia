@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -60,7 +59,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="24b-vS-NVg" firstAttribute="centerY" secondItem="p0f-8I-nd9" secondAttribute="centerY" id="7gp-NJ-iBl"/>
                                     <constraint firstAttribute="height" constant="30" id="PkF-Qt-vsA"/>
@@ -98,19 +97,8 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVV-12-rsT">
                                 <rect key="frame" x="120" y="73" width="180" height="25"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="9hI-Vz-FZS">
-                                        <rect key="frame" x="5" y="13" width="170" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="9hI-Vz-FZS" firstAttribute="leading" secondItem="zVV-12-rsT" secondAttribute="leading" constant="5" id="KGv-uO-IFB"/>
-                                    <constraint firstItem="9hI-Vz-FZS" firstAttribute="centerY" secondItem="zVV-12-rsT" secondAttribute="centerY" id="gb1-0W-zOo"/>
-                                    <constraint firstAttribute="trailing" secondItem="9hI-Vz-FZS" secondAttribute="trailing" constant="5" id="tp5-WH-vsN"/>
                                     <constraint firstAttribute="height" constant="25" id="vF4-NS-jk3"/>
                                 </constraints>
                             </view>
@@ -151,8 +139,8 @@
                     <constraint firstAttribute="trailing" secondItem="nSP-vC-I1r" secondAttribute="trailing" constant="10" id="kvs-XP-0QM"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
-                <outlet property="_dateNewLabel" destination="9hI-Vz-FZS" id="YRR-jt-VPm"/>
                 <outlet property="_img_Photo" destination="Y1l-0o-zbm" id="nvg-mU-dpT"/>
                 <outlet property="_lbl_Message" destination="dIQ-Gw-ZRG" id="5Gp-eM-5hn"/>
                 <outlet property="_titleLabel" destination="24b-vS-NVg" id="MAs-Mu-SF0"/>
