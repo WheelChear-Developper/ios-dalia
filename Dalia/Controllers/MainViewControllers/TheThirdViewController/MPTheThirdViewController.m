@@ -42,7 +42,7 @@
 
     //🔴カスタムnavigation
     [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:NO];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationLogo:[UIImage imageNamed:@"header_ttl_recommendmenu.png"]];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationLogo:[UIImage imageNamed:@"header_ttl_menu.png"]];
 
     //🔴タブの表示
     [(MPTabBarViewController*)[self.navigationController parentViewController] tabHidden:NO];
