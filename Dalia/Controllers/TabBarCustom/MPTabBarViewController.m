@@ -259,7 +259,7 @@
     self.selectedIndex = tabID;
 }
 
-- (void)openTab:(BOOL)flg {
+- (void)fadeInTab:(BOOL)flg {
 
     if(flg){
 

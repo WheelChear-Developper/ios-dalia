@@ -158,7 +158,7 @@
         [self close_TopNavigation];
 
         //タブのオープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] openTab:true];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] fadeInTab:true];
 
     }else if(_scrollBeginingPoint.y ==0){
 
@@ -167,7 +167,7 @@
         [self open_TopNavigation];
 
         //タブのオープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] openTab:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] fadeInTab:false];
 
     }else if(_scrollBeginingPoint.y > currentPoint.y){
 
@@ -176,7 +176,7 @@
         [self open_TopNavigation];
 
         //タブのクローズ
-        [(MPTabBarViewController*)[self.navigationController parentViewController] openTab:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] fadeInTab:false];
     }
 }
 

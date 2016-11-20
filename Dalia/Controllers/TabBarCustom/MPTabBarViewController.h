@@ -35,7 +35,7 @@
 + (MPTabBarViewController*) sharedInstance;
 - (void)setUpTabBar;
 - (void)selectTab:(long)tabID;
-- (void)openTab:(BOOL)isEnable;
+- (void)fadeInTab:(BOOL)isEnable;
 - (void)tabHidden:(BOOL)isEnable;
 - (void)setTabNotificationHidden:(BOOL)isEnable;
 - (void)setDisableHomeButton:(BOOL)isEnable;

@@ -150,7 +150,7 @@
 //        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
 
         //タブのオープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] openTab:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] fadeInTab:false];
 
     }else if(_scrollBeginingPoint.y > currentPoint.y){
 

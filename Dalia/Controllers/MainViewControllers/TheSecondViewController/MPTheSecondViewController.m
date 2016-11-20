@@ -117,7 +117,7 @@
         [(MPTabBarViewController*)[self.navigationController parentViewController] custom_TopNavigationHidden:true];
 
         //タブのオープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] openTab:true];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] fadeInTab:true];
 
     }else if(_scrollBeginingPoint.y ==0){
 
@@ -126,7 +126,7 @@
         [(MPTabBarViewController*)[self.navigationController parentViewController] custom_TopNavigationHidden:false];
 
         //タブのオープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] openTab:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] fadeInTab:false];
         
     }else if(_scrollBeginingPoint.y > currentPoint.y){
 
@@ -135,7 +135,7 @@
         [(MPTabBarViewController*)[self.navigationController parentViewController] custom_TopNavigationHidden:false];
 
         //タブのクローズ
-        [(MPTabBarViewController*)[self.navigationController parentViewController] openTab:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] fadeInTab:false];
     }
 
     CGFloat pageWidth = _scr_rootview.frame.size.width;
