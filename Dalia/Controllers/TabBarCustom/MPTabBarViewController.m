@@ -370,7 +370,7 @@
 
     //ステータスバー背景設定
     UIView* view_frameNavigationView_shadow = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, _statusHeight)];
-    view_frameNavigationView_shadow.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0.95];
+    view_frameNavigationView_shadow.backgroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0 blue:245/255.0 alpha:1.00];
     [self.view addSubview:view_frameNavigationView_shadow];
 
     ///////////// サイドメニュー /////////////

@@ -193,7 +193,7 @@
 - (void)showKeyboard:(NSNotification*)notification {
 
     // ステータスバーをのぞいた画面高さ
-    float afh = [[UIScreen mainScreen] applicationFrame].size.height;
+    float afh = [[UIScreen mainScreen] bounds].size.height;
 
     // キーボード高さ
     CGRect keyboard;
