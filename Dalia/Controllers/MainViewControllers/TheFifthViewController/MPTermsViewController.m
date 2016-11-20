@@ -46,7 +46,7 @@
 - (void)viewWillAppear:(BOOL)animated {
 
     //🔴navigation表示
-    [self setBasicNavigationHidden:NO];
+    [self setHidden_BasicNavigation:NO];
 
     //🔴バックアクション非表示
     [self setHiddenBackButton:NO];
@@ -58,6 +58,20 @@
 
     termContent.text = [termContent.text stringByReplacingOccurrencesOfString:@"xxxx" withString:appName];
     termContent.text = [termContent.text stringByReplacingOccurrencesOfString:@"[companyName]" withString:company];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+
+    _scr_rootview.delegate = self;
+
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+
+    _scr_rootview.delegate = nil;
+
+    [super viewWillDisappear:animated];
 }
 
 - (void)downloadDataSuccess:(DownloadParam *)param {

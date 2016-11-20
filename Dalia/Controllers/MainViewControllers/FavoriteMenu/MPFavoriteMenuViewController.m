@@ -46,16 +46,16 @@
 - (void)viewWillAppear:(BOOL)animated {
 
     //🔴標準navigation
-    [self setBasicNavigationHidden:NO];
-    [self setNavigationLogo:[UIImage imageNamed:@"header_ttl_recommendmenu.png"]];
+    [self setHidden_BasicNavigation:NO];
+    [self setImage_BasicNavigation:[UIImage imageNamed:@"header_ttl_recommendmenu.png"]];
     [self setHiddenBackButton:NO];
 
     //🔴カスタムnavigation
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationLogo:nil];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_CustomNavigation:YES];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setImage_CustomNavigation:nil];
 
     //🔴タブの表示
-    [(MPTabBarViewController*)[self.navigationController parentViewController] tabHidden:NO];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_Tab:NO];
 
     [super viewWillAppear:animated];
 
@@ -127,7 +127,16 @@
 
 - (void)viewDidAppear:(BOOL)animated {
 
+    _scr_rootview.delegate = self;
+
     [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+
+    _scr_rootview.delegate = nil;
+
+    [super viewWillDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -152,31 +161,31 @@
     CGPoint currentPoint = [scrollView contentOffset];
     if(_scrollBeginingPoint.y < currentPoint.y){
 
-        //下方向の時のアクション
-        //カスタムトップナビゲーション　クローズ
-        //標準ナビゲーションのクローズ
-        [self close_TopNavigation];
+        //上方向の時のアクション
+        //カスタムトップナビゲーション　オープン
+        //標準ナビゲーションのオープン
+        [self setFadeOut_BasicNavigation:true];
 
         //タブのオープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] fadeInTab:true];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:true];
 
     }else if(_scrollBeginingPoint.y ==0){
 
-        //スクロール０
+        //初期値
         //標準ナビゲーションのオープン
-        [self open_TopNavigation];
+        [self setFadeOut_BasicNavigation:false];
 
         //タブのオープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] fadeInTab:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:false];
 
     }else if(_scrollBeginingPoint.y > currentPoint.y){
 
-        //上方向の時のアクション
-        //標準ナビゲーションのオープン
-        [self open_TopNavigation];
+        //下方向の時のアクション
+        //標準ナビゲーションのクローズ
+        [self setFadeOut_BasicNavigation:false];
 
         //タブのクローズ
-        [(MPTabBarViewController*)[self.navigationController parentViewController] fadeInTab:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:false];
     }
 }
 

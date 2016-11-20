@@ -46,16 +46,16 @@
 - (void)viewDidAppear:(BOOL)animated {
 
    //🔴標準navigation
-    [self setBasicNavigationHidden:NO];
-    [self setNavigationLogo:[UIImage imageNamed:@"header_logo.png"]];
+    [self setHidden_BasicNavigation:NO];
+    [self setImage_BasicNavigation:[UIImage imageNamed:@"header_logo.png"]];
     [self setHiddenBackButton:NO];
 
     //🔴カスタムnavigation
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationLogo:nil];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_CustomNavigation:YES];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setImage_CustomNavigation:nil];
 
     //🔴タブのクローズ
-    [(MPTabBarViewController*)[self.navigationController parentViewController] tabHidden:YES];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_Tab:YES];
 
     [super viewDidAppear:animated];
 }
@@ -154,11 +154,11 @@
     if(_scrollBeginingPoint.y < currentPoint.y){
 
         //標準ナビゲーションのクローズ
-        [self close_TopNavigation];
+        [self setFadeOut_BasicNavigation:true];
 
         //下方向の時のアクション
         //カスタムトップナビゲーション　オープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_TopNavigationHidden:true];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_CustomNavigation:true];
 
         //アクションボタンスライド
         [UIView animateWithDuration:0.5f
@@ -180,20 +180,20 @@
     }else if(_scrollBeginingPoint.y ==0){
 
         //標準ナビゲーションのオープン
-        [self open_TopNavigation];
+        [self setFadeOut_BasicNavigation:false];
 
         //スクロール０
         //カスタムトップナビゲーション　クローズ
-        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_TopNavigationHidden:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_CustomNavigation:false];
 
     }else if(_scrollBeginingPoint.y > currentPoint.y){
 
         //標準ナビゲーションのオープン
-        [self open_TopNavigation];
+        [self setFadeOut_BasicNavigation:false];
 
         //上方向の時のアクション
         //カスタムトップナビゲーション　クローズ
-        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_TopNavigationHidden:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_CustomNavigation:false];
 
         //アクションボタンスライド
         [UIView animateWithDuration:0.5f

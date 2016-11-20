@@ -1,4 +1,4 @@
-//
+　//
 //  MPTabBarViewController.m
 //  Misepuri
 //
@@ -259,10 +259,11 @@
     self.selectedIndex = tabID;
 }
 
-- (void)fadeInTab:(BOOL)flg {
+- (void)setFadeOut_Tab:(BOOL)flg {
 
     if(flg){
 
+        //閉じる場合
         [UIView animateWithDuration:0.5f
                               delay:0.5f
                             options:UIViewAnimationOptionCurveEaseInOut
@@ -281,6 +282,7 @@
 
     }else{
 
+        //開ける場合
         [UIView animateWithDuration:0.5f
                               delay:0.5f
                             options:UIViewAnimationOptionCurveEaseInOut
@@ -299,7 +301,7 @@
     }
 }
 
-- (void)tabHidden:(BOOL)isEnable {
+- (void)setHidden_Tab:(BOOL)isEnable {
 
     _bgTabBar.hidden = isEnable;
 }
@@ -545,20 +547,16 @@
     }
 }
 
-- (void)setCustomNavigationLogo:(UIImage*)image {
+- (void)setImage_CustomNavigation:(UIImage*)image {
 
     [_iv_custom_navigationIcon setImage:image];
 }
 
-- (void)setCustomNavigationHiden:(BOOL)isEnable {
-
-    _view_custom_navigationView.hidden = isEnable;
-}
-
-- (void)custom_TopNavigationHidden:(BOOL)flg {
+- (void)setFadeOut_CustomNavigation:(BOOL)flg {
 
     if(flg){
 
+        //閉じる場合
         [UIView animateWithDuration:0.5f
                               delay:0.5f
                             options:UIViewAnimationOptionCurveEaseInOut
@@ -577,6 +575,7 @@
 
     }else{
 
+        //開ける場合
         [UIView animateWithDuration:0.5f
                               delay:0.5f
                             options:UIViewAnimationOptionCurveEaseInOut
@@ -593,6 +592,11 @@
                              
                          }];
     }
+}
+
+- (void)setHidden_CustomNavigation:(BOOL)isEnable {
+
+    _view_custom_navigationView.hidden = isEnable;
 }
 
 - (void)custom_open_NavigationMenu:(UIButton*)button {

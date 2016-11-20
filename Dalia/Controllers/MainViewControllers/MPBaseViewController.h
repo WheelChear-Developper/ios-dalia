@@ -34,9 +34,9 @@ typedef NS_ENUM(NSInteger, ElevenFunctionType) {
 - (void)getTaskWithFunctions:(ElevenFunctionType)type;
 - (void)backButtonClicked:(UIButton*)sender;
 - (void)setHiddenBackButton:(BOOL)isHidden;
-- (void)setBasicNavigationHidden:(BOOL)isEnable;
-- (void)open_TopNavigation;
-- (void)close_TopNavigation;
-- (void)setNavigationLogo:(UIImage*)image;
+
+- (void)setImage_BasicNavigation:(UIImage*)image;
+- (void)setFadeOut_BasicNavigation:(BOOL)isEnable;
+- (void)setHidden_BasicNavigation:(BOOL)isEnable;
 
 @end

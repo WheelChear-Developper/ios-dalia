@@ -9,7 +9,7 @@
 #import "MPBaseViewController.h"
 #import "MPTabBarViewController.h"
 
-@interface MPTransferViewController : MPBaseViewController<ManagerDownloadDelegate>
+@interface MPTransferViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;

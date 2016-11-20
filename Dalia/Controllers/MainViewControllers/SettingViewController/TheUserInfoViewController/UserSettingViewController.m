@@ -134,8 +134,8 @@
 - (void)viewWillAppear:(BOOL)animated {
 
     //🔴navigation表示
-    [self setBasicNavigationHidden:NO];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
+    [self setHidden_BasicNavigation:NO];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_CustomNavigation:YES];
 
     //🔴バックアクション非表示
     [self setHiddenBackButton:NO];

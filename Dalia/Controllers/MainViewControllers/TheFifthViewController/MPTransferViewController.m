@@ -40,25 +40,37 @@
     if ( [isTransfer isEqualToString:@"OK"] ){
         [self closeTransfer];
     }
-
-
 }
 
 -(void)viewWillAppear:(BOOL)animated {
 
     //🔴navigation表示
-    [self setBasicNavigationHidden:NO];
-    [self setNavigationLogo:[UIImage imageNamed:@"header_ttl_setting.png"]];
+    [self setHidden_BasicNavigation:NO];
+    [self setImage_BasicNavigation:[UIImage imageNamed:@"header_ttl_setting.png"]];
     [self setHiddenBackButton:NO];
     
     //🔴カスタムnavigation
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationHiden:YES];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setCustomNavigationLogo:nil];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_CustomNavigation:YES];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setImage_CustomNavigation:nil];
 
     //🔴タブの表示
-    [(MPTabBarViewController*)[self.navigationController parentViewController] tabHidden:NO];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_Tab:NO];
 
     [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+
+    _scr_rootview.delegate = self;
+
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+
+    _scr_rootview.delegate = nil;
+
+    [super viewWillDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -150,7 +162,7 @@
 //        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
 
         //タブのオープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] fadeInTab:false];
+        [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:false];
 
     }else if(_scrollBeginingPoint.y > currentPoint.y){
 

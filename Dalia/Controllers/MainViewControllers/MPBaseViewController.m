@@ -51,6 +51,11 @@
     [super viewWillAppear:animated];
 }
 
+- (void)didReceiveMemoryWarning {
+
+    [super didReceiveMemoryWarning];
+}
+
 - (void)setUpView {
 
     //ステータスバー表示設定
@@ -121,7 +126,54 @@
     [_backButton setHidden:isHidden];
 }
 
-- (void)setBasicNavigationHidden:(BOOL)isEnable {
+-(void)setImage_BasicNavigation:(UIImage*)image {
+
+    [_basic_navigationIcon setImage:image];
+}
+
+- (void)setFadeOut_BasicNavigation:(BOOL)isEnable {
+
+    if(isEnable){
+
+        //閉じる場合
+        [UIView animateWithDuration:0.5f
+                              delay:0.5f
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+
+                             //アニメーションで変化させたい値を設定する（最終的に変更したい値）
+                             CGRect flt_navi = _basic_navigationView.frame;
+                             flt_navi.origin.y = - FRAME_HEIGHT;
+                             _basic_navigationView.frame = flt_navi;
+
+                         } completion:^(BOOL finished){
+
+                             //完了時のコールバック
+                             
+                         }];
+
+    }else{
+
+        //開ける場合
+        [UIView animateWithDuration:0.5f
+                              delay:0.5f
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+
+                             //アニメーションで変化させたい値を設定する（最終的に変更したい値）
+                             CGRect flt_navi = _basic_navigationView.frame;
+                             flt_navi.origin.y = 20;
+                             _basic_navigationView.frame = flt_navi;
+
+                         } completion:^(BOOL finished){
+                             
+                             //完了時のコールバック
+                             
+                         }];
+    }
+}
+
+- (void)setHidden_BasicNavigation:(BOOL)isEnable {
 
     _basic_navigationView.hidden = isEnable;
 
@@ -140,54 +192,6 @@
         flt_contentView.size.height = flt_contentView.size.height - _basic_navigationView.frame.size.height;
         _contentView.frame = flt_contentView;
     }
-}
-
-- (void)open_TopNavigation {
-
-    [UIView animateWithDuration:0.5f
-                          delay:0.5f
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
-
-                         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
-                         CGRect flt_navi = _basic_navigationView.frame;
-                         flt_navi.origin.y = 20;
-                         _basic_navigationView.frame = flt_navi;
-
-                     } completion:^(BOOL finished){
-
-                         //完了時のコールバック
-
-                     }];
-}
-
-- (void)close_TopNavigation {
-
-    [UIView animateWithDuration:0.5f
-                          delay:0.5f
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
-
-                         //アニメーションで変化させたい値を設定する（最終的に変更したい値）
-                         CGRect flt_navi = _basic_navigationView.frame;
-                         flt_navi.origin.y = - FRAME_HEIGHT;
-                         _basic_navigationView.frame = flt_navi;
-
-                     } completion:^(BOOL finished){
-                         
-                         //完了時のコールバック
-                         
-                     }];
-}
-
--(void)setNavigationLogo:(UIImage*)image {
-
-    [_basic_navigationIcon setImage:image];
-}
-
-- (void)didReceiveMemoryWarning {
-
-    [super didReceiveMemoryWarning];
 }
 
 @end

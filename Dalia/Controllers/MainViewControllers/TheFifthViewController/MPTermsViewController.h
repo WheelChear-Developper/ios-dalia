@@ -10,8 +10,12 @@
 #import "ManagerDownload.h"
 #import "MPConfigObject.h"
 
-@interface MPTermsViewController : MPBaseViewController<ManagerDownloadDelegate>
+@interface MPTermsViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate>
 {
+    __weak IBOutlet UIScrollView* _scr_rootview;
+    __weak IBOutlet UIView* _scr_inView;
+    CGPoint _scrollBeginingPoint;
+    
     IBOutlet UITextView *termContent;
     NSArray *listCompany;
 }

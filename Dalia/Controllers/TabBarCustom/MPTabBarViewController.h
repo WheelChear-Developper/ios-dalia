@@ -35,14 +35,14 @@
 + (MPTabBarViewController*) sharedInstance;
 - (void)setUpTabBar;
 - (void)selectTab:(long)tabID;
-- (void)fadeInTab:(BOOL)isEnable;
-- (void)tabHidden:(BOOL)isEnable;
+- (void)setFadeOut_Tab:(BOOL)isEnable;
+- (void)setHidden_Tab:(BOOL)isEnable;
 - (void)setTabNotificationHidden:(BOOL)isEnable;
 - (void)setDisableHomeButton:(BOOL)isEnable;
 
 - (void)setCustomNavigaion;
-- (void)setCustomNavigationLogo:(UIImage*)image;
-- (void)setCustomNavigationHiden:(BOOL)isEnable;
-- (void)custom_TopNavigationHidden:(BOOL)isEnable;
+- (void)setImage_CustomNavigation:(UIImage*)image;
+- (void)setFadeOut_CustomNavigation:(BOOL)isEnable;
+- (void)setHidden_CustomNavigation:(BOOL)isEnable;
 
 @end
