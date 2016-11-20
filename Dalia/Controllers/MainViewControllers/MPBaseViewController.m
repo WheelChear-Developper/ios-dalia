@@ -46,6 +46,11 @@
     [self setUpView];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+
+    [super viewWillAppear:animated];
+}
+
 - (void)setUpView {
 
     //ステータスバー表示設定

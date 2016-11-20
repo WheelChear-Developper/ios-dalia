@@ -102,8 +102,6 @@
 -(void)viewDidLayoutSubviews {
 
     [super viewDidLayoutSubviews];
-
-    [self resizeTable];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -164,12 +162,12 @@
 
     if(tableView == _RecommendMenuList_tableView){
 
-        return list_RecommendMenu.count;
+        return _list_RecommendMenu.count;
     }
 
     if(tableView == _WhatsNew_tableView){
 
-        return list_news.count;
+        return _list_news.count;
     }
 
     return 0;
@@ -219,7 +217,7 @@
             cell = [nib objectAtIndex:0];
         }
 
-        [cell setData:[list_RecommendMenu objectAtIndex:indexPath.row]];
+        [cell setData:[_list_RecommendMenu objectAtIndex:indexPath.row]];
         return cell;
     }
 
@@ -282,7 +280,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return list_RecommendItem.count;
+    return _list_RecommendItem.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -297,7 +295,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Clicked %d-%d",indexPath.section,indexPath.row);
+    NSLog(@"Clicked %ld-%ld",indexPath.section,indexPath.row);
 }
 
 - (void)resizeTable {
@@ -322,7 +320,6 @@
                MAX(_RecommendMenuList_tableView.contentSize.height,
                    _RecommendMenuList_tableView.bounds.size.height));
 
-    //エリアテーブル位置設定
     _WhatsNew_tableView.translatesAutoresizingMaskIntoConstraints = YES;
     _WhatsNew_tableView.frame = CGRectMake(_WhatsNew_tableView.frame.origin.x, _WhatsNew_tableView.frame.origin.y, _WhatsNew_tableView.frame.size.width, 0);
     _WhatsNew_tableView.frame =
@@ -344,24 +341,24 @@
             MPMenuTopinfoObject* listObject = [param.listData objectAtIndex:0];
 
             NSMutableArray* obj_item = listObject.recommend_item;
-            list_RecommendItem = [[NSMutableArray alloc] init];
+            _list_RecommendItem = [[NSMutableArray alloc] init];
             for (MPMenuRecommend_itemObject *obj in obj_item) {
 
-                [list_RecommendItem addObject:obj];
+                [_list_RecommendItem addObject:obj];
             }
 
             NSMutableArray* obj_menu = listObject.recommend_menu;
-            list_RecommendMenu = [[NSMutableArray alloc] init];
+            _list_RecommendMenu = [[NSMutableArray alloc] init];
             for (MPMenuRecommend_menuObject *obj in obj_menu) {
 
-                [list_RecommendMenu addObject:obj];
+                [_list_RecommendMenu addObject:obj];
             }
 
             NSMutableArray* obj_new = listObject.news;
-            list_news = [[NSMutableArray alloc] init];
+            _list_news = [[NSMutableArray alloc] init];
             for (MPMenuNewsObject *obj in obj_new) {
 
-                [list_news addObject:obj];
+                [_list_news addObject:obj];
             }
 /*
             if(list_RecommendItem.count == 0){
@@ -385,6 +382,8 @@
             [_item_collectionView reloadData];
             [_RecommendMenuList_tableView reloadData];
             [_WhatsNew_tableView reloadData];
+
+            [self resizeTable];
 
             //通知件数取得
             [[ManagerDownload sharedInstance] getDefaultNotification:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];

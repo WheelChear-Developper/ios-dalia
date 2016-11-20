@@ -57,9 +57,9 @@
     __weak IBOutlet UIView *view_news;
     __weak IBOutlet UITableView* _WhatsNew_tableView;
 
-    NSMutableArray* list_RecommendItem;
-    NSMutableArray* list_RecommendMenu;
-    NSMutableArray* list_news;
+    NSMutableArray* _list_RecommendItem;
+    NSMutableArray* _list_RecommendMenu;
+    NSMutableArray* _list_news;
 }
 
 - (IBAction)btn_block1:(id)sender;
