@@ -24,7 +24,6 @@
 //@property (strong, nonatomic) IBOutlet UIScrollView *baseView;
 @property (strong, nonatomic) IBOutlet UILabel *labelTransferCode;
 @property (strong, nonatomic) IBOutlet UITextField *activeTextFeild;
-@property (strong, nonatomic) IBOutlet UIView *inputView;
 @property (strong, nonatomic) IBOutlet UIButton *btnTransfer;
 @property (strong, nonatomic) IBOutlet UITextField *textTransferCode;
 

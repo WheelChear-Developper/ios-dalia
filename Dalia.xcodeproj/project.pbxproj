@@ -35,7 +35,6 @@
 		1037B8371DE036A5000D834C /* MPTheThirdSumMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1037B8361DE036A5000D834C /* MPTheThirdSumMenuViewController.xib */; };
 		1037B83B1DE05D06000D834C /* MPTheSubMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1037B8391DE05D06000D834C /* MPTheSubMenuCell.m */; };
 		1037B83E1DE05D4D000D834C /* MPTheSubMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1037B83D1DE05D4D000D834C /* MPTheSubMenuCell.xib */; };
-		1037B8421DE08F66000D834C /* MPFavoriteMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1037B8401DE08F66000D834C /* MPFavoriteMenuViewController.m */; };
 		1038EF8B1DDEF6B100134331 /* fifth_yajirushi.png in Resources */ = {isa = PBXBuildFile; fileRef = 1038EF8A1DDEF6B100134331 /* fifth_yajirushi.png */; };
 		1038EF8D1DDF1F8200134331 /* left_yajirushi.png in Resources */ = {isa = PBXBuildFile; fileRef = 1038EF8C1DDF1F8200134331 /* left_yajirushi.png */; };
 		1038EF921DDF2DF900134331 /* MPTransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1038EF911DDF2DF900134331 /* MPTransferViewController.m */; };
@@ -218,6 +217,8 @@
 		10E6B5F81DE2BD9F00BB0254 /* header_ttl_recommendmenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E6B5EC1DE2BD9F00BB0254 /* header_ttl_recommendmenu.png */; };
 		10E6B5F91DE2BD9F00BB0254 /* MPFavoriteMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10E6B5ED1DE2BD9F00BB0254 /* MPFavoriteMenuViewController.xib */; };
 		10E6B5FD1DE2BDB400BB0254 /* MPFavoriteMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6B5FC1DE2BDB400BB0254 /* MPFavoriteMenuViewController.m */; };
+		10E6B6001DE2BF5500BB0254 /* fifthView_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E6B5FE1DE2BF5500BB0254 /* fifthView_setting.png */; };
+		10E6B6011DE2BF5500BB0254 /* fifthView_btn_fukugen.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E6B5FF1DE2BF5500BB0254 /* fifthView_btn_fukugen.png */; };
 		272CCCBD1DCAEF12006BC4EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 272CCCBC1DCAEF12006BC4EB /* main.m */; };
 		272CCD801DCAF096006BC4EB /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 272CCCD51DCAF096006BC4EB /* Configuration.m */; };
 		272CCD811DCAF096006BC4EB /* DownloadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 272CCCD81DCAF096006BC4EB /* DownloadParam.m */; };
@@ -306,8 +307,6 @@
 		1037B8381DE05D06000D834C /* MPTheSubMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTheSubMenuCell.h; sourceTree = "<group>"; };
 		1037B8391DE05D06000D834C /* MPTheSubMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTheSubMenuCell.m; sourceTree = "<group>"; };
 		1037B83D1DE05D4D000D834C /* MPTheSubMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheSubMenuCell.xib; sourceTree = "<group>"; };
-		1037B8401DE08F66000D834C /* MPFavoriteMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFavoriteMenuViewController.m; sourceTree = "<group>"; };
-		1037B8411DE08F66000D834C /* MPFavoriteMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFavoriteMenuViewController.h; sourceTree = "<group>"; };
 		1038EF8A1DDEF6B100134331 /* fifth_yajirushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifth_yajirushi.png; sourceTree = "<group>"; };
 		1038EF8C1DDF1F8200134331 /* left_yajirushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_yajirushi.png; sourceTree = "<group>"; };
 		1038EF901DDF2DF900134331 /* MPTransferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTransferViewController.h; sourceTree = "<group>"; };
@@ -529,6 +528,8 @@
 		10E6B5ED1DE2BD9F00BB0254 /* MPFavoriteMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPFavoriteMenuViewController.xib; sourceTree = "<group>"; };
 		10E6B5FB1DE2BDB400BB0254 /* MPFavoriteMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFavoriteMenuViewController.h; sourceTree = "<group>"; };
 		10E6B5FC1DE2BDB400BB0254 /* MPFavoriteMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFavoriteMenuViewController.m; sourceTree = "<group>"; };
+		10E6B5FE1DE2BF5500BB0254 /* fifthView_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifthView_setting.png; sourceTree = "<group>"; };
+		10E6B5FF1DE2BF5500BB0254 /* fifthView_btn_fukugen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifthView_btn_fukugen.png; sourceTree = "<group>"; };
 		2679EFF44FD4A2F6F37890B4 /* libPods-Dalia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dalia.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		272CCCB81DCAEF12006BC4EB /* Dalia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dalia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		272CCCBC1DCAEF12006BC4EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -746,15 +747,6 @@
 			path = damy_data;
 			sourceTree = "<group>";
 		};
-		1037B83F1DE08F66000D834C /* FavoriteMenu */ = {
-			isa = PBXGroup;
-			children = (
-				1037B8411DE08F66000D834C /* MPFavoriteMenuViewController.h */,
-				1037B8401DE08F66000D834C /* MPFavoriteMenuViewController.m */,
-			);
-			path = FavoriteMenu;
-			sourceTree = "<group>";
-		};
 		10467E761DE01B9100C51AA3 /* TheThirdView */ = {
 			isa = PBXGroup;
 			children = (
@@ -888,7 +880,6 @@
 				106A31081DD7082A00C0C741 /* TheThirdViewController */,
 				106A310B1DD7082A00C0C741 /* TheFourthViewController */,
 				106A310E1DD7082A00C0C741 /* TheFifthViewController */,
-				1037B83F1DE08F66000D834C /* FavoriteMenu */,
 				106A30F91DD7082A00C0C741 /* SettingViewController */,
 			);
 			path = MainViewControllers;
@@ -1111,6 +1102,8 @@
 		10C4B6F51DD9DFEE00E26096 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				10E6B5FE1DE2BF5500BB0254 /* fifthView_setting.png */,
+				10E6B5FF1DE2BF5500BB0254 /* fifthView_btn_fukugen.png */,
 				1038EF8A1DDEF6B100134331 /* fifth_yajirushi.png */,
 			);
 			path = images;
@@ -1959,6 +1952,7 @@
 				103026F41DD1A36200F266D8 /* Images.xcassets in Resources */,
 				10C4B7951DD9DFEE00E26096 /* sidemenu_reserve@2x.png in Resources */,
 				10C4B7A51DD9DFEE00E26096 /* icon_blog_black.png in Resources */,
+				10E6B6001DE2BF5500BB0254 /* fifthView_setting.png in Resources */,
 				10C4B7701DD9DFEE00E26096 /* home_btn_point.png in Resources */,
 				10C4B78A1DD9DFEE00E26096 /* sidemenu_home.png in Resources */,
 				10C4B7B71DD9DFEE00E26096 /* footer_btn_menu_on.jpg in Resources */,
@@ -2060,6 +2054,7 @@
 				10C4B76A1DD9DFEE00E26096 /* MPTheFifthViewController.xib in Resources */,
 				1037B81A1DE032EB000D834C /* down_white_yajirushi.png in Resources */,
 				10C4B7C41DD9DFEE00E26096 /* backBottom@2x.png in Resources */,
+				10E6B6011DE2BF5500BB0254 /* fifthView_btn_fukugen.png in Resources */,
 				1037B82F1DE03419000D834C /* menu_perm.png in Resources */,
 				1069E2BD1DDE8FAE00FCC6D6 /* header_ttl_access.png in Resources */,
 				10C4B76F1DD9DFEE00E26096 /* home_btn_onlineshop_on.png in Resources */,
@@ -2183,7 +2178,6 @@
 				272CCD8B1DCAF096006BC4EB /* AFPropertyListRequestOperation.m in Sources */,
 				10DE079C1DD838810068C3A9 /* MPTopImageObject.m in Sources */,
 				10C4B8CE1DD9FC2200E26096 /* MPMenuNewsCell.m in Sources */,
-				1037B8421DE08F66000D834C /* MPFavoriteMenuViewController.m in Sources */,
 				106A31721DD7082A00C0C741 /* MPTheFourthViewController.m in Sources */,
 				106A31741DD7082A00C0C741 /* MPHomeViewController.m in Sources */,
 				106A316E1DD7082A00C0C741 /* TheUserInfoViewController.m in Sources */,

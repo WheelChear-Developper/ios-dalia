@@ -28,6 +28,9 @@
     
     //🔴contentView 高さ自動調整　幅自動調整
     [_contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+
+    //XIB表示のため、contentViewを非表示
+    [_contentView setHidden:YES];
     
     //タイトルのグラデーション
     CAGradientLayer *gradient = [CAGradientLayer layer];
@@ -38,18 +41,21 @@
                         (id)[UIColor colorWithRed:0.780 green:0.706 blue:0.576 alpha:1].CGColor
                         ];
     [self.view_title.layer addSublayer:gradient];
-    
-    //XIB表示のため、contentViewを非表示
-    [_contentView setHidden:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 
     //🔴navigation表示
     [self setHidden_BasicNavigation:NO];
-
-    //🔴バックアクション非表示
+    [self setImage_BasicNavigation:[UIImage imageNamed:@"header_ttl_setting.png"]];
     [self setHiddenBackButton:NO];
+
+    //🔴カスタムnavigation
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_CustomNavigation:YES];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setImage_CustomNavigation:nil];
+
+    //🔴タブの表示
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_Tab:NO];
 
     [super viewWillAppear:animated];
 

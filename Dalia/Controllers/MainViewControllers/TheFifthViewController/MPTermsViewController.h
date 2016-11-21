@@ -7,6 +7,7 @@
 //
 
 #import "MPBaseViewController.h"
+#import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
 #import "MPConfigObject.h"
 
