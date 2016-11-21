@@ -256,13 +256,17 @@
 
     if(tableView == _RecommendMenuList_tableView){
 
+        MPFavoriteInfoViewController *vc = [[MPFavoriteInfoViewController alloc] initWithNibName:@"MPFavoriteInfoViewController" bundle:nil];
+        vc.delegate = self;
+
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+
+    if(tableView == _WhatsNew_tableView){
+
+
 
     }
-/*
-    MPNewDetailViewController *newDetailVC = [[MPNewDetailViewController alloc] initWithNibName:@"MPNewDetailViewController" bundle:nil];
-    [newDetailVC setData:[self.listObject objectAtIndex:indexPath.row]];
-    [self.navigationController pushViewController:newDetailVC animated:YES];
-*/
  }
 
 #pragma mark - UICollectionView

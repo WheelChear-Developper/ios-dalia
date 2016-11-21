@@ -11,11 +11,12 @@
 #import "ManagerDownload.h"
 #import "MPMenuRecommendMenuCell.h"
 #import "MPMenuRecommend_menuObject.h"
+#import "MPFavoriteInfoViewController.h"
 
 @protocol MPFavoriteMenuViewControllerDelegate<NSObject>
 @end
 
-@interface MPFavoriteMenuViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate>
+@interface MPFavoriteMenuViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPFavoriteInfoViewControllerDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;

@@ -243,16 +243,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-/*
-    MPTheThirdSumMenuViewController *vc = [[MPTheThirdSumMenuViewController alloc] initWithNibName:@"MPTheThirdSumMenuViewController" bundle:nil];
+
+    MPFavoriteInfoViewController *vc = [[MPFavoriteInfoViewController alloc] initWithNibName:@"MPFavoriteInfoViewController" bundle:nil];
     vc.delegate = self;
 
-    vc.menuCount = indexPath.row;
-    vc.ary_infoImage = _ary_infoImage;
-    vc.dic_menu_data = [_dic_menu_data objectForKey:[NSString stringWithFormat:@"%d",indexPath.row]];
-    
     [self.navigationController pushViewController:vc animated:YES];
- */
 }
 
 - (void)resizeTable {
