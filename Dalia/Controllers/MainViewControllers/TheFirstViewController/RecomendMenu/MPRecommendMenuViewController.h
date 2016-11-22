@@ -9,8 +9,8 @@
 #import "MPBaseViewController.h"
 #import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
-#import "MPMenuRecommendMenuCell.h"
-#import "MPMenuRecommend_menuObject.h"
+#import "MPRecommendMenuCell.h"
+#import "MPRecommend_menuObject.h"
 #import "MPRecommendMenuInfoViewController.h"
 
 @protocol MPRecommendMenuViewControllerDelegate<NSObject>

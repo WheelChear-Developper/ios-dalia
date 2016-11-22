@@ -1,5 +1,5 @@
 //
-//  MPMenuNewsObject.h
+//  MPWhatNewsObject.h
 //  Misepuri
 //
 //  Created by 3SI-TUYENBQ on 11/27/13.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MPMenuNewsObject : NSObject
+@interface MPWhatNewsObject : NSObject
 
 @property (nonatomic,strong) NSString *id;
 @property (nonatomic,strong) NSString *title;

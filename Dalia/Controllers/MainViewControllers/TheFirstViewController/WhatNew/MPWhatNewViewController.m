@@ -1,17 +1,17 @@
 //
-//  MPRecommendMenuViewController.m
+//  MPWhatNewViewController.m
 //  Misepuri
 //
 //  Created by M.Amatani on 2016/11/02.
 //  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
-#import "MPRecommendMenuViewController.h"
+#import "MPWhatNewViewController.h"
 
-@interface MPRecommendMenuViewController ()
+@interface MPWhatNewViewController ()
 @end
 
-@implementation MPRecommendMenuViewController
+@implementation MPWhatNewViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     
@@ -33,21 +33,21 @@
     [_contentView setHidden:YES];
 
     //テーブル設定
-    _RecommendMenuList_tableView.scrollEnabled = false;
-    _RecommendMenuList_tableView.estimatedRowHeight = 100.0f;
-    _RecommendMenuList_tableView.rowHeight = UITableViewAutomaticDimension;
-    [_RecommendMenuList_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    _WhatNewsList_tableView.scrollEnabled = false;
+    _WhatNewsList_tableView.estimatedRowHeight = 100.0f;
+    _WhatNewsList_tableView.rowHeight = UITableViewAutomaticDimension;
+    [_WhatNewsList_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 
-    UINib *nib = [UINib nibWithNibName:@"MPMenuRecommendMenuCell" bundle:nil];
-    [_RecommendMenuList_tableView registerNib:nib forCellReuseIdentifier:@"menuRecommendMenuIdentifier"];
-    [_RecommendMenuList_tableView reloadData];
+    UINib *nib = [UINib nibWithNibName:@"MPWhatNewsCell" bundle:nil];
+    [_WhatNewsList_tableView registerNib:nib forCellReuseIdentifier:@"whatNewsIdentifier"];
+    [_WhatNewsList_tableView reloadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 
     //🔴標準navigation
     [self setHidden_BasicNavigation:NO];
-    [self setImage_BasicNavigation:[UIImage imageNamed:@"header_ttl_recommendmenu.png"]];
+    [self setImage_BasicNavigation:[UIImage imageNamed:@"header_ttl_whatsnew.png"]];
     [self setHiddenBackButton:NO];
 
     //🔴カスタムnavigation
@@ -60,72 +60,70 @@
     [super viewWillAppear:animated];
 
     //テーブル選択解除
-    [_RecommendMenuList_tableView deselectRowAtIndexPath:[_RecommendMenuList_tableView indexPathForSelectedRow] animated:YES];
+    [_WhatNewsList_tableView deselectRowAtIndexPath:[_WhatNewsList_tableView indexPathForSelectedRow] animated:YES];
 
-    list_RecommendMenu = [[NSMutableArray alloc] init];
-    MPRecommend_menuObject *dic_menuList1 = [[MPRecommend_menuObject alloc] init];
+    list_WhatNews = [[NSMutableArray alloc] init];
+    MPWhatNewsObject *dic_menuList1 = [[MPWhatNewsObject alloc] init];
     dic_menuList1.id = @"1";
-    dic_menuList1.title = @"イルミナカラー";
+    dic_menuList1.title = @"スプリングキャンペーン";
+    dic_menuList1.content = @"そろそろ春の気配がしてきましたね!!\n3月から春のキャンペーンを開催";
+    dic_menuList1.is_read = 1;
+    dic_menuList1.update_at = @"2017-02-20 00:00:00";
     dic_menuList1.image = @"";
-    dic_menuList1.content = @"ダメージゼロで実現。外国人風のやわらかで透明感とツヤのある髪色に...";
     dic_menuList1.thumbnail = @"";
-    dic_menuList1.updated_at = @"2016-11-18 10:19:33";
 
-    MPRecommend_menuObject *dic_menuList2 = [[MPRecommend_menuObject alloc] init];
+
+    MPWhatNewsObject *dic_menuList2 = [[MPWhatNewsObject alloc] init];
     dic_menuList2.id = @"2";
-    dic_menuList2.title = @"オーガニックヘッドスパ";
+    dic_menuList2.title = @"謹賀新年";
+    dic_menuList2.content = @"あけましておめでとうございます。昨年はご愛顧いただきありがとうござい";
+    dic_menuList2.is_read = 0;
+    dic_menuList2.update_at = @"2017-01-04 00:00:00";
     dic_menuList2.image = @"";
-    dic_menuList2.content = @"頭皮を健やかに髪を美しく、心を癒す、頑張っているあなたへのご褒美メニュー";
     dic_menuList2.thumbnail = @"";
-    dic_menuList2.updated_at = @"2016-11-18 10:19:33";
 
-    MPRecommend_menuObject *dic_menuList3 = [[MPRecommend_menuObject alloc] init];
+    MPWhatNewsObject *dic_menuList3 = [[MPWhatNewsObject alloc] init];
     dic_menuList3.id = @"3";
-    dic_menuList3.title = @"艶カラー";
+    dic_menuList3.title = @"カウントダウンキャンペーン";
+    dic_menuList3.content = @"早いもので今年もあと２ヶ月ですね。\n11月１日〜12月31日まで感謝を込";
+    dic_menuList3.is_read = 0;
+    dic_menuList3.update_at = @"2016-12-01 00:00:00";
     dic_menuList3.image = @"";
-    dic_menuList3.content = @"ダメージゼロで実現。外国人風のやわらかで透明感とツヤのある髪色に...";
     dic_menuList3.thumbnail = @"";
-    dic_menuList3.updated_at = @"2016-11-18 10:19:33";
 
-    MPRecommend_menuObject *dic_menuList4 = [[MPRecommend_menuObject alloc] init];
+    MPWhatNewsObject *dic_menuList4 = [[MPWhatNewsObject alloc] init];
     dic_menuList4.id = @"4";
-    dic_menuList4.title = @"炭酸シャンプー";
+    dic_menuList4.title = @"年末年始休業のお知らせ";
+    dic_menuList4.content = @"12月30日(金)〜１月3日(火)は年末年始のお休みとさせて頂きます。";
+    dic_menuList4.is_read = 0;
+    dic_menuList4.update_at = @"2016-11-05 00:00:00";
     dic_menuList4.image = @"";
-    dic_menuList4.content = @"ダメージゼロで実現。外国人風のやわらかで透明感とツヤのある髪色に...";
     dic_menuList4.thumbnail = @"";
-    dic_menuList4.updated_at = @"2016-11-18 10:19:33";
 
-    MPRecommend_menuObject *dic_menuList5 = [[MPRecommend_menuObject alloc] init];
+    MPWhatNewsObject *dic_menuList5 = [[MPWhatNewsObject alloc] init];
     dic_menuList5.id = @"5";
-    dic_menuList5.title = @"コスメカール";
+    dic_menuList5.title = @"11月の定休日のお知らせ";
+    dic_menuList5.content = @"11月の定休日のお知らせです。7日(月)・14日(月)・21日(月)・22日(火)・";
+    dic_menuList5.is_read = 0;
+    dic_menuList5.update_at = @"2016-11-01 00:00:00";
     dic_menuList5.image = @"";
-    dic_menuList5.content = @"ダメージゼロで実現。外国人風のやわらかで透明感とツヤのある髪色に...";
     dic_menuList5.thumbnail = @"";
-    dic_menuList5.updated_at = @"2016-11-18 10:19:33";
 
-    MPRecommend_menuObject *dic_menuList6 = [[MPRecommend_menuObject alloc] init];
+    MPWhatNewsObject *dic_menuList6 = [[MPWhatNewsObject alloc] init];
     dic_menuList6.id = @"6";
-    dic_menuList6.title = @"極上ムコタトリートメント";
+    dic_menuList6.title = @"インストールありがとうございます!";
+    dic_menuList6.content = @"このアプリではBEAUTY SALON(サロン名)の最新情報やアプリユーザー";
+    dic_menuList6.is_read = 0;
+    dic_menuList6.update_at = @"2016-11-01 00:00:00";
     dic_menuList6.image = @"";
-    dic_menuList6.content = @"ダメージゼロで実現。外国人風のやわらかで透明感とツヤのある髪色に...";
     dic_menuList6.thumbnail = @"";
-    dic_menuList6.updated_at = @"2016-11-18 10:19:33";
 
-    MPRecommend_menuObject *dic_menuList7 = [[MPRecommend_menuObject alloc] init];
-    dic_menuList7.id = @"7";
-    dic_menuList7.title = @"極上ムコタトリートメント";
-    dic_menuList7.image = @"";
-    dic_menuList7.content = @"ダメージゼロで実現。外国人風のやわらかで透明感とツヤのある髪色に...";
-    dic_menuList7.thumbnail = @"";
-    dic_menuList7.updated_at = @"2016-11-18 10:19:33";
-
-    [list_RecommendMenu addObject:dic_menuList1];
-    [list_RecommendMenu addObject:dic_menuList2];
-    [list_RecommendMenu addObject:dic_menuList3];
-    [list_RecommendMenu addObject:dic_menuList4];
-    [list_RecommendMenu addObject:dic_menuList5];
-    [list_RecommendMenu addObject:dic_menuList6];
-    [list_RecommendMenu addObject:dic_menuList7];
+    [list_WhatNews addObject:dic_menuList1];
+    [list_WhatNews addObject:dic_menuList2];
+    [list_WhatNews addObject:dic_menuList3];
+    [list_WhatNews addObject:dic_menuList4];
+    [list_WhatNews addObject:dic_menuList5];
+    [list_WhatNews addObject:dic_menuList6];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -219,7 +217,7 @@
 #pragma mark - UITableViewDelegate & DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-   return list_RecommendMenu.count;
+   return list_WhatNews.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -234,20 +232,20 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    MPRecommendMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:@"recommendMenuIdentifier"];
+    MPWhatNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"whatNewsIdentifier"];
     if(cell == nil){
 
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPRecommendMenuCell" owner:self options:nil];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"WhatNewsCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
 
-    [cell setData:[list_RecommendMenu objectAtIndex:indexPath.row]];
+    [cell setData:[list_WhatNews objectAtIndex:indexPath.row]];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    MPRecommendMenuInfoViewController *vc = [[MPRecommendMenuInfoViewController alloc] initWithNibName:@"MPRecommendMenuInfoViewController" bundle:nil];
+    MPWhatNewInfoViewController *vc = [[MPWhatNewInfoViewController alloc] initWithNibName:@"MPWhatNewInfoViewController" bundle:nil];
     vc.delegate = self;
 
     [self.navigationController pushViewController:vc animated:YES];
@@ -256,14 +254,14 @@
 - (void)resizeTable {
 
     //コレクション高さをセルの最大値へセット
-    _RecommendMenuList_tableView.translatesAutoresizingMaskIntoConstraints = YES;
-    _RecommendMenuList_tableView.frame = CGRectMake(_RecommendMenuList_tableView.frame.origin.x, _RecommendMenuList_tableView.frame.origin.y, _RecommendMenuList_tableView.frame.size.width, 0);
-    _RecommendMenuList_tableView.frame =
-    CGRectMake(_RecommendMenuList_tableView.frame.origin.x,
-               _RecommendMenuList_tableView.frame.origin.y,
-               _RecommendMenuList_tableView.contentSize.width,
-               MAX(_RecommendMenuList_tableView.contentSize.height,
-                   _RecommendMenuList_tableView.bounds.size.height));
+    _WhatNewsList_tableView.translatesAutoresizingMaskIntoConstraints = YES;
+    _WhatNewsList_tableView.frame = CGRectMake(_WhatNewsList_tableView.frame.origin.x, _WhatNewsList_tableView.frame.origin.y, _WhatNewsList_tableView.frame.size.width, 0);
+    _WhatNewsList_tableView.frame =
+    CGRectMake(_WhatNewsList_tableView.frame.origin.x,
+               _WhatNewsList_tableView.frame.origin.y,
+               _WhatNewsList_tableView.contentSize.width,
+               MAX(_WhatNewsList_tableView.contentSize.height,
+                   _WhatNewsList_tableView.bounds.size.height));
 }
 
 @end

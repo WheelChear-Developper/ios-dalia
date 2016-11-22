@@ -16,8 +16,8 @@
 #import "MPTopImageObject.h"
 #import "MPMenuTopinfoObject.h"
 #import "MPMenuRecommend_itemObject.h"
-#import "MPMenuRecommend_menuObject.h"
-#import "MPMenuNewsObject.h"
+#import "MPRecommend_menuObject.h"
+#import "MPWhatNewsObject.h"
 
 
 
@@ -1020,7 +1020,7 @@
 
         for (long i = 0; i < ary_recommend_menu.count; i ++) {
 
-            MPMenuRecommend_menuObject *menuObject = [[MPMenuRecommend_menuObject alloc] init];
+            MPRecommend_menuObject *menuObject = [[MPRecommend_menuObject alloc] init];
             menuObject.id = [Utility checkNULL:[[ary_recommend_menu objectAtIndex:i] objectForKey:@"id"]];
             menuObject.title = [Utility checkNULL:[[ary_recommend_menu objectAtIndex:i] objectForKey:@"title"]];
             menuObject.image = [Utility checkNULL:[[ary_recommend_menu objectAtIndex:i] objectForKey:@"image"]];
@@ -1032,7 +1032,7 @@
 
         for (long i = 0; i < ary_news.count; i ++) {
 
-            MPMenuNewsObject *newsObject = [[MPMenuNewsObject alloc] init];
+            MPWhatNewsObject *newsObject = [[MPWhatNewsObject alloc] init];
             newsObject.id = [Utility checkNULL:[[ary_news objectAtIndex:i] objectForKey:@"id"]];
             newsObject.title = [Utility checkNULL:[[ary_news objectAtIndex:i] objectForKey:@"title"]];
             newsObject.content = [Utility checkNULL:[[ary_news objectAtIndex:i] objectForKey:@"content"]];

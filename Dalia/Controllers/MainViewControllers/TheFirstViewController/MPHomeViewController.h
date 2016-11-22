@@ -18,17 +18,20 @@
 #import "TheUserInfoViewController.h"
 #import "MPWebViewController.h"
 #import "MPMenuTopinfoObject.h"
-#import "MPMenuRecommend_menuObject.h"
+#import "MPRecommend_menuObject.h"
 #import "MPMenuRecommend_itemObject.h"
-#import "MPMenuNewsObject.h"
-#import "MPMenuRecommendMenuCell.h"
-#import "MPMenuNewsCell.h"
+#import "MPWhatNewsObject.h"
+#import "MPRecommendMenuCell.h"
+#import "MPWhatNewsCell.h"
 #import "MPApnsObject.h"
 
 #import "MPRecommendMenuViewController.h"
 #import "MPRecommendMenuInfoViewController.h"
 
-@interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, TheUserInfoViewControllerDelegate ,UICollectionViewDataSource, UICollectionViewDelegate, MPRecommendMenuViewControllerDelegate ,MPRecommendMenuInfoViewControllerDelegate>
+#import "MPWhatNewViewController.h"
+#import "MPWhatNewInfoViewController.h"
+
+@interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, TheUserInfoViewControllerDelegate ,UICollectionViewDataSource, UICollectionViewDelegate, MPRecommendMenuViewControllerDelegate ,MPRecommendMenuInfoViewControllerDelegate, MPWhatNewViewControllerDelegate, MPWhatNewInfoViewControllerDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;

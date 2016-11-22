@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPWhatNewViewController">
+            <connections>
+                <outlet property="_WhatNewsList_tableView" destination="ypu-ZK-n1I" id="fdN-UU-Zra"/>
+                <outlet property="_scr_inView" destination="yLB-vt-V4q" id="26K-za-qvt"/>
+                <outlet property="_scr_rootview" destination="mCx-wF-6NC" id="ZdZ-1K-lnF"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCx-wF-6NC">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLB-vt-V4q">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ypu-ZK-n1I">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="600" id="DLK-F9-8BL"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="uvH-5x-rtE"/>
+                                        <outlet property="delegate" destination="-1" id="DhB-12-yJj"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="ypu-ZK-n1I" secondAttribute="trailing" id="7eT-cN-mA7"/>
+                                <constraint firstAttribute="bottom" secondItem="ypu-ZK-n1I" secondAttribute="bottom" id="Jbt-3I-awb"/>
+                                <constraint firstItem="ypu-ZK-n1I" firstAttribute="leading" secondItem="yLB-vt-V4q" secondAttribute="leading" id="LRD-7R-Sa6"/>
+                                <constraint firstItem="ypu-ZK-n1I" firstAttribute="top" secondItem="yLB-vt-V4q" secondAttribute="top" id="Xkv-Mt-WVE"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="yLB-vt-V4q" secondAttribute="trailing" id="L3h-3K-noT"/>
+                        <constraint firstItem="yLB-vt-V4q" firstAttribute="top" secondItem="mCx-wF-6NC" secondAttribute="top" id="MyN-RD-wjD"/>
+                        <constraint firstItem="yLB-vt-V4q" firstAttribute="leading" secondItem="mCx-wF-6NC" secondAttribute="leading" id="bHw-sY-jlE"/>
+                        <constraint firstItem="yLB-vt-V4q" firstAttribute="centerX" secondItem="mCx-wF-6NC" secondAttribute="centerX" id="kR4-Gs-hnb"/>
+                        <constraint firstAttribute="bottom" secondItem="yLB-vt-V4q" secondAttribute="bottom" id="w6X-Nl-E1f"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="NVo-KP-XlU"/>
+                    </connections>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="mCx-wF-6NC" secondAttribute="bottom" id="NuI-Yw-juv"/>
+                <constraint firstAttribute="trailing" secondItem="mCx-wF-6NC" secondAttribute="trailing" id="dwT-2Z-sVH"/>
+                <constraint firstItem="mCx-wF-6NC" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="hhK-Z7-OpA"/>
+                <constraint firstItem="mCx-wF-6NC" firstAttribute="top" secondItem="1" secondAttribute="top" id="xoX-J3-05F"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="519" y="27"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

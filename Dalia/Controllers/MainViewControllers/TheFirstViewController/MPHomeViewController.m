@@ -219,10 +219,10 @@
 
     if(tableView == _RecommendMenuList_tableView){
 
-        MPMenuRecommendMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:@"menuRecommendMenuIdentifier"];
+        MPRecommendMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:@"recommendMenuIdentifier"];
         if(cell == nil){
 
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPMenuRecommendMenuCell" owner:self options:nil];
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPRecommendMenuCell" owner:self options:nil];
             cell = [nib objectAtIndex:0];
         }
 
@@ -232,10 +232,10 @@
 
     if(tableView == _WhatsNew_tableView){
 
-        MPMenuNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"homeNewsIdentifier"];
+        MPWhatNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"whatNewsIdentifier"];
         if(cell == nil){
 
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPMenuNewsCell" owner:self options:nil];
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPWhatNewsCell" owner:self options:nil];
             cell = [nib objectAtIndex:0];
         }
 
@@ -264,8 +264,10 @@
 
     if(tableView == _WhatsNew_tableView){
 
+        MPWhatNewInfoViewController *vc = [[MPWhatNewInfoViewController alloc] initWithNibName:@"MPWhatNewInfoViewController" bundle:nil];
+        vc.delegate = self;
 
-
+        [self.navigationController pushViewController:vc animated:YES];
     }
  }
 
@@ -362,14 +364,14 @@
 
             NSMutableArray* obj_menu = listObject.recommend_menu;
             _list_RecommendMenu = [[NSMutableArray alloc] init];
-            for (MPMenuRecommend_menuObject *obj in obj_menu) {
+            for (MPRecommend_menuObject *obj in obj_menu) {
 
                 [_list_RecommendMenu addObject:obj];
             }
 
             NSMutableArray* obj_new = listObject.news;
             _list_news = [[NSMutableArray alloc] init];
-            for (MPMenuNewsObject *obj in obj_new) {
+            for (MPWhatNewsObject *obj in obj_new) {
 
                 [_list_news addObject:obj];
             }
@@ -509,6 +511,11 @@
 }
 
 - (IBAction)btn_WhatsNew_More:(id)sender {
+
+    MPWhatNewViewController *vc = [[MPWhatNewViewController alloc] initWithNibName:@"MPWhatNewViewController" bundle:nil];
+    vc.delegate = self;
+
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)btn_Recomend1:(id)sender {
