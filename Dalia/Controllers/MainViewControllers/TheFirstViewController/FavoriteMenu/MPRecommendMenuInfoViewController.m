@@ -1,18 +1,18 @@
 //
-//  MPFavoriteInfoViewController.m
+//  MPRecommendMenuInfoViewController.m
 //  Dalia
 //
 //  Created by M.Amatani on 2016/11/21.
 //  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
-#import "MPFavoriteInfoViewController.h"
+#import "MPRecommendMenuInfoViewController.h"
 
-@interface MPFavoriteInfoViewController ()
+@interface MPRecommendMenuInfoViewController ()
 
 @end
 
-@implementation MPFavoriteInfoViewController
+@implementation MPRecommendMenuInfoViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 

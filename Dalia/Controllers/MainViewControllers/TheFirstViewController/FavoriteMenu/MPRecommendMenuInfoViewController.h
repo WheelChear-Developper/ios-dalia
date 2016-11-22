@@ -1,5 +1,5 @@
 //
-//  MPFavoriteInfoViewController.h
+//  MPRecommendMenuInfoViewController.h
 //  Dalia
 //
 //  Created by M.Amatani on 2016/11/21.
@@ -10,10 +10,10 @@
 #import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
 
-@protocol MPFavoriteInfoViewControllerDelegate<NSObject>
+@protocol MPRecommendMenuInfoViewControllerDelegate<NSObject>
 @end
 
-@interface MPFavoriteInfoViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate>
+@interface MPRecommendMenuInfoViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;
@@ -23,7 +23,7 @@
     __weak IBOutlet UIImageView *_img_photo;
     __weak IBOutlet UIView *_lbl_content;
 }
-@property (nonatomic, assign) id<MPFavoriteInfoViewControllerDelegate> delegate;
+@property (nonatomic, assign) id<MPRecommendMenuInfoViewControllerDelegate> delegate;
 
 - (IBAction)btn_hart:(id)sender;
 - (IBAction)btn_facebook:(id)sender;

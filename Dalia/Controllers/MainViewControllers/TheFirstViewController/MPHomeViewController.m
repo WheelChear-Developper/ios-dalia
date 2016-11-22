@@ -256,7 +256,7 @@
 
     if(tableView == _RecommendMenuList_tableView){
 
-        MPFavoriteInfoViewController *vc = [[MPFavoriteInfoViewController alloc] initWithNibName:@"MPFavoriteInfoViewController" bundle:nil];
+        MPRecommendMenuInfoViewController *vc = [[MPRecommendMenuInfoViewController alloc] initWithNibName:@"MPRecommendMenuInfoViewController" bundle:nil];
         vc.delegate = self;
 
         [self.navigationController pushViewController:vc animated:YES];
@@ -502,7 +502,7 @@
 
 - (IBAction)btn_Recommend_Menu_More:(id)sender {
 
-    MPFavoriteMenuViewController *vc = [[MPFavoriteMenuViewController alloc] initWithNibName:@"MPFavoriteMenuViewController" bundle:nil];
+    MPRecommendMenuViewController *vc = [[MPRecommendMenuViewController alloc] initWithNibName:@"MPRecommendMenuViewController" bundle:nil];
     vc.delegate = self;
 
     [self.navigationController pushViewController:vc animated:YES];

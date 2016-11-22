@@ -232,12 +232,12 @@
 		10DE079B1DD838810068C3A9 /* MPNewHomeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DE07961DD838810068C3A9 /* MPNewHomeObject.m */; };
 		10DE079C1DD838810068C3A9 /* MPTopImageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DE07991DD838810068C3A9 /* MPTopImageObject.m */; };
 		10E6B5F81DE2BD9F00BB0254 /* header_ttl_recommendmenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E6B5EC1DE2BD9F00BB0254 /* header_ttl_recommendmenu.png */; };
-		10E6B5F91DE2BD9F00BB0254 /* MPFavoriteMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10E6B5ED1DE2BD9F00BB0254 /* MPFavoriteMenuViewController.xib */; };
-		10E6B5FD1DE2BDB400BB0254 /* MPFavoriteMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6B5FC1DE2BDB400BB0254 /* MPFavoriteMenuViewController.m */; };
+		10E6B5F91DE2BD9F00BB0254 /* MPRecommendMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10E6B5ED1DE2BD9F00BB0254 /* MPRecommendMenuViewController.xib */; };
+		10E6B5FD1DE2BDB400BB0254 /* MPRecommendMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6B5FC1DE2BDB400BB0254 /* MPRecommendMenuViewController.m */; };
 		10E6B6001DE2BF5500BB0254 /* fifthView_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E6B5FE1DE2BF5500BB0254 /* fifthView_setting.png */; };
 		10E6B6011DE2BF5500BB0254 /* fifthView_btn_fukugen.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E6B5FF1DE2BF5500BB0254 /* fifthView_btn_fukugen.png */; };
-		10E6B6051DE2CDF600BB0254 /* MPFavoriteInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6B6031DE2CDF600BB0254 /* MPFavoriteInfoViewController.m */; };
-		10E6B6081DE2CE4400BB0254 /* MPFavoriteInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10E6B6071DE2CE4400BB0254 /* MPFavoriteInfoViewController.xib */; };
+		10E6B6051DE2CDF600BB0254 /* MPRecommendMenuInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6B6031DE2CDF600BB0254 /* MPRecommendMenuInfoViewController.m */; };
+		10E6B6081DE2CE4400BB0254 /* MPRecommendMenuInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10E6B6071DE2CE4400BB0254 /* MPRecommendMenuInfoViewController.xib */; };
 		10E6B61D1DE2D59900BB0254 /* down_white_yajirushi.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E6B6111DE2D59900BB0254 /* down_white_yajirushi.png */; };
 		10E6B61E1DE2D59900BB0254 /* down_white_yajirushi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E6B6121DE2D59900BB0254 /* down_white_yajirushi@2x.png */; };
 		10E6B61F1DE2D59900BB0254 /* other_icon_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E6B6131DE2D59900BB0254 /* other_icon_facebook.png */; };
@@ -574,14 +574,14 @@
 		10DE07981DD838810068C3A9 /* MPTopImageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTopImageObject.h; sourceTree = "<group>"; };
 		10DE07991DD838810068C3A9 /* MPTopImageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTopImageObject.m; sourceTree = "<group>"; };
 		10E6B5EC1DE2BD9F00BB0254 /* header_ttl_recommendmenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_ttl_recommendmenu.png; sourceTree = "<group>"; };
-		10E6B5ED1DE2BD9F00BB0254 /* MPFavoriteMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPFavoriteMenuViewController.xib; sourceTree = "<group>"; };
-		10E6B5FB1DE2BDB400BB0254 /* MPFavoriteMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFavoriteMenuViewController.h; sourceTree = "<group>"; };
-		10E6B5FC1DE2BDB400BB0254 /* MPFavoriteMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFavoriteMenuViewController.m; sourceTree = "<group>"; };
+		10E6B5ED1DE2BD9F00BB0254 /* MPRecommendMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPRecommendMenuViewController.xib; sourceTree = "<group>"; };
+		10E6B5FB1DE2BDB400BB0254 /* MPRecommendMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPRecommendMenuViewController.h; sourceTree = "<group>"; };
+		10E6B5FC1DE2BDB400BB0254 /* MPRecommendMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPRecommendMenuViewController.m; sourceTree = "<group>"; };
 		10E6B5FE1DE2BF5500BB0254 /* fifthView_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifthView_setting.png; sourceTree = "<group>"; };
 		10E6B5FF1DE2BF5500BB0254 /* fifthView_btn_fukugen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifthView_btn_fukugen.png; sourceTree = "<group>"; };
-		10E6B6021DE2CDF600BB0254 /* MPFavoriteInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFavoriteInfoViewController.h; sourceTree = "<group>"; };
-		10E6B6031DE2CDF600BB0254 /* MPFavoriteInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFavoriteInfoViewController.m; sourceTree = "<group>"; };
-		10E6B6071DE2CE4400BB0254 /* MPFavoriteInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPFavoriteInfoViewController.xib; sourceTree = "<group>"; };
+		10E6B6021DE2CDF600BB0254 /* MPRecommendMenuInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPRecommendMenuInfoViewController.h; sourceTree = "<group>"; };
+		10E6B6031DE2CDF600BB0254 /* MPRecommendMenuInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPRecommendMenuInfoViewController.m; sourceTree = "<group>"; };
+		10E6B6071DE2CE4400BB0254 /* MPRecommendMenuInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPRecommendMenuInfoViewController.xib; sourceTree = "<group>"; };
 		10E6B6111DE2D59900BB0254 /* down_white_yajirushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_white_yajirushi.png; sourceTree = "<group>"; };
 		10E6B6121DE2D59900BB0254 /* down_white_yajirushi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down_white_yajirushi@2x.png"; sourceTree = "<group>"; };
 		10E6B6131DE2D59900BB0254 /* other_icon_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = other_icon_facebook.png; sourceTree = "<group>"; };
@@ -1563,8 +1563,8 @@
 			isa = PBXGroup;
 			children = (
 				10E6B5E01DE2BD9F00BB0254 /* image */,
-				10E6B5ED1DE2BD9F00BB0254 /* MPFavoriteMenuViewController.xib */,
-				10E6B6071DE2CE4400BB0254 /* MPFavoriteInfoViewController.xib */,
+				10E6B5ED1DE2BD9F00BB0254 /* MPRecommendMenuViewController.xib */,
+				10E6B6071DE2CE4400BB0254 /* MPRecommendMenuInfoViewController.xib */,
 			);
 			path = FavoriteMenu;
 			sourceTree = "<group>";
@@ -1580,10 +1580,10 @@
 		10E6B5FA1DE2BDB400BB0254 /* FavoriteMenu */ = {
 			isa = PBXGroup;
 			children = (
-				10E6B5FB1DE2BDB400BB0254 /* MPFavoriteMenuViewController.h */,
-				10E6B5FC1DE2BDB400BB0254 /* MPFavoriteMenuViewController.m */,
-				10E6B6021DE2CDF600BB0254 /* MPFavoriteInfoViewController.h */,
-				10E6B6031DE2CDF600BB0254 /* MPFavoriteInfoViewController.m */,
+				10E6B5FB1DE2BDB400BB0254 /* MPRecommendMenuViewController.h */,
+				10E6B5FC1DE2BDB400BB0254 /* MPRecommendMenuViewController.m */,
+				10E6B6021DE2CDF600BB0254 /* MPRecommendMenuInfoViewController.h */,
+				10E6B6031DE2CDF600BB0254 /* MPRecommendMenuInfoViewController.m */,
 			);
 			path = FavoriteMenu;
 			sourceTree = "<group>";
@@ -2087,7 +2087,7 @@
 				10C4B7981DD9DFEE00E26096 /* sidemenu_whatsnew.png in Resources */,
 				10C4B76B1DD9DFEE00E26096 /* MPHomeViewController.xib in Resources */,
 				1061C6AA1DDDD9B7000CEAA2 /* webview_btn_update.png in Resources */,
-				10E6B5F91DE2BD9F00BB0254 /* MPFavoriteMenuViewController.xib in Resources */,
+				10E6B5F91DE2BD9F00BB0254 /* MPRecommendMenuViewController.xib in Resources */,
 				10C4B7851DD9DFEE00E26096 /* navigation_back@2x.png in Resources */,
 				10C4B7CC1DD9ECFF00E26096 /* UserInfo_btn_setting_touroku@2x.png in Resources */,
 				10C4B8E31DDA03FC00E26096 /* MPWebViewController.xib in Resources */,
@@ -2189,7 +2189,7 @@
 				1038EF961DDF2E6500134331 /* MPTransferViewController.xib in Resources */,
 				10C4B78F1DD9DFEE00E26096 /* sidemenu_menu@2x.png in Resources */,
 				10C4B7A61DD9DFEE00E26096 /* icon_facebook_black.png in Resources */,
-				10E6B6081DE2CE4400BB0254 /* MPFavoriteInfoViewController.xib in Resources */,
+				10E6B6081DE2CE4400BB0254 /* MPRecommendMenuInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2257,7 +2257,7 @@
 				272CCD9B1DCAF096006BC4EB /* BaseEntity.m in Sources */,
 				10DE079B1DD838810068C3A9 /* MPNewHomeObject.m in Sources */,
 				272CCDA11DCAF096006BC4EB /* FMDatabaseAdditions.m in Sources */,
-				10E6B6051DE2CDF600BB0254 /* MPFavoriteInfoViewController.m in Sources */,
+				10E6B6051DE2CDF600BB0254 /* MPRecommendMenuInfoViewController.m in Sources */,
 				1002215D1DE32FB100169B93 /* ShopListViewCell.m in Sources */,
 				1037B8341DE0365C000D834C /* MPTheThirdSumMenuViewController.m in Sources */,
 				272CCD951DCAF096006BC4EB /* BaseDAO.m in Sources */,
@@ -2268,7 +2268,7 @@
 				106130611DD2D10B00B789B5 /* MPShopObject.m in Sources */,
 				272CCD981DCAF096006BC4EB /* MPHospitalDAO.m in Sources */,
 				10C4B9141DDAC3F200E26096 /* MPMenuTopinfoObject.m in Sources */,
-				10E6B5FD1DE2BDB400BB0254 /* MPFavoriteMenuViewController.m in Sources */,
+				10E6B5FD1DE2BDB400BB0254 /* MPRecommendMenuViewController.m in Sources */,
 				272CCDA91DCAF096006BC4EB /* ProgressView.m in Sources */,
 				272CCD971DCAF096006BC4EB /* MPGymDAO.m in Sources */,
 				1061C6A11DDDB08B000CEAA2 /* MPCouponObject.m in Sources */,

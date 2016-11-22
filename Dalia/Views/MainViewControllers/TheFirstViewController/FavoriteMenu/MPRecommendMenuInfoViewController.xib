@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPFavoriteInfoViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPRecommendMenuInfoViewController">
             <connections>
                 <outlet property="_img_photo" destination="NVt-Tk-mf5" id="qpT-Q6-9DA"/>
                 <outlet property="_lbl_content" destination="nDT-IB-pqZ" id="zXS-qD-bzE"/>

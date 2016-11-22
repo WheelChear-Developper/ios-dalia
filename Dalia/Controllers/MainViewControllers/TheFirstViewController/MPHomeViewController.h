@@ -25,10 +25,10 @@
 #import "MPMenuNewsCell.h"
 #import "MPApnsObject.h"
 
-#import "MPFavoriteMenuViewController.h"
-#import "MPFavoriteInfoViewController.h"
+#import "MPRecommendMenuViewController.h"
+#import "MPRecommendMenuInfoViewController.h"
 
-@interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, TheUserInfoViewControllerDelegate ,UICollectionViewDataSource, UICollectionViewDelegate, MPFavoriteMenuViewControllerDelegate ,MPFavoriteInfoViewControllerDelegate>
+@interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, TheUserInfoViewControllerDelegate ,UICollectionViewDataSource, UICollectionViewDelegate, MPRecommendMenuViewControllerDelegate ,MPRecommendMenuInfoViewControllerDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;

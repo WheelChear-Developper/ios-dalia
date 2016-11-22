@@ -1,23 +1,23 @@
 //
-//  MPFavoriteMenuViewController.m
+//  MPRecommendMenuViewController.m
 //  Misepuri
 //
 //  Created by M.Amatani on 2016/11/02.
 //  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
-#import "MPFavoriteMenuViewController.h"
+#import "MPRecommendMenuViewController.h"
 
-@interface MPFavoriteMenuViewController ()
+@interface MPRecommendMenuViewController ()
 @end
 
-@implementation MPFavoriteMenuViewController
+@implementation MPRecommendMenuViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        // Custom initialization　
     }
     return self;
 }
@@ -244,7 +244,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    MPFavoriteInfoViewController *vc = [[MPFavoriteInfoViewController alloc] initWithNibName:@"MPFavoriteInfoViewController" bundle:nil];
+    MPRecommendMenuInfoViewController *vc = [[MPRecommendMenuInfoViewController alloc] initWithNibName:@"MPRecommendMenuInfoViewController" bundle:nil];
     vc.delegate = self;
 
     [self.navigationController pushViewController:vc animated:YES];

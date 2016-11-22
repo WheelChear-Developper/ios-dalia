@@ -1,5 +1,5 @@
 //
-//  MPFavoriteMenuViewController.h
+//  MPRecommendMenuViewController.h
 //  Misepuri
 //
 //  Created by M.Amatani on 2016/11/02.
@@ -11,12 +11,12 @@
 #import "ManagerDownload.h"
 #import "MPMenuRecommendMenuCell.h"
 #import "MPMenuRecommend_menuObject.h"
-#import "MPFavoriteInfoViewController.h"
+#import "MPRecommendMenuInfoViewController.h"
 
-@protocol MPFavoriteMenuViewControllerDelegate<NSObject>
+@protocol MPRecommendMenuViewControllerDelegate<NSObject>
 @end
 
-@interface MPFavoriteMenuViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPFavoriteInfoViewControllerDelegate>
+@interface MPRecommendMenuViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPRecommendMenuInfoViewControllerDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;
@@ -26,6 +26,6 @@
 
     NSMutableArray* list_RecommendMenu;
 }
-@property (nonatomic, assign) id<MPFavoriteMenuViewControllerDelegate> delegate;
+@property (nonatomic, assign) id<MPRecommendMenuViewControllerDelegate> delegate;
 
 @end
