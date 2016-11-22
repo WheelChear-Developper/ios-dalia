@@ -119,22 +119,32 @@
 		107957A81DDD5571008F35A6 /* MPTheSecond_SlideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107957A71DDD5571008F35A6 /* MPTheSecond_SlideView.xib */; };
 		107957AC1DDD9738008F35A6 /* new_badge.png in Resources */ = {isa = PBXBuildFile; fileRef = 107957AB1DDD9738008F35A6 /* new_badge.png */; };
 		107957AE1DDDA60A008F35A6 /* secondview_syousai.png in Resources */ = {isa = PBXBuildFile; fileRef = 107957AD1DDDA60A008F35A6 /* secondview_syousai.png */; };
+		107EA2231DE420CB00A4A8CD /* first_select_btn_haircatalog.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA20F1DE420CB00A4A8CD /* first_select_btn_haircatalog.png */; };
+		107EA2241DE420CB00A4A8CD /* first_select_btn_haircatalog@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA2101DE420CB00A4A8CD /* first_select_btn_haircatalog@2x.png */; };
+		107EA2251DE420CB00A4A8CD /* first_select_top_btn_karte.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA2111DE420CB00A4A8CD /* first_select_top_btn_karte.png */; };
+		107EA2261DE420CB00A4A8CD /* first_select_top_btn_karte@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA2121DE420CB00A4A8CD /* first_select_top_btn_karte@2x.png */; };
+		107EA2271DE420CB00A4A8CD /* first_select_top_btn_memberscard.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA2131DE420CB00A4A8CD /* first_select_top_btn_memberscard.png */; };
+		107EA2281DE420CB00A4A8CD /* first_select_top_btn_memberscard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA2141DE420CB00A4A8CD /* first_select_top_btn_memberscard@2x.png */; };
+		107EA2291DE420CB00A4A8CD /* first_select_top_btn_moviechannnel.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA2151DE420CB00A4A8CD /* first_select_top_btn_moviechannnel.png */; };
+		107EA22A1DE420CB00A4A8CD /* first_select_top_btn_moviechannnel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA2161DE420CB00A4A8CD /* first_select_top_btn_moviechannnel@2x.png */; };
+		107EA22B1DE420CB00A4A8CD /* first_select_top_btn_onlineshop.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA2171DE420CB00A4A8CD /* first_select_top_btn_onlineshop.png */; };
+		107EA22C1DE420CB00A4A8CD /* first_select_top_btn_onlineshop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA2181DE420CB00A4A8CD /* first_select_top_btn_onlineshop@2x.png */; };
+		107EA22D1DE420CB00A4A8CD /* first_select_top_btn_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA2191DE420CB00A4A8CD /* first_select_top_btn_point.png */; };
+		107EA22E1DE420CB00A4A8CD /* first_select_top_btn_point@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA21A1DE420CB00A4A8CD /* first_select_top_btn_point@2x.png */; };
+		107EA22F1DE420CB00A4A8CD /* first_select_top_btn_reserve.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA21B1DE420CB00A4A8CD /* first_select_top_btn_reserve.png */; };
+		107EA2301DE420CB00A4A8CD /* first_select_top_btn_reserve@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA21C1DE420CB00A4A8CD /* first_select_top_btn_reserve@2x.png */; };
+		107EA2311DE420CB00A4A8CD /* first_select_top_btn_staff.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA21D1DE420CB00A4A8CD /* first_select_top_btn_staff.png */; };
+		107EA2321DE420CB00A4A8CD /* first_select_top_btn_staff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA21E1DE420CB00A4A8CD /* first_select_top_btn_staff@2x.png */; };
+		107EA2331DE420CB00A4A8CD /* first_select_top_btn_stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA21F1DE420CB00A4A8CD /* first_select_top_btn_stamp.png */; };
+		107EA2341DE420CB00A4A8CD /* first_select_top_btn_stamp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA2201DE420CB00A4A8CD /* first_select_top_btn_stamp@2x.png */; };
+		107EA2351DE420CB00A4A8CD /* first_select_top_btn_whatsnew.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA2211DE420CB00A4A8CD /* first_select_top_btn_whatsnew.png */; };
+		107EA2361DE420CB00A4A8CD /* first_select_top_btn_whatsnew@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 107EA2221DE420CB00A4A8CD /* first_select_top_btn_whatsnew@2x.png */; };
 		10967BC61DDB5DFF004DA122 /* MPMenuListCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10967BC41DDB5DFF004DA122 /* MPMenuListCollectionCell.m */; };
 		10C4B7651DD9DFEE00E26096 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6EB1DD9DFEE00E26096 /* SettingViewController.xib */; };
 		10C4B7661DD9DFEE00E26096 /* TheUserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6ED1DD9DFEE00E26096 /* TheUserInfoViewController.xib */; };
 		10C4B7671DD9DFEE00E26096 /* UserSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6EE1DD9DFEE00E26096 /* UserSettingViewController.xib */; };
 		10C4B76A1DD9DFEE00E26096 /* MPTheFifthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6F41DD9DFEE00E26096 /* MPTheFifthViewController.xib */; };
 		10C4B76B1DD9DFEE00E26096 /* MPHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6F71DD9DFEE00E26096 /* MPHomeViewController.xib */; };
-		10C4B76C1DD9DFEE00E26096 /* home_btn_memberscard.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6F91DD9DFEE00E26096 /* home_btn_memberscard.png */; };
-		10C4B76D1DD9DFEE00E26096 /* home_btn_memberscard_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6FA1DD9DFEE00E26096 /* home_btn_memberscard_on.png */; };
-		10C4B76E1DD9DFEE00E26096 /* home_btn_onlineshop.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6FB1DD9DFEE00E26096 /* home_btn_onlineshop.png */; };
-		10C4B76F1DD9DFEE00E26096 /* home_btn_onlineshop_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6FC1DD9DFEE00E26096 /* home_btn_onlineshop_on.png */; };
-		10C4B7701DD9DFEE00E26096 /* home_btn_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6FD1DD9DFEE00E26096 /* home_btn_point.png */; };
-		10C4B7711DD9DFEE00E26096 /* home_btn_point_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6FE1DD9DFEE00E26096 /* home_btn_point_on.png */; };
-		10C4B7721DD9DFEE00E26096 /* home_btn_reserve.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B6FF1DD9DFEE00E26096 /* home_btn_reserve.png */; };
-		10C4B7731DD9DFEE00E26096 /* home_btn_reserve_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B7001DD9DFEE00E26096 /* home_btn_reserve_on.png */; };
-		10C4B7741DD9DFEE00E26096 /* home_btn_whatsnew.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B7011DD9DFEE00E26096 /* home_btn_whatsnew.png */; };
-		10C4B7751DD9DFEE00E26096 /* home_btn_whatsnew_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B7021DD9DFEE00E26096 /* home_btn_whatsnew_on.png */; };
 		10C4B7761DD9DFEE00E26096 /* home_more.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B7031DD9DFEE00E26096 /* home_more.png */; };
 		10C4B7771DD9DFEE00E26096 /* home_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B7041DD9DFEE00E26096 /* home_more@2x.png */; };
 		10C4B7781DD9DFEE00E26096 /* home_recommenditem.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C4B7051DD9DFEE00E26096 /* home_recommenditem.png */; };
@@ -438,6 +448,26 @@
 		107957A71DDD5571008F35A6 /* MPTheSecond_SlideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheSecond_SlideView.xib; sourceTree = "<group>"; };
 		107957AB1DDD9738008F35A6 /* new_badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_badge.png; sourceTree = "<group>"; };
 		107957AD1DDDA60A008F35A6 /* secondview_syousai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secondview_syousai.png; sourceTree = "<group>"; };
+		107EA20F1DE420CB00A4A8CD /* first_select_btn_haircatalog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first_select_btn_haircatalog.png; sourceTree = "<group>"; };
+		107EA2101DE420CB00A4A8CD /* first_select_btn_haircatalog@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_select_btn_haircatalog@2x.png"; sourceTree = "<group>"; };
+		107EA2111DE420CB00A4A8CD /* first_select_top_btn_karte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first_select_top_btn_karte.png; sourceTree = "<group>"; };
+		107EA2121DE420CB00A4A8CD /* first_select_top_btn_karte@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_select_top_btn_karte@2x.png"; sourceTree = "<group>"; };
+		107EA2131DE420CB00A4A8CD /* first_select_top_btn_memberscard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first_select_top_btn_memberscard.png; sourceTree = "<group>"; };
+		107EA2141DE420CB00A4A8CD /* first_select_top_btn_memberscard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_select_top_btn_memberscard@2x.png"; sourceTree = "<group>"; };
+		107EA2151DE420CB00A4A8CD /* first_select_top_btn_moviechannnel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first_select_top_btn_moviechannnel.png; sourceTree = "<group>"; };
+		107EA2161DE420CB00A4A8CD /* first_select_top_btn_moviechannnel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_select_top_btn_moviechannnel@2x.png"; sourceTree = "<group>"; };
+		107EA2171DE420CB00A4A8CD /* first_select_top_btn_onlineshop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first_select_top_btn_onlineshop.png; sourceTree = "<group>"; };
+		107EA2181DE420CB00A4A8CD /* first_select_top_btn_onlineshop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_select_top_btn_onlineshop@2x.png"; sourceTree = "<group>"; };
+		107EA2191DE420CB00A4A8CD /* first_select_top_btn_point.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first_select_top_btn_point.png; sourceTree = "<group>"; };
+		107EA21A1DE420CB00A4A8CD /* first_select_top_btn_point@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_select_top_btn_point@2x.png"; sourceTree = "<group>"; };
+		107EA21B1DE420CB00A4A8CD /* first_select_top_btn_reserve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first_select_top_btn_reserve.png; sourceTree = "<group>"; };
+		107EA21C1DE420CB00A4A8CD /* first_select_top_btn_reserve@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_select_top_btn_reserve@2x.png"; sourceTree = "<group>"; };
+		107EA21D1DE420CB00A4A8CD /* first_select_top_btn_staff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first_select_top_btn_staff.png; sourceTree = "<group>"; };
+		107EA21E1DE420CB00A4A8CD /* first_select_top_btn_staff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_select_top_btn_staff@2x.png"; sourceTree = "<group>"; };
+		107EA21F1DE420CB00A4A8CD /* first_select_top_btn_stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first_select_top_btn_stamp.png; sourceTree = "<group>"; };
+		107EA2201DE420CB00A4A8CD /* first_select_top_btn_stamp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_select_top_btn_stamp@2x.png"; sourceTree = "<group>"; };
+		107EA2211DE420CB00A4A8CD /* first_select_top_btn_whatsnew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first_select_top_btn_whatsnew.png; sourceTree = "<group>"; };
+		107EA2221DE420CB00A4A8CD /* first_select_top_btn_whatsnew@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_select_top_btn_whatsnew@2x.png"; sourceTree = "<group>"; };
 		10967BC31DDB5DFF004DA122 /* MPMenuListCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuListCollectionCell.h; sourceTree = "<group>"; };
 		10967BC41DDB5DFF004DA122 /* MPMenuListCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuListCollectionCell.m; sourceTree = "<group>"; };
 		10C4B6EB1DD9DFEE00E26096 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
@@ -445,16 +475,6 @@
 		10C4B6EE1DD9DFEE00E26096 /* UserSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserSettingViewController.xib; sourceTree = "<group>"; };
 		10C4B6F41DD9DFEE00E26096 /* MPTheFifthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheFifthViewController.xib; sourceTree = "<group>"; };
 		10C4B6F71DD9DFEE00E26096 /* MPHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPHomeViewController.xib; sourceTree = "<group>"; };
-		10C4B6F91DD9DFEE00E26096 /* home_btn_memberscard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_btn_memberscard.png; sourceTree = "<group>"; };
-		10C4B6FA1DD9DFEE00E26096 /* home_btn_memberscard_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_btn_memberscard_on.png; sourceTree = "<group>"; };
-		10C4B6FB1DD9DFEE00E26096 /* home_btn_onlineshop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_btn_onlineshop.png; sourceTree = "<group>"; };
-		10C4B6FC1DD9DFEE00E26096 /* home_btn_onlineshop_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_btn_onlineshop_on.png; sourceTree = "<group>"; };
-		10C4B6FD1DD9DFEE00E26096 /* home_btn_point.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_btn_point.png; sourceTree = "<group>"; };
-		10C4B6FE1DD9DFEE00E26096 /* home_btn_point_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_btn_point_on.png; sourceTree = "<group>"; };
-		10C4B6FF1DD9DFEE00E26096 /* home_btn_reserve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_btn_reserve.png; sourceTree = "<group>"; };
-		10C4B7001DD9DFEE00E26096 /* home_btn_reserve_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_btn_reserve_on.png; sourceTree = "<group>"; };
-		10C4B7011DD9DFEE00E26096 /* home_btn_whatsnew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_btn_whatsnew.png; sourceTree = "<group>"; };
-		10C4B7021DD9DFEE00E26096 /* home_btn_whatsnew_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_btn_whatsnew_on.png; sourceTree = "<group>"; };
 		10C4B7031DD9DFEE00E26096 /* home_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_more.png; sourceTree = "<group>"; };
 		10C4B7041DD9DFEE00E26096 /* home_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_more@2x.png"; sourceTree = "<group>"; };
 		10C4B7051DD9DFEE00E26096 /* home_recommenditem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_recommenditem.png; sourceTree = "<group>"; };
@@ -1187,18 +1207,28 @@
 		10C4B6F81DD9DFEE00E26096 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				107EA20F1DE420CB00A4A8CD /* first_select_btn_haircatalog.png */,
+				107EA2101DE420CB00A4A8CD /* first_select_btn_haircatalog@2x.png */,
+				107EA2111DE420CB00A4A8CD /* first_select_top_btn_karte.png */,
+				107EA2121DE420CB00A4A8CD /* first_select_top_btn_karte@2x.png */,
+				107EA2131DE420CB00A4A8CD /* first_select_top_btn_memberscard.png */,
+				107EA2141DE420CB00A4A8CD /* first_select_top_btn_memberscard@2x.png */,
+				107EA2151DE420CB00A4A8CD /* first_select_top_btn_moviechannnel.png */,
+				107EA2161DE420CB00A4A8CD /* first_select_top_btn_moviechannnel@2x.png */,
+				107EA2171DE420CB00A4A8CD /* first_select_top_btn_onlineshop.png */,
+				107EA2181DE420CB00A4A8CD /* first_select_top_btn_onlineshop@2x.png */,
+				107EA2191DE420CB00A4A8CD /* first_select_top_btn_point.png */,
+				107EA21A1DE420CB00A4A8CD /* first_select_top_btn_point@2x.png */,
+				107EA21B1DE420CB00A4A8CD /* first_select_top_btn_reserve.png */,
+				107EA21C1DE420CB00A4A8CD /* first_select_top_btn_reserve@2x.png */,
+				107EA21D1DE420CB00A4A8CD /* first_select_top_btn_staff.png */,
+				107EA21E1DE420CB00A4A8CD /* first_select_top_btn_staff@2x.png */,
+				107EA21F1DE420CB00A4A8CD /* first_select_top_btn_stamp.png */,
+				107EA2201DE420CB00A4A8CD /* first_select_top_btn_stamp@2x.png */,
+				107EA2211DE420CB00A4A8CD /* first_select_top_btn_whatsnew.png */,
+				107EA2221DE420CB00A4A8CD /* first_select_top_btn_whatsnew@2x.png */,
 				1038EF8C1DDF1F8200134331 /* left_yajirushi.png */,
 				107957AB1DDD9738008F35A6 /* new_badge.png */,
-				10C4B6F91DD9DFEE00E26096 /* home_btn_memberscard.png */,
-				10C4B6FA1DD9DFEE00E26096 /* home_btn_memberscard_on.png */,
-				10C4B6FB1DD9DFEE00E26096 /* home_btn_onlineshop.png */,
-				10C4B6FC1DD9DFEE00E26096 /* home_btn_onlineshop_on.png */,
-				10C4B6FD1DD9DFEE00E26096 /* home_btn_point.png */,
-				10C4B6FE1DD9DFEE00E26096 /* home_btn_point_on.png */,
-				10C4B6FF1DD9DFEE00E26096 /* home_btn_reserve.png */,
-				10C4B7001DD9DFEE00E26096 /* home_btn_reserve_on.png */,
-				10C4B7011DD9DFEE00E26096 /* home_btn_whatsnew.png */,
-				10C4B7021DD9DFEE00E26096 /* home_btn_whatsnew_on.png */,
 				10C4B7031DD9DFEE00E26096 /* home_more.png */,
 				10C4B7041DD9DFEE00E26096 /* home_more@2x.png */,
 				10C4B7051DD9DFEE00E26096 /* home_recommenditem.png */,
@@ -1973,7 +2003,7 @@
 			files = (
 				100221801DE3395800169B93 /* coupon_49.png in Resources */,
 				1002214D1DE2ED6600169B93 /* fourthView_btn_tel@2x.png in Resources */,
-				10C4B76E1DD9DFEE00E26096 /* home_btn_onlineshop.png in Resources */,
+				107EA22A1DE420CB00A4A8CD /* first_select_top_btn_moviechannnel@2x.png in Resources */,
 				10C4B77B1DD9DFEE00E26096 /* home_recommendmenu@2x.png in Resources */,
 				10E6B6201DE2D59900BB0254 /* other_icon_facebook@2x.png in Resources */,
 				1069E2C31DDE8FAE00FCC6D6 /* header_ttl_setting.png in Resources */,
@@ -1982,7 +2012,9 @@
 				10E6B6221DE2D59900BB0254 /* other_icon_favarite@2x.png in Resources */,
 				1061C6AF1DDDD9B7000CEAA2 /* webview_btn_brouser_on.png in Resources */,
 				10C4B7BC1DD9DFEE00E26096 /* footer_btn_coupon@2x.png in Resources */,
+				107EA2281DE420CB00A4A8CD /* first_select_top_btn_memberscard@2x.png in Resources */,
 				1076A9221DDC3A080080E8CD /* secondview_icon_line_maru.png in Resources */,
+				107EA2271DE420CB00A4A8CD /* first_select_top_btn_memberscard.png in Resources */,
 				1061C6AB1DDDD9B7000CEAA2 /* webview_btn_update_on.png in Resources */,
 				10C4B7881DD9DFEE00E26096 /* sidemenu_coupon.png in Resources */,
 				1061C6B11DDDD9B7000CEAA2 /* webview_btn_back_on.png in Resources */,
@@ -1991,7 +2023,6 @@
 				10C4B7921DD9DFEE00E26096 /* sidemenu_point.png in Resources */,
 				100221571DE2ED6600169B93 /* fourthView_icon_web_gray@2x.png in Resources */,
 				1002214A1DE2ED6600169B93 /* fourthView_btn_map.png in Resources */,
-				10C4B76C1DD9DFEE00E26096 /* home_btn_memberscard.png in Resources */,
 				10C4B7841DD9DFEE00E26096 /* navigation_back.png in Resources */,
 				10C4B7791DD9DFEE00E26096 /* home_recommenditem@2x.png in Resources */,
 				107957A81DDD5571008F35A6 /* MPTheSecond_SlideView.xib in Resources */,
@@ -2000,7 +2031,6 @@
 				10C4B7AC1DD9DFEE00E26096 /* MPMenuRecommendMenuCell.xib in Resources */,
 				1002217C1DE3395800169B93 /* coupon_19.png in Resources */,
 				100221861DE3395800169B93 /* menu_30.png in Resources */,
-				10C4B7711DD9DFEE00E26096 /* home_btn_point_on.png in Resources */,
 				10C4B7AD1DD9DFEE00E26096 /* MPMenuNewsCell.xib in Resources */,
 				100221631DE3304800169B93 /* ShopListViewCell.xib in Resources */,
 				100221881DE3395800169B93 /* menu_color.png in Resources */,
@@ -2011,6 +2041,7 @@
 				1069E2C41DDE8FAE00FCC6D6 /* header_ttl_setting@2x.png in Resources */,
 				1002217E1DE3395800169B93 /* coupon_24.png in Resources */,
 				10C4B7781DD9DFEE00E26096 /* home_recommenditem.png in Resources */,
+				107EA22F1DE420CB00A4A8CD /* first_select_top_btn_reserve.png in Resources */,
 				10C4B7B61DD9DFEE00E26096 /* footer_btn_menu_on@2x.png in Resources */,
 				10C4B79A1DD9DFEE00E26096 /* sidemenu_yajirushi.png in Resources */,
 				10C4B7901DD9DFEE00E26096 /* sidemenu_onlineshop.png in Resources */,
@@ -2024,20 +2055,23 @@
 				10C4B78C1DD9DFEE00E26096 /* sidemenu_memberscard.png in Resources */,
 				10E6B6211DE2D59900BB0254 /* other_icon_favarite.png in Resources */,
 				100221871DE3395800169B93 /* menu_32.png in Resources */,
-				10C4B7721DD9DFEE00E26096 /* home_btn_reserve.png in Resources */,
 				10E6B61F1DE2D59900BB0254 /* other_icon_facebook.png in Resources */,
 				100221841DE3395800169B93 /* menu_26.png in Resources */,
 				10E6B6231DE2D59900BB0254 /* other_icon_line.png in Resources */,
 				10C4B7C01DD9DFEE00E26096 /* footer_btn_access@2x.png in Resources */,
 				103026F41DD1A36200F266D8 /* Images.xcassets in Resources */,
 				10C4B7951DD9DFEE00E26096 /* sidemenu_reserve@2x.png in Resources */,
+				107EA22E1DE420CB00A4A8CD /* first_select_top_btn_point@2x.png in Resources */,
 				10C4B7A51DD9DFEE00E26096 /* icon_blog_black.png in Resources */,
+				107EA2311DE420CB00A4A8CD /* first_select_top_btn_staff.png in Resources */,
 				10E6B6001DE2BF5500BB0254 /* fifthView_setting.png in Resources */,
-				10C4B7701DD9DFEE00E26096 /* home_btn_point.png in Resources */,
 				1002217D1DE3395800169B93 /* coupon_21.png in Resources */,
 				10C4B78A1DD9DFEE00E26096 /* sidemenu_home.png in Resources */,
 				10C4B7B71DD9DFEE00E26096 /* footer_btn_menu_on.jpg in Resources */,
+				107EA2341DE420CB00A4A8CD /* first_select_top_btn_stamp@2x.png in Resources */,
+				107EA2261DE420CB00A4A8CD /* first_select_top_btn_karte@2x.png in Resources */,
 				1002218B1DE3395800169B93 /* menu_perm.png in Resources */,
+				107EA2291DE420CB00A4A8CD /* first_select_top_btn_moviechannnel.png in Resources */,
 				1061C6AD1DDDD9B7000CEAA2 /* webview_btn_next_on.png in Resources */,
 				10E6B6251DE2D59900BB0254 /* other_icon_twitter.png in Resources */,
 				10C4B7A71DD9DFEE00E26096 /* icon_instagram_black.png in Resources */,
@@ -2059,9 +2093,11 @@
 				10C4B8E31DDA03FC00E26096 /* MPWebViewController.xib in Resources */,
 				1037B8371DE036A5000D834C /* MPTheThirdSumMenuViewController.xib in Resources */,
 				10C4B7821DD9DFEE00E26096 /* MPSlideMenuCell.xib in Resources */,
+				107EA2231DE420CB00A4A8CD /* first_select_btn_haircatalog.png in Resources */,
 				10C4B7B81DD9DFEE00E26096 /* footer_btn_home@2x.png in Resources */,
 				10C4B77E1DD9DFEE00E26096 /* home_yajirushi.png in Resources */,
 				1002214B1DE2ED6600169B93 /* fourthView_btn_map@2x.png in Resources */,
+				107EA2331DE420CB00A4A8CD /* first_select_top_btn_stamp.png in Resources */,
 				1002218D1DE3395800169B93 /* recommendmenu_10.png in Resources */,
 				1002217F1DE3395800169B93 /* coupon_26.png in Resources */,
 				1002214F1DE2ED6600169B93 /* fourthView_btn_webreserve@2x.png in Resources */,
@@ -2069,15 +2105,16 @@
 				100221521DE2ED6600169B93 /* fourthView_icon_instagram_gray.png in Resources */,
 				10C4B7941DD9DFEE00E26096 /* sidemenu_reserve.png in Resources */,
 				10E6B61D1DE2D59900BB0254 /* down_white_yajirushi.png in Resources */,
-				10C4B7741DD9DFEE00E26096 /* home_btn_whatsnew.png in Resources */,
 				10393C5C1DE00C7D004CC6E9 /* header_ttl_menu.png in Resources */,
 				100221531DE2ED6600169B93 /* fourthView_icon_instagram_gray@2x.png in Resources */,
 				10393C5D1DE00C7D004CC6E9 /* header_ttl_menu@2x.png in Resources */,
 				10C4B7761DD9DFEE00E26096 /* home_more.png in Resources */,
 				100221501DE2ED6600169B93 /* fourthView_icon_facebook_gray.png in Resources */,
+				107EA22D1DE420CB00A4A8CD /* first_select_top_btn_point.png in Resources */,
 				10C4B7B11DD9DFEE00E26096 /* footer_btn_setting.jpg in Resources */,
 				10C4B7671DD9DFEE00E26096 /* UserSettingViewController.xib in Resources */,
 				10C4B7931DD9DFEE00E26096 /* sidemenu_point@2x.png in Resources */,
+				107EA2241DE420CB00A4A8CD /* first_select_btn_haircatalog@2x.png in Resources */,
 				1069E2C51DDE8FAE00FCC6D6 /* header_logo@2x.png in Resources */,
 				1076A9271DDC424C0080E8CD /* secondview_icon_specialcoupon.png in Resources */,
 				1076A93B1DDC56370080E8CD /* MPTheSecondViewController.xib in Resources */,
@@ -2086,7 +2123,6 @@
 				1069E2BE1DDE8FAE00FCC6D6 /* header_ttl_access@2x.png in Resources */,
 				10C4B7B01DD9DFEE00E26096 /* footer_btn_setting@2x.png in Resources */,
 				10C4B78B1DD9DFEE00E26096 /* sidemenu_home@2x.png in Resources */,
-				10C4B7751DD9DFEE00E26096 /* home_btn_whatsnew_on.png in Resources */,
 				1002218A1DE3395800169B93 /* menu_other.png in Resources */,
 				100221851DE3395800169B93 /* menu_28.png in Resources */,
 				10C4B7B41DD9DFEE00E26096 /* footer_btn_menu@2x.png in Resources */,
@@ -2103,19 +2139,22 @@
 				10E6B6261DE2D59900BB0254 /* other_icon_twitter@2x.png in Resources */,
 				10C4B77D1DD9DFEE00E26096 /* home_whatsnew@2x.png in Resources */,
 				1076A9211DDC3A080080E8CD /* secondview_icon_facebook_maru.png in Resources */,
+				107EA22C1DE420CB00A4A8CD /* first_select_top_btn_onlineshop@2x.png in Resources */,
 				10C4B7B91DD9DFEE00E26096 /* footer_btn_home.jpg in Resources */,
 				1002217A1DE3395800169B93 /* access_01.png in Resources */,
 				10E6B6241DE2D59900BB0254 /* other_icon_line@2x.png in Resources */,
 				10C4B7BD1DD9DFEE00E26096 /* footer_btn_coupon.jpg in Resources */,
 				10C4B7BF1DD9DFEE00E26096 /* footer_btn_coupon_on.jpg in Resources */,
-				10C4B76D1DD9DFEE00E26096 /* home_btn_memberscard_on.png in Resources */,
 				10C4B7911DD9DFEE00E26096 /* sidemenu_onlineshop@2x.png in Resources */,
 				10467E781DE01BB600C51AA3 /* MPTheMenuCell.xib in Resources */,
 				10C4B7B21DD9DFEE00E26096 /* footer_btn_setting_on@2x.png in Resources */,
 				10E6B6281DE2D59900BB0254 /* up_white_yajirushi@2x.png in Resources */,
 				100221541DE2ED6600169B93 /* fourthView_icon_twitter_gray.png in Resources */,
 				10C4B7BE1DD9DFEE00E26096 /* footer_btn_coupon_on@2x.png in Resources */,
+				107EA2251DE420CB00A4A8CD /* first_select_top_btn_karte.png in Resources */,
+				107EA2351DE420CB00A4A8CD /* first_select_top_btn_whatsnew.png in Resources */,
 				10C4B7BA1DD9DFEE00E26096 /* footer_btn_home_on@2x.png in Resources */,
+				107EA22B1DE420CB00A4A8CD /* first_select_top_btn_onlineshop.png in Resources */,
 				107957AE1DDDA60A008F35A6 /* secondview_syousai.png in Resources */,
 				10C4B7C11DD9DFEE00E26096 /* footer_btn_access.jpg in Resources */,
 				100221561DE2ED6600169B93 /* fourthView_icon_web_gray.png in Resources */,
@@ -2131,11 +2170,14 @@
 				10C4B77F1DD9DFEE00E26096 /* MPTheFourthViewController.xib in Resources */,
 				10C4B7811DD9DFEE00E26096 /* MPTheThirdViewController.xib in Resources */,
 				1069E2BC1DDE8FAE00FCC6D6 /* header_logo.png in Resources */,
+				107EA2361DE420CB00A4A8CD /* first_select_top_btn_whatsnew@2x.png in Resources */,
 				10C4B7CF1DD9ED3A00E26096 /* UserInfo_btn_setting_touroku.png in Resources */,
 				10C4B78E1DD9DFEE00E26096 /* sidemenu_menu.png in Resources */,
 				10C4B79B1DD9DFEE00E26096 /* customMenu_close.png in Resources */,
 				100221511DE2ED6600169B93 /* fourthView_icon_facebook_gray@2x.png in Resources */,
+				107EA2321DE420CB00A4A8CD /* first_select_top_btn_staff@2x.png in Resources */,
 				10C4B7771DD9DFEE00E26096 /* home_more@2x.png in Resources */,
+				107EA2301DE420CB00A4A8CD /* first_select_top_btn_reserve@2x.png in Resources */,
 				1038EF8D1DDF1F8200134331 /* left_yajirushi.png in Resources */,
 				10C4B76A1DD9DFEE00E26096 /* MPTheFifthViewController.xib in Resources */,
 				10C4B7C41DD9DFEE00E26096 /* backBottom@2x.png in Resources */,
@@ -2143,8 +2185,6 @@
 				10E6B6011DE2BF5500BB0254 /* fifthView_btn_fukugen.png in Resources */,
 				100221821DE3395800169B93 /* sharethanks_34.png in Resources */,
 				1069E2BD1DDE8FAE00FCC6D6 /* header_ttl_access.png in Resources */,
-				10C4B76F1DD9DFEE00E26096 /* home_btn_onlineshop_on.png in Resources */,
-				10C4B7731DD9DFEE00E26096 /* home_btn_reserve_on.png in Resources */,
 				1002218C1DE3395800169B93 /* menu_teatment.png in Resources */,
 				1038EF961DDF2E6500134331 /* MPTransferViewController.xib in Resources */,
 				10C4B78F1DD9DFEE00E26096 /* sidemenu_menu@2x.png in Resources */,

@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,15 +58,27 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IaU-Bs-Gmf">
                                             <rect key="frame" x="2" y="2" width="104" height="100"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiC-Jt-fyX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="104" height="100"/>
-                                                    <state key="normal" image="home_btn_memberscard.png"/>
-                                                    <state key="selected" image="home_btn_onlineshop.png"/>
-                                                    <state key="focused" image="home_btn_memberscard_on.png"/>
-                                                    <connections>
-                                                        <action selector="btn_block1:" destination="-1" eventType="touchUpInside" id="VO1-Gp-mQ7"/>
-                                                    </connections>
-                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vh9-ZQ-MkS">
+                                                    <rect key="frame" x="2" y="0.0" width="100" height="100"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiC-Jt-fyX">
+                                                            <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                                            <state key="normal" image="first_select_top_btn_memberscard.png"/>
+                                                            <state key="selected" image="first_select_top_btn_memberscard.png"/>
+                                                            <connections>
+                                                                <action selector="btn_block1:" destination="-1" eventType="touchUpInside" id="VO1-Gp-mQ7"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="TiC-Jt-fyX" secondAttribute="trailing" constant="10" id="7gd-09-cKZ"/>
+                                                        <constraint firstAttribute="width" secondItem="vh9-ZQ-MkS" secondAttribute="height" multiplier="1:1" id="Q4g-df-af0"/>
+                                                        <constraint firstItem="TiC-Jt-fyX" firstAttribute="top" secondItem="vh9-ZQ-MkS" secondAttribute="top" constant="10" id="j7l-hZ-nEe"/>
+                                                        <constraint firstItem="TiC-Jt-fyX" firstAttribute="leading" secondItem="vh9-ZQ-MkS" secondAttribute="leading" constant="10" id="ltA-jS-ANw"/>
+                                                        <constraint firstAttribute="bottom" secondItem="TiC-Jt-fyX" secondAttribute="bottom" constant="10" id="pWq-xu-pbA"/>
+                                                    </constraints>
+                                                </view>
                                                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="J0P-7Y-Uz9">
                                                     <rect key="frame" x="23.5" y="17.5" width="5" height="5"/>
                                                     <constraints>
@@ -78,25 +91,37 @@
                                             <constraints>
                                                 <constraint firstItem="J0P-7Y-Uz9" firstAttribute="centerX" secondItem="IaU-Bs-Gmf" secondAttribute="centerX" multiplier="0.5" id="I8m-eA-Csa"/>
                                                 <constraint firstItem="J0P-7Y-Uz9" firstAttribute="centerY" secondItem="IaU-Bs-Gmf" secondAttribute="centerY" multiplier="0.4" id="ITU-R9-wBT"/>
+                                                <constraint firstItem="vh9-ZQ-MkS" firstAttribute="centerX" secondItem="IaU-Bs-Gmf" secondAttribute="centerX" id="YaH-x1-DAx"/>
                                                 <constraint firstAttribute="height" constant="100" id="ewT-QG-3P4"/>
-                                                <constraint firstAttribute="bottom" secondItem="TiC-Jt-fyX" secondAttribute="bottom" id="lAF-aL-OuS"/>
-                                                <constraint firstItem="TiC-Jt-fyX" firstAttribute="top" secondItem="IaU-Bs-Gmf" secondAttribute="top" id="pox-km-7dc"/>
-                                                <constraint firstItem="TiC-Jt-fyX" firstAttribute="leading" secondItem="IaU-Bs-Gmf" secondAttribute="leading" id="tte-ws-aGr"/>
-                                                <constraint firstAttribute="trailing" secondItem="TiC-Jt-fyX" secondAttribute="trailing" id="vcL-JD-0py"/>
+                                                <constraint firstAttribute="bottom" secondItem="vh9-ZQ-MkS" secondAttribute="bottom" id="hOk-X7-WZw"/>
+                                                <constraint firstItem="vh9-ZQ-MkS" firstAttribute="top" secondItem="IaU-Bs-Gmf" secondAttribute="top" id="ptD-Ro-gGo"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3iW-Nf-tXc">
                                             <rect key="frame" x="108" y="2" width="104" height="100"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79R-We-lGk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="104" height="100"/>
-                                                    <state key="normal" image="home_btn_reserve.png"/>
-                                                    <state key="selected" image="home_btn_reserve_on.png"/>
-                                                    <state key="focused" image="home_btn_reserve_on.png"/>
-                                                    <connections>
-                                                        <action selector="btn_block2:" destination="-1" eventType="touchUpInside" id="Sxg-Yk-QbX"/>
-                                                    </connections>
-                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ML-og-Qdr">
+                                                    <rect key="frame" x="2" y="0.0" width="100" height="100"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79R-We-lGk">
+                                                            <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                                            <state key="normal" image="first_select_top_btn_reserve.png"/>
+                                                            <state key="selected" image="home_btn_reserve_on.png"/>
+                                                            <state key="focused" image="home_btn_reserve_on.png"/>
+                                                            <connections>
+                                                                <action selector="btn_block2:" destination="-1" eventType="touchUpInside" id="Sxg-Yk-QbX"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="5ML-og-Qdr" secondAttribute="height" multiplier="1:1" id="YzE-6D-Bng"/>
+                                                        <constraint firstItem="79R-We-lGk" firstAttribute="top" secondItem="5ML-og-Qdr" secondAttribute="top" constant="10" id="bmR-Vt-BOz"/>
+                                                        <constraint firstAttribute="bottom" secondItem="79R-We-lGk" secondAttribute="bottom" constant="10" id="czL-1o-2b8"/>
+                                                        <constraint firstItem="79R-We-lGk" firstAttribute="leading" secondItem="5ML-og-Qdr" secondAttribute="leading" constant="10" id="lLb-hj-OHJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="79R-We-lGk" secondAttribute="trailing" constant="10" id="sfk-ED-yKo"/>
+                                                    </constraints>
+                                                </view>
                                                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="GVw-dB-Tw2">
                                                     <rect key="frame" x="23.5" y="17.5" width="5" height="5"/>
                                                     <constraints>
@@ -109,25 +134,37 @@
                                             <constraints>
                                                 <constraint firstItem="GVw-dB-Tw2" firstAttribute="centerX" secondItem="3iW-Nf-tXc" secondAttribute="centerX" multiplier="0.5" id="5Xh-tE-nFJ"/>
                                                 <constraint firstAttribute="height" constant="100" id="DVl-ff-tnj"/>
-                                                <constraint firstItem="79R-We-lGk" firstAttribute="top" secondItem="3iW-Nf-tXc" secondAttribute="top" id="SlI-Lb-5kO"/>
-                                                <constraint firstAttribute="bottom" secondItem="79R-We-lGk" secondAttribute="bottom" id="ZRo-na-l2u"/>
+                                                <constraint firstItem="5ML-og-Qdr" firstAttribute="top" secondItem="3iW-Nf-tXc" secondAttribute="top" id="H7F-4c-TFr"/>
+                                                <constraint firstItem="5ML-og-Qdr" firstAttribute="centerX" secondItem="3iW-Nf-tXc" secondAttribute="centerX" id="Pyr-wf-vMf"/>
                                                 <constraint firstItem="GVw-dB-Tw2" firstAttribute="centerY" secondItem="3iW-Nf-tXc" secondAttribute="centerY" multiplier="0.4" id="aRG-67-bh9"/>
-                                                <constraint firstItem="79R-We-lGk" firstAttribute="leading" secondItem="3iW-Nf-tXc" secondAttribute="leading" id="iME-Yl-dUA"/>
-                                                <constraint firstAttribute="trailing" secondItem="79R-We-lGk" secondAttribute="trailing" id="ura-um-qfA"/>
+                                                <constraint firstAttribute="bottom" secondItem="5ML-og-Qdr" secondAttribute="bottom" id="kp6-IK-755"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnT-Uh-Qp2">
                                             <rect key="frame" x="214" y="2" width="104" height="100"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPI-FA-fcB">
-                                                    <rect key="frame" x="0.0" y="0.0" width="104" height="100"/>
-                                                    <state key="normal" image="home_btn_point.png"/>
-                                                    <state key="selected" image="home_btn_point_on.png"/>
-                                                    <state key="focused" image="home_btn_point_on.png"/>
-                                                    <connections>
-                                                        <action selector="btn_block3:" destination="-1" eventType="touchUpInside" id="wsz-gB-zq8"/>
-                                                    </connections>
-                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIf-kd-u7h">
+                                                    <rect key="frame" x="2" y="0.0" width="100" height="100"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPI-FA-fcB">
+                                                            <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                                            <state key="normal" image="first_select_top_btn_point.png"/>
+                                                            <state key="selected" image="home_btn_point_on.png"/>
+                                                            <state key="focused" image="home_btn_point_on.png"/>
+                                                            <connections>
+                                                                <action selector="btn_block3:" destination="-1" eventType="touchUpInside" id="wsz-gB-zq8"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="oPI-FA-fcB" secondAttribute="bottom" constant="10" id="md6-4a-peY"/>
+                                                        <constraint firstItem="oPI-FA-fcB" firstAttribute="top" secondItem="lIf-kd-u7h" secondAttribute="top" constant="10" id="mtm-Dw-KNg"/>
+                                                        <constraint firstItem="oPI-FA-fcB" firstAttribute="leading" secondItem="lIf-kd-u7h" secondAttribute="leading" constant="10" id="rXJ-2v-Xf7"/>
+                                                        <constraint firstAttribute="trailing" secondItem="oPI-FA-fcB" secondAttribute="trailing" constant="10" id="rXX-uH-Rqe"/>
+                                                        <constraint firstAttribute="width" secondItem="lIf-kd-u7h" secondAttribute="height" multiplier="1:1" id="woO-SI-A8a"/>
+                                                    </constraints>
+                                                </view>
                                                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="agO-fb-DDC">
                                                     <rect key="frame" x="23.5" y="17.5" width="5" height="5"/>
                                                     <constraints>
@@ -138,27 +175,37 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="oPI-FA-fcB" firstAttribute="top" secondItem="tnT-Uh-Qp2" secondAttribute="top" id="2I4-XA-M59"/>
-                                                <constraint firstItem="oPI-FA-fcB" firstAttribute="leading" secondItem="tnT-Uh-Qp2" secondAttribute="leading" id="Qhn-BD-R56"/>
-                                                <constraint firstAttribute="trailing" secondItem="oPI-FA-fcB" secondAttribute="trailing" id="Scq-L4-V2V"/>
+                                                <constraint firstAttribute="bottom" secondItem="lIf-kd-u7h" secondAttribute="bottom" id="7lK-fM-N5u"/>
+                                                <constraint firstItem="lIf-kd-u7h" firstAttribute="centerX" secondItem="tnT-Uh-Qp2" secondAttribute="centerX" id="bnR-aT-Ntx"/>
+                                                <constraint firstItem="lIf-kd-u7h" firstAttribute="top" secondItem="tnT-Uh-Qp2" secondAttribute="top" id="emX-G9-yCo"/>
                                                 <constraint firstItem="agO-fb-DDC" firstAttribute="centerY" secondItem="tnT-Uh-Qp2" secondAttribute="centerY" multiplier="0.4" id="etN-Tp-cgo"/>
                                                 <constraint firstAttribute="height" constant="100" id="pAG-4P-sAf"/>
-                                                <constraint firstAttribute="bottom" secondItem="oPI-FA-fcB" secondAttribute="bottom" id="sAq-vt-RPa"/>
                                                 <constraint firstItem="agO-fb-DDC" firstAttribute="centerX" secondItem="tnT-Uh-Qp2" secondAttribute="centerX" multiplier="0.5" id="wHk-d9-87f"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEn-DI-rrp">
                                             <rect key="frame" x="2" y="104" width="157" height="100"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjN-Ys-ADo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="157" height="100"/>
-                                                    <state key="normal" image="home_btn_whatsnew.png"/>
-                                                    <state key="selected" image="home_btn_whatsnew_on.png"/>
-                                                    <state key="focused" image="home_btn_whatsnew_on.png"/>
-                                                    <connections>
-                                                        <action selector="btn_block4:" destination="-1" eventType="touchUpInside" id="ZNa-hf-JKl"/>
-                                                    </connections>
-                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dmr-ZU-BbK">
+                                                    <rect key="frame" x="28.5" y="0.0" width="100" height="100"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjN-Ys-ADo">
+                                                            <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                                            <state key="normal" image="first_select_top_btn_whatsnew.png"/>
+                                                            <connections>
+                                                                <action selector="btn_block4:" destination="-1" eventType="touchUpInside" id="ZNa-hf-JKl"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="GjN-Ys-ADo" secondAttribute="bottom" constant="10" id="6Kx-Ee-yxK"/>
+                                                        <constraint firstAttribute="trailing" secondItem="GjN-Ys-ADo" secondAttribute="trailing" constant="10" id="Jph-VK-ho6"/>
+                                                        <constraint firstItem="GjN-Ys-ADo" firstAttribute="leading" secondItem="Dmr-ZU-BbK" secondAttribute="leading" constant="10" id="g0A-Ip-gQm"/>
+                                                        <constraint firstItem="GjN-Ys-ADo" firstAttribute="top" secondItem="Dmr-ZU-BbK" secondAttribute="top" constant="10" id="jZr-ec-zw1"/>
+                                                        <constraint firstAttribute="width" secondItem="Dmr-ZU-BbK" secondAttribute="height" multiplier="1:1" id="uFO-ox-Vcy"/>
+                                                    </constraints>
+                                                </view>
                                                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="a5W-nH-AMV">
                                                     <rect key="frame" x="52" y="17.5" width="5" height="5"/>
                                                     <constraints>
@@ -169,27 +216,40 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="GjN-Ys-ADo" secondAttribute="trailing" id="4yi-v1-CtR"/>
-                                                <constraint firstItem="GjN-Ys-ADo" firstAttribute="top" secondItem="hEn-DI-rrp" secondAttribute="top" id="8nu-X8-B2H"/>
                                                 <constraint firstItem="a5W-nH-AMV" firstAttribute="centerY" secondItem="hEn-DI-rrp" secondAttribute="centerY" multiplier="0.4" id="AtV-r6-67w"/>
-                                                <constraint firstAttribute="bottom" secondItem="GjN-Ys-ADo" secondAttribute="bottom" id="fgK-8C-ijH"/>
+                                                <constraint firstAttribute="bottom" secondItem="Dmr-ZU-BbK" secondAttribute="bottom" id="OO2-Cl-z7o"/>
+                                                <constraint firstItem="Dmr-ZU-BbK" firstAttribute="top" secondItem="hEn-DI-rrp" secondAttribute="top" id="csM-dZ-202"/>
+                                                <constraint firstItem="Dmr-ZU-BbK" firstAttribute="centerX" secondItem="hEn-DI-rrp" secondAttribute="centerX" id="f3r-yp-Stt"/>
+                                                <constraint firstItem="Dmr-ZU-BbK" firstAttribute="centerX" secondItem="hEn-DI-rrp" secondAttribute="centerX" id="fVz-51-2uA"/>
                                                 <constraint firstAttribute="height" constant="100" id="jbB-m0-52A"/>
-                                                <constraint firstItem="GjN-Ys-ADo" firstAttribute="leading" secondItem="hEn-DI-rrp" secondAttribute="leading" id="qUo-07-Ox1"/>
                                                 <constraint firstItem="a5W-nH-AMV" firstAttribute="centerX" secondItem="hEn-DI-rrp" secondAttribute="centerX" multiplier="0.7" id="zDr-Kk-P2B"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ts0-ty-Z2A">
                                             <rect key="frame" x="161" y="104" width="157" height="100"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtN-NM-pTD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="157" height="100"/>
-                                                    <state key="normal" image="home_btn_onlineshop.png"/>
-                                                    <state key="selected" image="home_btn_onlineshop_on.png"/>
-                                                    <state key="focused" image="home_btn_onlineshop_on.png"/>
-                                                    <connections>
-                                                        <action selector="btn_block5:" destination="-1" eventType="touchUpInside" id="EF8-TQ-ZTp"/>
-                                                    </connections>
-                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ALm-75-VTn">
+                                                    <rect key="frame" x="28" y="0.0" width="100" height="100"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtN-NM-pTD">
+                                                            <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                                            <state key="normal" image="first_select_top_btn_onlineshop.png"/>
+                                                            <state key="selected" image="home_btn_onlineshop_on.png"/>
+                                                            <state key="focused" image="home_btn_onlineshop_on.png"/>
+                                                            <connections>
+                                                                <action selector="btn_block5:" destination="-1" eventType="touchUpInside" id="EF8-TQ-ZTp"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="ALm-75-VTn" secondAttribute="height" multiplier="1:1" id="DBb-TH-rNH"/>
+                                                        <constraint firstItem="BtN-NM-pTD" firstAttribute="top" secondItem="ALm-75-VTn" secondAttribute="top" constant="10" id="E3e-Cw-xbL"/>
+                                                        <constraint firstAttribute="trailing" secondItem="BtN-NM-pTD" secondAttribute="trailing" constant="10" id="EWg-Aw-7uo"/>
+                                                        <constraint firstAttribute="bottom" secondItem="BtN-NM-pTD" secondAttribute="bottom" constant="10" id="b3a-q1-rz1"/>
+                                                        <constraint firstItem="BtN-NM-pTD" firstAttribute="leading" secondItem="ALm-75-VTn" secondAttribute="leading" constant="10" id="fke-eA-GaN"/>
+                                                    </constraints>
+                                                </view>
                                                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="26d-3W-aA9">
                                                     <rect key="frame" x="52" y="17.5" width="5" height="5"/>
                                                     <constraints>
@@ -200,13 +260,12 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ALm-75-VTn" secondAttribute="bottom" id="2Zv-9g-pc8"/>
                                                 <constraint firstItem="26d-3W-aA9" firstAttribute="centerX" secondItem="Ts0-ty-Z2A" secondAttribute="centerX" multiplier="0.7" id="9FD-PR-yXE"/>
-                                                <constraint firstAttribute="trailing" secondItem="BtN-NM-pTD" secondAttribute="trailing" id="GSg-yf-gWt"/>
-                                                <constraint firstItem="BtN-NM-pTD" firstAttribute="leading" secondItem="Ts0-ty-Z2A" secondAttribute="leading" id="Irz-Wa-usv"/>
-                                                <constraint firstItem="BtN-NM-pTD" firstAttribute="top" secondItem="Ts0-ty-Z2A" secondAttribute="top" id="JaK-JC-hQI"/>
+                                                <constraint firstItem="ALm-75-VTn" firstAttribute="centerX" secondItem="Ts0-ty-Z2A" secondAttribute="centerX" id="MKY-wG-efa"/>
                                                 <constraint firstItem="26d-3W-aA9" firstAttribute="centerY" secondItem="Ts0-ty-Z2A" secondAttribute="centerY" multiplier="0.4" id="WRx-2b-8Sx"/>
                                                 <constraint firstAttribute="height" constant="100" id="dmv-Yj-lT2"/>
-                                                <constraint firstAttribute="bottom" secondItem="BtN-NM-pTD" secondAttribute="bottom" id="piQ-aU-lbM"/>
+                                                <constraint firstItem="ALm-75-VTn" firstAttribute="top" secondItem="Ts0-ty-Z2A" secondAttribute="top" id="vpp-ib-Q7e"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -423,16 +482,14 @@
         </view>
     </objects>
     <resources>
-        <image name="home_btn_memberscard.png" width="405" height="328"/>
-        <image name="home_btn_memberscard_on.png" width="406" height="329"/>
-        <image name="home_btn_onlineshop.png" width="612" height="270"/>
+        <image name="first_select_top_btn_memberscard.png" width="128" height="127"/>
+        <image name="first_select_top_btn_onlineshop.png" width="128" height="127"/>
+        <image name="first_select_top_btn_point.png" width="128" height="127"/>
+        <image name="first_select_top_btn_reserve.png" width="128" height="127"/>
+        <image name="first_select_top_btn_whatsnew.png" width="128" height="127"/>
         <image name="home_btn_onlineshop_on.png" width="611" height="270"/>
-        <image name="home_btn_point.png" width="405" height="328"/>
         <image name="home_btn_point_on.png" width="406" height="329"/>
-        <image name="home_btn_reserve.png" width="405" height="328"/>
         <image name="home_btn_reserve_on.png" width="406" height="329"/>
-        <image name="home_btn_whatsnew.png" width="612" height="270"/>
-        <image name="home_btn_whatsnew_on.png" width="611" height="270"/>
         <image name="home_more.png" width="320" height="12"/>
         <image name="home_recommenditem.png" width="320" height="12"/>
         <image name="home_recommendmenu.png" width="320" height="12"/>
