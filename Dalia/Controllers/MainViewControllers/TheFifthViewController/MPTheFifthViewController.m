@@ -47,6 +47,12 @@
     [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_Tab:NO];
 
     [super viewWillAppear:animated];
+
+    sw_newsNotification.transform = CGAffineTransformMakeScale(0.9, 0.9);
+    sw_recommended.transform = CGAffineTransformMakeScale(0.9, 0.9);
+    sw_recommendedMenu.transform = CGAffineTransformMakeScale(0.9, 0.9);
+    sw_catalog.transform = CGAffineTransformMakeScale(0.9, 0.9);
+    sw_curpon.transform = CGAffineTransformMakeScale(0.9, 0.9);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -134,6 +140,21 @@
 - (void)downloadDataFail:(DownloadParam *)param {
 }
 
+- (IBAction)sw_newsNotification:(id)sender {
+}
+
+- (IBAction)sw_recommended:(id)sender {
+}
+
+- (IBAction)sw_recommendedMenu:(id)sender {
+}
+
+- (IBAction)sw_catalog:(id)sender {
+}
+
+- (IBAction)sw_curpon:(id)sender {
+}
+
 - (IBAction)btn_transfer:(id)sender {
 
     MPTransferViewController *vc = [[MPTransferViewController alloc] initWithNibName:@"MPTransferViewController" bundle:nil];
@@ -144,5 +165,8 @@
 
     MPTermsViewController *vc = [[MPTermsViewController alloc] initWithNibName:@"MPTermsViewController" bundle:nil];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)btn_porisir:(id)sender {
 }
 @end
