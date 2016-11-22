@@ -103,7 +103,7 @@
                                             <rect key="frame" x="110" y="0.0" width="55" height="55.5"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfQ-g9-aVm">
-                                                    <rect key="frame" x="10" y="10" width="35" height="35.5"/>
+                                                    <rect key="frame" x="10" y="13" width="35" height="29.5"/>
                                                     <state key="normal" image="fourthView_icon_twitter_gray.png"/>
                                                     <connections>
                                                         <action selector="btn_twitter:" destination="-1" eventType="touchUpInside" id="OHR-1w-Huf"/>
@@ -112,9 +112,9 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="NfQ-g9-aVm" firstAttribute="top" secondItem="e6b-Nd-iNU" secondAttribute="top" constant="10" id="ME1-dC-oYD"/>
+                                                <constraint firstItem="NfQ-g9-aVm" firstAttribute="top" secondItem="e6b-Nd-iNU" secondAttribute="top" constant="13" id="ME1-dC-oYD"/>
                                                 <constraint firstAttribute="trailing" secondItem="NfQ-g9-aVm" secondAttribute="trailing" constant="10" id="Nlc-cx-pvK"/>
-                                                <constraint firstAttribute="bottom" secondItem="NfQ-g9-aVm" secondAttribute="bottom" constant="10" id="TK5-Gg-b9F"/>
+                                                <constraint firstAttribute="bottom" secondItem="NfQ-g9-aVm" secondAttribute="bottom" constant="13" id="TK5-Gg-b9F"/>
                                                 <constraint firstAttribute="width" secondItem="e6b-Nd-iNU" secondAttribute="height" multiplier="1:1" id="fuH-gv-lDb"/>
                                                 <constraint firstItem="NfQ-g9-aVm" firstAttribute="leading" secondItem="e6b-Nd-iNU" secondAttribute="leading" constant="10" id="s5g-bP-yfS"/>
                                             </constraints>
@@ -494,7 +494,7 @@
                                         <constraint firstAttribute="width" secondItem="acF-hW-U2W" secondAttribute="height" multiplier="1:1" id="WuJ-2u-5dL"/>
                                     </constraints>
                                 </mapView>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MVM-V5-xr5">
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MVM-V5-xr5">
                                     <rect key="frame" x="0.0" y="986" width="320" height="100"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
