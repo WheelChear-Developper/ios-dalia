@@ -15,5 +15,13 @@
 		<string>9</string>
 		<string>10</string>
 	</array>
+	<key>BlockMenuType</key>
+	<array>
+		<string>1</string>
+		<string>6</string>
+		<string>5</string>
+		<string>2</string>
+		<string>4</string>
+	</array>
 </dict>
 </plist>

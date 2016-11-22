@@ -36,7 +36,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="1500"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aeM-p2-SjG">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="1090.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="1086"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="access_01.png" translatesAutoresizingMaskIntoConstraints="NO" id="GvH-Tf-fER">
                                     <rect key="frame" x="0.0" y="45" width="320" height="212"/>
@@ -57,13 +57,13 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b40-KY-eY7">
-                                    <rect key="frame" x="40" y="311" width="240" height="60"/>
+                                    <rect key="frame" x="50" y="311" width="220" height="55.5"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fb-6X-5wt">
-                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="55.5" height="55.5"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miV-lN-O1F">
-                                                    <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                                    <rect key="frame" x="10" y="10" width="35.5" height="35.5"/>
                                                     <state key="normal" image="fourthView_icon_instagram_gray.png"/>
                                                     <connections>
                                                         <action selector="btn_insta:" destination="-1" eventType="touchUpInside" id="xIJ-Du-9WB"/>
@@ -80,10 +80,10 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RL0-Lh-hko">
-                                            <rect key="frame" x="60" y="0.0" width="60.5" height="60"/>
+                                            <rect key="frame" x="55.5" y="0.0" width="54.5" height="55.5"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSJ-nc-N9j">
-                                                    <rect key="frame" x="10" y="10" width="40.5" height="40"/>
+                                                    <rect key="frame" x="10" y="10" width="34.5" height="35.5"/>
                                                     <state key="normal" image="fourthView_icon_facebook_gray.png"/>
                                                     <connections>
                                                         <action selector="btn_facebook:" destination="-1" eventType="touchUpInside" id="S3h-rL-MFC"/>
@@ -100,10 +100,10 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6b-Nd-iNU">
-                                            <rect key="frame" x="120.5" y="0.0" width="59.5" height="60"/>
+                                            <rect key="frame" x="110" y="0.0" width="55" height="55.5"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfQ-g9-aVm">
-                                                    <rect key="frame" x="10" y="10" width="39.5" height="40"/>
+                                                    <rect key="frame" x="10" y="10" width="35" height="35.5"/>
                                                     <state key="normal" image="fourthView_icon_twitter_gray.png"/>
                                                     <connections>
                                                         <action selector="btn_twitter:" destination="-1" eventType="touchUpInside" id="OHR-1w-Huf"/>
@@ -120,10 +120,10 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYn-O3-rrp">
-                                            <rect key="frame" x="180" y="0.0" width="60" height="60"/>
+                                            <rect key="frame" x="165" y="0.0" width="55" height="55.5"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwS-qv-ICd">
-                                                    <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                                    <rect key="frame" x="10" y="10" width="35" height="35.5"/>
                                                     <state key="normal" image="fourthView_icon_web_gray.png"/>
                                                     <connections>
                                                         <action selector="btn_web:" destination="-1" eventType="touchUpInside" id="Wvv-Dj-uvU"/>
@@ -158,7 +158,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gjh-Rv-aHX">
-                                    <rect key="frame" x="10" y="371" width="300" height="44.5"/>
+                                    <rect key="frame" x="10" y="366.5" width="300" height="44.5"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0SI-e9-Obp">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="44.5"/>
@@ -244,7 +244,7 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J70-b3-6k3">
-                                    <rect key="frame" x="24" y="420.5" width="272" height="32"/>
+                                    <rect key="frame" x="24" y="416" width="272" height="32"/>
                                     <attributedString key="attributedText">
                                         <fragment>
                                             <string key="content">“豊かな人生は美しい髪から”
@@ -265,22 +265,22 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Mc-5W-zto">
-                                    <rect key="frame" x="0.0" y="462.5" width="320" height="46"/>
+                                    <rect key="frame" x="0.0" y="458" width="320" height="46"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alu-ub-Me3">
-                                            <rect key="frame" x="0.0" y="10" width="320" height="26"/>
+                                            <rect key="frame" x="0.0" y="10.5" width="320" height="26"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NbB-bZ-25e">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="15"/>
+                                                    <rect key="frame" x="0.0" y="0.5" width="320" height="15"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDS-fY-6BD">
-                                                            <rect key="frame" x="20" y="1.5" width="290" height="11"/>
+                                                            <rect key="frame" x="20" y="3" width="290" height="11"/>
                                                             <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〒812‐0016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DB-Zn-4ng">
-                                                            <rect key="frame" x="100" y="1.5" width="210" height="11"/>
+                                                            <rect key="frame" x="100" y="3" width="210" height="11"/>
                                                             <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -298,10 +298,10 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEA-FK-q8p">
-                                                    <rect key="frame" x="0.0" y="15" width="320" height="11"/>
+                                                    <rect key="frame" x="0.0" y="15.5" width="320" height="11"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="福岡市博多区博多駅南4‐3‐25 " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NM-KK-csd">
-                                                            <rect key="frame" x="100" y="0.0" width="210" height="11"/>
+                                                            <rect key="frame" x="100" y="0.5" width="210" height="11"/>
                                                             <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -337,16 +337,16 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6L-2T-07z">
-                                    <rect key="frame" x="0.0" y="509.5" width="320" height="40"/>
+                                    <rect key="frame" x="0.0" y="505" width="320" height="40"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電話" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1y-U8-ixG">
-                                            <rect key="frame" x="20" y="15" width="22" height="11"/>
+                                            <rect key="frame" x="20" y="15.5" width="22" height="11"/>
                                             <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0120-000-000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snN-2j-OFS">
-                                            <rect key="frame" x="100" y="14.5" width="210" height="11"/>
+                                            <rect key="frame" x="100" y="15" width="210" height="11"/>
                                             <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -363,19 +363,19 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7X-BY-CMR">
-                                    <rect key="frame" x="0.0" y="550.5" width="320" height="47"/>
+                                    <rect key="frame" x="0.0" y="546" width="320" height="47"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9E-vE-Na0">
-                                            <rect key="frame" x="0.0" y="10" width="320" height="27"/>
+                                            <rect key="frame" x="0.0" y="10.5" width="320" height="27"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="営業時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4j-Su-CF6">
-                                                    <rect key="frame" x="20" y="0.0" width="290" height="11"/>
+                                                    <rect key="frame" x="20" y="0.5" width="290" height="11"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hw6-jD-I04">
-                                                    <rect key="frame" x="100" y="0.0" width="210" height="27"/>
+                                                    <rect key="frame" x="100" y="0.5" width="210" height="27"/>
                                                     <attributedString key="attributedText">
                                                         <fragment>
                                                             <string key="content">【火〜金】 9:30〜19:30
@@ -418,16 +418,16 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="veD-fm-6gB">
-                                    <rect key="frame" x="0.0" y="598.5" width="320" height="40"/>
+                                    <rect key="frame" x="0.0" y="594" width="320" height="40"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="駐車場" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ok8-D5-Oeo">
-                                            <rect key="frame" x="20" y="15" width="33" height="11"/>
+                                            <rect key="frame" x="20" y="15.5" width="33" height="11"/>
                                             <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6台" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeR-f6-AML">
-                                            <rect key="frame" x="100" y="14.5" width="210" height="11"/>
+                                            <rect key="frame" x="100" y="15" width="210" height="11"/>
                                             <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -444,19 +444,19 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evG-QY-pRo">
-                                    <rect key="frame" x="0.0" y="639.5" width="320" height="31"/>
+                                    <rect key="frame" x="0.0" y="635" width="320" height="31"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MEMO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7f-mf-Pvb">
-                                            <rect key="frame" x="20" y="10.5" width="37" height="11"/>
+                                            <rect key="frame" x="20" y="11" width="37" height="11"/>
                                             <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8H-Kx-taw">
-                                            <rect key="frame" x="0.0" y="10" width="320" height="11"/>
+                                            <rect key="frame" x="0.0" y="10.5" width="320" height="11"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sl-KS-qAU">
-                                                    <rect key="frame" x="100" y="0.0" width="210" height="11"/>
+                                                    <rect key="frame" x="100" y="0.5" width="210" height="11"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="クレジットカード利用可">
                                                             <attributes>
@@ -489,13 +489,13 @@
                                     </constraints>
                                 </view>
                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="acF-hW-U2W">
-                                    <rect key="frame" x="10" y="680.5" width="300" height="300"/>
+                                    <rect key="frame" x="10" y="676" width="300" height="300"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="acF-hW-U2W" secondAttribute="height" multiplier="1:1" id="WuJ-2u-5dL"/>
                                     </constraints>
                                 </mapView>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MVM-V5-xr5">
-                                    <rect key="frame" x="0.0" y="990.5" width="320" height="100"/>
+                                    <rect key="frame" x="0.0" y="986" width="320" height="100"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="100" id="Sdg-u0-Ja4"/>
@@ -509,7 +509,7 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="MVM-V5-xr5" secondAttribute="trailing" id="17A-b6-hoB"/>
-                                <constraint firstItem="b40-KY-eY7" firstAttribute="leading" secondItem="aeM-p2-SjG" secondAttribute="leading" constant="40" id="2if-Wk-wbX"/>
+                                <constraint firstItem="b40-KY-eY7" firstAttribute="leading" secondItem="aeM-p2-SjG" secondAttribute="leading" constant="50" id="2if-Wk-wbX"/>
                                 <constraint firstItem="MVM-V5-xr5" firstAttribute="leading" secondItem="aeM-p2-SjG" secondAttribute="leading" id="5pS-6I-6Jh"/>
                                 <constraint firstItem="1Mc-5W-zto" firstAttribute="leading" secondItem="aeM-p2-SjG" secondAttribute="leading" id="8cw-TJ-EUL"/>
                                 <constraint firstItem="n6L-2T-07z" firstAttribute="leading" secondItem="aeM-p2-SjG" secondAttribute="leading" id="9NN-hp-61p"/>
@@ -534,7 +534,7 @@
                                 <constraint firstItem="acF-hW-U2W" firstAttribute="top" secondItem="evG-QY-pRo" secondAttribute="bottom" constant="10" id="cqT-IO-7OE"/>
                                 <constraint firstAttribute="trailing" secondItem="n6L-2T-07z" secondAttribute="trailing" id="fyD-dH-mIm"/>
                                 <constraint firstItem="1Mc-5W-zto" firstAttribute="top" secondItem="J70-b3-6k3" secondAttribute="bottom" constant="10" id="gDd-nX-JAk"/>
-                                <constraint firstAttribute="trailing" secondItem="b40-KY-eY7" secondAttribute="trailing" constant="40" id="gTg-xd-Dku"/>
+                                <constraint firstAttribute="trailing" secondItem="b40-KY-eY7" secondAttribute="trailing" constant="50" id="gTg-xd-Dku"/>
                                 <constraint firstAttribute="trailing" secondItem="cjX-Dw-gZv" secondAttribute="trailing" constant="20" id="hxR-Si-hke"/>
                                 <constraint firstItem="evG-QY-pRo" firstAttribute="leading" secondItem="aeM-p2-SjG" secondAttribute="leading" id="jrL-wx-qrg"/>
                                 <constraint firstItem="n6L-2T-07z" firstAttribute="top" secondItem="1Mc-5W-zto" secondAttribute="bottom" constant="1" id="kWK-Ay-5RV"/>

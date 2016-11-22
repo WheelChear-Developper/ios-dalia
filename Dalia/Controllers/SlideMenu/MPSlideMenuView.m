@@ -65,6 +65,16 @@
         cell = [nib objectAtIndex:0];
     }
 
+    //1.ホーム
+    //2.メンバーズカード
+    //3.リサーブ
+    //4.ポイント
+    //5.WhatNew
+    //6.オンラインショップ
+    //7.クーポン
+    //8.メニュー
+    //9.アクセス
+    //10.設定
     long lng_ch = [[_ary_menuData objectAtIndex:indexPath.row] integerValue];
     switch (lng_ch) {
         case 1:

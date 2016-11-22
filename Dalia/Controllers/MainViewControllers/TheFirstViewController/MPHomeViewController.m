@@ -400,6 +400,9 @@
 
             [self resizeTable];
 
+            //ブロックボタン設定
+            [self setBlockButtonImage];
+
             //通知件数取得
             [[ManagerDownload sharedInstance] getDefaultNotification:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
 
@@ -483,23 +486,211 @@
 - (void)downloadDataFail:(DownloadParam *)param {
 }
 
+- (void)setBlockButtonImage {
+
+    //サイドメニュー情報をplistから読み込み
+    NSBundle* bundle = [NSBundle mainBundle];
+    NSString* path = [bundle pathForResource:@"UIConfig" ofType:@"plist"];
+    NSDictionary* dic = [NSDictionary dictionaryWithContentsOfFile:path];
+    _ary_blockSet =[NSArray arrayWithArray:[dic objectForKey:@"BlockMenuType"]];
+
+    [self setBlockButtonSetImage:btn_block1 setNo:[[_ary_blockSet objectAtIndex:0] integerValue]];
+    [self setBlockButtonSetImage:btn_block2 setNo:[[_ary_blockSet objectAtIndex:1] integerValue]];
+    [self setBlockButtonSetImage:btn_block3 setNo:[[_ary_blockSet objectAtIndex:2] integerValue]];
+    [self setBlockButtonSetImage:btn_block4 setNo:[[_ary_blockSet objectAtIndex:3] integerValue]];
+    [self setBlockButtonSetImage:btn_block5 setNo:[[_ary_blockSet objectAtIndex:4] integerValue]];
+}
+
+- (void)setBlockButtonSetImage:(UIButton*)btn setNo:(long)no {
+
+    //ブロックメニューデータ・セット
+    //1.メンバーズカード
+    //2.whatsnew
+    //3.スタンプ
+    //4.オンラインショップ
+    //5.ポイント
+    //6.リサーブ
+    //7.スタッフ
+    //8.カルテ
+    //9.カタログ
+    //10.ムービーチャンネル
+
+    switch (no) {
+        case 1:
+        {
+            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_memberscard.png"] forState:UIControlStateNormal];
+        }
+            break;
+
+        case 2:
+        {
+            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_whatsnew.png"] forState:UIControlStateNormal];
+        }
+            break;
+
+        case 3:
+        {
+            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_stamp.png"] forState:UIControlStateNormal];
+        }
+            break;
+
+        case 4:
+        {
+            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_onlineshop.png"] forState:UIControlStateNormal];
+        }
+            break;
+
+        case 5:
+        {
+            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_point.png"] forState:UIControlStateNormal];
+        }
+            break;
+
+        case 6:
+        {
+            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_reserve.png"] forState:UIControlStateNormal];
+        }
+            break;
+
+        case 7:
+        {
+            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_staff.png"] forState:UIControlStateNormal];
+        }
+            break;
+
+        case 8:
+        {
+            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_karte.png"] forState:UIControlStateNormal];
+        }
+            break;
+
+        case 9:
+        {
+            [btn setImage:[UIImage imageNamed:@"first_select_btn_haircatalog.png"] forState:UIControlStateNormal];
+        }
+            break;
+
+        case 10:
+        {
+            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_moviechannnel.png"] forState:UIControlStateNormal];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
 - (void)backButtonClicked:(UIButton *)sender {
 
 }
 
 - (IBAction)btn_block1:(id)sender {
+
+    [self setBlockButtonSetAction:[[_ary_blockSet objectAtIndex:0] integerValue]];
 }
 
 - (IBAction)btn_block2:(id)sender {
+
+    [self setBlockButtonSetAction:[[_ary_blockSet objectAtIndex:1] integerValue]];
 }
 
 - (IBAction)btn_block3:(id)sender {
+
+    [self setBlockButtonSetAction:[[_ary_blockSet objectAtIndex:2] integerValue]];
 }
 
 - (IBAction)btn_block4:(id)sender {
+
+    [self setBlockButtonSetAction:[[_ary_blockSet objectAtIndex:3] integerValue]];
 }
 
 - (IBAction)btn_block5:(id)sender {
+
+    [self setBlockButtonSetAction:[[_ary_blockSet objectAtIndex:4] integerValue]];
+}
+
+- (void)setBlockButtonSetAction:(long)no {
+
+    //ブロックメニューデータ・セット
+    //1.メンバーズカード
+    //2.whatsnew
+    //3.スタンプ
+    //4.オンラインショップ
+    //5.ポイント
+    //6.リサーブ
+    //7.スタッフ
+    //8.カルテ
+    //9.カタログ
+    //10.ムービーチャンネル
+
+    switch (no) {
+        case 1:
+        {
+
+        }
+            break;
+
+        case 2:
+        {
+            MPWhatNewViewController *vc = [[MPWhatNewViewController alloc] initWithNibName:@"MPWhatNewViewController" bundle:nil];
+            vc.delegate = self;
+
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+
+        case 3:
+        {
+
+        }
+            break;
+
+        case 4:
+        {
+
+        }
+            break;
+
+        case 5:
+        {
+
+        }
+            break;
+
+        case 6:
+        {
+
+        }
+            break;
+
+        case 7:
+        {
+
+        }
+            break;
+
+        case 8:
+        {
+
+        }
+            break;
+
+        case 9:
+        {
+
+        }
+            break;
+
+        case 10:
+        {
+
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (IBAction)btn_Recommend_Menu_More:(id)sender {
@@ -516,24 +707,6 @@
     vc.delegate = self;
 
     [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (IBAction)btn_Recomend1:(id)sender {
-}
-
-- (IBAction)btn_Recomend2:(id)sender {
-}
-
-- (IBAction)btn_Recomend3:(id)sender {
-}
-
-- (IBAction)btn_Recomend4:(id)sender {
-}
-
-- (IBAction)btn_Recomend5:(id)sender {
-}
-
-- (IBAction)btn_Recomend6:(id)sender {
 }
 
 @end
