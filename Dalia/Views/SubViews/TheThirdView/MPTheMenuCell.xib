@@ -27,13 +27,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAL-mx-igg">
-                        <rect key="frame" x="135" y="5" width="180" height="27"/>
-                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="27"/>
+                        <rect key="frame" x="135" y="5" width="180" height="35.5"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カット" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COh-LN-oxU">
-                        <rect key="frame" x="135" y="37" width="172" height="12"/>
+                        <rect key="frame" x="135" y="45.5" width="172" height="12"/>
                         <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -46,7 +46,7 @@
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIZ-eG-eKe">
-                        <rect key="frame" x="0.0" y="99" width="320" height="1"/>
+                        <rect key="frame" x="130" y="99" width="190" height="1"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="8aE-iF-QlS"/>
@@ -63,7 +63,7 @@
                     <constraint firstAttribute="bottom" secondItem="V5q-gx-xYa" secondAttribute="bottom" constant="5" id="Fei-mG-akb"/>
                     <constraint firstAttribute="trailing" secondItem="ZAL-mx-igg" secondAttribute="trailing" constant="5" id="Qa6-Fp-2Cn"/>
                     <constraint firstItem="V5q-gx-xYa" firstAttribute="top" secondItem="9rT-V8-T1Z" secondAttribute="top" constant="5" id="RJr-pI-QLB"/>
-                    <constraint firstItem="iIZ-eG-eKe" firstAttribute="leading" secondItem="9rT-V8-T1Z" secondAttribute="leading" id="gga-KJ-PHP"/>
+                    <constraint firstItem="iIZ-eG-eKe" firstAttribute="leading" secondItem="9rT-V8-T1Z" secondAttribute="leading" constant="130" id="gga-KJ-PHP"/>
                     <constraint firstAttribute="trailingMargin" secondItem="COh-LN-oxU" secondAttribute="trailing" constant="5" id="kbA-dy-pp0"/>
                     <constraint firstItem="COh-LN-oxU" firstAttribute="leading" secondItem="V5q-gx-xYa" secondAttribute="trailing" constant="5" id="qFI-ao-vFU"/>
                     <constraint firstAttribute="bottom" secondItem="iIZ-eG-eKe" secondAttribute="bottom" id="u2x-lK-Kbi"/>

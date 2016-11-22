@@ -25,36 +25,36 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLB-vt-V4q">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="690"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="680"/>
                             <subviews>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AJl-T3-NSe">
-                                    <rect key="frame" x="0.0" y="-200" width="320" height="290"/>
+                                    <rect key="frame" x="0.0" y="-200" width="320" height="280"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="290" id="IHM-FO-C5g"/>
+                                        <constraint firstAttribute="height" constant="280" id="IHM-FO-C5g"/>
                                     </constraints>
                                 </tableView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJr-9a-sr8">
-                                    <rect key="frame" x="0.0" y="-200" width="320" height="290"/>
+                                    <rect key="frame" x="0.0" y="-200" width="320" height="280"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6R-Ye-oyX">
-                                            <rect key="frame" x="0.0" y="240" width="320" height="50"/>
+                                            <rect key="frame" x="0.0" y="245" width="320" height="35"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beauty Salon 博多店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysK-Bv-4Wq">
-                                                    <rect key="frame" x="10" y="16" width="167.5" height="17"/>
+                                                    <rect key="frame" x="10" y="8.5" width="167.5" height="17"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_white_yajirushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="bYO-Lc-LNY">
-                                                    <rect key="frame" x="280" y="17.5" width="20" height="15"/>
+                                                    <rect key="frame" x="280" y="10" width="20" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="6i9-MI-UWo"/>
                                                         <constraint firstAttribute="height" constant="15" id="NsV-4M-101"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yoe-ml-4hf">
-                                                    <rect key="frame" x="265" y="0.0" width="55" height="50"/>
+                                                    <rect key="frame" x="265" y="0.0" width="55" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="55" id="TtT-UJ-IqP"/>
                                                     </constraints>
@@ -68,7 +68,7 @@
                                                 <constraint firstItem="Yoe-ml-4hf" firstAttribute="top" secondItem="d6R-Ye-oyX" secondAttribute="top" id="jzC-pJ-mtT"/>
                                                 <constraint firstAttribute="bottom" secondItem="Yoe-ml-4hf" secondAttribute="bottom" id="lxq-Ml-wHZ"/>
                                                 <constraint firstAttribute="trailing" secondItem="bYO-Lc-LNY" secondAttribute="trailing" constant="20" id="m6y-9A-UrI"/>
-                                                <constraint firstAttribute="height" constant="50" id="mgX-R8-ePh"/>
+                                                <constraint firstAttribute="height" constant="35" id="mgX-R8-ePh"/>
                                                 <constraint firstAttribute="trailing" secondItem="Yoe-ml-4hf" secondAttribute="trailing" id="w36-BZ-CQ0"/>
                                             </constraints>
                                         </view>
@@ -78,11 +78,11 @@
                                         <constraint firstAttribute="bottom" secondItem="d6R-Ye-oyX" secondAttribute="bottom" id="41n-TE-7Gf"/>
                                         <constraint firstAttribute="trailing" secondItem="d6R-Ye-oyX" secondAttribute="trailing" id="Aqc-7c-4By"/>
                                         <constraint firstItem="d6R-Ye-oyX" firstAttribute="leading" secondItem="tJr-9a-sr8" secondAttribute="leading" id="JP3-8C-VNj"/>
-                                        <constraint firstAttribute="height" constant="290" id="STR-sj-n5q"/>
+                                        <constraint firstAttribute="height" constant="280" id="STR-sj-n5q"/>
                                     </constraints>
                                 </view>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ypu-ZK-n1I">
-                                    <rect key="frame" x="0.0" y="90" width="320" height="600"/>
+                                    <rect key="frame" x="0.0" y="80" width="320" height="600"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="600" id="DLK-F9-8BL"/>
@@ -134,7 +134,7 @@
         </view>
     </objects>
     <resources>
-        <image name="down_white_yajirushi.png" width="72" height="45"/>
+        <image name="down_white_yajirushi.png" width="36" height="22"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
