@@ -90,7 +90,7 @@
     rect.size.height = 50;
     _bgTabBar = [[UIImageView alloc] initWithFrame:rect];
     [_bgTabBar setTag:1111];
-    //    [bgTabBar setImage:[UIImage imageNamed:@"tab_back.png"]];
+    [_bgTabBar setBackgroundColor:[UIColor colorWithRed:247/255.0 green:247/255.0 blue:245/255.0 alpha:0.95]];
     [_bgTabBar setUserInteractionEnabled:YES];
     float widthBT = rect.size.width / _numberTab;
     for (int i = 0; i < _numberTab; i++) {
@@ -334,7 +334,7 @@
 
     //カスタムナビゲーション作成
     _view_custom_navigationView = [[UIView alloc] init];
-    [_view_custom_navigationView setBackgroundColor:[UIColor colorWithRed:247/255.0 green:247/255.0 blue:245/255.0 alpha:1.00]];
+    [_view_custom_navigationView setBackgroundColor:[UIColor colorWithRed:247/255.0 green:247/255.0 blue:245/255.0 alpha:0.95]];
     [_view_custom_navigationView setUserInteractionEnabled:YES];
     CGRect custom_frameNavigationView = _view_custom_navigationView.frame;
     custom_frameNavigationView.origin.x = FRAME_ORGIN;

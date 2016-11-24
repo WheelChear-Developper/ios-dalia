@@ -113,6 +113,11 @@
     [_backButton addSubview:button_BaseView];
     [_basic_navigationView addSubview:_backButton];
     [self setHiddenBackButton:YES];
+
+    //ステータスバー背景設定
+    UIView* view_frameNavigationView_shadow = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, [[UIApplication sharedApplication] statusBarFrame].size.height)];
+    view_frameNavigationView_shadow.backgroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0 blue:245/255.0 alpha:1.00];
+    [self.view addSubview:view_frameNavigationView_shadow];
 }
 
 - (void)getTaskWithFunctions:(ElevenFunctionType)type {
