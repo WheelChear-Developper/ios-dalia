@@ -162,6 +162,10 @@
     return view_slide;
 }
 
+- (void)pageView:(MPQLPageView *)pageView didMoveToPage:(NSInteger)index {
+
+}
+
 #pragma mark - ManagerDownloadDelegate
 - (void)downloadDataSuccess:(DownloadParam *)param {
 
