@@ -18,9 +18,6 @@
     return view;
 }
 
-- (IBAction)btn_detail:(id)sender {
-}
-
 -(void)setNumberOfPages:(long)count {
 
     _pgc_page.numberOfPages = count;
@@ -34,6 +31,22 @@
 -(long)getCurrentCount {
 
     return _pgc_page.currentPage;
+}
+
+- (IBAction)btn_detail:(id)sender {
+
+    if(_view_message.translatesAutoresizingMaskIntoConstraints){
+
+        _view_message.translatesAutoresizingMaskIntoConstraints = NO;
+
+        [self.scr_rootview setContentOffset:CGPointMake(0, _lng_messageHeight) animated:NO];
+    }else{
+
+        _view_message.translatesAutoresizingMaskIntoConstraints = YES;
+        CGRect rct_message = _view_message.frame;
+        rct_message.size.height = 0;
+        _view_message.frame = rct_message;
+    }
 }
 
 @end

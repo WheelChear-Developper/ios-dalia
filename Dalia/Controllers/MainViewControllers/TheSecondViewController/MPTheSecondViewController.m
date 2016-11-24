@@ -140,8 +140,25 @@
 
     view_slide.scr_rootview.delegate = self;
 
-    view_slide.lbl_title.text = [NSString stringWithFormat:@"%d", index+1];
 
+    //テストデータ設定
+    view_slide.view_specialMark.hidden = NO;
+    view_slide.lbl_title.text = @"シェアサンクス クーポン";
+    [view_slide.img_photo setImage:[UIImage imageNamed:@"coupon_24.png"]];
+    view_slide.lbl_name.text = @"シェア感謝!! カット＋カラー";
+    view_slide.lbl_Info1.text = @"通常価格から";
+    view_slide.lbl_Info2.text = @"30%OFF";
+    view_slide.lbl_turn.text = @"あと１回";
+    [view_slide.img_stamp setImage:nil];
+    view_slide.lbl_date.text = @"2017/12/01(金)";
+    view_slide.lbl_message.text = @"※他のクーポンとの併用はできません。\n※2,000円以下のメニューは対象外\n※お会計前にスタッフにご提示ください。\n※このクーポンは１回限定でご利用いただけます。";
+    view_slide.lng_messageHeight = view_slide.view_message.frame.size.height;
+
+    view_slide.view_message.translatesAutoresizingMaskIntoConstraints = YES;
+    CGRect rct_message = view_slide.view_message.frame;
+    rct_message.size.height = 0;
+    view_slide.view_message.frame = rct_message;
+    
     return view_slide;
 }
 

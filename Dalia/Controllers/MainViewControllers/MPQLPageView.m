@@ -101,7 +101,7 @@
     }];
     
     [self loadContainerScrollView];
-    [self loadButtonBar];
+//    [self loadButtonBar];
     
     [self gotoPage:self.selectedIndex animated:NO];
     [self selectButtonAtIndex:self.selectedIndex];

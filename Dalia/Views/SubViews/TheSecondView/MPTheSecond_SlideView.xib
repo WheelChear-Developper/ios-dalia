@@ -23,10 +23,10 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="735"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n25-bz-wt6">
-                                    <rect key="frame" x="0.0" y="70" width="35" height="625"/>
+                                    <rect key="frame" x="0.0" y="70" width="35" height="400"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ud-0f-neJ">
-                                            <rect key="frame" x="0.0" y="294.5" width="35" height="35"/>
+                                            <rect key="frame" x="0.0" y="182" width="35" height="35"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left_yajirushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="QVD-4C-gVJ">
                                                     <rect key="frame" x="6.5" y="7" width="15" height="20"/>
@@ -49,15 +49,16 @@
                                     <constraints>
                                         <constraint firstItem="1Ud-0f-neJ" firstAttribute="leading" secondItem="n25-bz-wt6" secondAttribute="leading" id="8Z7-kw-2qA"/>
                                         <constraint firstAttribute="width" constant="35" id="bct-H5-uQx"/>
+                                        <constraint firstAttribute="height" constant="400" id="cPd-50-bvw"/>
                                         <constraint firstAttribute="trailing" secondItem="1Ud-0f-neJ" secondAttribute="trailing" id="piX-EC-Dbf"/>
                                         <constraint firstItem="1Ud-0f-neJ" firstAttribute="centerY" secondItem="n25-bz-wt6" secondAttribute="centerY" id="qNn-Ev-Uqu"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdY-5T-sGa">
-                                    <rect key="frame" x="285" y="70" width="35" height="625"/>
+                                    <rect key="frame" x="285" y="70" width="35" height="400"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5n-iC-Uhi">
-                                            <rect key="frame" x="0.0" y="295" width="35" height="35"/>
+                                            <rect key="frame" x="0.0" y="182.5" width="35" height="35"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_yajirushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="eup-2y-3St">
                                                     <rect key="frame" x="13.5" y="7" width="15" height="20"/>
@@ -81,6 +82,7 @@
                                         <constraint firstItem="K5n-iC-Uhi" firstAttribute="centerY" secondItem="qdY-5T-sGa" secondAttribute="centerY" id="dON-rC-e5f"/>
                                         <constraint firstAttribute="width" constant="35" id="j1h-xp-v08"/>
                                         <constraint firstAttribute="trailing" secondItem="K5n-iC-Uhi" secondAttribute="trailing" id="q1n-5s-RHP"/>
+                                        <constraint firstAttribute="height" constant="400" id="w8Z-J4-PeQ"/>
                                         <constraint firstItem="K5n-iC-Uhi" firstAttribute="leading" secondItem="qdY-5T-sGa" secondAttribute="leading" id="y0Q-4w-Hmf"/>
                                     </constraints>
                                 </view>
@@ -196,8 +198,8 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdx-Dy-gr0">
                                                     <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qE-eh-Mea">
-                                                            <rect key="frame" x="5" y="4" width="240" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qE-eh-Mea">
+                                                            <rect key="frame" x="5" y="14.5" width="240" height="0.0"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -211,7 +213,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="3qE-eh-Mea" secondAttribute="trailing" constant="5" id="ou6-wP-Q2s"/>
                                                     </constraints>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coupon_24.png" translatesAutoresizingMaskIntoConstraints="NO" id="qaY-bi-lWY">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qaY-bi-lWY">
                                                     <rect key="frame" x="8" y="38" width="234" height="130"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="130" id="GYF-wh-dc6"/>
@@ -513,7 +515,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZK-D5-qo3">
-                                            <rect key="frame" x="40" y="0.0" width="37.5" height="37.5"/>
+                                            <rect key="frame" x="30" y="0.0" width="37.5" height="37.5"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secondview_icon_specialcoupon.png" translatesAutoresizingMaskIntoConstraints="NO" id="4dA-dd-dX7">
                                                     <rect key="frame" x="0.0" y="0.0" width="37.5" height="37.5"/>
@@ -540,7 +542,7 @@
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="o8p-st-QMy" secondAttribute="trailing" id="41J-rD-62S"/>
                                         <constraint firstItem="o8p-st-QMy" firstAttribute="leading" secondItem="u6f-3Z-ILD" secondAttribute="trailing" id="A4B-GU-fIC"/>
-                                        <constraint firstItem="fZK-D5-qo3" firstAttribute="leading" secondItem="jVc-tQ-6m4" secondAttribute="leading" constant="40" id="HcE-6n-Hmq"/>
+                                        <constraint firstItem="fZK-D5-qo3" firstAttribute="leading" secondItem="jVc-tQ-6m4" secondAttribute="leading" constant="30" id="HcE-6n-Hmq"/>
                                         <constraint firstItem="lJf-GY-rm1" firstAttribute="top" secondItem="jVc-tQ-6m4" secondAttribute="top" id="Obl-mz-Bd0"/>
                                         <constraint firstAttribute="bottom" secondItem="u6f-3Z-ILD" secondAttribute="bottom" id="Q9F-qo-URQ"/>
                                         <constraint firstItem="o8p-st-QMy" firstAttribute="top" secondItem="jVc-tQ-6m4" secondAttribute="top" id="WY5-MC-xTK"/>
@@ -572,10 +574,8 @@
                                 <constraint firstItem="jVc-tQ-6m4" firstAttribute="leading" secondItem="nfQ-th-eQA" secondAttribute="leading" id="Uzz-uh-UIx"/>
                                 <constraint firstAttribute="bottom" secondItem="uoy-h5-6nb" secondAttribute="bottom" constant="10" id="XIV-9c-bga"/>
                                 <constraint firstAttribute="trailing" secondItem="qdY-5T-sGa" secondAttribute="trailing" id="XTv-95-Wi2"/>
-                                <constraint firstItem="uoy-h5-6nb" firstAttribute="top" secondItem="n25-bz-wt6" secondAttribute="bottom" id="Xxo-3d-nmm"/>
                                 <constraint firstItem="uoy-h5-6nb" firstAttribute="top" secondItem="jVc-tQ-6m4" secondAttribute="bottom" constant="10" id="b54-F6-kcc"/>
                                 <constraint firstItem="jVc-tQ-6m4" firstAttribute="top" secondItem="2Uu-1h-93l" secondAttribute="bottom" id="gPR-HC-nD2"/>
-                                <constraint firstItem="uoy-h5-6nb" firstAttribute="top" secondItem="qdY-5T-sGa" secondAttribute="bottom" id="l2N-Uq-AF7"/>
                                 <constraint firstItem="2Uu-1h-93l" firstAttribute="centerX" secondItem="nfQ-th-eQA" secondAttribute="centerX" id="q8y-2f-EMe"/>
                                 <constraint firstItem="n25-bz-wt6" firstAttribute="leading" secondItem="nfQ-th-eQA" secondAttribute="leading" id="qpX-jJ-w5a"/>
                             </constraints>
@@ -623,7 +623,6 @@
         </view>
     </objects>
     <resources>
-        <image name="coupon_24.png" width="884" height="541"/>
         <image name="left_yajirushi.png" width="19" height="29"/>
         <image name="right_yajirushi.png" width="19" height="29"/>
         <image name="secondview_icon_facebook_maru.png" width="184" height="185"/>
