@@ -31,13 +31,6 @@
                         <outlet property="delegate" destination="-1" id="tIy-le-6UC"/>
                     </connections>
                 </webView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psD-eQ-LwX">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="TZk-Gg-Dkt"/>
-                    </constraints>
-                </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Id-G2-u5m">
                     <rect key="frame" x="0.0" y="545" width="320" height="55"/>
                     <subviews>
@@ -61,7 +54,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="grF-eI-qVo" firstAttribute="centerX" secondItem="SsB-Xn-krR" secondAttribute="centerX" id="MgP-PY-OmT"/>
                                 <constraint firstItem="grF-eI-qVo" firstAttribute="centerY" secondItem="SsB-Xn-krR" secondAttribute="centerY" id="Shc-Ji-Fsg"/>
@@ -87,7 +80,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="seL-mv-PjP" firstAttribute="centerY" secondItem="LHV-KJ-Q00" secondAttribute="centerY" id="cWv-o7-tkv"/>
                                 <constraint firstItem="seL-mv-PjP" firstAttribute="centerX" secondItem="LHV-KJ-Q00" secondAttribute="centerX" id="uY4-Cc-xqi"/>
@@ -113,7 +106,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="0xR-oD-C2q" firstAttribute="centerX" secondItem="309-UA-jje" secondAttribute="centerX" id="IT6-if-Efs"/>
                                 <constraint firstItem="0xR-oD-C2q" firstAttribute="centerY" secondItem="309-UA-jje" secondAttribute="centerY" id="TcC-9J-gDD"/>
@@ -139,7 +132,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="QAm-bs-SRf" firstAttribute="centerX" secondItem="H6c-2L-utD" secondAttribute="centerX" id="1vc-yu-X4x"/>
                                 <constraint firstItem="QAm-bs-SRf" firstAttribute="centerY" secondItem="H6c-2L-utD" secondAttribute="centerY" id="XyZ-Sm-P2O"/>
@@ -153,7 +146,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="H6c-2L-utD" secondAttribute="bottom" id="2zg-Wc-67e"/>
                         <constraint firstItem="UTp-mX-Afv" firstAttribute="leading" secondItem="4Id-G2-u5m" secondAttribute="leading" id="3R0-jY-yHq"/>
@@ -181,12 +174,9 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="URT-hR-Aqc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="37x-G6-vCg"/>
-                <constraint firstAttribute="trailing" secondItem="psD-eQ-LwX" secondAttribute="trailing" id="8Fu-uP-NWv"/>
-                <constraint firstItem="psD-eQ-LwX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="D5N-os-FUR"/>
                 <constraint firstAttribute="trailing" secondItem="URT-hR-Aqc" secondAttribute="trailing" id="Pwo-tD-kMQ"/>
                 <constraint firstAttribute="trailing" secondItem="4Id-G2-u5m" secondAttribute="trailing" id="RkW-fw-FfT"/>
                 <constraint firstAttribute="bottom" secondItem="4Id-G2-u5m" secondAttribute="bottom" id="RvP-hM-eil"/>
-                <constraint firstItem="psD-eQ-LwX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cEV-Fr-Qtx"/>
                 <constraint firstAttribute="bottom" secondItem="URT-hR-Aqc" secondAttribute="bottom" id="cIq-x7-xGL"/>
                 <constraint firstItem="4Id-G2-u5m" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="f7x-HZ-zTd"/>
                 <constraint firstItem="URT-hR-Aqc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tfG-9O-VMu"/>
