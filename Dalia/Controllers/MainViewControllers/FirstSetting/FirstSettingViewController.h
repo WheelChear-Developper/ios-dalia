@@ -1,5 +1,5 @@
 //
-//  TheUserInfoViewController.h
+//  FirstSettingViewController.h
 //  Misepuri
 //
 //  Created by M.Amatani on 2016/11/02.
@@ -12,12 +12,12 @@
 #import "MPMemberObject.h"
 #import "Configuration.h"
 
-@protocol TheUserInfoViewControllerDelegate<NSObject>
+@protocol FirstSettingViewControllerDelegate<NSObject>
 @end
 
-@interface TheUserInfoViewController : MPBaseViewController <UITextFieldDelegate, ManagerDownloadDelegate, UIScrollViewDelegate>
+@interface FirstSettingViewController : MPBaseViewController <UITextFieldDelegate, ManagerDownloadDelegate, UIScrollViewDelegate>
 {    
-    id<TheUserInfoViewControllerDelegate> _TheUserInfoViewControllerDelegate;
+    id<FirstSettingViewControllerDelegate> _FirstSettingViewControllerDelegate;
     
     long lng_sexflag;
     NSString* str_ID;
@@ -28,7 +28,7 @@
     CGPoint cgpoint_tf;
     UIKeyboardType kb_type;
 }
-@property (nonatomic) id<TheUserInfoViewControllerDelegate> TheUserInfoViewControllerDelegate;
+@property (nonatomic) id<FirstSettingViewControllerDelegate> FirstSettingViewControllerDelegate;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scr_view;
 

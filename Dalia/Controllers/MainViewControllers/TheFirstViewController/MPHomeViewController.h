@@ -15,7 +15,7 @@
 
 #import "MPMenuListCollectionCell.h"
 
-#import "TheUserInfoViewController.h"
+#import "FirstSettingViewController.h"
 #import "MPWebViewController.h"
 #import "MPMenuTopinfoObject.h"
 #import "MPRecommend_menuObject.h"
@@ -31,7 +31,7 @@
 #import "MPWhatNewViewController.h"
 #import "MPWhatNewInfoViewController.h"
 
-@interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, TheUserInfoViewControllerDelegate ,UICollectionViewDataSource, UICollectionViewDelegate, MPRecommendMenuViewControllerDelegate ,MPRecommendMenuInfoViewControllerDelegate, MPWhatNewViewControllerDelegate, MPWhatNewInfoViewControllerDelegate>
+@interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, FirstSettingViewControllerDelegate ,UICollectionViewDataSource, UICollectionViewDelegate, MPRecommendMenuViewControllerDelegate ,MPRecommendMenuInfoViewControllerDelegate, MPWhatNewViewControllerDelegate, MPWhatNewInfoViewControllerDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;

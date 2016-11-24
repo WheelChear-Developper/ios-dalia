@@ -29,8 +29,8 @@
     //アカウント画面呼び出し
     if([Configuration getFirstUserInfoSet] == false){
         
-        TheUserInfoViewController *initialViewController = [[TheUserInfoViewController alloc] initWithNibName:@"TheUserInfoViewController" bundle:nil];
-        initialViewController.TheUserInfoViewControllerDelegate = self;
+        FirstSettingViewController *initialViewController = [[FirstSettingViewController alloc] initWithNibName:@"FirstSettingViewController" bundle:nil];
+        initialViewController.FirstSettingViewControllerDelegate = self;
         [self presentViewController:initialViewController animated:NO completion:nil];
     }
     

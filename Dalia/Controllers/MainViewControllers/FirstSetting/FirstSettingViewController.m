@@ -1,19 +1,19 @@
 //
-//  TheUserInfoViewController.m
+//  FirstSettingViewController.m
 //  Misepuri
 //
 //  Created by M.Amatani on 2016/11/02.
 //  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
-#import "TheUserInfoViewController.h"
+#import "FirstSettingViewController.h"
 
-@interface TheUserInfoViewController ()
+@interface FirstSettingViewController ()
 @end
 
-@implementation TheUserInfoViewController
+@implementation FirstSettingViewController
 
-@synthesize TheUserInfoViewControllerDelegate = _TheUserInfoViewControllerDelegate;
+@synthesize FirstSettingViewControllerDelegate = _FirstSettingViewControllerDelegate;
 
 - (void)viewDidLoad {
     
