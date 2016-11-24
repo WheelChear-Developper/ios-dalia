@@ -1051,7 +1051,7 @@
     }
 }
 
-- (void) processListCoupon:(NSArray *)listObject with:(DownloadParam *)param{
+- (void)processListCoupon:(NSArray *)listObject with:(DownloadParam *)param{
 
     //クーポン取得
     for (NSDictionary *dic in listObject) {

@@ -12,10 +12,13 @@
 
 @interface MPTheSecond_SlideView : UIView
 {
+    __weak IBOutlet UIView* _scr_inView;
+    CGPoint _scrollBeginingPoint;
+    
     __weak IBOutlet UIPageControl *_pgc_page;
 
     __weak IBOutlet UIView *_view_specialMark;
-    __weak IBOutlet UILabel *_lbl_title;
+//    __weak IBOutlet UILabel *_lbl_title;
     __weak IBOutlet UIImageView *_img_photo;
     __weak IBOutlet UILabel *_lbl_name;
 
@@ -30,7 +33,13 @@
     __weak IBOutlet UILabel *_lbl_message;
 
 }
++ (instancetype)myView;
 @property (nonatomic, assign) id<MPTheSecond_SlideViewDelegate> delegate;
+
+@property (nonatomic) UIScrollView* scr_rootview;
+
+@property (nonatomic) UILabel *lbl_title;
+
 - (IBAction)btn_detail:(id)sender;
 
 -(void)setNumberOfPages:(long)count;

@@ -10,19 +10,14 @@
 #import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
 #import "MPTheSecond_SlideView.h"
+#import "MPQLPageView.h"
 
-@interface MPTheSecondViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTheSecond_SlideViewDelegate>
+@interface MPTheSecondViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTheSecond_SlideViewDelegate, MPQLPageViewDataSource, MPQLPageViewDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;
     CGPoint _scrollBeginingPoint;
-
-    long _lng_MaxPageCount;
-    long _lng_PageCount;
-
-    MPTheSecond_SlideView *_view_slide;
 }
-- (IBAction)btn_back:(id)sender;
-- (IBAction)btn_next:(id)sender;
+@property (nonatomic, strong) MPQLPageView *pageView;
 
 @end

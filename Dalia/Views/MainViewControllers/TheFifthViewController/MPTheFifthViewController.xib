@@ -416,7 +416,7 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fifth_yajirushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="exk-BI-P4T">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_yajirushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="exk-BI-P4T">
                                             <rect key="frame" x="275" y="10" width="15" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="exk-BI-P4T" secondAttribute="height" multiplier="3:4" id="xee-Fh-hDO"/>
@@ -452,7 +452,7 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fifth_yajirushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="gKh-31-QP5">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_yajirushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="gKh-31-QP5">
                                             <rect key="frame" x="275" y="10" width="15" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="gKh-31-QP5" secondAttribute="height" multiplier="3:4" id="eYc-hM-Gl7"/>
@@ -487,7 +487,7 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fifth_yajirushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="x42-l7-d9t">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_yajirushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="x42-l7-d9t">
                                             <rect key="frame" x="275" y="10" width="15" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="x42-l7-d9t" secondAttribute="height" multiplier="3:4" id="reA-b4-Aoc"/>
@@ -648,7 +648,7 @@
         </view>
     </objects>
     <resources>
-        <image name="fifth_yajirushi.png" width="39" height="59"/>
+        <image name="right_yajirushi.png" width="19" height="29"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

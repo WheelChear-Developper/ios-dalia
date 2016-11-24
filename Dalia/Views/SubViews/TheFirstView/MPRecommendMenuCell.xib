@@ -77,7 +77,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_yajirushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="HoF-DM-b9Y">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_yajirushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="HoF-DM-b9Y">
                                         <rect key="frame" x="178" y="12" width="12" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="HoF-DM-b9Y" secondAttribute="height" multiplier="39:59" id="0o9-D3-Kcx"/>
@@ -149,7 +149,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="home_yajirushi.png" width="39" height="59"/>
+        <image name="right_yajirushi.png" width="19" height="29"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

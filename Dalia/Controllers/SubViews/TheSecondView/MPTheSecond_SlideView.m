@@ -10,13 +10,13 @@
 
 @implementation MPTheSecond_SlideView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
++ (instancetype)myView
+{
+    // xib ファイルから MyView のインスタンスを得る
+    UINib *nib = [UINib nibWithNibName:@"MPTheSecond_SlideView" bundle:nil];
+    MPTheSecond_SlideView *view = [nib instantiateWithOwner:self options:nil][0];
+    return view;
 }
-*/
 
 - (IBAction)btn_detail:(id)sender {
 }

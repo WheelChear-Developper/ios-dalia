@@ -25,7 +25,7 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fifth_yajirushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="cSM-UK-WuN">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_yajirushi.png" translatesAutoresizingMaskIntoConstraints="NO" id="cSM-UK-WuN">
                         <rect key="frame" x="277.5" y="10" width="12.5" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="cSM-UK-WuN" secondAttribute="height" multiplier="2.5:4" id="rIM-0y-bxt"/>
@@ -58,6 +58,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="fifth_yajirushi.png" width="39" height="59"/>
+        <image name="right_yajirushi.png" width="19" height="29"/>
     </resources>
 </document>
