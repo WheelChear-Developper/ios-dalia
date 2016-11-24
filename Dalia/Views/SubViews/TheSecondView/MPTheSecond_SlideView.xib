@@ -515,7 +515,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZK-D5-qo3">
-                                            <rect key="frame" x="30" y="0.0" width="37.5" height="37.5"/>
+                                            <rect key="frame" x="25" y="0.0" width="37.5" height="37.5"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secondview_icon_specialcoupon.png" translatesAutoresizingMaskIntoConstraints="NO" id="4dA-dd-dX7">
                                                     <rect key="frame" x="0.0" y="0.0" width="37.5" height="37.5"/>
@@ -542,7 +542,7 @@
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="o8p-st-QMy" secondAttribute="trailing" id="41J-rD-62S"/>
                                         <constraint firstItem="o8p-st-QMy" firstAttribute="leading" secondItem="u6f-3Z-ILD" secondAttribute="trailing" id="A4B-GU-fIC"/>
-                                        <constraint firstItem="fZK-D5-qo3" firstAttribute="leading" secondItem="jVc-tQ-6m4" secondAttribute="leading" constant="30" id="HcE-6n-Hmq"/>
+                                        <constraint firstItem="fZK-D5-qo3" firstAttribute="leading" secondItem="jVc-tQ-6m4" secondAttribute="leading" constant="25" id="HcE-6n-Hmq"/>
                                         <constraint firstItem="lJf-GY-rm1" firstAttribute="top" secondItem="jVc-tQ-6m4" secondAttribute="top" id="Obl-mz-Bd0"/>
                                         <constraint firstAttribute="bottom" secondItem="u6f-3Z-ILD" secondAttribute="bottom" id="Q9F-qo-URQ"/>
                                         <constraint firstItem="o8p-st-QMy" firstAttribute="top" secondItem="jVc-tQ-6m4" secondAttribute="top" id="WY5-MC-xTK"/>
