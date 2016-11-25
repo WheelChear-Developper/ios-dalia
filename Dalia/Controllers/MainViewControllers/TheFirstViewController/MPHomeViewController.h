@@ -33,8 +33,9 @@
 
 #import "MPMembersCardViewController.h"
 #import "MPStampCardViewController.h"
+#import "MPHearCatalogViewController.h"
 
-@interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, FirstSettingViewControllerDelegate ,UICollectionViewDataSource, UICollectionViewDelegate, MPRecommendMenuViewControllerDelegate ,MPRecommendMenuInfoViewControllerDelegate, MPWhatNewViewControllerDelegate, MPWhatNewInfoViewControllerDelegate, MPMembersCardViewControllerDelegate, MPStampCardViewControllerDelegate>
+@interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, FirstSettingViewControllerDelegate ,UICollectionViewDataSource, UICollectionViewDelegate, MPRecommendMenuViewControllerDelegate ,MPRecommendMenuInfoViewControllerDelegate, MPWhatNewViewControllerDelegate, MPWhatNewInfoViewControllerDelegate, MPMembersCardViewControllerDelegate, MPStampCardViewControllerDelegate, MPHearCatalogViewControllerDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;

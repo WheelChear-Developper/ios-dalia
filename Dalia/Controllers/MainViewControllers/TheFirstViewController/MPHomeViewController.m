@@ -67,6 +67,7 @@
     //load cell xib and attach with collectionView
     UINib *cellNib = [UINib nibWithNibName:@"MPMenuListCollectionCell" bundle:nil];
     [_item_collectionView registerNib:cellNib forCellWithReuseIdentifier:@"cell"];
+    [_item_collectionView reloadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -684,7 +685,10 @@
 
         case 9:
         {
+            MPHearCatalogViewController *vc = [[MPHearCatalogViewController alloc] initWithNibName:@"MPHearCatalogViewController" bundle:nil];
+            vc.delegate = self;
 
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
 
