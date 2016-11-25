@@ -224,6 +224,10 @@
 		1075EF0D1DE880FC00974CE1 /* HearCatalogNewstyleCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1075EF0B1DE880FC00974CE1 /* HearCatalogNewstyleCollectionCell.m */; };
 		1075EF101DE8810F00974CE1 /* HearCatalogCategoryCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1075EF0E1DE8810F00974CE1 /* HearCatalogCategoryCollectionCell.xib */; };
 		1075EF111DE8810F00974CE1 /* HearCatalogNewstyleCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1075EF0F1DE8810F00974CE1 /* HearCatalogNewstyleCollectionCell.xib */; };
+		1075EF151DE89F8C00974CE1 /* MPHearCatalogCategoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1075EF131DE89F8C00974CE1 /* MPHearCatalogCategoryListViewController.m */; };
+		1075EF181DE8A00800974CE1 /* MPHearCatalogCategoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1075EF171DE8A00800974CE1 /* MPHearCatalogCategoryListViewController.xib */; };
+		1075EF1B1DE8A51B00974CE1 /* HearCatalogCategoryListViewControllerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1075EF1A1DE8A51B00974CE1 /* HearCatalogCategoryListViewControllerCell.m */; };
+		1075EF1D1DE8A54D00974CE1 /* HearCatalogCategoryListViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1075EF1C1DE8A54D00974CE1 /* HearCatalogCategoryListViewControllerCell.xib */; };
 		1076A9131DDC0CAF0080E8CD /* MPMenuListCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1076A9121DDC0CAF0080E8CD /* MPMenuListCollectionCell.xib */; };
 		1076A9211DDC3A080080E8CD /* secondview_icon_facebook_maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 1076A91E1DDC3A080080E8CD /* secondview_icon_facebook_maru.png */; };
 		1076A9221DDC3A080080E8CD /* secondview_icon_line_maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 1076A91F1DDC3A080080E8CD /* secondview_icon_line_maru.png */; };
@@ -700,6 +704,12 @@
 		1075EF0B1DE880FC00974CE1 /* HearCatalogNewstyleCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HearCatalogNewstyleCollectionCell.m; sourceTree = "<group>"; };
 		1075EF0E1DE8810F00974CE1 /* HearCatalogCategoryCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HearCatalogCategoryCollectionCell.xib; sourceTree = "<group>"; };
 		1075EF0F1DE8810F00974CE1 /* HearCatalogNewstyleCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HearCatalogNewstyleCollectionCell.xib; sourceTree = "<group>"; };
+		1075EF121DE89F8C00974CE1 /* MPHearCatalogCategoryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPHearCatalogCategoryListViewController.h; sourceTree = "<group>"; };
+		1075EF131DE89F8C00974CE1 /* MPHearCatalogCategoryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPHearCatalogCategoryListViewController.m; sourceTree = "<group>"; };
+		1075EF171DE8A00800974CE1 /* MPHearCatalogCategoryListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPHearCatalogCategoryListViewController.xib; sourceTree = "<group>"; };
+		1075EF191DE8A51B00974CE1 /* HearCatalogCategoryListViewControllerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HearCatalogCategoryListViewControllerCell.h; sourceTree = "<group>"; };
+		1075EF1A1DE8A51B00974CE1 /* HearCatalogCategoryListViewControllerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HearCatalogCategoryListViewControllerCell.m; sourceTree = "<group>"; };
+		1075EF1C1DE8A54D00974CE1 /* HearCatalogCategoryListViewControllerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HearCatalogCategoryListViewControllerCell.xib; sourceTree = "<group>"; };
 		1076A9121DDC0CAF0080E8CD /* MPMenuListCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPMenuListCollectionCell.xib; sourceTree = "<group>"; };
 		1076A91E1DDC3A080080E8CD /* secondview_icon_facebook_maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secondview_icon_facebook_maru.png; sourceTree = "<group>"; };
 		1076A91F1DDC3A080080E8CD /* secondview_icon_line_maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secondview_icon_line_maru.png; sourceTree = "<group>"; };
@@ -1476,6 +1486,8 @@
 			children = (
 				10625AEC1DE823AC003CE2FB /* MPHearCatalogViewController.h */,
 				10625AED1DE823AC003CE2FB /* MPHearCatalogViewController.m */,
+				1075EF121DE89F8C00974CE1 /* MPHearCatalogCategoryListViewController.h */,
+				1075EF131DE89F8C00974CE1 /* MPHearCatalogCategoryListViewController.m */,
 			);
 			path = HearCatalog;
 			sourceTree = "<group>";
@@ -1485,6 +1497,7 @@
 			children = (
 				10625A971DE82380003CE2FB /* images */,
 				10625AF11DE823DB003CE2FB /* MPHearCatalogViewController.xib */,
+				1075EF171DE8A00800974CE1 /* MPHearCatalogCategoryListViewController.xib */,
 			);
 			path = HearCatalog;
 			sourceTree = "<group>";
@@ -1728,6 +1741,8 @@
 				1075EF091DE880FC00974CE1 /* HearCatalogCategoryCollectionCell.m */,
 				1075EF0A1DE880FC00974CE1 /* HearCatalogNewstyleCollectionCell.h */,
 				1075EF0B1DE880FC00974CE1 /* HearCatalogNewstyleCollectionCell.m */,
+				1075EF191DE8A51B00974CE1 /* HearCatalogCategoryListViewControllerCell.h */,
+				1075EF1A1DE8A51B00974CE1 /* HearCatalogCategoryListViewControllerCell.m */,
 			);
 			path = HearCatalog;
 			sourceTree = "<group>";
@@ -1737,6 +1752,7 @@
 			children = (
 				1075EF0E1DE8810F00974CE1 /* HearCatalogCategoryCollectionCell.xib */,
 				1075EF0F1DE8810F00974CE1 /* HearCatalogNewstyleCollectionCell.xib */,
+				1075EF1C1DE8A54D00974CE1 /* HearCatalogCategoryListViewControllerCell.xib */,
 			);
 			path = HearCatalog;
 			sourceTree = "<group>";
@@ -2607,10 +2623,12 @@
 				10C4B7971DD9DFEE00E26096 /* sidemenu_setting@2x.png in Resources */,
 				100221551DE2ED6600169B93 /* fourthView_icon_twitter_gray@2x.png in Resources */,
 				10625A901DE8073C003CE2FB /* stampcard_squares_righttop.png in Resources */,
+				1075EF181DE8A00800974CE1 /* MPHearCatalogCategoryListViewController.xib in Resources */,
 				10BC22A81DE83B0400B1A394 /* lady_08.png in Resources */,
 				10BC22B21DE83B0400B1A394 /* lady_clarity_08.png in Resources */,
 				10E6B6271DE2D59900BB0254 /* up_white_yajirushi.png in Resources */,
 				1016C8111DE46C7600BC215E /* first_ttl_recommenditem@2x.png in Resources */,
+				1075EF1D1DE8A54D00974CE1 /* HearCatalogCategoryListViewControllerCell.xib in Resources */,
 				10BC22AF1DE83B0400B1A394 /* lady_clarity_05.png in Resources */,
 				10BC22B41DE83B0400B1A394 /* lady_large.png in Resources */,
 				10625A8B1DE8073C003CE2FB /* header_ttl_stamp.png in Resources */,
@@ -2992,8 +3010,10 @@
 				272CCD821DCAF096006BC4EB /* LazyInternet.m in Sources */,
 				272CCD811DCAF096006BC4EB /* DownloadParam.m in Sources */,
 				10C4B9101DDABE4E00E26096 /* MPRecommend_menuObject.m in Sources */,
+				1075EF151DE89F8C00974CE1 /* MPHearCatalogCategoryListViewController.m in Sources */,
 				272CCD931DCAF096006BC4EB /* CustomColor.m in Sources */,
 				107EA23C1DE4306500A4A8CD /* MPRecommendMenuInfoViewController.m in Sources */,
+				1075EF1B1DE8A51B00974CE1 /* HearCatalogCategoryListViewControllerCell.m in Sources */,
 				106130681DD2D10B00B789B5 /* MPMenuObject.m in Sources */,
 				106130601DD2D10B00B789B5 /* MPShopCatObject.m in Sources */,
 				272CCD961DCAF096006BC4EB /* MPApnsDAO.m in Sources */,

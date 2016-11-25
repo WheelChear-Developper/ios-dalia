@@ -11,11 +11,12 @@
 #import "ManagerDownload.h"
 #import "HearCatalogCategoryCollectionCell.h"
 #import "HearCatalogNewstyleCollectionCell.h"
+#import "MPHearCatalogCategoryListViewController.h"
 
 @protocol MPHearCatalogViewControllerDelegate<NSObject>
 @end
 
-@interface MPHearCatalogViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
+@interface MPHearCatalogViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, MPHearCatalogCategoryListViewControllerDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;
