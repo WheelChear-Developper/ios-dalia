@@ -1,17 +1,20 @@
 //
-//  MPTheFifthViewController.m
-//  Misepuri
+//  MPMembersCardViewController.m
+//  Dalia
 //
-//  Created by M.Amatani on 2016/11/02.
+//  Created by M.Amatani on 2016/11/24.
 //  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
-#import "MPTheFifthViewController.h"
+#import "MPMembersCardViewController.h"
 
-@implementation MPTheFifthViewController
+@interface MPMembersCardViewController ()
+@end
+
+@implementation MPMembersCardViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    
+
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -20,39 +23,31 @@
 }
 
 - (void)viewDidLoad {
-    
+
     [super viewDidLoad];
-    
+
     //🔴contentView 高さ自動調整　幅自動調整
     [_contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
 
     //XIB表示のため、contentViewを非表示
     [_contentView setHidden:YES];
-
-    _lbl_version.text =  [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 
     //🔴標準navigation
-    [self setHidden_BasicNavigation:YES];
-    [self setImage_BasicNavigation:nil];
-    [self setHiddenBackButton:YES];
+    [self setHidden_BasicNavigation:NO];
+    [self setImage_BasicNavigation:[UIImage imageNamed:@"header_ttl_memberscard.png"]];
+    [self setHiddenBackButton:NO];
 
     //🔴カスタムnavigation
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_CustomNavigation:NO];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setImage_CustomNavigation:[UIImage imageNamed:@"header_ttl_setting.png"]];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_CustomNavigation:YES];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setImage_CustomNavigation:nil];
 
     //🔴タブの表示
     [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_Tab:NO];
 
     [super viewWillAppear:animated];
-
-    sw_newsNotification.transform = CGAffineTransformMakeScale(0.9, 0.9);
-    sw_recommended.transform = CGAffineTransformMakeScale(0.9, 0.9);
-    sw_recommendedMenu.transform = CGAffineTransformMakeScale(0.9, 0.9);
-    sw_catalog.transform = CGAffineTransformMakeScale(0.9, 0.9);
-    sw_curpon.transform = CGAffineTransformMakeScale(0.9, 0.9);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -117,10 +112,6 @@
     }
 }
 
-- (void)backButtonClicked:(UIButton *)sender {
-
-}
-
 #pragma mark - ManagerDownloadDelegate
 - (void)downloadDataSuccess:(DownloadParam *)param {
 
@@ -140,34 +131,13 @@
 - (void)downloadDataFail:(DownloadParam *)param {
 }
 
-- (IBAction)sw_newsNotification:(id)sender {
-}
+- (void)backButtonClicked:(UIButton *)sender {
 
-- (IBAction)sw_recommended:(id)sender {
-}
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setTabViewIndex:_lng_tabNo];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] selectTab:_lng_tabNo];
+    [(MPTabBarViewController*)[self.navigationController parentViewController] setUpTabBar];
 
-- (IBAction)sw_recommendedMenu:(id)sender {
-}
-
-- (IBAction)sw_catalog:(id)sender {
-}
-
-- (IBAction)sw_curpon:(id)sender {
-}
-
-- (IBAction)btn_transfer:(id)sender {
-
-    MPTransferViewController *vc = [[MPTransferViewController alloc] initWithNibName:@"MPTransferViewController" bundle:nil];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (IBAction)btn_teams:(id)sender {
-
-    MPTermsViewController *vc = [[MPTermsViewController alloc] initWithNibName:@"MPTermsViewController" bundle:nil];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (IBAction)btn_porisir:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end

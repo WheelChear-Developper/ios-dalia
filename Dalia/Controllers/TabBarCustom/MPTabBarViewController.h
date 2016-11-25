@@ -34,6 +34,7 @@
 
 + (MPTabBarViewController*) sharedInstance;
 - (void)setUpTabBar;
+- (void)setTabViewIndex:(long)tabID;
 - (void)selectTab:(long)tabID;
 - (void)setFadeOut_Tab:(BOOL)isEnable;
 - (void)setHidden_Tab:(BOOL)isEnable;

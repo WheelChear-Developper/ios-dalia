@@ -12,6 +12,8 @@
 #import "MPTheThirdViewController.h"
 #import "MPTheFourthViewController.h"
 #import "MPTheFifthViewController.h"
+#import "MPMembersCardViewController.h"
+
 #import "MPShopObject.h"
 #import "MPConfigObject.h"
 
@@ -163,6 +165,8 @@
 
 - (void)buttonClicked:(UIButton*)sender {
 
+    NSLog(@"TagNo_%d",sender.tag);
+/*
     if (sender.tag != 3) {
         [self setUpTabBar];
     }
@@ -179,6 +183,7 @@
         //        [[ManagerDownload sharedInstance] getListShop:[Utility getAppID] delegate:self];
         //[self setUpTabBar];
     }
+ */
     long tagNum = [sender tag];
 
     [self selectTab:tagNum];
@@ -241,6 +246,14 @@
     }
     
     [self setViewControllers:listVC animated:YES];
+}
+
+- (void)setTabViewIndex:(long)tabID {
+
+    self.selectedIndex = tabID;
+
+    [self selectTab:tabID];
+
 }
 
 - (void)selectTab:(long)tabID {
@@ -429,6 +442,17 @@
 
                      }];
 
+    //1.Home
+    //2.MembersCard
+    //3.Resrve
+    //4.Point
+    //5.Whats,New
+    //6.Online Shop
+    //7.Coupon
+    //8.Menu
+    //9.Access
+    //10.Setting
+
     switch (count) {
         case 1:
         {
@@ -443,13 +467,12 @@
             break;
         case 2:
         {
-            /*
-             SettingViewController *vc_Setting = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
-             UIViewController *vc = vc_Setting;
-             NSMutableArray *listVC = [[NSMutableArray alloc] init];
-             [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
-             [self setViewControllers:listVC animated:YES];
-             */
+            MPMembersCardViewController *vc_Setting = [[MPMembersCardViewController alloc] initWithNibName:@"MPMembersCardViewController" bundle:nil];
+            vc_Setting.lng_tabNo = self.selectedIndex;
+            UIViewController *vc = vc_Setting;
+            NSMutableArray *listVC = [[NSMutableArray alloc] init];
+            [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
+            [self setViewControllers:listVC animated:YES];
         }
             break;
         case 3:

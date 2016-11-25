@@ -8,7 +8,6 @@
 
 #import "MPBaseViewController.h"
 #import "ManagerDownload.h"
-#import "SettingViewController.h"
 
 #define FRAME_HEIGHT 44
 #define FRAME_ORGIN 0
