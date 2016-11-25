@@ -1,14 +1,14 @@
 //
-//  MPMenuListCollectionCell.m
+//  HearCatalogCategoryCollectionCell.m
 //  Dalia
 //
 //  Created by M.Amatani on 2016/11/16.
 //  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
-#import "HearCatalogCollectionCell.h"
+#import "HearCatalogCategoryCollectionCell.h"
 
-@implementation HearCatalogCollectionCell
+@implementation HearCatalogCategoryCollectionCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -22,11 +22,6 @@
         // Initialization code
     }
     return self;
-}
-
-- (void)setImage:(UIImage *)image
-{
-    [imageView setImage:image];
 }
 
 @end

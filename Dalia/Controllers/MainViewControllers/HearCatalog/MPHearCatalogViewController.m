@@ -31,10 +31,6 @@
 
     //XIB表示のため、contentViewを非表示
     [_contentView setHidden:YES];
-
-    //カテゴリ初期値設定
-    _lng_category = 0;
-    [self setCategolyType:_lng_category];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -54,9 +50,13 @@
     [super viewWillAppear:animated];
 
     //load cell xib and attach with collectionView
-    UINib *cellNib = [UINib nibWithNibName:@"HearCatalogCollectionCell" bundle:nil];
-    [_col_catalog registerNib:cellNib forCellWithReuseIdentifier:@"hearCatalogCollectionIdentifier"];
-    [_col_catalog reloadData];
+    UINib *cellNib1 = [UINib nibWithNibName:@"HearCatalogCategoryCollectionCell" bundle:nil];
+    [_col_category registerNib:cellNib1 forCellWithReuseIdentifier:@"hearCatalogCategoryCollectionCellIdentifier"];
+    [_col_category reloadData];
+
+    UINib *cellNib2 = [UINib nibWithNibName:@"HearCatalogNewstyleCollectionCell" bundle:nil];
+    [_col_newstyle registerNib:cellNib2 forCellWithReuseIdentifier:@"hearCatalogNewstyleCollectionCellIdentifier"];
+    [_col_newstyle reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -64,6 +64,21 @@
     _scr_rootview.delegate = self;
 
     [super viewDidAppear:animated];
+
+    _ary_ledies_off = [@[@"hearcatalog_cate_ladies_short_s_dark.png", @"hearcatalog_cate_ladies_bob_s_dark.png", @"hearcatalog_cate_ladies_medium_s_dark.png", @"hearcatalog_cate_ladies_semilong_s_dark.png", @"hearcatalog_cate_ladies_long_s_dark.png", @"hearcatalog_cate_ladies_arrange_s_dark.png"] mutableCopy];
+    _ary_ledies_on = [@[@"hearcatalog_cate_ladies_short_s_light.png", @"hearcatalog_cate_ladies_bob_s_light.png", @"hearcatalog_cate_ladies_medium_s_light.png", @"hearcatalog_cate_ladies_semilong_s_light.png", @"hearcatalog_cate_ladies_long_s_light.png", @"hearcatalog_cate_ladies_arrange_s_light.png"] mutableCopy];
+    _ary_mens_off = [@[@"hearcatalog_cate_mens_short_s_dark.png", @"hearcatalog_cate_mens_medium_s_dark.png", @"hearcatalog_cate_mens_long_s_dark.png"] mutableCopy];
+    _ary_mens_on = [@[@"hearcatalog_cate_mens_short_s_light.png", @"hearcatalog_cate_mens_medium_s_light.png", @"hearcatalog_cate_mens_long_s_light.png"] mutableCopy];
+    _ary_colection_off = nil;
+    _ary_colection_on = nil;
+
+    _ary_news = [@[@"hearcatalog_cate_ladies_short_s_dark.png", @"hearcatalog_cate_ladies_bob_s_dark.png", @"hearcatalog_cate_ladies_medium_s_dark.png", @"hearcatalog_cate_ladies_semilong_s_dark.png", @"hearcatalog_cate_ladies_long_s_dark.png", @"hearcatalog_cate_ladies_arrange_s_dark.png"] mutableCopy];
+
+    //カテゴリ初期値設定
+    _lng_category = 0;
+    [self setCategolyType:_lng_category];
+
+    [_col_newstyle reloadData];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -81,6 +96,8 @@
 -(void)viewDidLayoutSubviews {
 
     [super viewDidLayoutSubviews];
+
+    [self resizeTable];
 }
 
 #pragma mark - ScrollDelegate
@@ -123,11 +140,6 @@
 
 - (void)setCategolyType:(long)type {
 
-    [_view_ladies setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [_view_ladies sizeToFit];
-    [_view_mens setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [_view_mens sizeToFit];
-
     switch (type) {
         case 0:
         {
@@ -135,59 +147,8 @@
             _img_mens.image = [UIImage imageNamed:@"hearcatalog_btn_mens_light.png"];
             _img_favorite.image = [UIImage imageNamed:@"hearcatalog_btn_favorit_light.png"];
 
-            [_view_ladies setTranslatesAutoresizingMaskIntoConstraints:YES];
-            [_view_ladies1 setTranslatesAutoresizingMaskIntoConstraints:YES];
-            [_view_ladies2 setTranslatesAutoresizingMaskIntoConstraints:YES];
-            [_view_ladies3 setTranslatesAutoresizingMaskIntoConstraints:YES];
-            CGRect rct_lady1 = _view_ladies1.frame;
-            rct_lady1.size.height = 150;
-            _view_ladies1.frame = rct_lady1;
-            CGRect rct_lady2 = _view_ladies2.frame;
-            rct_lady2.size.height = 150;
-            _view_ladies2.frame = rct_lady2;
-            CGRect rct_lady3 = _view_ladies3.frame;
-            rct_lady3.size.height = 150;
-            _view_ladies3.frame = rct_lady3;
-            CGRect rct_lady = _view_ladies.frame;
-            rct_lady.size.height = 300;
-            _view_ladies.frame = rct_lady;
-
-            [_view_mens setTranslatesAutoresizingMaskIntoConstraints:NO];
-            [_view_mens1 setTranslatesAutoresizingMaskIntoConstraints:YES];
-            [_view_mens2 setTranslatesAutoresizingMaskIntoConstraints:YES];
-            CGRect rct_mens1 = _view_mens1.frame;
-            rct_mens1.size.height = 0;
-            _view_mens1.frame = rct_mens1;
-            CGRect rct_mens2 = _view_mens2.frame;
-            rct_mens2.size.height = 0;
-            _view_mens2.frame = rct_mens2;
-            CGRect rct_mens = _view_mens.frame;
-            rct_mens.size.height = 0;
-            _view_mens.frame = rct_mens;
-
-            [_btn_lady_short setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_short_s_dark.png"] forState:UIControlStateNormal];
-            [_btn_lady_short setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_short_s_light.png"] forState:UIControlStateHighlighted];
-            [_btn_lady_short setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_short_s_light.png"] forState:UIControlStateSelected];
-
-            [_btn_lady_bob setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_bob_s_dark.png"] forState:UIControlStateNormal];
-            [_btn_lady_bob setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_bob_s_light.png"] forState:UIControlStateHighlighted];
-            [_btn_lady_bob setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_bob_s_light.png"] forState:UIControlStateSelected];
-
-            [_btn_lady_medium setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_medium_s_dark.png"] forState:UIControlStateNormal];
-            [_btn_lady_medium setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_medium_s_light.png"] forState:UIControlStateHighlighted];
-            [_btn_lady_medium setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_medium_s_light.png"] forState:UIControlStateSelected];
-
-            [_btn_lady_semilong setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_semilong_s_dark.png"] forState:UIControlStateNormal];
-            [_btn_lady_semilong setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_semilong_s_light.png"] forState:UIControlStateHighlighted];
-            [_btn_lady_semilong setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_semilong_s_light.png"] forState:UIControlStateSelected];
-
-            [_btn_lady_long setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_long_s_dark.png"] forState:UIControlStateNormal];
-            [_btn_lady_long setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_long_s_light.png"] forState:UIControlStateHighlighted];
-            [_btn_lady_long setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_long_s_light.png"] forState:UIControlStateSelected];
-
-            [_btn_lady_arenge setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_arrange_s_dark.png"] forState:UIControlStateNormal];
-            [_btn_lady_arenge setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_arrenge_s_light.png"] forState:UIControlStateHighlighted];
-            [_btn_lady_arenge setImage:[UIImage imageNamed:@"hearcatalog_cate_ladies_arrenge_s_light.png"] forState:UIControlStateSelected];
+            _ary_selectCategory_off = _ary_ledies_off;
+            _ary_selectCategory_on = _ary_ledies_on;
         }
             break;
         case 1:
@@ -196,47 +157,8 @@
             _img_mens.image = [UIImage imageNamed:@"hearcatalog_btn_mens_dark.png"];
             _img_favorite.image = [UIImage imageNamed:@"hearcatalog_btn_favorit_light.png"];
 
-            [_view_ladies setTranslatesAutoresizingMaskIntoConstraints:YES];
-            [_view_ladies1 setTranslatesAutoresizingMaskIntoConstraints:YES];
-            [_view_ladies2 setTranslatesAutoresizingMaskIntoConstraints:YES];
-            [_view_ladies3 setTranslatesAutoresizingMaskIntoConstraints:YES];
-            CGRect rct_lady1 = _view_ladies1.frame;
-            rct_lady1.size.height = 0;
-            _view_ladies1.frame = rct_lady1;
-            CGRect rct_lady2 = _view_ladies2.frame;
-            rct_lady2.size.height = 0;
-            _view_ladies2.frame = rct_lady2;
-            CGRect rct_lady3 = _view_ladies3.frame;
-            rct_lady3.size.height = 0;
-            _view_ladies3.frame = rct_lady3;
-            CGRect rct_lady = _view_ladies.frame;
-            rct_lady.size.height = 0;
-            _view_ladies.frame = rct_lady;
-
-            [_view_mens setTranslatesAutoresizingMaskIntoConstraints:NO];
-            [_view_mens1 setTranslatesAutoresizingMaskIntoConstraints:YES];
-            [_view_mens2 setTranslatesAutoresizingMaskIntoConstraints:YES];
-            CGRect rct_mens1 = _view_mens1.frame;
-            rct_mens1.size.height = 150;
-            _view_mens1.frame = rct_mens1;
-            CGRect rct_mens2 = _view_mens2.frame;
-            rct_mens2.size.height = 150;
-            _view_mens2.frame = rct_mens2;
-            CGRect rct_mens = _view_mens.frame;
-            rct_mens.size.height = 150;
-            _view_mens.frame = rct_mens;
-
-            [_btn_mens_short setImage:[UIImage imageNamed:@"hearcatalog_cate_mens_short_s_dark.png"] forState:UIControlStateNormal];
-            [_btn_mens_short setImage:[UIImage imageNamed:@"hearcatalog_cate_mens_short_s_light.png"] forState:UIControlStateHighlighted];
-            [_btn_mens_short setImage:[UIImage imageNamed:@"hearcatalog_cate_mens_short_s_light.png"] forState:UIControlStateSelected];
-
-            [_btn_mens_medium setImage:[UIImage imageNamed:@"hearcatalog_cate_mens_medium_s_dark.png"] forState:UIControlStateNormal];
-            [_btn_mens_medium setImage:[UIImage imageNamed:@"hearcatalog_cate_mens_medium_s_light.png"] forState:UIControlStateHighlighted];
-            [_btn_mens_medium setImage:[UIImage imageNamed:@"hearcatalog_cate_mens_medium_s_light.png"] forState:UIControlStateSelected];
-
-            [_btn_mens_long setImage:[UIImage imageNamed:@"hearcatalog_cate_mens_long_s_dark.png"] forState:UIControlStateNormal];
-            [_btn_mens_long setImage:[UIImage imageNamed:@"hearcatalog_cate_mens_long_s_light.png"] forState:UIControlStateHighlighted];
-            [_btn_mens_long setImage:[UIImage imageNamed:@"hearcatalog_cate_mens_long_s_light.png"] forState:UIControlStateSelected];
+            _ary_selectCategory_off = _ary_mens_off;
+            _ary_selectCategory_on = _ary_mens_on;
         }
             break;
         case 2:
@@ -245,41 +167,12 @@
             _img_mens.image = [UIImage imageNamed:@"hearcatalog_btn_mens_light.png"];
             _img_favorite.image = [UIImage imageNamed:@"hearcatalog_btn_favorit_dark.png"];
 
-            [_view_ladies setTranslatesAutoresizingMaskIntoConstraints:YES];
-            [_view_ladies1 setTranslatesAutoresizingMaskIntoConstraints:YES];
-            [_view_ladies2 setTranslatesAutoresizingMaskIntoConstraints:YES];
-            [_view_ladies3 setTranslatesAutoresizingMaskIntoConstraints:YES];
-            CGRect rct_lady1 = _view_ladies1.frame;
-            rct_lady1.size.height = 0;
-            _view_ladies1.frame = rct_lady1;
-            CGRect rct_lady2 = _view_ladies2.frame;
-            rct_lady2.size.height = 0;
-            _view_ladies2.frame = rct_lady2;
-            CGRect rct_lady3 = _view_ladies3.frame;
-            rct_lady3.size.height = 0;
-            _view_ladies3.frame = rct_lady3;
-            CGRect rct_lady = _view_ladies.frame;
-            rct_lady.size.height = 0;
-            _view_ladies.frame = rct_lady;
-
-            [_view_mens setTranslatesAutoresizingMaskIntoConstraints:YES];
-            [_view_mens1 setTranslatesAutoresizingMaskIntoConstraints:YES];
-            [_view_mens2 setTranslatesAutoresizingMaskIntoConstraints:YES];
-            CGRect rct_mens1 = _view_mens1.frame;
-            rct_mens1.size.height = 0;
-            _view_mens1.frame = rct_mens1;
-            CGRect rct_mens2 = _view_mens2.frame;
-            rct_mens2.size.height = 0;
-            _view_mens2.frame = rct_mens2;
-            CGRect rct_mens = _view_mens.frame;
-            rct_mens.size.height = 0;
-            _view_mens.frame = rct_mens;
+            _ary_selectCategory_off = _ary_colection_off;
+            _ary_selectCategory_on = _ary_colection_on;
         }
-            break;
-
-        default:
-            break;
     }
+
+    [_col_category reloadData];
 }
 
 #pragma mark - ManagerDownloadDelegate
@@ -305,47 +198,126 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
 
+    if(collectionView == _col_category){
+
+        return CGSizeMake(135.0f, 135.0f);
+    }
+
+    if(collectionView == _col_newstyle){
+
+        return CGSizeMake(90.0f, 90.0f);
+    }
+
     return CGSizeMake(90.0f, 90.0f);
 }
 
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-{
-    return UIEdgeInsetsMake(0.0f, 5.0f, 0.0f, 5.0f);
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+
+    if(collectionView == _col_category){
+
+        return UIEdgeInsetsMake(5.0f, 5.0f, 5.0f, 5.0f);
+    }
+
+    if(collectionView == _col_newstyle){
+        
+        return UIEdgeInsetsMake(5.0f, 5.0f, 5.0f, 5.0f);
+    }
+    return UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f);
 }
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
-{
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+
+    if(collectionView == _col_category){
+
+        return 0.0f;
+    }
+
+    if(collectionView == _col_newstyle){
+        
+        return 0.0f;
+    }
     return 0.0f;
 }
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
-{
-    return 5.0f;
-}
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return 9;
-}
+    if(collectionView == _col_category){
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-
-    HearCatalogCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"hearCatalogCollectionIdentifier" forIndexPath:indexPath];
-    if(cell == nil){
-
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"HearCatalogCollectionCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+        return 10.0f;
     }
 
-    [cell setImage:[UIImage imageNamed:@"lady_01.png"]];
+    if(collectionView == _col_newstyle){
 
-    return cell;
+        return 5.0f;
+    }
+    return 0.0f;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+
+    if(collectionView == _col_category){
+
+        return _ary_selectCategory_off.count;
+    }
+
+    if(collectionView == _col_newstyle){
+
+        return _ary_news.count;
+    }
+    return 0;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    if(collectionView == _col_category){
+
+        HearCatalogCategoryCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"hearCatalogCategoryCollectionCellIdentifier" forIndexPath:indexPath];
+        if(cell == nil){
+
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"HearCatalogCategoryCollectionCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+
+        [cell.btn_image setImage:[UIImage imageNamed:[_ary_selectCategory_off objectAtIndex:indexPath.row]] forState:UIControlStateNormal];
+        [cell.btn_image setImage:[UIImage imageNamed:[_ary_selectCategory_on objectAtIndex:indexPath.row]] forState:UIControlStateHighlighted];
+        [cell.btn_image setImage:[UIImage imageNamed:[_ary_selectCategory_on objectAtIndex:indexPath.row]] forState:UIControlStateSelected];
+
+        return cell;
+    }
+
+    if(collectionView == _col_newstyle){
+
+        HearCatalogNewstyleCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"hearCatalogNewstyleCollectionCellIdentifier" forIndexPath:indexPath];
+        if(cell == nil){
+
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"HearCatalogNewstyleCollectionCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+
+        [cell setImage:[UIImage imageNamed:@"lady_01.png"]];
+        
+        return cell;
+    }
+
+    return nil;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Clicked %ld-%ld",indexPath.section,indexPath.row);
+//    NSLog(@"Clicked %ld-%ld",indexPath.section,indexPath.row);
+}
+
+- (void)resizeTable {
+
+    _col_category.translatesAutoresizingMaskIntoConstraints = YES;
+    CGRect rct_category = _col_category.frame;
+    rct_category.size.height = ceil(_ary_selectCategory_off.count/2)*150;
+    _col_category.frame = rct_category;
+
+    _col_newstyle.translatesAutoresizingMaskIntoConstraints = YES;
+    CGRect rct_newstyle = _col_newstyle.frame;
+    rct_newstyle.size.height = ceil(_ary_news.count/3)*100;
+    _col_newstyle.frame = rct_newstyle;
 }
 
 - (void)backButtonClicked:(UIButton *)sender {

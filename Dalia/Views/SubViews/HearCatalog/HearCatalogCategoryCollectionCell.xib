@@ -10,26 +10,26 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hearCatalogCollectionIdentifier" id="gTV-IL-0wX" customClass="HearCatalogCollectionCell">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hearCatalogCategoryCollectionCellIdentifier" id="gTV-IL-0wX" customClass="HearCatalogCategoryCollectionCell">
             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hPd-kh-LqM">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdS-bT-wu1">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                    </imageView>
+                    </button>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="hPd-kh-LqM" secondAttribute="bottom" id="dov-DO-oR4"/>
-                <constraint firstItem="hPd-kh-LqM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eql-2m-ryT"/>
-                <constraint firstAttribute="trailing" secondItem="hPd-kh-LqM" secondAttribute="trailing" id="g3J-6p-wLF"/>
-                <constraint firstItem="hPd-kh-LqM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nhN-Wa-JRl"/>
+                <constraint firstItem="IdS-bT-wu1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DcB-HJ-05j"/>
+                <constraint firstItem="IdS-bT-wu1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ern-5k-EqK"/>
+                <constraint firstAttribute="bottom" secondItem="IdS-bT-wu1" secondAttribute="bottom" id="TU8-Ui-6sL"/>
+                <constraint firstAttribute="trailing" secondItem="IdS-bT-wu1" secondAttribute="trailing" id="eMr-AD-2Cr"/>
             </constraints>
             <connections>
-                <outlet property="imageView" destination="hPd-kh-LqM" id="C5A-oX-qBe"/>
+                <outlet property="btn_image" destination="IdS-bT-wu1" id="mjV-Rh-GaS"/>
             </connections>
         </collectionViewCell>
     </objects>

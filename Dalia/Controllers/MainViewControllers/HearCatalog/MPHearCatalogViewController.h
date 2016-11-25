@@ -9,40 +9,36 @@
 #import "MPBaseViewController.h"
 #import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
-#import "HearCatalogCollectionCell.h"
+#import "HearCatalogCategoryCollectionCell.h"
+#import "HearCatalogNewstyleCollectionCell.h"
 
 @protocol MPHearCatalogViewControllerDelegate<NSObject>
 @end
 
-@interface MPHearCatalogViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate>
+@interface MPHearCatalogViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;
     CGPoint _scrollBeginingPoint;
-    __weak IBOutlet UICollectionView *_col_catalog;
+
+    __weak IBOutlet UICollectionView *_col_category;
+    __weak IBOutlet UICollectionView *_col_newstyle;
 
     long _lng_category;
     __weak IBOutlet UIImageView *_img_ladies;
     __weak IBOutlet UIImageView *_img_mens;
     __weak IBOutlet UIImageView *_img_favorite;
 
-    __weak IBOutlet UIView *_view_ladies;
-    __weak IBOutlet UIView *_view_ladies1;
-    __weak IBOutlet UIView *_view_ladies2;
-    __weak IBOutlet UIView *_view_ladies3;
-    __weak IBOutlet UIButton *_btn_lady_short;
-    __weak IBOutlet UIButton *_btn_lady_bob;
-    __weak IBOutlet UIButton *_btn_lady_medium;
-    __weak IBOutlet UIButton *_btn_lady_semilong;
-    __weak IBOutlet UIButton *_btn_lady_long;
-    __weak IBOutlet UIButton *_btn_lady_arenge;
+    NSMutableArray* _ary_selectCategory_off;
+    NSMutableArray* _ary_selectCategory_on;
+    NSMutableArray* _ary_ledies_off;
+    NSMutableArray* _ary_ledies_on;
+    NSMutableArray* _ary_mens_off;
+    NSMutableArray* _ary_mens_on;
+    NSMutableArray* _ary_colection_off;
+    NSMutableArray* _ary_colection_on;
 
-    __weak IBOutlet UIView *_view_mens;
-    __weak IBOutlet UIView *_view_mens1;
-    __weak IBOutlet UIView *_view_mens2;
-    __weak IBOutlet UIButton *_btn_mens_short;
-    __weak IBOutlet UIButton *_btn_mens_medium;
-    __weak IBOutlet UIButton *_btn_mens_long;
+    NSMutableArray* _ary_news;
 }
 @property (nonatomic, assign) id<MPHearCatalogViewControllerDelegate> delegate;
 @property (nonatomic) long lng_tabNo;
@@ -50,16 +46,5 @@
 - (IBAction)btn_ladies:(id)sender;
 - (IBAction)btn_mens:(id)sender;
 - (IBAction)btn_favorite:(id)sender;
-
-- (IBAction)btn_lady_short:(id)sender;
-- (IBAction)btn_lady_bob:(id)sender;
-- (IBAction)btn_lady_medium:(id)sender;
-- (IBAction)btn_lady_semilong:(id)sender;
-- (IBAction)btn_lady_long:(id)sender;
-- (IBAction)btn_lady_arenge:(id)sender;
-
-- (IBAction)btn_mens_short:(id)sender;
-- (IBAction)btn_mens_medium:(id)sender;
-- (IBAction)btn_mens_long:(id)sender;
 
 @end
