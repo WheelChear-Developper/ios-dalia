@@ -627,7 +627,10 @@
     switch (no) {
         case 1:
         {
+            MPMembersCardViewController *vc = [[MPMembersCardViewController alloc] initWithNibName:@"MPMembersCardViewController" bundle:nil];
+            vc.delegate = self;
 
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
 

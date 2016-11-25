@@ -31,7 +31,9 @@
 #import "MPWhatNewViewController.h"
 #import "MPWhatNewInfoViewController.h"
 
-@interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, FirstSettingViewControllerDelegate ,UICollectionViewDataSource, UICollectionViewDelegate, MPRecommendMenuViewControllerDelegate ,MPRecommendMenuInfoViewControllerDelegate, MPWhatNewViewControllerDelegate, MPWhatNewInfoViewControllerDelegate>
+#import "MPMembersCardViewController.h"
+
+@interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, FirstSettingViewControllerDelegate ,UICollectionViewDataSource, UICollectionViewDelegate, MPRecommendMenuViewControllerDelegate ,MPRecommendMenuInfoViewControllerDelegate, MPWhatNewViewControllerDelegate, MPWhatNewInfoViewControllerDelegate, MPMembersCardViewControllerDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;
