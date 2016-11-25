@@ -148,6 +148,19 @@
 		10625A721DE7F911003CE2FB /* memberscard_07.png in Resources */ = {isa = PBXBuildFile; fileRef = 10625A6E1DE7F911003CE2FB /* memberscard_07.png */; };
 		10625A731DE7F911003CE2FB /* memberscard_name.png in Resources */ = {isa = PBXBuildFile; fileRef = 10625A6F1DE7F911003CE2FB /* memberscard_name.png */; };
 		10625A741DE7F911003CE2FB /* memberscard_rank.png in Resources */ = {isa = PBXBuildFile; fileRef = 10625A701DE7F911003CE2FB /* memberscard_rank.png */; };
+		10625A7A1DE8031E003CE2FB /* MPStampCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10625A781DE8031E003CE2FB /* MPStampCardViewController.m */; };
+		10625A7D1DE803EB003CE2FB /* MPStampCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10625A7C1DE803EB003CE2FB /* MPStampCardViewController.xib */; };
+		10625A8A1DE8073C003CE2FB /* header_ttl_stamp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10625A7F1DE8073C003CE2FB /* header_ttl_stamp@2x.png */; };
+		10625A8B1DE8073C003CE2FB /* header_ttl_stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 10625A801DE8073C003CE2FB /* header_ttl_stamp.png */; };
+		10625A8C1DE8073C003CE2FB /* stampcard_squares_center.png in Resources */ = {isa = PBXBuildFile; fileRef = 10625A811DE8073C003CE2FB /* stampcard_squares_center.png */; };
+		10625A8D1DE8073C003CE2FB /* stampcard_squares_leftdown.png in Resources */ = {isa = PBXBuildFile; fileRef = 10625A821DE8073C003CE2FB /* stampcard_squares_leftdown.png */; };
+		10625A8E1DE8073C003CE2FB /* stampcard_squares_lefttop.png in Resources */ = {isa = PBXBuildFile; fileRef = 10625A831DE8073C003CE2FB /* stampcard_squares_lefttop.png */; };
+		10625A8F1DE8073C003CE2FB /* stampcard_squares_rightdown.png in Resources */ = {isa = PBXBuildFile; fileRef = 10625A841DE8073C003CE2FB /* stampcard_squares_rightdown.png */; };
+		10625A901DE8073C003CE2FB /* stampcard_squares_righttop.png in Resources */ = {isa = PBXBuildFile; fileRef = 10625A851DE8073C003CE2FB /* stampcard_squares_righttop.png */; };
+		10625A911DE8073C003CE2FB /* stampcard_mark_stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 10625A861DE8073C003CE2FB /* stampcard_mark_stamp.png */; };
+		10625A921DE8073C003CE2FB /* stampcard_font_stampcard.png in Resources */ = {isa = PBXBuildFile; fileRef = 10625A871DE8073C003CE2FB /* stampcard_font_stampcard.png */; };
+		10625A931DE8073C003CE2FB /* stampcard_couponget.png in Resources */ = {isa = PBXBuildFile; fileRef = 10625A881DE8073C003CE2FB /* stampcard_couponget.png */; };
+		10625A941DE8073C003CE2FB /* stampcard_back_expirationdate.png in Resources */ = {isa = PBXBuildFile; fileRef = 10625A891DE8073C003CE2FB /* stampcard_back_expirationdate.png */; };
 		1069E2BC1DDE8FAE00FCC6D6 /* header_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1069E2B21DDE8FAE00FCC6D6 /* header_logo.png */; };
 		1069E2BD1DDE8FAE00FCC6D6 /* header_ttl_access.png in Resources */ = {isa = PBXBuildFile; fileRef = 1069E2B31DDE8FAE00FCC6D6 /* header_ttl_access.png */; };
 		1069E2BE1DDE8FAE00FCC6D6 /* header_ttl_access@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1069E2B41DDE8FAE00FCC6D6 /* header_ttl_access@2x.png */; };
@@ -513,6 +526,20 @@
 		10625A6E1DE7F911003CE2FB /* memberscard_07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = memberscard_07.png; sourceTree = "<group>"; };
 		10625A6F1DE7F911003CE2FB /* memberscard_name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = memberscard_name.png; sourceTree = "<group>"; };
 		10625A701DE7F911003CE2FB /* memberscard_rank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = memberscard_rank.png; sourceTree = "<group>"; };
+		10625A771DE8031E003CE2FB /* MPStampCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPStampCardViewController.h; sourceTree = "<group>"; };
+		10625A781DE8031E003CE2FB /* MPStampCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPStampCardViewController.m; sourceTree = "<group>"; };
+		10625A7C1DE803EB003CE2FB /* MPStampCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPStampCardViewController.xib; sourceTree = "<group>"; };
+		10625A7F1DE8073C003CE2FB /* header_ttl_stamp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header_ttl_stamp@2x.png"; sourceTree = "<group>"; };
+		10625A801DE8073C003CE2FB /* header_ttl_stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_ttl_stamp.png; sourceTree = "<group>"; };
+		10625A811DE8073C003CE2FB /* stampcard_squares_center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stampcard_squares_center.png; sourceTree = "<group>"; };
+		10625A821DE8073C003CE2FB /* stampcard_squares_leftdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stampcard_squares_leftdown.png; sourceTree = "<group>"; };
+		10625A831DE8073C003CE2FB /* stampcard_squares_lefttop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stampcard_squares_lefttop.png; sourceTree = "<group>"; };
+		10625A841DE8073C003CE2FB /* stampcard_squares_rightdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stampcard_squares_rightdown.png; sourceTree = "<group>"; };
+		10625A851DE8073C003CE2FB /* stampcard_squares_righttop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stampcard_squares_righttop.png; sourceTree = "<group>"; };
+		10625A861DE8073C003CE2FB /* stampcard_mark_stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stampcard_mark_stamp.png; sourceTree = "<group>"; };
+		10625A871DE8073C003CE2FB /* stampcard_font_stampcard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stampcard_font_stampcard.png; sourceTree = "<group>"; };
+		10625A881DE8073C003CE2FB /* stampcard_couponget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stampcard_couponget.png; sourceTree = "<group>"; };
+		10625A891DE8073C003CE2FB /* stampcard_back_expirationdate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stampcard_back_expirationdate.png; sourceTree = "<group>"; };
 		1069E2B21DDE8FAE00FCC6D6 /* header_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_logo.png; sourceTree = "<group>"; };
 		1069E2B31DDE8FAE00FCC6D6 /* header_ttl_access.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_ttl_access.png; sourceTree = "<group>"; };
 		1069E2B41DDE8FAE00FCC6D6 /* header_ttl_access@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header_ttl_access@2x.png"; sourceTree = "<group>"; };
@@ -1195,6 +1222,42 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		10625A751DE802E6003CE2FB /* StampCard */ = {
+			isa = PBXGroup;
+			children = (
+				10625A771DE8031E003CE2FB /* MPStampCardViewController.h */,
+				10625A781DE8031E003CE2FB /* MPStampCardViewController.m */,
+			);
+			path = StampCard;
+			sourceTree = "<group>";
+		};
+		10625A761DE802FA003CE2FB /* StampCard */ = {
+			isa = PBXGroup;
+			children = (
+				10625A7E1DE8073C003CE2FB /* images */,
+				10625A7C1DE803EB003CE2FB /* MPStampCardViewController.xib */,
+			);
+			path = StampCard;
+			sourceTree = "<group>";
+		};
+		10625A7E1DE8073C003CE2FB /* images */ = {
+			isa = PBXGroup;
+			children = (
+				10625A7F1DE8073C003CE2FB /* header_ttl_stamp@2x.png */,
+				10625A801DE8073C003CE2FB /* header_ttl_stamp.png */,
+				10625A811DE8073C003CE2FB /* stampcard_squares_center.png */,
+				10625A821DE8073C003CE2FB /* stampcard_squares_leftdown.png */,
+				10625A831DE8073C003CE2FB /* stampcard_squares_lefttop.png */,
+				10625A841DE8073C003CE2FB /* stampcard_squares_rightdown.png */,
+				10625A851DE8073C003CE2FB /* stampcard_squares_righttop.png */,
+				10625A861DE8073C003CE2FB /* stampcard_mark_stamp.png */,
+				10625A871DE8073C003CE2FB /* stampcard_font_stampcard.png */,
+				10625A881DE8073C003CE2FB /* stampcard_couponget.png */,
+				10625A891DE8073C003CE2FB /* stampcard_back_expirationdate.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		1069E2B01DDE8FAE00FCC6D6 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1234,6 +1297,7 @@
 				106A310E1DD7082A00C0C741 /* TheFifthViewController */,
 				10625A3D1DE71503003CE2FB /* FirstSetting */,
 				10625A4B1DE71844003CE2FB /* MembersCard */,
+				10625A751DE802E6003CE2FB /* StampCard */,
 			);
 			path = MainViewControllers;
 			sourceTree = "<group>";
@@ -1385,6 +1449,7 @@
 				10C4B6F31DD9DFEE00E26096 /* TheFifthViewController */,
 				10625A411DE7152C003CE2FB /* FirstSetting */,
 				10625A4C1DE7185A003CE2FB /* MembersCard */,
+				10625A761DE802FA003CE2FB /* StampCard */,
 			);
 			path = MainViewControllers;
 			sourceTree = "<group>";
@@ -2222,8 +2287,10 @@
 				107EA2451DE4307900A4A8CD /* MPRecommendMenuViewController.xib in Resources */,
 				10C4B7971DD9DFEE00E26096 /* sidemenu_setting@2x.png in Resources */,
 				100221551DE2ED6600169B93 /* fourthView_icon_twitter_gray@2x.png in Resources */,
+				10625A901DE8073C003CE2FB /* stampcard_squares_righttop.png in Resources */,
 				10E6B6271DE2D59900BB0254 /* up_white_yajirushi.png in Resources */,
 				1016C8111DE46C7600BC215E /* first_ttl_recommenditem@2x.png in Resources */,
+				10625A8B1DE8073C003CE2FB /* header_ttl_stamp.png in Resources */,
 				1002214E1DE2ED6600169B93 /* fourthView_btn_webreserve.png in Resources */,
 				1061C6AE1DDDD9B7000CEAA2 /* webview_btn_brouser.png in Resources */,
 				10C4B78C1DD9DFEE00E26096 /* sidemenu_memberscard.png in Resources */,
@@ -2277,6 +2344,7 @@
 				1016C80B1DE46A2600BC215E /* top_image_new.png in Resources */,
 				10C4B7AA1DD9DFEE00E26096 /* icon_web_black.png in Resources */,
 				10C4B7981DD9DFEE00E26096 /* sidemenu_whatsnew.png in Resources */,
+				10625A931DE8073C003CE2FB /* stampcard_couponget.png in Resources */,
 				10C4B76B1DD9DFEE00E26096 /* MPHomeViewController.xib in Resources */,
 				10625A671DE7F25D003CE2FB /* members_bg_pink.png in Resources */,
 				1061C6AA1DDDD9B7000CEAA2 /* webview_btn_update.png in Resources */,
@@ -2289,6 +2357,7 @@
 				10C4B7821DD9DFEE00E26096 /* MPSlideMenuCell.xib in Resources */,
 				107EA2231DE420CB00A4A8CD /* first_select_btn_haircatalog.png in Resources */,
 				10C4B7B81DD9DFEE00E26096 /* footer_btn_home@2x.png in Resources */,
+				10625A8D1DE8073C003CE2FB /* stampcard_squares_leftdown.png in Resources */,
 				10625A731DE7F911003CE2FB /* memberscard_name.png in Resources */,
 				1002214B1DE2ED6600169B93 /* fourthView_btn_map@2x.png in Resources */,
 				107EA2331DE420CB00A4A8CD /* first_select_top_btn_stamp.png in Resources */,
@@ -2314,6 +2383,7 @@
 				1016C7E31DE43D8100BC215E /* icon-60@3x.png in Resources */,
 				10C4B7931DD9DFEE00E26096 /* sidemenu_point@2x.png in Resources */,
 				107EA2241DE420CB00A4A8CD /* first_select_btn_haircatalog@2x.png in Resources */,
+				10625A7D1DE803EB003CE2FB /* MPStampCardViewController.xib in Resources */,
 				1016C7D61DE43D8100BC215E /* config.plist in Resources */,
 				1069E2C51DDE8FAE00FCC6D6 /* header_logo@2x.png in Resources */,
 				1076A9271DDC424C0080E8CD /* secondview_icon_specialcoupon.png in Resources */,
@@ -2335,6 +2405,7 @@
 				1049C9FB1DE6A04500240E6C /* right_yajirushi.png in Resources */,
 				10625A481DE71606003CE2FB /* UserInfo_btn_setting_touroku.png in Resources */,
 				10C4B7B31DD9DFEE00E26096 /* footer_btn_setting_on.jpg in Resources */,
+				10625A8E1DE8073C003CE2FB /* stampcard_squares_lefttop.png in Resources */,
 				107EA2441DE4307900A4A8CD /* MPRecommendMenuInfoViewController.xib in Resources */,
 				10C4B77C1DD9DFEE00E26096 /* first_ttl_whatsnew.png in Resources */,
 				10C4B7871DD9DFEE00E26096 /* sidemenu_access@2x.png in Resources */,
@@ -2348,6 +2419,7 @@
 				107EA22C1DE420CB00A4A8CD /* first_select_top_btn_onlineshop@2x.png in Resources */,
 				10C4B7B91DD9DFEE00E26096 /* footer_btn_home.jpg in Resources */,
 				1002217A1DE3395800169B93 /* access_01.png in Resources */,
+				10625A911DE8073C003CE2FB /* stampcard_mark_stamp.png in Resources */,
 				10E6B6241DE2D59900BB0254 /* other_icon_line@2x.png in Resources */,
 				10C4B7BD1DD9DFEE00E26096 /* footer_btn_coupon.jpg in Resources */,
 				10C4B7BF1DD9DFEE00E26096 /* footer_btn_coupon_on.jpg in Resources */,
@@ -2362,11 +2434,14 @@
 				107EA2251DE420CB00A4A8CD /* first_select_top_btn_karte.png in Resources */,
 				107EA2351DE420CB00A4A8CD /* first_select_top_btn_whatsnew.png in Resources */,
 				1016C7FB1DE441AF00BC215E /* whatsnew_16.png in Resources */,
+				10625A941DE8073C003CE2FB /* stampcard_back_expirationdate.png in Resources */,
+				10625A8F1DE8073C003CE2FB /* stampcard_squares_rightdown.png in Resources */,
 				10C4B7BA1DD9DFEE00E26096 /* footer_btn_home_on@2x.png in Resources */,
 				107EA22B1DE420CB00A4A8CD /* first_select_top_btn_onlineshop.png in Resources */,
 				1016C7F21DE43F1900BC215E /* MPWhatNewInfoViewController.xib in Resources */,
 				107957AE1DDDA60A008F35A6 /* secondview_syousai.png in Resources */,
 				10C4B7C11DD9DFEE00E26096 /* footer_btn_access.jpg in Resources */,
+				10625A8C1DE8073C003CE2FB /* stampcard_squares_center.png in Resources */,
 				100221561DE2ED6600169B93 /* fourthView_icon_web_gray.png in Resources */,
 				10E6B61E1DE2D59900BB0254 /* down_white_yajirushi@2x.png in Resources */,
 				1002214C1DE2ED6600169B93 /* fourthView_btn_tel.png in Resources */,
@@ -2386,8 +2461,10 @@
 				1049C9FC1DE6A04500240E6C /* right_yajirushi@2x.png in Resources */,
 				10C4B79B1DD9DFEE00E26096 /* customMenu_close.png in Resources */,
 				1016C7FA1DE441AF00BC215E /* whatsnew_18.png in Resources */,
+				10625A8A1DE8073C003CE2FB /* header_ttl_stamp@2x.png in Resources */,
 				100221511DE2ED6600169B93 /* fourthView_icon_facebook_gray@2x.png in Resources */,
 				107EA2321DE420CB00A4A8CD /* first_select_top_btn_staff@2x.png in Resources */,
+				10625A921DE8073C003CE2FB /* stampcard_font_stampcard.png in Resources */,
 				10C4B7771DD9DFEE00E26096 /* first_ttl_more@2x.png in Resources */,
 				107EA2301DE420CB00A4A8CD /* first_select_top_btn_reserve@2x.png in Resources */,
 				10C4B76A1DD9DFEE00E26096 /* MPTheFifthViewController.xib in Resources */,
@@ -2507,6 +2584,7 @@
 				272CCDC71DCAF096006BC4EB /* Utility.m in Sources */,
 				1016C7EE1DE43F0500BC215E /* MPWhatNewViewController.m in Sources */,
 				1038EF9D1DDF312100134331 /* MPTermsViewController.m in Sources */,
+				10625A7A1DE8031E003CE2FB /* MPStampCardViewController.m in Sources */,
 				272CCD841DCAF096006BC4EB /* ManagerErrors.m in Sources */,
 				272CCD9E1DCAF096006BC4EB /* MPHospitalObject.m in Sources */,
 				106A31711DD7082A00C0C741 /* MPTheThirdViewController.m in Sources */,

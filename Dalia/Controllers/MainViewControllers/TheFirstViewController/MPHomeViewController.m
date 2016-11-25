@@ -645,7 +645,10 @@
 
         case 3:
         {
+            MPStampCardViewController *vc = [[MPStampCardViewController alloc] initWithNibName:@"MPStampCardViewController" bundle:nil];
+            vc.delegate = self;
 
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
 

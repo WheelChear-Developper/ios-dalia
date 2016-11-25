@@ -13,6 +13,7 @@
 #import "MPTheFourthViewController.h"
 #import "MPTheFifthViewController.h"
 #import "MPMembersCardViewController.h"
+#import "MPStampCardViewController.h"
 
 #import "MPShopObject.h"
 #import "MPConfigObject.h"
