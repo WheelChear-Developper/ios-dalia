@@ -676,7 +676,9 @@
 
         case 7:
         {
+            MPStaffViewController *vc = [[MPStaffViewController alloc] initWithNibName:@"MPStaffViewController" bundle:nil];
 
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
 
