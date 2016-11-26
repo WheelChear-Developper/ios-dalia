@@ -9,7 +9,6 @@
 #import "MPHearCatalogCategoryListViewController.h"
 
 @interface MPHearCatalogCategoryListViewController ()
-
 @end
 
 @implementation MPHearCatalogCategoryListViewController
@@ -310,7 +309,7 @@
         double sizeFix = size_img.width / cell.img_photo.frame.size.width;
 
         CGRect rct_cell = cell.img_photo.frame;
-        rct_cell.size.height = size_img.height * sizeFix;
+//        rct_cell.size.height = size_img.height * sizeFix;
         cell.img_photo.frame = rct_cell;
 
         return cell;
@@ -322,6 +321,14 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     //    NSLog(@"Clicked %ld-%ld",indexPath.section,indexPath.row);
+
+    MPHearCatalogCategoryListInfoViewController *vc = [[MPHearCatalogCategoryListInfoViewController alloc] initWithNibName:@"MPHearCatalogCategoryListInfoViewController" bundle:nil];
+    vc.delegate = self;
+    vc.lng_categolyType = _lng_category;
+    vc.lng_categolyNo = indexPath.row;
+    vc.ary_photoList = _ary_photoList;
+
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)resizeTable {

@@ -42,6 +42,7 @@
     NSMutableArray* _ary_news;
 }
 @property (nonatomic, assign) id<MPHearCatalogViewControllerDelegate> delegate;
+
 @property (nonatomic) long lng_tabNo;
 
 - (IBAction)btn_ladies:(id)sender;

@@ -10,11 +10,12 @@
 #import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
 #import "HearCatalogCategoryListViewControllerCell.h"
+#import "MPHearCatalogCategoryListInfoViewController.h"
 
 @protocol MPHearCatalogCategoryListViewControllerDelegate<NSObject>
 @end
 
-@interface MPHearCatalogCategoryListViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
+@interface MPHearCatalogCategoryListViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, MPHearCatalogCategoryListInfoViewControllerDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;
@@ -32,6 +33,7 @@
     NSMutableArray* _ary_photoList;
 }
 @property (nonatomic, assign) id<MPHearCatalogCategoryListViewControllerDelegate> delegate;
+
 @property (nonatomic, assign) long lng_categolyType;
 @property (nonatomic, assign) long lng_categolyNo;
 

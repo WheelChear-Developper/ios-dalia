@@ -26,11 +26,13 @@ typedef NS_ENUM(NSInteger, ElevenFunctionType) {
 @interface MPBaseViewController : UIViewController
 {
     float statusHeight;
-    UIImageView *_basic_navigationView;
+//    UIImageView *_basic_navigationView;
     UIImageView *_basic_navigationIcon;
     UIView *_contentView;
     UIButton *_backButton;
 }
+@property (nonatomic) UIImageView *basic_navigationView;
+
 - (void)getTaskWithFunctions:(ElevenFunctionType)type;
 - (void)backButtonClicked:(UIButton*)sender;
 - (void)setHiddenBackButton:(BOOL)isHidden;

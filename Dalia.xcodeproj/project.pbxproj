@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1001DD111DE931D6007F445D /* MPHearCatalogCategoryListInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1001DD0F1DE931D6007F445D /* MPHearCatalogCategoryListInfoViewController.m */; };
+		1001DD141DE9320E007F445D /* MPHearCatalogCategoryListInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1001DD131DE9320E007F445D /* MPHearCatalogCategoryListInfoViewController.xib */; };
+		1001DD171DE9383D007F445D /* HearCatalogCategoryListInfo_SlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1001DD161DE9383D007F445D /* HearCatalogCategoryListInfo_SlideView.m */; };
+		1001DD191DE93850007F445D /* HearCatalogCategoryListInfo_SlideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1001DD181DE93850007F445D /* HearCatalogCategoryListInfo_SlideView.xib */; };
 		1002214A1DE2ED6600169B93 /* fourthView_btn_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002213B1DE2ED6600169B93 /* fourthView_btn_map.png */; };
 		1002214B1DE2ED6600169B93 /* fourthView_btn_map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002213C1DE2ED6600169B93 /* fourthView_btn_map@2x.png */; };
 		1002214C1DE2ED6600169B93 /* fourthView_btn_tel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1002213D1DE2ED6600169B93 /* fourthView_btn_tel.png */; };
@@ -451,6 +455,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1001DD0E1DE931D6007F445D /* MPHearCatalogCategoryListInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPHearCatalogCategoryListInfoViewController.h; sourceTree = "<group>"; };
+		1001DD0F1DE931D6007F445D /* MPHearCatalogCategoryListInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPHearCatalogCategoryListInfoViewController.m; sourceTree = "<group>"; };
+		1001DD131DE9320E007F445D /* MPHearCatalogCategoryListInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPHearCatalogCategoryListInfoViewController.xib; sourceTree = "<group>"; };
+		1001DD151DE9383D007F445D /* HearCatalogCategoryListInfo_SlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HearCatalogCategoryListInfo_SlideView.h; sourceTree = "<group>"; };
+		1001DD161DE9383D007F445D /* HearCatalogCategoryListInfo_SlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HearCatalogCategoryListInfo_SlideView.m; sourceTree = "<group>"; };
+		1001DD181DE93850007F445D /* HearCatalogCategoryListInfo_SlideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HearCatalogCategoryListInfo_SlideView.xib; sourceTree = "<group>"; };
 		1002213B1DE2ED6600169B93 /* fourthView_btn_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fourthView_btn_map.png; sourceTree = "<group>"; };
 		1002213C1DE2ED6600169B93 /* fourthView_btn_map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fourthView_btn_map@2x.png"; sourceTree = "<group>"; };
 		1002213D1DE2ED6600169B93 /* fourthView_btn_tel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fourthView_btn_tel.png; sourceTree = "<group>"; };
@@ -1488,6 +1498,8 @@
 				10625AED1DE823AC003CE2FB /* MPHearCatalogViewController.m */,
 				1075EF121DE89F8C00974CE1 /* MPHearCatalogCategoryListViewController.h */,
 				1075EF131DE89F8C00974CE1 /* MPHearCatalogCategoryListViewController.m */,
+				1001DD0E1DE931D6007F445D /* MPHearCatalogCategoryListInfoViewController.h */,
+				1001DD0F1DE931D6007F445D /* MPHearCatalogCategoryListInfoViewController.m */,
 			);
 			path = HearCatalog;
 			sourceTree = "<group>";
@@ -1498,6 +1510,7 @@
 				10625A971DE82380003CE2FB /* images */,
 				10625AF11DE823DB003CE2FB /* MPHearCatalogViewController.xib */,
 				1075EF171DE8A00800974CE1 /* MPHearCatalogCategoryListViewController.xib */,
+				1001DD131DE9320E007F445D /* MPHearCatalogCategoryListInfoViewController.xib */,
 			);
 			path = HearCatalog;
 			sourceTree = "<group>";
@@ -1743,6 +1756,8 @@
 				1075EF0B1DE880FC00974CE1 /* HearCatalogNewstyleCollectionCell.m */,
 				1075EF191DE8A51B00974CE1 /* HearCatalogCategoryListViewControllerCell.h */,
 				1075EF1A1DE8A51B00974CE1 /* HearCatalogCategoryListViewControllerCell.m */,
+				1001DD151DE9383D007F445D /* HearCatalogCategoryListInfo_SlideView.h */,
+				1001DD161DE9383D007F445D /* HearCatalogCategoryListInfo_SlideView.m */,
 			);
 			path = HearCatalog;
 			sourceTree = "<group>";
@@ -1753,6 +1768,7 @@
 				1075EF0E1DE8810F00974CE1 /* HearCatalogCategoryCollectionCell.xib */,
 				1075EF0F1DE8810F00974CE1 /* HearCatalogNewstyleCollectionCell.xib */,
 				1075EF1C1DE8A54D00974CE1 /* HearCatalogCategoryListViewControllerCell.xib */,
+				1001DD181DE93850007F445D /* HearCatalogCategoryListInfo_SlideView.xib */,
 			);
 			path = HearCatalog;
 			sourceTree = "<group>";
@@ -2631,6 +2647,7 @@
 				1075EF1D1DE8A54D00974CE1 /* HearCatalogCategoryListViewControllerCell.xib in Resources */,
 				10BC22AF1DE83B0400B1A394 /* lady_clarity_05.png in Resources */,
 				10BC22B41DE83B0400B1A394 /* lady_large.png in Resources */,
+				1001DD191DE93850007F445D /* HearCatalogCategoryListInfo_SlideView.xib in Resources */,
 				10625A8B1DE8073C003CE2FB /* header_ttl_stamp.png in Resources */,
 				1002214E1DE2ED6600169B93 /* fourthView_btn_webreserve.png in Resources */,
 				1061C6AE1DDDD9B7000CEAA2 /* webview_btn_brouser.png in Resources */,
@@ -2672,6 +2689,7 @@
 				107EA2261DE420CB00A4A8CD /* first_select_top_btn_karte@2x.png in Resources */,
 				10625ADD1DE82380003CE2FB /* hearcatalog_cate_ladies_short_w.png in Resources */,
 				10625A6A1DE7F25D003CE2FB /* members_bg_silver.png in Resources */,
+				1001DD141DE9320E007F445D /* MPHearCatalogCategoryListInfoViewController.xib in Resources */,
 				10BC22A21DE83B0400B1A394 /* lady_02.png in Resources */,
 				1002218B1DE3395800169B93 /* menu_perm.png in Resources */,
 				1016C7FD1DE441AF00BC215E /* whatsnew_12.png in Resources */,
@@ -2945,6 +2963,7 @@
 				272CCD891DCAF096006BC4EB /* AFJSONUtilities.m in Sources */,
 				272CCD831DCAF096006BC4EB /* ManagerDownload.m in Sources */,
 				272CCDA01DCAF096006BC4EB /* FMDatabase.m in Sources */,
+				1001DD111DE931D6007F445D /* MPHearCatalogCategoryListInfoViewController.m in Sources */,
 				272CCDC81DCAF096006BC4EB /* VerticallyAlignedLabel.m in Sources */,
 				272CCD9B1DCAF096006BC4EB /* BaseEntity.m in Sources */,
 				10DE079B1DD838810068C3A9 /* MPNewHomeObject.m in Sources */,
@@ -3021,6 +3040,7 @@
 				1075EF0C1DE880FC00974CE1 /* HearCatalogCategoryCollectionCell.m in Sources */,
 				10C4B8CD1DD9FC2200E26096 /* MPRecommendMenuCell.m in Sources */,
 				106130641DD2D10B00B789B5 /* MPUIConfigObject.m in Sources */,
+				1001DD171DE9383D007F445D /* HearCatalogCategoryListInfo_SlideView.m in Sources */,
 				10467E751DE01B5900C51AA3 /* MPTheMenuCell.m in Sources */,
 				107957A61DDD555E008F35A6 /* MPTheSecond_SlideView.m in Sources */,
 				272CCD801DCAF096006BC4EB /* Configuration.m in Sources */,

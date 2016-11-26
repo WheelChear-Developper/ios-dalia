@@ -20,6 +20,4 @@
 }
 @property (nonatomic, strong) MPQLPageView *pageView;
 
-
-
 @end

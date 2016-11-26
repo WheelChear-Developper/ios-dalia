@@ -7,9 +7,7 @@
 //
 
 @interface HearCatalogCategoryListViewControllerCell : UICollectionViewCell
-{
 
-}
 @property (weak, nonatomic) IBOutlet UIImageView *img_photo;
 
 @end

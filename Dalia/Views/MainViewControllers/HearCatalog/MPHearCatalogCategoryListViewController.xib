@@ -128,6 +128,12 @@
                                         <constraint firstItem="ppO-bk-HE5" firstAttribute="width" secondItem="Sls-Sl-gFo" secondAttribute="width" id="xjT-W2-Lpx"/>
                                     </constraints>
                                 </view>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hearcatalog_cate_ladies_short_w.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tps-cb-MJV">
+                                    <rect key="frame" x="15" y="100" width="290" height="109"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Tps-cb-MJV" secondAttribute="height" multiplier="290:109" id="JqN-hD-xPM"/>
+                                    </constraints>
+                                </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s36-vR-DTx">
                                     <rect key="frame" x="15" y="219" width="290" height="120"/>
                                     <subviews>
@@ -178,12 +184,6 @@
                                         <constraint firstAttribute="trailing" secondItem="ByR-Oy-FYs" secondAttribute="trailing" id="w5H-Bk-zdo"/>
                                     </constraints>
                                 </view>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hearcatalog_cate_ladies_short_w.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tps-cb-MJV">
-                                    <rect key="frame" x="15" y="100" width="290" height="109"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="Tps-cb-MJV" secondAttribute="height" multiplier="290:109" id="JqN-hD-xPM"/>
-                                    </constraints>
-                                </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
