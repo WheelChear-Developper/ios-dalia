@@ -8,7 +8,8 @@
 
 @interface HearCatalogCategoryListViewControllerCell : UICollectionViewCell
 {
-    IBOutlet UIImageView *imageView;
+
 }
-- (void)setImage:(UIImage *)image;
+@property (weak, nonatomic) IBOutlet UIImageView *img_photo;
+
 @end

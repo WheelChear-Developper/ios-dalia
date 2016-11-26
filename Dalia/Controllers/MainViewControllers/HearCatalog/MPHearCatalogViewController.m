@@ -31,6 +31,9 @@
 
     //XIB表示のため、contentViewを非表示
     [_contentView setHidden:YES];
+
+    //カテゴリ初期値設定
+    _lng_category = 0;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -57,6 +60,21 @@
     UINib *cellNib2 = [UINib nibWithNibName:@"HearCatalogNewstyleCollectionCell" bundle:nil];
     [_col_newstyle registerNib:cellNib2 forCellWithReuseIdentifier:@"hearCatalogNewstyleCollectionCellIdentifier"];
     [_col_newstyle reloadData];
+
+
+
+    _ary_ledies_off = [@[@"hearcatalog_cate_ladies_short_s_dark.png", @"hearcatalog_cate_ladies_bob_s_dark.png", @"hearcatalog_cate_ladies_medium_s_dark.png", @"hearcatalog_cate_ladies_semilong_s_dark.png", @"hearcatalog_cate_ladies_long_s_dark.png", @"hearcatalog_cate_ladies_arrange_s_dark.png"] mutableCopy];
+    _ary_ledies_on = [@[@"hearcatalog_cate_ladies_short_s_light.png", @"hearcatalog_cate_ladies_bob_s_light.png", @"hearcatalog_cate_ladies_medium_s_light.png", @"hearcatalog_cate_ladies_semilong_s_light.png", @"hearcatalog_cate_ladies_long_s_light.png", @"hearcatalog_cate_ladies_arrange_s_light.png"] mutableCopy];
+    _ary_mens_off = [@[@"hearcatalog_cate_mens_short_s_dark.png", @"hearcatalog_cate_mens_medium_s_dark.png", @"hearcatalog_cate_mens_long_s_dark.png", @"hearcatalog_cate_mens_veryshort_s_dark.png"] mutableCopy];
+    _ary_mens_on = [@[@"hearcatalog_cate_mens_short_s_light.png", @"hearcatalog_cate_mens_medium_s_light.png", @"hearcatalog_cate_mens_long_s_light.png", @"hearcatalog_cate_mens_veryshort_s_light.png"] mutableCopy];
+    _ary_colection_off = nil;
+    _ary_colection_on = nil;
+
+    _ary_news = [@[@"hearcatalog_cate_ladies_short_s_dark.png", @"hearcatalog_cate_ladies_bob_s_dark.png", @"hearcatalog_cate_ladies_medium_s_dark.png", @"hearcatalog_cate_ladies_semilong_s_dark.png", @"hearcatalog_cate_ladies_long_s_dark.png", @"hearcatalog_cate_ladies_arrange_s_dark.png"] mutableCopy];
+
+    [self setCategolyType:_lng_category];
+
+    [_col_newstyle reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -64,21 +82,6 @@
     _scr_rootview.delegate = self;
 
     [super viewDidAppear:animated];
-
-    _ary_ledies_off = [@[@"hearcatalog_cate_ladies_short_s_dark.png", @"hearcatalog_cate_ladies_bob_s_dark.png", @"hearcatalog_cate_ladies_medium_s_dark.png", @"hearcatalog_cate_ladies_semilong_s_dark.png", @"hearcatalog_cate_ladies_long_s_dark.png", @"hearcatalog_cate_ladies_arrange_s_dark.png"] mutableCopy];
-    _ary_ledies_on = [@[@"hearcatalog_cate_ladies_short_s_light.png", @"hearcatalog_cate_ladies_bob_s_light.png", @"hearcatalog_cate_ladies_medium_s_light.png", @"hearcatalog_cate_ladies_semilong_s_light.png", @"hearcatalog_cate_ladies_long_s_light.png", @"hearcatalog_cate_ladies_arrange_s_light.png"] mutableCopy];
-    _ary_mens_off = [@[@"hearcatalog_cate_mens_short_s_dark.png", @"hearcatalog_cate_mens_medium_s_dark.png", @"hearcatalog_cate_mens_long_s_dark.png"] mutableCopy];
-    _ary_mens_on = [@[@"hearcatalog_cate_mens_short_s_light.png", @"hearcatalog_cate_mens_medium_s_light.png", @"hearcatalog_cate_mens_long_s_light.png"] mutableCopy];
-    _ary_colection_off = nil;
-    _ary_colection_on = nil;
-
-    _ary_news = [@[@"hearcatalog_cate_ladies_short_s_dark.png", @"hearcatalog_cate_ladies_bob_s_dark.png", @"hearcatalog_cate_ladies_medium_s_dark.png", @"hearcatalog_cate_ladies_semilong_s_dark.png", @"hearcatalog_cate_ladies_long_s_dark.png", @"hearcatalog_cate_ladies_arrange_s_dark.png"] mutableCopy];
-
-    //カテゴリ初期値設定
-    _lng_category = 0;
-    [self setCategolyType:_lng_category];
-
-    [_col_newstyle reloadData];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -139,6 +142,8 @@
 }
 
 - (void)setCategolyType:(long)type {
+
+    _lng_category = type;
 
     switch (type) {
         case 0:
@@ -323,12 +328,12 @@
 
     _col_category.translatesAutoresizingMaskIntoConstraints = YES;
     CGRect rct_category = _col_category.frame;
-    rct_category.size.height = ceil(_ary_selectCategory_off.count/2)*150;
+    rct_category.size.height = ceil((double)_ary_selectCategory_off.count/2)*150;
     _col_category.frame = rct_category;
 
     _col_newstyle.translatesAutoresizingMaskIntoConstraints = YES;
     CGRect rct_newstyle = _col_newstyle.frame;
-    rct_newstyle.size.height = ceil(_ary_news.count/3)*100;
+    rct_newstyle.size.height = ceil((double)_ary_news.count/3)*100;
     _col_newstyle.frame = rct_newstyle;
 }
 
@@ -364,6 +369,8 @@
 
     MPHearCatalogCategoryListViewController *vc = [[MPHearCatalogCategoryListViewController alloc] initWithNibName:@"MPHearCatalogCategoryListViewController" bundle:nil];
     vc.delegate = self;
+    vc.lng_categolyType = _lng_category;
+    vc.lng_categolyNo = indexPath.row;
 
     [self.navigationController pushViewController:vc animated:YES];
 }

@@ -24,9 +24,4 @@
     return self;
 }
 
-- (void)setImage:(UIImage *)image
-{
-    [imageView setImage:image];
-}
-
 @end

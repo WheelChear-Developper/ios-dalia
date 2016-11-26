@@ -25,11 +25,15 @@
     __weak IBOutlet UIImageView *_img_mens;
     __weak IBOutlet UIImageView *_img_favorite;
 
+    __weak IBOutlet UIImageView *_img_photo;
+
     __weak IBOutlet UICollectionView *_col_photolist;
 
     NSMutableArray* _ary_photoList;
 }
 @property (nonatomic, assign) id<MPHearCatalogCategoryListViewControllerDelegate> delegate;
+@property (nonatomic, assign) long lng_categolyType;
+@property (nonatomic, assign) long lng_categolyNo;
 
 - (IBAction)btn_ladies:(id)sender;
 - (IBAction)btn_mens:(id)sender;

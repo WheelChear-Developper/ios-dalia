@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hearCatalogCategoryListViewControllerCellIdentifier" id="gTV-IL-0wX" customClass="HearCatalogNewstyleCollectionCell">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hearCatalogCategoryListViewControllerCellIdentifier" id="gTV-IL-0wX" customClass="HearCatalogCategoryListViewControllerCell">
             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -29,7 +29,7 @@
                 <constraint firstItem="hPd-kh-LqM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nhN-Wa-JRl"/>
             </constraints>
             <connections>
-                <outlet property="imageView" destination="hPd-kh-LqM" id="C5A-oX-qBe"/>
+                <outlet property="img_photo" destination="hPd-kh-LqM" id="W0n-NH-UhU"/>
             </connections>
         </collectionViewCell>
     </objects>

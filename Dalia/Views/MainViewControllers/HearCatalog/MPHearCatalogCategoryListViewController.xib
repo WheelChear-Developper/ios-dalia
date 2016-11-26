@@ -15,6 +15,7 @@
                 <outlet property="_img_favorite" destination="AKV-oX-sEu" id="99V-ZD-y4f"/>
                 <outlet property="_img_ladies" destination="auB-XP-r8r" id="P43-Jo-FVo"/>
                 <outlet property="_img_mens" destination="hcw-MO-UqD" id="fdN-gQ-Dp8"/>
+                <outlet property="_img_photo" destination="Tps-cb-MJV" id="cg8-cs-Lla"/>
                 <outlet property="_scr_inView" destination="C2d-eQ-jZE" id="IoC-hq-Fmm"/>
                 <outlet property="_scr_rootview" destination="bO6-AQ-yFn" id="qKY-et-ErS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -160,6 +161,10 @@
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
+                                            <connections>
+                                                <outlet property="dataSource" destination="-1" id="OYY-GA-eWh"/>
+                                                <outlet property="delegate" destination="-1" id="EoA-T4-KoN"/>
+                                            </connections>
                                         </collectionView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
