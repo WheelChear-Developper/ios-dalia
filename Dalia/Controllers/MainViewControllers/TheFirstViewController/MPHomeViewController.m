@@ -344,6 +344,31 @@
                _WhatsNew_tableView.contentSize.width,
                MAX(_WhatsNew_tableView.contentSize.height,
                    _WhatsNew_tableView.bounds.size.height));
+
+    if(_list_RecommendItem.count == 0){
+        //item非表示
+        view_item.translatesAutoresizingMaskIntoConstraints = YES;
+        view_item.frame = CGRectMake(view_item.frame.origin.x, view_item.frame.origin.y, view_item.frame.size.width, 0);
+        view_item.hidden = YES;
+    }
+/*
+    if(_list_RecommendMenu.count == 0){
+        //item非表示
+        view_recommend.translatesAutoresizingMaskIntoConstraints = YES;
+        view_recommend.frame = CGRectMake(view_recommend.frame.origin.x, view_recommend.frame.origin.y, view_recommend.frame.size.width, 0);
+        view_recommend.hidden = YES;
+    }
+
+    if(_list_news.count == 0){
+        //item非表示
+        _WhatsNew_tableView.translatesAutoresizingMaskIntoConstraints = YES;
+        _WhatsNew_tableView.frame = CGRectMake(_WhatsNew_tableView.frame.origin.x, _WhatsNew_tableView.frame.origin.y, _WhatsNew_tableView.frame.size.width, 0);
+        _WhatsNew_tableView.hidden = YES;
+        view_news.translatesAutoresizingMaskIntoConstraints = YES;
+        view_news.frame = CGRectMake(view_news.frame.origin.x, view_news.frame.origin.y, view_news.frame.size.width, 0);
+        view_news.hidden = YES;
+    }
+ */
 }
 
 
@@ -376,25 +401,7 @@
 
                 [_list_news addObject:obj];
             }
-/*
-            if(list_RecommendItem.count == 0){
-                //        view_item.hidden = YES;
-                view_item.translatesAutoresizingMaskIntoConstraints = YES;
-                view_item.frame = CGRectMake(view_item.frame.origin.x, view_item.frame.origin.y, view_item.frame.size.width, 0);
-            }
 
-            if(list_RecommendMenu.count == 0){
-//                view_recommend.hidden = YES;
-                view_recommend.translatesAutoresizingMaskIntoConstraints = YES;
-                view_recommend.frame = CGRectMake(view_recommend.frame.origin.x, view_recommend.frame.origin.y, view_recommend.frame.size.width, 0);
-            }
-
-            if(list_news.count == 0){
-                //        view_news.hidden = YES;
-                view_news.translatesAutoresizingMaskIntoConstraints = YES;
-                view_news.frame = CGRectMake(view_news.frame.origin.x, view_news.frame.origin.y, view_news.frame.size.width, 0);
-            }
-*/
             [_item_collectionView reloadData];
             [_RecommendMenuList_tableView reloadData];
             [_WhatsNew_tableView reloadData];

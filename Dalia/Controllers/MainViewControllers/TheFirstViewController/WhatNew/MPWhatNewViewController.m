@@ -8,6 +8,9 @@
 
 #import "MPWhatNewViewController.h"
 
+// リスト取得件数変更
+#define LIMIT_RECORD_MESSAGE_RECEIVED @"-1"
+
 @interface MPWhatNewViewController ()
 @end
 
@@ -62,68 +65,8 @@
     //テーブル選択解除
     [_WhatNewsList_tableView deselectRowAtIndexPath:[_WhatNewsList_tableView indexPathForSelectedRow] animated:YES];
 
-    list_WhatNews = [[NSMutableArray alloc] init];
-    MPWhatNewsObject *dic_menuList1 = [[MPWhatNewsObject alloc] init];
-    dic_menuList1.id = @"1";
-    dic_menuList1.title = @"スプリングキャンペーン";
-    dic_menuList1.content = @"そろそろ春の気配がしてきましたね!!\n3月から春のキャンペーンを開催";
-    dic_menuList1.is_read = 1;
-    dic_menuList1.update_at = @"2017-02-20 00:00:00";
-    dic_menuList1.image = @"";
-    dic_menuList1.thumbnail = @"";
-
-
-    MPWhatNewsObject *dic_menuList2 = [[MPWhatNewsObject alloc] init];
-    dic_menuList2.id = @"2";
-    dic_menuList2.title = @"謹賀新年";
-    dic_menuList2.content = @"あけましておめでとうございます。昨年はご愛顧いただきありがとうござい";
-    dic_menuList2.is_read = 0;
-    dic_menuList2.update_at = @"2017-01-04 00:00:00";
-    dic_menuList2.image = @"";
-    dic_menuList2.thumbnail = @"";
-
-    MPWhatNewsObject *dic_menuList3 = [[MPWhatNewsObject alloc] init];
-    dic_menuList3.id = @"3";
-    dic_menuList3.title = @"カウントダウンキャンペーン";
-    dic_menuList3.content = @"早いもので今年もあと２ヶ月ですね。\n11月１日〜12月31日まで感謝を込";
-    dic_menuList3.is_read = 0;
-    dic_menuList3.update_at = @"2016-12-01 00:00:00";
-    dic_menuList3.image = @"";
-    dic_menuList3.thumbnail = @"";
-
-    MPWhatNewsObject *dic_menuList4 = [[MPWhatNewsObject alloc] init];
-    dic_menuList4.id = @"4";
-    dic_menuList4.title = @"年末年始休業のお知らせ";
-    dic_menuList4.content = @"12月30日(金)〜１月3日(火)は年末年始のお休みとさせて頂きます。";
-    dic_menuList4.is_read = 0;
-    dic_menuList4.update_at = @"2016-11-05 00:00:00";
-    dic_menuList4.image = @"";
-    dic_menuList4.thumbnail = @"";
-
-    MPWhatNewsObject *dic_menuList5 = [[MPWhatNewsObject alloc] init];
-    dic_menuList5.id = @"5";
-    dic_menuList5.title = @"11月の定休日のお知らせ";
-    dic_menuList5.content = @"11月の定休日のお知らせです。7日(月)・14日(月)・21日(月)・22日(火)・";
-    dic_menuList5.is_read = 0;
-    dic_menuList5.update_at = @"2016-11-01 00:00:00";
-    dic_menuList5.image = @"";
-    dic_menuList5.thumbnail = @"";
-
-    MPWhatNewsObject *dic_menuList6 = [[MPWhatNewsObject alloc] init];
-    dic_menuList6.id = @"6";
-    dic_menuList6.title = @"インストールありがとうございます!";
-    dic_menuList6.content = @"このアプリではBEAUTY SALON(サロン名)の最新情報やアプリユーザー";
-    dic_menuList6.is_read = 0;
-    dic_menuList6.update_at = @"2016-11-01 00:00:00";
-    dic_menuList6.image = @"";
-    dic_menuList6.thumbnail = @"";
-
-    [list_WhatNews addObject:dic_menuList1];
-    [list_WhatNews addObject:dic_menuList2];
-    [list_WhatNews addObject:dic_menuList3];
-    [list_WhatNews addObject:dic_menuList4];
-    [list_WhatNews addObject:dic_menuList5];
-    [list_WhatNews addObject:dic_menuList6];
+    //ニュースデータ取得
+    [[ManagerDownload sharedInstance] getListMessage:[Utility getDeviceID] withAppID:[Utility getAppID] withLimit:LIMIT_RECORD_MESSAGE_RECEIVED delegate:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -199,10 +142,13 @@
 - (void)downloadDataSuccess:(DownloadParam *)param {
 
     switch (param.request_type) {
-        case RequestType_GET_LIST_COUPON:
+        case RequestType_GET_LIST_MESSAGES:
         {
+            list_WhatNews = param.listData;
+            [_WhatNewsList_tableView reloadData];
 
-
+            //テーブル高さ調整
+            [self resizeTable];
         }
             break;
 
@@ -246,7 +192,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     MPWhatNewInfoViewController *vc = [[MPWhatNewInfoViewController alloc] initWithNibName:@"MPWhatNewInfoViewController" bundle:nil];
+
     vc.delegate = self;
+    MPNewHomeObject *newObj = [list_WhatNews objectAtIndex:indexPath.row];
+    vc.str_title = newObj.title;
+    vc.str_imagUrl = newObj.image;
+    vc.str_date = newObj.update_at;
+    vc.str_comment = newObj.content;
 
     [self.navigationController pushViewController:vc animated:YES];
 }

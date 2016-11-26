@@ -12,8 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPWhatNewInfoViewController">
             <connections>
                 <outlet property="_img_photo" destination="NVt-Tk-mf5" id="qpT-Q6-9DA"/>
-                <outlet property="_lbl_content" destination="nDT-IB-pqZ" id="zXS-qD-bzE"/>
-                <outlet property="_lbl_title" destination="jCA-Om-mSr" id="xz5-sV-jbF"/>
+                <outlet property="_lbl_content" destination="nDT-IB-pqZ" id="Prk-A4-oPQ"/>
+                <outlet property="_lbl_date" destination="DVw-my-Guj" id="Huu-cs-9Z6"/>
+                <outlet property="_lbl_title" destination="jCA-Om-mSr" id="Ai2-Mb-Wzp"/>
                 <outlet property="_scr_inView" destination="vHH-pa-2CG" id="fmo-nB-ete"/>
                 <outlet property="_scr_rootview" destination="S0f-CP-AXG" id="6Qp-6K-C4c"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -28,46 +29,33 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHH-pa-2CG">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="374.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="265"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="インストールありがとうございます" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jCA-Om-mSr">
-                                    <rect key="frame" x="17" y="60" width="286" height="16"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jCA-Om-mSr">
+                                    <rect key="frame" x="17" y="60" width="286" height="0.0"/>
                                     <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NVt-Tk-mf5">
-                                    <rect key="frame" x="17" y="86" width="286" height="100"/>
+                                    <rect key="frame" x="17" y="70" width="286" height="100"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="100" id="HeM-RS-RsT"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016/12/01" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVw-my-Guj">
-                                    <rect key="frame" x="17" y="191" width="286" height="11"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVw-my-Guj">
+                                    <rect key="frame" x="17" y="175" width="286" height="0.0"/>
                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDT-IB-pqZ">
-                                    <rect key="frame" x="17" y="212" width="286" height="82.5"/>
-                                    <attributedString key="attributedText">
-                                        <fragment>
-                                            <string key="content">このアプリではBEAUTY SALON(サロン名)の最新情
-報やアプリユーザー限定のお得な情報をリアルタイム
-で配信!!
-さらに、アプリをお友達に紹介して、クーポンをGET
-しよう!!今すぐ下のクーポンマークをタップ!!</string>
-                                            <attributes>
-                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="11" name="HiraginoSans-W3"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                    <rect key="frame" x="17" y="185" width="286" height="0.0"/>
+                                    <attributedString key="attributedText"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEN-DD-EGA">
-                                    <rect key="frame" x="40" y="304.5" width="240" height="60"/>
+                                    <rect key="frame" x="40" y="195" width="240" height="60"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThE-vJ-8hw">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>

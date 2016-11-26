@@ -130,7 +130,10 @@
                 [self processListCoupon:listObject with:parameter];
                 break;
 
-
+            case RequestType_GET_LIST_MESSAGES:
+                //新着情報取得
+                [self processListMessage:listObject with:parameter];
+                break;
 
 
 /*
@@ -150,9 +153,7 @@
                 
 
                 
-            case RequestType_GET_LIST_MESSAGES:
-                [self processListMessage:listObject with:parameter];
-                break;
+
             
             case RequestType_READ_MESSAGE:
                 [self processReadMessage:listObject with:parameter];
@@ -388,7 +389,7 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
-- (void) getListCoupon: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate
+- (void)getListCoupon:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate>*) delegate
 {
     //クーポン取得
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
@@ -406,7 +407,24 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
+- (void)getListMessage:(NSString*)deviceID withAppID:(NSString*)appID withLimit:(NSString *)limit delegate:(NSObject<ManagerDownloadDelegate> *)delegate
+{
+    //新着情報取得
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
 
+    [params setValue:deviceID forKey:@"device_id"];
+    [params setValue:appID forKey:@"app_id"];
+    [params setValue:limit forKey:@"limit"];
+    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_LIST_MESSAGES];
+    paramenter.delegate = delegate;
+    NSString *strRequest = @"";
+    strRequest = [NSString stringWithFormat:BASE_URL,GET_LIST_MESSAGES];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
+    [request setHTTPMethod:@"POST"];
+    [Utility setParamWithMethodPost:params forRequest:request];
+    [self baseRequestJSON:request parameter:paramenter];
+}
 
 
 
@@ -468,23 +486,7 @@
 
 
 
-- (void) getListMessage: (NSString*) deviceID withAppID: (NSString*) appID withLimit:(NSString *)limit delegate:(NSObject<ManagerDownloadDelegate> *)delegate
-{
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    
-    [params setValue:deviceID forKey:@"device_id"];
-    [params setValue:appID forKey:@"app_id"];
-    [params setValue:limit forKey:@"limit"];
-    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_LIST_MESSAGES];
-    paramenter.delegate = delegate;
-    NSString *strRequest = @"";
-    strRequest = [NSString stringWithFormat:BASE_URL,GET_LIST_MESSAGES];
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
-    [request setHTTPMethod:@"POST"];
-    [Utility setParamWithMethodPost:params forRequest:request];
-    [self baseRequestJSON:request parameter:paramenter];
-}
+
 
 - (void) readMessage: (NSString*) deviceID withAppID: (NSString*) appID withMessageID: (NSString*) messageID delegate: (NSObject<ManagerDownloadDelegate>*) delegate
 {
@@ -1080,7 +1082,30 @@
     }
 }
 
+- (void) processListMessage:(NSArray *)listObject with:(DownloadParam *)param{
 
+    //新着情報取得
+    for (NSDictionary *dic in listObject) {
+        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
+            return;
+        }
+        MPNewHomeObject *newObj = [[MPNewHomeObject alloc] init];
+        newObj.id = [Utility checkNULL:[dic objectForKey:@"id"]];
+        newObj.title = [Utility checkNULL:[dic objectForKey:@"title"]];
+        newObj.content = [Utility checkNULL:[dic objectForKey:@"content"]];
+        newObj.is_new = [[Utility checkNULL:[dic objectForKey:@"is_new"]] integerValue];
+        newObj.is_read = [[Utility checkNULL:[dic objectForKey:@"is_read"]] integerValue];
+        newObj.update_at = [Utility checkNULL:[dic objectForKey:@"updated_at"]];
+        newObj.isOptionPlus01 = [[Utility checkNULL:[dic objectForKey:@"isOptionPlus01"]] boolValue];
+        newObj.position = [[Utility checkNULL:[dic objectForKey:@"position"]] integerValue];
+        newObj.image = [Utility checkNULL:[dic objectForKey:@"image"]];
+        newObj.thumbnail = [Utility checkNULL:[dic objectForKey:@"thumbnail"]];
+        newObj.wp_url = [Utility checkNULL:[dic objectForKey:@"wp_url"]];
+        newObj.wp_flg = [[Utility checkNULL:[dic objectForKey:@"wp_flg"]] intValue];
+
+        [param.listData addObject: newObj];
+    }
+}
 
 
 
@@ -1125,32 +1150,7 @@
     }
 }
 
-- (void) processListMessage:(NSArray *)listObject with:(DownloadParam *)param{
-    
-    for (NSDictionary *dic in listObject) {
-        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
-            return;
-        }
-        MPNewHomeObject *newObj = [[MPNewHomeObject alloc] init];
-        newObj.id = [Utility checkNULL:[dic objectForKey:@"id"]];
-        newObj.title = [Utility checkNULL:[dic objectForKey:@"title"]];
-        newObj.content = [Utility checkNULL:[dic objectForKey:@"content"]];
-        newObj.is_new = [[Utility checkNULL:[dic objectForKey:@"is_new"]] integerValue];
-        newObj.is_read = [[Utility checkNULL:[dic objectForKey:@"is_read"]] integerValue];
-        // REPLACED BY M.ama 2016.10.07 START
-        // カラム名更新
-        newObj.update_at = [Utility checkNULL:[dic objectForKey:@"updated_at"]];
-        // REPLACED BY M.ama 2016.10.07 END
-        newObj.isOptionPlus01 = [[Utility checkNULL:[dic objectForKey:@"isOptionPlus01"]] boolValue];
-        newObj.position = [[Utility checkNULL:[dic objectForKey:@"position"]] integerValue];
-        newObj.image = [Utility checkNULL:[dic objectForKey:@"image"]];
-        newObj.thumbnail = [Utility checkNULL:[dic objectForKey:@"thumbnail"]];
-        newObj.wp_url = [Utility checkNULL:[dic objectForKey:@"wp_url"]];
-        newObj.wp_flg = [[Utility checkNULL:[dic objectForKey:@"wp_flg"]] intValue];
-        
-        [param.listData addObject: newObj];
-    }
-}
+
 
 - (void) processReadMessage:(NSArray *)listObject with:(DownloadParam *)param{
     

@@ -19,11 +19,16 @@
     __weak IBOutlet UIView* _scr_inView;
     CGPoint _scrollBeginingPoint;
     
-    __weak IBOutlet UIView *_lbl_title;
+    __weak IBOutlet UILabel *_lbl_title;
     __weak IBOutlet UIImageView *_img_photo;
-    __weak IBOutlet UIView *_lbl_content;
+    __weak IBOutlet UILabel *_lbl_content;
+    __weak IBOutlet UILabel *_lbl_date;
 }
 @property (nonatomic, assign) id<MPWhatNewInfoViewControllerDelegate> delegate;
+@property (nonatomic) NSString* str_title;
+@property (nonatomic) NSString* str_imagUrl;
+@property (nonatomic) NSString* str_date;
+@property (nonatomic) NSString* str_comment;
 
 - (IBAction)btn_hart:(id)sender;
 - (IBAction)btn_facebook:(id)sender;

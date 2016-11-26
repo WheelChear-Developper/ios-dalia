@@ -57,24 +57,26 @@
 
     [super viewDidAppear:animated];
 
-    UIImage* img_photo = [UIImage imageNamed:@"whatsnew_18.png"];
-    int imageW = img_photo.size.width;
-    int imageH = img_photo.size.height;
+    if (self.str_imagUrl && [self.str_imagUrl length] > 0 ) {
 
-    // リサイズする倍率を作成する。
-    float scale = (imageW > imageH ? 320.0f/imageH : 320.0f/imageW);
-    CGSize resizedSize = CGSizeMake(imageW * scale, imageH * scale);
-    UIGraphicsBeginImageContext(resizedSize);
-    [img_photo drawInRect:CGRectMake(0, 0, resizedSize.width, resizedSize.height)];
-    UIImage* resizedImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+        dispatch_queue_t q_global = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_queue_t q_main = dispatch_get_main_queue();
+        dispatch_async(q_global, ^{
 
-    _img_photo.translatesAutoresizingMaskIntoConstraints = YES;
-    CGFloat flt_img = _img_photo.frame.size.width / img_photo.size.width;
-    CGRect rct_frame = _img_photo.frame;
-    rct_frame.size.height = img_photo.size.height * flt_img;
-    _img_photo.frame = rct_frame;
-    _img_photo.image = resizedImage;
+            NSString *imageURL = [NSString stringWithFormat:BASE_PREFIX_URL,self.str_imagUrl];
+            UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [NSURL URLWithString: imageURL]]];
+
+            dispatch_async(q_main, ^{
+                [_img_photo setImage:image];
+            });
+        });
+    }else{
+        [_img_photo setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
+    }
+
+    _lbl_title.text = _str_title;
+    _lbl_date.text = [_str_date substringToIndex:10];
+    _lbl_content.text = _str_comment;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

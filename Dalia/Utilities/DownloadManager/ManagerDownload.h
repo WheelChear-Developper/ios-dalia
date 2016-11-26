@@ -31,8 +31,8 @@
 - (void)getTopInfo:(NSString*)appID withDeviceID:(NSString*) deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
 //クーポン取得
 - (void) getListCoupon: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
-
-
+//新着情報取得
+- (void) getListMessage: (NSString*) deviceID withAppID: (NSString*) appID withLimit: (NSString*) limit delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 
 
 /*
@@ -40,7 +40,7 @@
 - (void) setMemberInfo:(NSString*)userID withAppID:(NSString*)appID withMemberNO:(NSString*)memberNO withDeviceID:(NSString*)deviceID withNickName:(NSString*)nickName withGender:(long)gender withBirthday:(NSString*)birthday withZipcode:(NSString*)zipcode withChild1Name:(NSString*)child1name withChild1Birthday:(NSString*)child1birthday withChild2Name:(NSString*)child2name withChild2Birthday:(NSString*)child2birthday delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 
 
-- (void) getListMessage: (NSString*) deviceID withAppID: (NSString*) appID withLimit: (NSString*) limit delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
+
 - (void) readMessage: (NSString*) deviceID withAppID: (NSString*) appID withMessageID: (NSString*) messageID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 - (void) getListMenu: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 - (void) getListLikedMenu: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
