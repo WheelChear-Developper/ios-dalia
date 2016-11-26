@@ -129,6 +129,16 @@
 		10488AE61DE97280005F5DF1 /* style_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 10488ADD1DE97280005F5DF1 /* style_02.png */; };
 		10488AE71DE97280005F5DF1 /* style_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 10488ADE1DE97280005F5DF1 /* style_03.png */; };
 		10488AE81DE97280005F5DF1 /* style_04.png in Resources */ = {isa = PBXBuildFile; fileRef = 10488ADF1DE97280005F5DF1 /* style_04.png */; };
+		10488AEB1DE9771C005F5DF1 /* MPStaffInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10488AEA1DE9771C005F5DF1 /* MPStaffInfoViewController.m */; };
+		10488AED1DE97732005F5DF1 /* MPStaffInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10488AEC1DE97732005F5DF1 /* MPStaffInfoViewController.xib */; };
+		10488AEF1DE9796D005F5DF1 /* MPStaffCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10488AEE1DE9796D005F5DF1 /* MPStaffCollectionCell.xib */; };
+		10488AF21DE9798C005F5DF1 /* MPStaffCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10488AF11DE9798C005F5DF1 /* MPStaffCollectionCell.m */; };
+		10488AF91DE97FA2005F5DF1 /* staff_btn_reservation.png in Resources */ = {isa = PBXBuildFile; fileRef = 10488AF31DE97FA2005F5DF1 /* staff_btn_reservation.png */; };
+		10488AFA1DE97FA2005F5DF1 /* staff_font_style.png in Resources */ = {isa = PBXBuildFile; fileRef = 10488AF41DE97FA2005F5DF1 /* staff_font_style.png */; };
+		10488AFB1DE97FA2005F5DF1 /* staff_icon_blgn.png in Resources */ = {isa = PBXBuildFile; fileRef = 10488AF51DE97FA2005F5DF1 /* staff_icon_blgn.png */; };
+		10488AFC1DE97FA2005F5DF1 /* staff_icon_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 10488AF61DE97FA2005F5DF1 /* staff_icon_facebook.png */; };
+		10488AFD1DE97FA2005F5DF1 /* staff_icon_instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = 10488AF71DE97FA2005F5DF1 /* staff_icon_instagram.png */; };
+		10488AFE1DE97FA2005F5DF1 /* staff_icon_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 10488AF81DE97FA2005F5DF1 /* staff_icon_twitter.png */; };
 		1049C9F41DE68FDB00240E6C /* MPQLPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1049C9F31DE68FDB00240E6C /* MPQLPageView.m */; };
 		1049C9F91DE6A04500240E6C /* left_yajirushi.png in Resources */ = {isa = PBXBuildFile; fileRef = 1049C9F51DE6A04500240E6C /* left_yajirushi.png */; };
 		1049C9FA1DE6A04500240E6C /* left_yajirushi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1049C9F61DE6A04500240E6C /* left_yajirushi@2x.png */; };
@@ -617,6 +627,18 @@
 		10488ADD1DE97280005F5DF1 /* style_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_02.png; sourceTree = "<group>"; };
 		10488ADE1DE97280005F5DF1 /* style_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_03.png; sourceTree = "<group>"; };
 		10488ADF1DE97280005F5DF1 /* style_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_04.png; sourceTree = "<group>"; };
+		10488AE91DE9771C005F5DF1 /* MPStaffInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPStaffInfoViewController.h; sourceTree = "<group>"; };
+		10488AEA1DE9771C005F5DF1 /* MPStaffInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPStaffInfoViewController.m; sourceTree = "<group>"; };
+		10488AEC1DE97732005F5DF1 /* MPStaffInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPStaffInfoViewController.xib; sourceTree = "<group>"; };
+		10488AEE1DE9796D005F5DF1 /* MPStaffCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPStaffCollectionCell.xib; sourceTree = "<group>"; };
+		10488AF01DE9798C005F5DF1 /* MPStaffCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPStaffCollectionCell.h; sourceTree = "<group>"; };
+		10488AF11DE9798C005F5DF1 /* MPStaffCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPStaffCollectionCell.m; sourceTree = "<group>"; };
+		10488AF31DE97FA2005F5DF1 /* staff_btn_reservation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = staff_btn_reservation.png; sourceTree = "<group>"; };
+		10488AF41DE97FA2005F5DF1 /* staff_font_style.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = staff_font_style.png; sourceTree = "<group>"; };
+		10488AF51DE97FA2005F5DF1 /* staff_icon_blgn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = staff_icon_blgn.png; sourceTree = "<group>"; };
+		10488AF61DE97FA2005F5DF1 /* staff_icon_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = staff_icon_facebook.png; sourceTree = "<group>"; };
+		10488AF71DE97FA2005F5DF1 /* staff_icon_instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = staff_icon_instagram.png; sourceTree = "<group>"; };
+		10488AF81DE97FA2005F5DF1 /* staff_icon_twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = staff_icon_twitter.png; sourceTree = "<group>"; };
 		1049C9F21DE68FDB00240E6C /* MPQLPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPQLPageView.h; sourceTree = "<group>"; };
 		1049C9F31DE68FDB00240E6C /* MPQLPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPQLPageView.m; sourceTree = "<group>"; };
 		1049C9F51DE6A04500240E6C /* left_yajirushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_yajirushi.png; sourceTree = "<group>"; };
@@ -1402,6 +1424,8 @@
 			children = (
 				10488AC61DE9671F005F5DF1 /* MPStaffViewController.h */,
 				10488AC71DE9671F005F5DF1 /* MPStaffViewController.m */,
+				10488AE91DE9771C005F5DF1 /* MPStaffInfoViewController.h */,
+				10488AEA1DE9771C005F5DF1 /* MPStaffInfoViewController.m */,
 			);
 			path = Staff;
 			sourceTree = "<group>";
@@ -1411,6 +1435,8 @@
 			children = (
 				10488ACF1DE967A2005F5DF1 /* MPStaffCell.h */,
 				10488AD01DE967A2005F5DF1 /* MPStaffCell.m */,
+				10488AF01DE9798C005F5DF1 /* MPStaffCollectionCell.h */,
+				10488AF11DE9798C005F5DF1 /* MPStaffCollectionCell.m */,
 			);
 			path = Staff;
 			sourceTree = "<group>";
@@ -1420,6 +1446,7 @@
 			children = (
 				10488AD21DE9697C005F5DF1 /* images */,
 				10488ACB1DE9678B005F5DF1 /* MPStaffViewController.xib */,
+				10488AEC1DE97732005F5DF1 /* MPStaffInfoViewController.xib */,
 			);
 			path = Staff;
 			sourceTree = "<group>";
@@ -1428,6 +1455,7 @@
 			isa = PBXGroup;
 			children = (
 				10488ACD1DE96796005F5DF1 /* MPStaffCell.xib */,
+				10488AEE1DE9796D005F5DF1 /* MPStaffCollectionCell.xib */,
 			);
 			path = Staff;
 			sourceTree = "<group>";
@@ -1435,6 +1463,12 @@
 		10488AD21DE9697C005F5DF1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				10488AF31DE97FA2005F5DF1 /* staff_btn_reservation.png */,
+				10488AF41DE97FA2005F5DF1 /* staff_font_style.png */,
+				10488AF51DE97FA2005F5DF1 /* staff_icon_blgn.png */,
+				10488AF61DE97FA2005F5DF1 /* staff_icon_facebook.png */,
+				10488AF71DE97FA2005F5DF1 /* staff_icon_instagram.png */,
+				10488AF81DE97FA2005F5DF1 /* staff_icon_twitter.png */,
 				10488AD31DE9697C005F5DF1 /* header_ttl_staff@2x.png */,
 				10488AD41DE9697C005F5DF1 /* header_ttl_staff.png */,
 			);
@@ -2726,6 +2760,8 @@
 				100221801DE3395800169B93 /* coupon_49.png in Resources */,
 				1002214D1DE2ED6600169B93 /* fourthView_btn_tel@2x.png in Resources */,
 				1016C7D71DE43D8100BC215E /* UIConfig.plist in Resources */,
+				10488AFC1DE97FA2005F5DF1 /* staff_icon_facebook.png in Resources */,
+				10488AED1DE97732005F5DF1 /* MPStaffInfoViewController.xib in Resources */,
 				10625AD41DE82380003CE2FB /* hearcatalog_cate_ladies_medium_s_dark.png in Resources */,
 				107EA22A1DE420CB00A4A8CD /* first_select_top_btn_moviechannnel@2x.png in Resources */,
 				10E6B6201DE2D59900BB0254 /* other_icon_facebook@2x.png in Resources */,
@@ -2765,6 +2801,7 @@
 				107957A81DDD5571008F35A6 /* MPTheSecond_SlideView.xib in Resources */,
 				10C4B7AC1DD9DFEE00E26096 /* MPRecommendMenuCell.xib in Resources */,
 				1075EF101DE8810F00974CE1 /* HearCatalogCategoryCollectionCell.xib in Resources */,
+				10488AFD1DE97FA2005F5DF1 /* staff_icon_instagram.png in Resources */,
 				1002217C1DE3395800169B93 /* coupon_19.png in Resources */,
 				10625ACF1DE82380003CE2FB /* hearcatalog_cate_ladies_bob_w.png in Resources */,
 				100221861DE3395800169B93 /* menu_30.png in Resources */,
@@ -2837,6 +2874,7 @@
 				1002217D1DE3395800169B93 /* coupon_21.png in Resources */,
 				10625ADC1DE82380003CE2FB /* hearcatalog_cate_ladies_short_s_light.png in Resources */,
 				10C4B78A1DD9DFEE00E26096 /* sidemenu_home.png in Resources */,
+				10488AFA1DE97FA2005F5DF1 /* staff_font_style.png in Resources */,
 				10C4B7B71DD9DFEE00E26096 /* footer_btn_menu_on.jpg in Resources */,
 				107EA2341DE420CB00A4A8CD /* first_select_top_btn_stamp@2x.png in Resources */,
 				1016C8101DE46C7600BC215E /* first_ttl_recommenditem.png in Resources */,
@@ -2863,6 +2901,7 @@
 				10C4B7B51DD9DFEE00E26096 /* footer_btn_menu.jpg in Resources */,
 				1016C7E01DE43D8100BC215E /* icon-40@2x.png in Resources */,
 				10C4B7A81DD9DFEE00E26096 /* icon_menu.png in Resources */,
+				10488AFE1DE97FA2005F5DF1 /* staff_icon_twitter.png in Resources */,
 				10C4B7AF1DD9DFEE00E26096 /* tab_back@2x.png in Resources */,
 				1037B83E1DE05D4D000D834C /* MPTheSubMenuCell.xib in Resources */,
 				10BC22C21DE83B0400B1A394 /* men_05.png in Resources */,
@@ -2956,6 +2995,7 @@
 				1016C7FC1DE441AF00BC215E /* whatsnew_14.png in Resources */,
 				1038EF9A1DDF310300134331 /* MPTermsViewController.xib in Resources */,
 				1049C9FB1DE6A04500240E6C /* right_yajirushi.png in Resources */,
+				10488AF91DE97FA2005F5DF1 /* staff_btn_reservation.png in Resources */,
 				10625A481DE71606003CE2FB /* UserInfo_btn_setting_touroku.png in Resources */,
 				10BC22AC1DE83B0400B1A394 /* lady_clarity_02.png in Resources */,
 				10C4B7B31DD9DFEE00E26096 /* footer_btn_setting_on.jpg in Resources */,
@@ -3010,6 +3050,7 @@
 				10625A8F1DE8073C003CE2FB /* stampcard_squares_rightdown.png in Resources */,
 				10C4B7BA1DD9DFEE00E26096 /* footer_btn_home_on@2x.png in Resources */,
 				107EA22B1DE420CB00A4A8CD /* first_select_top_btn_onlineshop.png in Resources */,
+				10488AFB1DE97FA2005F5DF1 /* staff_icon_blgn.png in Resources */,
 				1016C7F21DE43F1900BC215E /* MPWhatNewInfoViewController.xib in Resources */,
 				107957AE1DDDA60A008F35A6 /* secondview_syousai.png in Resources */,
 				10488AE51DE97280005F5DF1 /* style_01.png in Resources */,
@@ -3059,6 +3100,7 @@
 				1002217B1DE3395800169B93 /* coupon_17.png in Resources */,
 				10625AC21DE82380003CE2FB /* hearcatalog_ttl_title@2x.png in Resources */,
 				10E6B6011DE2BF5500BB0254 /* fifthView_btn_fukugen.png in Resources */,
+				10488AEF1DE9796D005F5DF1 /* MPStaffCollectionCell.xib in Resources */,
 				10625AC91DE82380003CE2FB /* hearcatalog_btn_mens_light.png in Resources */,
 				100221821DE3395800169B93 /* sharethanks_34.png in Resources */,
 				10BC22C81DE83F4C00B1A394 /* hearcatalog_btn_favorit_light.png in Resources */,
@@ -3151,6 +3193,7 @@
 				10C4B9141DDAC3F200E26096 /* MPMenuTopinfoObject.m in Sources */,
 				272CCDA91DCAF096006BC4EB /* ProgressView.m in Sources */,
 				272CCD971DCAF096006BC4EB /* MPGymDAO.m in Sources */,
+				10488AEB1DE9771C005F5DF1 /* MPStaffInfoViewController.m in Sources */,
 				1061C6A11DDDB08B000CEAA2 /* MPCouponObject.m in Sources */,
 				1076A92A1DDC46A20080E8CD /* MPView+Border.m in Sources */,
 				272CCD9F1DCAF096006BC4EB /* MPPresetObject.m in Sources */,
@@ -3163,6 +3206,7 @@
 				272CCDA81DCAF096006BC4EB /* MBProgressHUD.m in Sources */,
 				106130661DD2D10B00B789B5 /* MPMemberObject.m in Sources */,
 				272CCD871DCAF096006BC4EB /* AFImageRequestOperation.m in Sources */,
+				10488AF21DE9798C005F5DF1 /* MPStaffCollectionCell.m in Sources */,
 				1038EF921DDF2DF900134331 /* MPTransferViewController.m in Sources */,
 				10967BC61DDB5DFF004DA122 /* MPMenuListCollectionCell.m in Sources */,
 				10DE079A1DD838810068C3A9 /* MPMenuListHomeObject.m in Sources */,

@@ -10,8 +10,9 @@
 #import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
 #import "MPStaffCell.h"
+#import "MPStaffInfoViewController.h"
 
-@interface MPStaffViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate>
+@interface MPStaffViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPStaffInfoViewControllerDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;
