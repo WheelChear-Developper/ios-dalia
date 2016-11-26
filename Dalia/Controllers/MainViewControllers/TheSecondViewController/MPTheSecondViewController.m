@@ -32,6 +32,7 @@
     //XIB表示のため、contentViewを非表示
     [_contentView setHidden:YES];
 
+    //スライドビューインスタンス作成
     _pageView = [[MPQLPageView alloc] initWithFrame:self.view.bounds];
 }
 
@@ -53,13 +54,6 @@
 
     //クーポンデータ取得
     [[ManagerDownload sharedInstance] getListCoupon:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
-
-    //スライドビュー設置
-    self.pageView.frame = self.view.bounds;
-    self.pageView.pageViewStyle = MPQLPageViewButtonBarStyleWithLabel;
-    self.pageView.dataSource = self;
-    self.pageView.delegate = self;
-    [self.view addSubview:self.pageView];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -128,30 +122,97 @@
 
 - (NSInteger)numberOfPagesInPageView:(MPQLPageView *)pageView
 {
-    return 6;
+    return list_data.count;
 }
 
-- (UIView *)pageView:(MPQLPageView *)pageView viewForPageAtIndex:(NSInteger)index
-{
+- (UIView *)pageView:(MPQLPageView *)pageView viewForPageAtIndex:(NSInteger)index {
+
     MPTheSecond_SlideView *view_slide = [MPTheSecond_SlideView myView];
 
-    [view_slide setNumberOfPages:6];
+    [view_slide setNumberOfPages:list_data.count];
     [view_slide setCurrentCount:index];
 
     view_slide.scr_rootview.delegate = self;
 
-
-    //テストデータ設定
+    MPCouponObject *couponObj = [list_data objectAtIndex:index];
+    //詳細閉じる
     view_slide.view_specialMark.hidden = NO;
-    view_slide.lbl_title.text = @"シェアサンクス クーポン";
-    [view_slide.img_photo setImage:[UIImage imageNamed:@"coupon_24.png"]];
-    view_slide.lbl_name.text = @"シェア感謝!! カット＋カラー";
-    view_slide.lbl_Info1.text = @"通常価格から";
-    view_slide.lbl_Info2.text = @"30%OFF";
-    view_slide.lbl_turn.text = @"あと１回";
+    //名前
+    view_slide.lbl_title.text = couponObj.name;
+    //画像設定
+    if (couponObj.coupon_image && [couponObj.coupon_image length] > 0 ) {
+
+        dispatch_queue_t q_global = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_queue_t q_main = dispatch_get_main_queue();
+        dispatch_async(q_global, ^{
+
+            NSString *imageURL = [NSString stringWithFormat:BASE_PREFIX_URL,couponObj.coupon_image];
+            UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [NSURL URLWithString: imageURL]]];
+
+            dispatch_async(q_main, ^{
+                [view_slide.img_photo setImage:image];
+            });
+        });
+    }else{
+        [view_slide.img_photo setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
+    }
+    //画像した文字列
+    view_slide.lbl_name.text = couponObj.condition;
+    //価格詳細
+    switch (couponObj.tokuten_mode) {
+        case 1:
+        {
+            view_slide.lbl_Info1.text = @"通常価格から";
+            view_slide.lbl_Info2.text = [NSString stringWithFormat:@"%ld ％", couponObj.percentage];
+        }
+            break;
+        case 2:
+        {
+            view_slide.lbl_Info1.text = [NSString stringWithFormat:@"通常 %ld円を", couponObj.original_price];
+            view_slide.lbl_Info2.text = [NSString stringWithFormat:@"%ld円", couponObj.open_price];
+        }
+            break;
+        case 3:
+        {
+
+            view_slide.lbl_Info1.translatesAutoresizingMaskIntoConstraints = YES;
+            CGRect rct1 = view_slide.lbl_Info1.frame;
+            rct1.size.width = 0;
+            view_slide.lbl_Info1.frame = rct1;
+
+            view_slide.lbl_Info1.text = @"";
+            view_slide.lbl_Info2.text = couponObj.tokuten_free_word;
+        }
+            break;
+
+        default:
+            break;
+    }
+    //回数
+    if(couponObj.limit_num == 0){
+
+        view_slide.lbl_turn.text = @"制限なし";
+    }else{
+
+        view_slide.lbl_turn.text = [NSString stringWithFormat:@"あと%ld回", couponObj.limit_num];
+    }
+    //スタンプ画像
     [view_slide.img_stamp setImage:nil];
-    view_slide.lbl_date.text = @"2017/12/01(金)";
-    view_slide.lbl_message.text = @"※他のクーポンとの併用はできません。\n※2,000円以下のメニューは対象外\n※お会計前にスタッフにご提示ください。\n※このクーポンは１回限定でご利用いただけます。";
+    //有効期限
+    switch (couponObj.is_due_date) {
+        case 0:
+            view_slide.lbl_date.text = @"有効期限無し";
+            break;
+        case 1:
+            view_slide.lbl_date.text = [self setWeekday:couponObj.due_date];
+            break;
+
+        default:
+            break;
+    }
+    //詳細メッセージ
+    view_slide.lbl_message.text = couponObj.tokuten_detail;
+    //詳細メッセージ開いた時の高さを設定
     view_slide.lng_messageHeight = view_slide.view_message.frame.size.height;
 
     view_slide.view_message.translatesAutoresizingMaskIntoConstraints = YES;
@@ -160,6 +221,34 @@
     view_slide.view_message.frame = rct_message;
     
     return view_slide;
+}
+
+- (NSString*)setWeekday:(NSString*)dateString {
+
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    //タイムゾーンの指定
+    [formatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+
+    NSDate* dt = [formatter dateFromString:dateString];
+
+    // 時刻書式指定子を設定
+    NSDateFormatter* form = [[NSDateFormatter alloc] init];
+    [form setDateStyle:NSDateFormatterFullStyle];
+    [form setTimeStyle:NSDateFormatterNoStyle];
+
+    // ロケールを設定
+    NSLocale* loc = [[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"];
+    [form setLocale:loc];
+
+    // カレンダーを指定
+    NSCalendar* cal = [[NSCalendar alloc] initWithCalendarIdentifier: NSJapaneseCalendar];
+    [form setCalendar: cal];
+
+    // 和暦を出力するように書式指定
+    [form setDateFormat:@"GGyy年MM月dd日(EE)"];
+
+    return [form stringFromDate:dt];
 }
 
 - (void)pageView:(MPQLPageView *)pageView didMoveToPage:(NSInteger)index {
@@ -172,9 +261,14 @@
     switch (param.request_type) {
         case RequestType_GET_LIST_COUPON:
         {
-            MPCouponObject *couponObj = [param.listData objectAtIndex:0];
+            list_data = param.listData;
 
-
+            //スライドビュー設置
+            self.pageView.frame = self.view.bounds;
+            self.pageView.pageViewStyle = MPQLPageViewButtonBarStyleWithLabel;
+            self.pageView.dataSource = self;
+            self.pageView.delegate = self;
+            [self.view addSubview:self.pageView];
 
         }
             break;
