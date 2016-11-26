@@ -699,7 +699,9 @@
 
         case 10:
         {
+            MPMovieViewController *vc = [[MPMovieViewController alloc] initWithNibName:@"MPMovieViewController" bundle:nil];
 
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
             

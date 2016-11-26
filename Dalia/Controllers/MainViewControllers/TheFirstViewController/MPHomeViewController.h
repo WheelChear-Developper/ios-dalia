@@ -36,6 +36,7 @@
 #import "MPHearCatalogViewController.h"
 #import "MPReservationViewController.h"
 #import "MPStaffViewController.h"
+#import "MPMovieViewController.h"
 
 @interface MPHomeViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTopImagesViewDelegate, UITableViewDelegate, UITableViewDataSource, FirstSettingViewControllerDelegate ,UICollectionViewDataSource, UICollectionViewDelegate, MPRecommendMenuViewControllerDelegate ,MPRecommendMenuInfoViewControllerDelegate, MPWhatNewViewControllerDelegate, MPWhatNewInfoViewControllerDelegate, MPMembersCardViewControllerDelegate, MPStampCardViewControllerDelegate, MPHearCatalogViewControllerDelegate, MPReservationViewControllerDelegate>
 {
