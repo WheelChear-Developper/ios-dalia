@@ -667,7 +667,10 @@
 
         case 6:
         {
+            MPReservationViewController *vc = [[MPReservationViewController alloc] initWithNibName:@"MPReservationViewController" bundle:nil];
+            vc.delegate = self;
 
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
 

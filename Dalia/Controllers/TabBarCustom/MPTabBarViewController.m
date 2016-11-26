@@ -17,6 +17,7 @@
 
 #import "MPShopObject.h"
 #import "MPConfigObject.h"
+#import "MPReservationViewController.h"
 
 #define SIZE_BADGE_NUMBER 25
 
@@ -478,13 +479,11 @@
             break;
         case 3:
         {
-            /*
-             SettingViewController *vc_Setting = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
+             MPReservationViewController *vc_Setting = [[MPReservationViewController alloc] initWithNibName:@"MPReservationViewController" bundle:nil];
              UIViewController *vc = vc_Setting;
              NSMutableArray *listVC = [[NSMutableArray alloc] init];
              [listVC addObject:[[UINavigationController alloc] initWithRootViewController:vc]];
              [self setViewControllers:listVC animated:YES];
-             */
         }
             break;
         case 4:
