@@ -169,8 +169,6 @@
 		106130631DD2D10B00B789B5 /* MPConfigObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1061304A1DD2D10B00B789B5 /* MPConfigObject.m */; };
 		106130641DD2D10B00B789B5 /* MPUIConfigObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1061304C1DD2D10B00B789B5 /* MPUIConfigObject.m */; };
 		106130661DD2D10B00B789B5 /* MPMemberObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 106130521DD2D10B00B789B5 /* MPMemberObject.m */; };
-		106130671DD2D10B00B789B5 /* MPItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 106130551DD2D10B00B789B5 /* MPItemObject.m */; };
-		106130681DD2D10B00B789B5 /* MPMenuObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 106130571DD2D10B00B789B5 /* MPMenuObject.m */; };
 		1061C6A11DDDB08B000CEAA2 /* MPCouponObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1061C6A01DDDB08B000CEAA2 /* MPCouponObject.m */; };
 		1061C6AA1DDDD9B7000CEAA2 /* webview_btn_update.png in Resources */ = {isa = PBXBuildFile; fileRef = 1061C6A21DDDD9B7000CEAA2 /* webview_btn_update.png */; };
 		1061C6AB1DDDD9B7000CEAA2 /* webview_btn_update_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 1061C6A31DDDD9B7000CEAA2 /* webview_btn_update_on.png */; };
@@ -320,6 +318,9 @@
 		107EA2441DE4307900A4A8CD /* MPRecommendMenuInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107EA2411DE4307900A4A8CD /* MPRecommendMenuInfoViewController.xib */; };
 		107EA2451DE4307900A4A8CD /* MPRecommendMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107EA2421DE4307900A4A8CD /* MPRecommendMenuViewController.xib */; };
 		1083AD121DEA8552003596CF /* MPDetailShopObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083AD101DEA8552003596CF /* MPDetailShopObject.m */; };
+		1083AD161DEA9239003596CF /* MPRecommendMenuObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083AD151DEA9239003596CF /* MPRecommendMenuObject.m */; };
+		1083AD1C1DEAA523003596CF /* MPItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083AD191DEAA523003596CF /* MPItemObject.m */; };
+		1083AD1D1DEAA523003596CF /* MPMenuObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083AD1B1DEAA523003596CF /* MPMenuObject.m */; };
 		10967BC61DDB5DFF004DA122 /* MPMenuListCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10967BC41DDB5DFF004DA122 /* MPMenuListCollectionCell.m */; };
 		10BC22A11DE83B0400B1A394 /* lady_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 10BC227B1DE83B0300B1A394 /* lady_01.png */; };
 		10BC22A21DE83B0400B1A394 /* lady_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 10BC227C1DE83B0300B1A394 /* lady_02.png */; };
@@ -698,10 +699,6 @@
 		1061304C1DD2D10B00B789B5 /* MPUIConfigObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPUIConfigObject.m; sourceTree = "<group>"; };
 		106130511DD2D10B00B789B5 /* MPMemberObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMemberObject.h; sourceTree = "<group>"; };
 		106130521DD2D10B00B789B5 /* MPMemberObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMemberObject.m; sourceTree = "<group>"; };
-		106130541DD2D10B00B789B5 /* MPItemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPItemObject.h; sourceTree = "<group>"; };
-		106130551DD2D10B00B789B5 /* MPItemObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPItemObject.m; sourceTree = "<group>"; };
-		106130561DD2D10B00B789B5 /* MPMenuObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuObject.h; sourceTree = "<group>"; };
-		106130571DD2D10B00B789B5 /* MPMenuObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuObject.m; sourceTree = "<group>"; };
 		1061C69F1DDDB08B000CEAA2 /* MPCouponObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponObject.h; sourceTree = "<group>"; };
 		1061C6A01DDDB08B000CEAA2 /* MPCouponObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponObject.m; sourceTree = "<group>"; };
 		1061C6A21DDDD9B7000CEAA2 /* webview_btn_update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = webview_btn_update.png; sourceTree = "<group>"; };
@@ -873,6 +870,12 @@
 		107EA2421DE4307900A4A8CD /* MPRecommendMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPRecommendMenuViewController.xib; sourceTree = "<group>"; };
 		1083AD101DEA8552003596CF /* MPDetailShopObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPDetailShopObject.m; sourceTree = "<group>"; };
 		1083AD111DEA8552003596CF /* MPDetailShopObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPDetailShopObject.h; sourceTree = "<group>"; };
+		1083AD141DEA9239003596CF /* MPRecommendMenuObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPRecommendMenuObject.h; sourceTree = "<group>"; };
+		1083AD151DEA9239003596CF /* MPRecommendMenuObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPRecommendMenuObject.m; sourceTree = "<group>"; };
+		1083AD181DEAA523003596CF /* MPItemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPItemObject.h; sourceTree = "<group>"; };
+		1083AD191DEAA523003596CF /* MPItemObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPItemObject.m; sourceTree = "<group>"; };
+		1083AD1A1DEAA523003596CF /* MPMenuObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuObject.h; sourceTree = "<group>"; };
+		1083AD1B1DEAA523003596CF /* MPMenuObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuObject.m; sourceTree = "<group>"; };
 		10967BC31DDB5DFF004DA122 /* MPMenuListCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuListCollectionCell.h; sourceTree = "<group>"; };
 		10967BC41DDB5DFF004DA122 /* MPMenuListCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuListCollectionCell.m; sourceTree = "<group>"; };
 		10BC227B1DE83B0300B1A394 /* lady_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lady_01.png; sourceTree = "<group>"; };
@@ -1388,6 +1391,7 @@
 				1061303E1DD2D10B00B789B5 /* old */,
 				1061305C1DD2D10B00B789B5 /* TheFirstViewController */,
 				1061C69E1DDDB08B000CEAA2 /* TheSeconndViewController */,
+				1083AD131DEA9239003596CF /* TheThirdView */,
 				1083AD0F1DEA8552003596CF /* TheFouthView */,
 			);
 			path = Models;
@@ -1587,7 +1591,6 @@
 				106130481DD2D10B00B789B5 /* ConfigObject */,
 				1061304D1DD2D10B00B789B5 /* Coupon */,
 				106130501DD2D10B00B789B5 /* Member */,
-				106130531DD2D10B00B789B5 /* Menu */,
 			);
 			path = old;
 			sourceTree = "<group>";
@@ -1635,17 +1638,6 @@
 				106130521DD2D10B00B789B5 /* MPMemberObject.m */,
 			);
 			path = Member;
-			sourceTree = "<group>";
-		};
-		106130531DD2D10B00B789B5 /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-				106130541DD2D10B00B789B5 /* MPItemObject.h */,
-				106130551DD2D10B00B789B5 /* MPItemObject.m */,
-				106130561DD2D10B00B789B5 /* MPMenuObject.h */,
-				106130571DD2D10B00B789B5 /* MPMenuObject.m */,
-			);
-			path = Menu;
 			sourceTree = "<group>";
 		};
 		1061305C1DD2D10B00B789B5 /* TheFirstViewController */ = {
@@ -2041,6 +2033,27 @@
 				1083AD101DEA8552003596CF /* MPDetailShopObject.m */,
 			);
 			path = TheFouthView;
+			sourceTree = "<group>";
+		};
+		1083AD131DEA9239003596CF /* TheThirdView */ = {
+			isa = PBXGroup;
+			children = (
+				1083AD171DEAA523003596CF /* Menu */,
+				1083AD141DEA9239003596CF /* MPRecommendMenuObject.h */,
+				1083AD151DEA9239003596CF /* MPRecommendMenuObject.m */,
+			);
+			path = TheThirdView;
+			sourceTree = "<group>";
+		};
+		1083AD171DEAA523003596CF /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				1083AD181DEAA523003596CF /* MPItemObject.h */,
+				1083AD191DEAA523003596CF /* MPItemObject.m */,
+				1083AD1A1DEAA523003596CF /* MPMenuObject.h */,
+				1083AD1B1DEAA523003596CF /* MPMenuObject.m */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		10BC22741DE8359900B1A394 /* HearCatalog */ = {
@@ -3331,6 +3344,7 @@
 				272CCD971DCAF096006BC4EB /* MPGymDAO.m in Sources */,
 				10488AEB1DE9771C005F5DF1 /* MPStaffInfoViewController.m in Sources */,
 				1061C6A11DDDB08B000CEAA2 /* MPCouponObject.m in Sources */,
+				1083AD1C1DEAA523003596CF /* MPItemObject.m in Sources */,
 				1076A92A1DDC46A20080E8CD /* MPView+Border.m in Sources */,
 				272CCD9F1DCAF096006BC4EB /* MPPresetObject.m in Sources */,
 				10C4B90F1DDABE4E00E26096 /* MPMenuRecommend_itemObject.m in Sources */,
@@ -3341,10 +3355,12 @@
 				272CCDA41DCAF096006BC4EB /* FMResultSet.m in Sources */,
 				272CCDA81DCAF096006BC4EB /* MBProgressHUD.m in Sources */,
 				106130661DD2D10B00B789B5 /* MPMemberObject.m in Sources */,
+				1083AD161DEA9239003596CF /* MPRecommendMenuObject.m in Sources */,
 				272CCD871DCAF096006BC4EB /* AFImageRequestOperation.m in Sources */,
 				10488AF21DE9798C005F5DF1 /* MPStaffCollectionCell.m in Sources */,
 				1038EF921DDF2DF900134331 /* MPTransferViewController.m in Sources */,
 				10967BC61DDB5DFF004DA122 /* MPMenuListCollectionCell.m in Sources */,
+				1083AD1D1DEAA523003596CF /* MPMenuObject.m in Sources */,
 				10DE079A1DD838810068C3A9 /* MPMenuListHomeObject.m in Sources */,
 				272CCD8E1DCAF096006BC4EB /* UIImageView+AFNetworking.m in Sources */,
 				272CCDAA1DCAF096006BC4EB /* MKNumberBadgeView.m in Sources */,
@@ -3385,7 +3401,6 @@
 				107EA23C1DE4306500A4A8CD /* MPRecommendMenuInfoViewController.m in Sources */,
 				10488B191DE98C37005F5DF1 /* MPMovieTableViewCell.m in Sources */,
 				1075EF1B1DE8A51B00974CE1 /* HearCatalogCategoryListViewControllerCell.m in Sources */,
-				106130681DD2D10B00B789B5 /* MPMenuObject.m in Sources */,
 				106130601DD2D10B00B789B5 /* MPShopCatObject.m in Sources */,
 				272CCD961DCAF096006BC4EB /* MPApnsDAO.m in Sources */,
 				272CCDAC1DCAF096006BC4EB /* InfinitePagingView.m in Sources */,
@@ -3397,7 +3412,6 @@
 				107957A61DDD555E008F35A6 /* MPTheSecond_SlideView.m in Sources */,
 				272CCD801DCAF096006BC4EB /* Configuration.m in Sources */,
 				107EA23D1DE4306500A4A8CD /* MPRecommendMenuViewController.m in Sources */,
-				106130671DD2D10B00B789B5 /* MPItemObject.m in Sources */,
 				106130631DD2D10B00B789B5 /* MPConfigObject.m in Sources */,
 				1083AD121DEA8552003596CF /* MPDetailShopObject.m in Sources */,
 				272CCD8A1DCAF096006BC4EB /* AFNetworkActivityIndicatorManager.m in Sources */,

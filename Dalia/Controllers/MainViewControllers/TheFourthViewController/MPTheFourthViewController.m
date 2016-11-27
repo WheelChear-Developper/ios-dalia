@@ -33,7 +33,7 @@
     [_contentView setHidden:YES];
 
     //店舗情報取得
-    [[ManagerDownload sharedInstance] getListMessage:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
+    [[ManagerDownload sharedInstance] getListShop:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
 
     //load cell xib and attach with collectionView
 //    UINib *nib = [UINib nibWithNibName:@"ShopListViewCell" bundle:nil];

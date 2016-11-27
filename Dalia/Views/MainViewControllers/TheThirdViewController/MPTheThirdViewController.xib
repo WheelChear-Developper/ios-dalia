@@ -12,7 +12,7 @@
             <connections>
                 <outlet property="_scr_inView" destination="yLB-vt-V4q" id="26K-za-qvt"/>
                 <outlet property="_scr_rootview" destination="mCx-wF-6NC" id="ZdZ-1K-lnF"/>
-                <outlet property="_tbl_menulist" destination="ypu-ZK-n1I" id="6OS-N6-QAf"/>
+                <outlet property="_tbl_list" destination="ypu-ZK-n1I" id="Qcd-1I-93q"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -27,13 +27,6 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLB-vt-V4q">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="680"/>
                             <subviews>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AJl-T3-NSe">
-                                    <rect key="frame" x="0.0" y="-200" width="320" height="280"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="280" id="IHM-FO-C5g"/>
-                                    </constraints>
-                                </tableView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJr-9a-sr8">
                                     <rect key="frame" x="0.0" y="-200" width="320" height="280"/>
                                     <subviews>
@@ -96,13 +89,10 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="ypu-ZK-n1I" secondAttribute="trailing" id="7eT-cN-mA7"/>
-                                <constraint firstAttribute="trailing" secondItem="AJl-T3-NSe" secondAttribute="trailing" id="Bt8-pQ-yH9"/>
                                 <constraint firstItem="tJr-9a-sr8" firstAttribute="leading" secondItem="yLB-vt-V4q" secondAttribute="leading" id="CJt-N8-MlH"/>
                                 <constraint firstAttribute="bottom" secondItem="ypu-ZK-n1I" secondAttribute="bottom" id="Jbt-3I-awb"/>
                                 <constraint firstItem="ypu-ZK-n1I" firstAttribute="leading" secondItem="yLB-vt-V4q" secondAttribute="leading" id="LRD-7R-Sa6"/>
                                 <constraint firstAttribute="trailing" secondItem="tJr-9a-sr8" secondAttribute="trailing" id="TlM-mC-2h1"/>
-                                <constraint firstItem="AJl-T3-NSe" firstAttribute="top" secondItem="yLB-vt-V4q" secondAttribute="top" constant="-200" id="c0F-Bv-RI3"/>
-                                <constraint firstItem="AJl-T3-NSe" firstAttribute="leading" secondItem="yLB-vt-V4q" secondAttribute="leading" id="nDJ-nZ-98i"/>
                                 <constraint firstItem="ypu-ZK-n1I" firstAttribute="top" secondItem="tJr-9a-sr8" secondAttribute="bottom" id="tbw-XA-5aL"/>
                                 <constraint firstItem="tJr-9a-sr8" firstAttribute="top" secondItem="yLB-vt-V4q" secondAttribute="top" constant="-200" id="vJk-dL-lmf"/>
                             </constraints>

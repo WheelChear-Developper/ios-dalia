@@ -18,7 +18,7 @@
     __weak IBOutlet UIView* _scr_inView;
     CGPoint _scrollBeginingPoint;
 
-    NSMutableArray* list_data;
+    NSMutableArray* _list_data;
 }
 @property (nonatomic, strong) MPQLPageView *pageView;
 

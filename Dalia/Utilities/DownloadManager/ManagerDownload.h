@@ -34,7 +34,12 @@
 //新着情報取得
 - (void) getListMessage: (NSString*) deviceID withAppID: (NSString*) appID withLimit: (NSString*) limit delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 //店舗情報
-- (void)getListMessage:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate> *)delegate;
+- (void)getListShop:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate> *)delegate;
+//おすすめメニュー
+- (void)getListRecommendMenu:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate> *)delegate;
+//メニュー情報
+- (void)getListMenu:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
+
 
 
 
@@ -47,7 +52,7 @@
 
 
 - (void) readMessage: (NSString*) deviceID withAppID: (NSString*) appID withMessageID: (NSString*) messageID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
-- (void) getListMenu: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
+
 - (void) getListLikedMenu: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 - (void) getDetailMenu: (NSString*) deviceID withAppID: (NSString*) appID withMenuID: (NSString*) menuID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 - (void) getListCatShop: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;

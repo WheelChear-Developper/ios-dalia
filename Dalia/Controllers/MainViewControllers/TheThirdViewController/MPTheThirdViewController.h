@@ -11,6 +11,7 @@
 #import "ManagerDownload.h"
 #import "MPTheMenuCell.h"
 #import "MPTheThirdSumMenuViewController.h"
+#import "MPMenuObject.h"
 
 @interface MPTheThirdViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTheThirdSumMenuViewControllerDelegate>
 {
@@ -18,7 +19,9 @@
     __weak IBOutlet UIView* _scr_inView;
     CGPoint _scrollBeginingPoint;
     
-    __weak IBOutlet UITableView *_tbl_menulist;
+    __weak IBOutlet UITableView *_tbl_list;
+
+    NSMutableArray* _list_data;
 
     NSMutableArray *_ary_image;
     NSMutableArray *_ary_title;

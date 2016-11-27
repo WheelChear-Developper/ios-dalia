@@ -19,7 +19,7 @@
 #import "MPRecommend_menuObject.h"
 #import "MPWhatNewsObject.h"
 #import "MPDetailShopObject.h"
-
+#import "MPRecommendMenuObject.h"
 
 
 
@@ -140,10 +140,15 @@
                 [self processListShop:listObject with:parameter];
                 break;
 
+            case RequestType_GET_LIST_RECOMMENMENU:
+                //おすすめメニュー
+                [self processListRecommendMenu:listObject with:parameter];
+                break;
 
-
-
-
+            case RequestType_GET_LIST_MENU:
+                //メニュー情報
+                [self processListMenu:listObject with:parameter];
+                break;
 
 
 
@@ -174,9 +179,7 @@
                 [self processReadMessage:listObject with:parameter];
                 break;
                 
-            case RequestType_GET_LIST_MENU:
-                [self processListMenu:listObject with:parameter];
-                break;
+
                 
             case RequestType_GET_DETAIL_MENU:
                 [self processDetailMenu:listObject with:parameter];
@@ -441,7 +444,7 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
-- (void)getListMessage:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate> *)delegate
+- (void)getListShop:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate> *)delegate
 {
     //店舗情報
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
@@ -459,7 +462,41 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
+- (void)getListRecommendMenu:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate> *)delegate
+{
+    //おすすめメニュー
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
 
+    [params setValue:deviceID forKey:@"device_id"];
+    [params setValue:appID forKey:@"app_id"];
+    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_LIST_RECOMMENMENU];
+    paramenter.delegate = delegate;
+    NSString *strRequest = @"";
+    strRequest = [NSString stringWithFormat:BASE_URL,GET_LIST_RECOMMENMENU];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
+    [request setHTTPMethod:@"POST"];
+    [Utility setParamWithMethodPost:params forRequest:request];
+    [self baseRequestJSON:request parameter:paramenter];
+}
+
+- (void)getListMenu:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate>*)delegate
+{
+    //メニュー情報
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+
+    [params setValue:deviceID forKey:@"device_id"];
+    [params setValue:appID forKey:@"app_id"];
+    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_LIST_MENU];
+    paramenter.delegate = delegate;
+    NSString *strRequest = @"";
+    strRequest = [NSString stringWithFormat:BASE_URL,GET_LIST_MENU];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
+    [request setHTTPMethod:@"POST"];
+    [Utility setParamWithMethodPost:params forRequest:request];
+    [self baseRequestJSON:request parameter:paramenter];
+}
 
 
 
@@ -538,22 +575,7 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
-- (void) getListMenu: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate
-{
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    
-    [params setValue:deviceID forKey:@"device_id"];
-    [params setValue:appID forKey:@"app_id"];
-    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_LIST_MENU];
-    paramenter.delegate = delegate;
-    NSString *strRequest = @"";
-    strRequest = [NSString stringWithFormat:BASE_URL,GET_LIST_MENU];
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
-    [request setHTTPMethod:@"POST"];
-    [Utility setParamWithMethodPost:params forRequest:request];
-    [self baseRequestJSON:request parameter:paramenter];
-}
+
 
 - (void)getListLikedMenu:(NSString *)deviceID withAppID:(NSString *)appID delegate:(NSObject<ManagerDownloadDelegate> *)delegate{
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
@@ -820,7 +842,7 @@
 
 
 
-- (void) submitDeviceToken: (NSString*) deviceToken withAppID: (NSString*) appID withDeviceID: (NSString*) deviceID delegate: (NSObject<ManagerDownloadDelegate>*) delegate
+- (void)submitDeviceToken: (NSString*)deviceToken withAppID:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate
 {
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     [params setValue:[NSString stringWithFormat:@"%@",deviceID] forKey:@"device_id"];
@@ -1171,6 +1193,62 @@
     }
 }
 
+- (void)processListRecommendMenu:(NSArray *)listObject with:(DownloadParam *)param{
+
+    //おすすめメニュー
+    for (NSDictionary *dic in listObject) {
+        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
+            return;
+        }
+        MPRecommendMenuObject *Obj = [[MPRecommendMenuObject alloc] init];
+        Obj.id = [Utility checkNULL:[dic objectForKey:@"id"]];
+        Obj.title = [Utility checkNULL:[dic objectForKey:@"title"]];
+        Obj.image = [Utility checkNULL:[dic objectForKey:@"image"]];
+        Obj.content = [Utility checkNULL:[dic objectForKey:@"content"]];
+        Obj.thumbnail = [Utility checkNULL:[dic objectForKey:@"thumbnail"]];
+        Obj.updated_at = [Utility checkNULL:[dic objectForKey:@"updated_at"]];
+
+        [param.listData addObject: Obj];
+    }
+}
+
+- (void)processListMenu:(NSArray *)listObject with:(DownloadParam *)param{
+
+    //メニュー情報
+    for (NSDictionary *dic in listObject) {
+        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
+            return;
+        }
+
+        NSArray *cateArr = [Utility checkNULL:[dic objectForKey:@"cat"]];
+        for (long i = 0; i < cateArr.count; i ++) {
+            MPMenuObject *menuObject = [[MPMenuObject alloc] init];
+            menuObject.style = [[Utility checkNULL:[dic objectForKey:@"format_menu"]] integerValue];
+            menuObject.category = [Utility checkNULL:[[cateArr objectAtIndex:i] objectForKey:@"category"]];
+            menuObject.order_by = [Utility checkNULL:[[cateArr objectAtIndex:i] objectForKey:@"order_by"]];
+            NSArray *itemArr = [Utility checkNULL:[[cateArr objectAtIndex:i] objectForKey:@"menu"]];
+            for (long j = 0; j < itemArr.count; j ++) {
+                MPItemObject *itemObject = [[MPItemObject alloc] init];
+                itemObject.id = [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"id"]];
+                itemObject.title = [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"title"]];
+                itemObject.content =  [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"content"]];
+                itemObject.price = [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"price"]];
+                itemObject.image = [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"image"]];
+                itemObject.thumbnail = [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"thumbnail"]];
+                itemObject.order_by = [[Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"order_by"]] integerValue];
+                NSLog(@"%@",[Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"liked"]]);
+                itemObject.likedd = [[Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"liked"]] integerValue];
+                [menuObject.item addObject:itemObject];
+            }
+            [param.listData addObject:menuObject];
+        }
+    }
+}
+
+
+
+
+
 
 
 
@@ -1218,37 +1296,7 @@
     
 }
 
-- (void) processListMenu:(NSArray *)listObject with:(DownloadParam *)param{
-    
-    for (NSDictionary *dic in listObject) {
-        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
-            return;
-        }
-        
-        NSArray *cateArr = [Utility checkNULL:[dic objectForKey:@"cat"]];
-        for (long i = 0; i < cateArr.count; i ++) {
-            MPMenuObject *menuObject = [[MPMenuObject alloc] init];
-            menuObject.style = [[Utility checkNULL:[dic objectForKey:@"format_menu"]] integerValue];
-            menuObject.category = [Utility checkNULL:[[cateArr objectAtIndex:i] objectForKey:@"category"]];
-            menuObject.order_by = [Utility checkNULL:[[cateArr objectAtIndex:i] objectForKey:@"order_by"]];
-            NSArray *itemArr = [Utility checkNULL:[[cateArr objectAtIndex:i] objectForKey:@"menu"]];
-            for (long j = 0; j < itemArr.count; j ++) {
-                MPItemObject *itemObject = [[MPItemObject alloc] init];
-                itemObject.id = [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"id"]];
-                itemObject.title = [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"title"]];
-                itemObject.content =  [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"content"]];
-                itemObject.price = [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"price"]];
-                itemObject.image = [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"image"]];
-                itemObject.thumbnail = [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"thumbnail"]];
-                itemObject.order_by = [[Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"order_by"]] integerValue];
-                NSLog(@"%@",[Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"liked"]]);
-                itemObject.likedd = [[Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"liked"]] integerValue];
-                [menuObject.item addObject:itemObject];
-            }
-            [param.listData addObject:menuObject];
-        }
-    }
-}
+
 
 - (void) processDetailMenu:(NSArray *)listObject with:(DownloadParam *)param{
     

@@ -65,7 +65,7 @@
 //デバイス登録
 #define SET_DEVICE @"device/setDevice"
 
-//トップスライドイメージ取得
+//メニュー情報
 #define GET_LIST_MENU @"menu/getListMenu"
 
 //お知らせ配信依頼
@@ -77,7 +77,8 @@
 //店舗情報
 #define GET_LIST_SHOP @"shop/getListShop"
 
-
+//おすすめメニュー
+#define GET_LIST_RECOMMENMENU @"recommendMenu/getList"
 
 
 

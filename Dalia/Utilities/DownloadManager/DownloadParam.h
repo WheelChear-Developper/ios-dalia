@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger, RequestType) {
     RequestType_GET_TOP_INFO,
     RequestType_GET_LIST_COUPON,
     RequestType_GET_LIST_SHOP,
-
+    RequestType_GET_LIST_RECOMMENMENU,
 
 
     

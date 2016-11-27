@@ -122,19 +122,19 @@
 
 - (NSInteger)numberOfPagesInPageView:(MPQLPageView *)pageView
 {
-    return list_data.count;
+    return _list_data.count;
 }
 
 - (UIView *)pageView:(MPQLPageView *)pageView viewForPageAtIndex:(NSInteger)index {
 
     MPTheSecond_SlideView *view_slide = [MPTheSecond_SlideView myView];
 
-    [view_slide setNumberOfPages:list_data.count];
+    [view_slide setNumberOfPages:_list_data.count];
     [view_slide setCurrentCount:index];
 
     view_slide.scr_rootview.delegate = self;
 
-    MPCouponObject *couponObj = [list_data objectAtIndex:index];
+    MPCouponObject *couponObj = [_list_data objectAtIndex:index];
     //詳細閉じる
     view_slide.view_specialMark.hidden = NO;
     //名前
@@ -261,7 +261,7 @@
     switch (param.request_type) {
         case RequestType_GET_LIST_COUPON:
         {
-            list_data = param.listData;
+            _list_data = param.listData;
 
             //スライドビュー設置
             self.pageView.frame = self.view.bounds;
