@@ -74,7 +74,8 @@
 //トップ画面情報取得
 #define GET_TOP_INFO @"app/getTopInfo"
 
-
+//店舗情報
+#define GET_LIST_SHOP @"shop/getListShop"
 
 
 

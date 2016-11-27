@@ -31,6 +31,8 @@
     __weak IBOutlet MKMapView *_map;
     __weak IBOutlet UITableView *_tbl_shopList;
 
+    NSMutableArray* _list_data;
+
     NSMutableArray *_ary_shopTitle;
 }
 - (IBAction)btn_insta:(id)sender;

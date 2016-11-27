@@ -18,7 +18,7 @@
 #import "MPMenuRecommend_itemObject.h"
 #import "MPRecommend_menuObject.h"
 #import "MPWhatNewsObject.h"
-
+#import "MPDetailShopObject.h"
 
 
 
@@ -134,6 +134,21 @@
                 //新着情報取得
                 [self processListMessage:listObject with:parameter];
                 break;
+
+            case RequestType_GET_LIST_SHOP:
+                //店舗情報
+                [self processListShop:listObject with:parameter];
+                break;
+
+
+
+
+
+
+
+
+
+
 
 
 /*
@@ -426,6 +441,23 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
+- (void)getListMessage:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate> *)delegate
+{
+    //店舗情報
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+
+    [params setValue:deviceID forKey:@"device_id"];
+    [params setValue:appID forKey:@"app_id"];
+    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_LIST_SHOP];
+    paramenter.delegate = delegate;
+    NSString *strRequest = @"";
+    strRequest = [NSString stringWithFormat:BASE_URL,GET_LIST_SHOP];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
+    [request setHTTPMethod:@"POST"];
+    [Utility setParamWithMethodPost:params forRequest:request];
+    [self baseRequestJSON:request parameter:paramenter];
+}
 
 
 
@@ -1107,7 +1139,37 @@
     }
 }
 
+- (void)processListShop:(NSArray *)listObject with:(DownloadParam *)param{
 
+    //店舗情報
+    for (NSDictionary *dic in listObject) {
+        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
+            return;
+        }
+        MPDetailShopObject *Obj = [[MPDetailShopObject alloc] init];
+        Obj.id = [Utility checkNULL:[dic objectForKey:@"id"]];
+        Obj.shop_name = [Utility checkNULL:[dic objectForKey:@"shop_name"]];
+        Obj.shop_name_furi = [Utility checkNULL:[dic objectForKey:@"shop_name_furi"]];
+        Obj.image = [Utility checkNULL:[dic objectForKey:@"image"]];
+        Obj.postcode1 = [Utility checkNULL:[dic objectForKey:@"postcode1"]];
+        Obj.postcode2 = [Utility checkNULL:[dic objectForKey:@"postcode2"]];
+        Obj.address1 = [Utility checkNULL:[dic objectForKey:@"address1"]];
+        Obj.address2 = [Utility checkNULL:[dic objectForKey:@"address2"]];
+        Obj.latitude = [Utility checkNULL:[dic objectForKey:@"latitude"]];
+        Obj.longitude = [Utility checkNULL:[dic objectForKey:@"longitude"]];
+        Obj.business_hour = [Utility checkNULL:[dic objectForKey:@"business_hour"]];
+        Obj.content = [Utility checkNULL:[dic objectForKey:@"content"]];
+        Obj.phone1 = [Utility checkNULL:[dic objectForKey:@"phone1"]];
+        Obj.phone2 = [Utility checkNULL:[dic objectForKey:@"phone2"]];
+        Obj.phone3 = [Utility checkNULL:[dic objectForKey:@"phone3"]];
+        Obj.shop_url = [Utility checkNULL:[dic objectForKey:@"shop_url"]];
+        Obj.instagram_url = [Utility checkNULL:[dic objectForKey:@"instagram_url"]];
+        Obj.faebook_url = [Utility checkNULL:[dic objectForKey:@"faebook_url"]];
+        Obj.twitter_url = [Utility checkNULL:[dic objectForKey:@"twitter_url"]];
+
+        [param.listData addObject: Obj];
+    }
+}
 
 
 

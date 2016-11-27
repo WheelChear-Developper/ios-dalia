@@ -33,6 +33,11 @@
 - (void) getListCoupon: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
 //新着情報取得
 - (void) getListMessage: (NSString*) deviceID withAppID: (NSString*) appID withLimit: (NSString*) limit delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
+//店舗情報
+- (void)getListMessage:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate> *)delegate;
+
+
+
 
 
 /*

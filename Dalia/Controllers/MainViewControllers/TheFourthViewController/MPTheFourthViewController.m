@@ -32,6 +32,9 @@
     //XIB表示のため、contentViewを非表示
     [_contentView setHidden:YES];
 
+    //店舗情報取得
+    [[ManagerDownload sharedInstance] getListMessage:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
+
     //load cell xib and attach with collectionView
 //    UINib *nib = [UINib nibWithNibName:@"ShopListViewCell" bundle:nil];
 //    [_tbl_shopList registerNib:nib forCellReuseIdentifier:@"shopListIdentifier"];
@@ -181,9 +184,9 @@
 - (void)downloadDataSuccess:(DownloadParam *)param {
 
     switch (param.request_type) {
-        case RequestType_GET_LIST_COUPON:
+        case RequestType_GET_LIST_SHOP:
         {
-
+            _list_data = param.listData;
 
         }
             break;
