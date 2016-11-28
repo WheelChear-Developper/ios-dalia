@@ -240,7 +240,7 @@
             cell = [nib objectAtIndex:0];
         }
 
-        //        [cell setData:[self.listObject objectAtIndex:indexPath.row]];
+        [cell setData:[_list_news objectAtIndex:indexPath.row]];
         cell.backgroundColor = [UIColor clearColor];
         cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
         [cell.selectedBackgroundView setBackgroundColor:[UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1.0]];
@@ -252,7 +252,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+/*
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     if(tableView == _RecommendMenuList_tableView){
@@ -270,7 +270,8 @@
 
         [self.navigationController pushViewController:vc animated:YES];
     }
- }
+ */
+}
 
 #pragma mark - UICollectionView
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout
@@ -311,7 +312,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Clicked %ld-%ld",indexPath.section,indexPath.row);
+//    NSLog(@"Clicked %ld-%ld",indexPath.section,indexPath.row);
 }
 
 - (void)resizeTable {

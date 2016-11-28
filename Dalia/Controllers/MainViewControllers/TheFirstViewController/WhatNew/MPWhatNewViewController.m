@@ -108,7 +108,7 @@
         //上方向の時のアクション
         //カスタムトップナビゲーション　オープン
         //標準ナビゲーションのオープン
-        [self setFadeOut_BasicNavigation:true];
+//        [self setFadeOut_BasicNavigation:true];
 
         //タブのオープン
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:true];
@@ -126,7 +126,7 @@
 
         //下方向の時のアクション
         //標準ナビゲーションのクローズ
-        [self setFadeOut_BasicNavigation:false];
+//        [self setFadeOut_BasicNavigation:false];
 
         //タブのクローズ
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:false];
@@ -163,7 +163,7 @@
 #pragma mark - UITableViewDelegate & DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-   return list_WhatNews.count;
+    return list_WhatNews.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -171,9 +171,14 @@
     return 0;
 }
 
+- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+
+    return nil;
+}
+
 -(CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    return 100;
+    return 100.0;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

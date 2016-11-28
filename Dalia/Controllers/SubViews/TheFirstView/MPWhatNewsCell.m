@@ -28,10 +28,10 @@
 - (void)setData:(MPWhatNewsObject*)object {
     
     //非同期画像セット
-    if (object.image) {
-        NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:BASE_PREFIX_URL,object.thumbnail]];
+    if (![object.image isEqualToString:@""] && [object.image length] > 0) {
+        NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:BASE_PREFIX_URL,object.image]];
         NSURLRequest* request = [NSURLRequest requestWithURL:url];
-        
+
         [NSURLConnection sendAsynchronousRequest:request
                                            queue:[NSOperationQueue mainQueue]
                                completionHandler:^(NSURLResponse * response,
@@ -47,6 +47,7 @@
                                    [_img_Photo setImage:image];
                                }];
     }else{
+
         [_img_Photo setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
     }
     

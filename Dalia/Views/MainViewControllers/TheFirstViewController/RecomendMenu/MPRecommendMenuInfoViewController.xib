@@ -11,9 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPRecommendMenuInfoViewController">
             <connections>
-                <outlet property="_img_photo" destination="NVt-Tk-mf5" id="qpT-Q6-9DA"/>
-                <outlet property="_lbl_content" destination="nDT-IB-pqZ" id="zXS-qD-bzE"/>
-                <outlet property="_lbl_title" destination="jCA-Om-mSr" id="xz5-sV-jbF"/>
+                <outlet property="_img_photo" destination="NVt-Tk-mf5" id="zNi-0W-gWO"/>
+                <outlet property="_lbl_content" destination="nDT-IB-pqZ" id="2ei-bB-m5R"/>
+                <outlet property="_lbl_title" destination="jCA-Om-mSr" id="6PD-il-gwu"/>
                 <outlet property="_scr_inView" destination="vHH-pa-2CG" id="fmo-nB-ete"/>
                 <outlet property="_scr_rootview" destination="S0f-CP-AXG" id="6Qp-6K-C4c"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -28,35 +28,27 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHH-pa-2CG">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="361.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="オーガニックヘッドスパ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jCA-Om-mSr">
-                                    <rect key="frame" x="17" y="60" width="286" height="19"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jCA-Om-mSr">
+                                    <rect key="frame" x="17" y="60" width="286" height="0.0"/>
                                     <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="19"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NVt-Tk-mf5">
-                                    <rect key="frame" x="17" y="89" width="286" height="100"/>
+                                    <rect key="frame" x="17" y="70" width="286" height="100"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="100" id="HeM-RS-RsT"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDT-IB-pqZ">
-                                    <rect key="frame" x="17" y="199" width="286" height="82.5"/>
-                                    <attributedString key="attributedText">
-                                        <fragment content="自然の恵みによって頭皮をすこやかに、髪を美しく、心をいやす。植物による癒し、香りによるリラクゼーション、マッサージによる働きかけ、すべてが１つに融合したメニューです。日頃頑張っているあなたへのご褒美にぜひ一度お試しください。">
-                                            <attributes>
-                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="11" name="HiraginoSans-W3"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                    <rect key="frame" x="17" y="180" width="286" height="0.0"/>
+                                    <attributedString key="attributedText"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEN-DD-EGA">
-                                    <rect key="frame" x="40" y="291.5" width="240" height="60"/>
+                                    <rect key="frame" x="40" y="190" width="240" height="60"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThE-vJ-8hw">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
