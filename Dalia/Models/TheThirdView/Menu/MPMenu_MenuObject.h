@@ -1,5 +1,5 @@
 //
-//  MPMenuObject.h
+//  MPMenu_MenuObject.h
 //  Misepuri
 //
 //  Created by 3SI-TUYENBQ on 12/3/13.
@@ -12,9 +12,9 @@ typedef NS_ENUM(NSInteger, STYLE_FORMAT_MENU_TYPE) {
     STYLE_FORMAT_MENU_TYPE_List,
     STYLE_FORMAT_MENU_TYPE_Plantext
 };
-@interface MPMenuObject : NSObject
-@property (nonatomic) STYLE_FORMAT_MENU_TYPE style;
+@interface MPMenu_MenuObject : NSObject
 @property (nonatomic, strong) NSString *category;
-@property (nonatomic, strong) NSString *order_by;
+@property (nonatomic, strong) NSString *thumbnail;
+@property (nonatomic) long order_by;
 @property (nonatomic, strong) NSMutableArray *item;
 @end

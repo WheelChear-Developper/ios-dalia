@@ -62,7 +62,6 @@
 
     //メニュー取得
     [[ManagerDownload sharedInstance] getListMenu:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
-
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -134,7 +133,7 @@
 - (void)downloadDataSuccess:(DownloadParam *)param {
 
     switch (param.request_type) {
-        case RequestType_GET_LIST_RECOMMENMENU:
+        case RequestType_GET_LIST_MENU:
         {
             _list_data = param.listData;
 
@@ -192,7 +191,7 @@
         cell = [nib objectAtIndex:0];
     }
 
-    MPMenuObject *menuObj = [_list_data objectAtIndex:indexPath.row];
+    MPMenu_MenuObject *menuObj = [_list_data objectAtIndex:indexPath.row];
 /*
     //画像設定
     if (menuObj.image && [menuObj.image length] > 0 ) {

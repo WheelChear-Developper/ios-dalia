@@ -1,5 +1,5 @@
 //
-//  MPItemObject.h
+//  MPMenu_ItemObject.h
 //  Misepuri
 //
 //  Created by 3SI-TUYENBQ on 12/3/13.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MPItemObject : NSObject
+@interface MPMenu_ItemObject : NSObject
 @property (nonatomic, strong) NSString *id;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *content;

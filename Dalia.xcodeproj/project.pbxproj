@@ -318,8 +318,8 @@
 		107EA2451DE4307900A4A8CD /* MPRecommendMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107EA2421DE4307900A4A8CD /* MPRecommendMenuViewController.xib */; };
 		1083AD121DEA8552003596CF /* MPDetailShopObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083AD101DEA8552003596CF /* MPDetailShopObject.m */; };
 		1083AD161DEA9239003596CF /* MPRecommendMenuObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083AD151DEA9239003596CF /* MPRecommendMenuObject.m */; };
-		1083AD1C1DEAA523003596CF /* MPItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083AD191DEAA523003596CF /* MPItemObject.m */; };
-		1083AD1D1DEAA523003596CF /* MPMenuObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083AD1B1DEAA523003596CF /* MPMenuObject.m */; };
+		1083AD1C1DEAA523003596CF /* MPMenu_ItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083AD191DEAA523003596CF /* MPMenu_ItemObject.m */; };
+		1083AD1D1DEAA523003596CF /* MPMenu_MenuObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083AD1B1DEAA523003596CF /* MPMenu_MenuObject.m */; };
 		1083AD211DEAB69B003596CF /* MPMemberObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1083AD201DEAB69B003596CF /* MPMemberObject.m */; };
 		10967BC61DDB5DFF004DA122 /* MPMenuListCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10967BC41DDB5DFF004DA122 /* MPMenuListCollectionCell.m */; };
 		10BC22A11DE83B0400B1A394 /* lady_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 10BC227B1DE83B0300B1A394 /* lady_01.png */; };
@@ -437,6 +437,7 @@
 		10C4B9101DDABE4E00E26096 /* MPRecommend_menuObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C4B90A1DDABE4E00E26096 /* MPRecommend_menuObject.m */; };
 		10C4B9111DDABE4E00E26096 /* MPWhatNewsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C4B90E1DDABE4E00E26096 /* MPWhatNewsObject.m */; };
 		10C4B9141DDAC3F200E26096 /* MPMenuTopinfoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C4B9131DDAC3F200E26096 /* MPMenuTopinfoObject.m */; };
+		10CCF6A31DEC5A40006E2344 /* MPMenu_ShopObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CCF6A21DEC5A40006E2344 /* MPMenu_ShopObject.m */; };
 		10DE079A1DD838810068C3A9 /* MPMenuListHomeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DE07931DD838810068C3A9 /* MPMenuListHomeObject.m */; };
 		10DE079B1DD838810068C3A9 /* MPNewHomeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DE07961DD838810068C3A9 /* MPNewHomeObject.m */; };
 		10DE079C1DD838810068C3A9 /* MPTopImageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DE07991DD838810068C3A9 /* MPTopImageObject.m */; };
@@ -870,10 +871,10 @@
 		1083AD111DEA8552003596CF /* MPDetailShopObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPDetailShopObject.h; sourceTree = "<group>"; };
 		1083AD141DEA9239003596CF /* MPRecommendMenuObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPRecommendMenuObject.h; sourceTree = "<group>"; };
 		1083AD151DEA9239003596CF /* MPRecommendMenuObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPRecommendMenuObject.m; sourceTree = "<group>"; };
-		1083AD181DEAA523003596CF /* MPItemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPItemObject.h; sourceTree = "<group>"; };
-		1083AD191DEAA523003596CF /* MPItemObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPItemObject.m; sourceTree = "<group>"; };
-		1083AD1A1DEAA523003596CF /* MPMenuObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuObject.h; sourceTree = "<group>"; };
-		1083AD1B1DEAA523003596CF /* MPMenuObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuObject.m; sourceTree = "<group>"; };
+		1083AD181DEAA523003596CF /* MPMenu_ItemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenu_ItemObject.h; sourceTree = "<group>"; };
+		1083AD191DEAA523003596CF /* MPMenu_ItemObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenu_ItemObject.m; sourceTree = "<group>"; };
+		1083AD1A1DEAA523003596CF /* MPMenu_MenuObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenu_MenuObject.h; sourceTree = "<group>"; };
+		1083AD1B1DEAA523003596CF /* MPMenu_MenuObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenu_MenuObject.m; sourceTree = "<group>"; };
 		1083AD1F1DEAB69B003596CF /* MPMemberObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMemberObject.h; sourceTree = "<group>"; };
 		1083AD201DEAB69B003596CF /* MPMemberObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMemberObject.m; sourceTree = "<group>"; };
 		10967BC31DDB5DFF004DA122 /* MPMenuListCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuListCollectionCell.h; sourceTree = "<group>"; };
@@ -1002,6 +1003,8 @@
 		10C4B90E1DDABE4E00E26096 /* MPWhatNewsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWhatNewsObject.m; sourceTree = "<group>"; };
 		10C4B9121DDAC3F200E26096 /* MPMenuTopinfoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuTopinfoObject.h; sourceTree = "<group>"; };
 		10C4B9131DDAC3F200E26096 /* MPMenuTopinfoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuTopinfoObject.m; sourceTree = "<group>"; };
+		10CCF6A11DEC5A40006E2344 /* MPMenu_ShopObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenu_ShopObject.h; sourceTree = "<group>"; };
+		10CCF6A21DEC5A40006E2344 /* MPMenu_ShopObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenu_ShopObject.m; sourceTree = "<group>"; };
 		10DE07921DD838810068C3A9 /* MPMenuListHomeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuListHomeObject.h; sourceTree = "<group>"; };
 		10DE07931DD838810068C3A9 /* MPMenuListHomeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuListHomeObject.m; sourceTree = "<group>"; };
 		10DE07951DD838810068C3A9 /* MPNewHomeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNewHomeObject.h; sourceTree = "<group>"; };
@@ -2039,10 +2042,12 @@
 		1083AD171DEAA523003596CF /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				1083AD181DEAA523003596CF /* MPItemObject.h */,
-				1083AD191DEAA523003596CF /* MPItemObject.m */,
-				1083AD1A1DEAA523003596CF /* MPMenuObject.h */,
-				1083AD1B1DEAA523003596CF /* MPMenuObject.m */,
+				10CCF6A11DEC5A40006E2344 /* MPMenu_ShopObject.h */,
+				10CCF6A21DEC5A40006E2344 /* MPMenu_ShopObject.m */,
+				1083AD1A1DEAA523003596CF /* MPMenu_MenuObject.h */,
+				1083AD1B1DEAA523003596CF /* MPMenu_MenuObject.m */,
+				1083AD181DEAA523003596CF /* MPMenu_ItemObject.h */,
+				1083AD191DEAA523003596CF /* MPMenu_ItemObject.m */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -3328,6 +3333,7 @@
 				272CCDC81DCAF096006BC4EB /* VerticallyAlignedLabel.m in Sources */,
 				272CCD9B1DCAF096006BC4EB /* BaseEntity.m in Sources */,
 				10DE079B1DD838810068C3A9 /* MPNewHomeObject.m in Sources */,
+				10CCF6A31DEC5A40006E2344 /* MPMenu_ShopObject.m in Sources */,
 				272CCDA11DCAF096006BC4EB /* FMDatabaseAdditions.m in Sources */,
 				1075EF0D1DE880FC00974CE1 /* HearCatalogNewstyleCollectionCell.m in Sources */,
 				1002215D1DE32FB100169B93 /* ShopListViewCell.m in Sources */,
@@ -3345,7 +3351,7 @@
 				272CCD971DCAF096006BC4EB /* MPGymDAO.m in Sources */,
 				10488AEB1DE9771C005F5DF1 /* MPStaffInfoViewController.m in Sources */,
 				1061C6A11DDDB08B000CEAA2 /* MPCouponObject.m in Sources */,
-				1083AD1C1DEAA523003596CF /* MPItemObject.m in Sources */,
+				1083AD1C1DEAA523003596CF /* MPMenu_ItemObject.m in Sources */,
 				1076A92A1DDC46A20080E8CD /* MPView+Border.m in Sources */,
 				272CCD9F1DCAF096006BC4EB /* MPPresetObject.m in Sources */,
 				10C4B90F1DDABE4E00E26096 /* MPMenuRecommend_itemObject.m in Sources */,
@@ -3360,7 +3366,7 @@
 				10488AF21DE9798C005F5DF1 /* MPStaffCollectionCell.m in Sources */,
 				1038EF921DDF2DF900134331 /* MPTransferViewController.m in Sources */,
 				10967BC61DDB5DFF004DA122 /* MPMenuListCollectionCell.m in Sources */,
-				1083AD1D1DEAA523003596CF /* MPMenuObject.m in Sources */,
+				1083AD1D1DEAA523003596CF /* MPMenu_MenuObject.m in Sources */,
 				10DE079A1DD838810068C3A9 /* MPMenuListHomeObject.m in Sources */,
 				272CCD8E1DCAF096006BC4EB /* UIImageView+AFNetworking.m in Sources */,
 				272CCDAA1DCAF096006BC4EB /* MKNumberBadgeView.m in Sources */,

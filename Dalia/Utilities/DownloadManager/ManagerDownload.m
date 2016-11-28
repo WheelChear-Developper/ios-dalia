@@ -21,15 +21,17 @@
 #import "MPDetailShopObject.h"
 #import "MPRecommendMenuObject.h"
 
+#import "MPMenu_ShopObject.h"
+#import "MPMenu_MenuObject.h"
+#import "MPMenu_ItemObject.h"
+
+
 
 
 
 #import "MPMemberObject.h"
-
 #import "MPNewHomeObject.h"
 #import "MPCouponObject.h"
-#import "MPMenuObject.h"
-#import "MPItemObject.h"
 #import "MPShopObject.h"
 #import "MPApnsObject.h"
 
@@ -1212,16 +1214,23 @@
         if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
             return;
         }
+        MPMenu_ShopObject *shopObject = [[MPMenu_ShopObject alloc] init];
 
-        NSArray *cateArr = [Utility checkNULL:[dic objectForKey:@"cat"]];
-        for (long i = 0; i < cateArr.count; i ++) {
-            MPMenuObject *menuObject = [[MPMenuObject alloc] init];
-            menuObject.style = [[Utility checkNULL:[dic objectForKey:@"format_menu"]] integerValue];
-            menuObject.category = [Utility checkNULL:[[cateArr objectAtIndex:i] objectForKey:@"category"]];
-            menuObject.order_by = [Utility checkNULL:[[cateArr objectAtIndex:i] objectForKey:@"order_by"]];
-            NSArray *itemArr = [Utility checkNULL:[[cateArr objectAtIndex:i] objectForKey:@"menu"]];
+        shopObject.shopname = [Utility checkNULL:[dic objectForKey:@"shop_name"]];
+        NSArray *ary_menuData = [Utility checkNULL:[dic objectForKey:@"menu_data"]];
+        for (long i = 0; i < ary_menuData.count; i ++) {
+
+            MPMenu_MenuObject *menuObject = [[MPMenu_MenuObject alloc] init];
+
+            menuObject.category = [Utility checkNULL:[[ary_menuData objectAtIndex:i] objectForKey:@"category"]];
+            menuObject.thumbnail = [Utility checkNULL:[[ary_menuData objectAtIndex:i] objectForKey:@"thumbnail"]];
+            menuObject.order_by = [[Utility checkNULL:[[ary_menuData objectAtIndex:i] objectForKey:@"order_by"]] integerValue];
+            NSArray *itemArr = [Utility checkNULL:[[ary_menuData objectAtIndex:i] objectForKey:@"menu"]];
+
             for (long j = 0; j < itemArr.count; j ++) {
-                MPItemObject *itemObject = [[MPItemObject alloc] init];
+
+                MPMenu_ItemObject *itemObject = [[MPMenu_ItemObject alloc] init];
+
                 itemObject.id = [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"id"]];
                 itemObject.title = [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"title"]];
                 itemObject.content =  [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"content"]];
@@ -1233,8 +1242,9 @@
                 itemObject.likedd = [[Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"liked"]] integerValue];
                 [menuObject.item addObject:itemObject];
             }
-            [param.listData addObject:menuObject];
+            [shopObject.category addObject:menuObject];
         }
+        [param.listData addObject:shopObject];
     }
 }
 
