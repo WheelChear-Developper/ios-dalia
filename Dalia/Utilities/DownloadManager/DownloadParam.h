@@ -19,12 +19,15 @@ typedef NS_ENUM(NSInteger, RequestType) {
     RequestType_GET_LIST_COUPON,
     RequestType_GET_LIST_SHOP,
     RequestType_GET_LIST_RECOMMENMENU,
-
-
-    
-    
     RequestType_GET_MEMBER_INFO,
     RequestType_SET_MEMBER_INFO,
+
+
+
+
+
+
+    
 
     RequestType_SUBMIT_DEVICE_TOKEN,
     RequestType_ENABLE_NOTIFICATION,

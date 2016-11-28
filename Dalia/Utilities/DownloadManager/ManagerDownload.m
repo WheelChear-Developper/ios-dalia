@@ -150,20 +150,22 @@
                 [self processListMenu:listObject with:parameter];
                 break;
 
+            case RequestType_GET_MEMBER_INFO:
+                //ユーザー情報取得
+                [self processGetMemberInfo:listObject with:parameter];
+                break;
 
+            case RequestType_SET_MEMBER_INFO:
+                //ユーザー情報保存
+                [self processSetMemberInfo:listObject with:parameter];
+                break;
 
 
 
 
 
 /*
-            case RequestType_GET_MEMBER_INFO:
-                [self processGetMemberInfo:listObject with:parameter];
-                break;
-                
-            case RequestType_SET_MEMBER_INFO:
-                [self processSetMemberInfo:listObject with:parameter];
-                break;
+
                 
             case RequestType_SUBMIT_DEVICE_TOKEN:
             case RequestType_ENABLE_NOTIFICATION:
@@ -498,19 +500,9 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
-
-
-
-
-
-
-
-
-
-/*
-
-- (void) getMemberInfo: (NSString*) appID withDeviceID:(NSString*) deviceID delegate: (NSObject<ManagerDownloadDelegate>*) delegate {
+- (void)getMemberInfo:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate {
     
+    //顧客情報取得
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     
     [params setValue:appID forKey:@"app_id"];
@@ -526,8 +518,9 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
-- (void) setMemberInfo:(NSString*)userID withAppID:(NSString*)appID withMemberNO:(NSString*)memberNO withDeviceID:(NSString*)deviceID withNickName:(NSString*)nickName withGender:(long)gender withBirthday:(NSString*)birthday withZipcode:(NSString*)zipcode withChild1Name:(NSString*)child1name withChild1Birthday:(NSString*)child1birthday withChild2Name:(NSString*)child2name withChild2Birthday:(NSString*)child2birthday delegate: (NSObject<ManagerDownloadDelegate>*) delegate {
-    
+- (void)setMemberInfo:(NSString*)userID withAppID:(NSString*)appID withMemberNO:(NSString*)memberNO withDeviceID:(NSString*)deviceID withNickName:(NSString*)nickName withGender:(long)gender withBirthday:(NSString*)birthday withZipcode:(NSString*)zipcode withChild1Name:(NSString*)child1name withChild1Birthday:(NSString*)child1birthday withChild2Name:(NSString*)child2name withChild2Birthday:(NSString*)child2birthday delegate: (NSObject<ManagerDownloadDelegate>*) delegate {
+
+    //顧客情報保存
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     [params setValue:[NSString stringWithFormat:@"%@",userID] forKey:@"id"];
     [params setValue:[NSString stringWithFormat:@"%@",appID] forKey:@"app_id"];
@@ -554,7 +547,7 @@
 }
 
 
-
+/*
 
 
 - (void) readMessage: (NSString*) deviceID withAppID: (NSString*) appID withMessageID: (NSString*) messageID delegate: (NSObject<ManagerDownloadDelegate>*) delegate
@@ -1245,7 +1238,136 @@
     }
 }
 
+- (void) processGetMemberInfo:(NSArray *)listObject with:(DownloadParam *)param{
 
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObject:@"hoge" forKey:@"fuga"];
+    for (id key in [dictionary keyEnumerator]) {
+        NSLog(@"Key:%@ Value:%@", key, [dictionary valueForKey:key]);
+    }
+
+    //顧客情報取得
+    for (NSDictionary *dic in listObject) {
+        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
+            return;
+        }
+
+        NSDictionary* dic_fields = [dic objectForKey:@"fields"];
+        NSDictionary* dic_privacy = [dic objectForKey:@"privacy"];
+        NSDictionary* dic_value = [dic objectForKey:@"values"];
+
+        MPMemberObject *memberInfoObj = [[MPMemberObject alloc] init];
+        long lng_count = 1;
+        for(id key in [dic_value keyEnumerator]){
+
+            if([key isEqualToString:@"nick_name"]){
+
+                memberInfoObj.fld_nick_name = [Utility checkNULL:[dic_fields objectForKey:@"nick_name"]];
+                memberInfoObj.nick_name = [Utility checkNULL:[dic_value objectForKey:@"nick_name"]];
+                memberInfoObj.sortno_nick_name = lng_count;
+                lng_count += 1;
+            }
+
+            if([key isEqualToString:@"gender"]){
+
+                memberInfoObj.fld_gender = [Utility checkNULL:[dic_fields objectForKey:@"gender"]];
+                memberInfoObj.gender = [[Utility checkNULL:[dic_value objectForKey:@"gender"]] integerValue];
+                memberInfoObj.sortno_gender = lng_count;
+                lng_count += 1;
+            }
+            if([key isEqualToString:@"mail"]){
+
+                memberInfoObj.fld_mail = [Utility checkNULL:[dic_fields objectForKey:@"mail"]];
+                memberInfoObj.mail = [Utility checkNULL:[dic_value objectForKey:@"mail"]];
+                memberInfoObj.sortno_mail = lng_count;
+                lng_count += 1;
+            }
+            if([key isEqualToString:@"job"]){
+
+                memberInfoObj.fld_job = [Utility checkNULL:[dic_fields objectForKey:@"job"]];
+                memberInfoObj.job = [Utility checkNULL:[dic_value objectForKey:@"job"]];
+                memberInfoObj.sortno_job = lng_count;
+                lng_count += 1;
+            }
+            if([key isEqualToString:@"zipcode"]){
+
+                memberInfoObj.fld_zipcode = [Utility checkNULL:[dic_fields objectForKey:@"zipcode"]];
+                memberInfoObj.zipcode = [Utility checkNULL:[dic_value objectForKey:@"zipcode"]];
+                memberInfoObj.sortno_zipcode = lng_count;
+                lng_count += 1;
+            }
+            if([key isEqualToString:@"address"]){
+
+                memberInfoObj.fld_address = [Utility checkNULL:[dic_fields objectForKey:@"address"]];
+                memberInfoObj.address = [Utility checkNULL:[dic_value objectForKey:@"address"]];
+                memberInfoObj.sortno_address = lng_count;
+                lng_count += 1;
+            }
+            if([key isEqualToString:@"name1"]){
+
+                memberInfoObj.fld_name1 = [Utility checkNULL:[dic_fields objectForKey:@"name1"]];
+                memberInfoObj.fld_name2 = [Utility checkNULL:[dic_fields objectForKey:@"name2"]];
+                memberInfoObj.name1 = [Utility checkNULL:[dic_value objectForKey:@"name1"]];
+                memberInfoObj.name2 = [Utility checkNULL:[dic_value objectForKey:@"name2"]];
+                memberInfoObj.sortno_name = lng_count;
+                lng_count += 1;
+
+            }
+            if([key isEqualToString:@"furigana1"]){
+
+                memberInfoObj.fld_furigana1 = [Utility checkNULL:[dic_fields objectForKey:@"furigana1"]];
+                memberInfoObj.fld_furigana2 = [Utility checkNULL:[dic_fields objectForKey:@"furigana2"]];
+                memberInfoObj.furigana1 = [Utility checkNULL:[dic_value objectForKey:@"furigana1"]];
+                memberInfoObj.furigana2 = [Utility checkNULL:[dic_value objectForKey:@"furigana2"]];
+                memberInfoObj.sortno_furigana = lng_count;
+                lng_count += 1;
+            }
+            if([key isEqualToString:@"tel"]){
+
+                memberInfoObj.fld_tel = [Utility checkNULL:[dic_fields objectForKey:@"tel"]];
+                memberInfoObj.tel = [Utility checkNULL:[dic_value objectForKey:@"tel"]];
+                memberInfoObj.sortno_tel = lng_count;
+                lng_count += 1;
+            }
+            if([key isEqualToString:@""]){
+
+                memberInfoObj.fld_generation = [Utility checkNULL:[dic_fields objectForKey:@"generation"]];
+                memberInfoObj.generation = [Utility checkNULL:[dic_value objectForKey:@"generation"]];
+                memberInfoObj.sortno_generation = lng_count;
+                lng_count += 1;
+            }
+            if([key isEqualToString:@""]){
+
+                memberInfoObj.fld_shop = [Utility checkNULL:[dic_fields objectForKey:@"shop"]];
+                memberInfoObj.shop = [Utility checkNULL:[dic_value objectForKey:@"shop"]];
+                memberInfoObj.sortno_shop = lng_count;
+                lng_count += 1;
+            }
+            if([key isEqualToString:@"birthday"]){
+
+                memberInfoObj.fld_birthday = [Utility checkNULL:[dic_fields objectForKey:@"birthday"]];
+                memberInfoObj.birthday = [Utility checkNULL:[dic_value objectForKey:@"birthday"]];
+                memberInfoObj.sortno_birthday = lng_count;
+                lng_count += 1;
+            }
+        }
+
+        memberInfoObj.details = [Utility checkNULL:[dic_privacy objectForKey:@"details"]];
+
+        [param.listData addObject: memberInfoObj];
+    }
+}
+
+- (void) processSetMemberInfo:(NSArray *)listObject with:(DownloadParam *)param{
+
+    //顧客情報保存
+    for (NSDictionary *dic in listObject) {
+        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
+            return;
+        }
+        MPMemberObject *memberInfoObj = [[MPMemberObject alloc] init];
+        [param.listData addObject: memberInfoObj];
+    }
+}
 
 
 
@@ -1256,39 +1378,7 @@
 
 /*
 
-- (void) processGetMemberInfo:(NSArray *)listObject with:(DownloadParam *)param{
-    
-    for (NSDictionary *dic in listObject) {
-        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
-            return;
-        }
-        MPMemberObject *memberInfoObj = [[MPMemberObject alloc] init];
-        memberInfoObj.id = [Utility checkNULL:[dic objectForKey:@"id"]];
-        memberInfoObj.app_id = [Utility checkNULL:[dic objectForKey:@"app_id"]];
-        memberInfoObj.member_no = [Utility checkNULL:[dic objectForKey:@"member_no"]];
-        memberInfoObj.device_id = [Utility checkNULL:[dic objectForKey:@"device_id"]];
-        memberInfoObj.nick_name = [Utility checkNULL:[dic objectForKey:@"nick_name"]];
-        memberInfoObj.gender = [[Utility checkNULL:[dic objectForKey:@"gender"]] integerValue];
-        memberInfoObj.birthday = [Utility checkNULL:[dic objectForKey:@"birthday"]];
-        memberInfoObj.zipcode = [Utility checkNULL:[dic objectForKey:@"zipcode"]];
-        memberInfoObj.child1_name = [Utility checkNULL:[dic objectForKey:@"child1_name"]];
-        memberInfoObj.child1_birthday = [Utility checkNULL:[dic objectForKey:@"child1_birthday"]];
-        memberInfoObj.child2_name = [Utility checkNULL:[dic objectForKey:@"child2_name"]];
-        memberInfoObj.child2_birthday = [Utility checkNULL:[dic objectForKey:@"child2_birthday"]];
-        [param.listData addObject: memberInfoObj];
-    }
-}
 
-- (void) processSetMemberInfo:(NSArray *)listObject with:(DownloadParam *)param{
-    
-    for (NSDictionary *dic in listObject) {
-        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
-            return;
-        }
-        MPMemberObject *memberInfoObj = [[MPMemberObject alloc] init];
-        [param.listData addObject: memberInfoObj];
-    }
-}
 
 
 

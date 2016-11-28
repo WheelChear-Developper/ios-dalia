@@ -108,7 +108,7 @@
     
     [super viewWillAppear:animated];
 
-//    [[ManagerDownload sharedInstance] getMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
+    [[ManagerDownload sharedInstance] getMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -165,22 +165,7 @@
                     self.txt_childrenBirthday2.enabled = NO;
                 }
 */
-            }else{
-                
-                UIAlertController *alert =
-                [UIAlertController alertControllerWithTitle:@"読み込みエラー"
-                                                    message:@"サーバーからデータ取得できませんでした。"
-                                             preferredStyle:UIAlertControllerStyleAlert];
-                
-                [alert addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                          style:UIAlertActionStyleDefault
-                                                        handler:^(UIAlertAction *action) {
-                                                            
-                                                        }]];
-                
-                [self presentViewController:alert animated:YES completion:nil];
             }
- 
         }
             break;
 
