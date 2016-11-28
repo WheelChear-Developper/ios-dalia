@@ -11,7 +11,9 @@
 #import "ManagerDownload.h"
 #import "MPTheMenuCell.h"
 #import "MPTheThirdSumMenuViewController.h"
+#import "MPMenu_ShopObject.h"
 #import "MPMenu_MenuObject.h"
+#import "MPMenu_ItemObject.h"
 
 @interface MPTheThirdViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPTheThirdSumMenuViewControllerDelegate>
 {

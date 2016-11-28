@@ -152,11 +152,24 @@
 }
 
 #pragma mark - UITableViewDelegate & DataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
 
     if(tableView == _tbl_list){
 
         return _list_data.count;
+    }
+    return 0;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+    if(tableView == _tbl_list){
+
+
+        MPMenu_ShopObject* shopObj_category = [_list_data objectAtIndex:section];
+        NSString *str_shopName = shopObj_category.shopname;
+
+        return [shopObj_category.category count];
     }
 
     return 0;
