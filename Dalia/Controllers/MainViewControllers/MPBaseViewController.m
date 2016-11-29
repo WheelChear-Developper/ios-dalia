@@ -23,6 +23,9 @@
 #define FRAME_FOR_BACK_BUTTON CGRectMake(0, 0, 50, 44)
 
 @interface MPBaseViewController () <MPSlideMenuViewDelegate>
+{
+    MPSlideMenuView* _view_NaviMenu;
+}
 @end
 
 @implementation MPBaseViewController
@@ -245,7 +248,7 @@
     [_view_custom_navigationView addSubview:_iv_custom_navigationIcon];
 
     //カスタムナビゲーション　メニューオープンボタン設置
-    UIImage *img_custom_config = [UIImage imageNamed:@"configuration.png"];
+    UIImage* img_custom_config = [UIImage imageNamed:@"configuration.png"];
     _iv_custom_config = [[UIImageView alloc] initWithImage:img_custom_config];
     _iv_custom_config.contentMode = UIViewContentModeScaleAspectFit;
     _iv_custom_config.frame = CGRectMake(10, 10, 24, 24);
@@ -283,11 +286,12 @@
     [_view_NaviFrame addSubview:btn_custom_btn_close];
 
     //メニュー用view
-    MPSlideMenuView* _view_NaviMenu = (MPSlideMenuView*)[Utility viewInBundleWithName:@"MPSlideMenuView"];
+    _view_NaviMenu = (MPSlideMenuView*)[Utility viewInBundleWithName:@"MPSlideMenuView"];
     _view_NaviMenu.delegate = self;
     _view_NaviMenu.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.88];
     [_view_NaviMenu setFrame:CGRectMake(0, 0, _view_NaviFrame.frame.size.width - 44, _view_NaviFrame.frame.size.height)];
     [_view_NaviFrame addSubview:_view_NaviMenu];
+    _view_NaviMenu.hidden = YES;
 
     //SwipeGestureのインスタンスを生成
     UISwipeGestureRecognizer *swipeLeftGesture = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(custom_close_NavigationMenu:)];
@@ -466,7 +470,10 @@
 
 - (void)custom_open_NavigationMenu:(UIButton*)button {
 
-    //タブのクローズ
+    _view_NaviMenu.hidden = NO;
+    _iv_custom_config.hidden = NO;
+
+    //カスタムナビゲーションのオープン
     [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:true];
 
     [self.view bringSubviewToFront:_view_NaviFrame];
@@ -489,7 +496,10 @@
 
 - (void)custom_close_NavigationMenu:(UIButton*)button {
 
-    //タブのオープン
+    _view_NaviMenu.hidden = YES;
+    _iv_custom_config.hidden = YES;
+
+    //カスタムナビゲーションのクローズ
     [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:false];
 
     [self.view bringSubviewToFront:_view_NaviFrame];

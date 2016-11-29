@@ -83,6 +83,8 @@
 
     _scr_rootview.delegate = nil;
 
+    [self.navigationController popToRootViewControllerAnimated:YES];
+
     [super viewWillDisappear:animated];
 }
 
