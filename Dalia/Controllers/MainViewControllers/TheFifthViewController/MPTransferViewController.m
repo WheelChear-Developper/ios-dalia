@@ -50,8 +50,8 @@
     [self setHiddenBackButton:NO];
     
     //🔴カスタムnavigation
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_CustomNavigation:YES];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setImage_CustomNavigation:nil];
+    [self setHidden_CustomNavigation:YES];
+    [self setImage_CustomNavigation:nil];
 
     //🔴タブの表示
     [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_Tab:NO];
@@ -150,15 +150,15 @@
 
         //下方向の時のアクション
         //カスタムトップナビゲーション　クローズ
-//        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_close_TopNavigation:false];
+//        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_close_TopNavigation:true];
 
-        //タブのオープン
+        //タブのクローズ
 //        [(MPTabBarViewController*)[self.navigationController parentViewController] openTab:true];
 
     }else if(_scrollBeginingPoint.y ==0){
 
         //スクロール０
-        //カスタムトップナビゲーション　クローズ
+        //カスタムトップナビゲーション　オープン
 //        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
 
         //タブのオープン
@@ -170,7 +170,7 @@
         //カスタムトップナビゲーション　オープン
 //        [(MPTabBarViewController*)[self.navigationController parentViewController] custom_open_TopNavigation:false];
 
-        //タブのクローズ
+        //タブのオープン
 //        [(MPTabBarViewController*)[self.navigationController parentViewController] openTab:false];
     }
 }

@@ -12,6 +12,7 @@
 #import "MPWhatNewsCell.h"
 #import "MPWhatNewsObject.h"
 #import "MPWhatNewInfoViewController.h"
+#import "MPNewHomeObject.h"
 
 @protocol MPWhatNewViewControllerDelegate<NSObject>
 @end

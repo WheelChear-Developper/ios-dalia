@@ -30,6 +30,15 @@ typedef NS_ENUM(NSInteger, ElevenFunctionType) {
     UIImageView *_basic_navigationIcon;
     UIView *_contentView;
     UIButton *_backButton;
+
+    UIView* _view_custom_navigationView;
+    UIImageView* _iv_custom_config;
+    UIButton* _btn_custom_setting;
+
+    float _statusHeight;
+    
+    UIImageView* _iv_custom_navigationIcon;
+    UIView* _view_NaviFrame;
 }
 @property (nonatomic) UIImageView *basic_navigationView;
 
@@ -40,5 +49,10 @@ typedef NS_ENUM(NSInteger, ElevenFunctionType) {
 - (void)setImage_BasicNavigation:(UIImage*)image;
 - (void)setFadeOut_BasicNavigation:(BOOL)isEnable;
 - (void)setHidden_BasicNavigation:(BOOL)isEnable;
+
+- (void)setCustomNavigaion;
+- (void)setImage_CustomNavigation:(UIImage*)image;
+- (void)setFadeOut_CustomNavigation:(BOOL)isEnable;
+- (void)setHidden_CustomNavigation:(BOOL)isEnable;
 
 @end

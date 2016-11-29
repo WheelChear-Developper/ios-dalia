@@ -7,7 +7,6 @@
 //
 
 #import "ManagerDownload.h"
-#import "MPSlideMenuView.h"
 
 #define FRAME_HEIGHT 44
 #define FRAME_ORGIN 0
@@ -15,19 +14,13 @@
 #define ICON_HEIGHT 44
 #define FRAME_FOR_BACK_BUTTON CGRectMake(0, 0, 50, 44)
 
-@interface MPTabBarViewController : UITabBarController <ManagerDownloadDelegate, MPSlideMenuViewDelegate>
+@interface MPTabBarViewController : UITabBarController <ManagerDownloadDelegate>
 {
     long _numberTab;
     NSMutableArray* _listButton;
     BOOL _firstTimeRun;
-    UIView* _view_custom_navigationView;
-    UIImageView* _iv_custom_config;
-    UIButton* _btn_custom_setting;
-    UIView* _view_NaviFrame;
-    MPSlideMenuView* _view_NaviMenu;
-    float _statusHeight;
-    UIImageView* _bgTabBar;
-    UIImageView* _iv_custom_navigationIcon;
+
+    UIImageView* _bgTabBar;    
     UIImageView* _imv_notification;
 }
 @property (nonatomic) BOOL bln_ScreenSetting;
@@ -40,10 +33,5 @@
 - (void)setHidden_Tab:(BOOL)isEnable;
 - (void)setTabNotificationHidden:(BOOL)isEnable;
 - (void)setDisableHomeButton:(BOOL)isEnable;
-
-- (void)setCustomNavigaion;
-- (void)setImage_CustomNavigation:(UIImage*)image;
-- (void)setFadeOut_CustomNavigation:(BOOL)isEnable;
-- (void)setHidden_CustomNavigation:(BOOL)isEnable;
 
 @end

@@ -101,7 +101,7 @@
 
     //🔴navigation表示
     [self setHidden_BasicNavigation:YES];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_CustomNavigation:YES];
+    [self setHidden_CustomNavigation:YES];
 
     //🔴バックアクション非表示
     [self setHiddenBackButton:YES];
