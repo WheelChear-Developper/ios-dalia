@@ -9,6 +9,7 @@
 #import "MPBaseViewController.h"
 #import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
+#import "MPTheMenuHederCell.h"
 #import "MPTheMenuCell.h"
 #import "MPTheThirdSumMenuViewController.h"
 #import "MPMenu_ShopObject.h"
@@ -23,7 +24,9 @@
     
     __weak IBOutlet UITableView *_tbl_list;
 
-    NSMutableArray* _list_data;
+    NSMutableArray* _ary_total_data;
+    NSMutableArray* _arr_elia_Shop;
+    NSMutableArray* _ary_elis_menu;
 
     NSMutableArray *_ary_image;
     NSMutableArray *_ary_title;

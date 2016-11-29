@@ -438,6 +438,8 @@
 		10C4B9111DDABE4E00E26096 /* MPWhatNewsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C4B90E1DDABE4E00E26096 /* MPWhatNewsObject.m */; };
 		10C4B9141DDAC3F200E26096 /* MPMenuTopinfoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C4B9131DDAC3F200E26096 /* MPMenuTopinfoObject.m */; };
 		10CCF6A31DEC5A40006E2344 /* MPMenu_ShopObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CCF6A21DEC5A40006E2344 /* MPMenu_ShopObject.m */; };
+		10CCF6A71DEC7BAE006E2344 /* MPTheMenuHederCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CCF6A51DEC7BAE006E2344 /* MPTheMenuHederCell.m */; };
+		10CCF6AA1DEC7C51006E2344 /* MPTheMenuHederCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10CCF6A91DEC7C51006E2344 /* MPTheMenuHederCell.xib */; };
 		10DE079A1DD838810068C3A9 /* MPMenuListHomeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DE07931DD838810068C3A9 /* MPMenuListHomeObject.m */; };
 		10DE079B1DD838810068C3A9 /* MPNewHomeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DE07961DD838810068C3A9 /* MPNewHomeObject.m */; };
 		10DE079C1DD838810068C3A9 /* MPTopImageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DE07991DD838810068C3A9 /* MPTopImageObject.m */; };
@@ -1005,6 +1007,9 @@
 		10C4B9131DDAC3F200E26096 /* MPMenuTopinfoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuTopinfoObject.m; sourceTree = "<group>"; };
 		10CCF6A11DEC5A40006E2344 /* MPMenu_ShopObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenu_ShopObject.h; sourceTree = "<group>"; };
 		10CCF6A21DEC5A40006E2344 /* MPMenu_ShopObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenu_ShopObject.m; sourceTree = "<group>"; };
+		10CCF6A41DEC7BAE006E2344 /* MPTheMenuHederCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTheMenuHederCell.h; sourceTree = "<group>"; };
+		10CCF6A51DEC7BAE006E2344 /* MPTheMenuHederCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTheMenuHederCell.m; sourceTree = "<group>"; };
+		10CCF6A91DEC7C51006E2344 /* MPTheMenuHederCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheMenuHederCell.xib; sourceTree = "<group>"; };
 		10DE07921DD838810068C3A9 /* MPMenuListHomeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMenuListHomeObject.h; sourceTree = "<group>"; };
 		10DE07931DD838810068C3A9 /* MPMenuListHomeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuListHomeObject.m; sourceTree = "<group>"; };
 		10DE07951DD838810068C3A9 /* MPNewHomeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNewHomeObject.h; sourceTree = "<group>"; };
@@ -1449,6 +1454,7 @@
 		10467E761DE01B9100C51AA3 /* TheThirdView */ = {
 			isa = PBXGroup;
 			children = (
+				10CCF6A91DEC7C51006E2344 /* MPTheMenuHederCell.xib */,
 				10467E771DE01BB600C51AA3 /* MPTheMenuCell.xib */,
 				1037B83D1DE05D4D000D834C /* MPTheSubMenuCell.xib */,
 			);
@@ -2394,6 +2400,8 @@
 		10C4B8A91DD9FC2100E26096 /* TheThirdView */ = {
 			isa = PBXGroup;
 			children = (
+				10CCF6A41DEC7BAE006E2344 /* MPTheMenuHederCell.h */,
+				10CCF6A51DEC7BAE006E2344 /* MPTheMenuHederCell.m */,
 				10467E731DE01B5900C51AA3 /* MPTheMenuCell.h */,
 				10467E741DE01B5900C51AA3 /* MPTheMenuCell.m */,
 				1037B8381DE05D06000D834C /* MPTheSubMenuCell.h */,
@@ -3160,6 +3168,7 @@
 				10C4B7C51DD9DFEE00E26096 /* backBottom.png in Resources */,
 				10625A691DE7F25D003CE2FB /* members_bg_purple.png in Resources */,
 				10E6B6261DE2D59900BB0254 /* other_icon_twitter@2x.png in Resources */,
+				10CCF6AA1DEC7C51006E2344 /* MPTheMenuHederCell.xib in Resources */,
 				10C4B77D1DD9DFEE00E26096 /* first_ttl_whatsnew@2x.png in Resources */,
 				10488ACE1DE96796005F5DF1 /* MPStaffCell.xib in Resources */,
 				1076A9211DDC3A080080E8CD /* secondview_icon_facebook_maru.png in Resources */,
@@ -3430,6 +3439,7 @@
 				272CCDC61DCAF096006BC4EB /* XMLReader.m in Sources */,
 				106A31751DD7082A00C0C741 /* MPSlideMenuView.m in Sources */,
 				272CCDAF1DCAF096006BC4EB /* FHSTwitterEngine.m in Sources */,
+				10CCF6A71DEC7BAE006E2344 /* MPTheMenuHederCell.m in Sources */,
 				272CCD9A1DCAF096006BC4EB /* DatabaseManager.m in Sources */,
 				272CCDA71DCAF096006BC4EB /* KILabel.m in Sources */,
 				272CCD8D1DCAF096006BC4EB /* AFXMLRequestOperation.m in Sources */,
