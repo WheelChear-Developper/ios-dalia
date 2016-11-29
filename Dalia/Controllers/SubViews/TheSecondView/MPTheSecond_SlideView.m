@@ -42,6 +42,7 @@
         [self.scr_rootview setContentOffset:CGPointMake(0, _lng_messageHeight) animated:NO];
 
         _pgc_page.hidden = YES;
+        _view_message.hidden = NO;
     }else{
 
         _view_message.translatesAutoresizingMaskIntoConstraints = YES;
@@ -50,6 +51,7 @@
         _view_message.frame = rct_message;
 
         _pgc_page.hidden = NO;
+        _view_message.hidden = YES;
     }
 }
 

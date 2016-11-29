@@ -26,12 +26,10 @@ typedef NS_ENUM(NSInteger, ElevenFunctionType) {
 @interface MPBaseViewController : UIViewController
 {
     float statusHeight;
-//    UIImageView *_basic_navigationView;
     UIImageView *_basic_navigationIcon;
     UIView *_contentView;
     UIButton *_backButton;
 
-    UIView* _view_custom_navigationView;
     UIImageView* _iv_custom_config;
     UIButton* _btn_custom_setting;
 
@@ -41,6 +39,7 @@ typedef NS_ENUM(NSInteger, ElevenFunctionType) {
     UIView* _view_NaviFrame;
 }
 @property (nonatomic) UIImageView *basic_navigationView;
+@property (nonatomic) UIView* view_custom_navigationView;
 
 - (void)getTaskWithFunctions:(ElevenFunctionType)type;
 - (void)backButtonClicked:(UIButton*)sender;
