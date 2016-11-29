@@ -58,8 +58,6 @@
     [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_Tab:NO];
 
     [super viewWillAppear:animated];
-
-    _img_head.image = [UIImage imageNamed:[_ary_infoImage objectAtIndex:_menuCount]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -91,7 +89,7 @@
 
         //下方向の時のアクション
         //カスタムトップナビゲーション　クローズ
-        [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_CustomNavigation:true];
+//        [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_CustomNavigation:true];
 
         //タブのオープン
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:true];
@@ -109,7 +107,7 @@
 
         //上方向の時のアクション
         //カスタムトップナビゲーション　オープン
-        [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_CustomNavigation:false];
+//        [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_CustomNavigation:false];
 
         //タブのクローズ
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:false];
@@ -132,7 +130,7 @@
 #pragma mark - UITableViewDelegate & DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return _dic_menu_data.count;
+    return _ary_menuGroupe_data.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -149,11 +147,12 @@
         cell = [nib objectAtIndex:0];
     }
 
-    NSMutableDictionary* ary_dt = [_dic_menu_data objectForKey:[NSString stringWithFormat:@"%d",indexPath.row + 1]];
+    MPMenu_ItemObject* ary_dt = [_ary_menuGroupe_data objectAtIndex:indexPath.row];
 
-    cell.lbl_title.text = [ary_dt objectForKey:@"title"];
-    cell.lbl_subtitle.text = [ary_dt objectForKey:@"subTitle"];
-    cell.lbl_money.text = [ary_dt objectForKey:@"money"];
+    cell.lbl_title.text = ary_dt.title;
+    cell.lbl_subtitle.text = ary_dt.sub_title;
+    cell.lbl_money.text = ary_dt.price;
+
     return cell;
 }
 

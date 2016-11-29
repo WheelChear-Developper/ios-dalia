@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSString *content;
 @property (nonatomic, strong) NSString *price;
 @property (nonatomic, strong) NSString *image;
+@property (nonatomic, strong) NSString *sub_title;
 @property (nonatomic, strong) NSString *thumbnail;
 @property (nonatomic) long order_by;
 @property (nonatomic, strong) NSString *liked;

@@ -35,5 +35,4 @@
     NSMutableDictionary* _dic_menu_data;
 }
 
-
 @end

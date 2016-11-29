@@ -10,10 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPTheThirdSumMenuViewController">
             <connections>
-                <outlet property="_img_head" destination="CGg-xM-soY" id="z9C-PB-uxb"/>
                 <outlet property="_scr_inView" destination="Ai3-tv-hQ2" id="tAi-GJ-Qbf"/>
                 <outlet property="_scr_rootview" destination="wcv-6b-3qQ" id="o9X-Cs-FTU"/>
                 <outlet property="_tbl_menu" destination="BPZ-hv-oLz" id="qze-h0-zHP"/>
+                <outlet property="img_head" destination="CGg-xM-soY" id="Kp8-Dc-MRR"/>
                 <outlet property="view" destination="u7R-vY-5Tt" id="va2-pd-Pmo"/>
             </connections>
         </placeholder>

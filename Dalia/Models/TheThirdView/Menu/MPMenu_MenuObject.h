@@ -14,6 +14,8 @@ typedef NS_ENUM(NSInteger, STYLE_FORMAT_MENU_TYPE) {
 };
 @interface MPMenu_MenuObject : NSObject
 @property (nonatomic, strong) NSString *category;
+@property (nonatomic, strong) NSString *image;
+@property (nonatomic, strong) NSString *sub_title;
 @property (nonatomic, strong) NSString *thumbnail;
 @property (nonatomic) long order_by;
 @property (nonatomic, strong) NSMutableArray *item;

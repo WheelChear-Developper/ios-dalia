@@ -303,6 +303,7 @@
         NSMutableArray* ary_groupeItems = [_arr_elia_Shop objectAtIndex:indexPath.section];
         NSMutableArray* ary_shopItems = [ary_groupeItems objectAtIndex:0];
         NSString* strMainCategory = [[ary_shopItems valueForKey:@"category"] objectAtIndex:indexPath.row-1];
+        NSString* strMainSibCategory = [[ary_shopItems valueForKey:@"sub_title"] objectAtIndex:indexPath.row-1];
         NSString* strImageUrl = [[ary_shopItems valueForKey:@"thumbnail"] objectAtIndex:indexPath.row-1];
 
         //画像設定
@@ -324,7 +325,7 @@
         }
         
         shop_cell.lbl_title.text = strMainCategory;
-//        shop_cell.lbl_subtitle.text = menuObject.content;
+        shop_cell.lbl_subtitle.text = strMainSibCategory;
 
         return shop_cell;
     }
@@ -354,12 +355,38 @@
         }
     }else{
 
+        NSMutableArray* ary_groupeItems = [_arr_elia_Shop objectAtIndex:indexPath.section];
+        NSMutableArray* ary_shopItems = [ary_groupeItems objectAtIndex:0];
+        NSString* strSubScreenImageUrl = [[ary_shopItems valueForKey:@"image"] objectAtIndex:indexPath.row-1];
+
         MPTheThirdSumMenuViewController *vc = [[MPTheThirdSumMenuViewController alloc] initWithNibName:@"MPTheThirdSumMenuViewController" bundle:nil];
         vc.delegate = self;
 
+        //画像設定
+        if(strSubScreenImageUrl && [strSubScreenImageUrl length] > 0 ) {
+
+            dispatch_queue_t q_global = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+            dispatch_queue_t q_main = dispatch_get_main_queue();
+            dispatch_async(q_global, ^{
+
+                NSString *imageURL = [NSString stringWithFormat:BASE_PREFIX_URL,strSubScreenImageUrl];
+                UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [NSURL URLWithString: imageURL]]];
+
+                dispatch_async(q_main, ^{
+                    [vc.img_head setImage:image];
+                });
+            });
+        }else{
+            [vc.img_head setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
+        }
+
         vc.menuCount = indexPath.row;
-        vc.ary_infoImage = _ary_infoImage;
-        vc.dic_menu_data = [_dic_menu_data objectForKey:[NSString stringWithFormat:@"%d",indexPath.row]];
+
+        MPMenu_MenuObject *obj_menu = [[MPMenu_MenuObject alloc] init];
+        obj_menu = [[[_arr_elia_Shop objectAtIndex:section] objectAtIndex:row-1] objectAtIndex:row-1];
+
+        NSArray *subItems = obj_menu.item;
+        vc.ary_menuGroupe_data = subItems;
 
         [self.navigationController pushViewController:vc animated:YES];
     }

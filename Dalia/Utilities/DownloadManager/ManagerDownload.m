@@ -1223,7 +1223,9 @@
             MPMenu_MenuObject *menuObject = [[MPMenu_MenuObject alloc] init];
 
             menuObject.category = [Utility checkNULL:[[ary_menuData objectAtIndex:i] objectForKey:@"category"]];
+            menuObject.image = [Utility checkNULL:[[ary_menuData objectAtIndex:i] objectForKey:@"image"]];
             menuObject.thumbnail = [Utility checkNULL:[[ary_menuData objectAtIndex:i] objectForKey:@"thumbnail"]];
+            menuObject.sub_title = [Utility checkNULL:[[ary_menuData objectAtIndex:i] objectForKey:@"sub_title"]];
             menuObject.order_by = [[Utility checkNULL:[[ary_menuData objectAtIndex:i] objectForKey:@"order_by"]] integerValue];
             NSArray *itemArr = [Utility checkNULL:[[ary_menuData objectAtIndex:i] objectForKey:@"menu"]];
 
@@ -1236,6 +1238,7 @@
                 itemObject.content =  [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"content"]];
                 itemObject.price = [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"price"]];
                 itemObject.image = [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"image"]];
+                itemObject.sub_title = [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"sub_title"]];
                 itemObject.thumbnail = [Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"thumbnail"]];
                 itemObject.order_by = [[Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"order_by"]] integerValue];
                 NSLog(@"%@",[Utility checkNULL:[[itemArr objectAtIndex:j] objectForKey:@"liked"]]);
