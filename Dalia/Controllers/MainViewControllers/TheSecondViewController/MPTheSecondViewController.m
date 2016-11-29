@@ -134,6 +134,16 @@
 
     view_slide.scr_rootview.delegate = self;
 
+    if(index == 0){
+
+        view_slide.view_left.hidden = YES;
+    }
+    if(_list_data.count == index+1){
+
+        view_slide.view_right.hidden = YES;
+    }
+
+
     MPCouponObject *couponObj = [_list_data objectAtIndex:index];
     //詳細閉じる
     view_slide.view_specialMark.hidden = NO;
@@ -163,7 +173,7 @@
         case 1:
         {
             view_slide.lbl_Info1.text = @"通常価格から";
-            view_slide.lbl_Info2.text = [NSString stringWithFormat:@"%ld ％", couponObj.percentage];
+            view_slide.lbl_Info2.text = [NSString stringWithFormat:@"%ld ％OFF", couponObj.percentage];
         }
             break;
         case 2:

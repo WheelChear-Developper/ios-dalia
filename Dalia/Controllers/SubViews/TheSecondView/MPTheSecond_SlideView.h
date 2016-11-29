@@ -38,6 +38,8 @@
 @property (nonatomic) UIView* view_message;
 @property (nonatomic) UILabel* lbl_message;
 @property (nonatomic) long lng_messageHeight;
+@property (weak, nonatomic) IBOutlet UIView *view_left;
+@property (weak, nonatomic) IBOutlet UIView *view_right;
 
 - (IBAction)btn_detail:(id)sender;
 
