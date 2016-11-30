@@ -20,8 +20,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tsE-DJ-6he">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="67"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ニックネーム" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3x-eA-n7G">
-                                <rect key="frame" x="5" y="5" width="83.5" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ふりがな" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3x-eA-n7G">
+                                <rect key="frame" x="5" y="5" width="56" height="15"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -107,7 +107,13 @@
                     <constraint firstItem="tsE-DJ-6he" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="k13-ES-h2f"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.30588235294117649" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="lbl_name" destination="T3x-eA-n7G" id="SZm-ql-aE5"/>
+                <outlet property="txt_field1" destination="Q3j-xj-YGT" id="hPQ-4A-l93"/>
+                <outlet property="txt_field2" destination="Vei-Ml-s1c" id="I1o-y3-Zjf"/>
+            </connections>
+            <point key="canvasLocation" x="59" y="54.5"/>
         </tableViewCell>
     </objects>
 </document>

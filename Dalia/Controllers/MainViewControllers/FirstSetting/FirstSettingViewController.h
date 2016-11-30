@@ -31,6 +31,8 @@
 @interface FirstSettingViewController : MPBaseViewController <UITextFieldDelegate, ManagerDownloadDelegate, UIScrollViewDelegate>
 {    
     id<FirstSettingViewControllerDelegate> _FirstSettingViewControllerDelegate;
+
+    __weak IBOutlet UITableView *_tbl_userSetting;
     
     long lng_sexflag;
     NSString* str_ID;
@@ -40,18 +42,18 @@
     UIDatePicker *datePicker_ChildeBirthday2;
     CGPoint cgpoint_tf;
     UIKeyboardType kb_type;
+
+    NSDictionary* ary_field;
+    NSMutableArray* ary_fieldValue;
+    
 }
 @property (nonatomic) id<FirstSettingViewControllerDelegate> FirstSettingViewControllerDelegate;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scr_view;
 
-@property (weak, nonatomic) IBOutlet UITextField *txt_farstName;
-@property (weak, nonatomic) IBOutlet UITextField *txt_lastName;
-@property (weak, nonatomic) IBOutlet UITextField *txt_nickName;
-@property (weak, nonatomic) IBOutlet UITextField *txt_birthday;
-@property (weak, nonatomic) IBOutlet UITextField *txt_zipCode;
+
 @property (weak, nonatomic) IBOutlet UITextField *txt_introductionCode;
-@property (weak, nonatomic) IBOutlet UITextField *txt_machineChengeCode;
+
 
 @property (nonatomic) UIAlertController *alertController;  //アラートコントローラー本体
 @property (nonatomic) UILabel *chkLbl;  //ラベル

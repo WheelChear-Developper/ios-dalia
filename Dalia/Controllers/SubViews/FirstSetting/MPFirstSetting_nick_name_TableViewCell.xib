@@ -76,7 +76,11 @@
                     <constraint firstItem="Imf-jr-FYj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="VHP-78-R4g"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.30588235294117649" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.88926174496644295" blue="0.88926174496644295" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="lbl_name" destination="VHa-43-Q5L" id="Kcv-UI-RPy"/>
+                <outlet property="txt_field" destination="RSR-33-rHp" id="jQu-1C-c1L"/>
+            </connections>
             <point key="canvasLocation" x="34" y="54.5"/>
         </tableViewCell>
     </objects>

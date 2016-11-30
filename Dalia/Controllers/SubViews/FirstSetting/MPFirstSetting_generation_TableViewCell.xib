@@ -75,7 +75,11 @@
                     <constraint firstItem="lIu-0m-efP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cjU-Wk-RGa"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.30588235294117649" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="lbl_name" destination="k06-OL-rp4" id="MVy-qY-8cK"/>
+                <outlet property="txt_field" destination="lby-SM-DEY" id="cH0-D8-mE1"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

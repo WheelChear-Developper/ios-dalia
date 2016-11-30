@@ -25,6 +25,42 @@
     //XIB表示切り替え
     [_contentView setHidden:YES];
 
+    //load cell xib and attach with collectionView
+    UINib *nib1 = [UINib nibWithNibName:@"MPFirstSetting_nick_name_TableViewCell" bundle:nil];
+    [_tbl_userSetting registerNib:nib1 forCellReuseIdentifier:@"first_nickname_Identifier"];
+    UINib *nib2 = [UINib nibWithNibName:@"MPFirstSetting_gender_TableViewCell" bundle:nil];
+    [_tbl_userSetting registerNib:nib2 forCellReuseIdentifier:@"first_gender_Identifier"];
+    UINib *nib3 = [UINib nibWithNibName:@"MPFirstSetting_mail_TableViewCell" bundle:nil];
+    [_tbl_userSetting registerNib:nib3 forCellReuseIdentifier:@"first_mail_Identifier"];
+    UINib *nib4 = [UINib nibWithNibName:@"MPFirstSetting_job_TableViewCell" bundle:nil];
+    [_tbl_userSetting registerNib:nib4 forCellReuseIdentifier:@"first_job_Identifier"];
+    UINib *nib5 = [UINib nibWithNibName:@"MPFirstSetting_zipcode_TableViewCell" bundle:nil];
+    [_tbl_userSetting registerNib:nib5 forCellReuseIdentifier:@"first_zipcode_Identifier"];
+    UINib *nib6 = [UINib nibWithNibName:@"MPFirstSetting_address_TableViewCell" bundle:nil];
+    [_tbl_userSetting registerNib:nib6 forCellReuseIdentifier:@"first_address_Identifier"];
+    UINib *nib7 = [UINib nibWithNibName:@"MPFirstSetting_name_TableViewCell" bundle:nil];
+    [_tbl_userSetting registerNib:nib7 forCellReuseIdentifier:@"first_name_Identifier"];
+    UINib *nib8 = [UINib nibWithNibName:@"MPFirstSetting_furigana_TableViewCell" bundle:nil];
+    [_tbl_userSetting registerNib:nib8 forCellReuseIdentifier:@"first_furigana_Identifier"];
+    UINib *nib9 = [UINib nibWithNibName:@"MPFirstSetting_tel_TableViewCell" bundle:nil];
+    [_tbl_userSetting registerNib:nib9 forCellReuseIdentifier:@"first_tel_Identifier"];
+    UINib *nib10 = [UINib nibWithNibName:@"MPFirstSetting_generation_TableViewCell" bundle:nil];
+    [_tbl_userSetting registerNib:nib10 forCellReuseIdentifier:@"first_generation_Identifier"];
+    UINib *nib11 = [UINib nibWithNibName:@"MPFirstSetting_shop_TableViewCell" bundle:nil];
+    [_tbl_userSetting registerNib:nib11 forCellReuseIdentifier:@"first_shop_Identifier"];
+    UINib *nib12 = [UINib nibWithNibName:@"MPFirstSetting_birthday_TableViewCell" bundle:nil];
+    [_tbl_userSetting registerNib:nib12 forCellReuseIdentifier:@"first_birthday_Identifier"];
+    [_tbl_userSetting reloadData];
+
+
+
+
+
+
+
+/*
+
+
     [self.txt_farstName setTintColor:UIColor.whiteColor];
     [self.txt_lastName setTintColor:UIColor.whiteColor];
     [self.txt_nickName setTintColor:UIColor.whiteColor];
@@ -72,7 +108,7 @@
     toolbar.items=@[item0,item1,item2,item3];
     //DataPicker上部バー設定
     self.txt_birthday.inputAccessoryView = toolbar;
-
+*/
     // キーボードアクション追加
     NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
 
@@ -94,7 +130,7 @@
     numbaer_item3.tintColor = [UIColor blackColor];
     numbaer_toolbar.items=@[numbaer_item0,numbaer_item1,numbaer_item2,numbaer_item3];
     //DataPicker上部バー設定
-    self.txt_zipCode.inputAccessoryView = numbaer_toolbar;
+//    self.txt_zipCode.inputAccessoryView = numbaer_toolbar;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -108,7 +144,68 @@
     
     [super viewWillAppear:animated];
 
-    [[ManagerDownload sharedInstance] getMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
+    //会員情報保存項目取得
+//    [[ManagerDownload sharedInstance] getMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
+
+    memberObj = [[MPMemberObject alloc] init];
+    [memberObj.fld_name addObject:[Utility checkNULL:@"name1"]];
+    [memberObj.fld_name addObject:[Utility checkNULL:@"furigana1"]];
+    [memberObj.fld_name addObject:[Utility checkNULL:@"nick_name"]];
+    [memberObj.fld_name addObject:[Utility checkNULL:@"address"]];
+    [memberObj.fld_name addObject:[Utility checkNULL:@"zipcode"]];
+    [memberObj.fld_name addObject:[Utility checkNULL:@"tel"]];
+    [memberObj.fld_name addObject:[Utility checkNULL:@"gender"]];
+    [memberObj.fld_name addObject:[Utility checkNULL:@"generation"]];
+    [memberObj.fld_name addObject:[Utility checkNULL:@"shop"]];
+    [memberObj.fld_name addObject:[Utility checkNULL:@"job"]];
+    [memberObj.fld_name addObject:[Utility checkNULL:@"birthday"]];
+    [memberObj.fld_name addObject:[Utility checkNULL:@"mail"]];
+
+    [memberObj.fld_colom addObject:[Utility checkNULL:@"名前"]];
+    [memberObj.fld_colom addObject:[Utility checkNULL:@"名前フリガナ"]];
+    [memberObj.fld_colom addObject:[Utility checkNULL:@"ニックネーム"]];
+    [memberObj.fld_colom addObject:[Utility checkNULL:@"住所"]];
+    [memberObj.fld_colom addObject:[Utility checkNULL:@"郵便番号"]];
+    [memberObj.fld_colom addObject:[Utility checkNULL:@"電話番号"]];
+    [memberObj.fld_colom addObject:[Utility checkNULL:@"性別"]];
+    [memberObj.fld_colom addObject:[Utility checkNULL:@"年代"]];
+    [memberObj.fld_colom addObject:[Utility checkNULL:@"利用店舗"]];
+    [memberObj.fld_colom addObject:[Utility checkNULL:@"職業"]];
+    [memberObj.fld_colom addObject:[Utility checkNULL:@"誕生日"]];
+    [memberObj.fld_colom addObject:[Utility checkNULL:@"メールアドレス"]];
+
+    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
+    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
+    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
+    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
+    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
+    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
+    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
+    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
+    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
+    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
+    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
+    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
+
+    [memberObj.fld_value addObject:[Utility checkNULL:@"なまえ"]];
+    [memberObj.fld_value addObject:[Utility checkNULL:@"ふりがな"]];
+    [memberObj.fld_value addObject:[Utility checkNULL:@"にっくねーむ"]];
+    [memberObj.fld_value addObject:[Utility checkNULL:@"じゅうしょ"]];
+    [memberObj.fld_value addObject:[Utility checkNULL:@"ゆうびん"]];
+    [memberObj.fld_value addObject:[Utility checkNULL:@"でんわ"]];
+    [memberObj.fld_value addObject:[Utility checkNULL:@"せいべつ"]];
+    [memberObj.fld_value addObject:[Utility checkNULL:@"ねんだい"]];
+    [memberObj.fld_value addObject:[Utility checkNULL:@"りようきやく"]];
+    [memberObj.fld_value addObject:[Utility checkNULL:@"しょくぎょう"]];
+    [memberObj.fld_value addObject:[Utility checkNULL:@"たんじょうび"]];
+    [memberObj.fld_value addObject:[Utility checkNULL:@"めーる"]];
+
+    memberObj.flg_details = YES;
+
+    memberObj.details = @"プライバシーポリシー内容";
+    [_tbl_userSetting reloadData];
+
+    [self resizeTable];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -123,16 +220,16 @@
     formatter.dateFormat=@"yyy-MM-dd";
     NSString *stringDate=[formatter stringFromDate:selectDate];
     
-    self.txt_birthday.text = stringDate;
+//    self.txt_birthday.text = stringDate;
 }
 
 -(void)previousBtnClick {
     
-    [self.txt_birthday resignFirstResponder];
+//    [self.txt_birthday resignFirstResponder];
 }
 -(void)numbaerBtnClick {
     
-    [self.txt_zipCode resignFirstResponder];
+//    [self.txt_zipCode resignFirstResponder];
 }
 
 #pragma mark - ManagerDownloadDelegate
@@ -144,27 +241,8 @@
             if(param.listData.count > 0){
                 
                 memberObj = param.listData[0];
-/*
-                str_ID = memberObj.id;
-                self.txt_nickname.text = memberObj.nick_name;
-                lng_sexflag = memberObj.gender;
-                [self setSexChenge:lng_sexflag];
-                self.txt_birthday.text = memberObj.birthday;
-                if(![memberObj.birthday isEqualToString:@""]){
-                    self.txt_birthday.enabled = NO;
-                }
-                self.txt_zipcode.text = memberObj.zipcode;
-                self.txt_childrenname1.text = memberObj.child1_name;
-                self.txt_childrenBirthday1.text = memberObj.child1_birthday;
-                if(![memberObj.child1_birthday isEqualToString:@""]){
-                    self.txt_childrenBirthday1.enabled = NO;
-                }
-                self.txt_childrenname2.text = memberObj.child2_name;
-                self.txt_childrenBirthday2.text = memberObj.child2_birthday;
-                if(![memberObj.child2_birthday isEqualToString:@""]){
-                    self.txt_childrenBirthday2.enabled = NO;
-                }
-*/
+
+                [_tbl_userSetting reloadData];
             }
         }
             break;
@@ -184,6 +262,215 @@
     }
 }
 
+#pragma mark - UITableViewDelegate & UITableViewDatasource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+    return [memberObj.fld_colom count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+
+    return 0;
+}
+
+-(CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    return 67;
+}
+
+- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+
+    return nil;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    if(tableView == _tbl_userSetting){
+
+        if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"nick_name"]){
+
+            MPFirstSetting_nick_name_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_nickname_Identifier"];
+            if(cell == nil){
+
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPFirstSetting_nick_name_TableViewCell" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+            }
+            
+            return cell;
+        }
+
+        if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"gender"]){
+
+            MPFirstSetting_gender_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_gender_Identifier"];
+            if(cell == nil){
+
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPFirstSetting_gender_TableViewCell" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+            }
+
+            return cell;
+        }
+
+        if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"mail"]){
+
+            MPFirstSetting_mail_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_mail_Identifier"];
+            if(cell == nil){
+
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPFirstSetting_mail_TableViewCell" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+            }
+
+            return cell;
+        }
+
+        if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"job"]){
+
+            MPFirstSetting_job_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_job_Identifier"];
+            if(cell == nil){
+
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPFirstSetting_job_TableViewCell" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+            }
+
+            return cell;
+        }
+
+        if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"zipcode"]){
+
+            MPFirstSetting_zipcode_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_zipcode_Identifier"];
+            if(cell == nil){
+
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPFirstSetting_zipcode_TableViewCell" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+            }
+
+            return cell;
+        }
+
+        if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"address"]){
+
+            MPFirstSetting_address_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_address_Identifier"];
+            if(cell == nil){
+
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPFirstSetting_address_TableViewCell" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+            }
+
+            return cell;
+        }
+
+        if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"name1"]){
+
+            MPFirstSetting_name_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_name_Identifier"];
+            if(cell == nil){
+
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPFirstSetting_name_TableViewCell" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+            }
+
+            return cell;
+        }
+
+        if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"furigana1"]){
+
+            MPFirstSetting_furigana_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_furinaga_Identifier"];
+            if(cell == nil){
+
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPFirstSetting_furigana_TableViewCell" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+            }
+
+            return cell;
+        }
+
+        if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"tel"]){
+
+            MPFirstSetting_tel_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_tel_Identifier"];
+            if(cell == nil){
+
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPFirstSetting_tel_TableViewCell" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+            }
+
+            return cell;
+        }
+
+        if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"generation"]){
+
+            MPFirstSetting_generation_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_generation_Identifier"];
+            if(cell == nil){
+
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPFirstSetting_generation_TableViewCell" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+            }
+
+            return cell;
+        }
+
+        if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"shop"]){
+
+            MPFirstSetting_shop_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_shop_Identifier"];
+            if(cell == nil){
+
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPFirstSetting_shop_TableViewCell" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+            }
+
+            return cell;
+        }
+
+        if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"birthday"]){
+
+            MPFirstSetting_birthday_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_birthday_Identifier"];
+            if(cell == nil){
+
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPFirstSetting_birthday_TableViewCell" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+            }
+
+            return cell;
+        }
+    }
+
+    return nil;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    /*
+     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+     if(tableView == _RecommendMenuList_tableView){
+
+     MPRecommendMenuInfoViewController *vc = [[MPRecommendMenuInfoViewController alloc] initWithNibName:@"MPRecommendMenuInfoViewController" bundle:nil];
+     vc.delegate = self;
+
+     [self.navigationController pushViewController:vc animated:YES];
+     }
+
+     if(tableView == _WhatsNew_tableView){
+
+     MPWhatNewInfoViewController *vc = [[MPWhatNewInfoViewController alloc] initWithNibName:@"MPWhatNewInfoViewController" bundle:nil];
+     vc.delegate = self;
+     
+     [self.navigationController pushViewController:vc animated:YES];
+     }
+     */
+}
+
+- (void)resizeTable {
+
+    //コレクション高さをセルの最大値へセット
+    _tbl_userSetting.translatesAutoresizingMaskIntoConstraints = YES;
+    _tbl_userSetting.frame = CGRectMake(_tbl_userSetting.frame.origin.x, _tbl_userSetting.frame.origin.y, _tbl_userSetting.frame.size.width, 0);
+    _tbl_userSetting.frame =
+    CGRectMake(_tbl_userSetting.frame.origin.x,
+               _tbl_userSetting.frame.origin.y,
+               _tbl_userSetting.contentSize.width,
+               MAX(_tbl_userSetting.contentSize.height,
+                   _tbl_userSetting.bounds.size.height));
+
+}
+
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
 //    NSLog(@"scrool:%f",scrollView.contentOffset.y);
@@ -193,7 +480,7 @@
     
     CGRect rect_screen = [[UIScreen mainScreen] bounds];
     NSLog(@"height : %f", rect_screen.size.height);
-    
+/*
     if(textField == self.txt_farstName){
         
         cgpoint_tf.x = 0.0f;
@@ -237,7 +524,7 @@
     }
     
     kb_type = textField.keyboardType;
-    
+    */
     return YES;
 }
 
@@ -271,25 +558,25 @@
 - (void)enterButton:(UIButton*)sender {
     
     //キーボードクローズ
-    [self.txt_farstName resignFirstResponder];
-    [self.txt_lastName resignFirstResponder];
-    [self.txt_nickName resignFirstResponder];
-    [self.txt_birthday resignFirstResponder];
-    [self.txt_zipCode resignFirstResponder];
-    [self.txt_introductionCode resignFirstResponder];
-    [self.txt_machineChengeCode resignFirstResponder];
+//    [self.txt_farstName resignFirstResponder];
+//    [self.txt_lastName resignFirstResponder];
+//    [self.txt_nickName resignFirstResponder];
+//    [self.txt_birthday resignFirstResponder];
+//    [self.txt_zipCode resignFirstResponder];
+//    [self.txt_introductionCode resignFirstResponder];
+//    [self.txt_machineChengeCode resignFirstResponder];
 }
 
 - (void)hideKeyboard:(NSNotification*)notification {
     
     //キーボードクローズ
-    [self.txt_farstName resignFirstResponder];
-    [self.txt_lastName resignFirstResponder];
-    [self.txt_nickName resignFirstResponder];
-    [self.txt_birthday resignFirstResponder];
-    [self.txt_zipCode resignFirstResponder];
-    [self.txt_introductionCode resignFirstResponder];
-    [self.txt_machineChengeCode resignFirstResponder];
+//    [self.txt_farstName resignFirstResponder];
+//    [self.txt_lastName resignFirstResponder];
+//    [self.txt_nickName resignFirstResponder];
+//    [self.txt_birthday resignFirstResponder];
+//    [self.txt_zipCode resignFirstResponder];
+//    [self.txt_introductionCode resignFirstResponder];
+//    [self.txt_machineChengeCode resignFirstResponder];
 
 }
 
@@ -306,7 +593,7 @@
     NSMutableString *tmp =[textField.text mutableCopy];
     // 編集後のtext
     [tmp replaceCharactersInRange:range withString:string];
-    
+/*
     //ニックネーム入力規制
     if(textField == self.txt_nickName){
         
@@ -323,7 +610,7 @@
         
         return [tmp lengthOfBytesUsingEncoding:NSShiftJISStringEncoding] <= 7;
     }
-    
+*/
     return YES;
 }
 
@@ -335,7 +622,7 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    
+/*
     if(textField == self.txt_farstName){
         
         // 受け取った入力をラベルに代入
@@ -377,7 +664,7 @@
         // 受け取った入力をラベルに代入
         self.txt_machineChengeCode.text = textField.text;
     }
-    
+*/
     // キーボードを閉じる
     [textField resignFirstResponder];
     
@@ -385,7 +672,7 @@
 }
 
 - (IBAction)btn_start:(id)sender {
-
+/*
     //文字数チェック
     BOOL bln_LengthCheck = YES;
     if(self.txt_nickName.text.length == 0){
@@ -441,12 +728,14 @@
     }
     
     if(bln_LengthCheck == YES){
-/*
-        MPSettingAlertView *alertView = (MPSettingAlertView*) [Utility viewInBundleWithName:@"MPSettingAlertView"];
-        alertView.delegate = self;
-        [[MPAppDelegate sharedMPAppDelegate].window addSubview:alertView];
- */
+
+//        MPSettingAlertView *alertView = (MPSettingAlertView*) [Utility viewInBundleWithName:@"MPSettingAlertView"];
+//        alertView.delegate = self;
+//        [[MPAppDelegate sharedMPAppDelegate].window addSubview:alertView];
+
     }
+*/
+
 }
 
 -(void)setUserData {

@@ -75,7 +75,11 @@
                     <constraint firstAttribute="trailing" secondItem="w6C-wm-Yeu" secondAttribute="trailing" id="kiN-Sq-T6V"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.30588235294117649" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="lbl_name" destination="0YM-Sg-MzS" id="qu4-u7-z6F"/>
+                <outlet property="txt_field" destination="9lK-Bc-0Le" id="3Wc-ya-tZe"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

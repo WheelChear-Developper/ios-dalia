@@ -75,7 +75,11 @@
                     <constraint firstItem="9GH-6S-Bic" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eJs-kv-x25"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.30588235294117649" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="lbl_name" destination="zc9-dz-Uwp" id="DKS-AU-Hr3"/>
+                <outlet property="txt_field" destination="OBc-al-xdw" id="xTI-oA-Lzs"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>
