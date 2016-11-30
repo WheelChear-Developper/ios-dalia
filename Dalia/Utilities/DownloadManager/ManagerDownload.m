@@ -1257,7 +1257,7 @@
     for (id key in [dictionary keyEnumerator]) {
         NSLog(@"Key:%@ Value:%@", key, [dictionary valueForKey:key]);
     }
-
+/*
     //顧客情報取得
     for (NSDictionary *dic in listObject) {
         if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
@@ -1368,6 +1368,7 @@
 
         [param.listData addObject: memberInfoObj];
     }
+ */
 }
 
 - (void) processSetMemberInfo:(NSArray *)listObject with:(DownloadParam *)param{
