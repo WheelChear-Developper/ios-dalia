@@ -496,9 +496,6 @@
 
 - (void)custom_close_NavigationMenu:(UIButton*)button {
 
-    _view_NaviMenu.hidden = YES;
-    _iv_custom_config.hidden = YES;
-
     //カスタムナビゲーションのクローズ
     [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:false];
 
@@ -516,6 +513,8 @@
                      } completion:^(BOOL finished){
                          
                          //完了時のコールバック
+                         _view_NaviMenu.hidden = YES;
+                         _iv_custom_config.hidden = YES;
                          
                      }];
 }
