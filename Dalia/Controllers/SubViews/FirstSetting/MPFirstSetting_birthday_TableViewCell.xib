@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="first_birthday_Identifier" rowHeight="67" id="KGk-i7-Jjw" customClass="MPFirstSetting_birthday_TableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="67"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfT-zs-yVU">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="67"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お誕生日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKt-m4-xMe">
+                                <rect key="frame" x="5" y="5" width="56" height="15"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYN-oa-hVG">
+                                <rect key="frame" x="5" y="30" width="290" height="32"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="月・日は記入せず、４ケタの数字をご入力ください。例：０６２０" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="XHs-ge-ap9">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="31"/>
+                                        <color key="textColor" red="0.48627450979999998" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ug0-qk-ama">
+                                        <rect key="frame" x="0.0" y="31" width="290" height="1"/>
+                                        <color key="backgroundColor" red="0.48627450979999998" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="dUD-Gg-wRJ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="0zb-dc-dtB"/>
+                                    <constraint firstItem="ug0-qk-ama" firstAttribute="top" secondItem="XHs-ge-ap9" secondAttribute="bottom" id="1f2-o9-D0f"/>
+                                    <constraint firstItem="XHs-ge-ap9" firstAttribute="leading" secondItem="uYN-oa-hVG" secondAttribute="leading" id="9vi-TS-u3u"/>
+                                    <constraint firstItem="XHs-ge-ap9" firstAttribute="top" secondItem="uYN-oa-hVG" secondAttribute="top" id="9yW-b7-w9q"/>
+                                    <constraint firstItem="ug0-qk-ama" firstAttribute="leading" secondItem="uYN-oa-hVG" secondAttribute="leading" id="d9K-vK-Mup"/>
+                                    <constraint firstAttribute="bottom" secondItem="ug0-qk-ama" secondAttribute="bottom" id="nby-nk-70g"/>
+                                    <constraint firstAttribute="trailing" secondItem="XHs-ge-ap9" secondAttribute="trailing" id="rgN-HN-Wp8"/>
+                                    <constraint firstAttribute="trailing" secondItem="ug0-qk-ama" secondAttribute="trailing" id="yqd-ej-A3F"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="67" id="1py-ud-QD3"/>
+                            <constraint firstAttribute="bottom" secondItem="uYN-oa-hVG" secondAttribute="bottom" constant="5" id="NpF-1i-qcz"/>
+                            <constraint firstAttribute="trailing" secondItem="uYN-oa-hVG" secondAttribute="trailing" constant="5" id="Q7X-XO-o5C"/>
+                            <constraint firstItem="YKt-m4-xMe" firstAttribute="leading" secondItem="mfT-zs-yVU" secondAttribute="leading" constant="5" id="RHm-F2-IRr"/>
+                            <constraint firstItem="uYN-oa-hVG" firstAttribute="leading" secondItem="mfT-zs-yVU" secondAttribute="leading" constant="5" id="j3H-ry-VHf"/>
+                            <constraint firstItem="YKt-m4-xMe" firstAttribute="top" secondItem="mfT-zs-yVU" secondAttribute="top" constant="5" id="qfC-ik-wIA"/>
+                            <constraint firstItem="uYN-oa-hVG" firstAttribute="top" secondItem="YKt-m4-xMe" secondAttribute="bottom" constant="10" id="waW-nx-H4H"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="mfT-zs-yVU" secondAttribute="trailing" id="4EJ-sN-8vG"/>
+                    <constraint firstItem="mfT-zs-yVU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RiP-Sx-syh"/>
+                    <constraint firstItem="mfT-zs-yVU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="UZm-DL-syJ"/>
+                    <constraint firstAttribute="bottom" secondItem="mfT-zs-yVU" secondAttribute="bottom" id="a9C-fL-1f4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.30588235294117649" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+        </tableViewCell>
+    </objects>
+</document>

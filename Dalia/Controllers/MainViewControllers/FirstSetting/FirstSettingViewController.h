@@ -12,6 +12,19 @@
 #import "MPMemberObject.h"
 #import "Configuration.h"
 
+#import "MPFirstSetting_nick_name_TableViewCell.h"
+#import "MPFirstSetting_gender_TableViewCell.h"
+#import "MPFirstSetting_mail_TableViewCell.h"
+#import "MPFirstSetting_job_TableViewCell.h"
+#import "MPFirstSetting_zipcode_TableViewCell.h"
+#import "MPFirstSetting_address_TableViewCell.h"
+#import "MPFirstSetting_name_TableViewCell.h"
+#import "MPFirstSetting_furigana_TableViewCell.h"
+#import "MPFirstSetting_tel_TableViewCell.h"
+#import "MPFirstSetting_generation_TableViewCell.h"
+#import "MPFirstSetting_shop_TableViewCell.h"
+#import "MPFirstSetting_birthday_TableViewCell.h"
+
 @protocol FirstSettingViewControllerDelegate<NSObject>
 @end
 

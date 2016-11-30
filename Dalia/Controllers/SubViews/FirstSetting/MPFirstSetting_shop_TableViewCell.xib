@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="first_shop_Identifier" rowHeight="67" id="KGk-i7-Jjw" customClass="MPFirstSetting_shop_TableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="67"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8h-0H-MpM">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="67"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ショップ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzP-20-z8b">
+                                <rect key="frame" x="5" y="5" width="56" height="15"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1LB-aW-MmX">
+                                <rect key="frame" x="5" y="30" width="290" height="32"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QoD-Ap-nqS">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="31"/>
+                                        <color key="textColor" red="0.48627450979999998" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="es0-SP-GAn">
+                                        <rect key="frame" x="0.0" y="31" width="290" height="1"/>
+                                        <color key="backgroundColor" red="0.48627450979999998" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="ZsV-Eu-1th"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="QoD-Ap-nqS" secondAttribute="trailing" id="0D9-iW-jE8"/>
+                                    <constraint firstAttribute="bottom" secondItem="es0-SP-GAn" secondAttribute="bottom" id="1dP-5q-FII"/>
+                                    <constraint firstItem="QoD-Ap-nqS" firstAttribute="top" secondItem="1LB-aW-MmX" secondAttribute="top" id="G3L-ov-Eep"/>
+                                    <constraint firstItem="QoD-Ap-nqS" firstAttribute="leading" secondItem="1LB-aW-MmX" secondAttribute="leading" id="LOx-p5-hED"/>
+                                    <constraint firstItem="es0-SP-GAn" firstAttribute="leading" secondItem="1LB-aW-MmX" secondAttribute="leading" id="Ldz-Oq-K34"/>
+                                    <constraint firstItem="es0-SP-GAn" firstAttribute="top" secondItem="QoD-Ap-nqS" secondAttribute="bottom" id="ixD-pZ-NPf"/>
+                                    <constraint firstAttribute="height" constant="32" id="p1e-5b-Pkd"/>
+                                    <constraint firstAttribute="trailing" secondItem="es0-SP-GAn" secondAttribute="trailing" id="uWY-Al-Mkp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1LB-aW-MmX" secondAttribute="trailing" constant="5" id="69B-PA-1oh"/>
+                            <constraint firstAttribute="height" constant="67" id="9fe-ES-ozJ"/>
+                            <constraint firstItem="BzP-20-z8b" firstAttribute="leading" secondItem="C8h-0H-MpM" secondAttribute="leading" constant="5" id="I01-Dy-0Ik"/>
+                            <constraint firstItem="BzP-20-z8b" firstAttribute="top" secondItem="C8h-0H-MpM" secondAttribute="top" constant="5" id="NNS-VB-SHC"/>
+                            <constraint firstItem="1LB-aW-MmX" firstAttribute="leading" secondItem="C8h-0H-MpM" secondAttribute="leading" constant="5" id="bRF-d1-hfh"/>
+                            <constraint firstItem="1LB-aW-MmX" firstAttribute="top" secondItem="BzP-20-z8b" secondAttribute="bottom" constant="10" id="c5d-KD-rpz"/>
+                            <constraint firstAttribute="bottom" secondItem="1LB-aW-MmX" secondAttribute="bottom" constant="5" id="hYD-r1-gNR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="C8h-0H-MpM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Aig-gG-B6e"/>
+                    <constraint firstAttribute="bottom" secondItem="C8h-0H-MpM" secondAttribute="bottom" id="EbI-mv-MKS"/>
+                    <constraint firstItem="C8h-0H-MpM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="K9g-tt-pXC"/>
+                    <constraint firstAttribute="trailing" secondItem="C8h-0H-MpM" secondAttribute="trailing" id="KpI-TW-QT2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.30588235294117649" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+        </tableViewCell>
+    </objects>
+</document>
