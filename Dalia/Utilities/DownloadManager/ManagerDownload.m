@@ -1257,108 +1257,110 @@
     for (id key in [dictionary keyEnumerator]) {
         NSLog(@"Key:%@ Value:%@", key, [dictionary valueForKey:key]);
     }
-/*
+
     //顧客情報取得
     for (NSDictionary *dic in listObject) {
         if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
             return;
         }
 
-        NSDictionary* dic_fields = [dic objectForKey:@"fields"];
-        NSDictionary* dic_privacy = [dic objectForKey:@"privacy"];
-        NSDictionary* dic_value = [dic objectForKey:@"values"];
+        NSMutableArray* ary_fields = [dic objectForKey:@"fields"];
+        NSMutableDictionary* dic_privacy = [dic objectForKey:@"privacy"];
+        NSMutableDictionary* dic_values = [dic objectForKey:@"values"];
 
         MPMemberObject *memberInfoObj = [[MPMemberObject alloc] init];
         long lng_count = 1;
-        for(id key in [dic_value keyEnumerator]){
+        for(long l=0;l<ary_fields.count;l++){
 
-            if([key isEqualToString:@"nick_name"]){
+            NSString* str_colom = [[ary_fields objectAtIndex:l] objectForKey:@"field"];
 
-                memberInfoObj.fld_nick_name = [Utility checkNULL:[dic_fields objectForKey:@"nick_name"]];
-                memberInfoObj.nick_name = [Utility checkNULL:[dic_value objectForKey:@"nick_name"]];
+            if([str_colom isEqualToString:@"nick_name"]){
+
+                memberInfoObj.fld_nick_name = [Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]];
+                memberInfoObj.nick_name = [Utility checkNULL:[dic_values objectForKey:@"nick_name"]];
                 memberInfoObj.sortno_nick_name = lng_count;
                 lng_count += 1;
             }
 
-            if([key isEqualToString:@"gender"]){
+            if([str_colom isEqualToString:@"gender"]){
 
-                memberInfoObj.fld_gender = [Utility checkNULL:[dic_fields objectForKey:@"gender"]];
-                memberInfoObj.gender = [[Utility checkNULL:[dic_value objectForKey:@"gender"]] integerValue];
+                memberInfoObj.fld_gender = [Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]];
+                memberInfoObj.gender = [[Utility checkNULL:[dic_values objectForKey:@"gender"]] integerValue];
                 memberInfoObj.sortno_gender = lng_count;
                 lng_count += 1;
             }
-            if([key isEqualToString:@"mail"]){
+            if([str_colom isEqualToString:@"mail"]){
 
-                memberInfoObj.fld_mail = [Utility checkNULL:[dic_fields objectForKey:@"mail"]];
-                memberInfoObj.mail = [Utility checkNULL:[dic_value objectForKey:@"mail"]];
+                memberInfoObj.fld_mail = [Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]];
+                memberInfoObj.mail = [Utility checkNULL:[dic_values objectForKey:@"mail"]];
                 memberInfoObj.sortno_mail = lng_count;
                 lng_count += 1;
             }
-            if([key isEqualToString:@"job"]){
+            if([str_colom isEqualToString:@"job"]){
 
-                memberInfoObj.fld_job = [Utility checkNULL:[dic_fields objectForKey:@"job"]];
-                memberInfoObj.job = [Utility checkNULL:[dic_value objectForKey:@"job"]];
+                memberInfoObj.fld_job = [Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]];
+                memberInfoObj.job = [Utility checkNULL:[dic_values objectForKey:@"job"]];
                 memberInfoObj.sortno_job = lng_count;
                 lng_count += 1;
             }
-            if([key isEqualToString:@"zipcode"]){
+            if([str_colom isEqualToString:@"zipcode"]){
 
-                memberInfoObj.fld_zipcode = [Utility checkNULL:[dic_fields objectForKey:@"zipcode"]];
-                memberInfoObj.zipcode = [Utility checkNULL:[dic_value objectForKey:@"zipcode"]];
+                memberInfoObj.fld_zipcode = [Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]];
+                memberInfoObj.zipcode = [Utility checkNULL:[dic_values objectForKey:@"zipcode"]];
                 memberInfoObj.sortno_zipcode = lng_count;
                 lng_count += 1;
             }
-            if([key isEqualToString:@"address"]){
+            if([str_colom isEqualToString:@"address"]){
 
-                memberInfoObj.fld_address = [Utility checkNULL:[dic_fields objectForKey:@"address"]];
-                memberInfoObj.address = [Utility checkNULL:[dic_value objectForKey:@"address"]];
+                memberInfoObj.fld_address = [Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]];
+                memberInfoObj.address = [Utility checkNULL:[dic_values objectForKey:@"address"]];
                 memberInfoObj.sortno_address = lng_count;
                 lng_count += 1;
             }
-            if([key isEqualToString:@"name1"]){
+            if([str_colom isEqualToString:@"name1"]){
 
-                memberInfoObj.fld_name1 = [Utility checkNULL:[dic_fields objectForKey:@"name1"]];
-                memberInfoObj.fld_name2 = [Utility checkNULL:[dic_fields objectForKey:@"name2"]];
-                memberInfoObj.name1 = [Utility checkNULL:[dic_value objectForKey:@"name1"]];
-                memberInfoObj.name2 = [Utility checkNULL:[dic_value objectForKey:@"name2"]];
+                memberInfoObj.fld_name1 = [Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]];
+                memberInfoObj.name1 = [Utility checkNULL:[dic_values objectForKey:@"name1"]];
+                memberInfoObj.fld_name2 = [Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]];
+                memberInfoObj.name2 = [Utility checkNULL:[dic_values objectForKey:@"name2"]];
                 memberInfoObj.sortno_name = lng_count;
                 lng_count += 1;
 
             }
-            if([key isEqualToString:@"furigana1"]){
+            if([str_colom isEqualToString:@"furigana1"]){
 
-                memberInfoObj.fld_furigana1 = [Utility checkNULL:[dic_fields objectForKey:@"furigana1"]];
-                memberInfoObj.fld_furigana2 = [Utility checkNULL:[dic_fields objectForKey:@"furigana2"]];
-                memberInfoObj.furigana1 = [Utility checkNULL:[dic_value objectForKey:@"furigana1"]];
-                memberInfoObj.furigana2 = [Utility checkNULL:[dic_value objectForKey:@"furigana2"]];
+                memberInfoObj.fld_furigana1 = [Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]];
+                memberInfoObj.furigana1 = [Utility checkNULL:[dic_values objectForKey:@"furigana1"]];
+                memberInfoObj.fld_furigana2 = [Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]];
+                memberInfoObj.furigana2 = [Utility checkNULL:[dic_values objectForKey:@"furigana2"]];
                 memberInfoObj.sortno_furigana = lng_count;
                 lng_count += 1;
             }
-            if([key isEqualToString:@"tel"]){
+            if([str_colom isEqualToString:@"tel"]){
 
-                memberInfoObj.fld_tel = [Utility checkNULL:[dic_fields objectForKey:@"tel"]];
-                memberInfoObj.tel = [Utility checkNULL:[dic_value objectForKey:@"tel"]];
+                memberInfoObj.fld_tel = [Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]];
+                memberInfoObj.tel = [Utility checkNULL:[dic_values objectForKey:@"tel"]];
                 memberInfoObj.sortno_tel = lng_count;
                 lng_count += 1;
             }
-            if([key isEqualToString:@""]){
+            if([str_colom isEqualToString:@"generation"]){
 
-                memberInfoObj.fld_generation = [Utility checkNULL:[dic_fields objectForKey:@"generation"]];
-                memberInfoObj.generation = [Utility checkNULL:[dic_value objectForKey:@"generation"]];
+                memberInfoObj.fld_generation = [Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]];
+                memberInfoObj.generation = [Utility checkNULL:[dic_values objectForKey:@"generation"]];
                 memberInfoObj.sortno_generation = lng_count;
                 lng_count += 1;
             }
-            if([key isEqualToString:@""]){
+            if([str_colom isEqualToString:@"shop"]){
 
-                memberInfoObj.fld_shop = [Utility checkNULL:[dic_fields objectForKey:@"shop"]];
-                memberInfoObj.shop = [Utility checkNULL:[dic_value objectForKey:@"shop"]];
+                memberInfoObj.fld_shop = [Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]];
+                memberInfoObj.shop = [Utility checkNULL:[dic_values objectForKey:@"shop"]];
                 memberInfoObj.sortno_shop = lng_count;
                 lng_count += 1;
             }
-            if([key isEqualToString:@"birthday"]){
+            if([str_colom isEqualToString:@"birthday"]){
 
-                memberInfoObj.fld_birthday = [Utility checkNULL:[dic_fields objectForKey:@"birthday"]];
-                memberInfoObj.birthday = [Utility checkNULL:[dic_value objectForKey:@"birthday"]];
+                memberInfoObj.fld_birthday = [Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]];
+                memberInfoObj.birthday = [Utility checkNULL:[dic_values objectForKey:@"birthday"]];
                 memberInfoObj.sortno_birthday = lng_count;
                 lng_count += 1;
             }
@@ -1368,7 +1370,7 @@
 
         [param.listData addObject: memberInfoObj];
     }
- */
+
 }
 
 - (void) processSetMemberInfo:(NSArray *)listObject with:(DownloadParam *)param{
