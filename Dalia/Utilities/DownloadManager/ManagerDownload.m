@@ -19,12 +19,12 @@
 #import "MPRecommend_menuObject.h"
 #import "MPWhatNewsObject.h"
 #import "MPDetailShopObject.h"
+#import "MPDetailShopListObject.h"
 #import "MPRecommendMenuObject.h"
 
 #import "MPMenu_ShopObject.h"
 #import "MPMenu_MenuObject.h"
 #import "MPMenu_ItemObject.h"
-
 
 
 
@@ -1163,26 +1163,47 @@
         if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
             return;
         }
-        MPDetailShopObject *Obj = [[MPDetailShopObject alloc] init];
-        Obj.id = [Utility checkNULL:[dic objectForKey:@"id"]];
-        Obj.shop_name = [Utility checkNULL:[dic objectForKey:@"shop_name"]];
-        Obj.shop_name_furi = [Utility checkNULL:[dic objectForKey:@"shop_name_furi"]];
-        Obj.image = [Utility checkNULL:[dic objectForKey:@"image"]];
-        Obj.postcode1 = [Utility checkNULL:[dic objectForKey:@"postcode1"]];
-        Obj.postcode2 = [Utility checkNULL:[dic objectForKey:@"postcode2"]];
-        Obj.address1 = [Utility checkNULL:[dic objectForKey:@"address1"]];
-        Obj.address2 = [Utility checkNULL:[dic objectForKey:@"address2"]];
-        Obj.latitude = [Utility checkNULL:[dic objectForKey:@"latitude"]];
-        Obj.longitude = [Utility checkNULL:[dic objectForKey:@"longitude"]];
-        Obj.business_hour = [Utility checkNULL:[dic objectForKey:@"business_hour"]];
-        Obj.content = [Utility checkNULL:[dic objectForKey:@"content"]];
-        Obj.phone1 = [Utility checkNULL:[dic objectForKey:@"phone1"]];
-        Obj.phone2 = [Utility checkNULL:[dic objectForKey:@"phone2"]];
-        Obj.phone3 = [Utility checkNULL:[dic objectForKey:@"phone3"]];
-        Obj.shop_url = [Utility checkNULL:[dic objectForKey:@"shop_url"]];
-        Obj.instagram_url = [Utility checkNULL:[dic objectForKey:@"instagram_url"]];
-        Obj.faebook_url = [Utility checkNULL:[dic objectForKey:@"faebook_url"]];
-        Obj.twitter_url = [Utility checkNULL:[dic objectForKey:@"twitter_url"]];
+
+        NSMutableDictionary* dic_shop_info = [dic objectForKey:@"top_shop_info"];
+        NSMutableDictionary* dic_shoplist_info = [dic objectForKey:@"list"];
+
+        MPDetailShopObject *Obj_shop_info = [[MPDetailShopObject alloc] init];
+        Obj_shop_info.id = [Utility checkNULL:[dic_shop_info objectForKey:@"id"]];
+        Obj_shop_info.shop_name = [Utility checkNULL:[dic_shop_info objectForKey:@"shop_name"]];
+        Obj_shop_info.shop_name_furi = [Utility checkNULL:[dic_shop_info objectForKey:@"shop_name_furi"]];
+        Obj_shop_info.image = [Utility checkNULL:[dic_shop_info objectForKey:@"image"]];
+        Obj_shop_info.postcode1 = [Utility checkNULL:[dic_shop_info objectForKey:@"postcode1"]];
+        Obj_shop_info.postcode2 = [Utility checkNULL:[dic_shop_info objectForKey:@"postcode2"]];
+        Obj_shop_info.address1 = [Utility checkNULL:[dic_shop_info objectForKey:@"address1"]];
+        Obj_shop_info.address2 = [Utility checkNULL:[dic_shop_info objectForKey:@"address2"]];
+        Obj_shop_info.latitude = [Utility checkNULL:[dic_shop_info objectForKey:@"latitude"]];
+        Obj_shop_info.longitude = [Utility checkNULL:[dic_shop_info objectForKey:@"longitude"]];
+        Obj_shop_info.business_hour = [Utility checkNULL:[dic_shop_info objectForKey:@"business_hour"]];
+        Obj_shop_info.content = [Utility checkNULL:[dic_shop_info objectForKey:@"content"]];
+        Obj_shop_info.phone1 = [Utility checkNULL:[dic_shop_info objectForKey:@"phone1"]];
+        Obj_shop_info.phone2 = [Utility checkNULL:[dic_shop_info objectForKey:@"phone2"]];
+        Obj_shop_info.phone3 = [Utility checkNULL:[dic_shop_info objectForKey:@"phone3"]];
+        Obj_shop_info.shop_url = [Utility checkNULL:[dic_shop_info objectForKey:@"shop_url"]];
+        Obj_shop_info.instagram_url = [Utility checkNULL:[dic_shop_info objectForKey:@"instagram_url"]];
+        Obj_shop_info.faebook_url = [Utility checkNULL:[dic_shop_info objectForKey:@"faebook_url"]];
+        Obj_shop_info.twitter_url = [Utility checkNULL:[dic_shop_info objectForKey:@"twitter_url"]];
+
+
+        NSMutableArray* ary_shoplist = [[NSMutableArray alloc] init];
+        for(long l = 0;l<dic_shoplist_info.count;l++){
+
+            NSMutableDictionary* dic_list = [[dic objectForKey:@"list"] objectAtIndex:l];
+
+            MPDetailShopListObject *Obj_shoplist_info = [[MPDetailShopListObject alloc] init];
+            Obj_shoplist_info.id = [Utility checkNULL:[dic_list objectForKey:@"id"]];
+            Obj_shoplist_info.shop_name = [Utility checkNULL:[dic_list objectForKey:@"shop_name"]];
+            Obj_shoplist_info.thumbnail = [Utility checkNULL:[dic_list objectForKey:@"thumbnail"]];
+            [ary_shoplist addObject:Obj_shoplist_info];
+        }
+
+        NSMutableArray* Obj = [[NSMutableArray alloc] init];
+        [Obj addObject:Obj_shop_info];
+        [Obj addObject:ary_shoplist];
 
         [param.listData addObject: Obj];
     }
