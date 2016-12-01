@@ -21,7 +21,7 @@ typedef NS_ENUM(NSInteger, RequestType) {
     RequestType_GET_LIST_RECOMMENMENU,
     RequestType_GET_MEMBER_INFO,
     RequestType_SET_MEMBER_INFO,
-
+    RequestType_GET_MEMBER_CARD,
 
 
 

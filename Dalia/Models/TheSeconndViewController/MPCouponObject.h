@@ -32,6 +32,7 @@ typedef NS_ENUM(NSInteger, CouponType) {
 @property (nonatomic) long coupon_type;
 @property (nonatomic) long is_birthday;
 @property (nonatomic, strong) NSString *tokuten_detail;
+@property (nonatomic, strong) NSString *details;
 @property (nonatomic, strong) NSString *created_at;
 
 @end

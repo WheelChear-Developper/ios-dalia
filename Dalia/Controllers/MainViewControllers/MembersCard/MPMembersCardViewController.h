@@ -18,6 +18,8 @@
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;
     CGPoint _scrollBeginingPoint;
+
+    NSMutableDictionary* _list_data;
 }
 @property (nonatomic, assign) id<MPMembersCardViewControllerDelegate> delegate;
 @property (nonatomic) long lng_tabNo;

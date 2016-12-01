@@ -48,6 +48,9 @@
     [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_Tab:NO];
 
     [super viewWillAppear:animated];
+
+    //会員書情報取得
+    [[ManagerDownload sharedInstance] getMemberCard:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -87,7 +90,7 @@
 
         //下方向の時のアクション
         //カスタムトップナビゲーション　クローズ
-        [self setFadeOut_CustomNavigation:true];
+//        [self setFadeOut_CustomNavigation:true];
 
         //タブのクローズ
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:true];
@@ -105,7 +108,7 @@
 
         //上方向の時のアクション
         //カスタムトップナビゲーション　オープン
-        [self setFadeOut_CustomNavigation:false];
+//        [self setFadeOut_CustomNavigation:false];
 
         //タブのオープン
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:false];
@@ -116,9 +119,9 @@
 - (void)downloadDataSuccess:(DownloadParam *)param {
 
     switch (param.request_type) {
-        case RequestType_GET_LIST_COUPON:
+        case RequestType_GET_MEMBER_CARD:
         {
-
+            _list_data = param.listData[0];
 
         }
             break;
@@ -133,11 +136,7 @@
 
 - (void)backButtonClicked:(UIButton *)sender {
 
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setTabViewIndex:_lng_tabNo];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] selectTab:_lng_tabNo];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setUpTabBar];
-
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

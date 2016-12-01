@@ -145,67 +145,7 @@
     [super viewWillAppear:animated];
 
     //会員情報保存項目取得
-//    [[ManagerDownload sharedInstance] getMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
-
-    memberObj = [[MPMemberObject alloc] init];
-    [memberObj.fld_name addObject:[Utility checkNULL:@"name1"]];
-    [memberObj.fld_name addObject:[Utility checkNULL:@"furigana1"]];
-    [memberObj.fld_name addObject:[Utility checkNULL:@"nick_name"]];
-    [memberObj.fld_name addObject:[Utility checkNULL:@"address"]];
-    [memberObj.fld_name addObject:[Utility checkNULL:@"zipcode"]];
-    [memberObj.fld_name addObject:[Utility checkNULL:@"tel"]];
-    [memberObj.fld_name addObject:[Utility checkNULL:@"gender"]];
-    [memberObj.fld_name addObject:[Utility checkNULL:@"generation"]];
-    [memberObj.fld_name addObject:[Utility checkNULL:@"shop"]];
-    [memberObj.fld_name addObject:[Utility checkNULL:@"job"]];
-    [memberObj.fld_name addObject:[Utility checkNULL:@"birthday"]];
-    [memberObj.fld_name addObject:[Utility checkNULL:@"mail"]];
-
-    [memberObj.fld_colom addObject:[Utility checkNULL:@"名前"]];
-    [memberObj.fld_colom addObject:[Utility checkNULL:@"名前フリガナ"]];
-    [memberObj.fld_colom addObject:[Utility checkNULL:@"ニックネーム"]];
-    [memberObj.fld_colom addObject:[Utility checkNULL:@"住所"]];
-    [memberObj.fld_colom addObject:[Utility checkNULL:@"郵便番号"]];
-    [memberObj.fld_colom addObject:[Utility checkNULL:@"電話番号"]];
-    [memberObj.fld_colom addObject:[Utility checkNULL:@"性別"]];
-    [memberObj.fld_colom addObject:[Utility checkNULL:@"年代"]];
-    [memberObj.fld_colom addObject:[Utility checkNULL:@"利用店舗"]];
-    [memberObj.fld_colom addObject:[Utility checkNULL:@"職業"]];
-    [memberObj.fld_colom addObject:[Utility checkNULL:@"誕生日"]];
-    [memberObj.fld_colom addObject:[Utility checkNULL:@"メールアドレス"]];
-
-    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
-    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
-    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
-    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
-    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
-    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
-    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
-    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
-    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
-    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
-    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
-    [memberObj.fld_essential addObject:[Utility checkNULL:@"0"]];
-
-    [memberObj.fld_value addObject:[Utility checkNULL:@"なまえ"]];
-    [memberObj.fld_value addObject:[Utility checkNULL:@"ふりがな"]];
-    [memberObj.fld_value addObject:[Utility checkNULL:@"にっくねーむ"]];
-    [memberObj.fld_value addObject:[Utility checkNULL:@"じゅうしょ"]];
-    [memberObj.fld_value addObject:[Utility checkNULL:@"ゆうびん"]];
-    [memberObj.fld_value addObject:[Utility checkNULL:@"でんわ"]];
-    [memberObj.fld_value addObject:[Utility checkNULL:@"せいべつ"]];
-    [memberObj.fld_value addObject:[Utility checkNULL:@"ねんだい"]];
-    [memberObj.fld_value addObject:[Utility checkNULL:@"りようきやく"]];
-    [memberObj.fld_value addObject:[Utility checkNULL:@"しょくぎょう"]];
-    [memberObj.fld_value addObject:[Utility checkNULL:@"たんじょうび"]];
-    [memberObj.fld_value addObject:[Utility checkNULL:@"めーる"]];
-
-    memberObj.flg_details = YES;
-
-    memberObj.details = @"プライバシーポリシー内容";
-    [_tbl_userSetting reloadData];
-
-    [self resizeTable];
+    [[ManagerDownload sharedInstance] getMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -243,6 +183,8 @@
                 memberObj = param.listData[0];
 
                 [_tbl_userSetting reloadData];
+
+                [self resizeTable];
             }
         }
             break;
@@ -287,6 +229,7 @@
 
     if(tableView == _tbl_userSetting){
 
+        //ニックネーム
         if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"nick_name"]){
 
             MPFirstSetting_nick_name_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_nickname_Identifier"];
@@ -295,10 +238,13 @@
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPFirstSetting_nick_name_TableViewCell" owner:self options:nil];
                 cell = [nib objectAtIndex:0];
             }
+
+            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
             
             return cell;
         }
 
+        //性別
         if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"gender"]){
 
             MPFirstSetting_gender_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_gender_Identifier"];
@@ -308,9 +254,12 @@
                 cell = [nib objectAtIndex:0];
             }
 
+            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+
             return cell;
         }
 
+        //メール
         if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"mail"]){
 
             MPFirstSetting_mail_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_mail_Identifier"];
@@ -320,9 +269,12 @@
                 cell = [nib objectAtIndex:0];
             }
 
+            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+
             return cell;
         }
 
+        //職業
         if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"job"]){
 
             MPFirstSetting_job_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_job_Identifier"];
@@ -332,9 +284,12 @@
                 cell = [nib objectAtIndex:0];
             }
 
+            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+
             return cell;
         }
 
+        //郵便番号
         if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"zipcode"]){
 
             MPFirstSetting_zipcode_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_zipcode_Identifier"];
@@ -344,9 +299,12 @@
                 cell = [nib objectAtIndex:0];
             }
 
+            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+
             return cell;
         }
 
+        //住所
         if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"address"]){
 
             MPFirstSetting_address_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_address_Identifier"];
@@ -356,9 +314,12 @@
                 cell = [nib objectAtIndex:0];
             }
 
+            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+
             return cell;
         }
 
+        //名前
         if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"name1"]){
 
             MPFirstSetting_name_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_name_Identifier"];
@@ -368,9 +329,12 @@
                 cell = [nib objectAtIndex:0];
             }
 
+            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+
             return cell;
         }
 
+        //ふりがな
         if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"furigana1"]){
 
             MPFirstSetting_furigana_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_furinaga_Identifier"];
@@ -380,9 +344,12 @@
                 cell = [nib objectAtIndex:0];
             }
 
+            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+
             return cell;
         }
 
+        //電話
         if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"tel"]){
 
             MPFirstSetting_tel_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_tel_Identifier"];
@@ -392,9 +359,12 @@
                 cell = [nib objectAtIndex:0];
             }
 
+            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+
             return cell;
         }
 
+        //年代
         if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"generation"]){
 
             MPFirstSetting_generation_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_generation_Identifier"];
@@ -404,9 +374,12 @@
                 cell = [nib objectAtIndex:0];
             }
 
+            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+
             return cell;
         }
 
+        //利用店舗
         if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"shop"]){
 
             MPFirstSetting_shop_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_shop_Identifier"];
@@ -416,9 +389,12 @@
                 cell = [nib objectAtIndex:0];
             }
 
+            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+
             return cell;
         }
 
+        //誕生日
         if([[memberObj.fld_name objectAtIndex:indexPath.row] isEqualToString:@"birthday"]){
 
             MPFirstSetting_birthday_TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"first_birthday_Identifier"];
@@ -427,6 +403,8 @@
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPFirstSetting_birthday_TableViewCell" owner:self options:nil];
                 cell = [nib objectAtIndex:0];
             }
+
+            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
 
             return cell;
         }

@@ -80,6 +80,8 @@
 //おすすめメニュー
 #define GET_LIST_RECOMMENMENU @"recommendMenu/getList"
 
+//会員書
+#define GET_MEMBER_CARD @"member/getMemberCard"
 
 
 #define SET_DEVICE_TOKEN @"device/setDeviceToken"

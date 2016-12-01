@@ -25,7 +25,7 @@
 #import "MPMenu_ShopObject.h"
 #import "MPMenu_MenuObject.h"
 #import "MPMenu_ItemObject.h"
-
+#import "MPMemberCardObject.h"
 
 
 
@@ -167,6 +167,10 @@
                 [self processSetMemberInfo:listObject with:parameter];
                 break;
 
+            case RequestType_GET_MEMBER_CARD:
+                //会員書情報取得
+                [self processGetMemberCard:listObject with:parameter];
+                break;
 
 
 
@@ -569,6 +573,35 @@
     [Utility setParamWithMethodPost:params forRequest:request];
     [self baseRequestJSON:request parameter:paramenter];
 }
+
+- (void)getMemberCard:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate {
+
+    //会員書情報取得
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+
+    [params setValue:appID forKey:@"app_id"];
+    [params setValue:deviceID forKey:@"device_id"];
+    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_MEMBER_CARD];
+    paramenter.delegate = delegate;
+    NSString *strRequest = @"";
+    strRequest = [NSString stringWithFormat:BASE_URL,GET_MEMBER_CARD];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
+    [request setHTTPMethod:@"POST"];
+    [Utility setParamWithMethodPost:params forRequest:request];
+    [self baseRequestJSON:request parameter:paramenter];
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*
@@ -1131,6 +1164,7 @@
         couponObj.coupon_type = [[Utility checkNULL:[dic objectForKey:@"coupon_type"]] integerValue];
         couponObj.is_birthday = [[Utility checkNULL:[dic objectForKey:@"is_birthday"]] integerValue];
         couponObj.tokuten_detail = [Utility checkNULL:[dic objectForKey:@"tokuten_detail"]];
+        couponObj.details = [Utility checkNULL:[dic objectForKey:@"details"]];
         couponObj.created_at = [Utility checkNULL:[dic objectForKey:@"created_at"]];
         [param.listData addObject:couponObj];
     }
@@ -1323,7 +1357,7 @@
         NSMutableArray* ary_fields = [dic objectForKey:@"fields"];
         NSMutableDictionary* dic_privacy = [dic objectForKey:@"privacy"];
         NSMutableDictionary* dic_values = [dic objectForKey:@"values"];
-        NSMutableArray* ary_shoplist = [dic objectForKey:@"shoplist"];
+        NSMutableArray* ary_shoplist = [dic objectForKey:@"shop_list"];
 
         MPMemberObject *memberInfoObj = [[MPMemberObject alloc] init];
         for(long l=0;l<ary_fields.count;l++){
@@ -1450,7 +1484,7 @@
 
         for(long l=0;l<ary_shoplist.count;l++){
 
-            [memberInfoObj.fld_shoplist addObject:[Utility checkNULL:[ary_fields objectAtIndex:l]]];
+            [memberInfoObj.fld_shoplist addObject:[Utility checkNULL:[ary_shoplist objectAtIndex:l]]];
         }
 
         [param.listData addObject:memberInfoObj];
@@ -1468,6 +1502,26 @@
         [param.listData addObject: memberInfoObj];
     }
 }
+
+- (void)processGetMemberCard:(NSArray *)listObject with:(DownloadParam *)param {
+
+    //会員書情報取得
+    for (NSDictionary *dic in listObject) {
+        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
+            return;
+        }
+
+        MPMemberCardObject *Obj = [[MPMemberCardObject alloc] init];
+        Obj.qrcode = [Utility checkNULL:[dic objectForKey:@"qrcode"]];
+        Obj.member_name = [Utility checkNULL:[dic objectForKey:@"member_name"]];
+        Obj.name_disp = [[Utility checkNULL:[dic objectForKey:@"name_disp"]] integerValue];
+        Obj.rank_name = [Utility checkNULL:[dic objectForKey:@"rank_name"]];
+        Obj.rank_color = [Utility checkNULL:[dic objectForKey:@"rank_color"]];
+
+        [param.listData addObject: Obj];
+    }
+}
+
 
 
 

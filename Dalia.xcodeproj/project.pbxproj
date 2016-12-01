@@ -127,6 +127,7 @@
 		1034A7F61DEFEA650054872D /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034A7F51DEFEA650054872D /* MyAnnotation.m */; };
 		1034A7FA1DEFFD250054872D /* MPTheFourthSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034A7F81DEFFD250054872D /* MPTheFourthSubViewController.m */; };
 		1034A7FD1DF011780054872D /* MPTheFourthSubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1034A7FC1DF011780054872D /* MPTheFourthSubViewController.xib */; };
+		1034A8011DF0193F0054872D /* MPMemberCardObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034A7FF1DF0193F0054872D /* MPMemberCardObject.m */; };
 		1037B8341DE0365C000D834C /* MPTheThirdSumMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1037B8321DE0365C000D834C /* MPTheThirdSumMenuViewController.m */; };
 		1037B8371DE036A5000D834C /* MPTheThirdSumMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1037B8361DE036A5000D834C /* MPTheThirdSumMenuViewController.xib */; };
 		1037B83B1DE05D06000D834C /* MPTheSubMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1037B8391DE05D06000D834C /* MPTheSubMenuCell.m */; };
@@ -686,6 +687,8 @@
 		1034A7F71DEFFD250054872D /* MPTheFourthSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTheFourthSubViewController.h; sourceTree = "<group>"; };
 		1034A7F81DEFFD250054872D /* MPTheFourthSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTheFourthSubViewController.m; sourceTree = "<group>"; };
 		1034A7FC1DF011780054872D /* MPTheFourthSubViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheFourthSubViewController.xib; sourceTree = "<group>"; };
+		1034A7FF1DF0193F0054872D /* MPMemberCardObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMemberCardObject.m; sourceTree = "<group>"; };
+		1034A8001DF0193F0054872D /* MPMemberCardObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMemberCardObject.h; sourceTree = "<group>"; };
 		1037B8311DE0365C000D834C /* MPTheThirdSumMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTheThirdSumMenuViewController.h; sourceTree = "<group>"; };
 		1037B8321DE0365C000D834C /* MPTheThirdSumMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTheThirdSumMenuViewController.m; sourceTree = "<group>"; };
 		1037B8361DE036A5000D834C /* MPTheThirdSumMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheThirdSumMenuViewController.xib; sourceTree = "<group>"; };
@@ -1473,6 +1476,7 @@
 				1083AD131DEA9239003596CF /* TheThirdView */,
 				1083AD0F1DEA8552003596CF /* TheFouthView */,
 				1083AD1E1DEAB69B003596CF /* Member */,
+				1034A7FE1DF0193F0054872D /* Membercard */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1558,6 +1562,15 @@
 				1034A7F51DEFEA650054872D /* MyAnnotation.m */,
 			);
 			path = MyAnnotation;
+			sourceTree = "<group>";
+		};
+		1034A7FE1DF0193F0054872D /* Membercard */ = {
+			isa = PBXGroup;
+			children = (
+				1034A8001DF0193F0054872D /* MPMemberCardObject.h */,
+				1034A7FF1DF0193F0054872D /* MPMemberCardObject.m */,
+			);
+			path = Membercard;
 			sourceTree = "<group>";
 		};
 		1037B8161DE032EB000D834C /* Other */ = {
@@ -3494,6 +3507,7 @@
 				272CCD9B1DCAF096006BC4EB /* BaseEntity.m in Sources */,
 				10DE079B1DD838810068C3A9 /* MPNewHomeObject.m in Sources */,
 				10CCF6A31DEC5A40006E2344 /* MPMenu_ShopObject.m in Sources */,
+				1034A8011DF0193F0054872D /* MPMemberCardObject.m in Sources */,
 				272CCDA11DCAF096006BC4EB /* FMDatabaseAdditions.m in Sources */,
 				1075EF0D1DE880FC00974CE1 /* HearCatalogNewstyleCollectionCell.m in Sources */,
 				1002215D1DE32FB100169B93 /* ShopListViewCell.m in Sources */,

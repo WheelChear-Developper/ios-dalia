@@ -44,8 +44,8 @@
 - (void)getMemberInfo:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*) delegate;
 //顧客情報保存
 - (void)setMemberInfo:(NSString*)userID withAppID:(NSString*)appID withMemberNO:(NSString*)memberNO withDeviceID:(NSString*)deviceID withNickName:(NSString*)nickName withGender:(long)gender withBirthday:(NSString*)birthday withZipcode:(NSString*)zipcode withChild1Name:(NSString*)child1name withChild1Birthday:(NSString*)child1birthday withChild2Name:(NSString*)child2name withChild2Birthday:(NSString*)child2birthday delegate: (NSObject<ManagerDownloadDelegate>*) delegate;
-
-
+//会員書情報取得
+- (void)getMemberCard:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
 
 
 
