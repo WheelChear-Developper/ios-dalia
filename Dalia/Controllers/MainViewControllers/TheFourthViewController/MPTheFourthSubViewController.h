@@ -1,8 +1,8 @@
 //
-//  MPTheFourthViewController.h
-//  Misepuri
+//  MPTheFourthSubViewController.h
+//  Dalia
 //
-//  Created by M.Amatani on 2016/11/02.
+//  Created by M.Amatani on 2016/12/01.
 //  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
@@ -12,9 +12,10 @@
 #import "ManagerDownload.h"
 #import "ShopListViewCell.h"
 #import "MPWebViewController.h"
-#import "MPTheFourthSubViewController.h"
+#import "MPDetailShopObject.h"
+#import "MPDetailShopListObject.h"
 
-@interface MPTheFourthViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate, MKMapViewDelegate>
+@interface MPTheFourthSubViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate, MKMapViewDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;
@@ -30,14 +31,13 @@
     __weak IBOutlet UILabel *_lbl_bisinessHour;
     __weak IBOutlet UILabel *_lbl_memo;
     __weak IBOutlet MKMapView *_map;
-    __weak IBOutlet UITableView *_tbl_shopList;
 
     __weak IBOutlet UIView *_view_sns;
     __weak IBOutlet UIView *_view_insta;
     __weak IBOutlet UIView *_view_facebook;
     __weak IBOutlet UIView *_view_twitter;
     __weak IBOutlet UIView *_view_web;
-    
+
     __weak IBOutlet UIButton *_btn_reserve;
     __weak IBOutlet UIButton *_btn_tel;
     __weak IBOutlet UIButton *_btn_map;
@@ -52,6 +52,8 @@
     NSString* _str_shop_url;
     NSString* _str_reserve_url;
 }
+@property (nonatomic, strong) NSString* str_shop_id;
+
 - (IBAction)btn_insta:(id)sender;
 - (IBAction)btn_facebook:(id)sender;
 - (IBAction)btn_twitter:(id)sender;

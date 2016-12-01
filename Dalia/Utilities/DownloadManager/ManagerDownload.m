@@ -142,6 +142,11 @@
                 [self processListShop:listObject with:parameter];
                 break;
 
+            case RequestType_GET_DETAIL_SHOP:
+                //店舗詳細情報
+                [self processDetailShop:listObject with:parameter];
+                break;
+
             case RequestType_GET_LIST_RECOMMENMENU:
                 //おすすめメニュー
                 [self processListRecommendMenu:listObject with:parameter];
@@ -200,9 +205,7 @@
                 [self processListCatShop:listObject with:parameter];
                 break;
                 
-            case RequestType_GET_DETAIL_SHOP:
-                [self processDetailShop:listObject with:parameter];
-                break;
+
                 
             case RequestType_SET_FAVORITE_SHOP:
                 break;
@@ -466,6 +469,25 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
+- (void)getDetailShop:(NSString*)appID withShopID:(NSString*)shopID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate
+{
+    //個別店舗情報
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+
+    [params setValue:appID forKey:@"app_id"];
+    [params setValue:shopID forKey:@"shop_id"];
+    [params setValue:deviceID forKey:@"device_id"];
+    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_DETAIL_SHOP];
+    paramenter.delegate = delegate;
+    NSString *strRequest = @"";
+    strRequest = [NSString stringWithFormat:BASE_URL,GET_DETAIL_SHOP];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
+    [request setHTTPMethod:@"POST"];
+    [Utility setParamWithMethodPost:params forRequest:request];
+    [self baseRequestJSON:request parameter:paramenter];
+}
+
 - (void)getListRecommendMenu:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate> *)delegate
 {
     //おすすめメニュー
@@ -625,24 +647,7 @@
 
 // REPLACED BY ama 2016.10.05 START
 // パラメータ追加
-- (void) getDetailShop: (NSString*) appID withShopID: (NSString*) shopID withDeviceID:(NSString*)deviceID delegate: (NSObject<ManagerDownloadDelegate>*) delegate
-{
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    
-    
-    [params setValue:appID forKey:@"app_id"];
-    [params setValue:shopID forKey:@"shop_id"];
-    [params setValue:deviceID forKey:@"device_id"];
-    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_DETAIL_SHOP];
-    paramenter.delegate = delegate;
-    NSString *strRequest = @"";
-    strRequest = [NSString stringWithFormat:BASE_URL,GET_DETAIL_SHOP];
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
-    [request setHTTPMethod:@"POST"];
-    [Utility setParamWithMethodPost:params forRequest:request];
-    [self baseRequestJSON:request parameter:paramenter];
-}
+
 // REPLACED BY ama 2016.10.05 END
 
 - (void) setFavoriteShop:(NSString*)appID withDeviceID:(NSString*)deviceID withShopID:(NSString*)shopID delegate: (NSObject<ManagerDownloadDelegate>*) delegate {
@@ -1210,6 +1215,40 @@
     }
 }
 
+- (void)processDetailShop:(NSArray *)listObject with:(DownloadParam *)param {
+
+    //店舗情報
+    for (NSDictionary *dic in listObject) {
+        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
+            return;
+        }
+
+        MPDetailShopObject *Obj_shop_info = [[MPDetailShopObject alloc] init];
+        Obj_shop_info.id = [Utility checkNULL:[dic objectForKey:@"id"]];
+        Obj_shop_info.shop_name = [Utility checkNULL:[dic objectForKey:@"shop_name"]];
+        Obj_shop_info.shop_name_furi = [Utility checkNULL:[dic objectForKey:@"shop_name_furi"]];
+        Obj_shop_info.image = [Utility checkNULL:[dic objectForKey:@"image"]];
+        Obj_shop_info.postcode1 = [Utility checkNULL:[dic objectForKey:@"postcode1"]];
+        Obj_shop_info.postcode2 = [Utility checkNULL:[dic objectForKey:@"postcode2"]];
+        Obj_shop_info.address1 = [Utility checkNULL:[dic objectForKey:@"address1"]];
+        Obj_shop_info.address2 = [Utility checkNULL:[dic objectForKey:@"address2"]];
+        Obj_shop_info.latitude = [Utility checkNULL:[dic objectForKey:@"latitude"]];
+        Obj_shop_info.longitude = [Utility checkNULL:[dic objectForKey:@"longitude"]];
+        Obj_shop_info.business_hour = [Utility checkNULL:[dic objectForKey:@"business_hour"]];
+        Obj_shop_info.content = [Utility checkNULL:[dic objectForKey:@"content"]];
+        Obj_shop_info.phone1 = [Utility checkNULL:[dic objectForKey:@"phone1"]];
+        Obj_shop_info.phone2 = [Utility checkNULL:[dic objectForKey:@"phone2"]];
+        Obj_shop_info.phone3 = [Utility checkNULL:[dic objectForKey:@"phone3"]];
+        Obj_shop_info.shop_url = [Utility checkNULL:[dic objectForKey:@"shop_url"]];
+        Obj_shop_info.instagram_url = [Utility checkNULL:[dic objectForKey:@"instagram_url"]];
+        Obj_shop_info.faebook_url = [Utility checkNULL:[dic objectForKey:@"faebook_url"]];
+        Obj_shop_info.twitter_url = [Utility checkNULL:[dic objectForKey:@"twitter_url"]];
+        Obj_shop_info.reserve_url = [Utility checkNULL:[dic objectForKey:@"reserve_url"]];
+
+        [param.listData addObject: Obj_shop_info];
+    }
+}
+
 - (void)processListRecommendMenu:(NSArray *)listObject with:(DownloadParam *)param{
 
     //おすすめメニュー
@@ -1274,11 +1313,6 @@
 }
 
 - (void) processGetMemberInfo:(NSArray *)listObject with:(DownloadParam *)param{
-
-    NSDictionary *dictionary = [NSDictionary dictionaryWithObject:@"hoge" forKey:@"fuga"];
-    for (id key in [dictionary keyEnumerator]) {
-        NSLog(@"Key:%@ Value:%@", key, [dictionary valueForKey:key]);
-    }
 
     //顧客情報取得
     for (NSDictionary *dic in listObject) {
@@ -1444,10 +1478,6 @@
 
 /*
 
-
-
-
-
 - (void) processReadMessage:(NSArray *)listObject with:(DownloadParam *)param{
     
 }
@@ -1509,40 +1539,6 @@
     }
 }
 
-- (void) processDetailShop:(NSArray *)listObject with:(DownloadParam *)param{
-    
-    for (NSDictionary *dic in listObject) {
-        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
-            return;
-        }
-        
-        MPShopObject *shopObj = [[MPShopObject alloc] init];
-        shopObj.id = [dic objectForKey:@"id"];
-        shopObj.shop_name = [Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"shop_name"]]] ;
-        shopObj.image = [Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"image"]]];
-        //▽ 2016年9月29日 項目追加
-        shopObj.postcode1 = [Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"postcode1"]]];
-        shopObj.postcode2 = [Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"postcode1"]]];
-        //△ 2016年9月29日 項目追加
-        shopObj.address = [NSString stringWithFormat:@"%@ %@",[Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"address1"]]],[Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"address2"]]]];
-        shopObj.latitude = [Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"latitude"]]];
-        shopObj.longitude = [Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"longitude"]]];
-        shopObj.business_hour = [Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"business_hour"]]];
-        shopObj.regular_holiday = [Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"regular_holiday"]]];
-        shopObj.access_method = [Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"access_method"]]];
-        shopObj.seat_number = [Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"seat_number"]]];
-        shopObj.parking = [Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"parking"]]];
-        shopObj.phone = [NSString stringWithFormat:@"%@-%@-%@",[Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"phone1"]]],[Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"phone2"]]],[Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"phone3"]]]];
-        shopObj.responsible_person = [Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"responsible_person"]]];
-        shopObj.other_title = [Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"other_title"]]];
-        shopObj.other_content = [Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"other_content"]]];
-        // INSERTED BY ama 2016.10.05 START
-        // お気に入り状態追加
-        shopObj.favorite = [[Utility checkNIL:[Utility checkNULL:[dic objectForKey:@"favorite"]]] integerValue];
-        // INSERTED BY ama 2016.10.05 END
-        [param.listData addObject:shopObj];
-    }
-}
 
 
 

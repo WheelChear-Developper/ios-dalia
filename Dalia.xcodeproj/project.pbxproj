@@ -125,6 +125,8 @@
 		1034A7EF1DEFB6420054872D /* MPMenuListHomeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034A7EE1DEFB6420054872D /* MPMenuListHomeObject.m */; };
 		1034A7F21DEFB7240054872D /* MPDetailShopListObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034A7F11DEFB7240054872D /* MPDetailShopListObject.m */; };
 		1034A7F61DEFEA650054872D /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034A7F51DEFEA650054872D /* MyAnnotation.m */; };
+		1034A7FA1DEFFD250054872D /* MPTheFourthSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034A7F81DEFFD250054872D /* MPTheFourthSubViewController.m */; };
+		1034A7FD1DF011780054872D /* MPTheFourthSubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1034A7FC1DF011780054872D /* MPTheFourthSubViewController.xib */; };
 		1037B8341DE0365C000D834C /* MPTheThirdSumMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1037B8321DE0365C000D834C /* MPTheThirdSumMenuViewController.m */; };
 		1037B8371DE036A5000D834C /* MPTheThirdSumMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1037B8361DE036A5000D834C /* MPTheThirdSumMenuViewController.xib */; };
 		1037B83B1DE05D06000D834C /* MPTheSubMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1037B8391DE05D06000D834C /* MPTheSubMenuCell.m */; };
@@ -681,6 +683,9 @@
 		1034A7F11DEFB7240054872D /* MPDetailShopListObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPDetailShopListObject.m; sourceTree = "<group>"; };
 		1034A7F41DEFEA650054872D /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
 		1034A7F51DEFEA650054872D /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
+		1034A7F71DEFFD250054872D /* MPTheFourthSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTheFourthSubViewController.h; sourceTree = "<group>"; };
+		1034A7F81DEFFD250054872D /* MPTheFourthSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTheFourthSubViewController.m; sourceTree = "<group>"; };
+		1034A7FC1DF011780054872D /* MPTheFourthSubViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheFourthSubViewController.xib; sourceTree = "<group>"; };
 		1037B8311DE0365C000D834C /* MPTheThirdSumMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTheThirdSumMenuViewController.h; sourceTree = "<group>"; };
 		1037B8321DE0365C000D834C /* MPTheThirdSumMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTheThirdSumMenuViewController.m; sourceTree = "<group>"; };
 		1037B8361DE036A5000D834C /* MPTheThirdSumMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheThirdSumMenuViewController.xib; sourceTree = "<group>"; };
@@ -2044,6 +2049,8 @@
 			children = (
 				106A310C1DD7082A00C0C741 /* MPTheFourthViewController.h */,
 				106A310D1DD7082A00C0C741 /* MPTheFourthViewController.m */,
+				1034A7F71DEFFD250054872D /* MPTheFourthSubViewController.h */,
+				1034A7F81DEFFD250054872D /* MPTheFourthSubViewController.m */,
 			);
 			path = TheFourthViewController;
 			sourceTree = "<group>";
@@ -2321,6 +2328,7 @@
 			children = (
 				10C4B70E1DD9DFEE00E26096 /* images */,
 				10C4B70D1DD9DFEE00E26096 /* MPTheFourthViewController.xib */,
+				1034A7FC1DF011780054872D /* MPTheFourthSubViewController.xib */,
 			);
 			path = TheFourthViewController;
 			sourceTree = "<group>";
@@ -3321,6 +3329,7 @@
 				10BC22C51DE83B0400B1A394 /* men_08.png in Resources */,
 				1016C7DC1DE43D8100BC215E /* icon-29.png in Resources */,
 				10C4B7911DD9DFEE00E26096 /* sidemenu_onlineshop@2x.png in Resources */,
+				1034A7FD1DF011780054872D /* MPTheFourthSubViewController.xib in Resources */,
 				10467E781DE01BB600C51AA3 /* MPTheMenuCell.xib in Resources */,
 				10C4B7B21DD9DFEE00E26096 /* footer_btn_setting_on@2x.png in Resources */,
 				10488AE41DE97280005F5DF1 /* staff_05.png in Resources */,
@@ -3502,6 +3511,7 @@
 				10488B0A1DE98816005F5DF1 /* MPMovieViewController.m in Sources */,
 				272CCD971DCAF096006BC4EB /* MPGymDAO.m in Sources */,
 				10488AEB1DE9771C005F5DF1 /* MPStaffInfoViewController.m in Sources */,
+				1034A7FA1DEFFD250054872D /* MPTheFourthSubViewController.m in Sources */,
 				1061C6A11DDDB08B000CEAA2 /* MPCouponObject.m in Sources */,
 				1083AD1C1DEAA523003596CF /* MPMenu_ItemObject.m in Sources */,
 				1076A92A1DDC46A20080E8CD /* MPView+Border.m in Sources */,

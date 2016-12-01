@@ -35,6 +35,7 @@
 - (void)getListMessage:(NSString*)deviceID withAppID:(NSString*)appID withLimit:(NSString*)limit delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
 //店舗情報
 - (void)getListShop:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate> *)delegate;
+- (void)getDetailShop:(NSString*)appID withShopID:(NSString*)shopID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
 //おすすめメニュー
 - (void)getListRecommendMenu:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate> *)delegate;
 //メニュー情報

@@ -1,26 +1,26 @@
 //
-//  MPTheFourthViewController.m
-//  Misepuri
+//  MPTheFourthSubViewController.m
+//  Dalia
 //
-//  Created by M.Amatani on 2016/11/02.
+//  Created by M.Amatani on 2016/12/01.
 //  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
-#import "MPTheFourthViewController.h"
+#import "MPTheFourthSubViewController.h"
 #import "MPDetailShopObject.h"
 #import "MPDetailShopListObject.h"
 #import "MyAnnotation.h"
 
-@interface MPTheFourthViewController ()
+@interface MPTheFourthSubViewController ()
 {
     MPDetailShopObject* obj_shopinfo;
 }
 @end
 
-@implementation MPTheFourthViewController
+@implementation MPTheFourthSubViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    
+
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -29,31 +29,26 @@
 }
 
 - (void)viewDidLoad {
-    
+
     [super viewDidLoad];
-    
+
     //🔴contentView 高さ自動調整　幅自動調整
     [_contentView setAutoresizingMask: UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
 
     //XIB表示のため、contentViewを非表示
     [_contentView setHidden:YES];
-
-    //load cell xib and attach with collectionView
-    UINib *nib = [UINib nibWithNibName:@"ShopListViewCell" bundle:nil];
-    [_tbl_shopList registerNib:nib forCellReuseIdentifier:@"shopListIdentifier"];
-    [_tbl_shopList reloadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 
     //🔴標準navigation
-    [self setHidden_BasicNavigation:YES];
-    [self setImage_BasicNavigation:nil];
-    [self setHiddenBackButton:YES];
+    [self setHidden_BasicNavigation:NO];
+    [self setImage_BasicNavigation:[UIImage imageNamed:@"header_ttl_access.png"]];
+    [self setHiddenBackButton:NO];
 
     //🔴カスタムnavigation
-    [self setHidden_CustomNavigation:NO];
-    [self setImage_CustomNavigation:[UIImage imageNamed:@"header_ttl_access.png"]];
+    [self setHidden_CustomNavigation:YES];
+    [self setImage_CustomNavigation:nil];
 
     //🔴タブの表示
     [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_Tab:NO];
@@ -61,7 +56,7 @@
     [super viewWillAppear:animated];
 
     //店舗情報取得
-    [[ManagerDownload sharedInstance] getListShop:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
+    [[ManagerDownload sharedInstance] getDetailShop:[Utility getAppID] withShopID:self.str_shop_id withDeviceID:[Utility getDeviceID] delegate:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -69,8 +64,6 @@
     _scr_rootview.delegate = self;
 
     [super viewDidAppear:animated];
-
-    [_tbl_shopList reloadData];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -102,7 +95,7 @@
 
         //下方向の時のアクション
         //カスタムトップナビゲーション　クローズ
-        [self setFadeOut_CustomNavigation:true];
+        //        [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_CustomNavigation:true];
 
         //タブのクローズ
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:true];
@@ -120,7 +113,7 @@
 
         //上方向の時のアクション
         //カスタムトップナビゲーション　オープン
-        [self setFadeOut_CustomNavigation:false];
+        //        [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_CustomNavigation:false];
 
         //タブのオープン
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:false];
@@ -134,62 +127,13 @@
 - (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView {
 }
 
-#pragma mark - UITableViewDelegate & DataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return _ary_shopTitle.count;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-
-    return 0;
-}
-
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    ShopListViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"shopListIdentifier"];
-    if (cell == nil)
-    {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ShopListViewCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-    }
-
-    MPDetailShopListObject* dic_list = [_ary_shopTitle objectAtIndex:indexPath.row];
-
-    cell.lbl_shopName.text = dic_list.shop_name;
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    MPTheFourthSubViewController *vc = [[MPTheFourthSubViewController alloc] initWithNibName:@"MPTheFourthSubViewController" bundle:nil];
-    MPDetailShopListObject* ary_shop = [_ary_shopTitle objectAtIndex:indexPath.row];
-    vc.str_shop_id = ary_shop.id;
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (void)resizeTable {
-
-    //コレクション高さをセルの最大値へセット
-    _tbl_shopList.translatesAutoresizingMaskIntoConstraints = YES;
-    _tbl_shopList.frame = CGRectMake(_tbl_shopList.frame.origin.x, _tbl_shopList.frame.origin.y, _tbl_shopList.frame.size.width, 0);
-    _tbl_shopList.frame =
-    CGRectMake(_tbl_shopList.frame.origin.x,
-               _tbl_shopList.frame.origin.y,
-               _tbl_shopList.contentSize.width,
-               MAX(_tbl_shopList.contentSize.height,
-                   _tbl_shopList.bounds.size.height));
-}
-
 #pragma mark - ManagerDownloadDelegate
 - (void)downloadDataSuccess:(DownloadParam *)param {
 
     switch (param.request_type) {
-        case RequestType_GET_LIST_SHOP:
+        case RequestType_GET_DETAIL_SHOP:
         {
-            _list_data = param.listData[0];
-
-            obj_shopinfo = [_list_data objectForKey:@"shop_info"];
+            obj_shopinfo = param.listData[0];
 
             //画像設定
             if(obj_shopinfo.image && [obj_shopinfo.image length] > 0 ) {
@@ -251,10 +195,6 @@
             annotation1.title = obj_shopinfo.shop_name;
             [_map addAnnotation:annotation1];
 
-            _ary_shopTitle = [_list_data objectForKey:@"shop_list"];
-            [_tbl_shopList reloadData];
-
-            [self resizeTable];
         }
             break;
 
@@ -267,6 +207,8 @@
 }
 
 - (void)backButtonClicked:(UIButton *)sender {
+
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)btn_insta:(id)sender {
@@ -322,7 +264,7 @@
     [NSString stringWithFormat: MAP_VIEW_IFRAME,[NSString stringWithFormat:@"https://maps.apple.com/maps?q=%@,%@&output=embed&iwloc=0",[obj_shopinfo.latitude doubleValue],[obj_shopinfo.longitude doubleValue]]];
     // https://www.google.com/maps/embed/v1/MODE?key=API_KEY&parameters
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://maps.apple.com/maps?q=%@,%@&iwloc=0",[obj_shopinfo.latitude doubleValue],[obj_shopinfo.longitude doubleValue]]]];
-
-
+    
+    
 }
 @end
