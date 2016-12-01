@@ -1187,6 +1187,7 @@
         Obj_shop_info.instagram_url = [Utility checkNULL:[dic_shop_info objectForKey:@"instagram_url"]];
         Obj_shop_info.faebook_url = [Utility checkNULL:[dic_shop_info objectForKey:@"faebook_url"]];
         Obj_shop_info.twitter_url = [Utility checkNULL:[dic_shop_info objectForKey:@"twitter_url"]];
+        Obj_shop_info.reserve_url = [Utility checkNULL:[dic_shop_info objectForKey:@"reserve_url"]];
 
 
         NSMutableArray* ary_shoplist = [[NSMutableArray alloc] init];
@@ -1201,9 +1202,9 @@
             [ary_shoplist addObject:Obj_shoplist_info];
         }
 
-        NSMutableArray* Obj = [[NSMutableArray alloc] init];
-        [Obj addObject:Obj_shop_info];
-        [Obj addObject:ary_shoplist];
+        NSMutableDictionary* Obj = [[NSMutableDictionary alloc] init];
+        [Obj setObject:Obj_shop_info forKey:@"shop_info"];
+        [Obj setObject:ary_shoplist forKey:@"shop_list"];
 
         [param.listData addObject: Obj];
     }

@@ -11,6 +11,7 @@
 #import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
 #import "ShopListViewCell.h"
+#import "MPWebViewController.h"
 
 @interface MPTheFourthViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate, MKMapViewDelegate>
 {
@@ -18,7 +19,7 @@
     __weak IBOutlet UIView* _scr_inView;
     CGPoint _scrollBeginingPoint;
 
-    __weak IBOutlet UIView *_img_photo;
+    __weak IBOutlet UIImageView *_img_photo;
     __weak IBOutlet UILabel *_lbl_shopName;
     __weak IBOutlet UILabel *_lbl_subShopName;
 
@@ -26,14 +27,29 @@
     __weak IBOutlet UILabel *_lbl_adress;
     __weak IBOutlet UILabel *_lbl_tel;
     __weak IBOutlet UILabel *_lbl_bisinessHour;
-    __weak IBOutlet UILabel *_lbl_parking;
     __weak IBOutlet UILabel *_lbl_memo;
     __weak IBOutlet MKMapView *_map;
     __weak IBOutlet UITableView *_tbl_shopList;
 
-    NSMutableArray* _list_data;
+    __weak IBOutlet UIView *_view_sns;
+    __weak IBOutlet UIView *_view_insta;
+    __weak IBOutlet UIView *_view_facebook;
+    __weak IBOutlet UIView *_view_twitter;
+    __weak IBOutlet UIView *_view_web;
+    
+    __weak IBOutlet UIButton *_btn_reserve;
+    __weak IBOutlet UIButton *_btn_tel;
+    __weak IBOutlet UIButton *_btn_map;
+
+    NSMutableDictionary* _list_data;
 
     NSMutableArray *_ary_shopTitle;
+
+    NSString* _str_instagram_url;
+    NSString* _str_facebook_url;
+    NSString* _str_twitter_url;
+    NSString* _str_shop_url;
+    NSString* _str_reserve_url;
 }
 - (IBAction)btn_insta:(id)sender;
 - (IBAction)btn_facebook:(id)sender;

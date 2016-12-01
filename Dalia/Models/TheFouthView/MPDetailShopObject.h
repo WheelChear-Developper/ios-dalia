@@ -28,5 +28,6 @@
 @property (nonatomic, strong) NSString *instagram_url;
 @property (nonatomic, strong) NSString *faebook_url;
 @property (nonatomic, strong) NSString *twitter_url;
+@property (nonatomic, strong) NSString *reserve_url;
 
 @end

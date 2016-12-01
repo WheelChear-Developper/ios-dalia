@@ -124,6 +124,7 @@
 		1034A7EB1DEEB2FE0054872D /* MPFirstSetting_birthday_TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1034A7E91DEEB2FE0054872D /* MPFirstSetting_birthday_TableViewCell.xib */; };
 		1034A7EF1DEFB6420054872D /* MPMenuListHomeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034A7EE1DEFB6420054872D /* MPMenuListHomeObject.m */; };
 		1034A7F21DEFB7240054872D /* MPDetailShopListObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034A7F11DEFB7240054872D /* MPDetailShopListObject.m */; };
+		1034A7F61DEFEA650054872D /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034A7F51DEFEA650054872D /* MyAnnotation.m */; };
 		1037B8341DE0365C000D834C /* MPTheThirdSumMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1037B8321DE0365C000D834C /* MPTheThirdSumMenuViewController.m */; };
 		1037B8371DE036A5000D834C /* MPTheThirdSumMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1037B8361DE036A5000D834C /* MPTheThirdSumMenuViewController.xib */; };
 		1037B83B1DE05D06000D834C /* MPTheSubMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1037B8391DE05D06000D834C /* MPTheSubMenuCell.m */; };
@@ -678,6 +679,8 @@
 		1034A7EE1DEFB6420054872D /* MPMenuListHomeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMenuListHomeObject.m; sourceTree = "<group>"; };
 		1034A7F01DEFB7240054872D /* MPDetailShopListObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPDetailShopListObject.h; sourceTree = "<group>"; };
 		1034A7F11DEFB7240054872D /* MPDetailShopListObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPDetailShopListObject.m; sourceTree = "<group>"; };
+		1034A7F41DEFEA650054872D /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		1034A7F51DEFEA650054872D /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 		1037B8311DE0365C000D834C /* MPTheThirdSumMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTheThirdSumMenuViewController.h; sourceTree = "<group>"; };
 		1037B8321DE0365C000D834C /* MPTheThirdSumMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTheThirdSumMenuViewController.m; sourceTree = "<group>"; };
 		1037B8361DE036A5000D834C /* MPTheThirdSumMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheThirdSumMenuViewController.xib; sourceTree = "<group>"; };
@@ -1541,6 +1544,15 @@
 				1034A7EE1DEFB6420054872D /* MPMenuListHomeObject.m */,
 			);
 			path = Menu_List;
+			sourceTree = "<group>";
+		};
+		1034A7F31DEFEA650054872D /* MyAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				1034A7F41DEFEA650054872D /* MyAnnotation.h */,
+				1034A7F51DEFEA650054872D /* MyAnnotation.m */,
+			);
+			path = MyAnnotation;
 			sourceTree = "<group>";
 		};
 		1037B8161DE032EB000D834C /* Other */ = {
@@ -2651,6 +2663,7 @@
 		272CCCD21DCAF096006BC4EB /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				1034A7F31DEFEA650054872D /* MyAnnotation */,
 				272CCD7B1DCAF096006BC4EB /* Utility.h */,
 				272CCD7C1DCAF096006BC4EB /* Utility.m */,
 				272CCCD31DCAF096006BC4EB /* Configuration */,
@@ -3587,6 +3600,7 @@
 				272CCD8D1DCAF096006BC4EB /* AFXMLRequestOperation.m in Sources */,
 				1037B83B1DE05D06000D834C /* MPTheSubMenuCell.m in Sources */,
 				106A31731DD7082A00C0C741 /* MPTheFifthViewController.m in Sources */,
+				1034A7F61DEFEA650054872D /* MyAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
