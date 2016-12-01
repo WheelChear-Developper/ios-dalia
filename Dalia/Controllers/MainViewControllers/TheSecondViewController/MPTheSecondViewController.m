@@ -167,7 +167,7 @@
         [view_slide.img_photo setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
     }
     //画像した文字列
-    view_slide.lbl_name.text = @"";//couponObj.condition;
+    view_slide.lbl_name.text = couponObj.condition;
     //価格詳細
     switch (couponObj.tokuten_mode) {
         case 1:
@@ -221,7 +221,7 @@
             break;
     }
     //詳細メッセージ
-    view_slide.lbl_message.text = couponObj.condition;
+    view_slide.lbl_message.text = couponObj.details;
     //詳細メッセージ開いた時の高さを設定
     view_slide.lng_messageHeight = view_slide.view_message.frame.size.height;
 

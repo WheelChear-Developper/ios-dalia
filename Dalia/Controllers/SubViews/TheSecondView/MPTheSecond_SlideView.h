@@ -20,23 +20,19 @@
 + (instancetype)myView;
 @property (nonatomic, assign) id<MPTheSecond_SlideViewDelegate> delegate;
 
-@property (nonatomic) UIScrollView* scr_rootview;
+@property (weak, nonatomic) IBOutlet UIScrollView *scr_rootview;
 
-@property (nonatomic) UIView *view_specialMark;
-@property (nonatomic) UILabel *lbl_title;
-
-@property (nonatomic) UIImageView* img_photo;
-@property (nonatomic) UILabel* lbl_name;
-
-@property (nonatomic) UILabel* lbl_Info1;
-@property (nonatomic) UILabel* lbl_Info2;
-
-@property (nonatomic) UILabel* lbl_turn;
-@property (nonatomic) UIImageView* img_stamp;
-@property (nonatomic) UILabel* lbl_date;
-
-@property (nonatomic) UIView* view_message;
-@property (nonatomic) UILabel* lbl_message;
+@property (weak, nonatomic) IBOutlet UIView *view_specialMark;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_title;
+@property (weak, nonatomic) IBOutlet UIImageView *img_photo;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_name;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_Info1;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_Info2;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_turn;
+@property (weak, nonatomic) IBOutlet UIImageView *img_stamp;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_date;
+@property (weak, nonatomic) IBOutlet UIView *view_message;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_message;
 @property (nonatomic) long lng_messageHeight;
 @property (weak, nonatomic) IBOutlet UIView *view_left;
 @property (weak, nonatomic) IBOutlet UIView *view_right;

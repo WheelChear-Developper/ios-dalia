@@ -20,7 +20,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfQ-th-eQA">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="489"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="511"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n25-bz-wt6">
                                     <rect key="frame" x="0.0" y="70" width="35" height="400"/>
@@ -183,17 +183,17 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVc-tQ-6m4">
-                                    <rect key="frame" x="0.0" y="130" width="320" height="309"/>
+                                    <rect key="frame" x="0.0" y="130" width="320" height="331"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJf-GY-rm1">
-                                            <rect key="frame" x="0.0" y="0.0" width="35" height="309"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="35" height="331"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="35" id="deo-qj-1x1"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6f-3Z-ILD" customClass="MPView_Border">
-                                            <rect key="frame" x="35" y="5" width="250" height="304"/>
+                                            <rect key="frame" x="35" y="5" width="250" height="326"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdx-Dy-gr0">
                                                     <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
@@ -219,14 +219,17 @@
                                                         <constraint firstAttribute="height" constant="130" id="GYF-wh-dc6"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="NC2-rv-44Z">
-                                                    <rect key="frame" x="8" y="175" width="234" height="0.0"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="NC2-rv-44Z">
+                                                    <rect key="frame" x="8" y="175" width="234" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="978-ry-zON"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.20392156862745098" green="0.19215686274509802" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KSG-KP-ZMn">
-                                                    <rect key="frame" x="5" y="180" width="240" height="50"/>
+                                                    <rect key="frame" x="5" y="202" width="240" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="hO7-Qh-T34">
                                                             <rect key="frame" x="0.0" y="10" width="85" height="40"/>
@@ -256,7 +259,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s8N-6G-Z6T">
-                                                    <rect key="frame" x="5" y="235" width="240" height="60"/>
+                                                    <rect key="frame" x="5" y="257" width="240" height="60"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EAA-t4-JWd">
                                                             <rect key="frame" x="0.0" y="0.0" width="80" height="60"/>
@@ -443,7 +446,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xz5-RZ-Rm5">
-                                                    <rect key="frame" x="5" y="295" width="240" height="4"/>
+                                                    <rect key="frame" x="5" y="317" width="240" height="4"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ArD-Pg-mUn">
                                                             <rect key="frame" x="0.0" y="2" width="240" height="2"/>
@@ -478,6 +481,8 @@
                                                 <constraint firstItem="KSG-KP-ZMn" firstAttribute="leading" secondItem="u6f-3Z-ILD" secondAttribute="leading" constant="5" id="6Z1-yG-li4"/>
                                                 <constraint firstItem="NC2-rv-44Z" firstAttribute="top" secondItem="qaY-bi-lWY" secondAttribute="bottom" constant="10" id="9dD-sG-jyU"/>
                                                 <constraint firstAttribute="trailing" secondItem="NC2-rv-44Z" secondAttribute="trailing" constant="8" id="BrJ-dS-cbv"/>
+                                                <constraint firstAttribute="trailing" secondItem="NC2-rv-44Z" secondAttribute="trailing" constant="8" id="FVe-mQ-wmA"/>
+                                                <constraint firstItem="KSG-KP-ZMn" firstAttribute="top" secondItem="NC2-rv-44Z" secondAttribute="bottom" constant="5" id="L46-u2-hYP"/>
                                                 <constraint firstItem="qaY-bi-lWY" firstAttribute="top" secondItem="bdx-Dy-gr0" secondAttribute="bottom" constant="5" id="LXc-xP-JTh"/>
                                                 <constraint firstItem="KSG-KP-ZMn" firstAttribute="top" secondItem="NC2-rv-44Z" secondAttribute="bottom" constant="5" id="Lkz-tO-c8y"/>
                                                 <constraint firstItem="qaY-bi-lWY" firstAttribute="leading" secondItem="u6f-3Z-ILD" secondAttribute="leading" constant="5" id="NxP-yl-aa0"/>
@@ -485,9 +490,11 @@
                                                 <constraint firstAttribute="trailing" secondItem="bdx-Dy-gr0" secondAttribute="trailing" id="WGY-Za-4YW"/>
                                                 <constraint firstItem="bdx-Dy-gr0" firstAttribute="leading" secondItem="u6f-3Z-ILD" secondAttribute="leading" id="WlI-ec-32Z"/>
                                                 <constraint firstAttribute="bottom" secondItem="Xz5-RZ-Rm5" secondAttribute="bottom" constant="5" id="bvo-Za-Q75"/>
+                                                <constraint firstItem="NC2-rv-44Z" firstAttribute="leading" secondItem="u6f-3Z-ILD" secondAttribute="leading" constant="8" id="iwt-VV-FBY"/>
                                                 <constraint firstItem="NC2-rv-44Z" firstAttribute="leading" secondItem="u6f-3Z-ILD" secondAttribute="leading" constant="8" id="jLO-XT-h0E"/>
                                                 <constraint firstItem="bdx-Dy-gr0" firstAttribute="top" secondItem="u6f-3Z-ILD" secondAttribute="top" id="lfe-Zd-CPQ"/>
                                                 <constraint firstItem="s8N-6G-Z6T" firstAttribute="leading" secondItem="u6f-3Z-ILD" secondAttribute="leading" constant="5" id="mqY-2s-f2u"/>
+                                                <constraint firstItem="NC2-rv-44Z" firstAttribute="top" secondItem="qaY-bi-lWY" secondAttribute="bottom" constant="10" id="oH6-EU-BGb"/>
                                                 <constraint firstAttribute="trailing" secondItem="qaY-bi-lWY" secondAttribute="trailing" constant="5" id="rsf-5i-R9c"/>
                                                 <constraint firstItem="s8N-6G-Z6T" firstAttribute="top" secondItem="KSG-KP-ZMn" secondAttribute="bottom" constant="5" id="w7X-2V-v2Z"/>
                                                 <constraint firstAttribute="trailing" secondItem="s8N-6G-Z6T" secondAttribute="trailing" constant="5" id="x3w-vx-c2V"/>
@@ -519,7 +526,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8p-st-QMy">
-                                            <rect key="frame" x="285" y="0.0" width="35" height="309"/>
+                                            <rect key="frame" x="285" y="0.0" width="35" height="331"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="35" id="bKV-tG-wr7"/>
@@ -544,7 +551,7 @@
                                     </constraints>
                                 </view>
                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="uoy-h5-6nb">
-                                    <rect key="frame" x="140.5" y="449" width="39" height="30"/>
+                                    <rect key="frame" x="140.5" y="471" width="39" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="gQV-Jg-y6T"/>
                                     </constraints>
@@ -593,22 +600,23 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="_img_photo" destination="qaY-bi-lWY" id="MNr-dX-UEW"/>
-                <outlet property="_img_stamp" destination="WmF-Ex-aQ1" id="zK0-34-mWk"/>
-                <outlet property="_lbl_Info1" destination="hO7-Qh-T34" id="ah0-wp-Taf"/>
-                <outlet property="_lbl_Info2" destination="lFj-AU-llP" id="ue1-fD-afd"/>
-                <outlet property="_lbl_date" destination="VLB-Sx-vbm" id="mNJ-yo-aG4"/>
-                <outlet property="_lbl_message" destination="YC2-Qc-txQ" id="g0Y-uG-2Tv"/>
-                <outlet property="_lbl_name" destination="NC2-rv-44Z" id="yck-yT-hGd"/>
-                <outlet property="_lbl_title" destination="3qE-eh-Mea" id="QoI-jL-cHb"/>
-                <outlet property="_lbl_turn" destination="nB5-Z2-S7c" id="Tum-K2-Y5g"/>
                 <outlet property="_pgc_page" destination="uoy-h5-6nb" id="hUZ-ee-d8B"/>
                 <outlet property="_scr_inView" destination="nfQ-th-eQA" id="MrN-Ze-cRi"/>
                 <outlet property="_scr_rootview" destination="Xw7-cj-9Ow" id="gt9-3v-QAs"/>
-                <outlet property="_view_message" destination="Xz5-RZ-Rm5" id="fI0-SK-XLg"/>
-                <outlet property="_view_specialMark" destination="fZK-D5-qo3" id="GVg-i8-A5z"/>
+                <outlet property="img_photo" destination="qaY-bi-lWY" id="9C2-nQ-C1J"/>
+                <outlet property="img_stamp" destination="WmF-Ex-aQ1" id="QcK-Kq-ebo"/>
+                <outlet property="lbl_Info1" destination="hO7-Qh-T34" id="weJ-A1-aKM"/>
+                <outlet property="lbl_Info2" destination="lFj-AU-llP" id="vbh-1X-MJE"/>
+                <outlet property="lbl_date" destination="VLB-Sx-vbm" id="ILd-zB-9Ez"/>
+                <outlet property="lbl_message" destination="YC2-Qc-txQ" id="ohn-Oc-7Z6"/>
+                <outlet property="lbl_name" destination="NC2-rv-44Z" id="Ev5-fr-Aue"/>
+                <outlet property="lbl_title" destination="3qE-eh-Mea" id="iLo-RE-NC8"/>
+                <outlet property="lbl_turn" destination="nB5-Z2-S7c" id="Eao-84-H4L"/>
+                <outlet property="scr_rootview" destination="Xw7-cj-9Ow" id="cFC-Dw-kgJ"/>
                 <outlet property="view_left" destination="1Ud-0f-neJ" id="5Mz-70-iws"/>
+                <outlet property="view_message" destination="Xz5-RZ-Rm5" id="WFX-ri-snW"/>
                 <outlet property="view_right" destination="K5n-iC-Uhi" id="aJa-bO-S91"/>
+                <outlet property="view_specialMark" destination="fZK-D5-qo3" id="eu0-ra-f9Z"/>
             </connections>
         </view>
     </objects>
