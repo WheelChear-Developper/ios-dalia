@@ -252,13 +252,18 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-/*
+
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     if(tableView == _RecommendMenuList_tableView){
 
         MPRecommendMenuInfoViewController *vc = [[MPRecommendMenuInfoViewController alloc] initWithNibName:@"MPRecommendMenuInfoViewController" bundle:nil];
         vc.delegate = self;
+
+        MPRecommend_menuObject* rec = _list_RecommendMenu[indexPath.row];
+        vc.str_title = rec.title;
+        vc.str_imagUrl = rec.image;
+        vc.str_comment = rec.content;
 
         [self.navigationController pushViewController:vc animated:YES];
     }
@@ -268,9 +273,14 @@
         MPWhatNewInfoViewController *vc = [[MPWhatNewInfoViewController alloc] initWithNibName:@"MPWhatNewInfoViewController" bundle:nil];
         vc.delegate = self;
 
+        MPNewHomeObject* rec = _list_news[indexPath.row];
+        vc.str_title = rec.title;
+        vc.str_imagUrl = rec.image;
+        vc.str_date = rec.update_at;
+        vc.str_comment = rec.content;
+
         [self.navigationController pushViewController:vc animated:YES];
     }
- */
 }
 
 #pragma mark - UICollectionView
