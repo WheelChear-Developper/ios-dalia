@@ -115,8 +115,8 @@
     if(_scrollBeginingPoint.y < currentPoint.y){
 
         //下方向の時のアクション
-        //カスタムトップナビゲーション　クローズ
-        [self setFadeOut_CustomNavigation:true];
+        //ナビゲーション　クローズ
+//        [self setFadeOut_BasicNavigation:true];
 
         //タブのクローズ
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:true];
@@ -124,8 +124,8 @@
     }else if(_scrollBeginingPoint.y ==0){
 
         //スクロール０
-        //カスタムトップナビゲーション　オープン
-        [self setFadeOut_CustomNavigation:false];
+        //ナビゲーション　オープン
+        [self setFadeOut_BasicNavigation:false];
 
         //タブのオープン
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:false];
@@ -133,8 +133,8 @@
     }else if(_scrollBeginingPoint.y > currentPoint.y){
 
         //上方向の時のアクション
-        //カスタムトップナビゲーション　オープン
-        [self setFadeOut_CustomNavigation:false];
+        //ナビゲーション　オープン
+//        [self setFadeOut_BasicNavigation:false];
 
         //タブのオープン
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:false];
@@ -339,11 +339,7 @@
 
 - (void)backButtonClicked:(UIButton *)sender {
 
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setTabViewIndex:_lng_tabNo];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] selectTab:_lng_tabNo];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setUpTabBar];
-    
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)btn_ladies:(id)sender {

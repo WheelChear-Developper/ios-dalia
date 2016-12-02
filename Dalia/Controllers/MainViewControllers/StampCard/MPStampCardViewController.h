@@ -6,18 +6,24 @@
 //  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
+#import <CoreBluetooth/CoreBluetooth.h>
+#import <CoreLocation/CoreLocation.h>
 #import "MPBaseViewController.h"
 #import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
+#import "MPCouponStampObject.h"
 
 @protocol MPStampCardViewControllerDelegate<NSObject>
 @end
 
-@interface MPStampCardViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate>
+@interface MPStampCardViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate, CBCentralManagerDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;
     CGPoint _scrollBeginingPoint;
+
+    CBCentralManager* bluetoothManager;
+    MPCouponStampObject* couponStampObject;
 
     __weak IBOutlet UILabel *lbl_No01;
     __weak IBOutlet UILabel *lbl_No02;
@@ -72,6 +78,8 @@
 
     __weak IBOutlet UILabel *lbl_setsumei;
     __weak IBOutlet UILabel *lbl_date;
+    __weak IBOutlet UIView *view_date;
+
 }
 @property (nonatomic, assign) id<MPStampCardViewControllerDelegate> delegate;
 @property (nonatomic) long lng_tabNo;

@@ -136,11 +136,7 @@
 
 - (void)backButtonClicked:(UIButton *)sender {
 
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setTabViewIndex:0];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] selectTab:0];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setUpTabBar];
-
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - ManagerDownloadDelegate

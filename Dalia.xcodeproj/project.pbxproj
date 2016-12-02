@@ -50,6 +50,7 @@
 		1002218B1DE3395800169B93 /* menu_perm.png in Resources */ = {isa = PBXBuildFile; fileRef = 100221771DE3395800169B93 /* menu_perm.png */; };
 		1002218C1DE3395800169B93 /* menu_teatment.png in Resources */ = {isa = PBXBuildFile; fileRef = 100221781DE3395800169B93 /* menu_teatment.png */; };
 		1002218D1DE3395800169B93 /* recommendmenu_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 100221791DE3395800169B93 /* recommendmenu_10.png */; };
+		100FC6FB1DF180F0002E0BB8 /* MPCouponStampObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 100FC6FA1DF180F0002E0BB8 /* MPCouponStampObject.m */; };
 		1016C7D61DE43D8100BC215E /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1016C7C31DE43D8100BC215E /* config.plist */; };
 		1016C7D71DE43D8100BC215E /* UIConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1016C7C51DE43D8100BC215E /* UIConfig.plist */; };
 		1016C7D81DE43D8100BC215E /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 1016C7C71DE43D8100BC215E /* Contents.json */; };
@@ -611,6 +612,8 @@
 		100221771DE3395800169B93 /* menu_perm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_perm.png; sourceTree = "<group>"; };
 		100221781DE3395800169B93 /* menu_teatment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_teatment.png; sourceTree = "<group>"; };
 		100221791DE3395800169B93 /* recommendmenu_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recommendmenu_10.png; sourceTree = "<group>"; };
+		100FC6F91DF180F0002E0BB8 /* MPCouponStampObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponStampObject.h; sourceTree = "<group>"; };
+		100FC6FA1DF180F0002E0BB8 /* MPCouponStampObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponStampObject.m; sourceTree = "<group>"; };
 		1016C7C31DE43D8100BC215E /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		1016C7C41DE43D8100BC215E /* MPAppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAppConstant.h; sourceTree = "<group>"; };
 		1016C7C51DE43D8100BC215E /* UIConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UIConfig.plist; sourceTree = "<group>"; };
@@ -1416,6 +1419,15 @@
 			path = damy_data;
 			sourceTree = "<group>";
 		};
+		100FC6F81DF180C0002E0BB8 /* MPCouponStampObject */ = {
+			isa = PBXGroup;
+			children = (
+				100FC6F91DF180F0002E0BB8 /* MPCouponStampObject.h */,
+				100FC6FA1DF180F0002E0BB8 /* MPCouponStampObject.m */,
+			);
+			path = MPCouponStampObject;
+			sourceTree = "<group>";
+		};
 		1016C7C21DE43D8100BC215E /* Conflig */ = {
 			isa = PBXGroup;
 			children = (
@@ -1537,6 +1549,7 @@
 				1083AD0F1DEA8552003596CF /* TheFouthView */,
 				1083AD1E1DEAB69B003596CF /* Member */,
 				1034A7FE1DF0193F0054872D /* Membercard */,
+				100FC6F81DF180C0002E0BB8 /* MPCouponStampObject */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3711,6 +3724,7 @@
 				272CCD931DCAF096006BC4EB /* CustomColor.m in Sources */,
 				107EA23C1DE4306500A4A8CD /* MPRecommendMenuInfoViewController.m in Sources */,
 				10488B191DE98C37005F5DF1 /* MPMovieTableViewCell.m in Sources */,
+				100FC6FB1DF180F0002E0BB8 /* MPCouponStampObject.m in Sources */,
 				1075EF1B1DE8A51B00974CE1 /* HearCatalogCategoryListViewControllerCell.m in Sources */,
 				106130601DD2D10B00B789B5 /* MPShopCatObject.m in Sources */,
 				272CCD961DCAF096006BC4EB /* MPApnsDAO.m in Sources */,

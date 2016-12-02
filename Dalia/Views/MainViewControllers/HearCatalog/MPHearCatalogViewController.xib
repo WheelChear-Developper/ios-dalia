@@ -251,6 +251,9 @@
                         <constraint firstAttribute="trailing" secondItem="cKY-sj-eGv" secondAttribute="trailing" id="omV-zF-jlV"/>
                         <constraint firstAttribute="bottom" secondItem="cKY-sj-eGv" secondAttribute="bottom" id="rEX-ER-Dbd"/>
                     </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="sOP-Tv-0HB"/>
+                    </connections>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

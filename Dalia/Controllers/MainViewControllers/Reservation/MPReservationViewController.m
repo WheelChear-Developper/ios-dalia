@@ -185,11 +185,7 @@
 
 - (void)backButtonClicked:(UIButton *)sender {
 
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setTabViewIndex:_lng_tabNo];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] selectTab:_lng_tabNo];
-    [(MPTabBarViewController*)[self.navigationController parentViewController] setUpTabBar];
-    
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

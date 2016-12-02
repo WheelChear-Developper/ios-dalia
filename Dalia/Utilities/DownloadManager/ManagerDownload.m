@@ -27,7 +27,7 @@
 #import "MPMenu_ItemObject.h"
 #import "MPMemberCardObject.h"
 
-
+#import "MPCouponStampObject.h"
 
 #import "MPMemberObject.h"
 #import "MPNewHomeObject.h"
@@ -172,7 +172,10 @@
                 [self processGetMemberCard:listObject with:parameter];
                 break;
 
-
+            case RequestType_GET_DETAIL_COUPON_STAMP:
+                //スタンプ情報取得
+                [self processDetailCouponStamp:listObject with:parameter];
+                break;
 
 
 /*
@@ -235,9 +238,7 @@
                 [self processDetailCouponShare:listObject with:parameter];
                 break;
                 
-            case RequestType_GET_DETAIL_COUPON_STAMP:
-                [self processDetailCouponStamp:listObject with:parameter];
-                break;
+
                 
             case RequestType_SET_STAMP:
                 // REPLACED BY M.ama 2016.10.08 START
@@ -591,7 +592,24 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
+- (void) getDetailCouponStamp: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate
+{
+    //スタンプ情報取得
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
 
+    [params setValue:deviceID forKey:@"device_id"];
+    [params setValue:appID forKey:@"app_id"];
+    //[params setValue:coupon.coupon_id forKey:@"coupon_id"];
+    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_DETAIL_COUPON_STAMP];
+    paramenter.delegate = delegate;
+    NSString *strRequest = @"";
+    strRequest = [NSString stringWithFormat:BASE_URL,GET_DETAIL_COUPON_STAMP];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
+    [request setHTTPMethod:@"POST"];
+    [Utility setParamWithMethodPost:params forRequest:request];
+    [self baseRequestJSON:request parameter:paramenter];
+}
 
 
 
@@ -757,23 +775,7 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
-- (void) getDetailCouponStamp: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate
-{
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    
-    [params setValue:deviceID forKey:@"device_id"];
-    [params setValue:appID forKey:@"app_id"];
-    //[params setValue:coupon.coupon_id forKey:@"coupon_id"];
-    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_DETAIL_COUPON_STAMP];
-    paramenter.delegate = delegate;
-    NSString *strRequest = @"";
-    strRequest = [NSString stringWithFormat:BASE_URL,GET_DETAIL_COUPON_STAMP];
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
-    [request setHTTPMethod:@"POST"];
-    [Utility setParamWithMethodPost:params forRequest:request];
-    [self baseRequestJSON:request parameter:paramenter];
-}
+
 
 - (void) getRecommendProduct: (NSString*) deviceID withAppID: (NSString*) appID delegate: (NSObject<ManagerDownloadDelegate>*) delegate
 {
@@ -1521,7 +1523,31 @@
     }
 }
 
+- (void) processDetailCouponStamp:(NSArray *)listObject with:(DownloadParam *)param{
 
+    //スタンプ情報取得
+    for (NSDictionary *dic in listObject) {
+        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
+            return;
+        }
+
+        MPCouponStampObject *couponStampObj = [[MPCouponStampObject alloc] init];
+        couponStampObj.id = [Utility checkNULL:[dic objectForKey:@"id"]];
+        couponStampObj.name = [Utility checkNULL:[dic objectForKey:@"name"]];
+        couponStampObj.status = [Utility checkNULL:[dic objectForKey:@"status"]];
+        couponStampObj.is_due_date = [Utility checkNULL:[dic objectForKey:@"is_due_date"]];
+        couponStampObj.due_date = [Utility checkNULL:[dic objectForKey:@"due_date"]];
+        couponStampObj.due_date_format = [Utility checkNULL:[dic objectForKey:@"due_date_format"]];
+        couponStampObj.stamp_num = [Utility checkNULL:[dic objectForKey:@"stamp_num"]];
+        couponStampObj.condition = [Utility checkNULL:[dic objectForKey:@"condition"]];
+        couponStampObj.stamp_condition = [Utility checkNULL:[dic objectForKey:@"stamp_condition"]];
+        couponStampObj.stamp_date_set = [Utility checkNULL:[dic objectForKey:@"stamp_date_set"]];
+        couponStampObj.is_limit_stamp = [Utility checkNULL:[dic objectForKey:@"is_limit_stamp"]];
+        couponStampObj.stamp_devices = [Utility checkNULL:[dic objectForKey:@"stamp_devices"]];
+
+        [param.listData addObject:couponStampObj];
+    }
+}
 
 
 
@@ -1642,38 +1668,7 @@
 }
 // REPLACED BY M.ama 2016.10.08 END
 
-- (void) processDetailCouponStamp:(NSArray *)listObject with:(DownloadParam *)param{
-    
-    for (NSDictionary *dic in listObject) {
-        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
-            return;
-        }
-        
-        MPCouponObject *couponObj = [[MPCouponObject alloc] init];
-        couponObj.coupon_id = [Utility checkNULL:[dic objectForKey:@"id"]];
-        couponObj.coupon_name = [Utility checkNULL:[dic objectForKey:@"name"]];
-        couponObj.status = [Utility checkNULL:[dic objectForKey:@"status"]];
-        couponObj.is_due_date = [[Utility checkNULL:[dic objectForKey:@"is_due_date"]] integerValue];
-        couponObj.due_date = [Utility checkNULL:[dic objectForKey:@"due_date"]];
-        couponObj.due_date_format  = [Utility checkNULL:[dic objectForKey:@"due_date_format"]];
-        couponObj.stamp_num = [[Utility checkNULL:[dic objectForKey:@"stamp_num"]] integerValue];
-        couponObj.condition = [Utility checkNULL:[dic objectForKey:@"condition"]];
-        couponObj.stamp_condition = [Utility checkNULL:[dic objectForKey:@"stamp_condition"]];
-        couponObj.stamp_date_set = [Utility checkNULL:[dic objectForKey:@"stamp_date_set"]];
-        couponObj.is_limit_stamp = [Utility checkNULL:[dic objectForKey:@"is_limit_stamp"]];
-        // INSERTED BY M.FUJII 2015.12.11 START
-        // 電子スタンプ機能実装
-        couponObj.stamp_devices = [Utility checkNULL:[dic objectForKey:@"stamp_devices"]];
-        // INSERTED BY M.FUJII 2015.12.11 END
-        
-        // INSERTED BY ama 2016.10.05 START
-        // ランク用カラー設定
-        couponObj.rank_color = [Utility checkNULL:[dic objectForKey:@"rank_color"]];
-        // INSERTED BY ama 2016.10.05 END
 
-        [param.listData addObject:couponObj];
-    }
-}
 
 - (void) processRecommendProduct:(NSArray *)listObject with:(DownloadParam *)param{
     

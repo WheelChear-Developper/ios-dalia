@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPStampCardViewController">
             <connections>
                 <outlet property="_scr_inView" destination="naO-32-82r" id="ynL-Er-dLs"/>
-                <outlet property="_scr_rootview" destination="7UC-Nr-YMO" id="DeV-zz-eeP"/>
+                <outlet property="_scr_rootview" destination="7UC-Nr-YMO" id="xo8-Nc-OFi"/>
                 <outlet property="img_stamp01" destination="72D-LS-7R5" id="ytf-4e-WOF"/>
                 <outlet property="img_stamp02" destination="ncf-Z3-wlk" id="nhv-LT-QWV"/>
                 <outlet property="img_stamp03" destination="xaf-KR-ggu" id="FaH-zN-dvQ"/>
@@ -64,6 +64,7 @@
                 <outlet property="lbl_date16" destination="L65-Tg-Gfd" id="ZCY-d5-yIm"/>
                 <outlet property="lbl_setsumei" destination="ovy-JY-hoB" id="ry8-n9-79b"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view_date" destination="kC6-XR-4eY" id="GSJ-fS-sBR"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -75,7 +76,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="naO-32-82r">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="478"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="418"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_font_stampcard.png" translatesAutoresizingMaskIntoConstraints="NO" id="5a1-B2-5WK">
                                     <rect key="frame" x="40" y="70" width="240" height="28"/>
@@ -980,36 +981,20 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovy-JY-hoB">
-                                    <rect key="frame" x="35" y="358" width="250" height="60"/>
+                                    <rect key="frame" x="35" y="358" width="250" height="0.0"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="250" id="URA-rk-411"/>
                                     </constraints>
-                                    <attributedString key="attributedText">
-                                        <fragment>
-                                            <string key="content">＊スタンプが貯まると自動でクーポンが発行
-　されます。
-＊ご利用の際はスタッフにお申し付け下さい。
-＊有効期限は最終ご利用日から１年間です。</string>
-                                            <attributes>
-                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="12" name="HiraginoSans-W3"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                    <attributedString key="attributedText"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kC6-XR-4eY">
-                                    <rect key="frame" x="100" y="428" width="180" height="20"/>
+                                    <rect key="frame" x="100" y="368" width="180" height="20"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_back_expirationdate.png" translatesAutoresizingMaskIntoConstraints="NO" id="W4g-AS-CII">
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="20"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anj-LW-6Xh">
-                                            <rect key="frame" x="0.0" y="0.0" width="180" height="20"/>
-                                            <state key="normal" title="Button"/>
-                                        </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="現在の有効期限:2018/04/20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffj-ds-ACh">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffj-ds-ACh">
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="20"/>
                                             <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -1021,15 +1006,11 @@
                                         <constraint firstAttribute="trailing" secondItem="W4g-AS-CII" secondAttribute="trailing" id="1IV-6w-jTn"/>
                                         <constraint firstAttribute="trailing" secondItem="ffj-ds-ACh" secondAttribute="trailing" id="AM7-Wx-x3I"/>
                                         <constraint firstAttribute="bottom" secondItem="ffj-ds-ACh" secondAttribute="bottom" id="GKQ-rp-XkZ"/>
-                                        <constraint firstItem="anj-LW-6Xh" firstAttribute="top" secondItem="kC6-XR-4eY" secondAttribute="top" id="Izf-iE-avP"/>
                                         <constraint firstAttribute="width" constant="180" id="JGZ-EV-Lf4"/>
                                         <constraint firstAttribute="height" constant="20" id="MBx-X7-i05"/>
                                         <constraint firstItem="W4g-AS-CII" firstAttribute="leading" secondItem="kC6-XR-4eY" secondAttribute="leading" id="Nod-eM-53j"/>
-                                        <constraint firstItem="anj-LW-6Xh" firstAttribute="leading" secondItem="kC6-XR-4eY" secondAttribute="leading" id="Pxx-83-Gfh"/>
                                         <constraint firstItem="ffj-ds-ACh" firstAttribute="leading" secondItem="kC6-XR-4eY" secondAttribute="leading" id="aNh-4d-oCF"/>
-                                        <constraint firstAttribute="trailing" secondItem="anj-LW-6Xh" secondAttribute="trailing" id="dyU-U3-Qya"/>
                                         <constraint firstItem="W4g-AS-CII" firstAttribute="top" secondItem="kC6-XR-4eY" secondAttribute="top" id="gFn-LC-Dgu"/>
-                                        <constraint firstAttribute="bottom" secondItem="anj-LW-6Xh" secondAttribute="bottom" id="gLL-35-PUH"/>
                                         <constraint firstItem="ffj-ds-ACh" firstAttribute="top" secondItem="kC6-XR-4eY" secondAttribute="top" id="hIT-4H-My2"/>
                                         <constraint firstAttribute="bottom" secondItem="W4g-AS-CII" secondAttribute="bottom" id="u3C-1l-2sU"/>
                                     </constraints>
@@ -1058,7 +1039,7 @@
                         <constraint firstAttribute="trailing" secondItem="naO-32-82r" secondAttribute="trailing" id="zhq-pB-kT9"/>
                     </constraints>
                     <connections>
-                        <outlet property="delegate" destination="-1" id="tFf-88-Rrv"/>
+                        <outlet property="delegate" destination="-1" id="aP1-Df-Mco"/>
                     </connections>
                 </scrollView>
             </subviews>

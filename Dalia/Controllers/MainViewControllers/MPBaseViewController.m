@@ -253,6 +253,7 @@
     _iv_custom_config.contentMode = UIViewContentModeScaleAspectFit;
     _iv_custom_config.frame = CGRectMake(10, 10, 24, 24);
     [_view_custom_navigationView addSubview:_iv_custom_config];
+    _iv_custom_config.hidden = YES;
 
     _btn_custom_setting = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     _btn_custom_setting.frame = CGRectMake(0, 0, 44, 44);
@@ -275,10 +276,11 @@
 
     //ナビゲーション画面用　closeボタン設置
     UIImage *im_custom_NavigationMenu_closeButton = [UIImage imageNamed:@"customMenu_close.png"];
-    UIImageView* iv_custom_NavigationMenu_closeButton = [[UIImageView alloc] initWithImage:im_custom_NavigationMenu_closeButton];
+    iv_custom_NavigationMenu_closeButton = [[UIImageView alloc] initWithImage:im_custom_NavigationMenu_closeButton];
     iv_custom_NavigationMenu_closeButton.contentMode = UIViewContentModeScaleAspectFit;
     iv_custom_NavigationMenu_closeButton.frame = CGRectMake(_view_NaviFrame.frame.size.width - 10 - 24, 10, 24, 24);
     [_view_NaviFrame addSubview:iv_custom_NavigationMenu_closeButton];
+    iv_custom_NavigationMenu_closeButton.hidden = YES;
 
     UIButton* btn_custom_btn_close = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     btn_custom_btn_close.frame = CGRectMake(_view_NaviFrame.frame.size.width - 44, 0, 44, 44);
@@ -472,6 +474,7 @@
 
     _view_NaviMenu.hidden = NO;
     _iv_custom_config.hidden = NO;
+    iv_custom_NavigationMenu_closeButton.hidden = NO;
 
     //カスタムナビゲーションのオープン
     [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:true];
@@ -515,6 +518,7 @@
                          //完了時のコールバック
                          _view_NaviMenu.hidden = YES;
                          _iv_custom_config.hidden = YES;
+                         iv_custom_NavigationMenu_closeButton.hidden = YES;
                          
                      }];
 }

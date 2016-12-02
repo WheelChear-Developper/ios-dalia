@@ -37,6 +37,8 @@ typedef NS_ENUM(NSInteger, ElevenFunctionType) {
     
     UIImageView* _iv_custom_navigationIcon;
     UIView* _view_NaviFrame;
+
+    UIImageView* iv_custom_NavigationMenu_closeButton;
 }
 @property (nonatomic) UIImageView *basic_navigationView;
 @property (nonatomic) UIView* view_custom_navigationView;
