@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="first_gender_Identifier" id="KGk-i7-Jjw" customClass="TheFifth_gender_TableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xlj-kH-3aZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZF-KX-JJn">
+                                <rect key="frame" x="10" y="15" width="33" height="11"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m59-gl-sk8">
+                                <rect key="frame" x="165" y="0.0" width="150" height="39.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="QZG-0U-acw"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NZF-KX-JJn" firstAttribute="centerY" secondItem="Xlj-kH-3aZ" secondAttribute="centerY" id="75t-VR-Ml1"/>
+                            <constraint firstAttribute="bottom" secondItem="m59-gl-sk8" secondAttribute="bottom" id="PMF-Gp-zmL"/>
+                            <constraint firstAttribute="trailing" secondItem="m59-gl-sk8" secondAttribute="trailing" constant="5" id="bKr-gE-Vk0"/>
+                            <constraint firstItem="m59-gl-sk8" firstAttribute="top" secondItem="Xlj-kH-3aZ" secondAttribute="top" id="ceD-78-u9X"/>
+                            <constraint firstItem="NZF-KX-JJn" firstAttribute="leading" secondItem="Xlj-kH-3aZ" secondAttribute="leading" constant="10" id="zUB-lz-IQa"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Xlj-kH-3aZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9Ke-gr-gMx"/>
+                    <constraint firstItem="Xlj-kH-3aZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZPU-oF-CnW"/>
+                    <constraint firstAttribute="bottom" secondItem="Xlj-kH-3aZ" secondAttribute="bottom" id="eO9-qo-NuA"/>
+                    <constraint firstAttribute="trailing" secondItem="Xlj-kH-3aZ" secondAttribute="trailing" id="sjq-y5-aUp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="lbl_name" destination="NZF-KX-JJn" id="pA9-6c-sQq"/>
+                <outlet property="txt_field" destination="m59-gl-sk8" id="rRp-gd-S8y"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
