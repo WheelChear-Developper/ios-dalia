@@ -3858,7 +3858,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.dalia.salonapps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2342b6b7-a232-445f-a250-1db1c75c5762";
+				PROVISIONING_PROFILE = "332d77cb-214b-4591-81b0-941d254f7710";
 				PROVISIONING_PROFILE_SPECIFIER = "SalonApps Development";
 			};
 			name = Debug;
