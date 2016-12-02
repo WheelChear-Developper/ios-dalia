@@ -169,7 +169,7 @@
             }else{
 
                 //スタンプ画面設定
-                [self setUpView];
+                [self setStampView];
 
 //                [self.delegate setStampMemberNo:couponObject.member_no];
 //                [[NSUserDefaults standardUserDefaults] setObject:couponObject.member_no forKey:MEMBER_NO];
@@ -191,7 +191,7 @@
 }
 
 //画面のスタンプViewを追加
-- (void)setUpView {
+- (void)setStampView {
 
 
     //説明設定

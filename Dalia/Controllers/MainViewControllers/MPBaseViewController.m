@@ -52,7 +52,7 @@
     //DeviceID Deploygateへ通知
     DGSLog(@"(log By M.ama) DeviceID : %@", [Utility getDeviceID]);
 
-    [self setUpView];
+    [self setBasicNavigaion];
 
     [self setCustomNavigaion];
 }
@@ -73,7 +73,7 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)setUpView {
+- (void)setBasicNavigaion {
 
     //ステータスバー表示設定
     statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
