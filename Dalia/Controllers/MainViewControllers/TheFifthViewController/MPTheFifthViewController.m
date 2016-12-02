@@ -57,6 +57,14 @@
     [_tbl_userSetting reloadData];
 
     _lbl_version.text =  [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+
+    //お誕生日
+    [txt_birthday setTintColor:[UIColor lightGrayColor]];
+
+    if(txt_birthday.placeholder != nil){
+        UIColor *color = [UIColor colorWithRed:124/255.0 green:123/255.0 blue:123/255.0 alpha:1.0];
+        txt_birthday.attributedPlaceholder = [[NSAttributedString alloc] initWithString:txt_birthday.placeholder                                                                           attributes:@{ NSForegroundColorAttributeName:color }];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -75,11 +83,30 @@
 
     [super viewWillAppear:animated];
 
+    //スイッチの縮小化
     sw_newsNotification.transform = CGAffineTransformMakeScale(0.9, 0.9);
-    sw_recommended.transform = CGAffineTransformMakeScale(0.9, 0.9);
-    sw_recommendedMenu.transform = CGAffineTransformMakeScale(0.9, 0.9);
-    sw_catalog.transform = CGAffineTransformMakeScale(0.9, 0.9);
     sw_curpon.transform = CGAffineTransformMakeScale(0.9, 0.9);
+
+    // キーボードアクション追加
+    NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
+
+    // キーボード表示を検知
+    [nc addObserver:self selector:@selector(showKeyboard:) name:UIKeyboardDidShowNotification object:nil];
+
+    // キーボード収納を検知。
+    [nc addObserver:self selector:@selector(hideKeyboard:) name:UIKeyboardDidHideNotification object:nil];
+
+    //NumberPicker上部バー作成
+    UIToolbar *numbaer_toolbar = [[UIToolbar alloc] init];
+    numbaer_toolbar.backgroundColor = [UIColor whiteColor];
+    numbaer_toolbar.frame=CGRectMake(0, 0, 320, 44);
+    //DataPicker上部バーボタン設定
+    UIBarButtonItem *numbaer_item0=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *numbaer_item1=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *numbaer_item2=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *numbaer_item3=[[UIBarButtonItem alloc] initWithTitle:@"完了" style:UIBarButtonItemStylePlain target:self action:@selector(numbaerBtnClick)];
+    numbaer_item3.tintColor = [UIColor blackColor];
+    numbaer_toolbar.items=@[numbaer_item0,numbaer_item1,numbaer_item2,numbaer_item3];
 
     //会員情報保存項目取得
     [[ManagerDownload sharedInstance] getMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
@@ -183,6 +210,9 @@
             }
 
             cell_nick_name.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell_nick_name.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+
+            [cell_nick_name.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
             return cell_nick_name;
         }
@@ -198,6 +228,9 @@
             }
 
             cell_gender.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell_gender.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+
+            [cell_gender.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
             return cell_gender;
         }
@@ -213,6 +246,9 @@
             }
 
             cell_mail.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell_mail.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+
+            [cell_mail.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
             return cell_mail;
         }
@@ -228,6 +264,9 @@
             }
 
             cell_job.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell_job.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+
+            [cell_job.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
             return cell_job;
         }
@@ -243,6 +282,10 @@
             }
 
             cell_zipcode.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell_zipcode.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+
+            [cell_zipcode.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
+
 
             return cell_zipcode;
         }
@@ -258,6 +301,9 @@
             }
 
             cell_address.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell_address.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+
+            [cell_address.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
             return cell_address;
         }
@@ -273,6 +319,11 @@
             }
 
             cell_name.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell_name.txt_field1.text = [[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:0];
+            cell_name.txt_field2.text = [[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:1];
+
+            [cell_name.txt_field1 addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
+            [cell_name.txt_field2 addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
             return cell_name;
         }
@@ -288,6 +339,11 @@
             }
 
             cell_furigana.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell_furigana.txt_field1.text = [[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:0];
+            cell_furigana.txt_field2.text = [[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:1];
+
+            [cell_furigana.txt_field1 addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
+            [cell_furigana.txt_field2 addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
             return cell_furigana;
         }
@@ -303,6 +359,9 @@
             }
 
             cell_tel.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell_tel.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+
+            [cell_tel.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
             return cell_tel;
         }
@@ -318,6 +377,9 @@
             }
 
             cell_generation.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell_generation.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+
+            [cell_generation.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
             return cell_generation;
         }
@@ -333,6 +395,9 @@
             }
 
             cell_shop.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell_shop.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+
+            [cell_shop.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
             return cell_shop;
         }
@@ -348,6 +413,9 @@
             }
 
             cell_birthday.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell_birthday.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+
+            [cell_birthday.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
             return cell_birthday;
         }
@@ -357,27 +425,53 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    /*
-     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-     
-     if(tableView == _RecommendMenuList_tableView){
-     
-     MPRecommendMenuInfoViewController *vc = [[MPRecommendMenuInfoViewController alloc] initWithNibName:@"MPRecommendMenuInfoViewController" bundle:nil];
-     vc.delegate = self;
-     
-     [self.navigationController pushViewController:vc animated:YES];
-     }
-     
-     if(tableView == _WhatsNew_tableView){
-     
-     MPWhatNewInfoViewController *vc = [[MPWhatNewInfoViewController alloc] initWithNibName:@"MPWhatNewInfoViewController" bundle:nil];
-     vc.delegate = self;
-     
-     [self.navigationController pushViewController:vc animated:YES];
-     }
-     */
 }
 
+- (void)getTextfield {
+
+    //会員情報保存項目取得
+    NSMutableArray* ary_field = [[NSMutableArray alloc] init];
+    for(long l=0;l<memberObj.fld_value.count;l++){
+
+        if([[memberObj.fld_name objectAtIndex:l] isEqualToString:@"name1"]){
+
+            NSMutableArray* ary1 = [[NSMutableArray alloc] init];
+            [ary1 addObject:@"name1"];
+            [ary1 addObject:[[memberObj.fld_value objectAtIndex:l] objectAtIndex:0]];
+
+            [ary_field addObject:ary1];
+
+            NSMutableArray* ary2 = [[NSMutableArray alloc] init];
+            [ary2 addObject:@"name2"];
+            [ary2 addObject:[[memberObj.fld_value objectAtIndex:l] objectAtIndex:1]];
+
+            [ary_field addObject:ary2];
+        }else
+        if([[memberObj.fld_name objectAtIndex:l] isEqualToString:@"furigana1"]){
+
+            NSMutableArray* ary1 = [[NSMutableArray alloc] init];
+            [ary1 addObject:@"furigana1"];
+            [ary1 addObject:[[memberObj.fld_value objectAtIndex:l] objectAtIndex:0]];
+
+            [ary_field addObject:ary1];
+
+            NSMutableArray* ary2 = [[NSMutableArray alloc] init];
+            [ary2 addObject:@"furigana2"];
+            [ary2 addObject:[[memberObj.fld_value objectAtIndex:l] objectAtIndex:1]];
+
+            [ary_field addObject:ary2];
+        }else{
+
+            NSMutableArray* ary = [[NSMutableArray alloc] init];
+            [ary addObject:[memberObj.fld_name objectAtIndex:l]];
+            [ary addObject:[memberObj.fld_value objectAtIndex:l]];
+
+            [ary_field addObject:ary];
+        }
+    }
+
+//    [[ManagerDownload sharedInstance] setMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] withShrareCode:@"" withfield:ary_field delegate:self];
+}
 
 - (void)backButtonClicked:(UIButton *)sender {
 
@@ -400,7 +494,6 @@
         }
             break;
 
-
         default:
             break;
     }
@@ -419,6 +512,213 @@
                    _tbl_userSetting.bounds.size.height));
     
 }
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+
+    CGRect rect_screen = [[UIScreen mainScreen] bounds];
+    NSLog(@"height : %f", rect_screen.size.height);
+    /*
+     if(textField == self.txt_farstName){
+
+     cgpoint_tf.x = 0.0f;
+     cgpoint_tf.y = 0;
+     }
+
+     if(textField == self.txt_lastName){
+
+     cgpoint_tf.x = 0.0f;
+     cgpoint_tf.y = 0;
+     }
+
+     if(textField == self.txt_nickName){
+
+     cgpoint_tf.x = 0.0f;
+     cgpoint_tf.y = 254;
+     }
+
+     if(textField == self.txt_birthday){
+
+     cgpoint_tf.x = 0.0f;
+     cgpoint_tf.y = 254;
+     }
+
+     if(textField == self.txt_zipCode){
+
+     cgpoint_tf.x = 0.0f;
+     cgpoint_tf.y = 314;
+     }
+
+     if(textField == self.txt_introductionCode){
+
+     cgpoint_tf.x = 0.0f;
+     cgpoint_tf.y = 374;
+     }
+
+     if(textField == self.txt_machineChengeCode){
+
+     cgpoint_tf.x = 0.0f;
+     cgpoint_tf.y = 434;
+     }
+
+     kb_type = textField.keyboardType;
+     */
+    return YES;
+}
+
+- (void)showKeyboard:(NSNotification*)notification {
+
+    // ステータスバーをのぞいた画面高さ
+    float afh = [[UIScreen mainScreen] applicationFrame].size.height;
+
+    // キーボード高さ
+    CGRect keyboard;
+    keyboard = [[notification.userInfo
+                 objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    float kbh = keyboard.size.height;
+
+    CGPoint cgpoint_reset = cgpoint_tf;
+
+    float flt_SetScreenSize = (afh - 44 - 33 - kbh);
+    float flt_SetScroolPoint = 8 + cgpoint_tf.y + 60;
+
+    if(flt_SetScroolPoint < flt_SetScreenSize){
+
+        cgpoint_reset.y = 0;
+    }else{
+
+        cgpoint_reset.y = flt_SetScroolPoint - flt_SetScreenSize + 7;
+    }
+
+    [_scr_rootview setContentOffset:cgpoint_reset animated:YES];
+}
+
+- (void)enterButton:(UIButton*)sender {
+
+    //キーボードクローズ
+    [cell_nick_name.txt_field resignFirstResponder];
+    [cell_gender.txt_field resignFirstResponder];
+    [cell_mail.txt_field resignFirstResponder];
+    [cell_job.txt_field resignFirstResponder];
+    [cell_zipcode.txt_field resignFirstResponder];
+    [cell_address.txt_field resignFirstResponder];
+    [cell_name.txt_field1 resignFirstResponder];
+    [cell_name.txt_field2 resignFirstResponder];
+    [cell_furigana.txt_field1 resignFirstResponder];
+    [cell_furigana.txt_field2 resignFirstResponder];
+    [cell_generation.txt_field resignFirstResponder];
+    [cell_shop.txt_field resignFirstResponder];
+    [cell_birthday.txt_field resignFirstResponder];
+}
+
+- (void)hideKeyboard:(NSNotification*)notification {
+
+    //キーボードクローズ
+    [cell_nick_name.txt_field resignFirstResponder];
+    [cell_gender.txt_field resignFirstResponder];
+    [cell_mail.txt_field resignFirstResponder];
+    [cell_job.txt_field resignFirstResponder];
+    [cell_zipcode.txt_field resignFirstResponder];
+    [cell_address.txt_field resignFirstResponder];
+    [cell_name.txt_field1 resignFirstResponder];
+    [cell_name.txt_field2 resignFirstResponder];
+    [cell_furigana.txt_field1 resignFirstResponder];
+    [cell_furigana.txt_field2 resignFirstResponder];
+    [cell_generation.txt_field resignFirstResponder];
+    [cell_shop.txt_field resignFirstResponder];
+    [cell_birthday.txt_field resignFirstResponder];
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    //space remove
+    if (![string compare:@" "]) {
+        return NO;
+    }
+
+    // 変更前のtextを取得
+    NSMutableString *tmp =[textField.text mutableCopy];
+    // 編集後のtext
+    [tmp replaceCharactersInRange:range withString:string];
+    /*
+     //ニックネーム入力規制
+     if(textField == self.txt_nickName){
+
+     return [tmp lengthOfBytesUsingEncoding:NSShiftJISStringEncoding] <= 20;
+     }
+
+     //郵便番号入力規制
+     if(textField == self.txt_zipCode){
+
+     if(![self containsOnlyDecimalNumbers1:tmp]){
+
+     return NO;
+     }
+
+     return [tmp lengthOfBytesUsingEncoding:NSShiftJISStringEncoding] <= 7;
+     }
+     */
+    return YES;
+}
+
+- (BOOL)containsOnlyDecimalNumbers1:(NSString *)string
+{
+    NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:string];
+    return [[NSCharacterSet decimalDigitCharacterSet] isSupersetOfSet:characterSet];
+
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    /*
+     if(textField == self.txt_farstName){
+
+     // 受け取った入力をラベルに代入
+     self.txt_farstName.text = textField.text;
+     }
+
+     if(textField == self.txt_lastName){
+
+     // 受け取った入力をラベルに代入
+     self.txt_lastName.text = textField.text;
+     }
+
+     if(textField == self.txt_nickName){
+
+     // 受け取った入力をラベルに代入
+     self.txt_nickName.text = textField.text;
+     }
+
+     if(textField == self.txt_birthday){
+
+     // 受け取った入力をラベルに代入
+     self.txt_birthday.text = textField.text;
+     }
+
+     if(textField == self.txt_zipCode){
+
+     // 受け取った入力をラベルに代入
+     self.txt_zipCode.text = textField.text;
+     }
+
+     if(textField == self.txt_introductionCode){
+
+     // 受け取った入力をラベルに代入
+     self.txt_introductionCode.text = textField.text;
+     }
+
+     if(textField == self.txt_machineChengeCode){
+
+     // 受け取った入力をラベルに代入
+     self.txt_machineChengeCode.text = textField.text;
+     }
+     */
+    // キーボードを閉じる
+    [textField resignFirstResponder];
+
+    return YES;
+}
+
 
 - (void)downloadDataFail:(DownloadParam *)param {
 }

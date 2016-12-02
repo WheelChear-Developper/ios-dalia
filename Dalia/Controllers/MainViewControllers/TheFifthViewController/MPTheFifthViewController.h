@@ -33,6 +33,9 @@
     __weak IBOutlet UIView* _scr_inView;
     CGPoint _scrollBeginingPoint;
 
+    CGPoint cgpoint_tf;
+    UIKeyboardType kb_type;
+
     MPMemberObject* memberObj;
 
     TheFifth_nick_name_TableViewCell *cell_nick_name;
@@ -48,20 +51,16 @@
     TheFifth_shop_TableViewCell *cell_shop;
     TheFifth_birthday_TableViewCell *cell_birthday;
 
+    __weak IBOutlet UITextField *txt_birthday;
+
     __weak IBOutlet UITableView *_tbl_userSetting;
 
     __weak IBOutlet UILabel *_lbl_version;
 
     __weak IBOutlet UISwitch *sw_newsNotification;
-    __weak IBOutlet UISwitch *sw_recommended;
-    __weak IBOutlet UISwitch *sw_recommendedMenu;
-    __weak IBOutlet UISwitch *sw_catalog;
     __weak IBOutlet UISwitch *sw_curpon;
 }
 - (IBAction)sw_newsNotification:(id)sender;
-- (IBAction)sw_recommended:(id)sender;
-- (IBAction)sw_recommendedMenu:(id)sender;
-- (IBAction)sw_catalog:(id)sender;
 - (IBAction)sw_curpon:(id)sender;
 
 - (IBAction)btn_transfer:(id)sender;

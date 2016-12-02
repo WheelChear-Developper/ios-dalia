@@ -17,6 +17,7 @@
                 <outlet property="_tbl_userSetting" destination="q69-S1-iyn" id="9KD-x3-OOt"/>
                 <outlet property="sw_curpon" destination="eCa-ot-Tx2" id="vyS-GH-Kmc"/>
                 <outlet property="sw_newsNotification" destination="Yhk-1c-lV3" id="ITm-fI-hea"/>
+                <outlet property="txt_birthday" destination="baR-ah-rxs" id="tJZ-Eh-KUg"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -29,7 +30,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acg-Dn-n7O">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="993"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="998"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お誕生日登録" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxA-Hx-Un0">
                                     <rect key="frame" x="10" y="60" width="300" height="12"/>
@@ -85,7 +86,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q69-S1-iyn">
-                                    <rect key="frame" x="0.0" y="187" width="320" height="400"/>
+                                    <rect key="frame" x="0.0" y="192" width="320" height="400"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="400" id="YxZ-AU-9lT"/>
@@ -97,25 +98,25 @@
                                     </connections>
                                 </tableView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通知設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVY-zd-sKn">
-                                    <rect key="frame" x="10" y="607" width="300" height="12"/>
+                                    <rect key="frame" x="10" y="612" width="300" height="12"/>
                                     <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="12"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アプリからの各更新情報を、それぞれプッシュ通知で受け取るか" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weA-7B-AAs">
-                                    <rect key="frame" x="10" y="624" width="300" height="9"/>
+                                    <rect key="frame" x="10" y="629" width="300" height="9"/>
                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="9"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="受け取らないかを設定することが出来ます。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2EV-ak-d7T">
-                                    <rect key="frame" x="10" y="638" width="300" height="9"/>
+                                    <rect key="frame" x="10" y="643" width="300" height="9"/>
                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="9"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdL-w8-VaQ">
-                                    <rect key="frame" x="0.0" y="652" width="320" height="40"/>
+                                    <rect key="frame" x="0.0" y="657" width="320" height="40"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新着ニュース更新通知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ola-Mw-E2c">
                                             <rect key="frame" x="10" y="15" width="108.5" height="11"/>
@@ -141,7 +142,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OyL-rn-fhh">
-                                    <rect key="frame" x="0.0" y="693" width="320" height="40"/>
+                                    <rect key="frame" x="0.0" y="698" width="320" height="40"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="クーポン更新通知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89Z-Ew-V4N">
                                             <rect key="frame" x="10" y="15" width="88" height="11"/>
@@ -166,13 +167,13 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="各種情報" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMJ-m4-APX">
-                                    <rect key="frame" x="10" y="763" width="300" height="12"/>
+                                    <rect key="frame" x="10" y="768" width="300" height="12"/>
                                     <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="12"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFu-Vm-D8q">
-                                    <rect key="frame" x="0.0" y="780" width="320" height="40"/>
+                                    <rect key="frame" x="0.0" y="785" width="320" height="40"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="機種変更時のデータ移行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Kp-av-Ggg">
                                             <rect key="frame" x="10" y="14" width="143.5" height="13"/>
@@ -208,7 +209,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GdC-21-9IL">
-                                    <rect key="frame" x="0.0" y="821" width="320" height="40"/>
+                                    <rect key="frame" x="0.0" y="826" width="320" height="40"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ご利用規約" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaC-2C-SfU">
                                             <rect key="frame" x="10" y="14" width="65.5" height="13"/>
@@ -243,7 +244,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3IU-lY-3wv">
-                                    <rect key="frame" x="0.0" y="862" width="320" height="40"/>
+                                    <rect key="frame" x="0.0" y="867" width="320" height="40"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="プライバシーポリシー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsF-P1-Rne">
                                             <rect key="frame" x="10" y="14" width="129" height="13"/>
@@ -279,7 +280,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGD-fe-Xox">
-                                    <rect key="frame" x="0.0" y="903" width="320" height="40"/>
+                                    <rect key="frame" x="0.0" y="908" width="320" height="40"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="現在のバージョン" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DE-uh-F6l">
                                             <rect key="frame" x="10" y="14" width="103" height="13"/>
@@ -355,7 +356,7 @@
                                 <constraint firstAttribute="trailing" secondItem="3IU-lY-3wv" secondAttribute="trailing" id="v3J-91-VFN"/>
                                 <constraint firstItem="GdC-21-9IL" firstAttribute="leading" secondItem="acg-Dn-n7O" secondAttribute="leading" id="vQz-t7-FqK"/>
                                 <constraint firstItem="0nb-Fq-S09" firstAttribute="leading" secondItem="acg-Dn-n7O" secondAttribute="leading" constant="10" id="yLG-eC-Zk7"/>
-                                <constraint firstItem="q69-S1-iyn" firstAttribute="top" secondItem="l4R-1k-oVs" secondAttribute="bottom" id="yzL-og-EtL"/>
+                                <constraint firstItem="q69-S1-iyn" firstAttribute="top" secondItem="l4R-1k-oVs" secondAttribute="bottom" constant="5" id="yzL-og-EtL"/>
                             </constraints>
                         </view>
                     </subviews>

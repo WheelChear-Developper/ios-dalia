@@ -546,22 +546,21 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
-- (void)setMemberInfo:(NSString*)userID withAppID:(NSString*)appID withMemberNO:(NSString*)memberNO withDeviceID:(NSString*)deviceID withNickName:(NSString*)nickName withGender:(long)gender withBirthday:(NSString*)birthday withZipcode:(NSString*)zipcode withChild1Name:(NSString*)child1name withChild1Birthday:(NSString*)child1birthday withChild2Name:(NSString*)child2name withChild2Birthday:(NSString*)child2birthday delegate: (NSObject<ManagerDownloadDelegate>*) delegate {
+- (void)setMemberInfo:(NSString*)appID
+         withDeviceID:(NSString*)deviceID
+       withShrareCode:(NSString*)shareCode
+            withfield:(NSMutableArray*)dic_field
+             delegate: (NSObject<ManagerDownloadDelegate>*) delegate {
 
     //顧客情報保存
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    [params setValue:[NSString stringWithFormat:@"%@",userID] forKey:@"id"];
     [params setValue:[NSString stringWithFormat:@"%@",appID] forKey:@"app_id"];
-    [params setValue:[NSString stringWithFormat:@"%@",memberNO] forKey:@"member_no"];
     [params setValue:[NSString stringWithFormat:@"%@",deviceID] forKey:@"device_id"];
-    [params setValue:[NSString stringWithFormat:@"%@",nickName] forKey:@"nick_name"];
-    [params setValue:[NSString stringWithFormat:@"%ld",gender] forKey:@"gender"];
-    [params setValue:[NSString stringWithFormat:@"%@",birthday] forKey:@"birthday"];
-    [params setValue:[NSString stringWithFormat:@"%@",zipcode] forKey:@"zipcode"];
-    [params setValue:[NSString stringWithFormat:@"%@",child1name] forKey:@"child1_name"];
-    [params setValue:[NSString stringWithFormat:@"%@",child1birthday] forKey:@"child1_birthday"];
-    [params setValue:[NSString stringWithFormat:@"%@",child2name] forKey:@"child2_name"];
-    [params setValue:[NSString stringWithFormat:@"%@",child2birthday] forKey:@"child2_birthday"];
+    [params setValue:[NSString stringWithFormat:@"%@",shareCode] forKey:@"share_code"];
+    for(long l=0;l<dic_field.count;l++){
+
+        [params setValue:[NSString stringWithFormat:@"%@",[[dic_field objectAtIndex:l] objectAtIndex:1]] forKey:[NSString stringWithFormat:@"%@",[[dic_field objectAtIndex:l] objectAtIndex:0]]];
+    }
     
     DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_SET_MEMBER_INFO];
     paramenter.delegate = delegate;

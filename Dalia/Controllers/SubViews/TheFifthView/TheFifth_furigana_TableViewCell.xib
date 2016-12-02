@@ -27,18 +27,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BmM-fo-kJ5">
-                                <rect key="frame" x="60" y="0.0" width="100" height="39.5"/>
+                                <rect key="frame" x="160" y="0.0" width="75" height="39.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="8u0-ve-7IK"/>
+                                    <constraint firstAttribute="width" constant="75" id="8u0-ve-7IK"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a1F-jX-MYX">
-                                <rect key="frame" x="165" y="0.0" width="150" height="39.5"/>
+                                <rect key="frame" x="240" y="0.0" width="75" height="39.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="8HF-4M-nIT"/>
+                                    <constraint firstAttribute="width" constant="75" id="8HF-4M-nIT"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
