@@ -141,4 +141,51 @@
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
+- (IBAction)btn_stamp01:(id)sender {
+}
+
+- (IBAction)btn_stamp02:(id)sender {
+}
+
+- (IBAction)btn_stamp03:(id)sender {
+}
+
+- (IBAction)btn_stamp04:(id)sender {
+}
+
+- (IBAction)btn_stamp05:(id)sender {
+}
+
+- (IBAction)btn_stamp06:(id)sender {
+}
+
+- (IBAction)btn_stamp07:(id)sender {
+}
+
+- (IBAction)btn_stamp08:(id)sender {
+}
+
+- (IBAction)btn_stamp09:(id)sender {
+}
+
+- (IBAction)btn_stamp10:(id)sender {
+}
+
+- (IBAction)btn_stamp11:(id)sender {
+}
+
+- (IBAction)btn_stamp12:(id)sender {
+}
+
+- (IBAction)btn_stamp13:(id)sender {
+}
+
+- (IBAction)btn_stamp14:(id)sender {
+}
+
+- (IBAction)btn_stamp15:(id)sender {
+}
+
+- (IBAction)btn_stamp16:(id)sender {
+}
 @end

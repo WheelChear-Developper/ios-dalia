@@ -11,6 +11,58 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPStampCardViewController">
             <connections>
+                <outlet property="_scr_inView" destination="naO-32-82r" id="ynL-Er-dLs"/>
+                <outlet property="_scr_rootview" destination="7UC-Nr-YMO" id="DeV-zz-eeP"/>
+                <outlet property="img_stamp01" destination="72D-LS-7R5" id="ytf-4e-WOF"/>
+                <outlet property="img_stamp02" destination="ncf-Z3-wlk" id="nhv-LT-QWV"/>
+                <outlet property="img_stamp03" destination="xaf-KR-ggu" id="FaH-zN-dvQ"/>
+                <outlet property="img_stamp04" destination="dQV-3N-xf8" id="MlN-4g-wkG"/>
+                <outlet property="img_stamp05" destination="3SR-Fr-p6s" id="JVi-ZB-nhC"/>
+                <outlet property="img_stamp06" destination="Hhg-hE-iPH" id="teh-zG-cvA"/>
+                <outlet property="img_stamp07" destination="BTX-pD-JTc" id="fnc-oM-Jdk"/>
+                <outlet property="img_stamp08" destination="BNb-UB-wIc" id="Okt-br-P5Y"/>
+                <outlet property="img_stamp09" destination="Q1j-Dz-9e6" id="fms-UZ-Lqp"/>
+                <outlet property="img_stamp10" destination="PI7-Rt-Rbs" id="tgB-f6-DXV"/>
+                <outlet property="img_stamp11" destination="b6d-JJ-aav" id="IxA-Lu-Xsa"/>
+                <outlet property="img_stamp12" destination="q1i-16-Fuo" id="rc1-Vm-nkA"/>
+                <outlet property="img_stamp13" destination="Oev-1m-5hg" id="Ehz-ZC-O0v"/>
+                <outlet property="img_stamp14" destination="XLT-Ts-SKL" id="TWx-zo-P0v"/>
+                <outlet property="img_stamp15" destination="dWd-R9-Ado" id="4GK-aD-cbZ"/>
+                <outlet property="img_stamp16" destination="IFI-f5-WLz" id="v3r-Lr-J58"/>
+                <outlet property="lbl_No01" destination="lJS-ip-foX" id="dvS-2I-haC"/>
+                <outlet property="lbl_No02" destination="deD-05-jF5" id="uTz-C6-nnl"/>
+                <outlet property="lbl_No03" destination="Wou-oe-QuK" id="3TE-vI-nqh"/>
+                <outlet property="lbl_No04" destination="mYB-d8-dCV" id="z9e-F5-3uQ"/>
+                <outlet property="lbl_No05" destination="fMO-8E-j6i" id="fhE-Jg-T1m"/>
+                <outlet property="lbl_No06" destination="icu-z2-OC2" id="5qU-oe-QJl"/>
+                <outlet property="lbl_No07" destination="RTM-CY-ziQ" id="DWg-1G-VZn"/>
+                <outlet property="lbl_No08" destination="QbE-Gc-GTh" id="MDX-yM-7tL"/>
+                <outlet property="lbl_No09" destination="Ig6-X4-jIN" id="GKd-kP-BjO"/>
+                <outlet property="lbl_No10" destination="5l3-hR-Cqa" id="sC4-AV-diN"/>
+                <outlet property="lbl_No11" destination="rjt-Va-Pco" id="OOC-cz-fMP"/>
+                <outlet property="lbl_No12" destination="VNq-Qx-NX1" id="qhf-FB-CCm"/>
+                <outlet property="lbl_No13" destination="ACr-69-CMJ" id="gcn-io-KZa"/>
+                <outlet property="lbl_No14" destination="gNe-K5-ebP" id="QSP-FL-6zr"/>
+                <outlet property="lbl_No15" destination="qT8-eF-Qwy" id="X3S-SL-vN6"/>
+                <outlet property="lbl_No16" destination="8C7-Ff-QGt" id="qmq-WF-9vd"/>
+                <outlet property="lbl_date" destination="ffj-ds-ACh" id="wcn-l1-pSW"/>
+                <outlet property="lbl_date01" destination="mkh-VW-KFf" id="Zis-mo-rlk"/>
+                <outlet property="lbl_date02" destination="Eq1-i9-b2e" id="x93-1r-hsF"/>
+                <outlet property="lbl_date03" destination="bJW-7Q-KTc" id="nVt-Ai-Y8R"/>
+                <outlet property="lbl_date04" destination="r3z-kE-ILr" id="SHg-5w-0wv"/>
+                <outlet property="lbl_date05" destination="Dap-XB-3yg" id="mRx-01-g9q"/>
+                <outlet property="lbl_date06" destination="xg4-O5-wl8" id="EAf-IU-1XR"/>
+                <outlet property="lbl_date07" destination="fPj-ow-5rg" id="ngi-GV-YjY"/>
+                <outlet property="lbl_date08" destination="oOO-Nt-fno" id="mp9-JI-W94"/>
+                <outlet property="lbl_date09" destination="Qlt-X5-mRw" id="7sf-DK-BTM"/>
+                <outlet property="lbl_date10" destination="mZI-aC-eRO" id="zX5-eq-1zw"/>
+                <outlet property="lbl_date11" destination="ahB-bF-qd0" id="nyh-dv-dvf"/>
+                <outlet property="lbl_date12" destination="cNE-rH-Nov" id="9bF-40-pty"/>
+                <outlet property="lbl_date13" destination="zAc-bA-AHG" id="OU8-Fb-T7a"/>
+                <outlet property="lbl_date14" destination="XuN-EP-0qz" id="xM8-23-sgZ"/>
+                <outlet property="lbl_date15" destination="7Vx-vu-LvS" id="QJF-P2-KC5"/>
+                <outlet property="lbl_date16" destination="L65-Tg-Gfd" id="ZCY-d5-yIm"/>
+                <outlet property="lbl_setsumei" destination="ovy-JY-hoB" id="ry8-n9-79b"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -41,7 +93,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0GZ-ce-mcm">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_lefttop.png" translatesAutoresizingMaskIntoConstraints="NO" id="IRV-fI-qY1">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_lefttop.png" translatesAutoresizingMaskIntoConstraints="NO" id="IRV-fI-qY1">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJS-ip-foX">
@@ -50,7 +102,7 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_mark_stamp.png" translatesAutoresizingMaskIntoConstraints="NO" id="72D-LS-7R5">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_mark_stamp.png" translatesAutoresizingMaskIntoConstraints="NO" id="72D-LS-7R5">
                                                             <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkh-VW-KFf">
@@ -61,6 +113,9 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oel-Hi-Ego">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
+                                                            <connections>
+                                                                <action selector="btn_stamp01:" destination="-1" eventType="touchUpInside" id="85k-CC-Kmt"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -87,7 +142,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9g-6Q-3ha">
                                                     <rect key="frame" x="60" y="0.0" width="60" height="60"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="UEX-Vv-xKy">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="UEX-Vv-xKy">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deD-05-jF5">
@@ -96,7 +151,7 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_mark_stamp.png" translatesAutoresizingMaskIntoConstraints="NO" id="ncf-Z3-wlk">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_mark_stamp.png" translatesAutoresizingMaskIntoConstraints="NO" id="ncf-Z3-wlk">
                                                             <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eq1-i9-b2e">
@@ -107,6 +162,9 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfJ-yn-nF4">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
+                                                            <connections>
+                                                                <action selector="btn_stamp02:" destination="-1" eventType="touchUpInside" id="abf-68-Nc7"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -133,7 +191,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCE-rY-P7V">
                                                     <rect key="frame" x="120" y="0.0" width="60" height="60"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="P9X-tI-ItO">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="P9X-tI-ItO">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wou-oe-QuK">
@@ -142,7 +200,7 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xaf-KR-ggu">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xaf-KR-ggu">
                                                             <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJW-7Q-KTc">
@@ -153,6 +211,9 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lk-GO-A9G">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
+                                                            <connections>
+                                                                <action selector="btn_stamp03:" destination="-1" eventType="touchUpInside" id="HIG-Pc-5Zb"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -179,7 +240,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6h-iO-96d">
                                                     <rect key="frame" x="180" y="0.0" width="60" height="60"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_righttop.png" translatesAutoresizingMaskIntoConstraints="NO" id="J7Y-87-RFk">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_righttop.png" translatesAutoresizingMaskIntoConstraints="NO" id="J7Y-87-RFk">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYB-d8-dCV">
@@ -188,7 +249,7 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dQV-3N-xf8">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dQV-3N-xf8">
                                                             <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3z-kE-ILr">
@@ -199,6 +260,9 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHi-ZB-YKL">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
+                                                            <connections>
+                                                                <action selector="btn_stamp04:" destination="-1" eventType="touchUpInside" id="r2d-nf-IGY"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -247,7 +311,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzy-f4-5Pv">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="87r-Zo-OM2">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="87r-Zo-OM2">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMO-8E-j6i">
@@ -267,6 +331,9 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tI-2O-6Bv">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
+                                                            <connections>
+                                                                <action selector="btn_stamp05:" destination="-1" eventType="touchUpInside" id="Ki3-P0-1VF"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -293,7 +360,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51U-cG-Pth">
                                                     <rect key="frame" x="60" y="0.0" width="60" height="60"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="nnC-ZF-aWx">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="nnC-ZF-aWx">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icu-z2-OC2">
@@ -302,7 +369,7 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hhg-hE-iPH">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hhg-hE-iPH">
                                                             <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xg4-O5-wl8">
@@ -313,6 +380,9 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjz-aZ-7o3">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
+                                                            <connections>
+                                                                <action selector="btn_stamp06:" destination="-1" eventType="touchUpInside" id="gPi-vS-PgC"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -339,7 +409,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFs-3y-3Wq">
                                                     <rect key="frame" x="120" y="0.0" width="60" height="60"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="SU8-Bv-OLe">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="SU8-Bv-OLe">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTM-CY-ziQ">
@@ -348,7 +418,7 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BTX-pD-JTc">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BTX-pD-JTc">
                                                             <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPj-ow-5rg">
@@ -359,6 +429,9 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H28-IG-tJQ">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
+                                                            <connections>
+                                                                <action selector="btn_stamp07:" destination="-1" eventType="touchUpInside" id="9hZ-81-jkj"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -385,7 +458,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Prd-c5-Oep">
                                                     <rect key="frame" x="180" y="0.0" width="60" height="60"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="fX2-w6-oDJ">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="fX2-w6-oDJ">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbE-Gc-GTh">
@@ -394,7 +467,7 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BNb-UB-wIc">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BNb-UB-wIc">
                                                             <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOO-Nt-fno">
@@ -405,6 +478,9 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ur-Lb-cLs">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
+                                                            <connections>
+                                                                <action selector="btn_stamp08:" destination="-1" eventType="touchUpInside" id="FbE-S7-ZLj"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -453,7 +529,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEk-Aa-TGI">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="sfn-zY-BV5">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="sfn-zY-BV5">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ig6-X4-jIN">
@@ -462,7 +538,7 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q1j-Dz-9e6">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q1j-Dz-9e6">
                                                             <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlt-X5-mRw">
@@ -473,6 +549,9 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1z-bY-NVs">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
+                                                            <connections>
+                                                                <action selector="btn_stamp09:" destination="-1" eventType="touchUpInside" id="gTN-yc-jDk"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -499,7 +578,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Keo-TN-7rc">
                                                     <rect key="frame" x="60" y="0.0" width="60" height="60"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="UU5-FI-OFs">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="UU5-FI-OFs">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5l3-hR-Cqa">
@@ -519,6 +598,9 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l17-AC-F5l">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
+                                                            <connections>
+                                                                <action selector="btn_stamp10:" destination="-1" eventType="touchUpInside" id="gXO-nC-JRd"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -545,7 +627,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alT-5s-Kko">
                                                     <rect key="frame" x="120" y="0.0" width="60" height="60"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="dvU-DO-xZW">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="dvU-DO-xZW">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjt-Va-Pco">
@@ -554,7 +636,7 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b6d-JJ-aav">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b6d-JJ-aav">
                                                             <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahB-bF-qd0">
@@ -565,6 +647,9 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GkU-ZU-zLE">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
+                                                            <connections>
+                                                                <action selector="btn_stamp11:" destination="-1" eventType="touchUpInside" id="JDz-9R-xPl"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -591,7 +676,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VuG-Yw-5V7">
                                                     <rect key="frame" x="180" y="0.0" width="60" height="60"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="hmI-Dt-nJr">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="hmI-Dt-nJr">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNq-Qx-NX1">
@@ -600,7 +685,7 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q1i-16-Fuo">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q1i-16-Fuo">
                                                             <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNE-rH-Nov">
@@ -611,6 +696,9 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CS-HU-qOO">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
+                                                            <connections>
+                                                                <action selector="btn_stamp12:" destination="-1" eventType="touchUpInside" id="KVH-RQ-Grb"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -659,7 +747,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anU-J3-fDP">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_leftdown.png" translatesAutoresizingMaskIntoConstraints="NO" id="bZc-TY-7VL">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_leftdown.png" translatesAutoresizingMaskIntoConstraints="NO" id="bZc-TY-7VL">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACr-69-CMJ">
@@ -668,7 +756,7 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oev-1m-5hg">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oev-1m-5hg">
                                                             <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAc-bA-AHG">
@@ -679,6 +767,9 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQy-1i-dal">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
+                                                            <connections>
+                                                                <action selector="btn_stamp13:" destination="-1" eventType="touchUpInside" id="PKg-H7-pR4"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -705,7 +796,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKh-AN-Bhl">
                                                     <rect key="frame" x="60" y="0.0" width="60" height="60"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xkq-R9-24f">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xkq-R9-24f">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNe-K5-ebP">
@@ -714,7 +805,7 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XLT-Ts-SKL">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XLT-Ts-SKL">
                                                             <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuN-EP-0qz">
@@ -725,6 +816,9 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ilu-fW-Om2">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
+                                                            <connections>
+                                                                <action selector="btn_stamp14:" destination="-1" eventType="touchUpInside" id="Div-Hn-aU3"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -751,7 +845,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPu-M7-9AB">
                                                     <rect key="frame" x="120" y="0.0" width="60" height="60"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="tou-6c-3Az">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="tou-6c-3Az">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qT8-eF-Qwy">
@@ -760,7 +854,7 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dWd-R9-Ado">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dWd-R9-Ado">
                                                             <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vx-vu-LvS">
@@ -771,6 +865,9 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvf-WA-LVB">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
+                                                            <connections>
+                                                                <action selector="btn_stamp15:" destination="-1" eventType="touchUpInside" id="XCl-Q9-ZN8"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -797,7 +894,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wj3-hs-G9f">
                                                     <rect key="frame" x="180" y="0.0" width="60" height="60"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_rightdown.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mw9-mF-wam">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampcard_squares_rightdown.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mw9-mF-wam">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8C7-Ff-QGt">
@@ -806,7 +903,7 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IFI-f5-WLz">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IFI-f5-WLz">
                                                             <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L65-Tg-Gfd">
@@ -817,6 +914,9 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVq-YV-Tbo">
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
+                                                            <connections>
+                                                                <action selector="btn_stamp16:" destination="-1" eventType="touchUpInside" id="zNm-sQ-lLY"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -957,6 +1057,9 @@
                         <constraint firstItem="naO-32-82r" firstAttribute="leading" secondItem="7UC-Nr-YMO" secondAttribute="leading" id="x6M-qQ-DgM"/>
                         <constraint firstAttribute="trailing" secondItem="naO-32-82r" secondAttribute="trailing" id="zhq-pB-kT9"/>
                     </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="tFf-88-Rrv"/>
+                    </connections>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
