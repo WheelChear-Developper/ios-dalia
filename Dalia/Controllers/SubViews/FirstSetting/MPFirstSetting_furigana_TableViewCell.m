@@ -12,7 +12,19 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+
+    [self.txt_field1 setTintColor:UIColor.whiteColor];
+    [self.txt_field2 setTintColor:UIColor.whiteColor];
+
+    UIColor *color = [UIColor colorWithRed:124/255.0 green:123/255.0 blue:123/255.0 alpha:1.0];
+    if(self.txt_field1.placeholder != nil){
+        self.txt_field1.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.txt_field1.placeholder
+                                                                            attributes:@{ NSForegroundColorAttributeName:color }];
+    }
+    if(self.txt_field2.placeholder != nil){
+        self.txt_field2.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.txt_field2.placeholder
+                                                                            attributes:@{ NSForegroundColorAttributeName:color }];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

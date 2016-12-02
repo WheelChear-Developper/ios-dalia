@@ -44,10 +44,10 @@
                     <rect key="frame" x="0.0" y="64" width="320" height="936"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Gi-Os-auF">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="758"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4w-kl-zWy">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="758"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="会員登録をしていただくと、よりお得なクーポン配信やあなたに合った最新情報のチェック、マイカルテカンラン閲覧など便利な機能がご利用頂けます！！" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8Q-cO-oNR">
                                             <rect key="frame" x="10" y="8" width="300" height="60"/>
@@ -231,6 +231,48 @@
                                                 <constraint firstAttribute="bottom" secondItem="tmd-VP-pOI" secondAttribute="bottom" id="zzp-do-YOd"/>
                                             </constraints>
                                         </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IQh-Bp-lAz">
+                                            <rect key="frame" x="5" y="729" width="150" height="24"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jvf-ZT-SiL">
+                                                    <rect key="frame" x="1" y="1" width="148" height="22"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="プライバシーポリシー" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOg-U6-nJh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="148" height="22"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.30588235294117649" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="wOg-U6-nJh" secondAttribute="trailing" id="2Ub-nI-zXV"/>
+                                                        <constraint firstItem="wOg-U6-nJh" firstAttribute="top" secondItem="Jvf-ZT-SiL" secondAttribute="top" id="IrU-vl-RCo"/>
+                                                        <constraint firstAttribute="bottom" secondItem="wOg-U6-nJh" secondAttribute="bottom" id="RNM-ns-W3v"/>
+                                                        <constraint firstItem="wOg-U6-nJh" firstAttribute="leading" secondItem="Jvf-ZT-SiL" secondAttribute="leading" id="weI-mp-tsF"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="Jvf-ZT-SiL" firstAttribute="leading" secondItem="IQh-Bp-lAz" secondAttribute="leading" constant="1" id="LQg-FJ-ZS5"/>
+                                                <constraint firstAttribute="width" constant="150" id="VQX-Fy-A6f"/>
+                                                <constraint firstAttribute="height" constant="24" id="cCm-cP-J1U"/>
+                                                <constraint firstItem="Jvf-ZT-SiL" firstAttribute="top" secondItem="IQh-Bp-lAz" secondAttribute="top" constant="1" id="cKI-Na-r2w"/>
+                                                <constraint firstAttribute="trailing" secondItem="Jvf-ZT-SiL" secondAttribute="trailing" constant="1" id="iUW-u8-zUS"/>
+                                                <constraint firstAttribute="bottom" secondItem="Jvf-ZT-SiL" secondAttribute="bottom" constant="1" id="jco-UJ-wBa"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="12"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
@@ -240,11 +282,13 @@
                                         <constraint firstAttribute="trailing" secondItem="FFU-QX-7E0" secondAttribute="trailing" constant="10" id="Eym-gZ-MwI"/>
                                         <constraint firstItem="O8Q-cO-oNR" firstAttribute="leading" secondItem="p4w-kl-zWy" secondAttribute="leading" constant="10" id="FM8-gT-cQz"/>
                                         <constraint firstAttribute="trailing" secondItem="Fs8-CX-wIz" secondAttribute="trailing" constant="10" id="G9R-38-Sqc"/>
+                                        <constraint firstAttribute="bottom" secondItem="IQh-Bp-lAz" secondAttribute="bottom" constant="5" id="ImP-Ch-sjd"/>
                                         <constraint firstItem="Ljr-a0-dw3" firstAttribute="centerX" secondItem="p4w-kl-zWy" secondAttribute="centerX" id="J3A-KM-ejs"/>
                                         <constraint firstAttribute="trailing" secondItem="O8Q-cO-oNR" secondAttribute="trailing" constant="10" id="KD6-hf-t3I"/>
+                                        <constraint firstItem="IQh-Bp-lAz" firstAttribute="leading" secondItem="p4w-kl-zWy" secondAttribute="leading" constant="5" id="LGv-8I-FFh"/>
                                         <constraint firstItem="Fs8-CX-wIz" firstAttribute="top" secondItem="Ljr-a0-dw3" secondAttribute="bottom" constant="20" id="SbI-zW-xFI"/>
                                         <constraint firstAttribute="trailing" secondItem="KYl-Ws-D3w" secondAttribute="trailing" constant="10" id="eoi-r8-vuL"/>
-                                        <constraint firstAttribute="bottom" secondItem="Fs8-CX-wIz" secondAttribute="bottom" constant="20" id="ghI-fD-1d7"/>
+                                        <constraint firstAttribute="bottom" secondItem="Fs8-CX-wIz" secondAttribute="bottom" constant="10" id="ghI-fD-1d7"/>
                                         <constraint firstItem="nJY-L4-UK6" firstAttribute="top" secondItem="KYl-Ws-D3w" secondAttribute="bottom" constant="5" id="h6F-bw-CvI"/>
                                         <constraint firstItem="FFU-QX-7E0" firstAttribute="leading" secondItem="p4w-kl-zWy" secondAttribute="leading" constant="10" id="jZF-3g-Mhw"/>
                                         <constraint firstItem="Ljr-a0-dw3" firstAttribute="top" secondItem="DjI-Pc-dh3" secondAttribute="bottom" id="pZm-GL-vfA"/>
