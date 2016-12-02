@@ -41,6 +41,10 @@
     __weak IBOutlet UILabel *lbl_No14;
     __weak IBOutlet UILabel *lbl_No15;
     __weak IBOutlet UILabel *lbl_No16;
+    __weak IBOutlet UILabel *lbl_No17;
+    __weak IBOutlet UILabel *lbl_No18;
+    __weak IBOutlet UILabel *lbl_No19;
+    __weak IBOutlet UILabel *lbl_No20;
 
     __weak IBOutlet UIImageView *img_stamp01;
     __weak IBOutlet UIImageView *img_stamp02;
@@ -58,6 +62,10 @@
     __weak IBOutlet UIImageView *img_stamp14;
     __weak IBOutlet UIImageView *img_stamp15;
     __weak IBOutlet UIImageView *img_stamp16;
+    __weak IBOutlet UIImageView *img_stamp17;
+    __weak IBOutlet UIImageView *img_stamp18;
+    __weak IBOutlet UIImageView *img_stamp19;
+    __weak IBOutlet UIImageView *img_stamp20;
 
     __weak IBOutlet UILabel *lbl_date01;
     __weak IBOutlet UILabel *lbl_date02;
@@ -75,6 +83,10 @@
     __weak IBOutlet UILabel *lbl_date14;
     __weak IBOutlet UILabel *lbl_date15;
     __weak IBOutlet UILabel *lbl_date16;
+    __weak IBOutlet UILabel *lbl_date17;
+    __weak IBOutlet UILabel *lbl_date18;
+    __weak IBOutlet UILabel *lbl_date19;
+    __weak IBOutlet UILabel *lbl_date20;
 
     __weak IBOutlet UILabel *lbl_setsumei;
     __weak IBOutlet UILabel *lbl_date;

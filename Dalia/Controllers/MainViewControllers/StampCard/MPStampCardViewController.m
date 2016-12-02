@@ -219,7 +219,52 @@
         view_date.hidden = YES;
     }
 
+    NSArray* ary_stamp_date_set = couponStampObject.stamp_date_set;
 
+    //スタンプ日付
+    lbl_date01.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:0] objectForKey:@"date_set"]];
+    lbl_date02.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:1] objectForKey:@"date_set"]];
+    lbl_date03.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:2] objectForKey:@"date_set"]];
+    lbl_date04.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:3] objectForKey:@"date_set"]];
+    lbl_date05.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:4] objectForKey:@"date_set"]];
+    lbl_date06.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:5] objectForKey:@"date_set"]];
+    lbl_date07.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:6] objectForKey:@"date_set"]];
+    lbl_date08.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:7] objectForKey:@"date_set"]];
+    lbl_date09.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:8] objectForKey:@"date_set"]];
+    lbl_date10.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:9] objectForKey:@"date_set"]];
+    lbl_date11.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:10] objectForKey:@"date_set"]];
+    lbl_date12.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:11] objectForKey:@"date_set"]];
+    lbl_date13.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:12] objectForKey:@"date_set"]];
+    lbl_date14.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:13] objectForKey:@"date_set"]];
+    lbl_date15.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:14] objectForKey:@"date_set"]];
+    lbl_date16.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:15] objectForKey:@"date_set"]];
+    lbl_date17.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:16] objectForKey:@"date_set"]];
+    lbl_date18.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:17] objectForKey:@"date_set"]];
+    lbl_date19.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:18] objectForKey:@"date_set"]];
+    lbl_date20.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:19] objectForKey:@"date_set"]];
+
+
+
+
+}
+
+- (NSString*)getDateType:(NSString*)str_dt {
+
+    NSString* date_converted = @"";
+    if(![str_dt isEqualToString:@""]){
+
+        NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        //タイムゾーンの指定
+        [formatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:60 * 60 * 9]];
+        NSDate *date = [formatter dateFromString:str_dt];
+
+        NSDateFormatter* formatter2 = [[NSDateFormatter alloc] init];
+        [formatter2 setDateFormat:@"MM/dd"];
+        date_converted = [formatter stringFromDate:date];
+    }
+
+    return date_converted;
 }
 
 - (void)backButtonClicked:(UIButton *)sender {
