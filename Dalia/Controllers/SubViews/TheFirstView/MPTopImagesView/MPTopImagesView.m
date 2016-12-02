@@ -184,15 +184,24 @@
         // ラベル位置設定
         if(!self.isSquare){
 
-            titleView = [[UIView alloc] initWithFrame:CGRectMake(0, myView.frame.size.height - 30, frame.size.width, 30)];
-            imageTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, myView.frame.size.height - 30, frame.size.width - 20, 30)];
+            titleView = [[UIView alloc] initWithFrame:CGRectMake(0, myView.frame.size.height - 50, frame.size.width, 50)];
+            imageTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, myView.frame.size.height - 50, frame.size.width - 50, 30)];
         }else{
 
             titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 141, scroll_PageView.frame.size.height - 4, 60)];
             imageTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 141, scroll_PageView.frame.size.height - 20, 60)];
         }
         // ラベルバックを黒に設定
-        titleView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
+        //タイトルのグラデーション
+        UIView *myComment = [[UIView alloc] initWithFrame:titleView.frame];
+        CAGradientLayer *gradient = [CAGradientLayer layer];
+        gradient.frame = CGRectMake(0, 0, titleView.frame.size.width, titleView.frame.size.height);
+        gradient.colors = @[
+                            (id)[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.1].CGColor,
+                            (id)[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.5].CGColor,
+                            (id)[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8].CGColor
+                            ];
+        [myComment.layer addSublayer:gradient];
 
         // ラベルフォーマット設定
         imageTitleLabel.backgroundColor = [UIColor clearColor];
@@ -203,6 +212,7 @@
         [listDescriptionReceived addObject:[Utility checkNIL:imageTitleLabel.text]];
 
         [myView addSubview:titleView];
+        [myView addSubview:myComment];
         [myView addSubview:imageTitleLabel];
 
         // 画像URL設定
@@ -214,6 +224,7 @@
         
         if(![(MPTopImageObject*)[listObjects objectAtIndex:lng_imageDownloadCount] topDesc] ) {
             [titleView setHidden:YES];
+            [myComment setHidden:YES];
         }
 
         // newマーク設定
