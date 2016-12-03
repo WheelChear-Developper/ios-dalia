@@ -35,6 +35,8 @@
 #import "MPShopObject.h"
 #import "MPApnsObject.h"
 
+#import "MPStafflistObject.h"
+
 @implementation ManagerDownload
 + (ManagerDownload *)sharedInstance{
     static ManagerDownload *manager = nil;
@@ -181,6 +183,17 @@
                 // クーポン件数取得用更新
                 [self processSetStamp:[JSON objectForKey:@"message"] withCurponCount:[Utility checkNIL:[Utility checkNULL:[obj objectForKey:@"coupon_count"]]] with:parameter];
                 break;
+
+            case RequestType_GET_LIST_STAFF:
+                //スタッフ情報
+                [self processGetStaff:listObject with:parameter];
+                break;
+
+
+
+
+
+
 /*
 
                 
@@ -609,7 +622,23 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
+- (void)getStaff:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate {
 
+    //スタッフ情報
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+
+    [params setValue:appID forKey:@"app_id"];
+    [params setValue:deviceID forKey:@"device_id"];
+    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_LIST_STAFF];
+    paramenter.delegate = delegate;
+    NSString *strRequest = @"";
+    strRequest = [NSString stringWithFormat:BASE_URL,GET_LIST_STAFF];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
+    [request setHTTPMethod:@"POST"];
+    [Utility setParamWithMethodPost:params forRequest:request];
+    [self baseRequestJSON:request parameter:paramenter];
+}
 
 
 
@@ -1549,6 +1578,42 @@
     [param.listData addObject:dic_data];
 }
 
+- (void)processGetStaff:(NSArray *)listObject with:(DownloadParam *)param {
+
+    //スタッフ情報
+    for (NSDictionary *dic in listObject) {
+        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
+            return;
+        }
+        NSMutableDictionary *shopObject = [[NSMutableDictionary alloc] init];
+
+        [shopObject setValue:[dic objectForKey:@"shop_name"] forKey:@"shopname"];
+
+        NSArray *ary_staffData = [Utility checkNULL:[dic objectForKey:@"staffs"]];
+        NSMutableArray* ary_setStaff =[[NSMutableArray alloc] init];
+        for (long i = 0; i < ary_staffData.count; i ++) {
+
+            MPStafflistObject *staffObj = [[MPStafflistObject alloc] init];
+            staffObj.name1 = [Utility checkNULL:[[ary_staffData objectAtIndex:i] objectForKey:@"name1"]];
+            staffObj.name2 = [Utility checkNULL:[[ary_staffData objectAtIndex:i] objectForKey:@"name2"]];
+            staffObj.image = [Utility checkNULL:[[ary_staffData objectAtIndex:i] objectForKey:@"image"]];
+            staffObj.thumbnail = [Utility checkNULL:[[ary_staffData objectAtIndex:i] objectForKey:@"thumbnail"]];
+            staffObj.post = [Utility checkNULL:[[ary_staffData objectAtIndex:i] objectForKey:@"post"]];
+            staffObj.content = [Utility checkNULL:[[ary_staffData objectAtIndex:i] objectForKey:@"content"]];
+            staffObj.reserve_url = [Utility checkNULL:[[ary_staffData objectAtIndex:i] objectForKey:@"reserve_url"]];
+            staffObj.instagram_url = [Utility checkNULL:[[ary_staffData objectAtIndex:i] objectForKey:@"instagram_url"]];
+            staffObj.facebook_url = [Utility checkNULL:[[ary_staffData objectAtIndex:i] objectForKey:@"facebook_url"]];
+            staffObj.twitter_url = [Utility checkNULL:[[ary_staffData objectAtIndex:i] objectForKey:@"twitter_url"]];
+            staffObj.blog_url = [Utility checkNULL:[[ary_staffData objectAtIndex:i] objectForKey:@"blog_url"]];
+            staffObj.updated_at = [Utility checkNULL:[[ary_staffData objectAtIndex:i] objectForKey:@"updated_at"]];
+            staffObj.styles = [Utility checkNULL:[[ary_staffData objectAtIndex:i] objectForKey:@"styles"]];
+            [ary_setStaff addObject:staffObj];
+        }
+        [shopObject setValue:ary_setStaff forKey:@"staffs"];
+
+        [param.listData addObject:shopObject];
+    }
+}
 
 
 

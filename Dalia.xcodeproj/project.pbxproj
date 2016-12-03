@@ -87,6 +87,7 @@
 		1016C8111DE46C7600BC215E /* first_ttl_recommenditem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1016C80D1DE46C7600BC215E /* first_ttl_recommenditem@2x.png */; };
 		1016C8121DE46C7600BC215E /* first_ttl_recommendmenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 1016C80E1DE46C7600BC215E /* first_ttl_recommendmenu.png */; };
 		1016C8131DE46C7600BC215E /* first_ttl_recommendmenu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1016C80F1DE46C7600BC215E /* first_ttl_recommendmenu@2x.png */; };
+		1020FECB1DF26F7F00DA4184 /* MPStafflistObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020FECA1DF26F7F00DA4184 /* MPStafflistObject.m */; };
 		102E518A1DD174BC00AFB718 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102E51891DD174BC00AFB718 /* Social.framework */; };
 		102E518C1DD174D500AFB718 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102E518B1DD174D500AFB718 /* Security.framework */; };
 		102E518E1DD1750200AFB718 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102E518D1DD1750200AFB718 /* QuartzCore.framework */; };
@@ -653,6 +654,8 @@
 		1016C80D1DE46C7600BC215E /* first_ttl_recommenditem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_ttl_recommenditem@2x.png"; sourceTree = "<group>"; };
 		1016C80E1DE46C7600BC215E /* first_ttl_recommendmenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first_ttl_recommendmenu.png; sourceTree = "<group>"; };
 		1016C80F1DE46C7600BC215E /* first_ttl_recommendmenu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_ttl_recommendmenu@2x.png"; sourceTree = "<group>"; };
+		1020FEC91DF26F7F00DA4184 /* MPStafflistObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPStafflistObject.h; sourceTree = "<group>"; };
+		1020FECA1DF26F7F00DA4184 /* MPStafflistObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPStafflistObject.m; sourceTree = "<group>"; };
 		102E51891DD174BC00AFB718 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		102E518B1DD174D500AFB718 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		102E518D1DD1750200AFB718 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -1508,6 +1511,15 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		1020FEC81DF26F7F00DA4184 /* Staff */ = {
+			isa = PBXGroup;
+			children = (
+				1020FEC91DF26F7F00DA4184 /* MPStafflistObject.h */,
+				1020FECA1DF26F7F00DA4184 /* MPStafflistObject.m */,
+			);
+			path = Staff;
+			sourceTree = "<group>";
+		};
 		102E51881DD174BC00AFB718 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1550,6 +1562,7 @@
 				1083AD1E1DEAB69B003596CF /* Member */,
 				1034A7FE1DF0193F0054872D /* Membercard */,
 				100FC6F81DF180C0002E0BB8 /* MPCouponStampObject */,
+				1020FEC81DF26F7F00DA4184 /* Staff */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3722,6 +3735,7 @@
 				10C4B9101DDABE4E00E26096 /* MPRecommend_menuObject.m in Sources */,
 				1075EF151DE89F8C00974CE1 /* MPHearCatalogCategoryListViewController.m in Sources */,
 				272CCD931DCAF096006BC4EB /* CustomColor.m in Sources */,
+				1020FECB1DF26F7F00DA4184 /* MPStafflistObject.m in Sources */,
 				107EA23C1DE4306500A4A8CD /* MPRecommendMenuInfoViewController.m in Sources */,
 				10488B191DE98C37005F5DF1 /* MPMovieTableViewCell.m in Sources */,
 				100FC6FB1DF180F0002E0BB8 /* MPCouponStampObject.m in Sources */,

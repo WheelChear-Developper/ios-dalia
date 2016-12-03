@@ -59,12 +59,15 @@
 
     [super viewWillAppear:animated];
 
-    //メニュー項目設定
-    _ary_image = [@[@"staff_01.png", @"staff_02.png", @"staff_03.png", @"staff_04.png", @"staff_05.png"] mutableCopy];
-    _ary_name = [@[@"Tarou Yamada", @"Hanako Satou", @"Aki Suzuki", @"Misa Kawatani", @"Other"] mutableCopy];
-    _ary_subname = [@[@"代表", @"ディレクター", @"トップスタイリスト", @"トップスタイリスト", @"その他"] mutableCopy];
+    //会員書情報取得
+    [[ManagerDownload sharedInstance] getStaff:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
 
-    [_tbl_menulist reloadData];
+    //メニュー項目設定
+//    _ary_image = [@[@"staff_01.png", @"staff_02.png", @"staff_03.png", @"staff_04.png", @"staff_05.png"] mutableCopy];
+//    _ary_name = [@[@"Tarou Yamada", @"Hanako Satou", @"Aki Suzuki", @"Misa Kawatani", @"Other"] mutableCopy];
+//    _ary_subname = [@[@"代表", @"ディレクター", @"トップスタイリスト", @"トップスタイリスト", @"その他"] mutableCopy];
+
+//    [_tbl_menulist reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -89,8 +92,6 @@
 -(void)viewDidLayoutSubviews {
 
     [super viewDidLayoutSubviews];
-
-    [self resizeTable];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -139,10 +140,32 @@
 - (void)downloadDataSuccess:(DownloadParam *)param {
 
     switch (param.request_type) {
-        case RequestType_GET_LIST_COUPON:
+        case RequestType_GET_LIST_STAFF:
         {
+            _list_data = param.listData[0];
 
+            _lbl_shopName.text = [_list_data objectForKey:@"shopname"];
 
+            _ary_image = [NSMutableArray new];
+            _ary_name = [NSMutableArray new];
+            _ary_subname = [NSMutableArray new];
+            NSMutableArray* ary_staff = [_list_data objectForKey:@"staffs"];
+            for (long c = 0;c < [ary_staff count];c++){
+
+                //スタッフ名
+                NSString* str_staffName1 = [[ary_staff valueForKey:@"name1"] objectAtIndex:c];
+                [_ary_name addObject:str_staffName1];
+                NSString* str_staffName2 = [[ary_staff valueForKey:@"name2"] objectAtIndex:c];
+                [_ary_subname addObject:str_staffName2];
+
+                //画像
+                NSString* str_imageurl = [[ary_staff valueForKey:@"image"] objectAtIndex:c];
+                [_ary_image addObject:str_imageurl];
+            }
+
+            [_tbl_menulist reloadData];
+
+            [self resizeTable];
         }
             break;
 
@@ -174,7 +197,24 @@
         cell = [nib objectAtIndex:0];
     }
 
-    cell.img_photo.image = [UIImage imageNamed:[_ary_image objectAtIndex:indexPath.row]];
+    //画像設定
+    if([_ary_image objectAtIndex:indexPath.row] && [[_ary_image objectAtIndex:indexPath.row] length] > 0 ) {
+
+        dispatch_queue_t q_global = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_queue_t q_main = dispatch_get_main_queue();
+        dispatch_async(q_global, ^{
+
+            NSString *imageURL = [NSString stringWithFormat:BASE_PREFIX_URL,[_ary_image objectAtIndex:indexPath.row]];
+            UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [NSURL URLWithString: imageURL]]];
+
+            dispatch_async(q_main, ^{
+                [cell.img_photo setImage:image];
+            });
+        });
+    }else{
+        [cell.img_photo setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
+    }
+
     cell.lbl_name.text = [_ary_name objectAtIndex:indexPath.row];
     cell.lbl_subname.text = [_ary_subname objectAtIndex:indexPath.row];
     return cell;
@@ -184,13 +224,10 @@
 
     MPStaffInfoViewController *vc = [[MPStaffInfoViewController alloc] initWithNibName:@"MPStaffInfoViewController" bundle:nil];
     vc.delegate = self;
-
-//    vc.menuCount = indexPath.row;
-//    vc.ary_infoImage = _ary_infoImage;
-//    vc.dic_menu_data = [_dic_menu_data objectForKey:[NSString stringWithFormat:@"%d",indexPath.row]];
+    vc.obj_staff = [[_list_data objectForKey:@"staffs"] objectAtIndex:indexPath.row];
+    vc.ary_photoImage = _ary_image;
 
     [self.navigationController pushViewController:vc animated:YES];
-
 }
 
 - (void)resizeTable {

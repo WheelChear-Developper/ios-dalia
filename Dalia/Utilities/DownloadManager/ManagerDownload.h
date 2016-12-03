@@ -53,6 +53,10 @@
 - (void)getMemberCard:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
 //スタンプ情報取得
 - (void)getDetailCouponStamp:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
+//スタッフ情報
+- (void)getStaff:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
+
+
 
 
 /*

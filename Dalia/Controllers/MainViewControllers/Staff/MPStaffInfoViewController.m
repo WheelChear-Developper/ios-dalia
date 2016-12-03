@@ -49,15 +49,37 @@
 
     [super viewWillAppear:animated];
 
+    //画像設定
+    if(self.obj_staff.image && [self.obj_staff.image length] > 0 ) {
+
+        dispatch_queue_t q_global = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_queue_t q_main = dispatch_get_main_queue();
+        dispatch_async(q_global, ^{
+
+            NSString *imageURL = [NSString stringWithFormat:BASE_PREFIX_URL,self.obj_staff.image];
+            UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [NSURL URLWithString: imageURL]]];
+
+            dispatch_async(q_main, ^{
+                [img_photo setImage:image];
+            });
+        });
+    }else{
+        [img_photo setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
+    }
+
+    lbl_name1.text = self.obj_staff.name1;
+    lbl_name2.text = self.obj_staff.name2;
+    lbl_comment.text = self.obj_staff.content;
+
+    _str_instagram_url = self.obj_staff.instagram_url;
+    _str_facebook_url = self.obj_staff.facebook_url;
+    _str_twitter_url = self.obj_staff.twitter_url;
+    _str_reserve_url = self.obj_staff.reserve_url;
+    _str_blog_url = self.obj_staff.blog_url;
+
     //load cell xib and attach with collectionView
     UINib *cellNib1 = [UINib nibWithNibName:@"MPStaffCollectionCell" bundle:nil];
     [_col_photolist registerNib:cellNib1 forCellWithReuseIdentifier:@"staffCollectionCellIdentifier"];
-    [_col_photolist reloadData];
-
-
-
-    _ary_photoList = [@[@"lady_01.png", @"lady_02.png", @"lady_03.png", @"lady_04.png", @"lady_05.png", @"lady_06.png", @"lady_07.png", @"lady_08.png", @"lady_09.png", @"lady_10.png"] mutableCopy];
-
     [_col_photolist reloadData];
 }
 
@@ -127,18 +149,6 @@
 
 #pragma mark - ManagerDownloadDelegate
 - (void)downloadDataSuccess:(DownloadParam *)param {
-
-    switch (param.request_type) {
-        case RequestType_GET_LIST_COUPON:
-        {
-
-
-        }
-            break;
-
-        default:
-            break;
-    }
 }
 
 - (void)downloadDataFail:(DownloadParam *)param {
@@ -188,7 +198,7 @@
 
     if(collectionView == _col_photolist){
 
-        return _ary_photoList.count;
+        return self.ary_photoImage.count;
     }
     return 0;
 }
@@ -204,7 +214,23 @@
             cell = [nib objectAtIndex:0];
         }
 
-        cell.img_photo.image = [UIImage imageNamed:[_ary_photoList objectAtIndex:indexPath.row]];
+        //画像設定
+        if([self.ary_photoImage objectAtIndex:indexPath.row] && [[self.ary_photoImage objectAtIndex:indexPath.row] length] > 0 ) {
+
+            dispatch_queue_t q_global = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+            dispatch_queue_t q_main = dispatch_get_main_queue();
+            dispatch_async(q_global, ^{
+
+                NSString *imageURL = [NSString stringWithFormat:BASE_PREFIX_URL,[self.ary_photoImage objectAtIndex:indexPath.row]];
+                UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [NSURL URLWithString: imageURL]]];
+
+                dispatch_async(q_main, ^{
+                    [cell.img_photo setImage:image];
+                });
+            });
+        }else{
+            [cell.img_photo setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
+        }
 
         return cell;
     }
@@ -221,13 +247,48 @@
 
     _col_photolist.translatesAutoresizingMaskIntoConstraints = YES;
     CGRect rct_photolist = _col_photolist.frame;
-    rct_photolist.size.height = ceil((double)_ary_photoList.count/3)*150;
+    rct_photolist.size.height = ceil((double)self.ary_photoImage.count/3)*150;
     _col_photolist.frame = rct_photolist;
 }
 
 - (void)backButtonClicked:(UIButton *)sender {
 
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)btn_yoyaku:(id)sender {
+
+    MPWebViewController *webViewVC = [[MPWebViewController alloc] initWithNibName:@"MPWebViewController" bundle:nil];
+    webViewVC.linkUrl = _str_reserve_url;
+    [self.navigationController pushViewController:webViewVC animated:YES];
+}
+
+- (IBAction)btn_insta:(id)sender {
+
+    MPWebViewController *webViewVC = [[MPWebViewController alloc] initWithNibName:@"MPWebViewController" bundle:nil];
+    webViewVC.linkUrl = _str_instagram_url;
+    [self.navigationController pushViewController:webViewVC animated:YES];
+}
+
+- (IBAction)btn_facebook:(id)sender {
+
+    MPWebViewController *webViewVC = [[MPWebViewController alloc] initWithNibName:@"MPWebViewController" bundle:nil];
+    webViewVC.linkUrl = _str_facebook_url;
+    [self.navigationController pushViewController:webViewVC animated:YES];
+}
+
+- (IBAction)btn_twitter:(id)sender {
+
+    MPWebViewController *webViewVC = [[MPWebViewController alloc] initWithNibName:@"MPWebViewController" bundle:nil];
+    webViewVC.linkUrl = _str_twitter_url;
+    [self.navigationController pushViewController:webViewVC animated:YES];
+}
+
+- (IBAction)btn_blog:(id)sender {
+
+    MPWebViewController *webViewVC = [[MPWebViewController alloc] initWithNibName:@"MPWebViewController" bundle:nil];
+    webViewVC.linkUrl = _str_blog_url;
+    [self.navigationController pushViewController:webViewVC animated:YES];
 }
 
 @end

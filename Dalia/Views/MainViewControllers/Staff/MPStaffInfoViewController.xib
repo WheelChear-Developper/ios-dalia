@@ -14,6 +14,10 @@
                 <outlet property="_col_photolist" destination="ByR-Oy-FYs" id="CwX-1U-3je"/>
                 <outlet property="_scr_inView" destination="C2d-eQ-jZE" id="Xf2-q2-k06"/>
                 <outlet property="_scr_rootview" destination="bO6-AQ-yFn" id="xSL-3Y-R3V"/>
+                <outlet property="img_photo" destination="Tps-cb-MJV" id="cEK-iU-B5h"/>
+                <outlet property="lbl_comment" destination="o4b-WE-fYf" id="K8C-Rw-aB0"/>
+                <outlet property="lbl_name1" destination="usf-pb-9Hg" id="e7K-pp-dWh"/>
+                <outlet property="lbl_name2" destination="2Dh-dd-Fhe" id="s5g-6b-Ubx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="acF-Ex-wtC"/>
             </connections>
         </placeholder>
@@ -72,6 +76,9 @@
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Loa-QW-2C0">
                                                     <rect key="frame" x="0.0" y="0.0" width="130" height="30"/>
                                                     <state key="normal" image="staff_btn_reservation.png"/>
+                                                    <connections>
+                                                        <action selector="btn_yoyaku:" destination="-1" eventType="touchUpInside" id="aH3-iP-rju"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -91,6 +98,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdi-kV-Q5l">
                                                             <rect key="frame" x="5" y="5" width="30" height="30"/>
                                                             <state key="normal" image="staff_icon_instagram.png"/>
+                                                            <connections>
+                                                                <action selector="btn_insta:" destination="-1" eventType="touchUpInside" id="XUC-J4-hzy"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -108,6 +118,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gw-eL-HWk">
                                                             <rect key="frame" x="5" y="5" width="30" height="30"/>
                                                             <state key="normal" image="staff_icon_facebook.png"/>
+                                                            <connections>
+                                                                <action selector="btn_facebook:" destination="-1" eventType="touchUpInside" id="u75-uc-6FE"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -125,6 +138,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnL-BL-oYy">
                                                             <rect key="frame" x="5" y="7" width="30" height="26"/>
                                                             <state key="normal" image="staff_icon_twitter.png"/>
+                                                            <connections>
+                                                                <action selector="btn_twitter:" destination="-1" eventType="touchUpInside" id="mny-Sz-dpG"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -142,6 +158,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bva-bp-99j">
                                                             <rect key="frame" x="5" y="5" width="30" height="30"/>
                                                             <state key="normal" image="staff_icon_blgn.png"/>
+                                                            <connections>
+                                                                <action selector="btn_blog:" destination="-1" eventType="touchUpInside" id="tzG-cO-Uwz"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

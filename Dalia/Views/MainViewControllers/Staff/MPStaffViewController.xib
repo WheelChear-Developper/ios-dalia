@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPStaffViewController">
             <connections>
+                <outlet property="_lbl_shopName" destination="7CH-d8-Gn4" id="jxd-TZ-F4d"/>
                 <outlet property="_scr_inView" destination="yak-Vh-XtX" id="opF-db-XQ8"/>
                 <outlet property="_scr_rootview" destination="rgL-hh-oHj" id="dXe-wU-Frh"/>
                 <outlet property="_tbl_menulist" destination="Iju-ry-o8d" id="FQy-3f-h2K"/>

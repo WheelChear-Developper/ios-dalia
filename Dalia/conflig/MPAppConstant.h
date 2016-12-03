@@ -91,7 +91,8 @@
 #define SET_DEVICE_TOKEN @"device/setDeviceToken"
 #define SET_ENABLE_NOTIFICATION @"device/setAcceptNotification"
 
-
+//スタッフ
+#define GET_LIST_STAFF @"staff/getList"
 
 
 
