@@ -83,6 +83,10 @@
 //会員書
 #define GET_MEMBER_CARD @"member/getMemberCard"
 
+//STAMP CARD COUPON
+#define GET_DETAIL_COUPON_STAMP @"coupon/getDetailCouponStamp"
+#define SET_REGIST_COUPON @"coupon/setRegistCoupon"
+#define SET_STAMP @"coupon/setStamp"
 
 #define SET_DEVICE_TOKEN @"device/setDeviceToken"
 #define SET_ENABLE_NOTIFICATION @"device/setAcceptNotification"
@@ -134,10 +138,7 @@
 #define GET_LIST_COUPON_SHARE @"coupon/getListCouponShare"
 #define GET_DETAIL_COUPON_SHARE @"coupon/getDetailCouponShare"
 
-//STAMP CARD COUPON
-#define GET_DETAIL_COUPON_STAMP @"coupon/getDetailCouponStamp"
-#define SET_REGIST_COUPON @"coupon/setRegistCoupon"
-#define SET_STAMP @"coupon/setStamp"
+
 
 //RECOMMEND PRODUCT
 #define RECOMMENT_PRODUCT @"menu/getRecommendProduct"

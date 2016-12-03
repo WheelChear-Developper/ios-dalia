@@ -22,9 +22,8 @@ typedef NS_ENUM(NSInteger, RequestType) {
     RequestType_GET_MEMBER_INFO,
     RequestType_SET_MEMBER_INFO,
     RequestType_GET_MEMBER_CARD,
-
-
-
+    RequestType_GET_DETAIL_COUPON_STAMP,
+    RequestType_SET_STAMP,
 
 
     
@@ -48,8 +47,8 @@ typedef NS_ENUM(NSInteger, RequestType) {
     RequestType_SET_BIRTHDAY,
     RequestType_GET_LIST_COUPON_SHARE,
     RequestType_GET_DETAIL_COUPON_SHARE,
-    RequestType_GET_DETAIL_COUPON_STAMP,
-    RequestType_SET_STAMP,
+
+
     RequestType_RECOMMEND_PRODUCT,
     RequestType_GET_LINK,
     RequestType_GET_BOOK_LINK,

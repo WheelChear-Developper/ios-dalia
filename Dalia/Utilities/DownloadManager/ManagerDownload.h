@@ -10,6 +10,7 @@
 #import "DownloadParam.h"
 #import "AFJSONRequestOperation.h"
 #import "MPCouponObject.h"
+#import "MPCouponStampObject.h"
 
 @interface ManagerDownload : NSObject<UIAlertViewDelegate>
 {
@@ -87,6 +88,8 @@
 #pragma mark - SUBMIT DATA TO SERVER
 //デバイス登録
 - (void)submitDeviceID:(NSString*)deviceID withAppID:(NSString*)appID withType:(NSString*)type delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
+//スタンプ捺印
+- (void)submitStamp:(NSString*)deviceID withAppID:(NSString*)appID withCoupon:(MPCouponStampObject*)couponstamp withCode:(NSString *)code withAmount:(NSString *)amount withUUID:(NSString *)uuid withMajor:(NSString *)major withMinor:(NSString *)minor delegate:(NSObject<ManagerDownloadDelegate> *)delegate;
 
 
 

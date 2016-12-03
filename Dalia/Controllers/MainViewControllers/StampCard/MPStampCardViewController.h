@@ -16,7 +16,7 @@
 @protocol MPStampCardViewControllerDelegate<NSObject>
 @end
 
-@interface MPStampCardViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate, CBCentralManagerDelegate>
+@interface MPStampCardViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate, CBCentralManagerDelegate, UITextFieldDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;
@@ -26,6 +26,8 @@
     MPCouponStampObject* couponStampObject;
 
     long numberStampSelected;
+
+    NSString* str_passcode;
 
     __weak IBOutlet UILabel *lbl_No01;
     __weak IBOutlet UILabel *lbl_No02;

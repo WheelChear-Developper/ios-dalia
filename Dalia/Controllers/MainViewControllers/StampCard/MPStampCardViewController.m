@@ -181,6 +181,14 @@
         }
             break;
 
+        case RequestType_SET_STAMP:
+        {
+
+            //クーポン情報取得
+            [[ManagerDownload sharedInstance] getDetailCouponStamp:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
+        }
+
+            break;
 
         default:
             break;
@@ -246,6 +254,27 @@
     //スタンプ数カウント
     numberStampSelected = 0;
     NSArray* ary_stamps = [ary_stamp_date_set mutableCopy];
+
+    img_stamp01.image = nil;
+    img_stamp02.image = nil;
+    img_stamp03.image = nil;
+    img_stamp04.image = nil;
+    img_stamp05.image = nil;
+    img_stamp06.image = nil;
+    img_stamp07.image = nil;
+    img_stamp08.image = nil;
+    img_stamp09.image = nil;
+    img_stamp10.image = nil;
+    img_stamp11.image = nil;
+    img_stamp12.image = nil;
+    img_stamp13.image = nil;
+    img_stamp14.image = nil;
+    img_stamp15.image = nil;
+    img_stamp16.image = nil;
+    img_stamp17.image = nil;
+    img_stamp18.image = nil;
+    img_stamp19.image = nil;
+    img_stamp20.image = nil;
 
     for(long l=0;l < ary_stamps.count;l++){
 
@@ -434,8 +463,6 @@
 
         }
     }
-
-
 }
 
 - (NSString*)getDateType:(NSString*)str_dt {
@@ -462,63 +489,220 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)setStampAreat:(long)PointCount {
+
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"来店スタンプ認証" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"認証"
+                                              style:UIAlertActionStyleDefault
+                                            handler:^(UIAlertAction *action) {
+                                                NSLog(@"OK pushed");
+
+                                                //スタンプ捺印
+                                                [[ManagerDownload sharedInstance] submitStamp:[Utility getDeviceID] withAppID:[Utility getAppID] withCoupon:couponStampObject withCode:str_passcode withAmount:[NSString stringWithFormat:@"%ld",PointCount] withUUID:@"" withMajor:@"0" withMinor:@"0" delegate:self];
+
+                                            }]];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"キャンセル"
+                                              style:UIAlertActionStyleCancel
+                                            handler:^(UIAlertAction *action) {
+                                                NSLog(@"OK pushed");
+
+                                            }]];
+
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *textPassField) {
+        textPassField.placeholder = @"認証コード";
+        textPassField.delegate = self;
+    }];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    str_passcode = textField.text;
+
+    NSLog(@"text editing finished");
+}
+
 - (IBAction)btn_stamp01:(id)sender {
+
+    long lng_countNo = 1;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp02:(id)sender {
+
+    long lng_countNo = 2;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp03:(id)sender {
+
+    long lng_countNo = 3;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp04:(id)sender {
+
+    long lng_countNo = 4;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp05:(id)sender {
+
+    long lng_countNo = 5;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp06:(id)sender {
+
+    long lng_countNo = 6;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp07:(id)sender {
+
+    long lng_countNo = 7;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp08:(id)sender {
+
+    long lng_countNo = 8;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp09:(id)sender {
+
+    long lng_countNo = 9;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp10:(id)sender {
+
+    long lng_countNo = 10;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp11:(id)sender {
+
+    long lng_countNo = 11;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp12:(id)sender {
+
+    long lng_countNo = 12;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp13:(id)sender {
+
+    long lng_countNo = 13;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp14:(id)sender {
+
+    long lng_countNo = 14;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp15:(id)sender {
+
+    long lng_countNo = 15;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp16:(id)sender {
+
+    long lng_countNo = 16;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp17:(id)sender {
+
+    long lng_countNo = 17;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp18:(id)sender {
+
+    long lng_countNo = 18;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp19:(id)sender {
+
+    long lng_countNo = 19;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
 
 - (IBAction)btn_stamp20:(id)sender {
+
+    long lng_countNo = 20;
+    if(numberStampSelected < lng_countNo){
+
+        [self setStampAreat:lng_countNo - numberStampSelected];
+    }
 }
+
 @end

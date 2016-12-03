@@ -177,7 +177,10 @@
                 [self processDetailCouponStamp:listObject with:parameter];
                 break;
 
-
+            case RequestType_SET_STAMP:
+                // クーポン件数取得用更新
+                [self processSetStamp:[JSON objectForKey:@"message"] withCurponCount:[Utility checkNIL:[Utility checkNULL:[obj objectForKey:@"coupon_count"]]] with:parameter];
+                break;
 /*
 
                 
@@ -240,12 +243,7 @@
                 
 
                 
-            case RequestType_SET_STAMP:
-                // REPLACED BY M.ama 2016.10.08 START
-                // クーポン件数取得用更新
-                [self processSetStamp:[JSON objectForKey:@"message"] withCurponCount:[Utility checkNIL:[Utility checkNULL:[obj objectForKey:@"coupon_count"]]] with:parameter];
-                // REPLACED BY M.ama 2016.10.08 END
-                break;
+
                 
             case RequestType_RECOMMEND_PRODUCT:
                 [self processRecommendProduct:listObject with:parameter];
@@ -870,13 +868,7 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
-
-
-
-
-
-
-- (void)submitDeviceToken: (NSString*)deviceToken withAppID:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate
+- (void)submitDeviceToken:(NSString*)deviceToken withAppID:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate
 {
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     [params setValue:[NSString stringWithFormat:@"%@",deviceID] forKey:@"device_id"];
@@ -894,7 +886,28 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
+- (void)submitStamp:(NSString*)deviceID withAppID:(NSString*)appID withCoupon:(MPCouponStampObject*)couponstamp withCode:(NSString *)code withAmount:(NSString *)amount withUUID:(NSString *)uuid withMajor:(NSString *)major withMinor:(NSString *)minor delegate:(NSObject<ManagerDownloadDelegate> *)delegate
+{
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setValue:[NSString stringWithFormat:@"%@",appID] forKey:@"app_id"];
+    [params setValue:[NSString stringWithFormat:@"%@",deviceID] forKey:@"device_id"];
+    [params setValue:[NSString stringWithFormat:@"%@",couponstamp.id] forKey:@"coupon_id"];
+    [params setValue:[NSString stringWithFormat:@"%@",code] forKey:@"coupon_code"];
+    [params setValue:[NSString stringWithFormat:@"%@",amount] forKey:@"amount"];
+    [params setValue:[NSString stringWithFormat:@"%@",uuid] forKey:@"uuid"];
+    [params setValue:[NSString stringWithFormat:@"%@",major] forKey:@"major"];
+    [params setValue:[NSString stringWithFormat:@"%@",minor] forKey:@"minor"];
 
+    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_SET_STAMP];
+    paramenter.delegate = delegate;
+    NSString *strRequest = @"";
+    strRequest = [NSString stringWithFormat:BASE_URL,SET_STAMP];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
+    [request setHTTPMethod:@"POST"];
+    [Utility setParamWithMethodPost:params forRequest:request];
+    [self baseRequestJSON:request parameter:paramenter];
+}
 
 
 
@@ -1007,28 +1020,7 @@
 
 // REPLACED BY ama 2016.10.05 START
 // iBeacon識別追加
-- (void) submitStamp: (NSString*) deviceID withAppID: (NSString*) appID withCoupon: (MPCouponObject*)coupon withCode:(NSString *)code withAmount:(NSString *)amount withUUID:(NSString *)uuid withMajor:(NSString *)major withMinor:(NSString *)minor delegate:(NSObject<ManagerDownloadDelegate> *)delegate
-{
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    [params setValue:[NSString stringWithFormat:@"%@",deviceID] forKey:@"device_id"];
-    [params setValue:[NSString stringWithFormat:@"%@",appID] forKey:@"app_id"];
-    [params setValue:[NSString stringWithFormat:@"%@",coupon.coupon_id] forKey:@"coupon_id"];
-    [params setValue:[NSString stringWithFormat:@"%@",code] forKey:@"coupon_code"];
-    [params setValue:[NSString stringWithFormat:@"%@",amount] forKey:@"amount"];
-    [params setValue:[NSString stringWithFormat:@"%@",uuid] forKey:@"uuid"];
-    [params setValue:[NSString stringWithFormat:@"%@",major] forKey:@"major"];
-    [params setValue:[NSString stringWithFormat:@"%@",minor] forKey:@"minor"];
-    
-    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_SET_STAMP];
-    paramenter.delegate = delegate;
-    NSString *strRequest = @"";
-    strRequest = [NSString stringWithFormat:BASE_URL,SET_STAMP];
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
-    [request setHTTPMethod:@"POST"];
-    [Utility setParamWithMethodPost:params forRequest:request];
-    [self baseRequestJSON:request parameter:paramenter];
-}
+
 // REPLACED BY ama 2016.10.05 END
 
 
@@ -1549,7 +1541,13 @@
     }
 }
 
+- (void) processSetStamp: (NSString*) message withCurponCount:(NSString*)count with: (DownloadParam*) param{
 
+    NSMutableDictionary *dic_data = [[NSMutableDictionary alloc] init];
+    [dic_data setObject:message forKey:@"message"];
+    [dic_data setObject:count forKey:@"count"];
+    [param.listData addObject:dic_data];
+}
 
 
 
@@ -1659,13 +1657,7 @@
 
 // REPLACED BY M.ama 2016.10.08 START
 // クーポン件数取得用更新
-- (void) processSetStamp: (NSString*) message withCurponCount:(NSString*)count with: (DownloadParam*) param{
-    
-    NSMutableDictionary *dic_data = [[NSMutableDictionary alloc] init];
-    [dic_data setObject:message forKey:@"message"];
-    [dic_data setObject:count forKey:@"count"];
-    [param.listData addObject:dic_data];
-}
+
 // REPLACED BY M.ama 2016.10.08 END
 
 
