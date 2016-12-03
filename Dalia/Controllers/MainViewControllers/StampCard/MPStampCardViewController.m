@@ -201,27 +201,14 @@
 //画面のスタンプViewを追加
 - (void)setStampView {
 
-
     //説明設定
     lbl_setsumei.text = couponStampObject.stamp_condition;
 
-    if([couponStampObject.due_date length]>0){
+    if([couponStampObject.due_date_format length]>0){
 
         view_date.hidden = NO;
 
-        //有効期限
-        NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-        //タイムゾーンの指定
-        [formatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:60 * 60 * 9]];
-        NSDate *date = [formatter dateFromString:couponStampObject.due_date];
-
-        NSDateFormatter* formatter2 = [[NSDateFormatter alloc] init];
-        [formatter2 setDateFormat:@"YYYY/MM/dd"];
-        NSString* date_converted = [formatter stringFromDate:date];
-
-        NSLog(@"date: %@",date);
-        lbl_date.text = [NSString stringWithFormat:@"現在の有効期限:%@",date_converted];
+        lbl_date.text = [NSString stringWithFormat:@"現在の有効期限:%@",couponStampObject.due_date_format];
     }else{
 
         view_date.hidden = YES;
@@ -370,9 +357,8 @@
                     break;
             }
 
-
-            NSString* tt = [dic_stamp objectForKey:@"isCoupon"];
-            if([tt isEqualToString:@"0"]){
+            long tt = (long)[dic_stamp objectForKey:@"isCoupon"];
+            if(tt == 0){
 
                 switch (numberStampSelected) {
                     case 1:
@@ -478,7 +464,7 @@
 
         NSDateFormatter* formatter2 = [[NSDateFormatter alloc] init];
         [formatter2 setDateFormat:@"MM/dd"];
-        date_converted = [formatter stringFromDate:date];
+        date_converted = [formatter2 stringFromDate:date];
     }
 
     return date_converted;
