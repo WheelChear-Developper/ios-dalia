@@ -25,6 +25,8 @@
     CBCentralManager* bluetoothManager;
     MPCouponStampObject* couponStampObject;
 
+    long numberStampSelected;
+
     __weak IBOutlet UILabel *lbl_No01;
     __weak IBOutlet UILabel *lbl_No02;
     __weak IBOutlet UILabel *lbl_No03;

@@ -243,7 +243,197 @@
     lbl_date19.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:18] objectForKey:@"date_set"]];
     lbl_date20.text = [self getDateType:[[ary_stamp_date_set objectAtIndex:19] objectForKey:@"date_set"]];
 
+    //スタンプ数カウント
+    numberStampSelected = 0;
+    NSArray* ary_stamps = [ary_stamp_date_set mutableCopy];
 
+    for(long l=0;l < ary_stamps.count;l++){
+
+        NSMutableDictionary* dic_stamp = [ary_stamps objectAtIndex:l];
+        NSString* ss = [dic_stamp objectForKey:@"date_set"];
+        if(![ss isEqualToString:@""]){
+
+            numberStampSelected += 1;
+
+            switch (numberStampSelected) {
+                case 1:
+
+                    img_stamp01.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 2:
+
+                    img_stamp02.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 3:
+
+                    img_stamp03.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 4:
+
+                    img_stamp04.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 5:
+
+                    img_stamp05.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 6:
+
+                    img_stamp06.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 7:
+
+                    img_stamp07.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 8:
+
+                    img_stamp08.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 9:
+
+                    img_stamp09.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 10:
+
+                    img_stamp10.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 11:
+
+                    img_stamp11.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 12:
+
+                    img_stamp12.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 13:
+
+                    img_stamp13.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 14:
+
+                    img_stamp14.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 15:
+
+                    img_stamp15.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 16:
+
+                    img_stamp16.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 17:
+
+                    img_stamp17.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 18:
+
+                    img_stamp18.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 19:
+
+                    img_stamp19.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                case 20:
+
+                    img_stamp20.image = [UIImage imageNamed:@"stampcard_mark_stamp.png"];
+                    break;
+                    
+                default:
+                    break;
+            }
+
+
+            NSString* tt = [dic_stamp objectForKey:@"isCoupon"];
+            if([tt isEqualToString:@"0"]){
+
+                switch (numberStampSelected) {
+                    case 1:
+
+                        img_stamp01.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 2:
+
+                        img_stamp02.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 3:
+
+                        img_stamp03.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 4:
+
+                        img_stamp04.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 5:
+
+                        img_stamp05.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 6:
+
+                        img_stamp06.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 7:
+
+                        img_stamp07.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 8:
+
+                        img_stamp08.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 9:
+
+                        img_stamp09.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 10:
+
+                        img_stamp10.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 11:
+
+                        img_stamp11.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 12:
+
+                        img_stamp12.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 13:
+
+                        img_stamp13.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 14:
+
+                        img_stamp14.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 15:
+
+                        img_stamp15.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 16:
+
+                        img_stamp16.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 17:
+
+                        img_stamp17.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 18:
+                        
+                        img_stamp18.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 19:
+                        
+                        img_stamp19.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                    case 20:
+                        
+                        img_stamp20.image = [UIImage imageNamed:@"stampcard_couponget.png"];
+                        break;
+                        
+                    default:
+                        break;
+                }
+            }
+
+        }
+    }
 
 
 }
