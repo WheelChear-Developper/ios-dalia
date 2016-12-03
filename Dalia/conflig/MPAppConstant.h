@@ -94,7 +94,8 @@
 //スタッフ
 #define GET_LIST_STAFF @"staff/getList"
 
-
+//ビデオ
+#define GET_LIST_VIDEO @"video/getListVideo"
 
 
 

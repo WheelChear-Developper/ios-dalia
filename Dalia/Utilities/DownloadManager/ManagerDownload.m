@@ -37,6 +37,9 @@
 
 #import "MPStafflistObject.h"
 
+#import "MPVideolistObject.h"
+#import "MPVideolist_thumbnailObject.h"
+
 @implementation ManagerDownload
 + (ManagerDownload *)sharedInstance{
     static ManagerDownload *manager = nil;
@@ -189,7 +192,10 @@
                 [self processGetStaff:listObject with:parameter];
                 break;
 
-
+            case RequestType_GET_LIST_VIDEO:
+                //ビデオ
+                [self processGetVideo:listObject with:parameter];
+                break;
 
 
 
@@ -640,7 +646,23 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
+- (void)getVideo:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate {
 
+    //ビデオ
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+
+    [params setValue:appID forKey:@"app_id"];
+    [params setValue:deviceID forKey:@"device_id"];
+    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_LIST_VIDEO];
+    paramenter.delegate = delegate;
+    NSString *strRequest = @"";
+    strRequest = [NSString stringWithFormat:BASE_URL,GET_LIST_VIDEO];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
+    [request setHTTPMethod:@"POST"];
+    [Utility setParamWithMethodPost:params forRequest:request];
+    [self baseRequestJSON:request parameter:paramenter];
+}
 
 
 
@@ -1614,6 +1636,47 @@
         [param.listData addObject:shopObject];
     }
 }
+
+- (void)processGetVideo:(NSArray *)listObject with:(DownloadParam *)param{
+
+    NSMutableArray* ary_video =[[NSMutableArray alloc] init];
+
+    //ビデオ
+    for (NSDictionary *dic in listObject) {
+        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
+            return;
+        }
+
+        MPVideolistObject *videoObj = [[MPVideolistObject alloc] init];
+        videoObj.id = [Utility checkNULL:[dic objectForKey:@"id"]];
+        videoObj.title = [Utility checkNULL:[dic objectForKey:@"title"]];
+        videoObj.detail = [Utility checkNULL:[dic objectForKey:@"detail"]];
+        videoObj.published = [Utility checkNULL:[dic objectForKey:@"published"]];
+        videoObj.url_video = [Utility checkNULL:[dic objectForKey:@"url_video"]];
+
+        NSMutableDictionary* ary_thumbnail = [Utility checkNULL:[dic objectForKey:@"thumbnail"]];
+        for(long c=0;c<ary_thumbnail.count;c++){
+
+            MPVideolist_thumbnailObject* obj_thumbnail = [[MPVideolist_thumbnailObject alloc] init];
+            obj_thumbnail.height = [[ary_thumbnail objectForKey:@"height"] integerValue];
+            obj_thumbnail.width = [[ary_thumbnail objectForKey:@"width"] integerValue];
+            obj_thumbnail.url = [ary_thumbnail objectForKey:@"url"];
+        }
+
+        videoObj.thumbnail = [Utility checkNULL:[dic objectForKey:@"thumbnail"]];
+        videoObj.time = [Utility checkNULL:[dic objectForKey:@"time"]];
+        videoObj.isLike = [[Utility checkNULL:[dic objectForKey:@"isLike"]] integerValue];
+        videoObj.isSns = [[Utility checkNULL:[dic objectForKey:@"isSns"]] integerValue];
+        videoObj.like = [[Utility checkNULL:[dic objectForKey:@"like"]] integerValue];
+
+        [ary_video addObject:videoObj];
+
+    }
+    [param.listData addObject:ary_video];
+}
+
+
+
 
 
 

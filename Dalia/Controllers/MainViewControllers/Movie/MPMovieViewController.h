@@ -11,12 +11,16 @@
 #import "ManagerDownload.h"
 #import "MPMovieTableViewCell.h"
 #import "MPWebViewController.h"
+#import "MPVideolistObject.h"
+#import "MPVideolist_thumbnailObject.h"
 
 @interface MPMovieViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;
     CGPoint _scrollBeginingPoint;
+
+    NSMutableArray* _list_data;
 
     __weak IBOutlet UITableView *_tbl_menulist;
 

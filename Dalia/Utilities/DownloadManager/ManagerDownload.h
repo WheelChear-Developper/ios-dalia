@@ -11,6 +11,7 @@
 #import "AFJSONRequestOperation.h"
 #import "MPCouponObject.h"
 #import "MPCouponStampObject.h"
+#import "MPVideolistObject.h"
 
 @interface ManagerDownload : NSObject<UIAlertViewDelegate>
 {
@@ -55,8 +56,8 @@
 - (void)getDetailCouponStamp:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
 //スタッフ情報
 - (void)getStaff:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
-
-
+//ビデオ
+- (void)getVideo:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
 
 
 /*

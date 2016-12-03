@@ -220,6 +220,8 @@
 		1049C9FA1DE6A04500240E6C /* left_yajirushi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1049C9F61DE6A04500240E6C /* left_yajirushi@2x.png */; };
 		1049C9FB1DE6A04500240E6C /* right_yajirushi.png in Resources */ = {isa = PBXBuildFile; fileRef = 1049C9F71DE6A04500240E6C /* right_yajirushi.png */; };
 		1049C9FC1DE6A04500240E6C /* right_yajirushi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1049C9F81DE6A04500240E6C /* right_yajirushi@2x.png */; };
+		105369221DF2962F00C64015 /* MPVideolistObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 105369211DF2962F00C64015 /* MPVideolistObject.m */; };
+		105369251DF2A37000C64015 /* MPVideolist_thumbnailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 105369241DF2A37000C64015 /* MPVideolist_thumbnailObject.m */; };
 		106130601DD2D10B00B789B5 /* MPShopCatObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 106130411DD2D10B00B789B5 /* MPShopCatObject.m */; };
 		106130611DD2D10B00B789B5 /* MPShopObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 106130431DD2D10B00B789B5 /* MPShopObject.m */; };
 		106130631DD2D10B00B789B5 /* MPConfigObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1061304A1DD2D10B00B789B5 /* MPConfigObject.m */; };
@@ -834,6 +836,10 @@
 		1049C9F61DE6A04500240E6C /* left_yajirushi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_yajirushi@2x.png"; sourceTree = "<group>"; };
 		1049C9F71DE6A04500240E6C /* right_yajirushi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_yajirushi.png; sourceTree = "<group>"; };
 		1049C9F81DE6A04500240E6C /* right_yajirushi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_yajirushi@2x.png"; sourceTree = "<group>"; };
+		105369201DF2962F00C64015 /* MPVideolistObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVideolistObject.h; sourceTree = "<group>"; };
+		105369211DF2962F00C64015 /* MPVideolistObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVideolistObject.m; sourceTree = "<group>"; };
+		105369231DF2A37000C64015 /* MPVideolist_thumbnailObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVideolist_thumbnailObject.h; sourceTree = "<group>"; };
+		105369241DF2A37000C64015 /* MPVideolist_thumbnailObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVideolist_thumbnailObject.m; sourceTree = "<group>"; };
 		106130401DD2D10B00B789B5 /* MPShopCatObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopCatObject.h; sourceTree = "<group>"; };
 		106130411DD2D10B00B789B5 /* MPShopCatObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPShopCatObject.m; sourceTree = "<group>"; };
 		106130421DD2D10B00B789B5 /* MPShopObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopObject.h; sourceTree = "<group>"; };
@@ -1563,6 +1569,7 @@
 				1034A7FE1DF0193F0054872D /* Membercard */,
 				100FC6F81DF180C0002E0BB8 /* MPCouponStampObject */,
 				1020FEC81DF26F7F00DA4184 /* Staff */,
+				1053691F1DF2962F00C64015 /* Video */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1829,6 +1836,17 @@
 				10488B141DE98BED005F5DF1 /* MPMovieTableViewCell.xib */,
 			);
 			path = Movie;
+			sourceTree = "<group>";
+		};
+		1053691F1DF2962F00C64015 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				105369201DF2962F00C64015 /* MPVideolistObject.h */,
+				105369211DF2962F00C64015 /* MPVideolistObject.m */,
+				105369231DF2A37000C64015 /* MPVideolist_thumbnailObject.h */,
+				105369241DF2A37000C64015 /* MPVideolist_thumbnailObject.m */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 		1061303E1DD2D10B00B789B5 /* old */ = {
@@ -3651,6 +3669,7 @@
 				272CCD881DCAF096006BC4EB /* AFJSONRequestOperation.m in Sources */,
 				272CCDAB1DCAF096006BC4EB /* Reachability.m in Sources */,
 				272CCD941DCAF096006BC4EB /* MPPageControl.m in Sources */,
+				105369251DF2A37000C64015 /* MPVideolist_thumbnailObject.m in Sources */,
 				10C4B9111DDABE4E00E26096 /* MPWhatNewsObject.m in Sources */,
 				106130611DD2D10B00B789B5 /* MPShopObject.m in Sources */,
 				272CCD981DCAF096006BC4EB /* MPHospitalDAO.m in Sources */,
@@ -3685,6 +3704,7 @@
 				1038EF921DDF2DF900134331 /* MPTransferViewController.m in Sources */,
 				10967BC61DDB5DFF004DA122 /* MPMenuListCollectionCell.m in Sources */,
 				1034A7F21DEFB7240054872D /* MPDetailShopListObject.m in Sources */,
+				105369221DF2962F00C64015 /* MPVideolistObject.m in Sources */,
 				1034A7E01DEEB2BE0054872D /* MPFirstSetting_generation_TableViewCell.m in Sources */,
 				1083AD1D1DEAA523003596CF /* MPMenu_MenuObject.m in Sources */,
 				1046A33A1DF133A500AE4DDA /* TheFifth_birthday_TableViewCell.m in Sources */,

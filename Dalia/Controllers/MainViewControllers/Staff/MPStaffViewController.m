@@ -61,13 +61,6 @@
 
     //会員書情報取得
     [[ManagerDownload sharedInstance] getStaff:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
-
-    //メニュー項目設定
-//    _ary_image = [@[@"staff_01.png", @"staff_02.png", @"staff_03.png", @"staff_04.png", @"staff_05.png"] mutableCopy];
-//    _ary_name = [@[@"Tarou Yamada", @"Hanako Satou", @"Aki Suzuki", @"Misa Kawatani", @"Other"] mutableCopy];
-//    _ary_subname = [@[@"代表", @"ディレクター", @"トップスタイリスト", @"トップスタイリスト", @"その他"] mutableCopy];
-
-//    [_tbl_menulist reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

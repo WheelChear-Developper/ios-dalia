@@ -60,15 +60,18 @@
 
     [super viewWillAppear:animated];
 
+    //会員書情報取得
+    [[ManagerDownload sharedInstance] getVideo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
+
     //メニュー項目設定
-    _ary_image = [@[@"movie_01.png", @"movie_02.png", @"movie_03.png", @"movie_04.png", @"movie_05.png"] mutableCopy];
-    _ary_title = [@[@"2分でできる!!\nミディアムヘアを簡単ヘアアレンジ", @"2分でできる!!\nミディアムヘアを簡単ヘアアレンジ", @"2分でできる!!\nミディアムヘアを簡単ヘアアレンジ", @"2分でできる!!\nミディアムヘアを簡単ヘアアレンジ", @"2分でできる!!\nミディアムヘアを簡単ヘアアレンジ"] mutableCopy];
-    _ary_time = [@[@"00:45", @"00:45", @"00:45", @"00:45", @"00:45"] mutableCopy];
+//    _ary_image = [@[@"movie_01.png", @"movie_02.png", @"movie_03.png", @"movie_04.png", @"movie_05.png"] mutableCopy];
+//    _ary_title = [@[@"2分でできる!!\nミディアムヘアを簡単ヘアアレンジ", @"2分でできる!!\nミディアムヘアを簡単ヘアアレンジ", @"2分でできる!!\nミディアムヘアを簡単ヘアアレンジ", @"2分でできる!!\nミディアムヘアを簡単ヘアアレンジ", @"2分でできる!!\nミディアムヘアを簡単ヘアアレンジ"] mutableCopy];
+//    _ary_time = [@[@"00:45", @"00:45", @"00:45", @"00:45", @"00:45"] mutableCopy];
 
-    _ary_love = [@[@"12", @"12", @"12", @"12", @"12"] mutableCopy];
+//    _ary_love = [@[@"12", @"12", @"12", @"12", @"12"] mutableCopy];
 
 
-    [_tbl_menulist reloadData];
+//    [_tbl_menulist reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -93,8 +96,6 @@
 -(void)viewDidLayoutSubviews {
 
     [super viewDidLayoutSubviews];
-
-    [self resizeTable];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -143,10 +144,13 @@
 - (void)downloadDataSuccess:(DownloadParam *)param {
 
     switch (param.request_type) {
-        case RequestType_GET_LIST_COUPON:
+        case RequestType_GET_LIST_VIDEO:
         {
+            _list_data = param.listData[0];
 
+            [_tbl_menulist reloadData];
 
+            [self resizeTable];
         }
             break;
 
@@ -161,7 +165,7 @@
 #pragma mark - UITableViewDelegate & DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return _ary_image.count;
+    return _list_data.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -178,10 +182,32 @@
         cell = [nib objectAtIndex:0];
     }
 
-    cell.img_photo.image = [UIImage imageNamed:[_ary_image objectAtIndex:indexPath.row]];
-    cell.lbl_name.text = [_ary_title objectAtIndex:indexPath.row];
-    cell.lbl_time.text = [_ary_time objectAtIndex:indexPath.row];
-    cell.lbl_love.text = [_ary_love objectAtIndex:indexPath.row];
+    MPVideolistObject* obj_video = [_list_data objectAtIndex:indexPath.row];
+
+    NSMutableDictionary* dic_thumbnail = obj_video.thumbnail;
+
+    //画像設定
+    if([dic_thumbnail objectForKey:@"url"] && [[dic_thumbnail objectForKey:@"url"] length] > 0 ) {
+
+        dispatch_queue_t q_global = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_queue_t q_main = dispatch_get_main_queue();
+        dispatch_async(q_global, ^{
+
+            NSString *imageURL = [dic_thumbnail objectForKey:@"url"];
+            UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [NSURL URLWithString: imageURL]]];
+
+            dispatch_async(q_main, ^{
+                [cell.img_photo setImage:image];
+            });
+        });
+    }else{
+        [cell.img_photo setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
+    }
+
+//    cell.img_photo.image = [UIImage imageNamed:[_ary_image objectAtIndex:indexPath.row]];
+    cell.lbl_name.text = obj_video.title;
+    cell.lbl_time.text = obj_video.time;
+    cell.lbl_love.text = @"";//[NSString stringWithFormat:@"%ld",obj_video.isLike];
     return cell;
 }
 
