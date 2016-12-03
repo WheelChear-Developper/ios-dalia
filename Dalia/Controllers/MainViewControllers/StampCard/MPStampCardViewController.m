@@ -509,4 +509,16 @@
 
 - (IBAction)btn_stamp16:(id)sender {
 }
+
+- (IBAction)btn_stamp17:(id)sender {
+}
+
+- (IBAction)btn_stamp18:(id)sender {
+}
+
+- (IBAction)btn_stamp19:(id)sender {
+}
+
+- (IBAction)btn_stamp20:(id)sender {
+}
 @end

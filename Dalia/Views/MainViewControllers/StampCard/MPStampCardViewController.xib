@@ -1000,6 +1000,7 @@
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                             <connections>
                                                                 <action selector="btn_stamp13:" destination="-1" eventType="touchUpInside" id="vi4-xR-Bt9"/>
+                                                                <action selector="btn_stamp17:" destination="-1" eventType="touchUpInside" id="3qd-9o-3zR"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -1049,6 +1050,7 @@
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                             <connections>
                                                                 <action selector="btn_stamp14:" destination="-1" eventType="touchUpInside" id="AL4-wk-50R"/>
+                                                                <action selector="btn_stamp18:" destination="-1" eventType="touchUpInside" id="Usb-zf-ghu"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -1098,6 +1100,7 @@
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                             <connections>
                                                                 <action selector="btn_stamp15:" destination="-1" eventType="touchUpInside" id="IyO-ZT-IGl"/>
+                                                                <action selector="btn_stamp19:" destination="-1" eventType="touchUpInside" id="Tww-Uy-oMX"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -1147,6 +1150,7 @@
                                                             <rect key="frame" x="3" y="3" width="54" height="54"/>
                                                             <connections>
                                                                 <action selector="btn_stamp16:" destination="-1" eventType="touchUpInside" id="eKY-w7-gKT"/>
+                                                                <action selector="btn_stamp20:" destination="-1" eventType="touchUpInside" id="4RU-xA-UNF"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
