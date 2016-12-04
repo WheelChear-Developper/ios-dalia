@@ -58,6 +58,12 @@
 - (void)getStaff:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
 //ビデオ
 - (void)getVideo:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
+//友達クーポン
+- (void)getListShareCoupon:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
+
+
+
+
 
 
 /*

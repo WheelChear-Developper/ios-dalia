@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPSNSViewController">
+            <connections>
+                <outlet property="_scr_inView" destination="Vdn-Bt-kcK" id="mzZ-Ux-3mX"/>
+                <outlet property="_scr_rootview" destination="7jP-Ng-xJo" id="RI7-KA-vSc"/>
+                <outlet property="_tbl_menulist" destination="gBC-lS-Lm6" id="9fX-Km-uLK"/>
+                <outlet property="img_mark" destination="OJm-wH-G5j" id="Zci-uB-FmJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jP-Ng-xJo">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vdn-Bt-kcK">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="456"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAn-9u-foZ">
+                                    <rect key="frame" x="10" y="70" width="300" height="100"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OJm-wH-G5j">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="OJm-wH-G5j" secondAttribute="height" multiplier="1:1" id="l38-N7-R4i"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="このアプリを お友達に紹介して クーポンをGET！！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAe-1k-W96">
+                                            <rect key="frame" x="105" y="5" width="190" height="90"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="vAe-1k-W96" secondAttribute="trailing" constant="5" id="1qe-rY-due"/>
+                                        <constraint firstItem="OJm-wH-G5j" firstAttribute="leading" secondItem="CAn-9u-foZ" secondAttribute="leading" id="6ra-Jm-qRi"/>
+                                        <constraint firstItem="vAe-1k-W96" firstAttribute="leading" secondItem="OJm-wH-G5j" secondAttribute="trailing" constant="5" id="70N-IC-VnX"/>
+                                        <constraint firstAttribute="bottom" secondItem="vAe-1k-W96" secondAttribute="bottom" constant="5" id="Nxc-c5-qC2"/>
+                                        <constraint firstAttribute="bottom" secondItem="OJm-wH-G5j" secondAttribute="bottom" id="Rcg-U8-HlP"/>
+                                        <constraint firstItem="vAe-1k-W96" firstAttribute="top" secondItem="CAn-9u-foZ" secondAttribute="top" constant="5" id="WWd-uR-sc0"/>
+                                        <constraint firstAttribute="height" constant="100" id="ZPK-Km-Ooq"/>
+                                        <constraint firstItem="OJm-wH-G5j" firstAttribute="top" secondItem="CAn-9u-foZ" secondAttribute="top" id="jiJ-rJ-jXX"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ゲットしたいクーポンを選択して下さい。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5L-bM-q4T">
+                                    <rect key="frame" x="10" y="180" width="300" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gBC-lS-Lm6">
+                                    <rect key="frame" x="10" y="207" width="300" height="200"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="bdH-qJ-Gwy"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="rFJ-YE-gQQ"/>
+                                        <outlet property="delegate" destination="-1" id="WRC-v8-3pB"/>
+                                    </connections>
+                                </tableView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※お友達がこのアプリをインストールして、あなたの照会番号を入力した時点でクーポンをゲット！！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75b-VJ-SK9">
+                                    <rect key="frame" x="10" y="417" width="300" height="29"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="CAn-9u-foZ" firstAttribute="top" secondItem="Vdn-Bt-kcK" secondAttribute="top" constant="70" id="3BP-fj-Vqg"/>
+                                <constraint firstAttribute="trailing" secondItem="CAn-9u-foZ" secondAttribute="trailing" constant="10" id="3Um-CJ-83m"/>
+                                <constraint firstItem="c5L-bM-q4T" firstAttribute="top" secondItem="CAn-9u-foZ" secondAttribute="bottom" constant="10" id="3nn-6I-r6l"/>
+                                <constraint firstAttribute="trailing" secondItem="gBC-lS-Lm6" secondAttribute="trailing" constant="10" id="93K-57-3lv"/>
+                                <constraint firstItem="75b-VJ-SK9" firstAttribute="leading" secondItem="Vdn-Bt-kcK" secondAttribute="leading" constant="10" id="BAP-lM-zKs"/>
+                                <constraint firstItem="75b-VJ-SK9" firstAttribute="top" secondItem="gBC-lS-Lm6" secondAttribute="bottom" constant="10" id="TJB-Of-QdP"/>
+                                <constraint firstAttribute="trailing" secondItem="c5L-bM-q4T" secondAttribute="trailing" constant="10" id="UUh-Hh-V2s"/>
+                                <constraint firstAttribute="trailing" secondItem="75b-VJ-SK9" secondAttribute="trailing" constant="10" id="h1U-y3-QOI"/>
+                                <constraint firstItem="gBC-lS-Lm6" firstAttribute="top" secondItem="c5L-bM-q4T" secondAttribute="bottom" constant="10" id="ixp-FU-8s4"/>
+                                <constraint firstItem="CAn-9u-foZ" firstAttribute="leading" secondItem="Vdn-Bt-kcK" secondAttribute="leading" constant="10" id="jAK-Ff-NnD"/>
+                                <constraint firstAttribute="bottom" secondItem="75b-VJ-SK9" secondAttribute="bottom" constant="10" id="rg9-EJ-9IO"/>
+                                <constraint firstItem="c5L-bM-q4T" firstAttribute="leading" secondItem="Vdn-Bt-kcK" secondAttribute="leading" constant="10" id="rlV-Gl-YWY"/>
+                                <constraint firstItem="gBC-lS-Lm6" firstAttribute="leading" secondItem="Vdn-Bt-kcK" secondAttribute="leading" constant="10" id="sUv-mJ-XSk"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Vdn-Bt-kcK" secondAttribute="bottom" id="UAK-Yb-60Q"/>
+                        <constraint firstAttribute="trailing" secondItem="Vdn-Bt-kcK" secondAttribute="trailing" id="V3g-N8-4Rw"/>
+                        <constraint firstItem="Vdn-Bt-kcK" firstAttribute="leading" secondItem="7jP-Ng-xJo" secondAttribute="leading" id="ZAo-W0-tcY"/>
+                        <constraint firstItem="Vdn-Bt-kcK" firstAttribute="centerX" secondItem="7jP-Ng-xJo" secondAttribute="centerX" id="py6-3X-KCb"/>
+                        <constraint firstItem="Vdn-Bt-kcK" firstAttribute="top" secondItem="7jP-Ng-xJo" secondAttribute="top" id="vBt-ac-2D7"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="YIm-7C-lxI"/>
+                    </connections>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="7jP-Ng-xJo" secondAttribute="trailing" id="1b5-7p-yEM"/>
+                <constraint firstItem="7jP-Ng-xJo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="XMk-dC-t4O"/>
+                <constraint firstAttribute="bottom" secondItem="7jP-Ng-xJo" secondAttribute="bottom" id="pi1-tN-tcG"/>
+                <constraint firstItem="7jP-Ng-xJo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ucG-31-Xtr"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

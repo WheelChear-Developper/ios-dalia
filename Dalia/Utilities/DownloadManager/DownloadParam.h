@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, RequestType) {
     RequestType_SET_STAMP,
     RequestType_GET_LIST_STAFF,
     RequestType_GET_LIST_VIDEO,
-    
+    RequestType_GET_LIST_SHARECOUPON,
 
 
 

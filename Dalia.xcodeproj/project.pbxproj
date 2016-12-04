@@ -87,6 +87,13 @@
 		1016C8111DE46C7600BC215E /* first_ttl_recommenditem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1016C80D1DE46C7600BC215E /* first_ttl_recommenditem@2x.png */; };
 		1016C8121DE46C7600BC215E /* first_ttl_recommendmenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 1016C80E1DE46C7600BC215E /* first_ttl_recommendmenu.png */; };
 		1016C8131DE46C7600BC215E /* first_ttl_recommendmenu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1016C80F1DE46C7600BC215E /* first_ttl_recommendmenu@2x.png */; };
+		1019324E1DF3F6DB00FC8DDE /* MPSNSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1019324C1DF3F6DB00FC8DDE /* MPSNSViewController.m */; };
+		1019324F1DF3F6DB00FC8DDE /* MPSNSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1019324D1DF3F6DB00FC8DDE /* MPSNSViewController.xib */; };
+		101932541DF3FC8F00FC8DDE /* MPSNSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 101932521DF3FC8F00FC8DDE /* MPSNSTableViewCell.m */; };
+		101932551DF3FC8F00FC8DDE /* MPSNSTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101932531DF3FC8F00FC8DDE /* MPSNSTableViewCell.xib */; };
+		101932591DF40D1A00FC8DDE /* MPCouponShareObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 101932581DF40D1A00FC8DDE /* MPCouponShareObject.m */; };
+		1019325C1DF421AB00FC8DDE /* MPSNSAreartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1019325B1DF421AB00FC8DDE /* MPSNSAreartView.m */; };
+		1019325E1DF421BF00FC8DDE /* MPSNSAreartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1019325D1DF421BF00FC8DDE /* MPSNSAreartView.xib */; };
 		1020FECB1DF26F7F00DA4184 /* MPStafflistObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1020FECA1DF26F7F00DA4184 /* MPStafflistObject.m */; };
 		102E518A1DD174BC00AFB718 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102E51891DD174BC00AFB718 /* Social.framework */; };
 		102E518C1DD174D500AFB718 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102E518B1DD174D500AFB718 /* Security.framework */; };
@@ -658,6 +665,17 @@
 		1016C80D1DE46C7600BC215E /* first_ttl_recommenditem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_ttl_recommenditem@2x.png"; sourceTree = "<group>"; };
 		1016C80E1DE46C7600BC215E /* first_ttl_recommendmenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first_ttl_recommendmenu.png; sourceTree = "<group>"; };
 		1016C80F1DE46C7600BC215E /* first_ttl_recommendmenu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_ttl_recommendmenu@2x.png"; sourceTree = "<group>"; };
+		1019324B1DF3F6DB00FC8DDE /* MPSNSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSNSViewController.h; sourceTree = "<group>"; };
+		1019324C1DF3F6DB00FC8DDE /* MPSNSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSNSViewController.m; sourceTree = "<group>"; };
+		1019324D1DF3F6DB00FC8DDE /* MPSNSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPSNSViewController.xib; sourceTree = "<group>"; };
+		101932511DF3FC8F00FC8DDE /* MPSNSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSNSTableViewCell.h; sourceTree = "<group>"; };
+		101932521DF3FC8F00FC8DDE /* MPSNSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSNSTableViewCell.m; sourceTree = "<group>"; };
+		101932531DF3FC8F00FC8DDE /* MPSNSTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPSNSTableViewCell.xib; sourceTree = "<group>"; };
+		101932571DF40D1A00FC8DDE /* MPCouponShareObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponShareObject.h; sourceTree = "<group>"; };
+		101932581DF40D1A00FC8DDE /* MPCouponShareObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponShareObject.m; sourceTree = "<group>"; };
+		1019325A1DF421AB00FC8DDE /* MPSNSAreartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSNSAreartView.h; sourceTree = "<group>"; };
+		1019325B1DF421AB00FC8DDE /* MPSNSAreartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSNSAreartView.m; sourceTree = "<group>"; };
+		1019325D1DF421BF00FC8DDE /* MPSNSAreartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPSNSAreartView.xib; sourceTree = "<group>"; };
 		1020FEC91DF26F7F00DA4184 /* MPStafflistObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPStafflistObject.h; sourceTree = "<group>"; };
 		1020FECA1DF26F7F00DA4184 /* MPStafflistObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPStafflistObject.m; sourceTree = "<group>"; };
 		102E51891DD174BC00AFB718 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -1522,6 +1540,38 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		1019324A1DF3F6A700FC8DDE /* SNS */ = {
+			isa = PBXGroup;
+			children = (
+				1019324B1DF3F6DB00FC8DDE /* MPSNSViewController.h */,
+				1019324C1DF3F6DB00FC8DDE /* MPSNSViewController.m */,
+				1019324D1DF3F6DB00FC8DDE /* MPSNSViewController.xib */,
+			);
+			path = SNS;
+			sourceTree = "<group>";
+		};
+		101932501DF3FC0000FC8DDE /* SNS */ = {
+			isa = PBXGroup;
+			children = (
+				101932511DF3FC8F00FC8DDE /* MPSNSTableViewCell.h */,
+				101932521DF3FC8F00FC8DDE /* MPSNSTableViewCell.m */,
+				101932531DF3FC8F00FC8DDE /* MPSNSTableViewCell.xib */,
+				1019325A1DF421AB00FC8DDE /* MPSNSAreartView.h */,
+				1019325B1DF421AB00FC8DDE /* MPSNSAreartView.m */,
+				1019325D1DF421BF00FC8DDE /* MPSNSAreartView.xib */,
+			);
+			path = SNS;
+			sourceTree = "<group>";
+		};
+		101932561DF40D1A00FC8DDE /* SNS */ = {
+			isa = PBXGroup;
+			children = (
+				101932571DF40D1A00FC8DDE /* MPCouponShareObject.h */,
+				101932581DF40D1A00FC8DDE /* MPCouponShareObject.m */,
+			);
+			path = SNS;
+			sourceTree = "<group>";
+		};
 		1020FEC81DF26F7F00DA4184 /* Staff */ = {
 			isa = PBXGroup;
 			children = (
@@ -1575,6 +1625,7 @@
 				100FC6F81DF180C0002E0BB8 /* MPCouponStampObject */,
 				1020FEC81DF26F7F00DA4184 /* Staff */,
 				1053691F1DF2962F00C64015 /* Video */,
+				101932561DF40D1A00FC8DDE /* SNS */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2145,6 +2196,7 @@
 				1001DD1A1DE956A7007F445D /* Reservation */,
 				10488AC21DE966B7005F5DF1 /* Staff */,
 				10488AFF1DE9879F005F5DF1 /* Movie */,
+				1019324A1DF3F6A700FC8DDE /* SNS */,
 			);
 			path = MainViewControllers;
 			sourceTree = "<group>";
@@ -2230,6 +2282,7 @@
 				10488ABE1DE9602E005F5DF1 /* Reservation */,
 				10488AC31DE966C6005F5DF1 /* Staff */,
 				10488B001DE987AC005F5DF1 /* Movie */,
+				101932501DF3FC0000FC8DDE /* SNS */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -3266,6 +3319,7 @@
 				1069E2C41DDE8FAE00FCC6D6 /* header_ttl_setting@2x.png in Resources */,
 				1002217E1DE3395800169B93 /* coupon_24.png in Resources */,
 				10625A641DE7F25D003CE2FB /* members_bg_gold.png in Resources */,
+				101932551DF3FC8F00FC8DDE /* MPSNSTableViewCell.xib in Resources */,
 				107EA22F1DE420CB00A4A8CD /* first_select_top_btn_reserve.png in Resources */,
 				10625A661DE7F25D003CE2FB /* members_bg_orange.png in Resources */,
 				10BC22A91DE83B0400B1A394 /* lady_09.png in Resources */,
@@ -3294,6 +3348,7 @@
 				10625A8B1DE8073C003CE2FB /* header_ttl_stamp.png in Resources */,
 				1002214E1DE2ED6600169B93 /* fourthView_btn_webreserve.png in Resources */,
 				10488ACC1DE9678B005F5DF1 /* MPStaffViewController.xib in Resources */,
+				1019324F1DF3F6DB00FC8DDE /* MPSNSViewController.xib in Resources */,
 				10488B211DE98E68005F5DF1 /* movie_icon_facebook.png in Resources */,
 				1061C6AE1DDDD9B7000CEAA2 /* webview_btn_brouser.png in Resources */,
 				1053692C1DF2B2A000C64015 /* MPMovieSubViewController.xib in Resources */,
@@ -3471,6 +3526,7 @@
 				10BC22AC1DE83B0400B1A394 /* lady_clarity_02.png in Resources */,
 				10C4B7B31DD9DFEE00E26096 /* footer_btn_setting_on.jpg in Resources */,
 				10488B351DE99970005F5DF1 /* movie_08.png in Resources */,
+				1019325E1DF421BF00FC8DDE /* MPSNSAreartView.xib in Resources */,
 				10625AC41DE82380003CE2FB /* hearcatalog_ttl_title.png in Resources */,
 				10625A8E1DE8073C003CE2FB /* stampcard_squares_lefttop.png in Resources */,
 				107EA2441DE4307900A4A8CD /* MPRecommendMenuInfoViewController.xib in Resources */,
@@ -3691,6 +3747,7 @@
 				1046A3461DF133A500AE4DDA /* TheFifth_name_TableViewCell.m in Sources */,
 				1034A7FA1DEFFD250054872D /* MPTheFourthSubViewController.m in Sources */,
 				1046A3481DF133A500AE4DDA /* TheFifth_nick_name_TableViewCell.m in Sources */,
+				1019324E1DF3F6DB00FC8DDE /* MPSNSViewController.m in Sources */,
 				1046A3381DF133A500AE4DDA /* TheFifth_address_TableViewCell.m in Sources */,
 				1061C6A11DDDB08B000CEAA2 /* MPCouponObject.m in Sources */,
 				1046A34A1DF133A500AE4DDA /* TheFifth_shop_TableViewCell.m in Sources */,
@@ -3727,6 +3784,8 @@
 				272CCDA61DCAF096006BC4EB /* KeychainItemWrapper.m in Sources */,
 				1034A7EA1DEEB2FE0054872D /* MPFirstSetting_birthday_TableViewCell.m in Sources */,
 				1034A7D61DEEB2310054872D /* MPFirstSetting_furigana_TableViewCell.m in Sources */,
+				101932541DF3FC8F00FC8DDE /* MPSNSTableViewCell.m in Sources */,
+				101932591DF40D1A00FC8DDE /* MPCouponShareObject.m in Sources */,
 				272CCD9C1DCAF096006BC4EB /* MPApnsObject.m in Sources */,
 				1001DD1F1DE956DA007F445D /* MPReservationViewController.m in Sources */,
 				106A31701DD7082A00C0C741 /* MPTheSecondViewController.m in Sources */,
@@ -3803,6 +3862,7 @@
 				1037B83B1DE05D06000D834C /* MPTheSubMenuCell.m in Sources */,
 				106A31731DD7082A00C0C741 /* MPTheFifthViewController.m in Sources */,
 				1034A7F61DEFEA650054872D /* MyAnnotation.m in Sources */,
+				1019325C1DF421AB00FC8DDE /* MPSNSAreartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

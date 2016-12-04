@@ -128,6 +128,7 @@
 - (UIView *)pageView:(MPQLPageView *)pageView viewForPageAtIndex:(NSInteger)index {
 
     MPTheSecond_SlideView *view_slide = [MPTheSecond_SlideView myView];
+    view_slide.delegate = self;
 
     [view_slide setNumberOfPages:_list_data.count];
     [view_slide setCurrentCount:index];
@@ -293,6 +294,28 @@
 }
 
 - (void)downloadDataFail:(DownloadParam *)param {
+}
+
+- (void)btn_favebook {
+
+    MPSNSViewController *vc = [[MPSNSViewController alloc] initWithNibName:@"MPSNSViewController" bundle:nil];
+    vc.delegate = self;
+    vc.lng_snsType = 1;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)btn_twitter {
+
+    MPSNSViewController *vc = [[MPSNSViewController alloc] initWithNibName:@"MPSNSViewController" bundle:nil];
+    vc.delegate = self;
+    vc.lng_snsType = 2;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)btn_line {
+    
+    MPSNSViewController *vc = [[MPSNSViewController alloc] initWithNibName:@"MPSNSViewController" bundle:nil];
+    vc.delegate = self;
+    vc.lng_snsType = 3;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

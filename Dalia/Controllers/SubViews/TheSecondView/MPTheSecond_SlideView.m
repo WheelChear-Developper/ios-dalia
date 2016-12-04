@@ -54,5 +54,17 @@
         _view_message.hidden = YES;
     }
 }
+- (IBAction)btn_favebook:(id)sender {
+
+    [self.delegate btn_favebook];
+}
+- (IBAction)btn_twitter:(id)sender {
+
+    [self.delegate btn_twitter];
+}
+- (IBAction)btn_line:(id)sender {
+
+    [self.delegate btn_line];
+}
 
 @end

@@ -7,7 +7,9 @@
 //
 
 @protocol MPTheSecond_SlideViewDelegate<NSObject>
-
+- (void)btn_favebook;
+- (void)btn_twitter;
+- (void)btn_line;
 @end
 
 @interface MPTheSecond_SlideView : UIView
@@ -42,5 +44,9 @@
 -(void)setNumberOfPages:(long)count;
 -(void)setCurrentCount:(long)count;
 -(long)getCurrentCount;
+
+- (IBAction)btn_favebook:(id)sender;
+- (IBAction)btn_twitter:(id)sender;
+- (IBAction)btn_line:(id)sender;
 
 @end

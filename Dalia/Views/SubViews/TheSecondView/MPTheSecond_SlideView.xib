@@ -107,6 +107,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSP-HW-pIy">
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             <state key="normal" image="secondview_icon_facebook_maru.png"/>
+                                                            <connections>
+                                                                <action selector="btn_favebook:" destination="iN0-l3-epB" eventType="touchUpInside" id="kea-c7-v2u"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -126,6 +129,9 @@
                                                                 <constraint firstAttribute="width" secondItem="Dc7-8o-jSW" secondAttribute="height" multiplier="1:1" id="Tn7-3l-Kzc"/>
                                                             </constraints>
                                                             <state key="normal" image="secondview_icon_twitter_maru.png"/>
+                                                            <connections>
+                                                                <action selector="btn_twitter:" destination="iN0-l3-epB" eventType="touchUpInside" id="KTO-7K-Sl0"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -142,6 +148,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuO-MV-5F7">
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             <state key="normal" image="secondview_icon_line_maru.png"/>
+                                                            <connections>
+                                                                <action selector="btn_line:" destination="iN0-l3-epB" eventType="touchUpInside" id="33J-RM-QEd"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

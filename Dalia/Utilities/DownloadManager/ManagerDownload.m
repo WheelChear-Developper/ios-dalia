@@ -40,6 +40,8 @@
 #import "MPVideolistObject.h"
 #import "MPVideolist_thumbnailObject.h"
 
+#import "MPCouponShareObject.h"
+
 @implementation ManagerDownload
 + (ManagerDownload *)sharedInstance{
     static ManagerDownload *manager = nil;
@@ -197,7 +199,10 @@
                 [self processGetVideo:listObject with:parameter];
                 break;
 
-
+            case RequestType_GET_LIST_SHARECOUPON:
+                //友達クーポン
+                [self processGetShareCoupon:listObject with:parameter];
+                break;
 
 
 /*
@@ -664,7 +669,23 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
+- (void)getListShareCoupon:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate {
 
+    //友達クーポン
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+
+    [params setValue:appID forKey:@"app_id"];
+    [params setValue:deviceID forKey:@"device_id"];
+    DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_LIST_SHARECOUPON];
+    paramenter.delegate = delegate;
+    NSString *strRequest = @"";
+    strRequest = [NSString stringWithFormat:BASE_URL,GET_LIST_SHARECOUPON];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:strRequest] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT];
+    [request setHTTPMethod:@"POST"];
+    [Utility setParamWithMethodPost:params forRequest:request];
+    [self baseRequestJSON:request parameter:paramenter];
+}
 
 
 
@@ -1678,7 +1699,35 @@
     [param.listData addObject:ary_video];
 }
 
+- (void) processGetShareCoupon:(NSArray *)listObject with:(DownloadParam *)param{
 
+    //友達クーポン
+    for (NSDictionary *dic in listObject) {
+        if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
+            return;
+        }
+
+        MPCouponShareObject *Obj = [[MPCouponShareObject alloc] init];
+        Obj.id = [Utility checkNULL:[dic objectForKey:@"id"]];
+        Obj.name = [Utility checkNULL:[dic objectForKey:@"name"]];
+        Obj.is_due_date = [Utility checkNULL:[dic objectForKey:@"is_due_date"]];
+        Obj.due_date = [Utility checkNULL:[dic objectForKey:@"due_date"]];
+        Obj.limit_num = [Utility checkNULL:[dic objectForKey:@"limit_num"]];
+        Obj.condition = [Utility checkNULL:[dic objectForKey:@"condition"]];
+        Obj.coupon_image = [Utility checkNULL:[dic objectForKey:@"coupon_image"]];
+        Obj.tokuten_mode = [[Utility checkNULL:[dic objectForKey:@"tokuten_mode"]] integerValue];
+        Obj.percentage = [[Utility checkNULL:[dic objectForKey:@"percentage"]] integerValue];
+        Obj.original_price = [[Utility checkNULL:[dic objectForKey:@"original_price"]] integerValue];
+        Obj.open_price = [[Utility checkNULL:[dic objectForKey:@"open_price"]] integerValue];
+        Obj.tokuten_free_word = [Utility checkNULL:[dic objectForKey:@"tokuten_free_word"]];
+        Obj.coupon_type = [Utility checkNULL:[dic objectForKey:@"coupon_type"]];
+        Obj.share_conten = [Utility checkNULL:[dic objectForKey:@"share_conten"]];
+        Obj.tokuten_detail = [Utility checkNULL:[dic objectForKey:@"tokuten_detail"]];
+        Obj.created_at = [Utility checkNULL:[dic objectForKey:@"created_at"]];
+
+        [param.listData addObject:Obj];
+    }
+}
 
 
 

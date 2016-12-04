@@ -97,8 +97,8 @@
 //ビデオ
 #define GET_LIST_VIDEO @"video/getListVideo"
 
-
-
+//友達クーポン
+#define GET_LIST_SHARECOUPON @"coupon/getListShareCoupon"
 
 
 
