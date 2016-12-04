@@ -239,7 +239,7 @@
                 cell = [nib objectAtIndex:0];
             }
 
-            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
             
             return cell;
         }
@@ -254,7 +254,7 @@
                 cell = [nib objectAtIndex:0];
             }
 
-            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
 
             return cell;
         }
@@ -269,7 +269,7 @@
                 cell = [nib objectAtIndex:0];
             }
 
-            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
 
             return cell;
         }
@@ -284,7 +284,7 @@
                 cell = [nib objectAtIndex:0];
             }
 
-            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
 
             return cell;
         }
@@ -299,7 +299,7 @@
                 cell = [nib objectAtIndex:0];
             }
 
-            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
 
             return cell;
         }
@@ -314,7 +314,7 @@
                 cell = [nib objectAtIndex:0];
             }
 
-            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
 
             return cell;
         }
@@ -329,7 +329,7 @@
                 cell = [nib objectAtIndex:0];
             }
 
-            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
 
             return cell;
         }
@@ -344,7 +344,7 @@
                 cell = [nib objectAtIndex:0];
             }
 
-            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
 
             return cell;
         }
@@ -359,7 +359,7 @@
                 cell = [nib objectAtIndex:0];
             }
 
-            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
 
             return cell;
         }
@@ -374,7 +374,7 @@
                 cell = [nib objectAtIndex:0];
             }
 
-            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
 
             return cell;
         }
@@ -389,7 +389,7 @@
                 cell = [nib objectAtIndex:0];
             }
 
-            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
 
             return cell;
         }
@@ -404,7 +404,7 @@
                 cell = [nib objectAtIndex:0];
             }
 
-            cell.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
+            cell.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
 
             return cell;
         }
