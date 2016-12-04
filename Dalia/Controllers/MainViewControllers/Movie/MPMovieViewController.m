@@ -7,9 +7,9 @@
 //
 
 #import "MPMovieViewController.h"
+#import "MPMovieSubViewController.h"
 
 @interface MPMovieViewController ()
-
 @end
 
 @implementation MPMovieViewController
@@ -62,16 +62,6 @@
 
     //会員書情報取得
     [[ManagerDownload sharedInstance] getVideo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
-
-    //メニュー項目設定
-//    _ary_image = [@[@"movie_01.png", @"movie_02.png", @"movie_03.png", @"movie_04.png", @"movie_05.png"] mutableCopy];
-//    _ary_title = [@[@"2分でできる!!\nミディアムヘアを簡単ヘアアレンジ", @"2分でできる!!\nミディアムヘアを簡単ヘアアレンジ", @"2分でできる!!\nミディアムヘアを簡単ヘアアレンジ", @"2分でできる!!\nミディアムヘアを簡単ヘアアレンジ", @"2分でできる!!\nミディアムヘアを簡単ヘアアレンジ"] mutableCopy];
-//    _ary_time = [@[@"00:45", @"00:45", @"00:45", @"00:45", @"00:45"] mutableCopy];
-
-//    _ary_love = [@[@"12", @"12", @"12", @"12", @"12"] mutableCopy];
-
-
-//    [_tbl_menulist reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -204,7 +194,6 @@
         [cell.img_photo setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
     }
 
-//    cell.img_photo.image = [UIImage imageNamed:[_ary_image objectAtIndex:indexPath.row]];
     cell.lbl_name.text = obj_video.title;
     cell.lbl_time.text = obj_video.time;
     cell.lbl_love.text = @"";//[NSString stringWithFormat:@"%ld",obj_video.isLike];
@@ -213,9 +202,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    MPWebViewController *webViewVC = [[MPWebViewController alloc] initWithNibName:@"MPWebViewController" bundle:nil];
-    webViewVC.linkUrl = @"";
-    [self.navigationController pushViewController:webViewVC animated:YES];
+    MPMovieSubViewController *VC = [[MPMovieSubViewController alloc] initWithNibName:@"MPMovieSubViewController" bundle:nil];
+    VC.delegate = self;
+    VC.obj_video = [_list_data objectAtIndex:indexPath.row];
+
+    MPVideolistObject* obj_video = [_list_data objectAtIndex:indexPath.row];
+    NSArray* dic_url_video = obj_video.url_video;
+//    VC.str_videoUrl = [dic_url_video objectAtIndex:indexPath.row];
+
+//    [self.navigationController pushViewController:VC animated:YES];
 }
 
 - (void)resizeTable {

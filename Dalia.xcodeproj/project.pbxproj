@@ -222,6 +222,8 @@
 		1049C9FC1DE6A04500240E6C /* right_yajirushi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1049C9F81DE6A04500240E6C /* right_yajirushi@2x.png */; };
 		105369221DF2962F00C64015 /* MPVideolistObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 105369211DF2962F00C64015 /* MPVideolistObject.m */; };
 		105369251DF2A37000C64015 /* MPVideolist_thumbnailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 105369241DF2A37000C64015 /* MPVideolist_thumbnailObject.m */; };
+		105369291DF2B19300C64015 /* MPMovieSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105369271DF2B19300C64015 /* MPMovieSubViewController.m */; };
+		1053692C1DF2B2A000C64015 /* MPMovieSubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1053692B1DF2B2A000C64015 /* MPMovieSubViewController.xib */; };
 		106130601DD2D10B00B789B5 /* MPShopCatObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 106130411DD2D10B00B789B5 /* MPShopCatObject.m */; };
 		106130611DD2D10B00B789B5 /* MPShopObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 106130431DD2D10B00B789B5 /* MPShopObject.m */; };
 		106130631DD2D10B00B789B5 /* MPConfigObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1061304A1DD2D10B00B789B5 /* MPConfigObject.m */; };
@@ -840,6 +842,9 @@
 		105369211DF2962F00C64015 /* MPVideolistObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVideolistObject.m; sourceTree = "<group>"; };
 		105369231DF2A37000C64015 /* MPVideolist_thumbnailObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVideolist_thumbnailObject.h; sourceTree = "<group>"; };
 		105369241DF2A37000C64015 /* MPVideolist_thumbnailObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVideolist_thumbnailObject.m; sourceTree = "<group>"; };
+		105369261DF2B19300C64015 /* MPMovieSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMovieSubViewController.h; sourceTree = "<group>"; };
+		105369271DF2B19300C64015 /* MPMovieSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMovieSubViewController.m; sourceTree = "<group>"; };
+		1053692B1DF2B2A000C64015 /* MPMovieSubViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPMovieSubViewController.xib; sourceTree = "<group>"; };
 		106130401DD2D10B00B789B5 /* MPShopCatObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopCatObject.h; sourceTree = "<group>"; };
 		106130411DD2D10B00B789B5 /* MPShopCatObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPShopCatObject.m; sourceTree = "<group>"; };
 		106130421DD2D10B00B789B5 /* MPShopObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPShopObject.h; sourceTree = "<group>"; };
@@ -1793,6 +1798,8 @@
 			children = (
 				10488B071DE98816005F5DF1 /* MPMovieViewController.h */,
 				10488B081DE98816005F5DF1 /* MPMovieViewController.m */,
+				105369261DF2B19300C64015 /* MPMovieSubViewController.h */,
+				105369271DF2B19300C64015 /* MPMovieSubViewController.m */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -1811,6 +1818,7 @@
 			children = (
 				10488B021DE987BC005F5DF1 /* images */,
 				10488B0C1DE9892F005F5DF1 /* MPMovieViewController.xib */,
+				1053692B1DF2B2A000C64015 /* MPMovieSubViewController.xib */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -3288,6 +3296,7 @@
 				10488ACC1DE9678B005F5DF1 /* MPStaffViewController.xib in Resources */,
 				10488B211DE98E68005F5DF1 /* movie_icon_facebook.png in Resources */,
 				1061C6AE1DDDD9B7000CEAA2 /* webview_btn_brouser.png in Resources */,
+				1053692C1DF2B2A000C64015 /* MPMovieSubViewController.xib in Resources */,
 				10C4B78C1DD9DFEE00E26096 /* sidemenu_memberscard.png in Resources */,
 				10625AEA1DE82380003CE2FB /* hearcatalog_font_category.png in Resources */,
 				10625ACE1DE82380003CE2FB /* hearcatalog_cate_ladies_bob_s_light.png in Resources */,
@@ -3765,6 +3774,7 @@
 				272CCDAC1DCAF096006BC4EB /* InfinitePagingView.m in Sources */,
 				1075EF0C1DE880FC00974CE1 /* HearCatalogCategoryCollectionCell.m in Sources */,
 				1034A7C21DEEB1B10054872D /* MPFirstSetting_job_TableViewCell.m in Sources */,
+				105369291DF2B19300C64015 /* MPMovieSubViewController.m in Sources */,
 				10C4B8CD1DD9FC2200E26096 /* MPRecommendMenuCell.m in Sources */,
 				106130641DD2D10B00B789B5 /* MPUIConfigObject.m in Sources */,
 				1001DD171DE9383D007F445D /* HearCatalogCategoryListInfo_SlideView.m in Sources */,
