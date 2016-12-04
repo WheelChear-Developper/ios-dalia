@@ -176,12 +176,25 @@
 }
 
 - (IBAction)btn_line:(id)sender {
+
+    NSString *textString = self.str_videoUrl;
+    textString = [textString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *LINEUrlString = [NSString stringWithFormat:@"line://msg/text/%@",textString];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:LINEUrlString]];
 }
 
 - (IBAction)btn_facebook:(id)sender {
+
+    SLComposeViewController *facebookPostVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    [facebookPostVC setInitialText:self.str_videoUrl];
+    [self presentViewController:facebookPostVC animated:YES completion:nil];
 }
 
 - (IBAction)btn_blog:(id)sender {
+
+    MPWebViewController *webViewVC = [[MPWebViewController alloc] initWithNibName:@"MPWebViewController" bundle:nil];
+    webViewVC.linkUrl = self.str_videoUrl;
+    [self.navigationController pushViewController:webViewVC animated:YES];
 }
 @end
 

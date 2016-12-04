@@ -6,9 +6,12 @@
 //  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
+#import <Social/Social.h>
+#import <Twitter/Twitter.h>
 #import "MPBaseViewController.h"
 #import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
+#import "MPWebViewController.h"
 
 @protocol MPMovieSubViewControllerDelegate<NSObject>
 @end
