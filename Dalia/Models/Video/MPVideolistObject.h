@@ -14,8 +14,8 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *detail;
 @property (nonatomic, strong) NSString *published;
-@property (nonatomic, strong) NSMutableArray *url_video;
-@property (nonatomic, strong) NSString *thumbnail;
+@property (nonatomic, strong) NSString *url_video;
+@property (nonatomic, strong) NSMutableDictionary *thumbnail;
 @property (nonatomic, strong) NSString *time;
 @property (nonatomic) long isLike;
 @property (nonatomic) long isSns;

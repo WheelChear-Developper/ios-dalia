@@ -173,7 +173,6 @@
     }
 
     MPVideolistObject* obj_video = [_list_data objectAtIndex:indexPath.row];
-
     NSMutableDictionary* dic_thumbnail = obj_video.thumbnail;
 
     //画像設定
@@ -207,10 +206,9 @@
     VC.obj_video = [_list_data objectAtIndex:indexPath.row];
 
     MPVideolistObject* obj_video = [_list_data objectAtIndex:indexPath.row];
-    NSArray* dic_url_video = obj_video.url_video;
-//    VC.str_videoUrl = [dic_url_video objectAtIndex:indexPath.row];
+    VC.str_videoUrl = obj_video.url_video;
 
-//    [self.navigationController pushViewController:VC animated:YES];
+    [self.navigationController pushViewController:VC animated:YES];
 }
 
 - (void)resizeTable {

@@ -1647,21 +1647,15 @@
             return;
         }
 
+        NSLog(@"dic = %@", dic[@"url_video"][@"url"]);
+        NSLog(@"dic = %@", [Utility checkNULL:[[dic objectForKey:@"url_video"] objectForKey:@"url"]]);
+
         MPVideolistObject *videoObj = [[MPVideolistObject alloc] init];
         videoObj.id = [Utility checkNULL:[dic objectForKey:@"id"]];
         videoObj.title = [Utility checkNULL:[dic objectForKey:@"title"]];
         videoObj.detail = [Utility checkNULL:[dic objectForKey:@"detail"]];
         videoObj.published = [Utility checkNULL:[dic objectForKey:@"published"]];
-
-        NSMutableDictionary* dic_url_video = [Utility checkNULL:[dic objectForKey:@"url_video"]];
-        NSMutableArray* ary_dt = [[NSMutableArray alloc] init];
-        for(long c=0;c<dic_url_video.count;c++){
-
-//            NSString* str_yurl =[[dic_url_video objectForKey:@"url"] objectAtIndex:c];
-
-//            [ary_dt addObject:[[dic_url_video objectForKey:@"url"] objectAtIndex:c]];
-        }
-        videoObj.url_video = [Utility checkNULL:ary_dt];
+        videoObj.url_video = [Utility checkNULL:[[dic objectForKey:@"url_video"] objectForKey:@"url"]];
 
         NSMutableDictionary* ary_thumbnail = [Utility checkNULL:[dic objectForKey:@"thumbnail"]];
         for(long c=0;c<ary_thumbnail.count;c++){

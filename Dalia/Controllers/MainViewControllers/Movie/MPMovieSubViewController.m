@@ -53,23 +53,13 @@
     lbl_title.text = self.obj_video.title;
     lbl_comment.text = self.obj_video.detail;
 
-/*
-    NSString *videoUrl = @"https://www.youtube.com/embed/LmJwP5Qm3Gk";
-    NSString *htmlString = [NSString stringWithFormat:@"<video id='video' width='300' height='200' src='%@' controls autoplay></video>",videoUrl];
-    [web_view loadHTMLString:htmlString baseURL:nil];
-*/
-
-
     // スクロールを無効にする
     web_view.scrollView.scrollEnabled = NO;
     // スクロール時の跳ね返りを抑制する
     web_view.scrollView.bounces = NO;
 
-    // YouTubeのVideo ID
-    NSString *videoID = @"LmJwP5Qm3Gk";
-
     // UIWebViewにセットするHTMLのテンプレート
-    NSString *htmlString = @" \
+    NSString *htmlString = [NSString stringWithFormat:@" \
     <!DOCTYPE html> \
     <html> \
     <head> \
@@ -78,24 +68,20 @@
     <body style=\"background:#000000; margin-top:0px; margin-left:0px\"> \
     <iframe width=\"%f\" \
     height=\"%f\" \
-    src=\"http://www.youtube.com/embed/%@?showinfo=0\" \
+    src=\"%@?showinfo=0\" \
     frameborder=\"0\" \
     allowfullscreen> \
     </iframe> \
     </body> \
     </html> \
-    ";
-
-    // HTMLテンプレートにUIWebViewのサイズとVideo IDをセットする
-    NSString *html = [NSString stringWithFormat:
-                      htmlString,
-                      web_view.frame.size.width,
-                      web_view.frame.size.width,
-                      web_view.frame.size.height,
-                      videoID];
+                            ",
+                            [[dic_thumbnail objectForKey:@"width"] doubleValue],
+                            [[dic_thumbnail objectForKey:@"width"] doubleValue],
+                            [[dic_thumbnail objectForKey:@"height"] doubleValue],
+                            self.str_videoUrl];
 
     // UIWebViewに生成したHTMLをセットする
-    [web_view loadHTMLString:html baseURL:nil];
+    [web_view loadHTMLString:htmlString baseURL:nil];
 
 }
 

@@ -13,7 +13,7 @@
 - (id)init{
 
     if (self = [super init]) {
-        self.url_video = [[NSMutableArray alloc] init];
+        self.thumbnail = [[NSMutableDictionary alloc] init];
     }
 
     return  self;
