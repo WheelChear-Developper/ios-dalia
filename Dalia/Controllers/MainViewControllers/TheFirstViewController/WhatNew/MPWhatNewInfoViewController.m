@@ -157,15 +157,26 @@
 - (void)downloadDataFail:(DownloadParam *)param {
 }
 
-- (IBAction)btn_hart:(id)sender {
-}
-
 - (IBAction)btn_facebook:(id)sender {
+
+    SLComposeViewController *facebookPostVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    [facebookPostVC setInitialText:_lbl_content.text];
+    [self presentViewController:facebookPostVC animated:YES completion:nil];
 }
 
 - (IBAction)btn_twitter:(id)sender {
+
+    SLComposeViewController *twitterPostVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [twitterPostVC setInitialText:_lbl_content.text];
+    [self presentViewController:twitterPostVC animated:YES completion:nil];
 }
 
 - (IBAction)btn_line:(id)sender {
+
+    NSString *textString = _lbl_content.text;
+    textString = [textString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *LINEUrlString = [NSString stringWithFormat:@"line://msg/text/%@",textString];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:LINEUrlString]];
 }
+
 @end
