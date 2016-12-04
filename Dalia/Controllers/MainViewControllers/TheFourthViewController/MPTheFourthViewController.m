@@ -319,10 +319,9 @@
     //    // https://www.google.com/maps/embed/v1/MODE?key=API_KEY&parameters
     //    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://maps.google.com/maps?q=%@,%@&iwloc=0",shopObject.latitude,shopObject.longitude]]];
     //    add Apple Map
-    [NSString stringWithFormat: MAP_VIEW_IFRAME,[NSString stringWithFormat:@"https://maps.apple.com/maps?q=%@,%@&output=embed&iwloc=0",[obj_shopinfo.latitude doubleValue],[obj_shopinfo.longitude doubleValue]]];
+    [NSString stringWithFormat: MAP_VIEW_IFRAME,[NSString stringWithFormat:@"https://maps.apple.com/maps?q=%f,%f&output=embed&iwloc=0",[obj_shopinfo.latitude doubleValue],[obj_shopinfo.longitude doubleValue]]];
     // https://www.google.com/maps/embed/v1/MODE?key=API_KEY&parameters
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://maps.apple.com/maps?q=%@,%@&iwloc=0",[obj_shopinfo.latitude doubleValue],[obj_shopinfo.longitude doubleValue]]]];
-
-
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://maps.apple.com/maps?q=%f,%f&iwloc=0",[obj_shopinfo.latitude doubleValue],[obj_shopinfo.longitude doubleValue]]]];
 }
+
 @end
