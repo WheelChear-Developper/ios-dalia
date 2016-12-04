@@ -208,6 +208,9 @@
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TheFifth_nick_name_TableViewCell" owner:self options:nil];
                 cell_nick_name = [nib objectAtIndex:0];
             }
+            cell_nick_name.txt_field.delegate = self;
+
+            cell_nick_name.IndexPathRow = indexPath.row;
 
             cell_nick_name.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
             cell_nick_name.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
@@ -226,6 +229,9 @@
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TheFifth_gender_TableViewCell" owner:self options:nil];
                 cell_gender = [nib objectAtIndex:0];
             }
+            cell_gender.txt_field.delegate = self;
+
+            cell_gender.IndexPathRow = indexPath.row;
 
             cell_gender.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
             cell_gender.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
@@ -244,6 +250,9 @@
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TheFifth_mail_TableViewCell" owner:self options:nil];
                 cell_mail = [nib objectAtIndex:0];
             }
+            cell_mail.txt_field.delegate = self;
+
+            cell_mail.IndexPathRow = indexPath.row;
 
             cell_mail.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
             cell_mail.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
@@ -262,6 +271,9 @@
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TheFifth_job_TableViewCell" owner:self options:nil];
                 cell_job = [nib objectAtIndex:0];
             }
+            cell_job.txt_field.delegate = self;
+
+            cell_job.IndexPathRow = indexPath.row;
 
             cell_job.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
             cell_job.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
@@ -280,6 +292,9 @@
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TheFifth_zipcode_TableViewCell" owner:self options:nil];
                 cell_zipcode = [nib objectAtIndex:0];
             }
+            cell_zipcode.txt_field.delegate = self;
+
+            cell_zipcode.IndexPathRow = indexPath.row;
 
             cell_zipcode.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
             cell_zipcode.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
@@ -299,6 +314,9 @@
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TheFifth_address_TableViewCell" owner:self options:nil];
                 cell_address = [nib objectAtIndex:0];
             }
+            cell_address.txt_field.delegate = self;
+
+            cell_address.IndexPathRow = indexPath.row;
 
             cell_address.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
             cell_address.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
@@ -317,6 +335,10 @@
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TheFifth_name_TableViewCell" owner:self options:nil];
                 cell_name = [nib objectAtIndex:0];
             }
+            cell_name.txt_field1.delegate = self;
+            cell_name.txt_field2.delegate = self;
+
+            cell_name.IndexPathRow = indexPath.row;
 
             cell_name.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
             cell_name.txt_field1.text = [Utility checkNULL:[[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:0]];
@@ -337,6 +359,10 @@
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TheFifth_furigana_TableViewCell" owner:self options:nil];
                 cell_furigana = [nib objectAtIndex:0];
             }
+            cell_furigana.txt_field1.delegate = self;
+            cell_furigana.txt_field2.delegate = self;
+
+            cell_furigana.IndexPathRow = indexPath.row;
 
             cell_furigana.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
             cell_furigana.txt_field1.text = [Utility checkNULL:[[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:0]];
@@ -357,6 +383,9 @@
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TheFifth_tel_TableViewCell" owner:self options:nil];
                 cell_tel = [nib objectAtIndex:0];
             }
+            cell_tel.txt_field.delegate = self;
+
+            cell_tel.IndexPathRow = indexPath.row;
 
             cell_tel.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
             cell_tel.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
@@ -375,6 +404,9 @@
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TheFifth_generation_TableViewCell" owner:self options:nil];
                 cell_generation = [nib objectAtIndex:0];
             }
+            cell_generation.txt_field.delegate = self;
+
+            cell_generation.IndexPathRow = indexPath.row;
 
             cell_generation.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
             cell_generation.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
@@ -393,6 +425,9 @@
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TheFifth_shop_TableViewCell" owner:self options:nil];
                 cell_shop = [nib objectAtIndex:0];
             }
+            cell_shop.txt_field.delegate = self;
+
+            cell_shop.IndexPathRow = indexPath.row;
 
             cell_shop.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
             cell_shop.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
@@ -411,6 +446,9 @@
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TheFifth_birthday_TableViewCell" owner:self options:nil];
                 cell_birthday = [nib objectAtIndex:0];
             }
+            cell_birthday.txt_field.delegate = self;
+
+            cell_birthday.IndexPathRow = indexPath.row;
 
             cell_birthday.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
             cell_birthday.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
@@ -517,51 +555,94 @@
 
     CGRect rect_screen = [[UIScreen mainScreen] bounds];
     NSLog(@"height : %f", rect_screen.size.height);
-    /*
-     if(textField == self.txt_farstName){
 
-     cgpoint_tf.x = 0.0f;
-     cgpoint_tf.y = 0;
-     }
+    if(textField == cell_nick_name.txt_field){
 
-     if(textField == self.txt_lastName){
+        cgpoint_tf.x = 0.0f;
+        cgpoint_tf.y = 192 + cell_nick_name.IndexPathRow * 40;
+    }
 
-     cgpoint_tf.x = 0.0f;
-     cgpoint_tf.y = 0;
-     }
+    if(textField == cell_gender.txt_field){
 
-     if(textField == self.txt_nickName){
+        cgpoint_tf.x = 0.0f;
+        cgpoint_tf.y = 192 + cell_gender.IndexPathRow * 40;
+    }
 
-     cgpoint_tf.x = 0.0f;
-     cgpoint_tf.y = 254;
-     }
+    if(textField == cell_mail.txt_field){
 
-     if(textField == self.txt_birthday){
+        cgpoint_tf.x = 0.0f;
+        cgpoint_tf.y = 192 + cell_mail.IndexPathRow * 40;
+    }
 
-     cgpoint_tf.x = 0.0f;
-     cgpoint_tf.y = 254;
-     }
+    if(textField == cell_job.txt_field){
 
-     if(textField == self.txt_zipCode){
+        cgpoint_tf.x = 0.0f;
+        cgpoint_tf.y = 192 + cell_job.IndexPathRow * 40;
+    }
 
-     cgpoint_tf.x = 0.0f;
-     cgpoint_tf.y = 314;
-     }
+    if(textField == cell_zipcode.txt_field){
 
-     if(textField == self.txt_introductionCode){
+        cgpoint_tf.x = 0.0f;
+        cgpoint_tf.y = 192 + cell_zipcode.IndexPathRow * 40;
+    }
 
-     cgpoint_tf.x = 0.0f;
-     cgpoint_tf.y = 374;
-     }
+    if(textField == cell_address.txt_field){
 
-     if(textField == self.txt_machineChengeCode){
+        cgpoint_tf.x = 0.0f;
+        cgpoint_tf.y = 192 + cell_address.IndexPathRow * 40;
+    }
 
-     cgpoint_tf.x = 0.0f;
-     cgpoint_tf.y = 434;
-     }
+    if(textField == cell_name.txt_field1){
 
-     kb_type = textField.keyboardType;
-     */
+        cgpoint_tf.x = 0.0f;
+        cgpoint_tf.y = 192 + cell_name.IndexPathRow * 40;
+    }
+
+    if(textField == cell_name.txt_field2){
+
+        cgpoint_tf.x = 0.0f;
+        cgpoint_tf.y = 192 + cell_name.IndexPathRow * 40;
+    }
+
+    if(textField == cell_furigana.txt_field1){
+
+        cgpoint_tf.x = 0.0f;
+        cgpoint_tf.y = 192 + cell_furigana.IndexPathRow * 40;
+    }
+
+    if(textField == cell_furigana.txt_field2){
+
+        cgpoint_tf.x = 0.0f;
+        cgpoint_tf.y = 192 + cell_furigana.IndexPathRow * 40;
+    }
+
+    if(textField == cell_tel.txt_field){
+
+        cgpoint_tf.x = 0.0f;
+        cgpoint_tf.y = 192 + cell_tel.IndexPathRow * 40 + 20;
+    }
+
+    if(textField == cell_generation.txt_field){
+
+        cgpoint_tf.x = 0.0f;
+        cgpoint_tf.y = 192 + cell_generation.IndexPathRow * 40;
+    }
+
+
+    if(textField == cell_shop.txt_field){
+
+        cgpoint_tf.x = 0.0f;
+        cgpoint_tf.y = 192 + cell_shop.IndexPathRow * 40 + 20;
+    }
+
+    if(textField == cell_birthday.txt_field){
+
+        cgpoint_tf.x = 0.0f;
+        cgpoint_tf.y = 192 + cell_birthday.IndexPathRow * 40;
+    }
+
+    kb_type = textField.keyboardType;
+    
     return YES;
 }
 

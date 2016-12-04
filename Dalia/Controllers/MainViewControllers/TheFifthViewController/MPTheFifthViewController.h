@@ -27,7 +27,7 @@
 #import "TheFifth_shop_TableViewCell.h"
 #import "TheFifth_birthday_TableViewCell.h"
 
-@interface MPTheFifthViewController : MPBaseViewController<ManagerDownloadDelegate, UIScrollViewDelegate>
+@interface MPTheFifthViewController : MPBaseViewController<UITextFieldDelegate, ManagerDownloadDelegate, UIScrollViewDelegate>
 {
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;

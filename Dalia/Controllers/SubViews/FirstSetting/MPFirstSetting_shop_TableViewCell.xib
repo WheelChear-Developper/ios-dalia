@@ -18,22 +18,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8h-0H-MpM">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="68"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="67"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ショップ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzP-20-z8b">
-                                <rect key="frame" x="5" y="5" width="56" height="16"/>
+                                <rect key="frame" x="5" y="5" width="56" height="15"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1LB-aW-MmX">
-                                <rect key="frame" x="5" y="31" width="290" height="32"/>
+                                <rect key="frame" x="5" y="30" width="290" height="32"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QoD-Ap-nqS">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="未設定" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QoD-Ap-nqS">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="31"/>
                                         <color key="textColor" red="0.48627450979999998" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="-1" id="bmE-ep-pxQ"/>
+                                        </connections>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="es0-SP-GAn">
                                         <rect key="frame" x="0.0" y="31" width="290" height="1"/>
@@ -59,7 +62,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1LB-aW-MmX" secondAttribute="trailing" constant="5" id="69B-PA-1oh"/>
-                            <constraint firstAttribute="height" constant="68" id="9fe-ES-ozJ"/>
+                            <constraint firstAttribute="height" constant="67" id="9fe-ES-ozJ"/>
                             <constraint firstItem="BzP-20-z8b" firstAttribute="leading" secondItem="C8h-0H-MpM" secondAttribute="leading" constant="5" id="I01-Dy-0Ik"/>
                             <constraint firstItem="BzP-20-z8b" firstAttribute="top" secondItem="C8h-0H-MpM" secondAttribute="top" constant="5" id="NNS-VB-SHC"/>
                             <constraint firstItem="1LB-aW-MmX" firstAttribute="leading" secondItem="C8h-0H-MpM" secondAttribute="leading" constant="5" id="bRF-d1-hfh"/>

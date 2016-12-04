@@ -18,22 +18,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqe-KK-pTK">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="68"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="67"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="性別" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRH-bW-dkF">
-                                <rect key="frame" x="5" y="5" width="28" height="16"/>
+                                <rect key="frame" x="5" y="5" width="28" height="15"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zq7-1e-wQK">
-                                <rect key="frame" x="5" y="31" width="290" height="32"/>
+                                <rect key="frame" x="5" y="30" width="290" height="32"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="e3U-lc-34T">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="未設定" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="e3U-lc-34T">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="31"/>
                                         <color key="textColor" red="0.48627450979999998" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="-1" id="lyi-HQ-6MS"/>
+                                        </connections>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i0Y-iG-RdH">
                                         <rect key="frame" x="0.0" y="31" width="290" height="1"/>
@@ -58,7 +61,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="68" id="9aN-AK-GNp"/>
+                            <constraint firstAttribute="height" constant="67" id="9aN-AK-GNp"/>
                             <constraint firstItem="Zq7-1e-wQK" firstAttribute="leading" secondItem="nqe-KK-pTK" secondAttribute="leading" constant="5" id="Q2h-d3-QBV"/>
                             <constraint firstItem="BRH-bW-dkF" firstAttribute="top" secondItem="nqe-KK-pTK" secondAttribute="top" constant="5" id="UKE-l7-DgX"/>
                             <constraint firstItem="Zq7-1e-wQK" firstAttribute="top" secondItem="BRH-bW-dkF" secondAttribute="bottom" constant="10" id="aUz-aB-EIF"/>

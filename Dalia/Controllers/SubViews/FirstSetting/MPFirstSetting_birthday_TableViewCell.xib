@@ -18,22 +18,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfT-zs-yVU">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="68"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="67"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お誕生日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKt-m4-xMe">
-                                <rect key="frame" x="5" y="5" width="56" height="16"/>
+                                <rect key="frame" x="5" y="5" width="56" height="15"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYN-oa-hVG">
-                                <rect key="frame" x="5" y="31" width="290" height="32"/>
+                                <rect key="frame" x="5" y="30" width="290" height="32"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="月・日は記入せず、４ケタの数字をご入力ください。例：０６２０" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="XHs-ge-ap9">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="未設定" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="XHs-ge-ap9">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="31"/>
                                         <color key="textColor" red="0.48627450979999998" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="-1" id="BFm-H3-LSY"/>
+                                        </connections>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ug0-qk-ama">
                                         <rect key="frame" x="0.0" y="31" width="290" height="1"/>
@@ -58,7 +61,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="68" id="1py-ud-QD3"/>
+                            <constraint firstAttribute="height" constant="67" id="1py-ud-QD3"/>
                             <constraint firstAttribute="bottom" secondItem="uYN-oa-hVG" secondAttribute="bottom" constant="5" id="NpF-1i-qcz"/>
                             <constraint firstAttribute="trailing" secondItem="uYN-oa-hVG" secondAttribute="trailing" constant="5" id="Q7X-XO-o5C"/>
                             <constraint firstItem="YKt-m4-xMe" firstAttribute="leading" secondItem="mfT-zs-yVU" secondAttribute="leading" constant="5" id="RHm-F2-IRr"/>

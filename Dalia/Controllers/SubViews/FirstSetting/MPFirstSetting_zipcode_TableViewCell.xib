@@ -18,22 +18,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GaF-c6-aoy">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="68"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="67"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="郵便番号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-5C-JLL">
-                                <rect key="frame" x="5" y="5" width="56" height="16"/>
+                                <rect key="frame" x="5" y="5" width="56" height="15"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpp-KZ-7UI">
-                                <rect key="frame" x="5" y="31" width="290" height="32"/>
+                                <rect key="frame" x="5" y="30" width="290" height="32"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ハイフンはなしでご入力ください" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="6fj-tD-7g9">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="未設定" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="6fj-tD-7g9">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="31"/>
                                         <color key="textColor" red="0.48627450979999998" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="-1" id="B6Z-Io-GdA"/>
+                                        </connections>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rvl-im-GXX">
                                         <rect key="frame" x="0.0" y="31" width="290" height="1"/>
@@ -60,7 +63,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="tpp-KZ-7UI" secondAttribute="bottom" constant="5" id="4Wd-75-PaK"/>
                             <constraint firstAttribute="trailing" secondItem="tpp-KZ-7UI" secondAttribute="trailing" constant="5" id="5eW-lq-ZFU"/>
-                            <constraint firstAttribute="height" constant="68" id="9aN-qF-1SW"/>
+                            <constraint firstAttribute="height" constant="67" id="9aN-qF-1SW"/>
                             <constraint firstItem="Hom-5C-JLL" firstAttribute="top" secondItem="GaF-c6-aoy" secondAttribute="top" constant="5" id="DsB-06-h9K"/>
                             <constraint firstItem="tpp-KZ-7UI" firstAttribute="top" secondItem="Hom-5C-JLL" secondAttribute="bottom" constant="10" id="Tt3-jR-50P"/>
                             <constraint firstItem="Hom-5C-JLL" firstAttribute="leading" secondItem="GaF-c6-aoy" secondAttribute="leading" constant="5" id="hYI-Yd-ZqS"/>

@@ -18,22 +18,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-jr-FYj">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="68"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="67"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ニックネーム ＊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHa-43-Q5L">
-                                <rect key="frame" x="5" y="5" width="102" height="16"/>
+                                <rect key="frame" x="5" y="5" width="102" height="15"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AtA-sl-QYV">
-                                <rect key="frame" x="5" y="31" width="290" height="32"/>
+                                <rect key="frame" x="5" y="30" width="290" height="32"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="RSR-33-rHp">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="未設定" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="RSR-33-rHp">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="31"/>
                                         <color key="textColor" red="0.48627450979999998" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="-1" id="tnA-ZD-gZI"/>
+                                        </connections>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vkc-hu-Pfg">
                                         <rect key="frame" x="0.0" y="31" width="290" height="1"/>
@@ -64,7 +67,7 @@
                             <constraint firstItem="AtA-sl-QYV" firstAttribute="leading" secondItem="Imf-jr-FYj" secondAttribute="leading" constant="5" id="REx-32-jTb"/>
                             <constraint firstItem="AtA-sl-QYV" firstAttribute="top" secondItem="VHa-43-Q5L" secondAttribute="bottom" constant="10" id="ble-mL-n12"/>
                             <constraint firstItem="VHa-43-Q5L" firstAttribute="top" secondItem="Imf-jr-FYj" secondAttribute="top" constant="5" id="kwd-mi-hEN"/>
-                            <constraint firstAttribute="height" constant="68" id="sPy-Be-O2z"/>
+                            <constraint firstAttribute="height" constant="67" id="sPy-Be-O2z"/>
                         </constraints>
                     </view>
                 </subviews>

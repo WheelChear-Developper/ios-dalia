@@ -18,22 +18,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NLh-cH-nE0">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="68"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="67"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="St2-Ww-QpE">
-                                <rect key="frame" x="5" y="5" width="28" height="16"/>
+                                <rect key="frame" x="5" y="5" width="28" height="15"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gi-Tf-Wnw">
-                                <rect key="frame" x="5" y="31" width="290" height="32"/>
+                                <rect key="frame" x="5" y="30" width="290" height="32"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="LgC-oG-4YN">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="未設定" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="LgC-oG-4YN">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="31"/>
                                         <color key="textColor" red="0.48627450979999998" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="-1" id="4Ml-eA-zIh"/>
+                                        </connections>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQE-8P-GD8">
                                         <rect key="frame" x="0.0" y="31" width="290" height="1"/>
@@ -62,7 +65,7 @@
                             <constraint firstItem="1gi-Tf-Wnw" firstAttribute="top" secondItem="St2-Ww-QpE" secondAttribute="bottom" constant="10" id="HM2-au-aeq"/>
                             <constraint firstAttribute="bottom" secondItem="1gi-Tf-Wnw" secondAttribute="bottom" constant="5" id="YaC-oy-kmp"/>
                             <constraint firstAttribute="trailing" secondItem="1gi-Tf-Wnw" secondAttribute="trailing" constant="5" id="aak-89-qdM"/>
-                            <constraint firstAttribute="height" constant="68" id="flM-g4-hDW"/>
+                            <constraint firstAttribute="height" constant="67" id="flM-g4-hDW"/>
                             <constraint firstItem="St2-Ww-QpE" firstAttribute="top" secondItem="NLh-cH-nE0" secondAttribute="top" constant="5" id="jP2-eH-A8p"/>
                             <constraint firstItem="St2-Ww-QpE" firstAttribute="leading" secondItem="NLh-cH-nE0" secondAttribute="leading" constant="5" id="nlk-fh-ddM"/>
                         </constraints>

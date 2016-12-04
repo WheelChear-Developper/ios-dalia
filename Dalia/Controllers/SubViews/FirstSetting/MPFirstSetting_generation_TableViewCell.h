@@ -6,7 +6,14 @@
 //  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
+@protocol MPFirstSetting_generation_TableViewCellDelegate<NSObject>
+@end
+
 @interface MPFirstSetting_generation_TableViewCell : UITableViewCell
+
+@property (nonatomic) id<MPFirstSetting_generation_TableViewCellDelegate> delegate;
+
+@property (nonatomic) long IndexPathRow;
 
 @property (weak, nonatomic) IBOutlet UILabel *lbl_name;
 @property (weak, nonatomic) IBOutlet UITextField *txt_field;

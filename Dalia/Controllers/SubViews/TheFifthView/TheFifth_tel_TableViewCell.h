@@ -6,7 +6,14 @@
 //  Copyright © 2016年 Mobile Innovation. All rights reserved.
 //
 
+@protocol TheFifth_tel_TableViewCellDelegate<NSObject>
+@end
+
 @interface TheFifth_tel_TableViewCell : UITableViewCell
+
+@property (nonatomic) id<TheFifth_tel_TableViewCellDelegate> delegate;
+
+@property (nonatomic) long IndexPathRow;
 
 @property (weak, nonatomic) IBOutlet UILabel *lbl_name;
 @property (weak, nonatomic) IBOutlet UITextField *txt_field;
