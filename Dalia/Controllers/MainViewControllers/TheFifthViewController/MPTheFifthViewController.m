@@ -209,8 +209,8 @@
                 cell_nick_name = [nib objectAtIndex:0];
             }
 
-            cell_nick_name.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
-            cell_nick_name.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+            cell_nick_name.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+            cell_nick_name.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
 
             [cell_nick_name.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -227,8 +227,8 @@
                 cell_gender = [nib objectAtIndex:0];
             }
 
-            cell_gender.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
-            cell_gender.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+            cell_gender.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+            cell_gender.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
 
             [cell_gender.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -245,8 +245,8 @@
                 cell_mail = [nib objectAtIndex:0];
             }
 
-            cell_mail.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
-            cell_mail.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+            cell_mail.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+            cell_mail.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
 
             [cell_mail.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -263,8 +263,8 @@
                 cell_job = [nib objectAtIndex:0];
             }
 
-            cell_job.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
-            cell_job.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+            cell_job.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+            cell_job.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
 
             [cell_job.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -281,8 +281,8 @@
                 cell_zipcode = [nib objectAtIndex:0];
             }
 
-            cell_zipcode.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
-            cell_zipcode.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+            cell_zipcode.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+            cell_zipcode.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
 
             [cell_zipcode.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -300,8 +300,8 @@
                 cell_address = [nib objectAtIndex:0];
             }
 
-            cell_address.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
-            cell_address.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+            cell_address.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+            cell_address.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
 
             [cell_address.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -318,9 +318,9 @@
                 cell_name = [nib objectAtIndex:0];
             }
 
-            cell_name.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
-            cell_name.txt_field1.text = [[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:0];
-            cell_name.txt_field2.text = [[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:1];
+            cell_name.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+            cell_name.txt_field1.text = [Utility checkNULL:[[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:0]];
+            cell_name.txt_field2.text = [Utility checkNULL:[[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:1]];
 
             [cell_name.txt_field1 addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
             [cell_name.txt_field2 addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
@@ -338,9 +338,9 @@
                 cell_furigana = [nib objectAtIndex:0];
             }
 
-            cell_furigana.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
-            cell_furigana.txt_field1.text = [[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:0];
-            cell_furigana.txt_field2.text = [[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:1];
+            cell_furigana.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+            cell_furigana.txt_field1.text = [Utility checkNULL:[[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:0]];
+            cell_furigana.txt_field2.text = [Utility checkNULL:[[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:1]];
 
             [cell_furigana.txt_field1 addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
             [cell_furigana.txt_field2 addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
@@ -358,8 +358,8 @@
                 cell_tel = [nib objectAtIndex:0];
             }
 
-            cell_tel.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
-            cell_tel.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+            cell_tel.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+            cell_tel.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
 
             [cell_tel.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -376,8 +376,8 @@
                 cell_generation = [nib objectAtIndex:0];
             }
 
-            cell_generation.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
-            cell_generation.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+            cell_generation.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+            cell_generation.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
 
             [cell_generation.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -394,8 +394,8 @@
                 cell_shop = [nib objectAtIndex:0];
             }
 
-            cell_shop.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
-            cell_shop.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+            cell_shop.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+            cell_shop.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
 
             [cell_shop.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -412,8 +412,8 @@
                 cell_birthday = [nib objectAtIndex:0];
             }
 
-            cell_birthday.lbl_name.text = [memberObj.fld_colom objectAtIndex:indexPath.row];
-            cell_birthday.txt_field.text = [memberObj.fld_value objectAtIndex:indexPath.row];
+            cell_birthday.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+            cell_birthday.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
 
             [cell_birthday.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
