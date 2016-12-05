@@ -109,7 +109,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzc-UV-x4o">
                                                     <rect key="frame" x="5" y="5" width="38" height="38"/>
-                                                    <state key="normal" image="movie_icon_heart_black.png"/>
+                                                    <state key="normal" image="movie_icon_heart_white.png"/>
                                                     <connections>
                                                         <action selector="btn_heart:" destination="-1" eventType="touchUpInside" id="QnB-gu-GAN"/>
                                                     </connections>
@@ -249,7 +249,7 @@
     </objects>
     <resources>
         <image name="movie_icon_facebook.png" width="137" height="137"/>
-        <image name="movie_icon_heart_black.png" width="52" height="53"/>
+        <image name="movie_icon_heart_white.png" width="154" height="155"/>
         <image name="movie_icon_line.png" width="160" height="153"/>
         <image name="staff_icon_blgn.png" width="117" height="117"/>
     </resources>
