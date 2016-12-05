@@ -43,7 +43,7 @@
 //メニュー情報
 - (void)getListMenu:(NSString*)deviceID withAppID:(NSString*)appID delegate:(NSObject<ManagerDownloadDelegate>*)delegate;
 //顧客情報取得
-- (void)getMemberInfo:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*) delegate;
+- (void)getMemberInfo:(NSString*)appID withDeviceID:(NSString*)deviceID wirhCall:(NSString*)call delegate:(NSObject<ManagerDownloadDelegate>*) delegate;
 //顧客情報保存
 - (void)setMemberInfo:(NSString*)appID
          withDeviceID:(NSString*)deviceID

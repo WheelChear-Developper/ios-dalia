@@ -97,7 +97,7 @@
     [super viewWillAppear:animated];
 
     //会員情報保存項目取得
-    [[ManagerDownload sharedInstance] getMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
+    [[ManagerDownload sharedInstance] getMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] wirhCall:@"0" delegate:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

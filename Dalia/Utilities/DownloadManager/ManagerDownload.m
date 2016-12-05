@@ -551,13 +551,14 @@
     [self baseRequestJSON:request parameter:paramenter];
 }
 
-- (void)getMemberInfo:(NSString*)appID withDeviceID:(NSString*)deviceID delegate:(NSObject<ManagerDownloadDelegate>*)delegate {
+- (void)getMemberInfo:(NSString*)appID withDeviceID:(NSString*)deviceID wirhCall:(NSString*)call delegate:(NSObject<ManagerDownloadDelegate>*)delegate {
     
     //顧客情報取得
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     
     [params setValue:appID forKey:@"app_id"];
     [params setValue:deviceID forKey:@"device_id"];
+    [params setValue:call forKey:@"call"];
     DownloadParam *paramenter = [[DownloadParam alloc] initWithType:RequestType_GET_MEMBER_INFO];
     paramenter.delegate = delegate;
     NSString *strRequest = @"";
@@ -1435,7 +1436,7 @@
                 [memberInfoObj.fld_colom addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]]];
                 [memberInfoObj.fld_essential addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"essential"]]];
 
-                [memberInfoObj.fld_value addObject:[Utility checkNULL:[dic_values objectForKey:@"nick_name"]]];
+                [memberInfoObj.fld_value addObject:[dic_values objectForKey:@"nick_name"]];
             }
 
             if([str_colom isEqualToString:@"gender"]){
@@ -1444,7 +1445,7 @@
                 [memberInfoObj.fld_colom addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]]];
                 [memberInfoObj.fld_essential addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"essential"]]];
 
-                [memberInfoObj.fld_value addObject:[Utility checkNULL:[dic_values objectForKey:@"gender"]]];
+                [memberInfoObj.fld_value addObject:[dic_values objectForKey:@"gender"]];
             }
             if([str_colom isEqualToString:@"mail"]){
 
@@ -1452,7 +1453,7 @@
                 [memberInfoObj.fld_colom addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]]];
                 [memberInfoObj.fld_essential addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"essential"]]];
 
-                [memberInfoObj.fld_value addObject:[Utility checkNULL:[dic_values objectForKey:@"mail"]]];
+                [memberInfoObj.fld_value addObject:[dic_values objectForKey:@"mail"]];
             }
             if([str_colom isEqualToString:@"job"]){
 
@@ -1460,7 +1461,7 @@
                 [memberInfoObj.fld_colom addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]]];
                 [memberInfoObj.fld_essential addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"essential"]]];
 
-                [memberInfoObj.fld_value addObject:[Utility checkNULL:[dic_values objectForKey:@"job"]]];
+                [memberInfoObj.fld_value addObject:[dic_values objectForKey:@"job"]];
             }
             if([str_colom isEqualToString:@"zipcode"]){
 
@@ -1468,7 +1469,7 @@
                 [memberInfoObj.fld_colom addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]]];
                 [memberInfoObj.fld_essential addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"essential"]]];
 
-                [memberInfoObj.fld_value addObject:[Utility checkNULL:[dic_values objectForKey:@"zipcode"]]];
+                [memberInfoObj.fld_value addObject:[dic_values objectForKey:@"zipcode"]];
             }
             if([str_colom isEqualToString:@"address"]){
 
@@ -1476,7 +1477,7 @@
                 [memberInfoObj.fld_colom addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]]];
                 [memberInfoObj.fld_essential addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"essential"]]];
 
-                [memberInfoObj.fld_value addObject:[Utility checkNULL:[dic_values objectForKey:@"address"]]];
+                [memberInfoObj.fld_value addObject:[dic_values objectForKey:@"address"]];
             }
             if([str_colom isEqualToString:@"name1"]){
 
@@ -1485,8 +1486,8 @@
                 [memberInfoObj.fld_essential addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"essential"]]];
 
                 NSMutableArray *fld_name = [[NSMutableArray alloc] init];
-                [fld_name addObject:[Utility checkNULL:[dic_values objectForKey:@"name1"]]];
-                [fld_name addObject:[Utility checkNULL:[dic_values objectForKey:@"name2"]]];
+                [fld_name addObject:[dic_values objectForKey:@"name1"]];
+                [fld_name addObject:[dic_values objectForKey:@"name2"]];
 
                 [memberInfoObj.fld_value addObject:fld_name];
             }
@@ -1497,8 +1498,8 @@
                 [memberInfoObj.fld_essential addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"essential"]]];
 
                 NSMutableArray *fld_name = [[NSMutableArray alloc] init];
-                [fld_name addObject:[Utility checkNULL:[dic_values objectForKey:@"furigana1"]]];
-                [fld_name addObject:[Utility checkNULL:[dic_values objectForKey:@"furigana2"]]];
+                [fld_name addObject:[dic_values objectForKey:@"furigana1"]];
+                [fld_name addObject:[dic_values objectForKey:@"furigana2"]];
 
                 [memberInfoObj.fld_value addObject:fld_name];
             }
@@ -1508,7 +1509,7 @@
                 [memberInfoObj.fld_colom addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]]];
                 [memberInfoObj.fld_essential addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"essential"]]];
 
-                [memberInfoObj.fld_value addObject:[Utility checkNULL:[dic_values objectForKey:@"tel"]]];
+                [memberInfoObj.fld_value addObject:[dic_values objectForKey:@"tel"]];
             }
             if([str_colom isEqualToString:@"generation"]){
 
@@ -1516,7 +1517,7 @@
                 [memberInfoObj.fld_colom addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]]];
                 [memberInfoObj.fld_essential addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"essential"]]];
 
-                [memberInfoObj.fld_value addObject:[Utility checkNULL:[dic_values objectForKey:@"generation"]]];
+                [memberInfoObj.fld_value addObject:[dic_values objectForKey:@"generation"]];
             }
             if([str_colom isEqualToString:@"shop"]){
 
@@ -1524,7 +1525,7 @@
                 [memberInfoObj.fld_colom addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]]];
                 [memberInfoObj.fld_essential addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"essential"]]];
 
-                [memberInfoObj.fld_value addObject:[Utility checkNULL:[dic_values objectForKey:@"shop"]]];
+                [memberInfoObj.fld_value addObject:[dic_values objectForKey:@"shop"]];
             }
             if([str_colom isEqualToString:@"birthday"]){
 
@@ -1532,7 +1533,7 @@
                 [memberInfoObj.fld_colom addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"title"]]];
                 [memberInfoObj.fld_essential addObject:[Utility checkNULL:[[ary_fields objectAtIndex:l] objectForKey:@"essential"]]];
 
-                [memberInfoObj.fld_value addObject:[Utility checkNULL:[dic_values objectForKey:@"birthday"]]];
+                [memberInfoObj.fld_value addObject:[dic_values objectForKey:@"birthday"]];
             }
         }
 
