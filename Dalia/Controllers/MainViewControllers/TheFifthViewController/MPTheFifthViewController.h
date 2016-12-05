@@ -54,8 +54,6 @@
     long lng_sexflag;
     NSString* str_ID;
     UIDatePicker *datePicker_Birthday;
-    UIDatePicker *datePicker_ChildeBirthday1;
-    UIDatePicker *datePicker_ChildeBirthday2;
 
     __weak IBOutlet UITableView *_tbl_userSetting;
     __weak IBOutlet UITextField *txt_birthday;

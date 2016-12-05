@@ -184,8 +184,27 @@
 
             cell_nick_name.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_nick_name.fld_essential = YES;
+            }else{
+
+                cell_nick_name.fld_essential = NO;
+            }
+
             cell_nick_name.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_nick_name.fld_essential == YES){
+
+                cell_nick_name.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_nick_name.lbl_name.text];
+            }
+
             cell_nick_name.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_nick_name.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_nick_name.txt_field.text = @"";
+            }
 
             [cell_nick_name.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
             
@@ -205,8 +224,27 @@
 
             cell_gender.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_gender.fld_essential = YES;
+            }else{
+
+                cell_gender.fld_essential = NO;
+            }
+
             cell_gender.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_gender.fld_essential == YES){
+
+                cell_gender.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_gender.lbl_name.text];
+            }
+
             cell_gender.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_gender.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_gender.txt_field.text = @"";
+            }
 
             [cell_gender.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -226,8 +264,27 @@
 
             cell_mail.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_mail.fld_essential = YES;
+            }else{
+
+                cell_mail.fld_essential = NO;
+            }
+
             cell_mail.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_mail.fld_essential == YES){
+
+                cell_mail.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_mail.lbl_name.text];
+            }
+
             cell_mail.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_mail.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_mail.txt_field.text = @"";
+            }
 
             [cell_mail.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -247,8 +304,27 @@
 
             cell_job.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_job.fld_essential = YES;
+            }else{
+
+                cell_job.fld_essential = NO;
+            }
+
             cell_job.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_job.fld_essential == YES){
+
+                cell_job.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_job.lbl_name.text];
+            }
+
             cell_job.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_job.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_job.txt_field.text = @"";
+            }
 
             [cell_job.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -268,8 +344,27 @@
 
             cell_zipcode.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_zipcode.fld_essential = YES;
+            }else{
+
+                cell_zipcode.fld_essential = NO;
+            }
+
             cell_zipcode.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_zipcode.fld_essential == YES){
+
+                cell_zipcode.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_zipcode.lbl_name.text];
+            }
+
             cell_zipcode.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_zipcode.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_zipcode.txt_field.text = @"";
+            }
 
             [cell_zipcode.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -303,8 +398,27 @@
 
             cell_address.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_address.fld_essential = YES;
+            }else{
+
+                cell_address.fld_essential = NO;
+            }
+
             cell_address.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_address.fld_essential == YES){
+
+                cell_address.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_address.lbl_name.text];
+            }
+
             cell_address.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_address.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_address.txt_field.text = @"";
+            }
 
             [cell_address.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -325,9 +439,32 @@
 
             cell_name.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_name.fld_essential = YES;
+            }else{
+
+                cell_name.fld_essential = NO;
+            }
+
             cell_name.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_name.fld_essential == YES){
+
+                cell_name.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_name.lbl_name.text];
+            }
+
             cell_name.txt_field1.text = [Utility checkNULL:[[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:0]];
             cell_name.txt_field2.text = [Utility checkNULL:[[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:1]];
+
+            if([cell_name.txt_field1.text isEqualToString:@"<null>"]){
+
+                cell_name.txt_field1.text = @"";
+            }
+            if([cell_name.txt_field2.text isEqualToString:@"<null>"]){
+
+                cell_name.txt_field2.text = @"";
+            }
 
             [cell_name.txt_field1 addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
             [cell_name.txt_field2 addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
@@ -349,9 +486,32 @@
 
             cell_furigana.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_furigana.fld_essential = YES;
+            }else{
+
+                cell_furigana.fld_essential = NO;
+            }
+
             cell_furigana.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_furigana.fld_essential == YES){
+
+                cell_furigana.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_furigana.lbl_name.text];
+            }
+
             cell_furigana.txt_field1.text = [Utility checkNULL:[[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:0]];
             cell_furigana.txt_field2.text = [Utility checkNULL:[[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:1]];
+
+            if([cell_furigana.txt_field1.text isEqualToString:@"<null>"]){
+
+                cell_furigana.txt_field1.text = @"";
+            }
+            if([cell_furigana.txt_field2.text isEqualToString:@"<null>"]){
+
+                cell_furigana.txt_field2.text = @"";
+            }
 
             [cell_furigana.txt_field1 addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
             [cell_furigana.txt_field2 addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
@@ -372,8 +532,27 @@
 
             cell_tel.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_tel.fld_essential = YES;
+            }else{
+
+                cell_tel.fld_essential = NO;
+            }
+
             cell_tel.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_tel.fld_essential == YES){
+
+                cell_tel.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_tel.lbl_name.text];
+            }
+
             cell_tel.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_tel.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_tel.txt_field.text = @"";
+            }
 
             [cell_tel.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -407,8 +586,27 @@
 
             cell_generation.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_generation.fld_essential = YES;
+            }else{
+
+                cell_generation.fld_essential = NO;
+            }
+
             cell_generation.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_generation.fld_essential == YES){
+
+                cell_generation.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_generation.lbl_name.text];
+            }
+
             cell_generation.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_generation.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_generation.txt_field.text = @"";
+            }
 
             [cell_generation.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -428,8 +626,27 @@
 
             cell_shop.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_shop.fld_essential = YES;
+            }else{
+
+                cell_shop.fld_essential = NO;
+            }
+
             cell_shop.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_shop.fld_essential == YES){
+
+                cell_shop.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_shop.lbl_name.text];
+            }
+
             cell_shop.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_shop.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_shop.txt_field.text = @"";
+            }
 
             [cell_shop.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -449,8 +666,27 @@
 
             cell_birthday.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_birthday.fld_essential = YES;
+            }else{
+
+                cell_birthday.fld_essential = NO;
+            }
+
             cell_birthday.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_birthday.fld_essential == YES){
+
+                cell_birthday.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_birthday.lbl_name.text];
+            }
+
             cell_birthday.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_birthday.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_birthday.txt_field.text = @"";
+            }
 
             [cell_birthday.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -557,7 +793,7 @@
         }
     }
     
-    //    [[ManagerDownload sharedInstance] setMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] withShrareCode:@"" withfield:ary_field delegate:self];
+    //[[ManagerDownload sharedInstance] setMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] withShrareCode:@"" withfield:ary_field delegate:self];
 }
 
 - (void)resizeTable {
@@ -720,6 +956,7 @@
     [cell_name.txt_field2 resignFirstResponder];
     [cell_furigana.txt_field1 resignFirstResponder];
     [cell_furigana.txt_field2 resignFirstResponder];
+    [cell_tel.txt_field resignFirstResponder];
     [cell_generation.txt_field resignFirstResponder];
     [cell_shop.txt_field resignFirstResponder];
     [cell_birthday.txt_field resignFirstResponder];
@@ -739,6 +976,7 @@
     [cell_name.txt_field2 resignFirstResponder];
     [cell_furigana.txt_field1 resignFirstResponder];
     [cell_furigana.txt_field2 resignFirstResponder];
+    [cell_tel.txt_field resignFirstResponder];
     [cell_generation.txt_field resignFirstResponder];
     [cell_shop.txt_field resignFirstResponder];
     [cell_birthday.txt_field resignFirstResponder];
@@ -885,6 +1123,7 @@
     [cell_name.txt_field2 resignFirstResponder];
     [cell_furigana.txt_field1 resignFirstResponder];
     [cell_furigana.txt_field2 resignFirstResponder];
+    [cell_tel.txt_field resignFirstResponder];
     [cell_generation.txt_field resignFirstResponder];
     [cell_shop.txt_field resignFirstResponder];
     [cell_birthday.txt_field resignFirstResponder];
@@ -892,15 +1131,16 @@
 }
 
 - (IBAction)btn_start:(id)sender {
-/*
+
     //文字数チェック
     BOOL bln_LengthCheck = YES;
-    if(self.txt_nickName.text.length == 0){
+
+    if(cell_nick_name.txt_field.text.length == 0 && cell_nick_name.fld_essential == YES){
         
         bln_LengthCheck = NO;
         
         UIAlertController *alert =
-        [UIAlertController alertControllerWithTitle:@"ニックネームが設定されていません。"
+        [UIAlertController alertControllerWithTitle:@"絶対入力項目が設定されていません。"
                                             message:@""
                                      preferredStyle:UIAlertControllerStyleAlert];
         
@@ -912,56 +1152,251 @@
         
         [self presentViewController:alert animated:YES completion:nil];
     }
-    if(self.txt_birthday.text.length < 4){
-        
+
+    if(cell_gender.txt_field.text.length == 0 && cell_gender.fld_essential == YES){
+
         bln_LengthCheck = NO;
-        
+
         UIAlertController *alert =
-        [UIAlertController alertControllerWithTitle:@"生年月日が設定されていません。"
+        [UIAlertController alertControllerWithTitle:@"絶対入力項目が設定されていません。"
                                             message:@""
                                      preferredStyle:UIAlertControllerStyleAlert];
-        
+
         [alert addAction:[UIAlertAction actionWithTitle:@"OK"
                                                   style:UIAlertActionStyleDefault
                                                 handler:^(UIAlertAction *action) {
-                                                    
+
                                                 }]];
-        
+
         [self presentViewController:alert animated:YES completion:nil];
     }
-    if(self.txt_zipCode.text.length < 7){
-        
+
+    if(cell_mail.txt_field.text.length == 0 && cell_mail.fld_essential == YES){
+
         bln_LengthCheck = NO;
-        
+
         UIAlertController *alert =
-        [UIAlertController alertControllerWithTitle:@"郵便番号の入力桁数が足りません。"
-                                            message:@"7桁で入力してください。"
+        [UIAlertController alertControllerWithTitle:@"絶対入力項目が設定されていません。"
+                                            message:@""
                                      preferredStyle:UIAlertControllerStyleAlert];
-        
+
         [alert addAction:[UIAlertAction actionWithTitle:@"OK"
                                                   style:UIAlertActionStyleDefault
                                                 handler:^(UIAlertAction *action) {
-                                                    
+
                                                 }]];
-        
+
         [self presentViewController:alert animated:YES completion:nil];
     }
-    
+
+    if(cell_job.txt_field.text.length == 0 && cell_job.fld_essential == YES){
+
+        bln_LengthCheck = NO;
+
+        UIAlertController *alert =
+        [UIAlertController alertControllerWithTitle:@"絶対入力項目が設定されていません。"
+                                            message:@""
+                                     preferredStyle:UIAlertControllerStyleAlert];
+
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction *action) {
+
+                                                }]];
+
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+
+    if(cell_zipcode.txt_field.text.length == 0 && cell_zipcode.fld_essential == YES){
+
+        bln_LengthCheck = NO;
+
+        UIAlertController *alert =
+        [UIAlertController alertControllerWithTitle:@"絶対入力項目が設定されていません。"
+                                            message:@""
+                                     preferredStyle:UIAlertControllerStyleAlert];
+
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction *action) {
+
+                                                }]];
+
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+
+    if(cell_address.txt_field.text.length == 0 && cell_address.fld_essential == YES){
+
+        bln_LengthCheck = NO;
+
+        UIAlertController *alert =
+        [UIAlertController alertControllerWithTitle:@"絶対入力項目が設定されていません。"
+                                            message:@""
+                                     preferredStyle:UIAlertControllerStyleAlert];
+
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction *action) {
+
+                                                }]];
+
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+
+    if(cell_name.txt_field1.text.length == 0 && cell_name.txt_field2.text.length == 0 && cell_furigana.fld_essential == YES){
+
+        bln_LengthCheck = NO;
+
+        UIAlertController *alert =
+        [UIAlertController alertControllerWithTitle:@"絶対入力項目が設定されていません。"
+                                            message:@""
+                                     preferredStyle:UIAlertControllerStyleAlert];
+
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction *action) {
+
+                                                }]];
+
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+
+    if(cell_furigana.txt_field1.text.length == 0 && cell_furigana.txt_field2.text.length == 0 && cell_furigana.fld_essential == YES){
+
+        bln_LengthCheck = NO;
+
+        UIAlertController *alert =
+        [UIAlertController alertControllerWithTitle:@"絶対入力項目が設定されていません。"
+                                            message:@""
+                                     preferredStyle:UIAlertControllerStyleAlert];
+
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction *action) {
+
+                                                }]];
+
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+
+    if(cell_tel.txt_field.text.length == 0 && cell_tel.fld_essential == YES){
+
+        bln_LengthCheck = NO;
+
+        UIAlertController *alert =
+        [UIAlertController alertControllerWithTitle:@"絶対入力項目が設定されていません。"
+                                            message:@""
+                                     preferredStyle:UIAlertControllerStyleAlert];
+
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction *action) {
+
+                                                }]];
+
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+
+    if(cell_generation.txt_field.text.length == 0 && cell_generation.fld_essential == YES){
+
+        bln_LengthCheck = NO;
+
+        UIAlertController *alert =
+        [UIAlertController alertControllerWithTitle:@"絶対入力項目が設定されていません。"
+                                            message:@""
+                                     preferredStyle:UIAlertControllerStyleAlert];
+
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction *action) {
+
+                                                }]];
+
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+
+    if(cell_shop.txt_field.text.length == 0 && cell_shop.fld_essential == YES){
+
+        bln_LengthCheck = NO;
+
+        UIAlertController *alert =
+        [UIAlertController alertControllerWithTitle:@"絶対入力項目が設定されていません。"
+                                            message:@""
+                                     preferredStyle:UIAlertControllerStyleAlert];
+
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction *action) {
+
+                                                }]];
+
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+
+    if(cell_birthday.txt_field.text.length == 0 && cell_birthday.fld_essential == YES){
+
+        bln_LengthCheck = NO;
+
+        UIAlertController *alert =
+        [UIAlertController alertControllerWithTitle:@"絶対入力項目が設定されていません。"
+                                            message:@""
+                                     preferredStyle:UIAlertControllerStyleAlert];
+
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction *action) {
+
+                                                }]];
+
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+
     if(bln_LengthCheck == YES){
 
-//        MPSettingAlertView *alertView = (MPSettingAlertView*) [Utility viewInBundleWithName:@"MPSettingAlertView"];
-//        alertView.delegate = self;
-//        [[MPAppDelegate sharedMPAppDelegate].window addSubview:alertView];
+        //ユーザー情報取得
+        NSMutableArray* ary_field = [[NSMutableArray alloc] init];
+        for(long l=0;l<memberObj.fld_value.count;l++){
+
+            if([[memberObj.fld_name objectAtIndex:l] isEqualToString:@"name1"]){
+
+                NSMutableArray* ary1 = [[NSMutableArray alloc] init];
+                [ary1 addObject:@"name1"];
+                [ary1 addObject:[[memberObj.fld_value objectAtIndex:l] objectAtIndex:0]];
+
+                [ary_field addObject:ary1];
+
+                NSMutableArray* ary2 = [[NSMutableArray alloc] init];
+                [ary2 addObject:@"name2"];
+                [ary2 addObject:[[memberObj.fld_value objectAtIndex:l] objectAtIndex:1]];
+
+                [ary_field addObject:ary2];
+            }else
+                if([[memberObj.fld_name objectAtIndex:l] isEqualToString:@"furigana1"]){
+
+                    NSMutableArray* ary1 = [[NSMutableArray alloc] init];
+                    [ary1 addObject:@"furigana1"];
+                    [ary1 addObject:[[memberObj.fld_value objectAtIndex:l] objectAtIndex:0]];
+
+                    [ary_field addObject:ary1];
+
+                    NSMutableArray* ary2 = [[NSMutableArray alloc] init];
+                    [ary2 addObject:@"furigana2"];
+                    [ary2 addObject:[[memberObj.fld_value objectAtIndex:l] objectAtIndex:1]];
+
+                    [ary_field addObject:ary2];
+                }else{
+
+                    NSMutableArray* ary = [[NSMutableArray alloc] init];
+                    [ary addObject:[memberObj.fld_name objectAtIndex:l]];
+                    [ary addObject:[memberObj.fld_value objectAtIndex:l]];
+                    
+                    [ary_field addObject:ary];
+                }
+        }
+        
+        [[ManagerDownload sharedInstance] setMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] withShrareCode:@"" withfield:ary_field delegate:self];
 
     }
-*/
-
-}
-
--(void)setUserData {
-
-    //ユーザー情報取得
-//    [[ManagerDownload sharedInstance] setMemberInfo:str_ID withAppID:[Utility getAppID] withMemberNO:[[NSUserDefaults standardUserDefaults] objectForKey:MEMBER_NO] withDeviceID:[Utility getDeviceID] withNickName:self.txt_nickname.text withGender:lng_sexflag withBirthday:self.txt_birthday.text withZipcode:self.txt_zipcode.text withChild1Name:self.txt_childrenname1.text withChild1Birthday:self.txt_childrenBirthday1.text withChild2Name:self.txt_childrenname2.text withChild2Birthday:self.txt_childrenBirthday2.text delegate:self];
 }
 
 - (IBAction)btn_skip:(id)sender {

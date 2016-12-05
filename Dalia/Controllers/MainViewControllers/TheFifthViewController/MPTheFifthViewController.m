@@ -200,8 +200,27 @@
 
             cell_nick_name.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_nick_name.fld_essential = YES;
+            }else{
+
+                cell_nick_name.fld_essential = NO;
+            }
+
             cell_nick_name.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_nick_name.fld_essential == YES){
+
+                cell_nick_name.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_nick_name.lbl_name.text];
+            }
+            
             cell_nick_name.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_nick_name.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_nick_name.txt_field.text = @"";
+            }
 
             [cell_nick_name.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -221,8 +240,27 @@
 
             cell_gender.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_gender.fld_essential = YES;
+            }else{
+
+                cell_gender.fld_essential = NO;
+            }
+
             cell_gender.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_gender.fld_essential == YES){
+
+                cell_gender.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_gender.lbl_name.text];
+            }
+
             cell_gender.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_gender.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_gender.txt_field.text = @"";
+            }
 
             [cell_gender.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -242,8 +280,27 @@
 
             cell_mail.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_mail.fld_essential = YES;
+            }else{
+
+                cell_mail.fld_essential = NO;
+            }
+
             cell_mail.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_mail.fld_essential == YES){
+
+                cell_mail.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_mail.lbl_name.text];
+            }
+
             cell_mail.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_mail.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_mail.txt_field.text = @"";
+            }
 
             [cell_mail.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -263,8 +320,27 @@
 
             cell_job.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_job.fld_essential = YES;
+            }else{
+
+                cell_job.fld_essential = NO;
+            }
+
             cell_job.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_job.fld_essential == YES){
+
+                cell_job.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_job.lbl_name.text];
+            }
+
             cell_job.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_job.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_job.txt_field.text = @"";
+            }
 
             [cell_job.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -284,8 +360,27 @@
 
             cell_zipcode.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_zipcode.fld_essential = YES;
+            }else{
+
+                cell_zipcode.fld_essential = NO;
+            }
+
             cell_zipcode.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_zipcode.fld_essential == YES){
+
+                cell_zipcode.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_zipcode.lbl_name.text];
+            }
+
             cell_zipcode.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_zipcode.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_zipcode.txt_field.text = @"";
+            }
 
             [cell_zipcode.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -319,8 +414,27 @@
 
             cell_address.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_address.fld_essential = YES;
+            }else{
+
+                cell_address.fld_essential = NO;
+            }
+
             cell_address.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_address.fld_essential == YES){
+
+                cell_address.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_address.lbl_name.text];
+            }
+
             cell_address.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_address.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_address.txt_field.text = @"";
+            }
 
             [cell_address.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -341,9 +455,32 @@
 
             cell_name.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_name.fld_essential = YES;
+            }else{
+
+                cell_name.fld_essential = NO;
+            }
+
             cell_name.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_name.fld_essential == YES){
+
+                cell_name.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_name.lbl_name.text];
+            }
+
             cell_name.txt_field1.text = [Utility checkNULL:[[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:0]];
             cell_name.txt_field2.text = [Utility checkNULL:[[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:1]];
+
+            if([cell_name.txt_field1.text isEqualToString:@"<null>"]){
+
+                cell_name.txt_field1.text = @"";
+            }
+            if([cell_name.txt_field2.text isEqualToString:@"<null>"]){
+
+                cell_name.txt_field2.text = @"";
+            }
 
             [cell_name.txt_field1 addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
             [cell_name.txt_field2 addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
@@ -365,9 +502,32 @@
 
             cell_furigana.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_furigana.fld_essential = YES;
+            }else{
+
+                cell_furigana.fld_essential = NO;
+            }
+
             cell_furigana.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_furigana.fld_essential == YES){
+
+                cell_furigana.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_furigana.lbl_name.text];
+            }
+
             cell_furigana.txt_field1.text = [Utility checkNULL:[[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:0]];
             cell_furigana.txt_field2.text = [Utility checkNULL:[[memberObj.fld_value objectAtIndex:indexPath.row] objectAtIndex:1]];
+
+            if([cell_furigana.txt_field1.text isEqualToString:@"<null>"]){
+
+                cell_furigana.txt_field1.text = @"";
+            }
+            if([cell_furigana.txt_field2.text isEqualToString:@"<null>"]){
+
+                cell_furigana.txt_field2.text = @"";
+            }
 
             [cell_furigana.txt_field1 addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
             [cell_furigana.txt_field2 addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
@@ -388,8 +548,27 @@
 
             cell_tel.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_tel.fld_essential = YES;
+            }else{
+
+                cell_tel.fld_essential = NO;
+            }
+
             cell_tel.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_tel.fld_essential == YES){
+
+                cell_tel.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_tel.lbl_name.text];
+            }
+
             cell_tel.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_tel.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_tel.txt_field.text = @"";
+            }
 
             [cell_tel.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -423,8 +602,27 @@
 
             cell_generation.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_generation.fld_essential = YES;
+            }else{
+
+                cell_generation.fld_essential = NO;
+            }
+
             cell_generation.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_generation.fld_essential == YES){
+
+                cell_generation.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_generation.lbl_name.text];
+            }
+
             cell_generation.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_generation.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_generation.txt_field.text = @"";
+            }
 
             [cell_generation.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -444,8 +642,27 @@
 
             cell_shop.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_shop.fld_essential = YES;
+            }else{
+
+                cell_shop.fld_essential = NO;
+            }
+
             cell_shop.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_shop.fld_essential == YES){
+
+                cell_shop.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_shop.lbl_name.text];
+            }
+
             cell_shop.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_shop.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_shop.txt_field.text = @"";
+            }
 
             [cell_shop.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -465,8 +682,27 @@
 
             cell_birthday.IndexPathRow = indexPath.row;
 
+            if([[memberObj.fld_essential objectAtIndex:indexPath.row] integerValue] == 1){
+
+                cell_birthday.fld_essential = YES;
+            }else{
+
+                cell_birthday.fld_essential = NO;
+            }
+
             cell_birthday.lbl_name.text = [Utility checkNULL:[memberObj.fld_colom objectAtIndex:indexPath.row]];
+
+            if(cell_birthday.fld_essential == YES){
+
+                cell_birthday.lbl_name.text = [NSString stringWithFormat:@"%@ *", cell_birthday.lbl_name.text];
+            }
+
             cell_birthday.txt_field.text = [Utility checkNULL:[memberObj.fld_value objectAtIndex:indexPath.row]];
+
+            if([cell_birthday.txt_field.text isEqualToString:@"<null>"]){
+
+                cell_birthday.txt_field.text = @"";
+            }
 
             [cell_birthday.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
@@ -747,6 +983,7 @@
     [cell_name.txt_field2 resignFirstResponder];
     [cell_furigana.txt_field1 resignFirstResponder];
     [cell_furigana.txt_field2 resignFirstResponder];
+    [cell_tel.txt_field resignFirstResponder];
     [cell_generation.txt_field resignFirstResponder];
     [cell_shop.txt_field resignFirstResponder];
     [cell_birthday.txt_field resignFirstResponder];
@@ -765,6 +1002,7 @@
     [cell_name.txt_field2 resignFirstResponder];
     [cell_furigana.txt_field1 resignFirstResponder];
     [cell_furigana.txt_field2 resignFirstResponder];
+    [cell_tel.txt_field resignFirstResponder];
     [cell_generation.txt_field resignFirstResponder];
     [cell_shop.txt_field resignFirstResponder];
     [cell_birthday.txt_field resignFirstResponder];
@@ -910,6 +1148,7 @@
     [cell_name.txt_field2 resignFirstResponder];
     [cell_furigana.txt_field1 resignFirstResponder];
     [cell_furigana.txt_field2 resignFirstResponder];
+    [cell_tel.txt_field resignFirstResponder];
     [cell_generation.txt_field resignFirstResponder];
     [cell_shop.txt_field resignFirstResponder];
     [cell_birthday.txt_field resignFirstResponder];

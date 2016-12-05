@@ -15,6 +15,8 @@
 
 @property (nonatomic) long IndexPathRow;
 
+@property (nonatomic) BOOL fld_essential;
+
 @property (weak, nonatomic) IBOutlet UILabel *lbl_name;
 @property (weak, nonatomic) IBOutlet UITextField *txt_field1;
 @property (weak, nonatomic) IBOutlet UITextField *txt_field2;
