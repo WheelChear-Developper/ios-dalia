@@ -195,7 +195,7 @@
 
     cell.lbl_name.text = obj_video.title;
     cell.lbl_time.text = obj_video.time;
-    cell.lbl_love.text = @"";//[NSString stringWithFormat:@"%ld",obj_video.isLike];
+    cell.lbl_love.text = [NSString stringWithFormat:@"%ld",obj_video.like];
     return cell;
 }
 
