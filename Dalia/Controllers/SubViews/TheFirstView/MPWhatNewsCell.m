@@ -46,15 +46,6 @@
                                        
                                    }
                                    [_img_Photo setImage:image];
-
-                                   float width = image.size.width;
-                                   float height = image.size.height;
-                                   float flt_whide = 320 / width;
-                                   float flt_heght = height * flt_whide;
-                                   _img_Photo.translatesAutoresizingMaskIntoConstraints = YES;
-                                   CGRect rct = _img_Photo.frame;
-                                   rct.size.height = flt_heght;
-                                   _img_Photo.frame = rct;
                                }];
     }else{
 
