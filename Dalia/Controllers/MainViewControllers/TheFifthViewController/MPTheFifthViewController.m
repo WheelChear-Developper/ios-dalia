@@ -1008,6 +1008,26 @@
     [cell_birthday.txt_field resignFirstResponder];
 }
 
+//カスタムナビゲーション押した時にキーボード閉じる為のメソッド
+- (void)hideKeyboard {
+
+    //キーボードクローズ
+    [cell_nick_name.txt_field resignFirstResponder];
+    [cell_gender.txt_field resignFirstResponder];
+    [cell_mail.txt_field resignFirstResponder];
+    [cell_job.txt_field resignFirstResponder];
+    [cell_zipcode.txt_field resignFirstResponder];
+    [cell_address.txt_field resignFirstResponder];
+    [cell_name.txt_field1 resignFirstResponder];
+    [cell_name.txt_field2 resignFirstResponder];
+    [cell_furigana.txt_field1 resignFirstResponder];
+    [cell_furigana.txt_field2 resignFirstResponder];
+    [cell_tel.txt_field resignFirstResponder];
+    [cell_generation.txt_field resignFirstResponder];
+    [cell_shop.txt_field resignFirstResponder];
+    [cell_birthday.txt_field resignFirstResponder];
+}
+
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
 }
 

@@ -470,7 +470,14 @@
     _view_custom_navigationView.hidden = isEnable;
 }
 
+//カスタムナビゲーション押した時にキーボード閉じる為のメソッド（子指定）
+-(void) hideKeyboard {
+}
+
 - (void)custom_open_NavigationMenu:(UIButton*)button {
+
+    //カスタムナビゲーション押した時にキーボード閉じる為のメソッド
+    [self hideKeyboard];
 
     _view_NaviMenu.hidden = NO;
     _iv_custom_config.hidden = NO;
