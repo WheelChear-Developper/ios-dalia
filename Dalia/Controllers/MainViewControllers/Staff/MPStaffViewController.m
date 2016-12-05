@@ -146,9 +146,9 @@
             for (long c = 0;c < [ary_staff count];c++){
 
                 //スタッフ名
-                NSString* str_staffName1 = [[ary_staff valueForKey:@"name1"] objectAtIndex:c];
+                NSString* str_staffName1 = [NSString stringWithFormat:@"%@ %@",[[ary_staff valueForKey:@"name1"] objectAtIndex:c], [[ary_staff valueForKey:@"name2"] objectAtIndex:c]];
                 [_ary_name addObject:str_staffName1];
-                NSString* str_staffName2 = [[ary_staff valueForKey:@"name2"] objectAtIndex:c];
+                NSString* str_staffName2 = [[ary_staff valueForKey:@"post"] objectAtIndex:c];
                 [_ary_subname addObject:str_staffName2];
 
                 //画像

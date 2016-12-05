@@ -67,8 +67,8 @@
         [img_photo setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
     }
 
-    lbl_name1.text = self.obj_staff.name1;
-    lbl_name2.text = self.obj_staff.name2;
+    lbl_name1.text = [NSString stringWithFormat:@"%@ %@",self.obj_staff.name1, self.obj_staff.name2];
+    lbl_name2.text = self.obj_staff.post;
     lbl_comment.text = self.obj_staff.content;
 
     _str_instagram_url = self.obj_staff.instagram_url;
