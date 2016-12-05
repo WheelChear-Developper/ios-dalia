@@ -158,8 +158,8 @@
     if(isEnable){
 
         //閉じる場合
-        [UIView animateWithDuration:0.5f
-                              delay:0.5f
+        [UIView animateWithDuration:0.3f
+                              delay:0.3f
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
 
@@ -177,8 +177,8 @@
     }else{
 
         //開ける場合
-        [UIView animateWithDuration:0.5f
-                              delay:0.5f
+        [UIView animateWithDuration:0.3f
+                              delay:0.3f
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
 
@@ -428,8 +428,8 @@
     if(flg){
 
         //閉じる場合
-        [UIView animateWithDuration:0.5f
-                              delay:0.5f
+        [UIView animateWithDuration:0.3f
+                              delay:0.3f
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
 
@@ -447,8 +447,8 @@
     }else{
 
         //開ける場合
-        [UIView animateWithDuration:0.5f
-                              delay:0.5f
+        [UIView animateWithDuration:0.3f
+                              delay:0.3f
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
 
