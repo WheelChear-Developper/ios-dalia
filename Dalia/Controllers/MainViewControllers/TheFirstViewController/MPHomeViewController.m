@@ -537,49 +537,49 @@
     switch (no) {
         case 1:
         {
-            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_memberscard.png"] forState:UIControlStateNormal];
+            [btn setImage:[UIImage imageNamed:@"first_select_btn_memberscard.png"] forState:UIControlStateNormal];
         }
             break;
 
         case 2:
         {
-            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_whatsnew.png"] forState:UIControlStateNormal];
+            [btn setImage:[UIImage imageNamed:@"first_select_btn_whatsnew.png"] forState:UIControlStateNormal];
         }
             break;
 
         case 3:
         {
-            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_stamp.png"] forState:UIControlStateNormal];
+            [btn setImage:[UIImage imageNamed:@"first_select_btn_stamp.png"] forState:UIControlStateNormal];
         }
             break;
 
         case 4:
         {
-            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_onlineshop.png"] forState:UIControlStateNormal];
+            [btn setImage:[UIImage imageNamed:@"first_select_btn_onlineshop.png"] forState:UIControlStateNormal];
         }
             break;
 
         case 5:
         {
-            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_point.png"] forState:UIControlStateNormal];
+            [btn setImage:[UIImage imageNamed:@"first_select_btn_point.png"] forState:UIControlStateNormal];
         }
             break;
 
         case 6:
         {
-            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_reserve.png"] forState:UIControlStateNormal];
+            [btn setImage:[UIImage imageNamed:@"first_select_btn_reserve.png"] forState:UIControlStateNormal];
         }
             break;
 
         case 7:
         {
-            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_staff.png"] forState:UIControlStateNormal];
+            [btn setImage:[UIImage imageNamed:@"first_select_btn_staff.png"] forState:UIControlStateNormal];
         }
             break;
 
         case 8:
         {
-            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_karte.png"] forState:UIControlStateNormal];
+            [btn setImage:[UIImage imageNamed:@"first_select_btn_karte.png"] forState:UIControlStateNormal];
         }
             break;
 
@@ -591,7 +591,7 @@
 
         case 10:
         {
-            [btn setImage:[UIImage imageNamed:@"first_select_top_btn_moviechannnel.png"] forState:UIControlStateNormal];
+            [btn setImage:[UIImage imageNamed:@"first_select_btn_moviechannnel.png"] forState:UIControlStateNormal];
         }
             break;
             
