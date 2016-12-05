@@ -52,6 +52,7 @@
     [_tbl_userSetting registerNib:nib12 forCellReuseIdentifier:@"first_birthday_Identifier"];
     [_tbl_userSetting reloadData];
 
+    //紹介コード入力フィールド設定
     [self.txt_introductionCode setTintColor:UIColor.whiteColor];
 
     if(self.txt_introductionCode.placeholder != nil){
@@ -59,36 +60,8 @@
         self.txt_introductionCode.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.txt_introductionCode.placeholder                                                                           attributes:@{ NSForegroundColorAttributeName:color }];
     }
 
+    self.txt_introductionCode.textColor = [UIColor whiteColor];
 
-
-
-
-/*
-
-
-    //DataPicker 設定
-    datePicker_Birthday = [[UIDatePicker alloc] init];
-    datePicker_Birthday.datePickerMode=UIDatePickerModeDate;
-    datePicker_Birthday.maximumDate = [NSDate date];
-    datePicker_Birthday.backgroundColor = [UIColor whiteColor];
-    datePicker_Birthday.locale=[[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"];
-    [datePicker_Birthday addTarget:self action:@selector(dateSet_Birthday:) forControlEvents:UIControlEventValueChanged];
-    self.txt_birthday.inputView = datePicker_Birthday;
-
-    //DataPicker上部バー作成
-    UIToolbar *toolbar = [[UIToolbar alloc] init];
-    toolbar.backgroundColor = [UIColor whiteColor];
-    toolbar.frame=CGRectMake(0, 0, 320, 44);
-    //DataPicker上部バーボタン設定
-    UIBarButtonItem *item0=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem *item1=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem *item2=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem *item3=[[UIBarButtonItem alloc] initWithTitle:@"完了" style:UIBarButtonItemStylePlain target:self action:@selector(previousBtnClick)];
-    item3.tintColor = [UIColor blackColor];
-    toolbar.items=@[item0,item1,item2,item3];
-    //DataPicker上部バー設定
-    self.txt_birthday.inputAccessoryView = toolbar;
-*/
     // キーボードアクション追加
     NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
 
@@ -97,20 +70,6 @@
     
     // キーボード収納を検知。
     [nc addObserver:self selector:@selector(hideKeyboard:) name:UIKeyboardDidHideNotification object:nil];
-    
-    //NumberPicker上部バー作成
-    UIToolbar *numbaer_toolbar = [[UIToolbar alloc] init];
-    numbaer_toolbar.backgroundColor = [UIColor whiteColor];
-    numbaer_toolbar.frame=CGRectMake(0, 0, 320, 44);
-    //DataPicker上部バーボタン設定
-    UIBarButtonItem *numbaer_item0=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem *numbaer_item1=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem *numbaer_item2=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem *numbaer_item3=[[UIBarButtonItem alloc] initWithTitle:@"完了" style:UIBarButtonItemStylePlain target:self action:@selector(numbaerBtnClick)];
-    numbaer_item3.tintColor = [UIColor blackColor];
-    numbaer_toolbar.items=@[numbaer_item0,numbaer_item1,numbaer_item2,numbaer_item3];
-    //DataPicker上部バー設定
-//    self.txt_zipCode.inputAccessoryView = numbaer_toolbar;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -124,6 +83,20 @@
     
     [super viewWillAppear:animated];
 
+    //NumberPicker上部バー作成
+    UIToolbar *numbaer_toolbar = [[UIToolbar alloc] init];
+    numbaer_toolbar.backgroundColor = [UIColor whiteColor];
+    numbaer_toolbar.frame=CGRectMake(0, 0, 320, 44);
+    //DataPicker上部バーボタン設定
+    UIBarButtonItem *numbaer_item0=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *numbaer_item1=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *numbaer_item2=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *numbaer_item3=[[UIBarButtonItem alloc] initWithTitle:@"完了" style:UIBarButtonItemStylePlain target:self action:@selector(introductionCodeBtnClick)];
+    numbaer_item3.tintColor = [UIColor blackColor];
+    numbaer_toolbar.items=@[numbaer_item0,numbaer_item1,numbaer_item2,numbaer_item3];
+    //DataPicker上部バー設定
+    self.txt_introductionCode.inputAccessoryView = numbaer_toolbar;
+
     //会員情報保存項目取得
     [[ManagerDownload sharedInstance] getMemberInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
 }
@@ -131,25 +104,6 @@
 - (void)didReceiveMemoryWarning {
     
     [super didReceiveMemoryWarning];
-}
-
--(void)dateSet_Birthday:(UIDatePicker *)picker {
-    
-    NSDate *selectDate=picker.date;
-    NSDateFormatter *formatter=[[NSDateFormatter alloc] init];
-    formatter.dateFormat=@"yyy-MM-dd";
-    NSString *stringDate=[formatter stringFromDate:selectDate];
-    
-//    self.txt_birthday.text = stringDate;
-}
-
--(void)previousBtnClick {
-    
-//    [self.txt_birthday resignFirstResponder];
-}
--(void)numbaerBtnClick {
-    
-//    [self.txt_zipCode resignFirstResponder];
 }
 
 #pragma mark - ManagerDownloadDelegate
@@ -161,6 +115,14 @@
             if(param.listData.count > 0){
                 
                 memberObj = param.listData[0];
+
+                if(memberObj.flg_details == NO){
+
+                    view_privacepolice.hidden = YES;
+                }else{
+
+                    view_privacepolice.hidden = NO;
+                }
 
                 [_tbl_userSetting reloadData];
 
@@ -311,6 +273,20 @@
 
             [cell_zipcode.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
+            //NumberPicker上部バー作成
+            UIToolbar *numbaer_toolbar = [[UIToolbar alloc] init];
+            numbaer_toolbar.backgroundColor = [UIColor whiteColor];
+            numbaer_toolbar.frame=CGRectMake(0, 0, 320, 44);
+            //DataPicker上部バーボタン設定
+            UIBarButtonItem *numbaer_item0=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+            UIBarButtonItem *numbaer_item1=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+            UIBarButtonItem *numbaer_item2=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+            UIBarButtonItem *numbaer_item3=[[UIBarButtonItem alloc] initWithTitle:@"完了" style:UIBarButtonItemStylePlain target:self action:@selector(zipcodeBtnClick)];
+            numbaer_item3.tintColor = [UIColor blackColor];
+            numbaer_toolbar.items=@[numbaer_item0,numbaer_item1,numbaer_item2,numbaer_item3];
+            //DataPicker上部バー設定
+            cell_zipcode.txt_field.inputAccessoryView = numbaer_toolbar;
+
             return cell_zipcode;
         }
 
@@ -401,6 +377,20 @@
 
             [cell_tel.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
+            //NumberPicker上部バー作成
+            UIToolbar *numbaer_toolbar = [[UIToolbar alloc] init];
+            numbaer_toolbar.backgroundColor = [UIColor whiteColor];
+            numbaer_toolbar.frame=CGRectMake(0, 0, 320, 44);
+            //DataPicker上部バーボタン設定
+            UIBarButtonItem *numbaer_item0=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+            UIBarButtonItem *numbaer_item1=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+            UIBarButtonItem *numbaer_item2=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+            UIBarButtonItem *numbaer_item3=[[UIBarButtonItem alloc] initWithTitle:@"完了" style:UIBarButtonItemStylePlain target:self action:@selector(telBtnClick)];
+            numbaer_item3.tintColor = [UIColor blackColor];
+            numbaer_toolbar.items=@[numbaer_item0,numbaer_item1,numbaer_item2,numbaer_item3];
+            //DataPicker上部バー設定
+            cell_tel.txt_field.inputAccessoryView = numbaer_toolbar;
+
             return cell_tel;
         }
 
@@ -464,6 +454,29 @@
 
             [cell_birthday.txt_field addTarget:self action:@selector(getTextfield) forControlEvents:UIControlEventEditingDidEnd];
 
+            //DataPicker 設定
+            datePicker_Birthday = [[UIDatePicker alloc] init];
+            datePicker_Birthday.datePickerMode=UIDatePickerModeDate;
+            datePicker_Birthday.maximumDate = [NSDate date];
+            datePicker_Birthday.backgroundColor = [UIColor whiteColor];
+            datePicker_Birthday.locale=[[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"];
+            [datePicker_Birthday addTarget:self action:@selector(dateSet_Birthday:) forControlEvents:UIControlEventValueChanged];
+            cell_birthday.txt_field.inputView = datePicker_Birthday;
+
+            //DataPicker上部バー作成
+            UIToolbar *toolbar = [[UIToolbar alloc] init];
+            toolbar.backgroundColor = [UIColor whiteColor];
+            toolbar.frame=CGRectMake(0, 0, 320, 44);
+            //DataPicker上部バーボタン設定
+            UIBarButtonItem *item0=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+            UIBarButtonItem *item1=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+            UIBarButtonItem *item2=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+            UIBarButtonItem *item3=[[UIBarButtonItem alloc] initWithTitle:@"完了" style:UIBarButtonItemStylePlain target:self action:@selector(previousBtnClick)];
+            item3.tintColor = [UIColor blackColor];
+            toolbar.items=@[item0,item1,item2,item3];
+            //DataPicker上部バー設定
+            cell_birthday.txt_field.inputAccessoryView = toolbar;
+
             return cell_birthday;
         }
     }
@@ -472,6 +485,33 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+}
+
+-(void)dateSet_Birthday:(UIDatePicker *)picker {
+
+    NSDate *selectDate=picker.date;
+    NSDateFormatter *formatter=[[NSDateFormatter alloc] init];
+    formatter.dateFormat=@"yyy-MM-dd";
+    NSString *stringDate=[formatter stringFromDate:selectDate];
+
+    cell_birthday.txt_field.text = stringDate;
+}
+
+-(void)previousBtnClick {
+
+    [cell_birthday.txt_field resignFirstResponder];
+}
+-(void)zipcodeBtnClick {
+
+    [cell_zipcode.txt_field resignFirstResponder];
+}
+-(void)telBtnClick {
+
+    [cell_tel.txt_field resignFirstResponder];
+}
+-(void)introductionCodeBtnClick {
+
+    [self.txt_introductionCode resignFirstResponder];
 }
 
 - (void)getTextfield {
@@ -643,7 +683,7 @@
 - (void)showKeyboard:(NSNotification*)notification {
     
     // ステータスバーをのぞいた画面高さ
-    float afh = [[UIScreen mainScreen] applicationFrame].size.height;
+    float afh = [[UIScreen mainScreen] bounds].size.height - 20;
     
     // キーボード高さ
     CGRect keyboard;
@@ -683,6 +723,7 @@
     [cell_generation.txt_field resignFirstResponder];
     [cell_shop.txt_field resignFirstResponder];
     [cell_birthday.txt_field resignFirstResponder];
+    [self.txt_introductionCode resignFirstResponder];
 }
 
 - (void)hideKeyboard:(NSNotification*)notification {
@@ -701,6 +742,7 @@
     [cell_generation.txt_field resignFirstResponder];
     [cell_shop.txt_field resignFirstResponder];
     [cell_birthday.txt_field resignFirstResponder];
+    [self.txt_introductionCode resignFirstResponder];
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
@@ -745,53 +787,108 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-/*
-    if(textField == self.txt_farstName){
-        
-        // 受け取った入力をラベルに代入
-        self.txt_farstName.text = textField.text;
-    }
-    
-    if(textField == self.txt_lastName){
-        
-        // 受け取った入力をラベルに代入
-        self.txt_lastName.text = textField.text;
-    }
-    
-    if(textField == self.txt_nickName){
-        
-        // 受け取った入力をラベルに代入
-        self.txt_nickName.text = textField.text;
-    }
 
-    if(textField == self.txt_birthday){
+    if(textField == cell_nick_name.txt_field){
 
         // 受け取った入力をラベルに代入
-        self.txt_birthday.text = textField.text;
+        cell_gender.txt_field.text = textField.text;
     }
 
-    if(textField == self.txt_zipCode){
+    if(textField == cell_gender.txt_field){
+
+        // 受け取った入力をラベルに代入
+        cell_gender.txt_field.text = textField.text;
+    }
+
+    if(textField == cell_mail.txt_field){
+
+        // 受け取った入力をラベルに代入
+        cell_mail.txt_field.text = textField.text;
+    }
+
+    if(textField == cell_job.txt_field){
+
+        // 受け取った入力をラベルに代入
+        cell_job.txt_field.text = textField.text;
+    }
+
+    if(textField == cell_zipcode.txt_field){
+
+        // 受け取った入力をラベルに代入
+        cell_zipcode.txt_field.text = textField.text;
+    }
+
+    if(textField == cell_address.txt_field){
+
+        // 受け取った入力をラベルに代入
+        cell_address.txt_field.text = textField.text;
+    }
+
+    if(textField == cell_name.txt_field1){
+
+        // 受け取った入力をラベルに代入
+        cell_name.txt_field1.text = textField.text;
+    }
+
+    if(textField == cell_name.txt_field2){
+
+        // 受け取った入力をラベルに代入
+        cell_name.txt_field2.text = textField.text;
+    }
+
+    if(textField == cell_furigana.txt_field1){
+
+        // 受け取った入力をラベルに代入
+        cell_furigana.txt_field1.text = textField.text;
+    }
+
+    if(textField == cell_furigana.txt_field2){
+
+        // 受け取った入力をラベルに代入
+        cell_furigana.txt_field2.text = textField.text;
+    }
+
+    if(textField == cell_generation.txt_field){
+
+        // 受け取った入力をラベルに代入
+        cell_generation.txt_field.text = textField.text;
+    }
+
+    if(textField == cell_shop.txt_field){
+
+        // 受け取った入力をラベルに代入
+        cell_shop.txt_field.text = textField.text;
+    }
+
+    if(textField == cell_birthday.txt_field){
         
         // 受け取った入力をラベルに代入
-        self.txt_zipCode.text = textField.text;
+        cell_birthday.txt_field.text = textField.text;
     }
-    
-    if(textField == self.txt_introductionCode){
-        
-        // 受け取った入力をラベルに代入
-        self.txt_introductionCode.text = textField.text;
-    }
-    
-    if(textField == self.txt_machineChengeCode){
-        
-        // 受け取った入力をラベルに代入
-        self.txt_machineChengeCode.text = textField.text;
-    }
-*/
+
     // キーボードを閉じる
     [textField resignFirstResponder];
     
     return YES;
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+
+    //キーボードクローズ
+    [cell_nick_name.txt_field resignFirstResponder];
+    [cell_gender.txt_field resignFirstResponder];
+    [cell_mail.txt_field resignFirstResponder];
+    [cell_job.txt_field resignFirstResponder];
+    [cell_zipcode.txt_field resignFirstResponder];
+    [cell_address.txt_field resignFirstResponder];
+    [cell_name.txt_field1 resignFirstResponder];
+    [cell_name.txt_field2 resignFirstResponder];
+    [cell_furigana.txt_field1 resignFirstResponder];
+    [cell_furigana.txt_field2 resignFirstResponder];
+    [cell_generation.txt_field resignFirstResponder];
+    [cell_shop.txt_field resignFirstResponder];
+    [cell_birthday.txt_field resignFirstResponder];
+    [self.txt_introductionCode resignFirstResponder];
 }
 
 - (IBAction)btn_start:(id)sender {

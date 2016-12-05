@@ -28,11 +28,14 @@
 @protocol FirstSettingViewControllerDelegate<NSObject>
 @end
 
-@interface FirstSettingViewController : MPBaseViewController <UITextFieldDelegate, ManagerDownloadDelegate, UIScrollViewDelegate, MPFirstSetting_nick_name_TableViewCellDelegate>
+@interface FirstSettingViewController : MPBaseViewController <UITextFieldDelegate, ManagerDownloadDelegate, UIScrollViewDelegate, MPFirstSetting_nick_name_TableViewCellDelegate, MPFirstSetting_birthday_TableViewCellDelegate>
 {    
     id<FirstSettingViewControllerDelegate> _FirstSettingViewControllerDelegate;
 
-    __weak IBOutlet UITableView *_tbl_userSetting;
+    CGPoint cgpoint_tf;
+    UIKeyboardType kb_type;
+
+    MPMemberObject* memberObj;
 
     MPFirstSetting_nick_name_TableViewCell *cell_nick_name;
     MPFirstSetting_gender_TableViewCell *cell_gender;
@@ -49,16 +52,13 @@
 
     long lng_sexflag;
     NSString* str_ID;
-    MPMemberObject* memberObj;
     UIDatePicker *datePicker_Birthday;
     UIDatePicker *datePicker_ChildeBirthday1;
     UIDatePicker *datePicker_ChildeBirthday2;
-    CGPoint cgpoint_tf;
-    UIKeyboardType kb_type;
 
-    NSDictionary* ary_field;
-    NSMutableArray* ary_fieldValue;
-    
+    __weak IBOutlet UITableView *_tbl_userSetting;
+
+    __weak IBOutlet UIView *view_privacepolice;
 }
 @property (nonatomic) id<FirstSettingViewControllerDelegate> FirstSettingViewControllerDelegate;
 

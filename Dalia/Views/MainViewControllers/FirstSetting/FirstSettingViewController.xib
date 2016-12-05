@@ -16,6 +16,7 @@
                 <outlet property="scr_view" destination="qKq-sK-imv" id="rEe-bs-a4s"/>
                 <outlet property="txt_introductionCode" destination="0sN-Vd-arf" id="NH9-ne-qEs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view_privacepolice" destination="IQh-Bp-lAz" id="Led-Vl-nvO"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -119,9 +120,9 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndk-Tz-XNT">
                                                     <rect key="frame" x="5" y="30" width="290" height="32"/>
                                                     <subviews>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="例：123456" textAlignment="natural" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="0sN-Vd-arf">
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="例：123456" textAlignment="center" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="0sN-Vd-arf">
                                                             <rect key="frame" x="0.0" y="0.0" width="290" height="31"/>
-                                                            <color key="textColor" red="0.48627450979999998" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                                             <connections>

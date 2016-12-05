@@ -25,6 +25,9 @@
         self.txt_field2.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.txt_field2.placeholder
                                                                             attributes:@{ NSForegroundColorAttributeName:color }];
     }
+
+    self.txt_field1.textColor = [UIColor whiteColor];
+    self.txt_field2.textColor = [UIColor whiteColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
