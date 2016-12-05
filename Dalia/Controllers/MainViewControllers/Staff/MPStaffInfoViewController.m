@@ -160,7 +160,7 @@
 
     if(collectionView == _col_photolist){
 
-        return CGSizeMake(90.0f, 90.0f);
+        return CGSizeMake(70.0f, 70.0f);
     }
 
     return CGSizeMake(0.0f, 0.0f);
