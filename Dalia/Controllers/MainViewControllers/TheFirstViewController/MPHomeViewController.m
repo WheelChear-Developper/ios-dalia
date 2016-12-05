@@ -88,6 +88,9 @@
 
     //トップ画面情報取得
     [[ManagerDownload sharedInstance] getTopInfo:[Utility getAppID] withDeviceID:[Utility getDeviceID] delegate:self];
+
+    //ブロックボタン設定
+    [self setBlockButtonImage];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -418,9 +421,6 @@
             [_WhatsNew_tableView reloadData];
 
             [self resizeTable];
-
-            //ブロックボタン設定
-            [self setBlockButtonImage];
 
             //通知件数取得
             [[ManagerDownload sharedInstance] getDefaultNotification:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
