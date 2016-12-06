@@ -148,14 +148,17 @@
                     dispatch_async(q_main, ^{
                         [_img_photo setImage:image];
 
-                        float width = image.size.width;
-                        float height = image.size.height;
-                        float flt_whide = 320 / width;
-                        float flt_heght = height * flt_whide;
-                        _img_photo.translatesAutoresizingMaskIntoConstraints = YES;
-                        CGRect rct = _img_photo.frame;
-                        rct.size.height = flt_heght;
-                        _img_photo.frame = rct;
+                        if(image != nil){
+
+                            float width = image.size.width;
+                            float height = image.size.height;
+                            float flt_whide = 320 / width;
+                            float flt_heght = height * flt_whide;
+                            _img_photo.translatesAutoresizingMaskIntoConstraints = YES;
+                            CGRect rct = _img_photo.frame;
+                            rct.size.height = flt_heght;
+                            _img_photo.frame = rct;
+                        }
                     });
                 });
             }else{
