@@ -135,6 +135,11 @@
 		1038EF9D1DDF312100134331 /* MPTermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1038EF9C1DDF312100134331 /* MPTermsViewController.m */; };
 		10393C5C1DE00C7D004CC6E9 /* header_ttl_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 10393C5A1DE00C7D004CC6E9 /* header_ttl_menu.png */; };
 		10393C5D1DE00C7D004CC6E9 /* header_ttl_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10393C5B1DE00C7D004CC6E9 /* header_ttl_menu@2x.png */; };
+		103B01911DF6804F0063B2F1 /* Futura (Light).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 103B018C1DF6804F0063B2F1 /* Futura (Light).ttf */; };
+		103B01921DF6804F0063B2F1 /* Futura.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 103B018D1DF6804F0063B2F1 /* Futura.ttc */; };
+		103B01931DF6804F0063B2F1 /* ヒラギノ角ゴ ProN W3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 103B018E1DF6804F0063B2F1 /* ヒラギノ角ゴ ProN W3.otf */; };
+		103B01941DF6804F0063B2F1 /* ヒラギノ角ゴ ProN W6.otf in Resources */ = {isa = PBXBuildFile; fileRef = 103B018F1DF6804F0063B2F1 /* ヒラギノ角ゴ ProN W6.otf */; };
+		103B01951DF6804F0063B2F1 /* ヒラギノ角ゴシック W8.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 103B01901DF6804F0063B2F1 /* ヒラギノ角ゴシック W8.ttc */; };
 		10467E751DE01B5900C51AA3 /* MPTheMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10467E741DE01B5900C51AA3 /* MPTheMenuCell.m */; };
 		10467E781DE01BB600C51AA3 /* MPTheMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10467E771DE01BB600C51AA3 /* MPTheMenuCell.xib */; };
 		1046A3381DF133A500AE4DDA /* TheFifth_address_TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1046A3151DF133A500AE4DDA /* TheFifth_address_TableViewCell.m */; };
@@ -741,6 +746,11 @@
 		1038EF9C1DDF312100134331 /* MPTermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTermsViewController.m; sourceTree = "<group>"; };
 		10393C5A1DE00C7D004CC6E9 /* header_ttl_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_ttl_menu.png; sourceTree = "<group>"; };
 		10393C5B1DE00C7D004CC6E9 /* header_ttl_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header_ttl_menu@2x.png"; sourceTree = "<group>"; };
+		103B018C1DF6804F0063B2F1 /* Futura (Light).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura (Light).ttf"; sourceTree = "<group>"; };
+		103B018D1DF6804F0063B2F1 /* Futura.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Futura.ttc; sourceTree = "<group>"; };
+		103B018E1DF6804F0063B2F1 /* ヒラギノ角ゴ ProN W3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ヒラギノ角ゴ ProN W3.otf"; sourceTree = "<group>"; };
+		103B018F1DF6804F0063B2F1 /* ヒラギノ角ゴ ProN W6.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ヒラギノ角ゴ ProN W6.otf"; sourceTree = "<group>"; };
+		103B01901DF6804F0063B2F1 /* ヒラギノ角ゴシック W8.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ヒラギノ角ゴシック W8.ttc"; sourceTree = "<group>"; };
 		10467E731DE01B5900C51AA3 /* MPTheMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTheMenuCell.h; sourceTree = "<group>"; };
 		10467E741DE01B5900C51AA3 /* MPTheMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTheMenuCell.m; sourceTree = "<group>"; };
 		10467E771DE01BB600C51AA3 /* MPTheMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPTheMenuCell.xib; sourceTree = "<group>"; };
@@ -1622,6 +1632,7 @@
 		1030264A1DD19EAD00F266D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				103B018B1DF6804F0063B2F1 /* fontdata */,
 				100221651DE3395800169B93 /* damy_data */,
 				1037B8161DE032EB000D834C /* Other */,
 				1069E2B01DDE8FAE00FCC6D6 /* Navigation */,
@@ -1720,6 +1731,18 @@
 			children = (
 			);
 			path = image;
+			sourceTree = "<group>";
+		};
+		103B018B1DF6804F0063B2F1 /* fontdata */ = {
+			isa = PBXGroup;
+			children = (
+				103B018C1DF6804F0063B2F1 /* Futura (Light).ttf */,
+				103B018D1DF6804F0063B2F1 /* Futura.ttc */,
+				103B018E1DF6804F0063B2F1 /* ヒラギノ角ゴ ProN W3.otf */,
+				103B018F1DF6804F0063B2F1 /* ヒラギノ角ゴ ProN W6.otf */,
+				103B01901DF6804F0063B2F1 /* ヒラギノ角ゴシック W8.ttc */,
+			);
+			path = fontdata;
 			sourceTree = "<group>";
 		};
 		10467E761DE01B9100C51AA3 /* TheThirdView */ = {
@@ -3244,6 +3267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				103B01941DF6804F0063B2F1 /* ヒラギノ角ゴ ProN W6.otf in Resources */,
 				10488AE01DE97280005F5DF1 /* staff_01.png in Resources */,
 				10BC22C11DE83B0400B1A394 /* men_04.png in Resources */,
 				100221801DE3395800169B93 /* coupon_49.png in Resources */,
@@ -3326,6 +3350,7 @@
 				1075EF181DE8A00800974CE1 /* MPHearCatalogCategoryListViewController.xib in Resources */,
 				10BC22A81DE83B0400B1A394 /* lady_08.png in Resources */,
 				10BC22B21DE83B0400B1A394 /* lady_clarity_08.png in Resources */,
+				103B01911DF6804F0063B2F1 /* Futura (Light).ttf in Resources */,
 				10E6B6271DE2D59900BB0254 /* up_white_yajirushi.png in Resources */,
 				1016C8111DE46C7600BC215E /* first_ttl_recommenditem@2x.png in Resources */,
 				1075EF1D1DE8A54D00974CE1 /* HearCatalogCategoryListViewControllerCell.xib in Resources */,
@@ -3516,6 +3541,7 @@
 				10625A481DE71606003CE2FB /* UserInfo_btn_setting_touroku.png in Resources */,
 				10BC22AC1DE83B0400B1A394 /* lady_clarity_02.png in Resources */,
 				10488B351DE99970005F5DF1 /* movie_08.png in Resources */,
+				103B01951DF6804F0063B2F1 /* ヒラギノ角ゴシック W8.ttc in Resources */,
 				1019325E1DF421BF00FC8DDE /* MPSNSAreartView.xib in Resources */,
 				10625AC41DE82380003CE2FB /* hearcatalog_ttl_title.png in Resources */,
 				10625A8E1DE8073C003CE2FB /* stampcard_squares_lefttop.png in Resources */,
@@ -3534,6 +3560,7 @@
 				10E6B6261DE2D59900BB0254 /* other_icon_twitter@2x.png in Resources */,
 				10CCF6AA1DEC7C51006E2344 /* MPTheMenuHederCell.xib in Resources */,
 				10F05A391DF669C900DF5DD5 /* footer_btn_home.png in Resources */,
+				103B01921DF6804F0063B2F1 /* Futura.ttc in Resources */,
 				10C4B77D1DD9DFEE00E26096 /* first_ttl_whatsnew@2x.png in Resources */,
 				10488ACE1DE96796005F5DF1 /* MPStaffCell.xib in Resources */,
 				1076A9211DDC3A080080E8CD /* secondview_icon_facebook_maru.png in Resources */,
@@ -3623,6 +3650,7 @@
 				10625A8A1DE8073C003CE2FB /* header_ttl_stamp@2x.png in Resources */,
 				100221511DE2ED6600169B93 /* fourthView_icon_facebook_gray@2x.png in Resources */,
 				10625A921DE8073C003CE2FB /* stampcard_font_stampcard.png in Resources */,
+				103B01931DF6804F0063B2F1 /* ヒラギノ角ゴ ProN W3.otf in Resources */,
 				10C4B7771DD9DFEE00E26096 /* first_ttl_more@2x.png in Resources */,
 				10C4B76A1DD9DFEE00E26096 /* MPTheFifthViewController.xib in Resources */,
 				10C4B7C41DD9DFEE00E26096 /* backBottom@2x.png in Resources */,
