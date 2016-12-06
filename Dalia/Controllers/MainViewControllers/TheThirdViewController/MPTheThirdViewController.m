@@ -266,7 +266,10 @@
         if(bln_menuOpen){
 
             cell.hidden = NO;
+            cell.img_yajirushi.hidden = YES;
         }else{
+
+            cell.img_yajirushi.hidden = NO;
 
             if(indexPath.row == lng_ShopNo){
 
