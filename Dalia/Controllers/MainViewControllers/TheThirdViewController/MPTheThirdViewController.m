@@ -147,32 +147,35 @@
         {
             _ary_total_data = param.listData;
 
-            _ary_elis_menu = [NSMutableArray new];
-            for (long c = 0;c < [_ary_total_data count];c++){
+            if(_ary_total_data.count > 0){
 
-                //ショップ名
-                NSString* str_ShopName = [[_ary_total_data valueForKey:@"shopname"] objectAtIndex:c];
-                //            NSLog(@"%@",str_ShopName);
-                [_ary_elis_menu addObject:str_ShopName];
+                _ary_elis_menu = [NSMutableArray new];
+                for (long c = 0;c < [_ary_total_data count];c++){
 
-                subItems = [NSMutableArray array];
+                    //ショップ名
+                    NSString* str_ShopName = [[_ary_total_data valueForKey:@"shopname"] objectAtIndex:c];
+                    //            NSLog(@"%@",str_ShopName);
+                    [_ary_elis_menu addObject:str_ShopName];
 
-                //ショップ詳細
-                for (long d = 0;d < [[[_ary_total_data valueForKey:@"category"] objectAtIndex:c] count];d++){
+                    subItems = [NSMutableArray array];
 
-                    NSMutableArray* subShop = [[_ary_total_data valueForKey:@"category"] objectAtIndex:c];
-                    [subItems addObject:subShop];
+                    //ショップ詳細
+                    for (long d = 0;d < [[[_ary_total_data valueForKey:@"category"] objectAtIndex:c] count];d++){
+
+                        NSMutableArray* subShop = [[_ary_total_data valueForKey:@"category"] objectAtIndex:c];
+                        [subItems addObject:subShop];
+                    }
+                    [ary_elias addObject:subItems];
                 }
-                [ary_elias addObject:subItems];
+
+                _arr_elia_Shop = ary_elias;
+
+                [_tbl_head reloadData];
+                [_tbl_list reloadData];
+                
+                [self list_resizeTable];
+                [self head_resizeTable];
             }
-
-            _arr_elia_Shop = ary_elias;
-
-            [_tbl_head reloadData];
-            [_tbl_list reloadData];
-
-            [self list_resizeTable];
-            [self head_resizeTable];
         }
             break;
 
