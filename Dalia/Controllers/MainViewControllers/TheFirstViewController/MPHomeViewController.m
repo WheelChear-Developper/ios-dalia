@@ -84,6 +84,9 @@
     //🔴タブの表示
     [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_Tab:NO];
 
+    //選択タブ解除
+    [(MPTabBarViewController*)[self.navigationController parentViewController] selectTab:0];
+
     [super viewWillAppear:animated];
 
     //トップ画面情報取得

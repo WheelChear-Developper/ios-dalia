@@ -94,6 +94,9 @@
     //🔴タブの表示
     [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_Tab:NO];
 
+    //選択タブ解除
+    [(MPTabBarViewController*)[self.navigationController parentViewController] selectTab:4];
+
     [super viewWillAppear:animated];
 
     //会員情報保存項目取得

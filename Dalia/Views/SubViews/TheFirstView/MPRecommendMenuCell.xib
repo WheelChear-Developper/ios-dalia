@@ -22,18 +22,17 @@
                         <rect key="frame" x="10" y="0.0" width="300" height="98"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePZ-Tv-vjK">
-                                <rect key="frame" x="0.0" y="0.0" width="120" height="98"/>
+                                <rect key="frame" x="0.0" y="5" width="120" height="88"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVP-Zd-uED">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="98"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="88"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y1l-0o-zbm">
-                                                <rect key="frame" x="0.0" y="0.0" width="120" height="98"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y1l-0o-zbm">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="88"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="98" id="5o8-Tl-8Xu"/>
                                             <constraint firstAttribute="width" constant="120" id="7es-qf-t6W"/>
                                             <constraint firstAttribute="trailing" secondItem="Y1l-0o-zbm" secondAttribute="trailing" id="KaD-7I-t6o"/>
                                             <constraint firstItem="Y1l-0o-zbm" firstAttribute="leading" secondItem="AVP-Zd-uED" secondAttribute="leading" id="XGa-NK-g7j"/>
@@ -121,9 +120,9 @@
                             <constraint firstAttribute="bottom" secondItem="CG9-bV-6dc" secondAttribute="bottom" id="CRd-jZ-lbA"/>
                             <constraint firstItem="tfW-or-jlS" firstAttribute="top" secondItem="p0f-8I-nd9" secondAttribute="bottom" id="LSY-al-LHd"/>
                             <constraint firstAttribute="bottom" secondItem="zVV-12-rsT" secondAttribute="bottom" id="LpK-zs-41r"/>
-                            <constraint firstAttribute="bottom" secondItem="ePZ-Tv-vjK" secondAttribute="bottom" id="WJi-hr-2gy"/>
+                            <constraint firstAttribute="bottom" secondItem="ePZ-Tv-vjK" secondAttribute="bottom" constant="5" id="WJi-hr-2gy"/>
                             <constraint firstAttribute="trailing" secondItem="zVV-12-rsT" secondAttribute="trailing" id="Wyn-7v-Yl7"/>
-                            <constraint firstItem="ePZ-Tv-vjK" firstAttribute="top" secondItem="nSP-vC-I1r" secondAttribute="top" id="bN0-8y-Ds0"/>
+                            <constraint firstItem="ePZ-Tv-vjK" firstAttribute="top" secondItem="nSP-vC-I1r" secondAttribute="top" constant="5" id="bN0-8y-Ds0"/>
                             <constraint firstAttribute="trailing" secondItem="p0f-8I-nd9" secondAttribute="trailing" id="fIr-ZZ-PkY"/>
                             <constraint firstAttribute="height" constant="98" id="igo-nk-XXr"/>
                             <constraint firstItem="p0f-8I-nd9" firstAttribute="leading" secondItem="ePZ-Tv-vjK" secondAttribute="trailing" id="r1Z-yT-QRY"/>

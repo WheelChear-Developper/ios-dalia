@@ -25,10 +25,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="120" height="98"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVP-Zd-uED">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="98"/>
+                                        <rect key="frame" x="0.0" y="5" width="120" height="88"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CXN-OB-kap">
-                                                <rect key="frame" x="1" y="1" width="116" height="96"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CXN-OB-kap">
+                                                <rect key="frame" x="1" y="1" width="116" height="86"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -37,15 +37,14 @@
                                             <constraint firstAttribute="width" constant="120" id="KJ1-OQ-zcX"/>
                                             <constraint firstItem="CXN-OB-kap" firstAttribute="top" secondItem="AVP-Zd-uED" secondAttribute="top" constant="1" id="WQa-Hp-UMX"/>
                                             <constraint firstAttribute="trailing" secondItem="CXN-OB-kap" secondAttribute="trailing" constant="3" id="btZ-fj-7eU"/>
-                                            <constraint firstAttribute="height" constant="98" id="fhg-g9-lQ4"/>
                                             <constraint firstAttribute="bottom" secondItem="CXN-OB-kap" secondAttribute="bottom" constant="1" id="g1E-vs-fXT"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="AVP-Zd-uED" firstAttribute="top" secondItem="ePZ-Tv-vjK" secondAttribute="top" id="L5w-UD-fil"/>
-                                    <constraint firstAttribute="bottom" secondItem="AVP-Zd-uED" secondAttribute="bottom" id="Tm5-lh-PZf"/>
+                                    <constraint firstItem="AVP-Zd-uED" firstAttribute="top" secondItem="ePZ-Tv-vjK" secondAttribute="top" constant="5" id="L5w-UD-fil"/>
+                                    <constraint firstAttribute="bottom" secondItem="AVP-Zd-uED" secondAttribute="bottom" constant="5" id="Tm5-lh-PZf"/>
                                     <constraint firstAttribute="trailing" secondItem="AVP-Zd-uED" secondAttribute="trailing" id="UoL-Ef-phk"/>
                                     <constraint firstItem="AVP-Zd-uED" firstAttribute="leading" secondItem="ePZ-Tv-vjK" secondAttribute="leading" id="XyX-CK-NRv"/>
                                 </constraints>

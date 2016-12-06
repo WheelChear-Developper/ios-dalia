@@ -50,6 +50,9 @@
     //🔴タブの表示
     [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_Tab:NO];
 
+    //選択タブ解除
+    [(MPTabBarViewController*)[self.navigationController parentViewController] selectTab:1];
+
     [super viewWillAppear:animated];
 
     //クーポンデータ取得

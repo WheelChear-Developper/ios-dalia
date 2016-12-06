@@ -58,6 +58,9 @@
     //🔴タブの表示
     [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_Tab:NO];
 
+    //選択タブ解除
+    [(MPTabBarViewController*)[self.navigationController parentViewController] selectTab:3];
+
     [super viewWillAppear:animated];
 
     //店舗情報取得

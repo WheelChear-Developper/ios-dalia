@@ -28,7 +28,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ai3-tv-hQ2">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="570"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CGg-xM-soY">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CGg-xM-soY">
                                     <rect key="frame" x="10" y="45" width="300" height="130"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="130" id="psU-vg-iMb"/>
