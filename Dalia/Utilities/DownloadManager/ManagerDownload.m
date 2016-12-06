@@ -1583,6 +1583,10 @@
         Obj.name_disp = [[Utility checkNULL:[dic objectForKey:@"name_disp"]] integerValue];
         Obj.rank_name = [Utility checkNULL:[dic objectForKey:@"rank_name"]];
         Obj.rank_color = [Utility checkNULL:[dic objectForKey:@"rank_color"]];
+        
+        // INSERTED BY M.FUJII 2016.12.06 START
+        Obj.rank_id = [[Utility checkNULL:[dic objectForKey:@"rank_id"]] integerValue];
+        // INSERTED BY M.FUJII 2016.12.06 END
 
         [param.listData addObject: Obj];
     }

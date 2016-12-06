@@ -14,5 +14,8 @@
 @property (nonatomic) long name_disp;
 @property (nonatomic, strong) NSString* rank_name;
 @property (nonatomic, strong) NSString* rank_color;
+// INSERTED BY M.FUJII 2016.12.06 START
+@property (nonatomic) long rank_id;
+// INSERTED BY M.FUJII 2016.12.06 END
 
 @end
