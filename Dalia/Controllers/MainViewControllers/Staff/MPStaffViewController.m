@@ -98,8 +98,8 @@
     if(_scrollBeginingPoint.y < currentPoint.y){
 
         //下方向の時のアクション
-        //カスタムトップナビゲーション　クローズ
-        [self setFadeOut_CustomNavigation:true];
+        //標準ナビゲーションのクローズ
+        [self setFadeOut_BasicNavigation:true];
 
         //タブのクローズ
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:true];
@@ -108,7 +108,7 @@
 
         //スクロール０
         //カスタムトップナビゲーション　オープン
-        [self setFadeOut_CustomNavigation:false];
+        [self setFadeOut_BasicNavigation:false];
 
         //タブのオープン
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:false];
@@ -117,7 +117,7 @@
 
         //上方向の時のアクション
         //カスタムトップナビゲーション　オープン
-        [self setFadeOut_CustomNavigation:false];
+        [self setFadeOut_BasicNavigation:false];
 
         //タブのオープン
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:false];

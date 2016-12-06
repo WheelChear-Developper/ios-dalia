@@ -109,7 +109,7 @@
 
         //スクロール０
         //カスタムトップナビゲーション　オープン
-//        [selfsetFadeOut_CustomNavigation:false];
+        [self setFadeOut_CustomNavigation:false];
 
         //タブのオープン
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:false];
