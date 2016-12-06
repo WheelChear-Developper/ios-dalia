@@ -10,6 +10,11 @@
 #import "MPTabBarViewController.h"
 #import "ManagerDownload.h"
 
+// INSERTED BY M.FUJII 2016.12.06 START
+extern NSString *const SOME_CONSTANT_ARRAY[];
+extern NSUInteger const SIZE_OF_SOME_CONSTANT_ARRAY;
+// INSERTED BY M.FUJII 2016.12.06 END
+
 @protocol MPMembersCardViewControllerDelegate<NSObject>
 @end
 
@@ -19,7 +24,9 @@
     __weak IBOutlet UIView* _scr_inView;
     CGPoint _scrollBeginingPoint;
 
-    NSMutableDictionary* _list_data;
+    // DELETED BY M.FUJII 2016.12.06 START
+    //NSMutableDictionary* _list_data;
+    // DELETED BY M.FUJII 2016.12.06 END
 }
 @property (nonatomic, assign) id<MPMembersCardViewControllerDelegate> delegate;
 @property (nonatomic) long lng_tabNo;
