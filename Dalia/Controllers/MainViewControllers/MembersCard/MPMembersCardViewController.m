@@ -28,7 +28,7 @@
 @implementation MPMembersCardViewController
 
 // INSERTED BY M.FUJII 2016.12.06 START
-NSString *const SOME_CONSTANT_ARRAY[] = { @"members_bg_platinum.png", @"members_bg_gold.png", @"members_bg_silver.png", @"members_bg_blonze.png", @"members_bg_green.png", @"members_bg_pink.png", @"members_bg_blue.png", @"members_bg_purple.png", @"members_bg_orange.png" };
+NSString *const SOME_CONSTANT_ARRAY[] = { @"bg_platinum.png", @"bg_gold.png", @"bg_silver.png", @"bg_blonze.png", @"bg_green.png", @"bg_pink.png", @"bg_blue.png", @"bg_purple.png", @"bg_orange.png" };
 NSUInteger const SIZE_OF_SOME_CONSTANT_ARRAY = 9;
 // INSERTED BY M.FUJII 2016.12.06 END
 
