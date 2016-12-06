@@ -9,23 +9,6 @@
 #import "MPTheThirdViewController.h"
 #include <objc/runtime.h>
 
-//カテゴリで機能拡張
-@interface NSMutableArray (Extended)
-@property (getter=isExtended) BOOL extended;
-@end
-
-@implementation NSMutableArray (Extended)
-// アコーディオンが開いているかどうかを設定するところ
-- (BOOL)isExtended
-{
-    return [objc_getAssociatedObject(self, @"extended") boolValue];
-}
-- (void)setExtended:(BOOL)extended
-{
-    objc_setAssociatedObject(self, @"extended", [NSNumber numberWithLongLong:extended], OBJC_ASSOCIATION_ASSIGN);
-}
-@end
-
 @implementation MPTheThirdViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -48,20 +31,24 @@
     [_contentView setHidden:YES];
 
     //テーブル設定
+    _tbl_head.scrollEnabled = false;
+    _tbl_head.estimatedRowHeight = 35.0f;
+    _tbl_head.rowHeight = UITableViewAutomaticDimension;
+    [_tbl_head setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     _tbl_list.scrollEnabled = false;
-    _tbl_list.estimatedRowHeight = 50.0f;
+    _tbl_list.estimatedRowHeight = 100.0f;
     _tbl_list.rowHeight = UITableViewAutomaticDimension;
     [_tbl_list setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 
     UINib *nib1 = [UINib nibWithNibName:@"MPTheMenuHederCell" bundle:nil];
-    [_tbl_list registerNib:nib1 forCellReuseIdentifier:@"menuheaderlistIdentifier"];
-    [_tbl_list reloadData];
+    [_tbl_head registerNib:nib1 forCellReuseIdentifier:@"menuheaderlistIdentifier"];
+    [_tbl_head reloadData];
     UINib *nib2 = [UINib nibWithNibName:@"MPTheMenuCell" bundle:nil];
     [_tbl_list registerNib:nib2 forCellReuseIdentifier:@"menulistIdentifier"];
     [_tbl_list reloadData];
 
-    //メニュー取得
-    [[ManagerDownload sharedInstance] getListMenu:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
+    lng_ShopNo = 0;
+    bln_menuOpen = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -79,6 +66,9 @@
     [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_Tab:NO];
 
     [super viewWillAppear:animated];
+
+    //メニュー取得
+    [[ManagerDownload sharedInstance] getListMenu:[Utility getDeviceID] withAppID:[Utility getAppID] delegate:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -103,8 +93,6 @@
 -(void)viewDidLayoutSubviews {
 
     [super viewDidLayoutSubviews];
-
-    [self resizeTable];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -170,7 +158,6 @@
                 subItems = [NSMutableArray array];
 
                 //ショップ詳細
-                subItems.extended = NO;
                 for (long d = 0;d < [[[_ary_total_data valueForKey:@"category"] objectAtIndex:c] count];d++){
 
                     NSMutableArray* subShop = [[_ary_total_data valueForKey:@"category"] objectAtIndex:c];
@@ -180,9 +167,12 @@
             }
 
             _arr_elia_Shop = ary_elias;
+
+            [_tbl_head reloadData];
             [_tbl_list reloadData];
 
-            [self resizeTable];
+            [self list_resizeTable];
+            [self head_resizeTable];
         }
             break;
 
@@ -195,28 +185,19 @@
 }
 
 #pragma mark - UITableViewDelegate & DataSource
-- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
-
-    if(tableView == _tbl_list){
-
-        return _ary_total_data.count;
-    }
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
+    if(tableView == _tbl_head){
+
+        return _ary_elis_menu.count;
+    }
+
     if(tableView == _tbl_list){
 
-        if (_ary_total_data.count > 0) {
+        NSMutableArray* ary_groupeItems = [_arr_elia_Shop objectAtIndex:lng_ShopNo];
+        NSMutableArray* ary_shopItems = [ary_groupeItems objectAtIndex:0];
 
-            return ((NSMutableArray*)_arr_elia_Shop[(NSUInteger) section]).extended ? [_arr_elia_Shop[(NSUInteger) section] count] + 1 : 1;
-        }
-        if ([MPAppDelegate sharedMPAppDelegate].networkStatus) {
-            if (!_ary_total_data) {
-                return 0;
-            }
-        }
+        return ary_shopItems.count;
     }
 
     return 0;
@@ -224,87 +205,91 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
 
+    if(tableView == _tbl_list){
+
+    }
+
     return 0;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-
-    return 0;
+- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    return nil;
 }
 
-- (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    return [[UIImageView alloc] initWithImage:[UIImage imageNamed:LINE_OF_APP]];
+    if(tableView == _tbl_head){
+
+        if(bln_menuOpen){
+
+            return 35;
+        }else{
+
+            if(indexPath.row == lng_ShopNo){
+
+                return 35;
+            }else{
+
+                return 0;
+            }
+        }
+    }
+
+    if(tableView == _tbl_list){
+
+        return 100;
+    }
+
+    return 0;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    MPTheMenuHederCell *elia_groupe_cell = [tableView dequeueReusableCellWithIdentifier:@"menuheaderlistIdentifier"];
-    MPTheMenuCell *shop_cell = [tableView dequeueReusableCellWithIdentifier:@"menulistIdentifier"];
+    if(tableView == _tbl_head){
 
-    static NSString *ParentCellIdentifier = @"menuheaderlistIdentifier";
-    static NSString *ChildCellIdentifier = @"menulistIdentifier";
-    NSInteger section = indexPath.section;
-    NSInteger row = indexPath.row;
-    NSMutableArray *subItems;
-    subItems = _arr_elia_Shop[(NSUInteger) section];
+        MPTheMenuHederCell *cell = [tableView dequeueReusableCellWithIdentifier:@"menuheaderlistIdentifier"];
+        if(cell == nil){
 
-    NSString *identifier;
-    if(row == 0){
-        identifier = ParentCellIdentifier;
-    } else {
-        identifier = ChildCellIdentifier;
-    }
-
-    //グループ用セル設定
-    elia_groupe_cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (elia_groupe_cell == nil) {
-
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPTheMenuHederCell" owner:self options:nil];
-        elia_groupe_cell = [nib objectAtIndex:0];
-    }
-
-    //ショップ用セル設定
-    shop_cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (shop_cell == nil) {
-
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPTheMenuCell" owner:self options:nil];
-        shop_cell = [nib objectAtIndex:0];
-    }
-
-    // ハイライトなし
-    elia_groupe_cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    shop_cell.selectionStyle = UITableViewCellSelectionStyleGray;
-
-    if(row == 0){
-
-        [elia_groupe_cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-
-        //ショップ名設定
-        NSString* str_ShopName = [_ary_elis_menu objectAtIndex:indexPath.section];
-        [elia_groupe_cell.lbl_ShopName setText:[NSString stringWithFormat:@"%@", str_ShopName]];
-        // △ 2016年9月29日 ama 件数追加
-
-        //オープン・クローズの状態画像変更
-        if(subItems.extended == NO){
-
-            UIImage *image = [UIImage imageNamed:@"down_white_yajirushi.png.png"];
-            [elia_groupe_cell.img_yajirushi setImage:image];
-        }else{
-
-            UIImage *image = [UIImage imageNamed:@"up_white_yajirushi.png.png"];
-            [elia_groupe_cell.img_yajirushi setImage:image];
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPTheMenuHederCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
         }
 
-        return elia_groupe_cell;
+        cell.lbl_ShopName.text = [_ary_elis_menu objectAtIndex:indexPath.row];
 
-    }else{
+        if(bln_menuOpen){
 
-        NSMutableArray* ary_groupeItems = [_arr_elia_Shop objectAtIndex:indexPath.section];
+            cell.hidden = NO;
+        }else{
+
+            if(indexPath.row == lng_ShopNo){
+
+                cell.hidden = NO;
+            }else{
+
+                cell.hidden = YES;
+            }
+        }
+
+        return cell;
+
+    }
+
+    if(tableView == _tbl_list){
+
+        MPTheMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:@"menulistIdentifier"];
+        if(cell == nil){
+
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MPTheMenuCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+
+        NSMutableArray* ary_groupeItems = [_arr_elia_Shop objectAtIndex:lng_ShopNo];
         NSMutableArray* ary_shopItems = [ary_groupeItems objectAtIndex:0];
-        NSString* strMainCategory = [[ary_shopItems valueForKey:@"category"] objectAtIndex:indexPath.row-1];
-        NSString* strMainSibCategory = [[ary_shopItems valueForKey:@"sub_title"] objectAtIndex:indexPath.row-1];
-        NSString* strImageUrl = [[ary_shopItems valueForKey:@"thumbnail"] objectAtIndex:indexPath.row-1];
+
+        NSString* strMainCategory = [[ary_shopItems valueForKey:@"category"] objectAtIndex:indexPath.row];
+        NSString* strMainSibCategory = [[ary_shopItems valueForKey:@"sub_title"] objectAtIndex:indexPath.row];
+        NSString* strImageUrl = [[ary_shopItems valueForKey:@"thumbnail"] objectAtIndex:indexPath.row];
 
         //画像設定
         if(strImageUrl && [strImageUrl length] > 0 ) {
@@ -317,17 +302,17 @@
                 UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [NSURL URLWithString: imageURL]]];
 
                 dispatch_async(q_main, ^{
-                    [shop_cell.img_photo setImage:image];
+                    [cell.img_photo setImage:image];
                 });
             });
         }else{
-            [shop_cell.img_photo setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
+            [cell.img_photo setImage:[UIImage imageNamed:UNAVAILABLE_IMAGE]];
         }
         
-        shop_cell.lbl_title.text = strMainCategory;
-        shop_cell.lbl_subtitle.text = strMainSibCategory;
-
-        return shop_cell;
+        cell.lbl_title.text = strMainCategory;
+        cell.lbl_subtitle.text = strMainSibCategory;
+        
+        return cell;
     }
 
     return nil;
@@ -335,29 +320,27 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    NSInteger section = indexPath.section;
-    NSInteger row =indexPath.row;
+    if(tableView == _tbl_head){
 
-    if(row == 0){
+        if(bln_menuOpen){
 
-        NSMutableArray *subItems;
-        subItems = _arr_elia_Shop[(NSUInteger) section];
-
-        subItems.extended = !subItems.extended;
-        if(subItems.extended == NO){
-
-            [self collapseSubItemsAtIndex:row+1 maxRow:[subItems count]+1 section:section];
-            [_tbl_list reloadData];
+            lng_ShopNo = indexPath.row;
+            bln_menuOpen = NO;
         }else{
 
-            [self expandItemAtIndex:row+1 maxRow:[subItems count]+1 section:section];
-            [_tbl_list reloadData];
+            bln_menuOpen = YES;
         }
-    }else{
+        [_tbl_head reloadData];
+        [self head_resizeTable];
+        [_tbl_list reloadData];
+        [self list_resizeTable];
+    }
 
-        NSMutableArray* ary_groupeItems = [_arr_elia_Shop objectAtIndex:indexPath.section];
+    if(tableView == _tbl_list){
+
+        NSMutableArray* ary_groupeItems = [_arr_elia_Shop objectAtIndex:lng_ShopNo];
         NSMutableArray* ary_shopItems = [ary_groupeItems objectAtIndex:0];
-        NSString* strSubScreenImageUrl = [[ary_shopItems valueForKey:@"image"] objectAtIndex:indexPath.row-1];
+        NSString* strSubScreenImageUrl = [[ary_shopItems valueForKey:@"image"] objectAtIndex:indexPath.row];
 
         MPTheThirdSumMenuViewController *vc = [[MPTheThirdSumMenuViewController alloc] initWithNibName:@"MPTheThirdSumMenuViewController" bundle:nil];
         vc.delegate = self;
@@ -383,37 +366,44 @@
         vc.menuCount = indexPath.row;
 
         MPMenu_MenuObject *obj_menu = [[MPMenu_MenuObject alloc] init];
-        obj_menu = [[[_arr_elia_Shop objectAtIndex:section] objectAtIndex:row-1] objectAtIndex:row-1];
-
-        NSArray *subItems = obj_menu.item;
+        obj_menu = [[[_arr_elia_Shop objectAtIndex:lng_ShopNo] objectAtIndex:0] objectAtIndex:indexPath.row];
+        
+        NSMutableArray *subItems = obj_menu.item;
         vc.ary_menuGroupe_data = subItems;
-
+        
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
-// 縮小アニメーション
-- (void)collapseSubItemsAtIndex:(int)firstRow maxRow:(int)maxRow section:(int)section {
+- (void)head_resizeTable {
 
-    NSMutableArray *indexPaths = [NSMutableArray new];
-    for(int i=firstRow;i<maxRow;i++)
-    {
-        [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:section]];
+    if(bln_menuOpen){
+
+        //コレクション高さをセルの最大値へセット
+        _tbl_head.translatesAutoresizingMaskIntoConstraints = YES;
+        _tbl_head.frame = CGRectMake(_tbl_head.frame.origin.x, _tbl_head.frame.origin.y, _tbl_head.frame.size.width, 0);
+        _tbl_head.frame =
+        CGRectMake(_tbl_head.frame.origin.x,
+                   _tbl_head.frame.origin.y,
+                   _tbl_head.contentSize.width,
+                   _ary_elis_menu.count * 35);
+    }else{
+
+        //コレクション高さをセルの最大値へセット
+        _tbl_head.translatesAutoresizingMaskIntoConstraints = YES;
+        _tbl_head.frame = CGRectMake(_tbl_head.frame.origin.x, _tbl_head.frame.origin.y, _tbl_head.frame.size.width, 0);
+        _tbl_head.frame =
+        CGRectMake(_tbl_head.frame.origin.x,
+                   _tbl_head.frame.origin.y,
+                   _tbl_head.contentSize.width,
+                   35);
     }
-    [_tbl_list deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
-}
-//拡張アニメーション
-- (void)expandItemAtIndex:(int)firstRow maxRow:(int)maxRow section:(int)section {
-
-    NSMutableArray *indexPaths = [NSMutableArray new];
-    for(int i=firstRow;i<maxRow;i++) {
-        [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:section]];
-    }
-    [_tbl_list insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
-    [_tbl_list scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:firstRow - 1 inSection:section] atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
-- (void)resizeTable {
+- (void)list_resizeTable {
+
+    NSMutableArray* ary_groupeItems = [_arr_elia_Shop objectAtIndex:lng_ShopNo];
+    NSMutableArray* ary_shopItems = [ary_groupeItems objectAtIndex:0];
 
     //コレクション高さをセルの最大値へセット
     _tbl_list.translatesAutoresizingMaskIntoConstraints = YES;
@@ -422,8 +412,7 @@
     CGRectMake(_tbl_list.frame.origin.x,
                _tbl_list.frame.origin.y,
                _tbl_list.contentSize.width,
-               MAX(_tbl_list.contentSize.height,
-                   _tbl_list.bounds.size.height));
+               ary_shopItems.count * 100);
 }
 
 @end

@@ -21,7 +21,8 @@
     __weak IBOutlet UIScrollView* _scr_rootview;
     __weak IBOutlet UIView* _scr_inView;
     CGPoint _scrollBeginingPoint;
-    
+
+    __weak IBOutlet UITableView *_tbl_head;
     __weak IBOutlet UITableView *_tbl_list;
 
     NSMutableArray* _ary_total_data;
@@ -33,6 +34,9 @@
     NSMutableArray *_ary_subTitle;
     NSMutableArray *_ary_infoImage;
     NSMutableDictionary* _dic_menu_data;
+
+    long lng_ShopNo;
+    BOOL bln_menuOpen;
 }
 
 @end
