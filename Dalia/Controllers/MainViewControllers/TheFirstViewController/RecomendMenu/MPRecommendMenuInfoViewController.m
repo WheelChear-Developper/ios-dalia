@@ -76,7 +76,25 @@
 
     _lbl_title.text = _str_title;
     _lbl_content.text = _str_comment;
+
+    //行間設定
+    CGFloat customLineHeight = 16.0f;
+
+    // パラグラフスタイルにlineHeightをセット
+    NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+    paragrahStyle.minimumLineHeight = customLineHeight;
+    paragrahStyle.maximumLineHeight = customLineHeight;
+
+    // NSAttributedStringを生成してパラグラフスタイルをセット
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:_str_comment];
+    [attributedText addAttribute:NSParagraphStyleAttributeName
+                           value:paragrahStyle
+                           range:NSMakeRange(0, attributedText.length)];
+
+    _lbl_content.numberOfLines = 0;
+    _lbl_content.attributedText = attributedText;
 }
+
 
 - (void)viewWillDisappear:(BOOL)animated {
 
