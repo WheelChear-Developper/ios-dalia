@@ -18,24 +18,24 @@
                     <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXv-SZ-nof">
-                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="35" height="44"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_instagram_black.png" translatesAutoresizingMaskIntoConstraints="NO" id="FKl-1r-g24">
-                                    <rect key="frame" x="10" y="10" width="24" height="24"/>
+                                    <rect key="frame" x="5.5" y="10" width="24" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="24" id="QrB-aD-NbS"/>
                                         <constraint firstAttribute="height" constant="24" id="Y21-K7-pKD"/>
                                     </constraints>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZL2-LW-F8X">
-                                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="35" height="44"/>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="ZL2-LW-F8X" firstAttribute="top" secondItem="JXv-SZ-nof" secondAttribute="top" id="3L9-Q4-CJW"/>
                                 <constraint firstAttribute="bottom" secondItem="ZL2-LW-F8X" secondAttribute="bottom" id="FTS-fz-bBB"/>
-                                <constraint firstAttribute="width" constant="44" id="O3R-6t-JPG"/>
+                                <constraint firstAttribute="width" constant="35" id="O3R-6t-JPG"/>
                                 <constraint firstItem="ZL2-LW-F8X" firstAttribute="leading" secondItem="JXv-SZ-nof" secondAttribute="leading" id="eYc-E2-FNS"/>
                                 <constraint firstAttribute="trailing" secondItem="ZL2-LW-F8X" secondAttribute="trailing" id="ffa-cp-n33"/>
                                 <constraint firstItem="FKl-1r-g24" firstAttribute="centerY" secondItem="JXv-SZ-nof" secondAttribute="centerY" id="x52-wN-4nO"/>
@@ -43,17 +43,17 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIw-1R-7OJ">
-                            <rect key="frame" x="44" y="0.0" width="44" height="44"/>
+                            <rect key="frame" x="35" y="0.0" width="35" height="44"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_facebook_black.png" translatesAutoresizingMaskIntoConstraints="NO" id="isG-f8-zPa">
-                                    <rect key="frame" x="10" y="10" width="24" height="24"/>
+                                    <rect key="frame" x="5.5" y="10" width="24" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="24" id="H2H-XS-rWG"/>
                                         <constraint firstAttribute="width" constant="24" id="Zdb-NQ-Pb3"/>
                                     </constraints>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRe-DG-d7s">
-                                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="35" height="44"/>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,22 +63,22 @@
                                 <constraint firstItem="isG-f8-zPa" firstAttribute="centerY" secondItem="dIw-1R-7OJ" secondAttribute="centerY" id="JMz-CY-i7G"/>
                                 <constraint firstItem="TRe-DG-d7s" firstAttribute="leading" secondItem="dIw-1R-7OJ" secondAttribute="leading" id="Tnb-RH-tbQ"/>
                                 <constraint firstAttribute="trailing" secondItem="TRe-DG-d7s" secondAttribute="trailing" id="kO4-Lk-tqZ"/>
-                                <constraint firstAttribute="width" constant="44" id="nZj-si-Ter"/>
+                                <constraint firstAttribute="width" constant="35" id="nZj-si-Ter"/>
                                 <constraint firstAttribute="bottom" secondItem="TRe-DG-d7s" secondAttribute="bottom" id="s0T-Wj-rfa"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wle-kK-5oj">
-                            <rect key="frame" x="88" y="0.0" width="44" height="44"/>
+                            <rect key="frame" x="70" y="0.0" width="35" height="44"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_twitter_black.png" translatesAutoresizingMaskIntoConstraints="NO" id="jT6-0k-pIn">
-                                    <rect key="frame" x="10" y="12" width="24" height="20"/>
+                                    <rect key="frame" x="5.5" y="12" width="24" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="24" id="TpP-kj-h2p"/>
                                         <constraint firstAttribute="height" constant="20" id="tJh-C1-Miw"/>
                                     </constraints>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5C-DQ-s8f">
-                                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="35" height="44"/>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -87,23 +87,23 @@
                                 <constraint firstItem="jT6-0k-pIn" firstAttribute="centerY" secondItem="Wle-kK-5oj" secondAttribute="centerY" id="7gJ-fJ-hix"/>
                                 <constraint firstItem="V5C-DQ-s8f" firstAttribute="top" secondItem="Wle-kK-5oj" secondAttribute="top" id="RVM-Nz-9SY"/>
                                 <constraint firstAttribute="bottom" secondItem="V5C-DQ-s8f" secondAttribute="bottom" id="TFC-zO-Ost"/>
-                                <constraint firstAttribute="width" constant="44" id="W52-o4-Ry7"/>
+                                <constraint firstAttribute="width" constant="35" id="W52-o4-Ry7"/>
                                 <constraint firstItem="V5C-DQ-s8f" firstAttribute="leading" secondItem="Wle-kK-5oj" secondAttribute="leading" id="Zew-7Y-cgE"/>
                                 <constraint firstAttribute="trailing" secondItem="V5C-DQ-s8f" secondAttribute="trailing" id="aJp-D6-aAu"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4C-p2-X5r">
-                            <rect key="frame" x="132" y="0.0" width="44" height="44"/>
+                            <rect key="frame" x="105" y="0.0" width="35" height="44"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_web_black.png" translatesAutoresizingMaskIntoConstraints="NO" id="DIl-Fr-9EB">
-                                    <rect key="frame" x="10" y="10" width="24" height="24"/>
+                                    <rect key="frame" x="5.5" y="10" width="24" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="24" id="FdK-N6-wAe"/>
                                         <constraint firstAttribute="height" constant="24" id="LOx-2O-qT0"/>
                                     </constraints>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bM2-ru-MD2">
-                                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="35" height="44"/>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -112,28 +112,28 @@
                                 <constraint firstItem="bM2-ru-MD2" firstAttribute="top" secondItem="W4C-p2-X5r" secondAttribute="top" id="XMo-Qd-bBa"/>
                                 <constraint firstItem="DIl-Fr-9EB" firstAttribute="centerY" secondItem="W4C-p2-X5r" secondAttribute="centerY" id="Ys1-88-wKS"/>
                                 <constraint firstItem="bM2-ru-MD2" firstAttribute="leading" secondItem="W4C-p2-X5r" secondAttribute="leading" id="aKL-jd-eJy"/>
-                                <constraint firstAttribute="width" constant="44" id="dIM-U1-Szb"/>
+                                <constraint firstAttribute="width" constant="35" id="dIM-U1-Szb"/>
                                 <constraint firstAttribute="bottom" secondItem="bM2-ru-MD2" secondAttribute="bottom" id="u1T-Al-f2H"/>
                                 <constraint firstItem="DIl-Fr-9EB" firstAttribute="centerX" secondItem="W4C-p2-X5r" secondAttribute="centerX" id="y30-4l-1Wu"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2D-dU-7sr">
-                            <rect key="frame" x="176" y="0.0" width="44" height="44"/>
+                            <rect key="frame" x="140" y="0.0" width="35" height="44"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_blog_black.png" translatesAutoresizingMaskIntoConstraints="NO" id="U0R-KS-okg">
-                                    <rect key="frame" x="10" y="10" width="24" height="24"/>
+                                    <rect key="frame" x="5.5" y="10" width="24" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="24" id="U8C-gF-jre"/>
                                         <constraint firstAttribute="width" constant="24" id="ctl-3g-MpC"/>
                                     </constraints>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYX-ap-Cct">
-                                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="35" height="44"/>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="44" id="1rz-6s-OpN"/>
+                                <constraint firstAttribute="width" constant="35" id="1rz-6s-OpN"/>
                                 <constraint firstAttribute="bottom" secondItem="jYX-ap-Cct" secondAttribute="bottom" id="2BF-ky-YpT"/>
                                 <constraint firstItem="U0R-KS-okg" firstAttribute="centerX" secondItem="V2D-dU-7sr" secondAttribute="centerX" id="A2V-b1-SLT"/>
                                 <constraint firstItem="U0R-KS-okg" firstAttribute="centerY" secondItem="V2D-dU-7sr" secondAttribute="centerY" id="H4B-be-93e"/>
