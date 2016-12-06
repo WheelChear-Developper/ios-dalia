@@ -48,7 +48,7 @@
 
     //🔴カスタムnavigation
     [self setHidden_CustomNavigation:YES];
-    [self setImage_CustomNavigation:nil];
+    [self setImage_CustomNavigation:nil imagePosition:1];
 
     //🔴タブの表示
     [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_Tab:NO];

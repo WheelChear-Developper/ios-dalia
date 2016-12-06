@@ -79,7 +79,7 @@
 
     //🔴カスタムnavigation
     [self setHidden_CustomNavigation:NO];
-    [self setImage_CustomNavigation:[UIImage imageNamed:@"header_logo.png"]];
+    [self setImage_CustomNavigation:[UIImage imageNamed:@"header_logo.png"] imagePosition:0];
 
     //🔴タブの表示
     [(MPTabBarViewController*)[self.navigationController parentViewController] setHidden_Tab:NO];

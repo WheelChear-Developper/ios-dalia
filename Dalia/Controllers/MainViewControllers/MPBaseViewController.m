@@ -108,7 +108,7 @@
     _basic_navigationView.frame = basic_frameNavigationView;
     [self.view addSubview:_basic_navigationView];
 
-    _basic_navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((35 + _basic_navigationView.frame.size.width - ICON_WIDTH)/2, (_basic_navigationView.frame.size.height - ICON_HEIGHT)/2 + 5, ICON_WIDTH - 30, ICON_HEIGHT)];
+    _basic_navigationIcon = [[UIImageView alloc] initWithFrame:CGRectMake((35 + _basic_navigationView.frame.size.width - ICON_WIDTH)/2, (_basic_navigationView.frame.size.height - ICON_HEIGHT)/2, ICON_WIDTH - 30, ICON_HEIGHT)];
     [_basic_navigationIcon setContentMode:UIViewContentModeScaleAspectFit];
     [_basic_navigationView addSubview:_basic_navigationIcon];
 
@@ -227,7 +227,7 @@
     _view_custom_navigationView = [[UIView alloc] init];
     [_view_custom_navigationView setBackgroundColor:[UIColor colorWithRed:247/255.0 green:247/255.0 blue:245/255.0 alpha:0.95]];
     [_view_custom_navigationView setUserInteractionEnabled:YES];
-    CGRect custom_frameNavigationView = _view_custom_navigationView.frame;
+    custom_frameNavigationView = _view_custom_navigationView.frame;
     custom_frameNavigationView.origin.x = FRAME_ORGIN;
     custom_frameNavigationView.origin.y = FRAME_ORGIN + _statusHeight;
     custom_frameNavigationView.size.width = self.view.frame.size.width;
@@ -418,9 +418,26 @@
     }
 }
 
-- (void)setImage_CustomNavigation:(UIImage*)image {
+- (void)setImage_CustomNavigation:(UIImage*)image imagePosition:(long)imagePosition {
 
     [_iv_custom_navigationIcon setImage:image];
+
+    switch (imagePosition) {
+        case 0:
+        {
+            _iv_custom_navigationIcon.frame = CGRectMake((35 + custom_frameNavigationView.size.width - ICON_WIDTH)/2, (custom_frameNavigationView.size.height - ICON_HEIGHT)/2 + 5, ICON_WIDTH - 30, ICON_HEIGHT);
+        }
+            break;
+
+        case 1:
+        {
+            _iv_custom_navigationIcon.frame = CGRectMake((35 + custom_frameNavigationView.size.width - ICON_WIDTH)/2, (custom_frameNavigationView.size.height - ICON_HEIGHT)/2, ICON_WIDTH - 30, ICON_HEIGHT);
+        }
+            break;
+
+        default:
+            break;
+    }
 }
 
 - (void)setFadeOut_CustomNavigation:(BOOL)flg {
