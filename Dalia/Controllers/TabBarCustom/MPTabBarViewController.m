@@ -168,6 +168,8 @@
 - (void)buttonClicked:(UIButton*)sender {
 
     NSLog(@"TagNo_%d",sender.tag);
+
+    [self setUpTabBar];
 /*
     if (sender.tag != 3) {
         [self setUpTabBar];

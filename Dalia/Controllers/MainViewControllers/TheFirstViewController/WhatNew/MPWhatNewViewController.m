@@ -35,6 +35,9 @@
     //XIB表示のため、contentViewを非表示
     [_contentView setHidden:YES];
 
+    //選択タブ解除
+    [(MPTabBarViewController*)[self.navigationController parentViewController] selectTab:-1];
+
     //テーブル設定
     _WhatNewsList_tableView.scrollEnabled = false;
     _WhatNewsList_tableView.estimatedRowHeight = 100.0f;

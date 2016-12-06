@@ -32,6 +32,9 @@
 
     //XIB表示のため、contentViewを非表示
     [_contentView setHidden:YES];
+
+    //選択タブ解除
+    [(MPTabBarViewController*)[self.navigationController parentViewController] selectTab:-1];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
