@@ -278,8 +278,8 @@
     if(flg){
 
         //閉じる場合
-        [UIView animateWithDuration:0.3f
-                              delay:0.3f
+        [UIView animateWithDuration:0.1f
+                              delay:0.1f
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
 
@@ -297,8 +297,8 @@
     }else{
 
         //開ける場合
-        [UIView animateWithDuration:0.3f
-                              delay:0.3f
+        [UIView animateWithDuration:0.1f
+                              delay:0.1f
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
 
