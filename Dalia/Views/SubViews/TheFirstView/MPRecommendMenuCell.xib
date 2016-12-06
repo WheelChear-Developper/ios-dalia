@@ -55,7 +55,7 @@
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="182" translatesAutoresizingMaskIntoConstraints="NO" id="24b-vS-NVg">
                                         <rect key="frame" x="5" y="15" width="170" height="0.0"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="12"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -104,8 +104,8 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CG9-bV-6dc">
-                                <rect key="frame" x="130" y="97" width="170" height="1"/>
-                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="120" y="97" width="180" height="1"/>
+                                <color key="backgroundColor" red="0.61960784313725492" green="0.61568627450980395" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="AAq-2X-ubF"/>
                                 </constraints>
@@ -115,7 +115,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tfW-or-jlS" secondAttribute="trailing" id="11K-aE-A6X"/>
                             <constraint firstItem="p0f-8I-nd9" firstAttribute="top" secondItem="nSP-vC-I1r" secondAttribute="top" id="11h-mr-RYM"/>
-                            <constraint firstItem="CG9-bV-6dc" firstAttribute="leading" secondItem="nSP-vC-I1r" secondAttribute="leading" constant="130" id="1MZ-dP-O4B"/>
+                            <constraint firstItem="CG9-bV-6dc" firstAttribute="leading" secondItem="nSP-vC-I1r" secondAttribute="leading" constant="120" id="1MZ-dP-O4B"/>
                             <constraint firstAttribute="trailing" secondItem="CG9-bV-6dc" secondAttribute="trailing" id="9kA-pg-cbf"/>
                             <constraint firstItem="zVV-12-rsT" firstAttribute="leading" secondItem="ePZ-Tv-vjK" secondAttribute="trailing" id="C2y-kN-8JG"/>
                             <constraint firstAttribute="bottom" secondItem="CG9-bV-6dc" secondAttribute="bottom" id="CRd-jZ-lbA"/>
