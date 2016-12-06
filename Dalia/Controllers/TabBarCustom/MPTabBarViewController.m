@@ -139,7 +139,7 @@
                 break;
         }
 
-        bt.frame = CGRectMake(i * widthBT, 0, widthBT, rect.size.height);
+        bt.frame = CGRectMake(5 + i * widthBT, 5, widthBT - 10, rect.size.height - 10);
         [bt setTag:i];
         [bt setBackgroundImage:[UIImage imageNamed:urlImageNomal] forState:UIControlStateNormal];
         [bt setBackgroundImage:[UIImage imageNamed:urlImageSelected] forState:UIControlStateHighlighted];

@@ -165,8 +165,20 @@
             _lbl_shopName.text = obj_shopinfo.shop_name;
             _lbl_subShopName.text = obj_shopinfo.shop_name_furi;
 
-            _lbl_zipcode.text = [NSString stringWithFormat:@"%@ - %@", obj_shopinfo.postcode1, obj_shopinfo.postcode2];
-            _lbl_adress.text = [NSString stringWithFormat:@"%@\n%@", obj_shopinfo.address1, obj_shopinfo.address2];
+            if(obj_shopinfo.postcode1 == nil){
+
+                _lbl_zipcode.text = @"";
+            }else{
+
+                _lbl_zipcode.text = [NSString stringWithFormat:@"%@ - %@", obj_shopinfo.postcode1, obj_shopinfo.postcode2];
+            }
+            if(obj_shopinfo.address2 == nil){
+
+                _lbl_adress.text = [NSString stringWithFormat:@"%@", obj_shopinfo.address1];
+            }else{
+
+                _lbl_adress.text = [NSString stringWithFormat:@"%@\n%@", obj_shopinfo.address1, obj_shopinfo.address2];
+            }
             _lbl_tel.text = [NSString stringWithFormat:@"%@ - %@ - %@", obj_shopinfo.phone1, obj_shopinfo.phone2, obj_shopinfo.phone3];
             _lbl_bisinessHour.text = obj_shopinfo.business_hour;
             _lbl_memo.text = obj_shopinfo.content;
