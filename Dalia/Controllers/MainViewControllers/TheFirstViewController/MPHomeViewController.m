@@ -50,10 +50,10 @@
     }
 
     CGRect topImageViewFrame = _topImageView.frame;
-    topImageViewFrame.origin.x = 2;
-    topImageViewFrame.origin.y = 2;
-    topImageViewFrame.size.width = _topimg_rootView.frame.size.width - 4;
-    topImageViewFrame.size.height = _topimg_rootView.frame.size.height - 4;
+    topImageViewFrame.origin.x = 0;
+    topImageViewFrame.origin.y = 0;
+    topImageViewFrame.size.width = _topimg_rootView.frame.size.width;
+    topImageViewFrame.size.height = _topimg_rootView.frame.size.height;
     _topImageView.frame = topImageViewFrame;
     [_topimg_rootView addSubview:_topImageView];
 

@@ -175,7 +175,7 @@
 
         // 画像view作成
         UIImageView *newPageView = [[UIImageView alloc] initWithImage:unique];
-        newPageView.contentMode = UIViewContentModeScaleAspectFit;
+        newPageView.contentMode = UIViewContentModeScaleAspectFill;
         newPageView.frame = frame;
         newPageView.frame = CGRectMake(0, 0, myView.frame.size.width, myView.frame.size.height);
         [newPageView setBackgroundColor:[UIColor clearColor]];
