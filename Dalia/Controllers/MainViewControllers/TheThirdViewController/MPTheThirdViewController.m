@@ -110,7 +110,7 @@
 
         //下方向の時のアクション
         //カスタムトップナビゲーション　クローズ
-//        [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_CustomNavigation:true];
+        [self setFadeOut_CustomNavigation:true];
 
         //タブのクローズ
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:true];
@@ -128,7 +128,7 @@
 
         //上方向の時のアクション
         //カスタムトップナビゲーション　オープン
-//        [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_CustomNavigation:false];
+        [self setFadeOut_CustomNavigation:false];
 
         //タブのオープン
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:false];

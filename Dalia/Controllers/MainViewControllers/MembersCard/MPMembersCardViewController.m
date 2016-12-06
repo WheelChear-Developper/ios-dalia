@@ -109,7 +109,7 @@ NSUInteger const SIZE_OF_SOME_CONSTANT_ARRAY = 9;
 
         //下方向の時のアクション
         //トップナビゲーション　クローズ
-//        [self setFadeOut_BasicNavigation:true];
+        [self setFadeOut_BasicNavigation:true];
 
         //タブのクローズ
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:true];
@@ -127,7 +127,7 @@ NSUInteger const SIZE_OF_SOME_CONSTANT_ARRAY = 9;
 
         //上方向の時のアクション
         //トップナビゲーション　オープン
-//        [self setFadeOut_BasicNavigation:false];
+        [self setFadeOut_BasicNavigation:false];
 
         //タブのオープン
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:false];

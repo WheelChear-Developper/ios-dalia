@@ -107,7 +107,7 @@
 
         //上方向の時のアクション
         //標準ナビゲーションのクローズ
-//        [self setFadeOut_BasicNavigation:true];
+        [self setFadeOut_BasicNavigation:true];
 
         //タブのオープン
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:true];
@@ -125,7 +125,7 @@
 
         //下方向の時のアクション
         //標準ナビゲーションのオープン
-//        [self setFadeOut_BasicNavigation:false];
+        [self setFadeOut_BasicNavigation:false];
 
         //タブのオープン
         [(MPTabBarViewController*)[self.navigationController parentViewController] setFadeOut_Tab:false];
