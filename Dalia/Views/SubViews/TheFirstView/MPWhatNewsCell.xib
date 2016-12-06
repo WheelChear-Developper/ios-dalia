@@ -94,7 +94,7 @@
                                 <rect key="frame" x="120" y="30" width="180" height="43"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="dIQ-Gw-ZRG">
-                                        <rect key="frame" x="8" y="0.0" width="155" height="43"/>
+                                        <rect key="frame" x="5" y="0.0" width="158" height="43"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -111,7 +111,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="HoF-DM-b9Y" firstAttribute="centerY" secondItem="tfW-or-jlS" secondAttribute="centerY" id="HZ1-0z-Ee5"/>
-                                    <constraint firstItem="dIQ-Gw-ZRG" firstAttribute="leading" secondItem="tfW-or-jlS" secondAttribute="leading" constant="8" id="Rkl-OA-UD6"/>
+                                    <constraint firstItem="dIQ-Gw-ZRG" firstAttribute="leading" secondItem="tfW-or-jlS" secondAttribute="leading" constant="5" id="Rkl-OA-UD6"/>
                                     <constraint firstAttribute="trailing" secondItem="HoF-DM-b9Y" secondAttribute="trailing" id="Si4-uf-JQ0"/>
                                     <constraint firstItem="HoF-DM-b9Y" firstAttribute="leading" secondItem="dIQ-Gw-ZRG" secondAttribute="trailing" constant="5" id="UMz-Pb-N77"/>
                                     <constraint firstItem="dIQ-Gw-ZRG" firstAttribute="top" secondItem="tfW-or-jlS" secondAttribute="top" id="XmT-Z1-WHs"/>
