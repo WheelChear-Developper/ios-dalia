@@ -81,6 +81,23 @@
     UINib *cellNib1 = [UINib nibWithNibName:@"MPStaffCollectionCell" bundle:nil];
     [_col_photolist registerNib:cellNib1 forCellWithReuseIdentifier:@"staffCollectionCellIdentifier"];
     [_col_photolist reloadData];
+
+    //行間設定
+    CGFloat customLineHeight = 16.0f;
+
+    // パラグラフスタイルにlineHeightをセット
+    NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+    paragrahStyle.minimumLineHeight = customLineHeight;
+    paragrahStyle.maximumLineHeight = customLineHeight;
+
+    // NSAttributedStringを生成してパラグラフスタイルをセット
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:lbl_comment.text];
+    [attributedText addAttribute:NSParagraphStyleAttributeName
+                           value:paragrahStyle
+                           range:NSMakeRange(0, attributedText.length)];
+
+    lbl_comment.numberOfLines = 0;
+    lbl_comment.attributedText = attributedText;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
