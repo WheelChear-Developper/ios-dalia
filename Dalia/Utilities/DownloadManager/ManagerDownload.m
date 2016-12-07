@@ -42,6 +42,8 @@
 
 #import "MPCouponShareObject.h"
 
+#import "MPStaffShoplistObject.h"
+
 @implementation ManagerDownload
 + (ManagerDownload *)sharedInstance{
     static ManagerDownload *manager = nil;
@@ -1628,14 +1630,16 @@
 
 - (void)processGetStaff:(NSArray *)listObject with:(DownloadParam *)param {
 
+    NSMutableArray* ary_staff = [[NSMutableArray alloc] init];
+
     //スタッフ情報
     for (NSDictionary *dic in listObject) {
         if ([dic isKindOfClass:[NSString class]]||[dic isKindOfClass:[NSNull class]]) {
             return;
         }
-        NSMutableDictionary *shopObject = [[NSMutableDictionary alloc] init];
+        MPStaffShoplistObject *shopObject = [[MPStaffShoplistObject alloc] init];
 
-        [shopObject setValue:[dic objectForKey:@"shop_name"] forKey:@"shopname"];
+        shopObject.shopname = [dic objectForKey:@"shop_name"];
 
         NSArray *ary_staffData = [Utility checkNULL:[dic objectForKey:@"staffs"]];
         NSMutableArray* ary_setStaff =[[NSMutableArray alloc] init];
@@ -1657,10 +1661,12 @@
             staffObj.styles = [Utility checkNULL:[[ary_staffData objectAtIndex:i] objectForKey:@"styles"]];
             [ary_setStaff addObject:staffObj];
         }
-        [shopObject setValue:ary_setStaff forKey:@"staffs"];
+        shopObject.category = ary_setStaff;
 
-        [param.listData addObject:shopObject];
+        [ary_staff addObject:shopObject];
     }
+
+    [param.listData addObject:ary_staff];
 }
 
 - (void)processGetVideo:(NSArray *)listObject with:(DownloadParam *)param{

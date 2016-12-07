@@ -12,6 +12,8 @@
 #import "MPStaffCell.h"
 #import "MPStaffInfoViewController.h"
 #import "MPStafflistObject.h"
+#import "MPStaffShoplistObject.h"
+#import "MPStaffHeadCell.h"
 
 @interface MPStaffViewController : MPBaseViewController <ManagerDownloadDelegate, UIScrollViewDelegate, MPStaffInfoViewControllerDelegate>
 {
@@ -19,16 +21,21 @@
     __weak IBOutlet UIView* _scr_inView;
     CGPoint _scrollBeginingPoint;
 
-    NSMutableDictionary* _list_data;
+    NSMutableArray* _ary_total_data;
+    NSMutableArray* _arr_elia_Staff;
+    NSMutableArray* _ary_elis_Shop;
 
-    __weak IBOutlet UITableView *_tbl_menulist;
+    long lng_ShopNo;
+    BOOL bln_menuOpen;
+
+    __weak IBOutlet UITableView *_tbl_shopflist;
+    __weak IBOutlet UITableView *_tbl_stafflist;
 
     NSMutableArray *_ary_image;
     NSMutableArray *_ary_name;
     NSMutableArray *_ary_subname;
 
     NSMutableDictionary* _dic_menu_data;
-    NSMutableArray* _ary_elis_menu;
 
     __weak IBOutlet UILabel *_lbl_shopName;
 

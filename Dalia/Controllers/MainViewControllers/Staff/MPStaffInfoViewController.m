@@ -122,8 +122,6 @@
 -(void)viewDidLayoutSubviews {
 
     [super viewDidLayoutSubviews];
-
-    [self resizeTable];
 }
 
 #pragma mark - ScrollDelegate
@@ -215,7 +213,7 @@
 
     if(collectionView == _col_photolist){
 
-        return self.ary_photoImage.count;
+        return self.ary_SHOP.count;
     }
     return 0;
 }
@@ -231,14 +229,16 @@
             cell = [nib objectAtIndex:0];
         }
 
+        MPStafflistObject* obj_st = [_ary_SHOP objectAtIndex:indexPath.row];
+
         //画像設定
-        if([self.ary_photoImage objectAtIndex:indexPath.row] && [[self.ary_photoImage objectAtIndex:indexPath.row] length] > 0 ) {
+        if(obj_st.image && [obj_st.image length] > 0 ) {
 
             dispatch_queue_t q_global = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
             dispatch_queue_t q_main = dispatch_get_main_queue();
             dispatch_async(q_global, ^{
 
-                NSString *imageURL = [NSString stringWithFormat:BASE_PREFIX_URL,[self.ary_photoImage objectAtIndex:indexPath.row]];
+                NSString *imageURL = [NSString stringWithFormat:BASE_PREFIX_URL,obj_st.image];
                 UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL: [NSURL URLWithString: imageURL]]];
 
                 dispatch_async(q_main, ^{
@@ -262,10 +262,13 @@
 
 - (void)resizeTable {
 
-    _col_photolist.translatesAutoresizingMaskIntoConstraints = YES;
-    CGRect rct_photolist = _col_photolist.frame;
-    rct_photolist.size.height = ceil((double)self.ary_photoImage.count/3)*150;
-    _col_photolist.frame = rct_photolist;
+    if(self.ary_SHOP.count > 0){
+
+        _col_photolist.translatesAutoresizingMaskIntoConstraints = YES;
+        CGRect rct_photolist = _col_photolist.frame;
+        rct_photolist.size.height = ceil(self.ary_SHOP.count/3)*150;
+        _col_photolist.frame = rct_photolist;
+    }
 }
 
 - (void)backButtonClicked:(UIButton *)sender {

@@ -12,6 +12,7 @@
 #import "MPStaffCollectionCell.h"
 #import "MPStafflistObject.h"
 #import "MPWebViewController.h"
+#import "MPStaffShoplistObject.h"
 
 @protocol MPStaffInfoViewControllerDelegate<NSObject>
 @end
@@ -38,7 +39,7 @@
 }
 @property (nonatomic, assign) id<MPStaffInfoViewControllerDelegate> delegate;
 @property (nonatomic, assign) MPStafflistObject* obj_staff;
-@property (nonatomic, assign) NSMutableArray *ary_photoImage;
+@property (nonatomic, assign) NSMutableArray* ary_SHOP;
 
 - (IBAction)btn_yoyaku:(id)sender;
 - (IBAction)btn_insta:(id)sender;

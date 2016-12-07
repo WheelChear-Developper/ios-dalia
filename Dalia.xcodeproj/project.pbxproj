@@ -51,6 +51,9 @@
 		1002218C1DE3395800169B93 /* menu_teatment.png in Resources */ = {isa = PBXBuildFile; fileRef = 100221781DE3395800169B93 /* menu_teatment.png */; };
 		1002218D1DE3395800169B93 /* recommendmenu_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 100221791DE3395800169B93 /* recommendmenu_10.png */; };
 		1004E8301DF6F337004C7446 /* MPSNSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1004E82F1DF6F337004C7446 /* MPSNSViewController.xib */; };
+		1004E8331DF70890004C7446 /* MPStaffShoplistObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1004E8321DF70890004C7446 /* MPStaffShoplistObject.m */; };
+		1004E8371DF7BA28004C7446 /* MPStaffHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1004E8351DF7BA28004C7446 /* MPStaffHeadCell.m */; };
+		1004E83A1DF7C413004C7446 /* MPStaffHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1004E8391DF7C413004C7446 /* MPStaffHeadCell.xib */; };
 		100FC6FB1DF180F0002E0BB8 /* MPCouponStampObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 100FC6FA1DF180F0002E0BB8 /* MPCouponStampObject.m */; };
 		1016C7D61DE43D8100BC215E /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1016C7C31DE43D8100BC215E /* config.plist */; };
 		1016C7D71DE43D8100BC215E /* UIConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1016C7C51DE43D8100BC215E /* UIConfig.plist */; };
@@ -628,6 +631,11 @@
 		100221781DE3395800169B93 /* menu_teatment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_teatment.png; sourceTree = "<group>"; };
 		100221791DE3395800169B93 /* recommendmenu_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recommendmenu_10.png; sourceTree = "<group>"; };
 		1004E82F1DF6F337004C7446 /* MPSNSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPSNSViewController.xib; sourceTree = "<group>"; };
+		1004E8311DF70890004C7446 /* MPStaffShoplistObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPStaffShoplistObject.h; sourceTree = "<group>"; };
+		1004E8321DF70890004C7446 /* MPStaffShoplistObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPStaffShoplistObject.m; sourceTree = "<group>"; };
+		1004E8341DF7BA28004C7446 /* MPStaffHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPStaffHeadCell.h; sourceTree = "<group>"; };
+		1004E8351DF7BA28004C7446 /* MPStaffHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPStaffHeadCell.m; sourceTree = "<group>"; };
+		1004E8391DF7C413004C7446 /* MPStaffHeadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPStaffHeadCell.xib; sourceTree = "<group>"; };
 		100FC6F91DF180F0002E0BB8 /* MPCouponStampObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCouponStampObject.h; sourceTree = "<group>"; };
 		100FC6FA1DF180F0002E0BB8 /* MPCouponStampObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCouponStampObject.m; sourceTree = "<group>"; };
 		1016C7C31DE43D8100BC215E /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
@@ -1581,6 +1589,8 @@
 		1020FEC81DF26F7F00DA4184 /* Staff */ = {
 			isa = PBXGroup;
 			children = (
+				1004E8311DF70890004C7446 /* MPStaffShoplistObject.h */,
+				1004E8321DF70890004C7446 /* MPStaffShoplistObject.m */,
 				1020FEC91DF26F7F00DA4184 /* MPStafflistObject.h */,
 				1020FECA1DF26F7F00DA4184 /* MPStafflistObject.m */,
 			);
@@ -1802,6 +1812,8 @@
 		10488AC31DE966C6005F5DF1 /* Staff */ = {
 			isa = PBXGroup;
 			children = (
+				1004E8341DF7BA28004C7446 /* MPStaffHeadCell.h */,
+				1004E8351DF7BA28004C7446 /* MPStaffHeadCell.m */,
 				10488ACF1DE967A2005F5DF1 /* MPStaffCell.h */,
 				10488AD01DE967A2005F5DF1 /* MPStaffCell.m */,
 				10488AF01DE9798C005F5DF1 /* MPStaffCollectionCell.h */,
@@ -1823,6 +1835,7 @@
 		10488AC51DE966E5005F5DF1 /* Staff */ = {
 			isa = PBXGroup;
 			children = (
+				1004E8391DF7C413004C7446 /* MPStaffHeadCell.xib */,
 				10488ACD1DE96796005F5DF1 /* MPStaffCell.xib */,
 				10488AEE1DE9796D005F5DF1 /* MPStaffCollectionCell.xib */,
 			);
@@ -3605,6 +3618,7 @@
 				10488AFB1DE97FA2005F5DF1 /* staff_icon_blgn.png in Resources */,
 				1016C7F21DE43F1900BC215E /* MPWhatNewInfoViewController.xib in Resources */,
 				107957AE1DDDA60A008F35A6 /* secondview_syousai.png in Resources */,
+				1004E83A1DF7C413004C7446 /* MPStaffHeadCell.xib in Resources */,
 				10FB814E1DF57375009ACE76 /* first_select_btn_memberscard.png in Resources */,
 				10488B231DE98E68005F5DF1 /* movie_icon_heart_white.png in Resources */,
 				10488AE51DE97280005F5DF1 /* style_01.png in Resources */,
@@ -3814,6 +3828,7 @@
 				1034A7D61DEEB2310054872D /* MPFirstSetting_furigana_TableViewCell.m in Sources */,
 				101932541DF3FC8F00FC8DDE /* MPSNSTableViewCell.m in Sources */,
 				101932591DF40D1A00FC8DDE /* MPCouponShareObject.m in Sources */,
+				1004E8331DF70890004C7446 /* MPStaffShoplistObject.m in Sources */,
 				272CCD9C1DCAF096006BC4EB /* MPApnsObject.m in Sources */,
 				1001DD1F1DE956DA007F445D /* MPReservationViewController.m in Sources */,
 				106A31701DD7082A00C0C741 /* MPTheSecondViewController.m in Sources */,
@@ -3851,6 +3866,7 @@
 				10C4B9101DDABE4E00E26096 /* MPRecommend_menuObject.m in Sources */,
 				1075EF151DE89F8C00974CE1 /* MPHearCatalogCategoryListViewController.m in Sources */,
 				272CCD931DCAF096006BC4EB /* CustomColor.m in Sources */,
+				1004E8371DF7BA28004C7446 /* MPStaffHeadCell.m in Sources */,
 				1020FECB1DF26F7F00DA4184 /* MPStafflistObject.m in Sources */,
 				107EA23C1DE4306500A4A8CD /* MPRecommendMenuInfoViewController.m in Sources */,
 				10488B191DE98C37005F5DF1 /* MPMovieTableViewCell.m in Sources */,
